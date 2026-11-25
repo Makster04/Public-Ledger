@@ -1,0 +1,66 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "stefanik",
+ "name": "Elise M. Stefanik",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 9
+ },
+ "statements": [
+  {
+   "date": "2026-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING RABBI DR. BERMAN",
+   "title": "WELCOMING RABBI DR. BERMAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-17/html/CREC-2026-11-17-pt1-PgH6235-7.htm",
+   "sentences": [
+    "After moving to Israel in 2008, he earned a doctorate from Hebrew University in Jerusalem.",
+    "Under his leadership, the university launched 20-plus new graduate and STEM-focused degree programs, achieved over 100 percent enrollment growth, and completed a historic landmark campaign advancing scholarships, faculty, facilities, and innovation."
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE IN HONOR OF THE 25th ANNIVERSARY OF SEPTEMBER 11",
+   "title": "MOMENT OF SILENCE IN HONOR OF THE 25th ANNIVERSARY OF SEPTEMBER 11",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5488.htm",
+   "sentences": [
+    "On 9/11, you saw unbelievable acts of heroism from law enforcement, first responders, and everyday Americans who ran into the fire to save their fellow countrymen and -women."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ERNEST PELTZ ACCRUED VETERANS BENEFITS ACT",
+   "title": "ERNEST PELTZ ACCRUED VETERANS BENEFITS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1930.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of my legislation, the Ernest Peltz Accrued Veterans Benefits Act, H.R. 3123.",
+    "I am grateful for the bipartisan support, and I urge a ``yes'' to pass it on the floor."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESOLVING THE AKWESASNE MOHAWK LAND CLAIM IN THE STATE OF NEW YORK",
+   "title": "RESOLVING THE AKWESASNE MOHAWK LAND CLAIM IN THE STATE OF NEW YORK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5085.htm",
+   "sentences": [
+    "This historic settlement provides long-term certainty and remedies in terms of lands, land acquisition, payment of past property taxes, and will greatly benefit our North Country community.",
+    "Mr. Speaker, I rise in support of H.R. 2916, my bill to ratify the land claim settlement agreement between the Saint Regis Mohawk Tribe, the Mohawk Council of Akwesasne, New York State, Franklin and St. Lawrence Counties, the towns of Fort Covington and Bombay, and the New York Power Authority."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING AMERICA'S TURNING POINT ACT",
+   "title": "STRENGTHENING AMERICA'S TURNING POINT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1974.htm",
+   "sentences": [
+    "I rise today in support of my legislation, the Strengthening America's Turning Point Act.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting this bipartisan bill, the Strengthening America's Turning Point Act."
+   ]
+  }
+ ]
+}

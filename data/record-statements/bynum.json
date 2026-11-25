@@ -1,0 +1,491 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bynum",
+ "name": "Janelle S. Bynum",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 43,
+  "sentences": 92
+ },
+ "statements": [
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE FOR SILVER RAIL ELEMENTARY SCHOOL SHOOTING",
+   "title": "MOMENT OF SILENCE FOR SILVER RAIL ELEMENTARY SCHOOL SHOOTING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6134-2.htm",
+   "sentences": [
+    "I promise to continue to fight to protect all of America's children."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOLLOW THE MONEY",
+   "title": "FOLLOW THE MONEY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4672-6.htm",
+   "sentences": [
+    "Now, this says to me that the President is saying: Pay me, and I will help you trade on insider information."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING COLLEGE AFFORDABLE",
+   "title": "MAKING COLLEGE AFFORDABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4615-5.htm",
+   "sentences": [
+    "Instead, we have been voting on things like daylight saving time.",
+    "First, we need to fix the raggedy monthly payments calculator that prevents interest from spiraling out of control."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCESS TO HEALTHCARE",
+   "title": "ACCESS TO HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4194-3.htm",
+   "sentences": [
+    "Mr. Speaker, I urge you to do the same."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHILDREN FALLING BEHIND",
+   "title": "CHILDREN FALLING BEHIND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3977-3.htm",
+   "sentences": [
+    "I am talking about an almost 10-percent increase in deaths among our young people between 2019 and 2024 related to mental health.",
+    "Lower costs, strong schools, affordable housing, and good opportunities are how we start getting ahead."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3840-4.htm",
+   "sentences": [
+    "Ms. Bynum moves to recommit the bill H.R. 8646 to the Committee on Appropriations with the following amendment: Amend the second proviso under the heading ``Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)'' to read as follows: ``Provided further, That the Secretary shall use funds made available under this heading to maintain the amount for the cash-value voucher for women and children participants at an amount recommended by the National Academies of Science, Engineering and Medicine and adjusted for inflation:''.",
+    "I will keep fighting to make sure that nothing, not inflation and not out-of-touch Republicans in D.C., get to take healthy food away from moms and kids."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE STEP CLOSER TO AFFORDABLE HOUSING",
+   "title": "ONE STEP CLOSER TO AFFORDABLE HOUSING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3714-2.htm",
+   "sentences": [
+    "Mr. Speaker, we are one step closer to having more affordable housing for Oregonians and Americans across the country.",
+    "The 21st Century ROAD to Housing Act includes three of my bills which will help build more houses, lower the cost of housing, and make sure homeless shelters have the support they need to offer emergency assistance."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GAS PRICES ARE OUT OF CONTROL",
+   "title": "GAS PRICES ARE OUT OF CONTROL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3377-6.htm",
+   "sentences": [
+    "Before the start of this Iran war, it was under $4 a gallon, which was high enough already."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VOTER REGISTRATION",
+   "title": "VOTER REGISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3120.htm",
+   "sentences": [
+    "Tomorrow is the deadline in Oregon to register to vote in our upcoming primaries, and Oregonians should make sure they register so that they can make their voices heard.",
+    "They can find out where and how to update their information on Oregon's secretary of state website, but now the President is trying to make registering less accessible and voting by mail harder.",
+    "Mr. Speaker, I just won't stand for it.",
+    "I won't let this President or my colleagues silence our voices."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUNDING REQUESTS FOR OREGON'S FIFTH DISTRICT",
+   "title": "FUNDING REQUESTS FOR OREGON'S FIFTH DISTRICT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3028-2.htm",
+   "sentences": [
+    "This money will strengthen our communities by investing in clean drinking water, education, childcare, public safety, and workforce development.",
+    "In central Oregon alone, over $10 million will go toward expanding access to childcare, good-paying jobs, and wildfire preparedness.",
+    "I will keep fighting in Congress to deliver real results back home. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY FUNDING",
+   "title": "DEPARTMENT OF HOMELAND SECURITY FUNDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgH2706-2.htm",
+   "sentences": [
+    "These workers are showing up every single day to protect our airports, respond to emergencies, and keep our communities safe."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WILDFIRE AERIAL RESPONSE SAFETY ACT",
+   "title": "WILDFIRE AERIAL RESPONSE SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2654.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 6618, my Wildfire Aerial Response Safety Act.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 6618."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMPOWERING AMERICA'S NEXT GENERATION",
+   "title": "EMPOWERING AMERICA'S NEXT GENERATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2083-2.htm",
+   "sentences": [
+    "The average age of a first-time home buyer is 40 years old, which is at an all-time high, and things feel too costly.",
+    "I think Americans need to start believing in young people, and that is exactly why I introduced my K-30 agenda."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTESTS IN PORTLAND",
+   "title": "PROTESTS IN PORTLAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1938-5.htm",
+   "sentences": [
+    "Protestors from union families in Portland, Oregon, came together to exercise their First Amendment rights.",
+    "I have said it before, and I will say it again: What we are seeing is not law enforcement."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPRESSION OF A CONGRESSIONAL MEMBER OWL",
+   "title": "IMPRESSION OF A CONGRESSIONAL MEMBER OWL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH942.htm",
+   "sentences": [
+    "I am going to keep my head down. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING EDUCATION FOR CHILDREN WITH DISABILITIES",
+   "title": "PROTECTING EDUCATION FOR CHILDREN WITH DISABILITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH698-6.htm",
+   "sentences": [
+    "On top of that, it has been credibly reported that the Trump administration has started dismantling the Department of Education, including the staff who oversee these IDEA programs.",
+    "That is why earlier this Congress, I introduced the IDEA Full Funding Act.",
+    "I urge my colleagues to join me in finally giving our students with disabilities exactly what they are owed."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHAIR POWELL REFUSES TO GIVE IN TO TRUMP'S DEMANDS",
+   "title": "CHAIR POWELL REFUSES TO GIVE IN TO TRUMP'S DEMANDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH648-3.htm",
+   "sentences": [
+    "I will continue fighting to make sure that the Fed works for Oregonians and for Americans. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELAYED WILDFIRE RESPONSE EFFORTS",
+   "title": "DELAYED WILDFIRE RESPONSE EFFORTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH228-3.htm",
+   "sentences": [
+    "That is why I introduced the Wildfire Aerial Response Safety Act along with Congressmen Neguse, Crane, and Ciscomani."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JUNK FEES",
+   "title": "JUNK FEES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5103-5.htm",
+   "sentences": [
+    "That is why I introduced the Junk Fee Prevention Act."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING ACCESS TO EDUCATION FOR OUR CHILDREN WITH DISABILITIES",
+   "title": "ENSURING ACCESS TO EDUCATION FOR OUR CHILDREN WITH DISABILITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4955-2.htm",
+   "sentences": [
+    "On top of that, President Trump is dismantling the Department of Education and threatening programs that protect civil rights and expand access to opportunity for our kids.",
+    "That is why, earlier this Congress, I introduced the IDEA Full Funding Act to help our students with disabilities.",
+    "I will continue fighting in Congress to ensure that our children and our children's children and our children's children's children have access to the education they deserve. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTHCARE OPEN ENROLLMENT FOR OREGONIANS",
+   "title": "HEALTHCARE OPEN ENROLLMENT FOR OREGONIANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4891-3.htm",
+   "sentences": [
+    "Mr. Speaker, the beginning of this month marked the start of open enrollment for healthcare.",
+    "Mr. Speaker, I will keep fighting to protect healthcare, lower costs, and make life easier for my constituents. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GIVE 'EM HELL WRAP-UP",
+   "title": "GIVE 'EM HELL WRAP-UP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4301-4.htm",
+   "sentences": [
+    "We welcomed all Oregonians, and we were thankful to have community leaders participating and local law enforcement keeping us safe.",
+    "Mr. Speaker, hear me when I say this: We will not back down--not on healthcare, not on costs, and not on making our voices heard."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL GUARD IN PORTLAND",
+   "title": "NATIONAL GUARD IN PORTLAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3883-2.htm",
+   "sentences": [
+    "How about he sends funding that we can use to provide high-quality childcare to every child and family, to build more affordable housing, and to clean up the Superfund site on the Willamette River?"
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING FIREFIGHTER FUNDING CUTS",
+   "title": "ADDRESSING FIREFIGHTER FUNDING CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3520-4.htm",
+   "sentences": [
+    "That is why I can't stop, and I won't stop fighting to ensure our communities have the resources they need."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SPEAKING OUT FOR OREGONIANS",
+   "title": "SPEAKING OUT FOR OREGONIANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3233.htm",
+   "sentences": [
+    "Today is my 22nd one where I have shared constituent stories to help defend SNAP, Social Security, Medicare, and more, and call out my Republican colleagues.",
+    "I hope Oregonians will keep sharing their stories with me, and I will keep amplifying them."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TIME TO END THE DAMAGE OF THE DOBBS DECISION",
+   "title": "TIME TO END THE DAMAGE OF THE DOBBS DECISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2880-2.htm",
+   "sentences": [
+    "Mr. Speaker, tomorrow marks 3 years since the Supreme Court voted to strip women of their reproductive healthcare rights, overturning 50 years of legal precedent.",
+    "I am talking about the Dobbs decision.",
+    "Since then, States have issued extreme restrictions on abortion, forcing thousands of women to travel or risk prosecution to access basic healthcare.",
+    "We must protect and expand reproductive freedom for women everywhere.",
+    "Mr. Speaker, it is time to end the damage of the Dobbs decision and restore a woman's right to choose. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL EMPLOYEES",
+   "title": "FEDERAL EMPLOYEES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2405.htm",
+   "sentences": [
+    "She says: ``Please fight to protect Federal employee retirement benefits."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDICAID CUTS HURT EVERYDAY AMERICANS",
+   "title": "MEDICAID CUTS HURT EVERYDAY AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2137-3.htm",
+   "sentences": [
+    "Medicaid allows Rose to receive physical therapy.",
+    "It might be easy for people to strike through one number and write in another, take a little bit from here and there, but each of those numbers represents a person, a child like Rose, who will lose critical care so billionaires can have more money in their pockets.",
+    "We will not. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT SAFER COMMUNITIES",
+   "title": "SUPPORT SAFER COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1988-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because the President is out here in these streets cutting funding for programs that support a lot of things Americans care about: Survivors of sexual assault, programs that offer mental health care for police officers and keep hotlines to victims of crime open, programs that assist law enforcement in rural communities, provide guidance on finding safe housing, and offer care and counseling for children facing abuse.",
+    "Mr. Speaker, this week is Police Week, and if the President is truly supportive of safer communities, he should quit cutting funding for programs that work to keep them that way. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TIME TO FOCUS ON COSTS",
+   "title": "TIME TO FOCUS ON COSTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1841-3.htm",
+   "sentences": [
+    "Yet, we are voting this week on the Gulf of America Act, a bill that does nothing to lower costs.",
+    "I will keep sounding the alarm until we start helping the American people."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDING UP FOR SOCIAL SECURITY RECIPIENTS",
+   "title": "STANDING UP FOR SOCIAL SECURITY RECIPIENTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1670-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to stand up for my constituents who rely on Social Security and Medicare.",
+    "Nearly 1 million Oregonians collect Social Security, and almost 20 percent of the State's population receives Medicare."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "The average American kid would have to work 5 hours at the Federal minimum wage to get that back.",
+    "I can't and I won't get behind that.",
+    "I strongly oppose this resolution, and I support the rule to cap overdraft fees at $5."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING THE MIDDLE CLASS",
+   "title": "PROTECTING THE MIDDLE CLASS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1443-4.htm",
+   "sentences": [
+    "I am fighting for retirees taking required distributions from the their IRAs at a loss because Trump's tariff policies that are tanking the market.",
+    "I call on Congress to pass my Protecting Families From Inflation Act and to vote to put an end to this ill-advised trade war.",
+    "Mr. Speaker, this administration is taking money out of people's pockets and robbing the middle class of their earnings, and I am fighting back.",
+    "I am fighting for the food bank in Redmond that can't offer meat in its meals because of funding cuts.",
+    "I am fighting for the seniors across my district that are watching their life savings evaporate in the stock market.",
+    "I am fighting for the parents who can't afford clothes for their kids, for the families who can't afford groceries, and for the young people who can't afford to buy a car or a home."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWERING COSTS FOR STRUGGLING AMERICANS",
+   "title": "LOWERING COSTS FOR STRUGGLING AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1357-2.htm",
+   "sentences": [
+    "Despite President Trump's pledging to end inflation on day one, costs have continued to increase, and his tariffs policy is making things worse.",
+    "I find it unconscionable and, frankly, unacceptable that anyone would make things more expensive right now, and I won't stand by, and I won't let it happen.",
+    "That is why I am fighting back.",
+    "I am fighting back with the Protecting Families From Inflation Act."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGGING DEEP FOR COURAGE",
+   "title": "DIGGING DEEP FOR COURAGE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1320.htm",
+   "sentences": [
+    "How do they take from our seniors on Social Security?"
+   ]
+  },
+  {
+   "date": "2025-03-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKE HOUSING AFFORDABLE",
+   "title": "MAKE HOUSING AFFORDABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-06/html/CREC-2025-03-06-pt1-PgH1021-3.htm",
+   "sentences": [
+    "Mr. Speaker, I hear from everyone I talk to, from my constituents to my kids, about how hard it is to find affordable housing.",
+    "Oregon ranks 45th in the Nation in housing affordability, and it is getting worse.",
+    "Our population has grown faster than our housing supply, driving costs up for buyers and renters.",
+    "That is why I am fighting on the Financial Services Committee to make a difference.",
+    "I am fighting to make it easier to buy or rent a home, and I am fighting to build more houses and increase our supply.",
+    "Mr. Speaker, I will always fight to lower costs and make life just a little bit easier for Oregonians. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IT IS TIME TO LOWER COSTS",
+   "title": "IT IS TIME TO LOWER COSTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH826-2.htm",
+   "sentences": [
+    "I have said over and over again my focus is lower costs, more jobs, and a better quality of life for Oregonians and that I will work with anyone to get that done."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGENT RAUL GONZALEZ OFFICER SAFETY ACT",
+   "title": "AGENT RAUL GONZALEZ OFFICER SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-7.htm",
+   "sentences": [
+    "Today, it is forcing local police to become Federal enforcers, which is a violation of States' rights.",
+    "We need to start focusing on real solutions for the border.",
+    "Mr. Speaker, I urge my colleagues to oppose H.R. 35.",
+    "I support public safety, but I oppose the Federal Government overreach that erodes local control and threatens civil rights.",
+    "Mr. Speaker, I urge my colleagues to continue seeking comprehensive immigration policy reform and to vote ``no'' on H.R. 35."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING EDUCATION IN AMERICA",
+   "title": "PROTECTING EDUCATION IN AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH693-3.htm",
+   "sentences": [
+    "Now, Elon Musk is threatening to eliminate the Department of Education.",
+    "If Musk and the Department of Government Efficiency are trying to make the government more efficient by giving tax breaks to the rich at the expense of our schools and our children, to that we say: No thanks. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GET GOVERNMENT WORKING FOR THE AMERICAN PEOPLE AGAIN",
+   "title": "GET GOVERNMENT WORKING FOR THE AMERICAN PEOPLE AGAIN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH518-5.htm",
+   "sentences": [
+    "It is happening today, not by a foreign adversary but by the boy band billionaires looking to line their pockets."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING OREGON FIREFIGHTERS FOR THEIR HEROIC SERVICE",
+   "title": "THANKING OREGON FIREFIGHTERS FOR THEIR HEROIC SERVICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH204-6.htm",
+   "sentences": [
+    "I will work in Congress to ensure our responders have the resources they need and our families are supported in the aftermath of these devastating events. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: READY TO DELIVER",
+   "title": "READY TO DELIVER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-09/html/CREC-2025-01-09-pt1-PgH66-2.htm",
+   "sentences": [
+    "I am here to say that I am listening and I am fighting for our families.",
+    "I will work with anyone to do it."
+   ]
+  }
+ ]
+}

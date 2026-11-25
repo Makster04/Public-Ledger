@@ -1,0 +1,287 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mrvan",
+ "name": "Frank J. Mrvan",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 23,
+  "sentences": 68
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the Major Richard Star Act.",
+    "That is why I support the Major Richard Star Act."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GIVING OUR FARMERS STABILITY THEY NEED TO FEED AMERICA",
+   "title": "GIVING OUR FARMERS STABILITY THEY NEED TO FEED AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5963-6.htm",
+   "sentences": [
+    "The conflict in Iran has pushed diesel above $6 a gallon.",
+    "Tariffs are driving up fertilizer costs and closing agricultural markets.",
+    "Immigration policies have disrupted the legal workforce farmers depend on, and the rush to build data centers is putting upward pressure on electricity costs.",
+    "They need tariff relief, lower fuel costs, expanded markets, and action from Congress."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SOLIDARITY WITH AMERICAN UNION WORKERS",
+   "title": "SOLIDARITY WITH AMERICAN UNION WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5828.htm",
+   "sentences": [
+    "It is wrong for union workers to be forced to go without their paychecks, their healthcare, and their livelihoods while our community also faced increased public safety risks from untrained replacement workers and for their employer to continue making billions of dollars in profits.",
+    "That is why I introduced the PRO-WORK Act."
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTREME WEATHER",
+   "title": "EXTREME WEATHER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5491-2.htm",
+   "sentences": [
+    "Our first responders and local elected leaders went above and beyond, worked around the clock to help their neighbors--volunteers from our churches, union linemen and -women, National Guard members, and countless volunteers who showed up when we needed them most.",
+    "Our region deserves answers, and we will do everything in our power to protect northwest Indiana so they will never have to go through this again. ____________________"
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4029.htm",
+   "sentences": [
+    "The men and women who pour our steel and power our grid built the middle class with a union card in their pocket.",
+    "I rise today to express my strong support for H.R. 5408, the Faster Labor Contracts Act.",
+    "It was in March and on Labor Day that they stripped collective bargaining in the greatest historical moment in stripping collective bargaining from the workforce of Federal employees to the tune of 445,000 Federal workers.",
+    "Therefore, when we talk about union workers and working men and women, this administration made history by stripping collective bargaining from almost half a million people.",
+    "Throughout my career as a public servant, I have been proud to stand shoulder to shoulder with all members of organized labor because working families are worth fighting for.",
+    "When workers vote in the affirmative to form a union, the government should ensure that businesses immediately acknowledge and respect their voice.",
+    "Again, this administration made history by cutting collective bargaining to over half a million Federal employees and did that on Labor Day."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDING IN SOLIDARITY WITH UNITED STEELWORKERS",
+   "title": "STANDING IN SOLIDARITY WITH UNITED STEELWORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3379.htm",
+   "sentences": [
+    "Since day one under the administration's Project 2025, we have seen attacks against organized labor, the gutting of the Department of Labor, and a National Labor Relations Board that only sides with corporate interests.",
+    "This project would have created new energy, put these union men and women on the job today, creating new economic activity and jobs for a generation.",
+    "Union workers also undergo specialized training to operate in this high-risk environment at a refinery."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DUAL COSTS OF WAR IN IRAN",
+   "title": "DUAL COSTS OF WAR IN IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2587-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise with a heavy heart to express my profound upset at the loss of American servicemembers who made the ultimate sacrifice in service to our Nation for a cause in Iran that the administration has yet to adequately justify.",
+    "To add insult to injury, the administration's unilateral decision has made rising price concerns only worse for working families, who are already struggling with the costs when going to gas stations or to the grocery store.",
+    "Just yesterday, I met with the members of the Indiana Farm Bureau, who also were already struggling due to the increased costs of tariffs.",
+    "As we move forward with the appropriations process, I will work with all of my colleagues to conduct rigorous oversight and hold the administration accountable for their actions. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHEN SUPPLY GOES UP, PRICES GO DOWN",
+   "title": "WHEN SUPPLY GOES UP, PRICES GO DOWN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2016-3.htm",
+   "sentences": [
+    "Mr. Speaker, I urge the House to find ways to increase the energy supply so we can lower the costs in northwest Indiana. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "These are responsible investments that respect taxpayer dollars and deliver real results for working families.",
+    "I urge my colleagues to support this measure."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "Notably, I express my profound appreciation for the inclusion of the community project funding requests in these measures, including the funds specific to the members of northwest Indiana law enforcement agencies.",
+    "I am grateful every day for the selfless service and sacrifice that first responders, including our local police, fire departments, and emergency personnel, provide to our communities every day."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FARMERS",
+   "title": "SUPPORTING FARMERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4398-4.htm",
+   "sentences": [
+    "These rising costs of goods and services driven by tariffs and the simultaneous loss of export markets caused by those same tariffs are threatening our economic livelihood.",
+    "As we take up fiscal year 2026 appropriations and agriculture legislation, I am committed to working with my colleagues on both sides of the aisle to ensure all of our farmers get the support they need to continue their essential work. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "title": "DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4398-5.htm",
+   "sentences": [
+    "Members of organized labor created apprenticeship programs to ensure we had the workforce to bring this project to fruition, but the so-called big, beautiful bill terminated the clean hydrogen production tax credit, causing BP to put the project on indefinite pause for reasons related to economic uncertainty.",
+    "These policies are conscious decisions to create confusion, hesitation, and uncertainty, not just in hydrogen production, but also the challenges for our auto industry to grow and for the outsourcing of American steel production and our national security to the highest foreign bidder.",
+    "I believe that targeted tariffs such as section 232 is not only a national security issue but boosts domestic manufacturing.",
+    "I will continue to work across the aisle to find middle ground to make sure we support our working families and that we lower the costs to live in northwest Indiana, in Indiana, and the United States.",
+    "Mr. Speaker, it is our responsibility to create domestic manufacturing that creates jobs so those individuals can have a healthcare policy and so those individuals can have an economy that grows and works for them.",
+    "Mr. Speaker, we must have a more surgical and sector-based approach toward our trade policies; or we will continue to see job loss in the manufacturing sector, rising costs at the grocery store, and long- lasting impacts on our economy."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TEMPORARY BENEFITS FOR WORKING FAMILIES",
+   "title": "TEMPORARY BENEFITS FOR WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3885.htm",
+   "sentences": [
+    "This is at the same time that billionaires and those who can afford a $1 million annual membership to Mar-a-Lago got tax breaks that are permanent.",
+    "Why is help for working families temporary but handouts for the privileged permanent?",
+    "Communities in northwest Indiana are struggling with increasing costs, and they know that the Republican bill is unfair toward working families.",
+    "It is one of the many reasons that I opposed this unpopular legislation and why I will continue to fight to make the current tax benefits for working families permanent. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Industry, the USW, the building trades, other labor organizations, along with communities throughout my district, were planning for and relying on massive economic development investments, only to see this project undermined because the Republican majority's tax and investment policy is now: Do not invest in our future but, rather, give more handouts to the privileged, wealthy, and few at the expense of the working class.",
+    "Mr. Chairman, I urge my colleagues to reject this legislation and, instead, work in a bipartisan manner to promote long-term economic prosperity in our communities."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "It is with deep regret and strong conviction that I oppose this proposal because it fails our veterans."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SLASHES TO SNAP BENEFITS",
+   "title": "SLASHES TO SNAP BENEFITS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2561-5.htm",
+   "sentences": [
+    "Mr. Speaker, I have seen the tangible benefits of SNAP benefits in northwest Indiana and how it is essential for many seniors, children, and working families.",
+    "I urge my Senate colleagues to reject this harmful legislation. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSING MEDICAID CUTS",
+   "title": "OPPOSING MEDICAID CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2406-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to express my profound opposition to the callous cuts to Medicaid included in the House majority's reconciliation legislation.",
+    "I have seen the tangible value of the Medicaid program in northwest Indiana and how it predominantly assists seniors, individuals with disabilities, and children.",
+    "He relies on a Medicaid waiver for school support and depends on our healthcare system to move, thrive, and survive.",
+    "Cutting his Medicaid isn't just wrong, it is cruel.",
+    "This legislation amounts to the largest transfer of wealth from the pockets of the most vulnerable and working families to the richest among us.",
+    "I urge my Senate colleagues to reject this harmful legislation. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL WORKPLACE PROTECTIONS",
+   "title": "FEDERAL WORKPLACE PROTECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1988-6.htm",
+   "sentences": [
+    "Today, through the power of collective bargaining, our workforce has the ability to negotiate with management and enact workplace protections that say we value labor and we value safety.",
+    "As a member of the House Appropriations Committee, I will make every effort to ensure that OSHA and the National Labor Relations Board have the resources and direction they need to ensure that all workers make it back home to their families and loved ones at the end of the day. ____________________",
+    "As a Federal legislator, I am committed to building on the progress and am very concerned about proposals to cut back the ability of the Department of Labor to implement Federal workplace protections."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING CASA",
+   "title": "SUPPORTING CASA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-08/html/CREC-2025-05-08-pt1-PgH1926-5.htm",
+   "sentences": [
+    "Turning our backs on children survivors in order to justify massive tax cuts for the wealthy is both shameful and bad policy."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING FEDERAL EMPLOYEE UNIONS",
+   "title": "PROTECTING FEDERAL EMPLOYEE UNIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1445-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to express my profound opposition and disappointment in the recent executive order that strips away collective bargaining rights for Federal workers.",
+    "It is only because of the ability to collectively bargain and form unions that workers in our Nation were able to make progress and have fair wages, safe working environments, access to affordable healthcare plans, and secure retirements.",
+    "I have spent my entire career as an elected official believing that every worker should have the ability to form and join a union.",
+    "As a member of the Congressional Labor Caucus, I was proud to join my colleagues in signing a letter to the administration on this matter which states that this is the single most antiworker and anti-union Presidential action since the firing of the striking air traffic controllers in 1981.",
+    "I am committed to stand shoulder to shoulder with my colleagues to swiftly reverse this unjust action and defend the fundamental rights of every worker to bargain for an equitable future. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CR STRIPS AWAY PUBLIC SAFETY FUNDING AND ECONOMIC DEVELOPMENT",
+   "title": "CR STRIPS AWAY PUBLIC SAFETY FUNDING AND ECONOMIC DEVELOPMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1130.htm",
+   "sentences": [
+    "By not including community project funding requests approved by this institution in the House Appropriations Committee just last year, Indiana's First Congressional District loses $4 million in approved funds to support equipment and resources for law enforcement agencies and $7 million in approved economic development projects.",
+    "It is shameful that we have misled our local law enforcement agencies, local units of government, veterans, and seniors."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HARMFUL BUDGET",
+   "title": "HARMFUL BUDGET",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH864-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to express my profound disappointment in the House budget resolution and the severe potential harm it will cause to those who rely on Medicaid benefits in northwest Indiana.",
+    "In Indiana's First Congressional District alone, it is a fact that the overwhelming majority of Medicaid funding goes directly to senior healthcare, individuals with disabilities, children, and senior long- term care.",
+    "Indiana is also one of the few trigger States in our Nation, which means that Medicaid benefits will immediately cease for a large percentage of our residents should the Federal proportion of assistance fall below 90 percent.",
+    "I will continue to speak out against and oppose all legislation that takes real benefits from our seniors, the disabled, and our children to pay for corporate welfare programs. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHECKS AND BALANCES OF THE ADMINISTRATION",
+   "title": "CHECKS AND BALANCES OF THE ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-10/html/CREC-2025-02-10-pt1-PgH606-3.htm",
+   "sentences": [
+    "Is it efficient when officials immediately end public transit services that seniors rely upon and when community health centers that provide essential services to vulnerable populations can't access government websites?"
+   ]
+  }
+ ]
+}

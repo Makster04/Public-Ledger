@@ -1,0 +1,60 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "tkelly",
+ "name": "Trent Kelly",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 12
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "The bill also contains parts of the SHIPS for America Act, which will help us down the path to a rejuvenated maritime industrial base.",
+    "Combined with incremental funding authority for long-lead time components for the Virginia-class program, multiyear procurement authority for destroyers, and multiship procurement authority for future amphibious warships, we are supporting responsible investments in the future of our surface fleet and in the continued growth of our subsea advantages.",
+    "Mr. Chair, I urge all Members to vote ``yes.'' I also thank my Ranking Member, Joe Courtney, and the staff: Kyle Noyes, Kelly Goggin, Jeanine Womble, Abby Snyder, and my personal staff, Semaj Redd, Shields Armstrong, and our fellow, Marc Mundy for all their hard work."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUCCESSFUL OPERATION TO ARREST NICOLAS MADURO",
+   "title": "SUCCESSFUL OPERATION TO ARREST NICOLAS MADURO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH650-5.htm",
+   "sentences": [
+    "A narcoterrorist and an illegitimate government leader, Nicolas Maduro, is removed from office and is awaiting trial in the United States of America.",
+    "He was an indicted narcoterrorist who helped turn Venezuela into a hub for drug trafficking, corruption, and foreign influence that directly threatened the United States and our allies.",
+    "As Secretary of State Marco Rubio made clear, this was a limited law enforcement action carried out with precision to enforce U.S. laws and protect our homeland.",
+    "It cannot and will not become a safe haven for drug cartels, Iranian proxies, or hostile actors who seek to undermine our security and poison our communities.",
+    "I express my deep gratitude to the law enforcement officers, servicemembers, and intelligence professionals who carried out this operation."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "Madam Chair, I thank Chairman Rogers whose critical work on acquisition reform with Ranking Member Smith set the foundation for the advances we are making in this year's bill.",
+    "I urge all Members to support a vote in favor of this bill."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NATIONAL EMISSION STANDARDS FOR HAZARDOUS AIR POLL",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NATIONAL EMISSION STANDARDS FOR HAZARDOUS AIR POLLUTANTS: RUBBER TIRE MANUFACTURING\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH986.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.J. Res. 61 to repeal yet another burdensome regulation from the Biden administration that threatens American jobs and manufacturing, some of those in my district.",
+    "I urge my colleagues to support H.J. Res. 61 and to push back against reckless regulatory overreach."
+   ]
+  }
+ ]
+}

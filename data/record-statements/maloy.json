@@ -1,0 +1,140 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "maloy",
+ "name": "Celeste Maloy",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 11,
+  "sentences": 29
+ },
+ "statements": [
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA 250",
+   "title": "AMERICA 250",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5165-3.htm",
+   "sentences": [
+    "Tonight, I will read the two winning speeches as well as a little bit about the two students who wrote them."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHIVWITS BAND OF PAIUTES JURISDICTIONAL CLARITY ACT",
+   "title": "SHIVWITS BAND OF PAIUTES JURISDICTIONAL CLARITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2514.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of my bill, H.R. 3073, the Shivwits Band of Paiutes Jurisdictional Clarity Act.",
+    "This is what they said in their own words: ``The Shivwits Tribe and local community leaders have found a new way forward: collaboration instead of conflict, and cooperation instead of contention.",
+    "Madam Speaker, for those reasons, I urge my colleagues to support H.R. 3073."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "I promised him I would never tell anyone where I got those pictures, so I am not going to tell you, but I still don't know how he had my number the minute I got sworn in."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4593, SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT; PROVIDING FOR CONSIDERATION OF H.R. 5184, AFFORDABLE H",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4593, SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT; PROVIDING FOR CONSIDERATION OF H.R. 5184, AFFORDABLE HOUSING OVER MANDATING EFFICIENCY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH112-7.htm",
+   "sentences": [
+    "These appropriations bills that are included in the rule spend hard- earned tax dollars responsibly, reduce spending below current levels, putting money back in Americans' pockets, and reduce our deficit.",
+    "Mr. Speaker, I rise in support of this rule that moves appropriations bills, bills that reflect the leadership of Chairman Cole and the priorities of this Congress, avoiding another shutdown and spending taxpayer dollars responsibly in a way that directly benefits Americans."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6033-2.htm",
+   "sentences": [
+    "It rebalances the scales in favor of local voices, working families, and economic opportunities.",
+    "Mr. Chairman, I rise today in strong support of H.R. 4776, the Standardizing Permitting and Expediting Economic Development Act, known as the SPEED Act, introduced by my colleague from Arkansas, Chairman Westerman.",
+    "Mr. Chair, I urge my colleagues to support this important legislation."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "title": "SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5066-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the Secure Rural Schools Reauthorization Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SEMIQUINCENTENNIAL TOURISM AND ACCESS TO RECREATION SITES ACT",
+   "title": "SEMIQUINCENTENNIAL TOURISM AND ACCESS TO RECREATION SITES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5074.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to support the One Big Beautiful Bill Act, legislation that prioritizes fiscal responsibility while boosting America's economy.",
+    "The Energy and Commerce Committee provisions provide $912 billion in deficit reduction.",
+    "This bill reins in Federal spending levels by rooting out waste, fraud, and abuse, and strengthens our economy by ensuring that working American families can thrive without overly burdensome taxes or costly regulations.",
+    "The bill helps all Americans by helping us keep our border secure by providing law enforcement with the tools they need.",
+    "Mr. Speaker, I support the bill."
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NATIONAL RECREATION AREA: MOTOR VEHICLES\"",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NATIONAL RECREATION AREA: MOTOR VEHICLES\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgH1706-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this resolution, H.J. Res. 60, which provides congressional disapproval under the Congressional Review Act of the rules submitted by the National Park Service on the Glen Canyon National Recreation Area pertaining to motor vehicles.",
+    "That is why I introduced H.J. Res. 60, a resolution that leverages the Congressional Review Act to overturn this misguided rule.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting this resolution.",
+    "We should send a message that we stand with the people of Wayne and Garfield Counties, the people of Utah, and the people who like to recreate on our public lands.",
+    "We value their voices, and we won't allow bureaucratic overreach to dictate our way of life."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN'S HISTORY MONTH",
+   "title": "WOMEN'S HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1359-4.htm",
+   "sentences": [
+    "As we honor the women who come before us by remembering, I hope we will be grateful and humble to have inherited the progress of past generations."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WORK HIGHLIGHTS OF WESTERN CAUCUS",
+   "title": "WORK HIGHLIGHTS OF WESTERN CAUCUS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1325.htm",
+   "sentences": [
+    "One of them addresses abuses of the Antiquities Act, one of them addresses the inefficiencies and unfairness of our permitting system, and the other one addresses the need to get geothermal energy up and going more quickly and more efficiently.",
+    "Mr. Speaker, I will start with the Antiquities Act.",
+    "For decades, the executive branch, Presidents of the United States, mostly Democrats, have used the Antiquities Act of 1906 to designate vast areas as national monuments, and that is in an authority that we delegated to them in the Antiquities Act of 1906.",
+    "The original intent of the Presidential proclamation authority in the Antiquities Act was for the President to be able to move quickly and declare a national monument in an area with antiquities, or an area of scientific interest, to hold it until Congress could make a decision.",
+    "I will highlight today three pieces of legislation that I have introduced.",
+    "Mr. Speaker, I urge my colleagues to support these measures, which offer pragmatic solutions to real challenges in Utah, throughout the West, and throughout the whole country."
+   ]
+  }
+ ]
+}

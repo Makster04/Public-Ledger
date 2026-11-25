@@ -1,0 +1,143 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mannion",
+ "name": "John W. Mannion",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 41
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Major Richard Star Act and look forward to its passage this week.",
+    "I urge my colleagues to vote yes on the bill."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SCIENCE OF READING ACT OF 2026",
+   "title": "SCIENCE OF READING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5911.htm",
+   "sentences": [
+    "I urge my colleagues to support America's students, teachers, and schools, and vote in favor of the Science of Reading Act."
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING AFFORDABILITY",
+   "title": "HOUSING AFFORDABILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-25/html/CREC-2026-06-25-pt1-PgH4249-7.htm",
+   "sentences": [
+    "It finally prohibits large investors from purchasing single-family homes so that they remain affordable for families.",
+    "I was proud to vote in support of this legislation, and I urge the President to promptly sign this bipartisan bill into law and stop playing politics with affordable housing. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP THE REPUBLICAN AFFORDABILITY CRISIS",
+   "title": "STOP THE REPUBLICAN AFFORDABILITY CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1970-4.htm",
+   "sentences": [
+    "You cannot cut nearly $1 trillion from Medicaid and decimate the foundation of our healthcare system, cutting at the knees our rural hospitals, and pretend that a one-time Band-Aid of $50 billion will hold the system together.",
+    "There is bipartisan support to extend the ACA premium tax credits.",
+    "We should be working together to prevent premium spikes and make sure seniors and working families aren't forced to choose between prescription drugs, groceries, and keeping the heat on.",
+    "Part of the problem is growing demand from energy-intensive data centers.",
+    "We need smart investments in generation and transmission, expanded energy-efficiency programs that help families use less and pay less, and a balanced approach to create more affordable energy options, including renewables and clean, reliable nuclear power.",
+    "Paying for groceries and healthcare, keeping the lights on, and heating your home are the basic expectations that should exist in the wealthiest country in the world, Mr. Speaker.",
+    "I will keep fighting to make sure Washington treats this crisis with the urgency that it demands."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING EDUCATION FOR CHILDREN WITH DISABILITIES",
+   "title": "PROTECTING EDUCATION FOR CHILDREN WITH DISABILITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH698-6.htm",
+   "sentences": [
+    "We cannot let these attacks continue, and we must also continue to call out the vile rhetoric and misinformation about disabilities in this country and around the world that this administration has spread.",
+    "As a fellow educator, I am proud to stand with Representative Hayes in this fight."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING WHOLE MILK FOR SCHOOLCHILDREN",
+   "title": "SUPPORTING WHOLE MILK FOR SCHOOLCHILDREN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5946-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of legislation that promotes the health and well-being of America's schoolchildren, while strengthening American agriculture, including the world-class dairy products and family farms across Central New York and the Mohawk Valley."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "I am a proud cosponsor of this bipartisan legislation to restore collective bargaining rights to hundreds of thousands of Federal workers.",
+    "I was raised in Syracuse, New York, in a union household.",
+    "My mother was a proud CWA member at New York Telephone, and my father a proud union member at New York Central Railroad.",
+    "I also served as the president of a 400 member teachers' association union representing teachers, nurses, school psychologists, and social workers.",
+    "Those who have a union worker in their family understand the guarantee that comes with the union card: fair pay, solid benefits, a secure retirement, and a real path to the middle class.",
+    "The indiscriminate stripping of collective bargaining rights through executive action was an illegal gray area if not outright unlawful.",
+    "Behind every family's American Dream is a good job and often a good union job.",
+    "Mr. Speaker, I rise in support of the Protect America's Workforce Act."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H. RES. 719, HONORING THE LIFE AND LEGA",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H. RES. 719, HONORING THE LIFE AND LEGACY OF CHARLES \"CHARLIE\" JAMES...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4386-3.htm",
+   "sentences": [
+    "To present his life and work in only heroic terms fails to acknowledge his promotion of misinformation and the harmful impact his words have had on marginalized communities."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "title": "DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4398-5.htm",
+   "sentences": [
+    "Pulling those funds away is a betrayal of the working families who were promised progress and, instead, are left with fewer jobs, less opportunity, and delayed urban renewal.",
+    "In fact, New York's 22nd District, which doesn't even border Canada, exports $1 billion in goods and $227 million in services to Canada each year.",
+    "Slap-shot tariff policy and volatile trade policy have put those jobs at risk.",
+    "They don't have time to wait and see if, possibly, domestic manufacturing will occur.",
+    "When tariffs slam the border, it hits the bottom line for small businesses in Syracuse, Utica, Auburn, Cortland, and other communities across my district.",
+    "In Massena, New York, jobs like the International Union of Painters and Allied Trades, IUPAT, and others do not have those jobs that were promised.",
+    "The cuts, the loss of these jobs, and the loss of promises and tax credits are impacting our ability to hit our clean energy goals and lower our utility bills for consumers.",
+    "We have fought for clean energy manufacturing.",
+    "I did so in the State senate as the cosponsor of a piece of legislation called Green CHIPS, which has brought Micron Technology into my district, producing semiconductor chips using clean energy.",
+    "That is where we are: broken promises on I-81; reckless tariff policy that destabilizes trade for the agricultural sector, manufacturing sector, and small businesses; and shortsighted cuts to energy programs, which will make power generation more challenging and cost jobs and investment while driving up energy costs.",
+    "While we are fighting those challenges, the Trump administration is also attacking renewables, a fast-growing private-sector employer in New York State.",
+    "Without that energy, we are going to continue to fall behind.",
+    "We are fighting that challenge.",
+    "I will never stop fighting for my hometown and the working people of this country.",
+    "I will always keep telling the truth to my constituents and the American people.",
+    "That is the way forward, and that is what I will be working on to deliver for the people of central New York, along with my Congressional Labor Caucus partners."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  }
+ ]
+}

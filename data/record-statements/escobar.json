@@ -1,0 +1,109 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "escobar",
+ "name": "Veronica Escobar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 25
+ },
+ "statements": [
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5127-2.htm",
+   "sentences": [
+    "Every day Americans are being confronted with skyrocketing prices at the gas pump and grocery store, and this resolution does absolutely nothing to address the economic crisis created by Donald Trump's economic policies, including his tariffs and an illegal war.",
+    "Mr. Chair, I rise in strong opposition to this resolution.",
+    "Mr. Chair, I urge my colleagues to vote ``no'' on this resolution."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "While I am disappointed that the bill still contains a partisan provision that weakens gun background check protections for veterans that I do not agree with, the final product is still a thoughtful, bipartisan one, and I support it in its current form.",
+    "I was proud to help secure the $700 million to build this great facility, and I am committed to ensuring that it delivers world-class healthcare for veterans on day one.",
+    "I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "U.S. citizens, alongside lawful immigrants and members of vibrant communities, including children as young as 5 years old, are being targeted by ICE and Border Patrol in the kinds of abuses many of us never believed would happen in America: indiscriminate stops on the streets, racial profiling, people dragged from their cars and their homes, legal observers physically assaulted for documenting abuses, theft and destruction of property, and people being killed by agents.",
+    "Mr. Speaker, I urge all of my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "We know that our veterans demand, expect, and deserve the best, highest quality healthcare, and that is why we must do more through this bill and not privatize.",
+    "Unfortunately, we have not, which is why I cannot support the bill."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP IMMIGRATION POLICIES",
+   "title": "TRUMP IMMIGRATION POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1767.htm",
+   "sentences": [
+    "When Donald Trump ignores an order from the Supreme Court to bring back a wrongfully deported immigrant, he is violating the rule of law, which impacts all of us.",
+    "Here is the thing: We can have strong border security and a fair and humane immigration system that works for our Nation."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Let's be clear: Republicans have no plan to prioritize hardworking Americans, but they have a $7 trillion plan to help billionaires.",
+    "They will do that by cutting Medicaid and nutrition programs and exploding the national debt by $6 trillion.",
+    "This budget resolution makes Americans sicker and poorer, and it will make the rich richer.",
+    "Mr. Speaker, I urge my colleagues to have some common sense and work with Democratic colleagues."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Donald Trump is threatening more tariffs, which means our costs will continue to go up.",
+    "They are working to give billionaires massive tax breaks, and they will do that by making life costlier for everyone else.",
+    "That is just the Medicaid portion of it.",
+    "In Texas, in my State, over 4 million Texans stand to lose with the cuts that my Republican colleagues will implement that this bill would unlock with cuts to Medicaid.",
+    "This budget bill would explode the national debt.",
+    "So that billionaires can have another yacht, another luxury home, another jet?",
+    "We just need some of our Republican colleagues to stand with us and vote to protect the American people, reject these billionaire tax breaks, reject the harm that it will do to their constituents and ours, and protect the American people.",
+    "Mr. Chair, I urge my colleagues to vote ``no.''"
+   ]
+  }
+ ]
+}

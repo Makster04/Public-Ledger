@@ -1,0 +1,45 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "blair",
+ "name": "Everton Blair Jr.",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 2,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: I CAME TO WORK",
+   "title": "I CAME TO WORK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgH6286.htm",
+   "sentences": [
+    "I sat down with my constituents to hear their take on the issues like artificial intelligence, worries about data centers, cracking down on the predatory practices of housing in their communities, talking about the cost of living, veteran affairs, and so many important issues that we need a Representative who was willing to pay that time and listen to them.",
+    "There is a lot of work to do immediately here: increasing the minimum wage; reversing all of the cuts that the Trump administration underwent at the top of last year.",
+    "Fighting for universal single-payer healthcare because in the richest country in the history of the world it makes no sense why people are picking between going to see a doctor and paying a car note or a mortgage.",
+    "How can we ensure that there are some healthy term limits or some shifting of the status quo, movement of the condition, mentorship, pipelines that we can build from?",
+    "Who writes the rules for artificial intelligence or for the economy of 2040 if those very people who will be here are not at the table right now?",
+    "I encourage us to really reflect on how we are going to bring people into the fold, how we are going to expand our coalition and tap into that.",
+    "Unfortunately, at every turn, I had to basically tell them this Congress probably isn't going to do much of it, but I am going to try to do something anyway.",
+    "As somebody who has only been here for a short period of time, I am starting to see all of the ways in which many of the rules must change if we are going to be best served.",
+    "When we have the gavel, we will show them what good leadership looks like.",
+    "If we are going to keep relics of an old system that was never designed for us to achieve and ascend, we have to figure out ways to change and adapt those systems so we can do better at creating a face that is representative of the multitude of coalitions that we represent in this country.",
+    "I don't have the answer to it, but I can tell you that we need to do some things differently if we are going to collectively have that answer.",
+    "To the incoming freshmen, I won't get to serve with many of you, at least not now, but I have had a pretty unique perspective as one of the youngest people here, as the literal newest Member here, and as somebody who won't be returning in the 120th Congress.",
+    "If there is not time in the agenda in the big room, I will find the person after the meeting to just share some ideas and ask questions."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THREAT OF AI",
+   "title": "THREAT OF AI",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5635.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to talk about the importance of artificial intelligence and to challenge this Congress' abdication on its regulation.",
+    "With a national debt north of $40 trillion, with appropriations unfinished, a stopgap running out in December, and with an unregulated technology reshaping every workplace in the country, we can do better."
+   ]
+  }
+ ]
+}

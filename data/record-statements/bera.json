@@ -1,0 +1,164 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bera",
+ "name": "Ami Bera",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 13,
+  "sentences": 35
+ },
+ "statements": [
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JUHIE PARIKH COMMEMORATES AMERICA'S 250TH ANNIVERSARY",
+   "title": "JUHIE PARIKH COMMEMORATES AMERICA'S 250TH ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4002-2.htm",
+   "sentences": [
+    "Mr. Speaker, I would like to share her essay in her own words: As I look out onto my street in a Sacramento suburb, I see a lovely Chinese family with two daughters achieving their dreams in college, a Black family with two daughters in high school with me, a Mexican family with three children that love playing soccer, college students renting a house, three generations of a White family and their cute dog named Liesel who pass out homemade cinnamon rolls every Christmas to each house, and my own Indian immigrant family.",
+    "Recognizing 20th Anniversary of Citrus Heights Police Department Mr. Speaker, I rise today to recognize the 20th anniversary of the Citrus Heights Police Department."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BLOCK THE USE OF TRANSATLANTIC TECHNOLOGY IN IRANIAN MADE DRONES ACT",
+   "title": "BLOCK THE USE OF TRANSATLANTIC TECHNOLOGY IN IRANIAN MADE DRONES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3943.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2505, the Block the Use of Transatlantic Technology in Iranian Made Drones Act.",
+    "I thank my colleague from Massachusetts, Representative Keating, for his leadership in advancing bipartisan efforts to counter Iran's drone program, a threat that continues to hound Ukraine, and now our own forces and allies in the Middle East.",
+    "Since Russia's full-scale invasion of Ukraine, Iran has exported thousands of Shahed drones to the Russian military, fueling attacks on Ukrainian infrastructure and civilians.",
+    "Now, Iranian drones continue to threaten and damage critical energy, military, and civilian infrastructure across the Middle East.",
+    "Most recently, Iranian drones struck Kuwait International Airport, heavily damaging a passenger terminal, killing one person, wounding dozens more, and briefly closing the airfield.",
+    "I encourage my colleagues to support this bipartisan bill to help ensure that the United States and European technologies smuggled by illicit intermediaries don't fuel Iran's drone program.",
+    "Mr. Speaker, this bill closes a critical gap in enforcement to ensure that U.S. and European technologies don't fuel Iran's drone program."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: US-JAPAN-ROK TRILATERAL COOPERATION ACT",
+   "title": "US-JAPAN-ROK TRILATERAL COOPERATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3945.htm",
+   "sentences": [
+    "Whether it is the challenges posed by North Korea or the People's Republic of China, trilateral cooperation is one of the critical ways to ensure that America and our two closest allies in Asia are working hand in hand toward our common interests and advancement of peace and prosperity in the region.",
+    "Mr. Speaker, I rise today in support of H.R. 3429, the U.S.-Japan-ROK Trilateral Cooperation Act.",
+    "Mr. Speaker, I urge all my colleagues to support this measure."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES COMMISSION ON INTERNATIONAL RELIGIOUS FREEDOM REAUTHORIZATION ACT OF 2026",
+   "title": "UNITED STATES COMMISSION ON INTERNATIONAL RELIGIOUS FREEDOM REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3947.htm",
+   "sentences": [
+    "True religious liberty cannot mean protection for only a favored few.",
+    "In many parts of the world, severe restrictions on religion are an early warning sign of authoritarian consolidation and instability.",
+    "Mr. Speaker, I rise today in support of this bill to reauthorize the United States Commission on International Religious Freedom, or USCIRF, through fiscal year 2028."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING EUROPE FROM ANTISEMITIC CRIME AND EXTREMISM ACT",
+   "title": "PROTECTING EUROPE FROM ANTISEMITIC CRIME AND EXTREMISM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3948.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the PEACE Act.",
+    "Mr. Speaker, I support this bill and urge my colleagues to do the same.",
+    "Mr. Speaker, I support this measure."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRODUCING RETURNS AND OPPORTUNITY FOR INVESTMENT AND TRADE ACT OF 2026",
+   "title": "PRODUCING RETURNS AND OPPORTUNITY FOR INVESTMENT AND TRADE ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3950.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 5248, and I thank Representative Young Kim and Chairman Mast for working to move this package of economic diplomacy measures in a bipartisan manner.",
+    "Mr. Speaker, I support this measure, and I urge all of my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TEHRAN INCITEMENT TO VIOLENCE ACT",
+   "title": "TEHRAN INCITEMENT TO VIOLENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3954.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of passage of H.R. 6230, a bill that seeks to apply standard International Emergency Economic Powers Act, or IEEPA, property-blocking sanctions against a set of Iranian religious and government figures, as well as the institutions they represent, who have publicly threatened the life of the President of the United States and allied leaders.",
+    "Additional listings may feel satisfying, but they will not on their own cause a meaningful change in Iran's calculus or behavior.",
+    "What we need from the Trump administration is an end to this costly war, followed by a clear articulation on an Iran strategy that protects the American people, supports our partners, and restores credible diplomacy.",
+    "Mr. Speaker, I support this bill because threats made against the United States President and others by those this legislation targets are completely unacceptable."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEVELOPING OVERSEAS MINERAL INVESTMENTS AND NEW ALLIED NETWORKS FOR CRITICAL ENERGIES ACT",
+   "title": "DEVELOPING OVERSEAS MINERAL INVESTMENTS AND NEW ALLIED NETWORKS FOR CRITICAL ENERGIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3957.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 7037, the Developing Overseas Mineral Investments and New Allied Networks for Critical Energies Act, or the DOMINANCE Act."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALLIED DEFENSE SALES ACT",
+   "title": "ALLIED DEFENSE SALES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3965.htm",
+   "sentences": [
+    "This bill directs the Secretary of State to develop and implement a strategy to encourage U.S. foreign partners to participate in the foreign military sales, FMS, and direct commercial sales, DCS, processes on a multinational basis.",
+    "Mr. Speaker, I rise today in support of a bill I co-led with Representative Zinke regarding the promotion of multicountry defense article purchases, which can result in lower prices, greater efficiencies, and interoperability for our allies and partners.",
+    "I support this bill and encourage my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COUNTERING CHINA'S CONTROL OF THE CAUCASUS ACT",
+   "title": "COUNTERING CHINA'S CONTROL OF THE CAUCASUS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3967.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 7668, a bipartisan bill designed to make sure the United States is clear-eyed about the threats from Russia and the PRC in Georgia as well as whether Georgia remains committed to a relationship with the United States and Europe centered around shared values and interests.",
+    "The goal is to let the Georgian people know that we stand by them in their quest for democracy, respect for their rights, and deeper integration in the Euro-Atlantic community."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP ILLEGAL FISHING ACT",
+   "title": "STOP ILLEGAL FISHING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3968.htm",
+   "sentences": [
+    "Yet, too often, foreign vessels engage in illegal fishing practices that deplete fish stocks, undermine local economies, and erode the ability of Pacific nations to manage their own maritime resources.",
+    "Countries like China, Iran, and Russia are willfully or, at best, negligently violating international law, undermining human rights, and hurting communities for their own benefit.",
+    "Mr. Speaker, I rise today in support of Ranking Member Meeks' legislation, H.R. 6338, the Stop Illegal Fishing Act."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAREWELL TO KELVIN LUM",
+   "title": "FAREWELL TO KELVIN LUM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH843.htm",
+   "sentences": [
+    "While we will all miss Kelvin in our office, I know that the work he has done here will continue to have a lasting impact."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH533-4.htm",
+   "sentences": [
+    "Had I been present, I would have voted YEA on Roll Call No. 32, the Trahan Amendment to H.R. 27 and YEA on Roll Call No. 33, Passage of H.R. 27 the HALT Fentanyl Act. personal explanation"
+   ]
+  }
+ ]
+}

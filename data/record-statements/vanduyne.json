@@ -1,0 +1,95 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "vanduyne",
+ "name": "Beth Van Duyne",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 20
+ },
+ "statements": [
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOVER COVID UNEMPLOYMENT FRAUD IN BANKS ACT",
+   "title": "RECOVER COVID UNEMPLOYMENT FRAUD IN BANKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4269-4.htm",
+   "sentences": [
+    "Every dollar stolen through fraud is a dollar that cannot serve hardworking Americans or reduce our Nation's debt.",
+    "Mr. Speaker, I rise today in support of H.R. 8873, the Recover COVID Unemployment Fraud in Banks Act, which I was proud to introduce with the gentleman from New York (Mr. Suozzi), my bipartisan partner.",
+    "Mr. Speaker, I urge my colleagues to support this bipartisan legislation."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING CHILDREN RECEIVE SUPPORT ACT",
+   "title": "ENSURING CHILDREN RECEIVE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3113.htm",
+   "sentences": [
+    "Supporting working families is more important than ever, especially now that the working families tax cuts have been signed into law.",
+    "Mr. Speaker, I rise in support of my bill, H.R. 6903, the Ensuring Children Receive Support Act.",
+    "I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS INNOVATION AND ECONOMIC SECURITY ACT",
+   "title": "SMALL BUSINESS INNOVATION AND ECONOMIC SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2491-9.htm",
+   "sentences": [
+    "This bill also aims to bridge the valley of death between research and commercialization by providing training for acquisition officials, improving data collection across participating agencies, and modernizing technical and business assistance for small businesses.",
+    "Mr. Speaker, I rise today in support of S. 3971, the Small Business Innovation and Economic Security Act, which reauthorizes the Small Business Innovation Research and Small Business Technology Transfer programs through September 30, 2031.",
+    "I urge my colleagues to support this unanimous commonsense solution.",
+    "Mr. Speaker, I urge my colleagues to vote in favor of S. 3971 to support small businesses across the country in advancing technology and innovation."
+   ]
+  },
+  {
+   "date": "2025-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS REGULATORY REDUCTION ACT OF 2025",
+   "title": "SMALL BUSINESS REGULATORY REDUCTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-02/html/CREC-2025-12-02-pt1-PgH4987.htm",
+   "sentences": [
+    "To say that we are not going to save money and we are not going to help small businesses save money by cutting resolutions is an absolute lie."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMISES MADE, PROMISES KEPT",
+   "title": "PROMISES MADE, PROMISES KEPT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3745-7.htm",
+   "sentences": [
+    "Whether they are in energy, advanced manufacturing, law enforcement, education, or technology, north Texas has something for everyone.",
+    "One great example is the U.S. Border Patrol, as they are now expanding their workforce and hiring new agents as a direct result of our One Big Beautiful Bill Act."
+   ]
+  },
+  {
+   "date": "2025-06-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN ENTREPRENEURS FIRST ACT OF 2025",
+   "title": "AMERICAN ENTREPRENEURS FIRST ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-06/html/CREC-2025-06-06-pt1-PgH2510-6.htm",
+   "sentences": [
+    "Simply put, all this does is say that when they are giving out SBA loans, they have to require age verification and citizenship status verification.",
+    "In recent months, it has been discovered that under the previous administration, lax safeguards have allowed illegal aliens, children, and even the deceased to apply for and receive SBA assistance.",
+    "We know, without a doubt, that the previous administration welcomed millions of illegal aliens into our country when, during the first 50 days of the Trump administration, ICE made over 32,809 arrests, which included 14,111 convicted criminals, including 1,155 criminal gang members.",
+    "We cannot allow those kinds of folks who are in our country illegally to take money away from hardworking Americans who are applying for SBA taxpayer-backed loans.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting the American Entrepreneurs First Act."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, over the past 2 years, my colleagues and I on the Ways and Means Committee have traveled around the country, listening to working families, small business owners, and job creators.",
+    "It is a strong, commonsense compromise that builds on the success of the 2017 Tax Cuts and Jobs Act."
+   ]
+  }
+ ]
+}

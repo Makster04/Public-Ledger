@@ -1,0 +1,185 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "watsoncoleman",
+ "name": "Bonnie Watson Coleman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 47
+ },
+ "statements": [
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM LEBANON",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM LEBANON",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4304.htm",
+   "sentences": [
+    "Our country was rightly shocked and horrified when over 150 schoolgirls were killed in the opening hours of our strikes on Iran.",
+    "High-ranking members of the Israeli Government are threatening mass extermination of Lebanese civilians."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WAR IN IRAN WITHOUT CONSULTATION",
+   "title": "WAR IN IRAN WITHOUT CONSULTATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2556-2.htm",
+   "sentences": [
+    "The President's war in Iran is one of the greatest foreign policy blunders in American history.",
+    "In briefings to Congress, the administration has admitted this isn't about regime change and that there was no imminent threat, that there was no nuclear threat.",
+    "If my colleagues in this Chamber have a shred of dignity left, they will immediately pass a War Powers Resolution and bring an end to this disaster before more lives are lost."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SEMIQUINCENTENNIAL CONGRESSIONAL TIME CAPSULE ACT",
+   "title": "SEMIQUINCENTENNIAL CONGRESSIONAL TIME CAPSULE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2046-10.htm",
+   "sentences": [
+    "As we approach the 250th anniversary of that moment, Congress has a responsibility to reflect honestly on where we have been and what we will choose to pass on.",
+    "While we won't be there to open it, we should be there to see what goes into it."
+   ]
+  },
+  {
+   "date": "2026-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JANUARY 6 ATTACK",
+   "title": "JANUARY 6 ATTACK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-06/html/CREC-2026-01-06-pt1-PgH6-3.htm",
+   "sentences": [
+    "Yet, on the first day of Donald Trump's second term, he pardoned more than 1,500 criminals involved in that insurrection carried out in his name.",
+    "It is a slap in the face to law enforcement who selflessly put their lives at risk to defend all of us.",
+    "In Brian's honor, I introduced a resolution condemning those blanket pardons."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to discuss this big, disgusting billionaire bailout bill.",
+    "What I heard from all of those constituents in those three districts was that they are very disappointed that they were not able to communicate with their Representatives because their Representatives were hiding from them because they could not justify their support of this big, disgusting billionaire bailout."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLDING POWER ACCOUNTABLE",
+   "title": "HOLDING POWER ACCOUNTABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2962-4.htm",
+   "sentences": [
+    "They have disregarded the rights of citizens and noncitizens alike.",
+    "In just the last few months, DHS has accused a U.S. citizen of entering the country illegally and held that person for days, despite the person showing his birth certificate and Social Security card.",
+    "In response, I introduced a piece of legislation, the ICE Visibility Act, to eliminate this confusion and increase safety in our communities by requiring ICE officers to wear visible and distinct uniforms at all times.",
+    "This bill that I am introducing obviously won't solve the problem of a runaway ICE that puts arrest quotas over the rights of our communities, but it might just prevent a disaster that is waiting to happen."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL GUN VIOLENCE AWARENESS MONTH",
+   "title": "NATIONAL GUN VIOLENCE AWARENESS MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2411.htm",
+   "sentences": [
+    "Black Americans die by gun violence at a rate 2.7 times greater than their White peers, including a 50 percent increase in firearm suicides in 2023.",
+    "Congress has the power to act to keep our young people safe from their leading cause of death: gun violence."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 151 DAYS WITHOUT A VOTE TO LOWER COSTS",
+   "title": "151 DAYS WITHOUT A VOTE TO LOWER COSTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2415.htm",
+   "sentences": [
+    "These are the folks who rely on basic needs programs like SNAP and Medicaid.",
+    "As if this outcome wasn't bad enough, what may be worse is the reason that they are doing all of this: To pay for huge tax breaks for the wealthiest Americans."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP IMMIGRATION POLICIES",
+   "title": "TRUMP IMMIGRATION POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1767.htm",
+   "sentences": [
+    "More recently, over the past weekend, we learned that Trump administration's police deported a 4-year-old American citizen who has stage IV cancer, and then they lied about it.",
+    "She pled with the Trump's deportation police to let her contact her family to arrange care for her son and make sure that he keeps receiving the medical treatment that he desperately needs.",
+    "Yet, Trump's police said: No. They denied this basic right."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "It takes billions of dollars from programs that working families rely on and gives that money to the very wealthiest Americans in the form of $7 trillion in tax breaks.",
+    "It slashes funding for programs like Medicaid.",
+    "Nearly 2 million people in my State of New Jersey rely on Medicaid for healthcare.",
+    "It raises the healthcare costs for folks who get their coverage through the Affordable Care Act.",
+    "Though I know my colleagues across the aisle are very concerned with the Federal debt, this budget adds more than $5 trillion to the deficit.",
+    "This is a rip-off for working families, and I strongly encourage my colleagues to oppose this measure."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "It is a betrayal of the one- third of New Jersey children who rely on Medicaid.",
+    "It is a betrayal of the one-third of new mothers who count on Medicaid for their prenatal care.",
+    "It is a rip-off of New Jersey taxpayers as Republicans have prioritized tax cuts for their billionaire donors over the lives of everyday citizens who will suffer under this new budget.",
+    "My neighbor, Tom Kean, has over 70,000 Medicaid recipients, including over 27,000 children.",
+    "Does Congressman Van Drew from New Jersey know a vote for this budget means abandoning 177,000 of his residents for the billionaire class?",
+    "Does Congressman Chris Smith know that there are 178,000 Medicaid recipients in his district, including nearly 100,000 children who will be cut and will lose their coverage simply to enrich Trump's billionaire friends?",
+    "I only hope that there are at least a few of my Republican colleagues today who have the courage and the humanity to stand up for their most vulnerable constituents and to vote ``no.'' I urge a ``no'' vote here."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A HOSTILE TAKEOVER",
+   "title": "A HOSTILE TAKEOVER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH509-5.htm",
+   "sentences": [
+    "Because Elon Musk, an unelected billionaire donor, has mounted a hostile takeover of the Federal Government.",
+    "It is an astonishing display of corruption: A billionaire CEO who is not confirmed, who is accountable to no one, and who donated millions to Donald Trump's election campaign is now in charge of the Treasury Department's payment system.",
+    "The richest man in the world now has access to the personal information and financial information of millions of Americans, including Social Security numbers and bank account details.",
+    "Handing over such sensitive information to a reckless billionaire with a history of self-serving business dealings and foreign interests is not just irresponsible, it is dangerous.",
+    "To those listening, call your Representatives and tell them how you feel about this out-of-touch billionaire reaching his hands into your private information.",
+    "Tell those minions of the unelected billionaire donor that you don't work for them; you work for the American people.",
+    "When they tell you that you are dismissed, tell them to speak to your union rep because you are not leaving until you hear from them."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PARDONING THOSE WHO ATTACKED OFFICER BRIAN SICKNICK IS DISGRACEFUL",
+   "title": "PARDONING THOSE WHO ATTACKED OFFICER BRIAN SICKNICK IS DISGRACEFUL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH349-5.htm",
+   "sentences": [
+    "Mr. Speaker, U.S. Capitol Police Officer Brian Sicknick was born in New Brunswick and raised in South River, and he died in D.C. on January 7, 2021.",
+    "The men who attacked him just hours before his death, who were charged, tried, and convicted of assaulting a police officer, were just able to walk free.",
+    "January 6 was a violent insurrection."
+   ]
+  }
+ ]
+}

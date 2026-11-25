@@ -1,0 +1,146 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "tran",
+ "name": "Derek Tran",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 12,
+  "sentences": 26
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING FOREIGN THREATS TO MAIN STREET ACT OF 2026",
+   "title": "COMBATING FOREIGN THREATS TO MAIN STREET ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6152-5.htm",
+   "sentences": [
+    "However, it is no secret that the Chinese Communist Party is waging an organized campaign to undercut American global influence, steal American innovation, and harm American small businesses.",
+    "Mr. Speaker, I rise today in support of H.R. 10329, the Combating Foreign Threats to Main Street Act.",
+    "I want to thank Chairman Roger Williams for his partnership on this important piece of legislation, and I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+   "sentences": [
+    "Mr. Chairman, I rise today in support of this en bloc package of bipartisan amendments that includes my amendment, Tran No. 65, which supports the annual U.S.-Vietnam Human Rights Dialogue and reaffirms Congress' commitment to advancing fundamental freedoms and human rights in the Socialist Republic of Vietnam.",
+    "Mr. Chairman, I urge my colleagues to support these amendments en bloc."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GARDEN GROVE HAZMAT CRISIS",
+   "title": "GARDEN GROVE HAZMAT CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3835.htm",
+   "sentences": [
+    "Over Memorial Day weekend, our firefighters, police officers, and other emergency personnel worked around the clock to keep our community safe.",
+    "I especially thank Orange County Fire Authority Division Chief and Incident Commander Craig Covey, Fire Chief TJ McGovern, Garden Grove Police Chief Amir El-Farra, and Orange County Health Officer Dr. Regina Chinsio-Kwong.",
+    "I am not going to stop fighting until my community gets the recourse they deserve. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3006-6.htm",
+   "sentences": [
+    "This bill will also give us time to continue negotiating much-needed reforms to ICE and border protection.",
+    "Let's pass this DHS funding bill, and I urge all of my colleagues to defeat the previous question so that we can bring it to the floor."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 504 PROGRAM RISK OVERSIGHT ACT",
+   "title": "504 PROGRAM RISK OVERSIGHT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH932.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of H.R. 5788, the 504 Program Risk Oversight Act, bipartisan legislation that strengthens one of SBA's most successful financing programs.",
+    "Madam Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HUMANITARIAN CRISIS IN GAZA",
+   "title": "HUMANITARIAN CRISIS IN GAZA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3546-6.htm",
+   "sentences": [
+    "The choice by Israeli leadership to engage in military actions at aid sites endangers all innocent Palestinians and Israelis who deserve to live with dignity."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONNECTING SMALL BUSINESSES WITH CAREER AND TECHNICAL EDUCATION GRADUATES ACT OF 2025",
+   "title": "CONNECTING SMALL BUSINESSES WITH CAREER AND TECHNICAL EDUCATION GRADUATES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2392-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1642, the Connecting Small Businesses with Career and Technical Education Graduates Act.",
+    "I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PLAIN LANGUAGE IN CONTRACTING ACT",
+   "title": "PLAIN LANGUAGE IN CONTRACTING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2395.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 787, the Plain Language in Contracting Act.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes'' on this bipartisan bill."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to this reckless attempt by Republicans to force through a reconciliation bill that makes life harder for the working families in California's 45th District.",
+    "Republicans are taking money out of Americans' pockets and giving it to billionaires and big companies.",
+    "Over 250,000 people in my district rely on Medicaid, and over 100,000 of them are children and seniors.",
+    "Mr. Speaker, I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 42, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 42, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM FOR APPLIANCE...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH955.htm",
+   "sentences": [
+    "That is why last week I introduced my first bill, the Protect Veteran Jobs Act, to reinstate veterans who were recklessly terminated without cause under the Trump administration's purge of the Federal workplace.",
+    "I urge my Republican colleagues to join us in opposing the previous question so that we can take up this important measure to restore the livelihoods of veterans who have served our country honorably and who have continued to do so through civilian service."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS",
+   "title": "DEMOCRATIC PROPOSALS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+   "sentences": [
+    "Mr. Speaker, I am honored to announce that the first bill I will introduce as a Member of Congress is the Protect Veteran Jobs Act."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS ADVOCACY IMPROVEMENTS ACT OF 2025",
+   "title": "SMALL BUSINESS ADVOCACY IMPROVEMENTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH739.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to support H.R. 832, the Small Business Advocacy Improvements Act.",
+    "Mr. Speaker, I urge my colleagues to support this important bipartisan bill."
+   ]
+  }
+ ]
+}

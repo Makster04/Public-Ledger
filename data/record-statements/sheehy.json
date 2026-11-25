@@ -1,0 +1,88 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "sheehy",
+ "name": "Tim Sheehy",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "title": "CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgS5788.htm",
+   "sentences": [
+    "Mr. President, we have an Iran War Powers Resolution before us now.",
+    "I think part of the reason we have this resolution is that most Americans don't really understand because we have failed to explain to them what the true threat that radical Islam and the Iranian regime pose to Americans every day.",
+    "Although $7 diesel is unpopular, $17 diesel and thousands of dead Americans is even more unpopular.",
+    "And if the Iranian regime gets what they want--which is to control the Strait of Hormuz; to control the Bab el-Mandeb, which is the strait sitting next to the Houthi rebels in Yemen; to control the Suez Canal, which is not far away from the Yemenis rebels; and the Strait of Malacca in Indonesia, the largest Muslim population in the world--that will constrict half the world's energy supply and four of the world's most strategic seaways under the control of a radical caliphate whose sole mission is to destroy America and our way of life.",
+    "That is what the Iranian regime wants to happen in every town across America.",
+    "And they celebrate the fact that they will rape and murder women and children, torture families to death, and destroy entire villages.",
+    "Their ideology does not stop at Israel or the Strait of Gibraltar; they want to bring it all the way here and spread it around the world.",
+    "Iran is not a war of choice; it is a war of necessity because the Ayatollah decided 47 years ago that he was going to claim ``Death to America'' and do so in every way possible.",
+    "Any discussions or negotiations with Iran are a tool to delay us, to buy time and resources to continue their murderous regime and to continue to kill Americans, harm our interests, and try to take over the region and the world.",
+    "I urge my colleagues to vote no on this resolution. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE REMOVAL OF UNITED STATES ARMED FORCES FROM HOSTILITIES WITHIN OR AGAINST THE ISLAMIC REPUBLIC OF IRAN THAT HAVE NOT BEEN AUTHORIZED BY CONGRESS--Motio",
+   "title": "DIRECTING THE REMOVAL OF UNITED STATES ARMED FORCES FROM HOSTILITIES WITHIN OR AGAINST THE ISLAMIC REPUBLIC OF IRAN THAT HAVE NOT BEEN AUTHORIZED BY CONGRESS--Motion to Discharge",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-23/html/CREC-2026-07-23-pt1-PgS4246.htm",
+   "sentences": [
+    "He was cut in half by an Iranian BFD.",
+    "There has never been a single President who has stood up to Iran and hit back.",
+    "So I encourage our colleagues on both sides of the aisle--whatever is politically convenient, whatever plays well on Twitter or Facebook--to think about the people who are deployed right now, standing on that wall with a loaded weapon, who have volunteered to defend our country and our way of life, because they are there defending us in a just war--because we did not start the war with the Iranian Revolutionary Guard.",
+    "This regime that we are fighting does not care about our partisan politics."
+   ]
+  },
+  {
+   "date": "2026-06-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL LAW ENFORCEMENT APPRECIATION MONTH",
+   "title": "NATIONAL LAW ENFORCEMENT APPRECIATION MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-01/html/CREC-2026-06-01-pt1-PgS2469-3.htm",
+   "sentences": [
+    "Mr. President, as we look back on National Law Enforcement Appreciation Month, it is my honor to pay tribute to the memory of nearly 150 peace officers who have given their lives in the line of duty in service to Montana since 1878."
+   ]
+  },
+  {
+   "date": "2025-10-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EN BLOC NOMINATIONS--Continued",
+   "title": "EN BLOC NOMINATIONS--Continued",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-07/html/CREC-2025-10-07-pt1-PgS6967-3.htm",
+   "sentences": [
+    "From AI, to digital currency, to quantum computing, the needs for energy will be insatiable here in America and around the world.",
+    "For us to lead in these technologies, to lead in artificial intelligence, to beat China in the digital currency game, to beat the rest of the world in quantum computing--if we want those technologies to exist in a free and flourishing market, in a free republic like the United States of America, we have to lead in those industries.",
+    "Many other nations depend upon the economic leadership that America provides, and in the 21st century, that leadership will depend on a strong, 21st-century economy based on cryptographic currency, artificial intelligence, and quantum computing.",
+    "Our investors--American investors and foreign investors--need to have confidence that if they put dollars into the American economy, those dollars are going to be respected, encouraged, and, quite frankly, rewarded.",
+    "So I am proud to support this CRA."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+   "sentences": [
+    "Mr. President, I urge a ``no'' vote on this amendment."
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-14/html/CREC-2025-03-14-pt1-PgS1768.htm",
+   "sentences": [
+    "Where was the outrage when thousands of first responders and police officers, firefighters, nurses, and doctors lost their employment because they had COVID vaccine hesitancy?"
+   ]
+  }
+ ]
+}

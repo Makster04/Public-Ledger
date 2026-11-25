@@ -1,0 +1,124 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bergman",
+ "name": "Jack Bergman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "This defense budget sits as the cornerstone of this great enterprise."
+   ]
+  },
+  {
+   "date": "2025-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL RURAL HEALTH DAY",
+   "title": "NATIONAL RURAL HEALTH DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-18/html/CREC-2025-11-18-pt1-PgH4763.htm",
+   "sentences": [
+    "They provide emergency care, support seniors and veterans, deliver behavioral health services, assist mothers who are giving birth, supply pharmacy services, and serve as major local employers."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "In the Readiness Subcommittee, this bill addresses some of the largest readiness challenges in the Department, including a specific focus on the Joint Strike Fighter and amphibious ship readiness concerns.",
+    "Madam Chair, I rise in support today of the National Defense Authorization Act.",
+    "Madam Chair, I urge all Members to vote ``yes'' on this important legislation."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "President Trump's first administration took a bold and necessary step by granting breakthrough therapy status to MDMA and psilocybin acknowledging their potential to transform mental health care.",
+    "Mr. Chairman, I rise in opposition, although I am not opposed to the amendment.",
+    "I rise in strong support of this amendment, which directs the Veterans Administration to begin preparing for the rollout of breakthrough treatments for veterans battling PTSD, depression, and substance abuse disorders."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VA BUDGET SHORTFALL ACCOUNTABILITY ACT",
+   "title": "VA BUDGET SHORTFALL ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2129.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my legislation, the VA Budget Shortfall Accountability Act, a bill that puts veterans first by ensuring the systems meant to serve them are working as intended.",
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to join me in supporting this bill, which will help ensure that our veterans never have to question whether their benefits and care will be there when they need them."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACES ACT",
+   "title": "ACES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1815-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 530, as amended."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERAN FRAUD REIMBURSEMENT ACT OF 2025",
+   "title": "VETERAN FRAUD REIMBURSEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1817.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1912 introduced by my colleague from Virginia (Mr. Connolly)."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESS SUPPORTS NORTHERN MICHIGAN AND THE UPPER PENINSULA",
+   "title": "CONGRESS SUPPORTS NORTHERN MICHIGAN AND THE UPPER PENINSULA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1513-2.htm",
+   "sentences": [
+    "This past weekend, I was able to meet with many of our first responders: police, firefighters, dispatchers, and emergency medical teams."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Those priorities are securing our border, strengthening national security, energy independence, and preventing a tax hike of $4 trillion set to hit at the end of the year if we don't act.",
+    "Yes, there are concerns about how we achieve the spending cuts and reduce the deficit.",
+    "Mr. Speaker, I rise in support of this Senate amendment to the fiscal year 2025 budget resolution.",
+    "Let's be clear about what we are voting on today.",
+    "We are voting on the framework, a starting point for building a budget that delivers on President Trump's priorities.",
+    "I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "In the past decade, Medicaid has accounted for over $550 billion, with a b, in improper payments, making it one of the government's largest sources of payment errors.",
+    "As my colleagues on the Energy and Commerce Committee begin their critical efforts, I urge them to keep this top of mind.",
+    "I urge all my colleagues to support this good resolution."
+   ]
+  }
+ ]
+}

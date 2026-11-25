@@ -1,0 +1,234 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "pfluger",
+ "name": "August Pfluger",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 16,
+  "sentences": 78
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY INTELLIGENCE AND ANALYSIS TRAINING ACT",
+   "title": "DEPARTMENT OF HOMELAND SECURITY INTELLIGENCE AND ANALYSIS TRAINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5901.htm",
+   "sentences": [
+    "It also better educates I&A personnel on their role in facilitating crucial information flows between the Department, the intelligence community, and the full spectrum of law enforcement partners.",
+    "Just as important, the bill preserves constitutional protections, privacy rights, and civil liberties of U.S. citizens related to both intelligence collection and analysis.",
+    "Mr. Speaker, I was pleased to see this bill advance both at the subcommittee and the full committee levels earlier this year, and I urge all of my colleagues on both sides of the aisle to support this very important piece of legislation."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: I&A MISSION REORIENTATION ACT OF 2026",
+   "title": "I&A MISSION REORIENTATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5903.htm",
+   "sentences": [
+    "Recognizing that there were gaps in information sharing that hindered cohesive threat assessments, I&A was founded with a mandate unlike any other in the intelligence community: to share intelligence with State, local, and territorial law enforcement partners.",
+    "There is no shortage of threats today, as terror groups move and adapt to evade detection by law enforcement and intelligence communities.",
+    "Mr. Speaker, I urge both sides of the aisle to pass this legislation to continue to secure the United States of America."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENVIRONMENTAL MONITORING AND REMEDIATION TECHNOLOGY ASSESSMENT INITIATIVE AUTHORIZATION ACT OF 2026",
+   "title": "ENVIRONMENTAL MONITORING AND REMEDIATION TECHNOLOGY ASSESSMENT INITIATIVE AUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5682.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to speak in support of my bill, H.R. 9616, the Environmental Monitoring and Remediation Technology Assessment Initiative, or EMRTAI, Authorization Act of 2026.",
+    "Unless we develop more domestic sources for critical materials, we will remain at the mercy of our enemies."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "title": "FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, the Foreign Emissions and Nonattainment Clarification for Economic Stability Act, also known as the FENCES Act.",
+    "Smoke from Canadian wildfires, emissions drifting across our southern border, and other foreign sources can overwhelm local air quality readings even when the States are fully compliant and acting in good faith.",
+    "That is why the Clean Air Act allows States to account for foreign emissions when those emissions interfere with attainment, but that balance was disrupted when EPA guidance under the Biden administration sharply narrowed what counts as foreign emissions, limiting relief to certain human-caused sources while excluding events like wildfires."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt1-PgH2782-8.htm",
+   "sentences": [
+    "That is a direct violation of the USMCA.",
+    "Mr. Speaker, I rise today in strong support of H.R. 7084, the Defending American Property Abroad Act.",
+    "We cannot allow a foreign government to steal American property and face zero consequences.",
+    "I urge colleagues on both sides of the aisle to vote ``yes'' on H.R. 7084."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, I will remind my colleagues across the aisle that not a single Republican has ever voted for ObamaCare.",
+    "Mr. Speaker, ObamaCare has failed to deliver on its promises.",
+    "Mr. Speaker, I recently had a constituent write to me, outlining her and her husband's experience, demonstrating systematic fraud within the ACA marketplace.",
+    "Her husband has been repeatedly enrolled in an ACA plan without consent since November 2023 in a scheme where brokers and agents are fraudulently enrolling individuals to collect commissions and meet enrollment quotas.",
+    "They represent the broader failure that is ObamaCare.",
+    "The Lower Health Care Premiums for All Americans Act is a great first step toward this mission, and we will drive down health insurance premiums immediately by 11 percent through cost-sharing reduction payments, provide patients with greater transparency, and support small businesses that offer employment-based healthcare."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "The White House launched a whole-of-government assault on American energy production: slow-rolling permits; killing infrastructure projects, like pipelines; and, most importantly, pandering to radical climate activists.",
+    "Let me be clear that this ban put politics over people by jeopardizing the American economy and handing Vladimir Putin a lifeline as our European allies were forced to scramble for energy.",
+    "U.S. LNG exports replace dirtier fuels from adversaries like Russia and Iran.",
+    "Mr. Speaker, I rise in support of my legislation.",
+    "Mr. Speaker, I urge all my colleagues to support this and am proud to offer H.R. 1949."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GENERATIVE AI TERRORISM RISK ASSESSMENT ACT",
+   "title": "GENERATIVE AI TERRORISM RISK ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4783.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1736, the Generative AI Terrorism Risk Assessment Act.",
+    "The mass adoption of artificial intelligence is the latest in a series of technological revolutions that have permeated and influenced every aspect of our lives.",
+    "Earlier this year, the Subcommittee on Counterterrorism and Intelligence held a hearing to consider the extent to which terrorist groups are using generative AI for recruitment and radicalization.",
+    "We know now, without a doubt, that terrorist organizations have already integrated generative AI into their operations.",
+    "We found that groups, including ISIS and al-Qaida, are actively training in the use of artificial intelligence and using it to produce highly convincing propaganda, making it much easier for terrorist groups to recruit, radicalize, and carry out attacks on the U.S. homeland.",
+    "My bill requires DHS to conduct annual assessments on threats to the U.S. by terrorist organizations using generative AI.",
+    "The Generative AI Terrorism Risk Assessment Act ensures that our homeland security and capabilities remain ahead of adversary tactics.",
+    "Mr. Speaker, I urge all of my colleagues to support this bill and hope to see the Senate take similar action in the very near future."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACES ACT OF 2025",
+   "title": "ACES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3487.htm",
+   "sentences": [
+    "It represents Pablo's kids and others in the next generation wanting to sign up for this because they know that we are going to give them that air cover.",
+    "With the passage of this version of the bill, it will be sent to the President's desk, and I am hopeful that the President will sign it into law quickly so we can fulfill our promise to those who serve, a promise that when someone serves our Nation, we have their backs, that we will serve them, and that we will protect them.",
+    "Mr. Speaker, I urge all of my colleagues to vote ``yes.'' There really is no reason that we can't make this a unanimous ``yes'' vote in support of the ACES Act."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS",
+   "title": "PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2594.htm",
+   "sentences": [
+    "On November 21, 2022, the D.C. City Council made a radical decision to allow noncitizens, including illegal aliens and those who are aligned with embassies of foreign countries, to vote in local D.C. elections.",
+    "After the noncitizen voting law went into effect, the District actively encouraged noncitizens to vote for Mayor, attorney general, members of the State Board of Education, and more.",
+    "I find it unimaginable that the District, along with many across the country, would intentionally weaken the power of their constituents, citizens, many of whom come from underserved communities, in favor of noncitizens who, in some cases, have broken our laws to enter this country or could potentially be employed by a foreign adversary.",
+    "As the capital of our democracy, Washington, D.C., should be at the forefront of ensuring safe and secure elections, not encouraging illegal immigrants and others to vote for policies that we don't want.",
+    "We have to ask ourselves: Why would we want a foreign agent, an illegal immigrant, or somebody else who is not a citizen voting for elections in D.C.?",
+    "Madam Speaker, I rise in support of my bill, H.R. 884, that would prohibit individuals who are not citizens of the United States from voting in elections in the District of Columbia.",
+    "Madam Speaker, I urge my colleagues on the other side of the aisle to look beyond the Democrats' claim that this bill is discriminatory or misrepresents its intended purposes."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "title": "DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1891-2.htm",
+   "sentences": [
+    "I have long been concerned that the threats the Chinese Communist Party poses to our homeland are not only real, but they are right here.",
+    "In the Homeland Security Committee and on my Subcommittee on Counterterrorism and Intelligence, we have heard from a wide array of national security experts and law enforcement officials who have continuously raised alarms about the CCP's increasing subversive activities inside our country through organizations like the CCP's Confucius Institutes, the Thousand Talents Program, and other CCP- affiliated groups.",
+    "Continuing to use our taxpayer dollars to give the Chinese Communist Party a seat in the front row of our universities' classrooms and research labs would be a catastrophic mistake.",
+    "Mr. Speaker, I rise in support of my bill, H.R. 881, the DHS Restrictions on Confucius Institutes and Chinese Entities of Concern.",
+    "Mr. Speaker, I urge all of my Republican and Democratic colleagues to support this legislation.",
+    "Mr. Speaker, I will point out that this bill was actually brought up during the Biden administration and has nothing to do with one administration or another.",
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to come together, to stand firm for our American education system, and to vote ``yes'' on this legislation."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACES ACT",
+   "title": "ACES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1815-6.htm",
+   "sentences": [
+    "It is for those who we have already lost, whose names we will always remember, and who I will always remember in my heart.",
+    "It is a promise that when someone serves our Nation, we will serve them in return."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL G",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL GAS SYSTEMS: PROCEDURES FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH846.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my legislation, H.J. Res. 35, to nullify the EPA's rule on the waste emissions charge, also known as the natural gas tax.",
+    "In the waning days of the Biden administration, the EPA doubled down on Biden's disastrous energy policies, imposing a burdensome and harmful tax on oil and natural gas facilities called the waste emissions charge, also like we have been discussing, the natural gas tax or the methane tax.",
+    "This natural gas tax was a blatant abuse of power and the first time that the Federal Government has ever directly levied a tax on emissions, creating a duplicative layer of red tape that would devastate American energy, if continued.",
+    "U.S. emissions have decreased by 18 percent between 2005 and 2022, making the United States the world leader in reductions of emissions, while simultaneously increasing production threefold or fourfold.",
+    "Today's vote exemplifies the principles upheld in the Supreme Court's landmark Loper Bright Enterprises v. Raimondo decision.",
+    "What Biden's administration did for 4 straight years was to overreach, to impose burdensome regulations, and to hurt innovation, the actual innovation that was reducing emissions.",
+    "Mr. Speaker, I urge all of my colleagues to vote ``yes,'' and I thank the chairman of the Committee on Energy and Commerce for leading this."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "This is on behalf of every one of my constituents in Midland and Odessa, Texas, who provide the very pen that is being used by my colleagues on the other side of the aisle, who provide the cell phones and the cosmetics and the personal protective gear that goes into an emergency room.",
+    "They are not just using liquid fuels, but using a safe technology, hydraulic fracturing, which was completely falsely characterized briefly this morning by my colleague on the other side of the aisle.",
+    "My legislation that is being considered today is a necessary first step in reversing the Biden administration's war on energy and preventing the Federal Government from banning the use of hydraulic fracturing.",
+    "Instead of allowing Russia, Iran, and Venezuela to do so, we are going to produce it here.",
+    "Even at the end of the campaign season in 2024, then-candidate for President Kamala Harris in a debate said that she was pro-fracking.",
+    "I fully support it, and I urge my colleagues to also support it."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in full support of H.R. 28, the Protection of Women and Girls in Sports Act.",
+    "The Protection of Women and Girls in Sports Act will prevent schools from allowing biological men to compete in women's sports by defining sex in an athletic competition by genetics at birth.",
+    "Mr. Speaker, I thank the gentlemen from Florida (Mr. Steube), my good friend, for leading this effort, and I urge all of my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT",
+   "title": "LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-07/html/CREC-2025-01-07-pt1-PgH53-4.htm",
+   "sentences": [
+    "Madam Speaker, I rise in strong support and full support of H.R. 29, the Laken Riley Act.",
+    "Laken Riley is not an isolated incident, unfortunately.",
+    "Jocelyn Nungaray from Texas, mother Rachel Morin, and many others, were innocent women who were horrifically killed by illegal aliens, and their families are going to be mourning their loss of life for the rest of their lives.",
+    "Violent criminals like the ones who committed this heinous act and others continue to pour over our border daily, which is why we desperately need to pass this act today.",
+    "This legislation will protect American communities by requiring Immigration and Customs Enforcement to issue detainers, mandatory detention for those who are here illegally who also commit theft.",
+    "In fact, I am interested to see how my colleagues on the other side of the aisle who vote against this go back to their districts, Madam Speaker, and say: I don't stand for law and order because I don't want illegal aliens who are here committing theft, rape, murder, or any other offense, to be detained.",
+    "With the Laken Riley Act, you now have standing to sue the Federal Government when they don't do this, when they don't enforce the laws on the books.",
+    "My heart goes out to Laken Riley's family.",
+    "I stand in full support of the Laken Riley Act."
+   ]
+  }
+ ]
+}

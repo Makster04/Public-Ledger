@@ -1,0 +1,180 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "guest",
+ "name": "Michael Guest",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 42
+ },
+ "statements": [
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN THE MATTER OF ALLEGATIONS RELATING TO REPRESENTATIVE CHUCK EDWARDS",
+   "title": "IN THE MATTER OF ALLEGATIONS RELATING TO REPRESENTATIVE CHUCK EDWARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5389-2.htm",
+   "sentences": [
+    "I move adoption of H. Res. 1498, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING IN ORDER AT ANY TIME CONSIDERATION OF H. RES. 1498, IN THE MATTER OF ALLEGATIONS RELATING TO REPRESENTATIVE CHUCK EDWARDS",
+   "title": "MAKING IN ORDER AT ANY TIME CONSIDERATION OF H. RES. 1498, IN THE MATTER OF ALLEGATIONS RELATING TO REPRESENTATIVE CHUCK EDWARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5389.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent that it be in order at any time to consider H. Res. 1498 in the House without intervention of any point of order if called on by the chair of the Committee on Ethics or his designee; that the resolution be considered as read; and that the previous question be considered as ordered on the resolution to adoption without intervening motion or demand for division of the question except for 1 hour of debate equally divided and controlled by myself and Representative Edwards of North Carolina, or their designee."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESOLUTION RECOMMENDING THAT THE HOUSE OF REPRESENTATIVES FIND MICHAEL JOSEPH IN CONTEMPT OF CONGRESS FOR REFUSAL TO COMPLY WITH SUBPOENAS DULY ISSUED BY THE COMMIT",
+   "title": "RESOLUTION RECOMMENDING THAT THE HOUSE OF REPRESENTATIVES FIND MICHAEL JOSEPH IN CONTEMPT OF CONGRESS FOR REFUSAL TO COMPLY WITH SUBPOENAS DULY ISSUED BY THE COMMITTEE ON ETHICS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5393.htm",
+   "sentences": [
+    "Mr. Speaker, as the chair of the Committee on Ethics, I rise in support of the resolutions which call for Michael Joseph and Hector Roos to be held in contempt of Congress for their failure to comply with documentary and testimonial subpoenas issued on September 11, 2025, and August 12, 2026, respectively."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESOLUTION RECOMMENDING THAT THE HOUSE OF REPRESENTATIVES FIND HECTOR ROOS IN CONTEMPT OF CONGRESS FOR REFUSAL TO COMPLY WITH SUBPOENAS DULY ISSUED BY THE COMMITTEE",
+   "title": "RESOLUTION RECOMMENDING THAT THE HOUSE OF REPRESENTATIVES FIND HECTOR ROOS IN CONTEMPT OF CONGRESS FOR REFUSAL TO COMPLY WITH SUBPOENAS DULY ISSUED BY THE COMMITTEE ON ETHICS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5394.htm",
+   "sentences": [
+    "Mr. Speaker, I reemphasize my comments made earlier regarding these matters and would urge adoption.",
+    "I urge its adoption, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING THE SUPPORT OF THE HOUSE OF REPRESENTATIVES FOR THE DEPARTMENT OF HOMELAND SECURITY",
+   "title": "EXPRESSING THE SUPPORT OF THE HOUSE OF REPRESENTATIVES FOR THE DEPARTMENT OF HOMELAND SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2723-6.htm",
+   "sentences": [
+    "Congress must fund DHS and bring this shutdown to an end so that our first responders and our Federal law enforcement officials can refocus on the very real public threats we face.",
+    "Mr. Speaker, I rise today in support of H. Res. 1128, Expressing the Support of the House of Representatives For the Department of Homeland Security."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SYRIA TERRORISM THREAT ASSESSMENT ACT",
+   "title": "SYRIA TERRORISM THREAT ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4782-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1327, the Syria Terrorism Threat Assessment Act."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GENERATIVE AI TERRORISM RISK ASSESSMENT ACT",
+   "title": "GENERATIVE AI TERRORISM RISK ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4783.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1736) to require the Secretary of Homeland Security to conduct annual assessments on terrorism threats to the United States posed by terrorist organizations utilizing generative artificial intelligence applications, and for other purposes, as amended.",
+    "Mr. Speaker, I rise in support of H.R. 1736, the Generative AI Terrorism Risk Assessment Act.",
+    "The bill before us today requires DHS to conduct annual assessments on the use of generative AI by foreign terrorist organizations and expands information sharing to address AI- related threats.",
+    "We know that terrorist groups, including ISIS and al-Qaida, have already used generative AI in sophisticated ways, producing propaganda to spur online recruitment and radicalization efforts."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL STRATEGY FOR SCHOOL SECURITY ACT OF 2025",
+   "title": "NATIONAL STRATEGY FOR SCHOOL SECURITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4785.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2259, the National Strategy for School Security Act.",
+    "Mr. Speaker, I urge all my colleagues to support this bill and to protect our children.",
+    "Mr. Speaker, as a Representative of a school that was once subject to an act of violence, I fully support this legislation, and I thank Representative Gonzales for his introduction of H.R. 2259."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TREN DE ARAGUA BORDER SECURITY THREAT ASSESSMENT ACT",
+   "title": "TREN DE ARAGUA BORDER SECURITY THREAT ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4786-2.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 4070) to require a homeland security border threat assessment on Tren de Aragua and associated strategic plan, and for other purposes.",
+    "Mr. Speaker, I rise in strong support of H.R. 4070, the Tren de Aragua Border Security Threat Assessment Act.",
+    "This legislation would require the Department of Homeland Security to conduct a border threat assessment on Tren de Aragua and develop a strategic plan to counter the threats identified in the assessment.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 4070.",
+    "I wholeheartedly support this legislation."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING EMOTIONAL ASSISTANCE WITH RELIEF AND LOVE ACT",
+   "title": "PROVIDING EMOTIONAL ASSISTANCE WITH RELIEF AND LOVE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4786.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3965) to establish in U.S. Customs and Border Protection a pilot program to adopt dogs from local animal shelters to be trained as support dogs, and for other purposes.",
+    "As the men and women of the United States Customs and Border Protection work under incredibly stressful conditions to protect our borders, providing a mechanism to boost their well-being will improve the mental health of our frontline officers and agents.",
+    "Mr. Speaker, I rise in support of H.R. 3965, the Providing Emotional Assistance with Relief and Love Act, or the PEARL Act.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 3965, the PEARL Act."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATTING INTERNATIONAL DRUG TRAFFICKING AND HUMAN SMUGGLING PARTNERSHIP ACT OF 2025",
+   "title": "COMBATTING INTERNATIONAL DRUG TRAFFICKING AND HUMAN SMUGGLING PARTNERSHIP ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4788.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 4071) to amend the Homeland Security Act of 2002 to enhance the operations of U.S. Customs and Border Protection in foreign countries, and for other purposes.",
+    "Mr. Speaker, United States Customs and Border Protection's Air and Marine Operations agents play a critical role in the homeland security mission.",
+    "Every day AMO agents conduct border operations to detect and disrupt human trafficking, narcotics trafficking, and to stop other dangerous and illicit contraband before it reaches our shore.",
+    "However, as transnational criminal organizations continue to become more aggressive, they continue to try to extend their reach into the United States, and we must be prepared to meet this evolving threat.",
+    "Strengthening international cooperation with our partners, such as those in the Western Hemisphere, is an essential first step to combating drug trafficking and human smuggling in addition to supporting other law enforcement missions.",
+    "In fiscal year '24, we see that AMO's actions resulted in the arrest of 1,009 individuals; that there were 48,609 apprehensions of illegal aliens, as well as the seizure or disruption of 244,781 pounds of cocaine, 2,235 pounds of fentanyl, 3,061 pounds of methamphetamine, the seizure of 1,499 weapons, and also the seizure of $12.5 million in United States currency.",
+    "By bolstering AMO's ability to work with our foreign partners, my bill will help stem the flow of illegal narcotics and ensure that criminals are intercepted before they reach our shores, and we will protect our homeland from those who seek to cause us harm.",
+    "Mr. Speaker, in closing, I urge all my colleagues to support this legislation which will enhance CBP's Air and Marine Operations capability as they work to keep our Nation secure and the American people safe."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING STAKEHOLDER SUPPORT AND OUTREACH FOR PREPAREDNESS GRANTS ACT",
+   "title": "ENHANCING STAKEHOLDER SUPPORT AND OUTREACH FOR PREPAREDNESS GRANTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4789.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 4058, the Enhancing Stakeholder Support and Outreach for Preparedness Grants Act, with the understanding that FEMA's preparedness grants for States, localities, urban areas, and Tribal and territorial governments are vital to strengthening the security of this great Nation."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRODUCING ADVANCED TECHNOLOGIES FOR HOMELAND SECURITY ACT",
+   "title": "PRODUCING ADVANCED TECHNOLOGIES FOR HOMELAND SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1055.htm",
+   "sentences": [
+    "These entities have produced technology that serves as a force multiplier to our Border Patrol agents and include technology that assists agents in cargo and vehicle screening that can detect illegal substances attempting to be smuggled into the United States.",
+    "The bill would also require advanced notification to Congress should the authority be used in advancement of artificial intelligence technology.",
+    "Mr. Speaker, I rise today in support of H.R. 1692, the Producing Advanced Technologies for Homeland Security Act, which I am proud to have introduced along with Congressman Shri Thanedar.",
+    "I urge all Members to support H.R. 1692."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGENT RAUL GONZALEZ OFFICER SAFETY ACT",
+   "title": "AGENT RAUL GONZALEZ OFFICER SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-7.htm",
+   "sentences": [
+    "This legislation not only honors the sacrifice of Agent Gonzalez, but it reinforces Republican support to secure our border.",
+    "This legislation will protect American communities by imposing criminal penalties on people who evade U.S. Border Patrol agents or other law enforcement agents at our border.",
+    "This legislation will also help protect the brave men and women who enforce our border, those who risk their lives for the mission of keeping us safe and providing a secure border for all Americans.",
+    "Mr. Speaker, I rise today in support of H.R. 35, legislation named after Agent Raul Gonzalez, a 38-year-old father of two, who lost his life in an ATV accident on December 7, 2022, as he was attempting to apprehend a group of immigrants who had entered the country illegally.",
+    "I am proud to support this legislation, and I urge my colleagues to please vote ``yes'' on H.R. 35."
+   ]
+  }
+ ]
+}

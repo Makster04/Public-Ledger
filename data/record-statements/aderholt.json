@@ -1,0 +1,79 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "aderholt",
+ "name": "Robert B. Aderholt",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "title": "FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4229-6.htm",
+   "sentences": [
+    "Mr. Speaker, it is great to be here to rise for this occasion, to recognize the fourth anniversary of Dobbs v. Jackson, where the Supreme Court returned the power to protect the unborn to elected officials and not to an appointed court.",
+    "The Court's decision to overturn Roe v. Wade was a landmark moment in the effort to protect the most vulnerable and to give those babies the guarantee of right to life and liberty.",
+    "Our policies there are pro-life, but in many States, the lives of the unborn remain vulnerable.",
+    "As the chairman of the House Values Action Team, I remain committed to fighting and advocating in Congress to expand our efforts and ensure a safe future for our Nation's children, born and unborn.",
+    "Since the Dobbs decision in 2022, I have introduced the Protect Funding for Women's Healthcare Act to continue standing for life by ensuring that Federal tax dollars are not used to fund organizations such as Planned Parenthood.",
+    "I will continue to work with my colleagues to defend the sanctity of life, to protect the unborn, and ensure a safer future for our Nation's children.",
+    "Our work is not finished, and this week's recognition for the Dobbs anniversary is a good time to reaffirm our unyielding commitment to standing up for the importance of every single human life.",
+    "I have said this before and I will continue to say that I am pro- life, I am pro-family, and I am pro-child."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt1-PgH2782-8.htm",
+   "sentences": [
+    "I am proud to support H.R. 7084 because it defends American property owners from wrongful seizure and sends a clear message: the United States will stand beside its companies, its workers, and its values."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: $2.50 FOR AMERICA'S 250TH ACT",
+   "title": "$2.50 FOR AMERICA'S 250TH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2048.htm",
+   "sentences": [
+    "I urge my colleagues to vote for this initiative and to follow in the footsteps of our predecessors in the 68th Congress in 1926 who set an example that will last for generations to come."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1960.htm",
+   "sentences": [
+    "Once again, I urge my colleagues to support the underlying bill."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "Madam Chair, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgE854-2.htm",
+   "sentences": [
+    "Throughout his tenure, His All-Holiness Ecumenical Patriarch Bartholomew has worked to advance religious liberty and human rights, to strengthen ties among Christian denominations, and to build relationships among the Abrahamic religions: Judaism, Christianity, and Islam."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "balderson",
+ "name": "Troy Balderson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 13,
+  "sentences": 33
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RATEPAYER PROTECTION ACT",
+   "title": "RATEPAYER PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5656-3.htm",
+   "sentences": [
+    "This bill codifies the principles of the President's Ratepayer Protection Pledge, ensuring that Ohio families and small businesses aren't left on the hook to pay the costs associated with generation and energy infrastructure needed to power large data centers.",
+    "The Ratepayer Protection Act builds on that commonsense approach by directing States to adopt standards that ensure these facilities pay their fair share.",
+    "Mr. Speaker, I rise today in support of H.R. 9340, the Ratepayer Protection Act."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOAD FORECASTING ENHANCEMENT ACT",
+   "title": "LOAD FORECASTING ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5663.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 9332, the Load Forecasting Enhancement Act, which shields Americans from unnecessary costs and strengthens long-term energy reliability.",
+    "This bipartisan legislation was passed unanimously out of the Energy and Commerce Committee, and I urge my colleagues to support this bill here today."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCELERATING ACCESS TO DEMENTIA AND ALZHEIMER'S PROVIDER TRAINING ACT",
+   "title": "ACCELERATING ACCESS TO DEMENTIA AND ALZHEIMER'S PROVIDER TRAINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4643.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 3747, the AADAPT Act.",
+    "Mr. Speaker, I urge my colleagues to support this bill, which is a practical, bipartisan solution that strengthens our healthcare workforce and improves access to quality care for patients and families."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELIABLE POWER ACT",
+   "title": "RELIABLE POWER ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH6000.htm",
+   "sentences": [
+    "Under the Biden administration, Federal agencies pushed out rapid- fire climate rules and mandates with little coordination and even less accountability.",
+    "Since introducing this bill in the spring, I have heard from energy leaders across Ohio--energy co-ops, utilities, manufacturers, and grid operators--who all say the same thing: Regulatory chaos driven by climate activists is putting grid reliability at risk and driving up costs.",
+    "That is why I rise today in support of my bill, the Reliable Power Act.",
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to support this bipartisan, commonsense legislation to ensure that no future administration or unelected Federal bureaucrat can unilaterally jeopardize grid reliability."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "title": "IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5814-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Improving Interagency Coordination for Pipeline Reviews Act."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUARANTEEING RELIABILITY THROUGH THE INTERCONNECTION OF DISPATCHABLE POWER ACT",
+   "title": "GUARANTEEING RELIABILITY THROUGH THE INTERCONNECTION OF DISPATCHABLE POWER ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4433.htm",
+   "sentences": [
+    "This is especially concerning for my district and central Ohio, which has become a national hub for data center construction.",
+    "Mr. Speaker, I rise in support of my bill, the GRID Power Act.",
+    "I urge all of my colleagues to support this commonsense bill that equips our grid operators with the tools they need to do their job."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AWNING SAFETY ACT OF 2025",
+   "title": "AWNING SAFETY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2854.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, the Awning Safety Act, which aims to enhance the safety of awnings commonly found in Ohio homes and households across the Nation."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMPRESSED GAS CYLINDER SAFETY AND OVERSIGHT IMPROVEMENTS ACT OF 2025",
+   "title": "COMPRESSED GAS CYLINDER SAFETY AND OVERSIGHT IMPROVEMENTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2552.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, the Compressed Gas Cylinder Safety and Oversight Improvements Act."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "This bill ensures access to lifesaving medications for first responders, expands treatment for pregnant women, strengthens prescription drug monitoring, and supports recovery centers and workforce reentry programs."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOU",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOURCES AS AREA SOURCES UNDER...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgH2212-7.htm",
+   "sentences": [
+    "In 2020, the Trump administration first reversed this policy, which encouraged businesses to lower their emissions and reduce pollution.",
+    "I rise today in strong support of S.J. Res. 31.",
+    "It is critical that we support this resolution today and send it to the President's desk to deliver on our promise to unleash American manufacturing and energy.",
+    "I am proud to have introduced the House companion to this CRA with the gentlewoman from North Dakota (Mrs. Fedorchak), my good friend, and I strongly urge my colleagues to support this commonsense resolution."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CO",
+   "title": "PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CONTROL STANDARDS; ADVANCED CLEAN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1748.htm",
+   "sentences": [
+    "In the final weeks of 2024, the Biden-led EPA approved a waiver allowing California to ban the sale of gas-powered diesel and even hybrid vehicles by 2035, effectively paving the way for the State to set emission standards for the entire Nation.",
+    "Yet, the Biden administration chose to team up with radical climate activists to support the one-size-fits-all electric vehicle mandate that the market and the American people have clearly rejected.",
+    "Madam Speaker, I rise today in strong support of H.J. Res. 88."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "This bill supports the current framework that gives primary authority over regulating fracking to the States and prevents any future President from unilaterally banning fracking.",
+    "This bill makes crystal clear that no future administration can decide to ban fracking on a whim.",
+    "Madam Speaker, I rise today in support of H.R. 26, the Protecting American Energy Production Act."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH520-3.htm",
+   "sentences": [
+    "Families are being torn apart and law enforcement is fighting an uphill battle to keep this poison off our streets.",
+    "That's why I proudly support the HALT Fentanyl Act, which gives law enforcement the certainty and stability they need to crack down on traffickers and prevent illicit fentanyl from entering our country.",
+    "And we must act now to protect our communities, support law enforcement, and save lives.",
+    "We cannot allow this crisis to continue unchecked.",
+    "I urge my House colleagues to support this bill."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "aguilar",
+ "name": "Pete Aguilar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Democrats are ready to work with anyone to make housing more affordable, to make childcare more affordable, and to make everyday goods like groceries less expensive.",
+    "Healthcare costs are going to go up as Medicaid gets gutted.",
+    "Electric bills are going to go up when clean energy tax credits are wiped out at the request of the oil lobbyists.",
+    "Cutting food assistance programs like SNAP are going to hurt working people who are already getting squeezed at the checkout line because of these reckless tariffs.",
+    "Every single piece of evidence tells us that a vote for this bill is a vote to make things worse, and I urge a ``no'' vote."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "I am grateful for his leadership and the leadership of the Rules Committee Democrats, who are fighting back against these massive tax giveaways to billionaires and corporations raking in record profits.",
+    "Mr. Speaker, the American people are getting squeezed by reckless tariffs that are raising prices on every family, and it is only going to get worse.",
+    "While so many working families are struggling, I don't understand how they can justify a tax bill that only makes life easier for billionaires like Elon Musk.",
+    "The real betrayal, Mr. Speaker, is to the working people of this country, who will pay the price so that billionaires can pay less in taxes.",
+    "Mr. Speaker, our friends on the other side of the aisle said that they wouldn't cut Medicaid, and that is exactly what this bill does.",
+    "Let's focus on bringing down the cost of housing, rent, gas, and groceries, and let's stop rewarding billionaires at the expense of the middle class."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "House Democrats came to Congress ready to work with our Republican colleagues to lower the cost of eggs, take on price gouging, expand the child tax credit, build more housing, and put the pocketbooks of working families first.",
+    "Instead, Madam Chair, they have turned their attention to the only policy priority that they really care about: ensuring billionaires pay less.",
+    "Tesla pays $0 in Federal taxes while teachers and firefighters in San Bernardino are paying more than their fair share.",
+    "Here is the reality, Madam Chair: My Republican colleagues are going to take away healthcare for more than 10 million Californians to pay for tax cuts for billionaires.",
+    "I rise in opposition to this Republican budget."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "weber",
+ "name": "Randy K. Weber, Sr.",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 20,
+  "sentences": 95
+ },
+ "statements": [
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHARIA-FREE AMERICA",
+   "title": "SHARIA-FREE AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2761.htm",
+   "sentences": [
+    "That is why I am proud to stand with my fellow Texan, Congressman Keith Self, and support the Sharia-Free America Caucus.",
+    "It is about drawing a line, standing firm, and saying that we will not compromise on the foundation of this country--not now, not then, and not ever.",
+    "We are founded on Judeo-Christian principles, and that is what we are going to keep it on.",
+    "We will defend our Constitution, and we will keep America America."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT",
+   "title": "SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2150.htm",
+   "sentences": [
+    "An adversarial nation controls the access to key resources, as well as retains the ability to restrict American imports at will, threatening to bring the American economy to its knees.",
+    "These resources, Mr. Speaker, are absolutely required in virtually everything we need to compete as well as defend our country from foreign threats: semiconductors, nuclear reactors, oil and gas infrastructure, the transmission system, and military weaponry, just to name a few.",
+    "Mr. Speaker, I rise in support of H.R. 3617, the Securing America's Critical Minerals Supply Act, introduced by Representative John James, my colleague and member of the Energy and Commerce Committee from Michigan's 10th Congressional District."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4593, SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT; PROVIDING FOR CONSIDERATION OF H.R. 5184, AFFORDABLE H",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4593, SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT; PROVIDING FOR CONSIDERATION OF H.R. 5184, AFFORDABLE HOUSING OVER MANDATING EFFICIENCY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH112-7.htm",
+   "sentences": [
+    "Just as importantly, it protects 30 percent of the Nation's refining capacity, 42 percent of specialty chemical feedstock, and 80 percent of our military-grade fuel supply.",
+    "Mr. Speaker, I rise in strong support of House Resolution 977, the combined rule for the consideration of H.R. 4593, H.R. 5184, and H.R. 6938.",
+    "I urge my colleagues to support the rule and this critical legislation."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "title": "SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH127-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the SHOWER Act, led by the gentleman from South Carolina (Mr. Fry).",
+    "Mr. Speaker, I urge my colleagues to support the SHOWER Act."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELIABLE POWER ACT",
+   "title": "RELIABLE POWER ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH6000.htm",
+   "sentences": [
+    "Madam Speaker, if the Biden EPA's radical clean power plan 2.0 had gone forward, it would have shut down most of the Nation's coal-fired power and threatened the closing of a substantial number of existing gas generation plants to disastrous effect.",
+    "Madam Speaker, I rise in support of H.R. 3616, the Reliable Power Act, sponsored by my colleague from Ohio's 12th Congressional District, Mr. Troy Balderson."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "title": "IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5814-6.htm",
+   "sentences": [
+    "Here is what we are going to do.",
+    "I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTRIC SUPPLY CHAIN ACT",
+   "title": "ELECTRIC SUPPLY CHAIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5528.htm",
+   "sentences": [
+    "Mr. Chair, I urge all of my colleagues to support the Electric Supply Chain Act now."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FREE IRAN",
+   "title": "FREE IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5104-3.htm",
+   "sentences": [
+    "It is important to remember that the fight for the Iranian people is not some distant, unfamiliar struggle.",
+    "In many ways, it echoes the very heartbeat of our very own American story.",
+    "Mr. Speaker, that spirit is alive today in the streets of Tehran, Shiraz, Isfahan, and more than 1,000 towns and villages across Iran.",
+    "They believed they had a God-given right to shape their future, and that is precisely what the people of Iran believe today.",
+    "Mr. Speaker, today the Iranian people are living through their own era of hardship--economic collapse, political oppression, and constant fear.",
+    "The same need exists today for the Iranian people: leaders like her who speak truth and nations that stand firmly with her and behind her.",
+    "Mr. Speaker, that is what we are witnessing in Iran today: a movement not controlled by foreign powers, not directed by political elites, but born from the ordinary people of Iran, who simply want the dignity that God intended for them.",
+    "Mr. Speaker, I will say this plainly: The return of sovereignty in Iran will come from the Iranian people themselves.",
+    "Three of the 10-point plan is a commitment to individual and social freedoms and rights in accordance with the Universal Declaration of Human Rights: disbanding all agencies in charge of censorship and inquisition, and seeking justice for massacred political prisoners, prohibition of torture, and the abolishment of the death penalty.",
+    "Five, complete gender equality in the realms of political, social, cultural, and economic rights, as well as equal participation of women in political leadership, Mr. Speaker; abolishment of any form of discrimination; the right to choose one's own clothing--figure that out, how simple that should be, the right to choose one's own clothing freely; the right to freely marry and divorce; the right to obtain education and employment; and prohibition of all forms of exploitation against women under any pretext.",
+    "Seven, autonomy for and removal of double injustices against Iranian nationalities and ethnicities consistent with the NCRI's plan for the autonomy of Iranian Kurdistan.",
+    "Eight, justice and equal opportunities in the realms of employment and entrepreneurship for all the people of Iran in a free-market economy: restoration of the rights of blue-collar workers, farmers, nurses, white-collar workers, teachers, and retirees.",
+    "Finally, 10 of her 10-point plan, a nonnuclear Iran that is also devoid of weapons of mass destruction: peace, coexistence, and international and regional cooperation.",
+    "A sovereign Iran built by its people, powered by its people, and accountable to its people would be a force for stability, not chaos.",
+    "The stories of the Iranian people today sound strikingly similar to the stories of the American people throughout our history: resilient, courageous, unwilling to surrender to tyranny, and determined to leave a better world for their children.",
+    "It happened in the movements for justice and equality on our own soil, and it can happen again for the people of Iran.",
+    "I will read that 10-point plan."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "title": "RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4835-6.htm",
+   "sentences": [
+    "It is also interesting that President Obama, when he--the gentleman from Georgia, Buddy Carter, mentioned the Keystone pipeline.",
+    "The Keystone pipeline is a good example.",
+    "We make money doing this, and we support thousands of good- paying jobs.",
+    "I urge my colleagues to support H.R. 3109."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "This bill removes outdated restrictions on natural gas imports and exports and puts decisionmaking authority back where it belongs--with FERC, not some bureaucrats using climate reviews or climate change as a backdoor veto.",
+    "Some of you have seen that even the Microsoft founder, Bill Gates, is now backing up on his climate claims.",
+    "Mr. Speaker, I rise today in strong support of H.R. 1949, the Unlocking our Domestic LNG Potential Act, led by my friend and fellow Texan, Representative Pfluger.",
+    "I urge my colleagues to support H.R. 1949 and keep America the world's energy leader."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "The gentleman across the aisle just mentioned Iran, that somehow this is going to help make it easier for Iran in the nuclear realm.",
+    "I think Iran just discovered that President Donald J. Trump is serious when he says they will not be allowed to get a nuclear weapon.",
+    "We will be revitalizing critical ports.",
+    "We will be revitalizing the waterways that serve, actually, as a lifeblood for maintaining our dominance in the global marketplace.",
+    "Mr. Chair, I will end by saying kudos to the Energy and Water appropriations bill under this committee."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOU",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOURCES AS AREA SOURCES UNDER...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgH2212-7.htm",
+   "sentences": [
+    "Pursuant to House Resolution 426, I call up the joint resolution (S.J. Res. 31) providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to ``Review of Final Rule Reclassification of Major Sources as Area Sources Under Section 112 of the Clean Air Act'', and ask for its immediate consideration in the House.",
+    "The latest example is this joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to Review of Final Rule Reclassification of Major Sources as Area Sources Under Section 112 of the Clean Air Act.",
+    "That means once a facility is deemed a major source of emissions, even if it invests heavily in modern equipment and successfully lowers its emissions, it is still locked into that stricter classification forever, period.",
+    "Mr. Speaker, repealing this misguided rule would do what we should have done all along: encourage facilities to reduce emissions by giving them a path to reclassify as area sources once they meet that threshold.",
+    "Under section 112 of the Clean Air Act, facilities that emit over 10 tons of a single hazardous pollutant, or 25 tons of a combination, are considered major sources and hit with the strictest regulations and nonstop monitoring.",
+    "However, the ``once in, always in'' rule, cooked up during the Clinton administration, locked companies into major source status forever, even if they had dramatically reduced their emissions.",
+    "They rightly said that the Clean Air Act doesn't prohibit facilities from reclassifying if and when they reduce emissions below the legal threshold.",
+    "Under the Biden-Harris rule, companies have absolutely no incentive to decrease their emissions.",
+    "We should encourage industries, Mr. Speaker, to lower their emissions and allow them the possibility of reclassifying as an area source if they can successfully reduce their emissions.",
+    "U.S. emissions have already decreased over the past two decades, even as our energy production has hit record highs.",
+    "American industry relied on the Trump rule to make progress in reducing emissions.",
+    "Yet, under this new EPA rule, companies that did the right thing under the Trump-era guidance, those that cut emissions, are actually being punished.",
+    "It simply returns us to the commonsense, pro-growth, pro-clean-air policy of the Trump administration.",
+    "If a business steps up and reduces its emissions, it ought to be rewarded, not handcuffed.",
+    "Mr. Speaker, I thank the gentlewoman for her remarks, and I want to highlight one line she said: American technology and innovation has allowed us to reduce emissions more than any other country since 2005.",
+    "I served 4 years in the Texas legislature, and we were busy with catalytic scrubbers on all the industry that we had making sure that Texans had clean energy.",
+    "Mr. Speaker, I rise today in strong support of S.J. Res. 31, a resolution that pushes back on yet another outrageous overreach by the Biden-Harris EPA which spent the last 4 years tying the hands of America's energy producers and undermining our position as a global energy leader.",
+    "Mr. Speaker, I urge my colleagues to stand with the American worker, stand with American innovation, and vote ``yes'' on S.J. Res. 31."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANNIVERSARY OF SANTA FE SHOOTING",
+   "title": "ANNIVERSARY OF SANTA FE SHOOTING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2081-2.htm",
+   "sentences": [
+    "I will never forget getting that phone call."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CO",
+   "title": "PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CONTROL STANDARDS; HEAVY-DUTY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1741-6.htm",
+   "sentences": [
+    "It is about forcing a one-size-fits-all green agenda on the rest of the country--I might say the unsuspecting country--regardless of what it costs working families, what it costs farmers, job creators, and, yes, truckers.",
+    "We stand with Americans for common sense.",
+    "Madam Speaker, I urge my colleagues to support this resolution."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FOR WALK-IN COOLERS AND WALK-IN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1307-2.htm",
+   "sentences": [
+    "I thank the gentlewoman from Oklahoma for her leadership on this issue, and I urge my colleagues to join me in supporting H.J. Res. 24.",
+    "Once again, I am going to urge all my colleagues' support.",
+    "Mr. Speaker, I am going to make it short and sweet.",
+    "I urge everybody to vote for H.J. Res. 24."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FOR CONSUMER GAS-FIRED...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH884-6.htm",
+   "sentences": [
+    "That is real money coming out of real pockets of real Americans, all to appease the radical Green New Deal agenda.",
+    "H.J. Res. 20, introduced by my colleague, Gary Palmer, sends a clear message: We reject the Biden administration's radical energy mandates.",
+    "Mr. Speaker, I urge my colleagues to support H.J. Res. 20 and stand for consumer choice, affordability, and freedom."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL G",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL GAS SYSTEMS: PROCEDURES FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH846.htm",
+   "sentences": [
+    "Under the current waste emissions charge regulation, the so-called regulatory compliance exemption only applies if methane emission regulations are in place in every applicable State.",
+    "It is just another backdoor tax designed to squeeze the very industry that keeps America powered.",
+    "We are not going to sit back and let the Obiden administration strangle our energy industry with unnecessary costs.",
+    "Now, my friends on the other side of the aisle want to claim that President Biden--I will use his name--his natural gas tax won't hurt producers who are ``in compliance.'' I have a news flash for you.",
+    "Mr. Speaker, I am proud to support my colleagues in striking down this burdensome tax and standing up for the hardworking men and women of the Lone Star State and our great Nation."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GRID RELIABILITY",
+   "title": "GRID RELIABILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH700.htm",
+   "sentences": [
+    "Add in nuclear power at nearly 19 percent, and it is clear that these are the backbone of our energy system economically, politically, and militarily.",
+    "That means investing in nuclear energy.",
+    "Mr. Speaker, I will tell everyone that being on the Energy and Commerce Committee has been the delight of my life.",
+    "We are going to put American energy first."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "Madam Speaker, my Gulf Coast district in Texas, better known as the Energy Capital of the World, depends on Representative Pfluger's district, the fracking district, to keep our energy industry running.",
+    "Hydraulic fracturing isn't just important.",
+    "For the future of this great Nation, we must stop radical, climate-obsessed Presidents from ever placing a Federal moratorium on fracking because that would destroy America as we know it.",
+    "We also have Chris Wright at the Department of Energy, a man who helped fuel America's fracking revolution and made us the energy powerhouse we are today.",
+    "Make no mistake, the Green New Deal crowd isn't giving up yet.",
+    "That is why I proudly support my good friend Representative Pfluger's bill, the Protecting American Energy Production Act, to make sure that fracking remains protected, no matter who sits in the Oval Office.",
+    "We are going to make sure, for which I thank the chairman and August Pfluger, that that never happens."
+   ]
+  },
+  {
+   "date": "2025-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGITIMATE COURT COUNTERACTION ACT",
+   "title": "ILLEGITIMATE COURT COUNTERACTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-09/html/CREC-2025-01-09-pt1-PgH67-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of my fellow Texan calling for sanctions on the International Criminal Court officials who dare to target U.S. citizens or our allies, especially our ally, Israel.",
+    "I have been to Israel since the horrific October 7 attacks, Mr. Speaker.",
+    "They have no authority to target Americans or our allies, especially Israel, and we won't stand for it, Mr. Speaker."
+   ]
+  }
+ ]
+}

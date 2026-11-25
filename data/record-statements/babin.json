@@ -1,0 +1,308 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "babin",
+ "name": "Brian Babin",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 25,
+  "sentences": 71
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 9497, the Water Resources Development Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HYDE AMENDMENT'S 50TH ANNIVERSARY",
+   "title": "HYDE AMENDMENT'S 50TH ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5969.htm",
+   "sentences": [
+    "Madam Speaker, I appreciate the Pro-Life Caucus for allowing me some time to give an off-topic speech, momentarily just departing from the very important topic of preserving and strengthening the Hyde amendment, of which we are celebrating the 50th anniversary of."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGAL RED SNAPPER AND TUNA ENFORCEMENT ACT",
+   "title": "ILLEGAL RED SNAPPER AND TUNA ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5557-2.htm",
+   "sentences": [
+    "This bill would build on that expertise to give law enforcement another tool to combat illegal, unreported, and unregulated fishing and seafood fraud.",
+    "Mr. Speaker, I rise in strong support of S. 283, the Illegal Red Snapper and Tuna Enforcement Act, as amended.",
+    "I urge my colleagues to support this important legislation."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NUCLEIC ACID STANDARDS FOR BIOSECURITY ACT",
+   "title": "NUCLEIC ACID STANDARDS FOR BIOSECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4666.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 3029, the Nucleic Acid Standards for Biosecurity Act, introduced by Representative Salinas of Oregon, along with Representative McCormick of Georgia."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEXT-GENERATION GEOTHERMAL RESEARCH AND DEVELOPMENT ACT",
+   "title": "NEXT-GENERATION GEOTHERMAL RESEARCH AND DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4667.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 8790, the Next-Generation Geothermal Research and Development Act, sponsored by my colleagues, Representatives Harrigan and Salinas.",
+    "Madam Speaker, I will express my appreciation for the work of Representatives Harrigan and Salinas on this legislation, and I urge my colleagues to support the bill.",
+    "Madam Speaker, I thank Representative Harrigan for his leadership on this bill, and I urge my colleagues to support this simple bipartisan measure."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL JUBILEE OF PRAYER, PRAISE, AND THANKSGIVING",
+   "title": "NATIONAL JUBILEE OF PRAYER, PRAISE, AND THANKSGIVING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3385.htm",
+   "sentences": [
+    "I represent Houston, Space City, the hardworking men and women of Johnson Space Center, who continue pushing the boundaries of human achievement, as we saw a couple weeks ago with Artemis II pushing four astronauts farther from Earth than anybody has ever gone before."
+   ]
+  },
+  {
+   "date": "2026-03-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS INNOVATION AND ECONOMIC SECURITY ACT",
+   "title": "SMALL BUSINESS INNOVATION AND ECONOMIC SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-17/html/CREC-2026-03-17-pt1-PgE225-3.htm",
+   "sentences": [
+    "It also keeps our economy competitive, which is critical for the United States to stay ahead of foreign adversaries like the Chinese Communist Party that seek to dominate the global marketplace.",
+    "Mr. Speaker, I rise in support of S. 3971, the Small Business Innovation and Economic Security Act.",
+    "I urge all of my colleagues to support S. 3971. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADVANCED CAPABILITIES FOR EMERGENCY RESPONSE OPERATIONS ACT",
+   "title": "ADVANCED CAPABILITIES FOR EMERGENCY RESPONSE OPERATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2241-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 390, the ACERO Act, sponsored by Representatives Fong and McClellan."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCESSING SATELLITE CAPABILITIES TO ENABLE NEW DISCOVERIES ACT",
+   "title": "ACCESSING SATELLITE CAPABILITIES TO ENABLE NEW DISCOVERIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2242.htm",
+   "sentences": [
+    "The agency evaluated available satellite data, explored how it could advance scientific research and applications, and developed acquisition approaches that allowed for appropriate government use and dissemination.",
+    "The ASCEND Act builds on that success by authorizing the Commercial Satellite Data Acquisition program within NASA's Science Mission Directorate.",
+    "The Commercial Satellite Data Acquisition pilot program that NASA launched in 2017 is one example of how the agency has embraced this evolution.",
+    "By enabling the continued acquisition of commercial satellite data, the ASCEND Act will complement NASA's scientific efforts and ensure that the agency has access to the innovative capabilities being developed by America's commercial space sector.",
+    "Mr. Speaker, I rise in support of H.R. 2600, the ASCEND Act, sponsored by Representatives Hurd and Bonamici."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS ARTIFICIAL INTELLIGENCE ADVANCEMENT ACT",
+   "title": "SMALL BUSINESS ARTIFICIAL INTELLIGENCE ADVANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2244.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3679) to require the Director of the National Institute of Standards and Technology to develop resources for small businesses in utilizing artificial intelligence, and for other purposes, as amended.",
+    "Mr. Speaker, I am pleased to be here to support H.R. 3679, the Small Business Artificial Intelligence Advancement Act, sponsored by my colleagues, Representatives Mike Collins and Haley Stevens.",
+    "As chairman of the Science, Space, and Technology Committee, I have closely followed the accelerating growth of artificial intelligence, or AI, technologies and their wide-ranging applications across industries nationwide.",
+    "It is time to ensure small businesses can harness these capabilities as well, strengthening American entrepreneurship and competing with the Chinese Communist Party across every dimension of the AI race, including business innovation.",
+    "This legislation directs the National Institute of Standards and Technology, or NIST, to develop and share practical resources to help small businesses better understand and adopt artificial intelligence technologies.",
+    "Mr. Speaker, the time to use artificial intelligence in business is now, and we must do everything we can to support small business efforts to harness the power of this technology."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "Mr. Chair, pipelines and energy infrastructure are the backbone of American energy dominance, yet section 401 of the Clean Water Act, designed to protect our water quality, has too often become a roadblock for critical projects.",
+    "Mr. Chair, we cannot meet growing energy demand, power our data centers, or lead the world in AI without the infrastructure to move American energy.",
+    "Many times, the opposition has nothing to do with clean water whatsoever."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1949, the Unlocking our Domestic LNG Potential Act of 2025.",
+    "I am proud to support this bill.",
+    "I urge my colleagues to join me in unlocking America's full LNG potential to achieve world energy dominance."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTENSION OF SBIR AND STTR AUTHORITY",
+   "title": "EXTENSION OF SBIR AND STTR AUTHORITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4273.htm",
+   "sentences": [
+    "This substantial investment by taxpayers necessitates diligent oversight by Congress to ensure that these programs are operating efficiently and are protected from theft and abuse by our adversaries, such as the Chinese Communist Party.",
+    "While we continue our work, it is critical that we do not allow this vital program to expire.",
+    "Therefore, we have introduced this 1-year extension of SBIR and STTR programs and encourage all Members to vote ``yes'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JOCELYN NUNGARAY NATIONAL WILDLIFE REFUGE ACT",
+   "title": "JOCELYN NUNGARAY NATIONAL WILDLIFE REFUGE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3226-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 1596 to rename the Anahuac National Wildlife Refuge located in the State of Texas and in my district as the Jocelyn Nungaray National Wildlife Refuge to forever commemorate the life of 12-year-old Jocelyn Nungaray, who was tragically killed on June 17, 2024.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes'' on this very commonsense legislation."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCELERATING NETWORKING, CYBERINFRASTRUCTURE, AND HARDWARE FOR OCEANIC RESEARCH ACT",
+   "title": "ACCELERATING NETWORKING, CYBERINFRASTRUCTURE, AND HARDWARE FOR OCEANIC RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2113-5.htm",
+   "sentences": [
+    "Scientists study ecosystems and food webs, offshore energy resources, wave dynamics, natural hazard forecasting and response, and the deep ocean floor.",
+    "Mr. Speaker, I commend my colleagues for their efforts on this issue, and I urge my fellow Members to support this bill."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLEAN ENERGY DEMONSTRATION TRANSPARENCY ACT OF 2025",
+   "title": "CLEAN ENERGY DEMONSTRATION TRANSPARENCY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2115.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1453) to amend the Infrastructure Investment and Jobs Act to require reporting regarding clean energy demonstration projects, and for other purposes.",
+    "Mr. Speaker, I rise in support of H.R. 1453, the Clean Energy Demonstration Transparency Act of 2025, sponsored by the gentleman from Ohio (Mr. Carey).",
+    "DOE established the Office of Clean Energy Demonstrations, or OCED, to carry out the technology demonstration projects authorized in the Energy Act of 2020 and the Infrastructure Investment and Jobs Act."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MATHEMATICAL AND STATISTICAL MODELING EDUCATION ACT",
+   "title": "MATHEMATICAL AND STATISTICAL MODELING EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1197.htm",
+   "sentences": [
+    "Statistical analysis underpins everything from the development of artificial intelligence to improving advanced manufacturing.",
+    "H.R. 730 will improve mathematical and statistical modeling education in the United States, ensuring American businesses have qualified workers with the necessary skills to drive innovation in STEM fields, including artificial intelligence and advanced manufacturing.",
+    "Mr. Speaker, I am proud to support H.R. 730, the Mathematical and Statistical Modeling Education Act, sponsored by my colleagues Representatives Houlahan and Baird.",
+    "This bill passed the House in the 117th and 118th Congresses, and I urge my colleagues to pass it again today."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES RESEARCH PROTECTION ACT",
+   "title": "UNITED STATES RESEARCH PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1201.htm",
+   "sentences": [
+    "After conducting oversight of recently enacted research security requirements, the House Science, Space, and Technology Committee was informed that complicated and confusing language in the CHIPS and Science Act was preventing the academic community from fully securing taxpayer-funded research."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCIAL REMOTE SENSING AMENDMENT ACT OF 2025",
+   "title": "COMMERCIAL REMOTE SENSING AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1202.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1325, the Commercial Remote Sensing Amendment Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND USDA INTERAGENCY RESEARCH ACT",
+   "title": "DOE AND USDA INTERAGENCY RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1204.htm",
+   "sentences": [
+    "Through the expanded interagency agreement authorized in this bill, DOE and USDA can tackle additional complex research challenges, such as genomics-based research, rural energy development, and grid modernization.",
+    "These joint efforts advance clean energy and agricultural technologies and promote rural economic growth."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND NSF INTERAGENCY RESEARCH ACT",
+   "title": "DOE AND NSF INTERAGENCY RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1205.htm",
+   "sentences": [
+    "As this body is aware, our adversaries, like the Chinese Communist Party, are quickly closing the gap on innovative technologies like artificial intelligence, quantum information science, and advanced manufacturing.",
+    "Together, these agencies can fuel innovation across multiple disciplines, including physics, quantum information sciences, artificial intelligence, and materials science.",
+    "Mr. Speaker, I rise in support of H.R. 1350, the DOE and NSF Interagency Research Act, which passed the House in the 118th Congress."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND NASA INTERAGENCY RESEARCH COORDINATION ACT",
+   "title": "DOE AND NASA INTERAGENCY RESEARCH COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1207.htm",
+   "sentences": [
+    "Additionally, their collaborative work on nuclear energy is vital to establishing a long-term human presence on the Moon and next-generation in-space propulsion.",
+    "Mr. Speaker, H.R. 1368, the DOE and NASA Interagency Research Act is a smart piece of legislation that will ensure that we stay competitive in the global race to return humans to the Moon and then send crewed missions on to Mars.",
+    "Mr. Speaker, I rise in support of H.R. 1368, the DOE and NASA Interagency Research Coordination Act."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INNOVATIVE MITIGATION PARTNERSHIPS FOR ASPHALT AND CONCRETE TECHNOLOGIES ACT",
+   "title": "INNOVATIVE MITIGATION PARTNERSHIPS FOR ASPHALT AND CONCRETE TECHNOLOGIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1209.htm",
+   "sentences": [
+    "It should go without saying that it is a big problem to be at the whims of the Chinese Communist Party when it comes to materials that are absolutely critical to our national defense, economic security, and our energy independence.",
+    "China's greenhouse gas emissions exceed all of the developed nations in the world combined.",
+    "It will increase our Nation's competitiveness against global adversaries while also achieving significant reductions in emissions from manufacturing processes.",
+    "It builds off the cross-cutting Industrial Emissions Reduction Technology Development program established by the Energy Act of 2020 and provides specific direction for the advancement of tools, technologies, and methods related to cement, concrete, and asphalt production.",
+    "Mr. Speaker, I rise in support of H.R. 1534, the Innovative Mitigation Partnerships for Asphalt and Concrete Technologies Act, or IMPACT Act."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING AMERICA FIRST BORDER SECURITY POLICIES BACK IN PLACE",
+   "title": "PUTTING AMERICA FIRST BORDER SECURITY POLICIES BACK IN PLACE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1136.htm",
+   "sentences": [
+    "Securing the border was never an impossibility, as they let the Nation and us believe.",
+    "We were told that enforcement wouldn't work, that the crisis was simply too big to fix, but those were lies meant to cover up the fact that an open border was exactly what they wanted to do.",
+    "How many more families must grieve before they admit their open-border agenda is destroying this country?",
+    "There are 100,000 Americans dying per year from deadly Mexican cartel and Chinese drugs that have come in over our open border.",
+    "Just like that, the border was shut down.",
+    "As co-chair of the Border Security Caucus, I am committed to keeping these dangerous criminals off of our streets.",
+    "Working hand in hand with President Trump, Vice President Vance, and leaders like Tom Homan, we are making sure that child traffickers, drug smugglers, and gang members are rounded up and sent packing back to where they belong.",
+    "You don't leave the border wide open; you shut it down and take control."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING CONDOLENCES TO THE FAMILIES, FRIENDS, AND LOVED ONES OF THE VICTIMS OF THE CRASH OF AMERICAN EAGLE FLIGHT 5342 AND PAT 25",
+   "title": "EXPRESSING CONDOLENCES TO THE FAMILIES, FRIENDS, AND LOVED ONES OF THE VICTIMS OF THE CRASH OF AMERICAN EAGLE FLIGHT 5342 AND PAT 25",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH935.htm",
+   "sentences": [
+    "No words can ever ease the pain of such a devastating loss, but we stand with them.",
+    "We stand with every one of these folks in mourning and in the pursuit of answers in this tragic accident.",
+    "I urge my colleagues to support H. Res. 153."
+   ]
+  }
+ ]
+}

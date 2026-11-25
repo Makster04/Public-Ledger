@@ -1,0 +1,259 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "menendez",
+ "name": "Robert Menendez",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 20,
+  "sentences": 67
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NRC STAFF PAY ALIGNMENT ACT",
+   "title": "NRC STAFF PAY ALIGNMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6104.htm",
+   "sentences": [
+    "I especially thank Congresswoman DeGette, whose work on the ADVANCE Act laid the groundwork for this legislation.",
+    "As our Nation's energy needs grow, nuclear power can deliver the reliable, clean electricity our communities need.",
+    "Building on the ADVANCE Act, it would give the NRC additional pay authority for career Senior Executive Service employees, helping the Commission compete for experienced leaders and retain their expertise.",
+    "If we want nuclear energy to help power our future, we must invest in the people responsible for keeping it safe.",
+    "Mr. Speaker, I rise in support of my bill, H.R. 9614, the NRC Staff Pay Alignment Act.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 9614."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY AND JUSTICE FOR ALL",
+   "title": "LIBERTY AND JUSTICE FOR ALL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5413-2.htm",
+   "sentences": [
+    "In private detention centers across the country, ICE and their private partners, like The GEO Group, are continuing down this dangerous path without any regard to the human cost of their actions.",
+    "Instead of finding their voice to speak out against this administration, they are trying to suppress and silence the voices of Americans, whether by limiting their ability to vote by mail or limiting the number of polling locations in Texas, because Republicans know they have failed.",
+    "We will end this national nightmare with or without them.",
+    "We will protect our communities.",
+    "We will hold accountable everyone who is responsible for the lawlessness, pain, and terror that this administration has inflicted on all of our communities, and we will remember everyone here who stayed silent in this moment."
+   ]
+  },
+  {
+   "date": "2026-04-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VICTIMS OF IMMIGRATION ACTIONS",
+   "title": "VICTIMS OF IMMIGRATION ACTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-23/html/CREC-2026-04-23-pt1-PgH3081-5.htm",
+   "sentences": [
+    "We will never relent, and we will fight on until we finally end this national nightmare. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFETY IN AMERICA",
+   "title": "SAFETY IN AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2208-6.htm",
+   "sentences": [
+    "We have seen 5-year-olds come home from school only to be detained and then sent to Dilley, Texas, then be returned and see the administration try to end their asylum claim."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLD THE ADMINISTRATION ACCOUNTABLE",
+   "title": "HOLD THE ADMINISTRATION ACCOUNTABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH607.htm",
+   "sentences": [
+    "At the same time, they try to vanish the memory of January 6 from our collective memory, refusing to put up a plaque to honor law enforcement officers who defended them from actual domestic terrorists in this very building.",
+    "The American people deserve better, and I will keep coming down here until House Republicans finally speak up for the American people and hold this administration accountable. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLDING ICE ACCOUNTABLE",
+   "title": "HOLDING ICE ACCOUNTABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH148.htm",
+   "sentences": [
+    "This tragic loss of life comes the same week that we remember what occurred here 5 years ago on January 6.",
+    "On that day, violent insurrectionists attacked police officers, many of whom sustained serious injuries and five of whom have passed away since the attack, including Brian Sicknick, a New Jersey native and a proud Capitol Police officer.",
+    "Mothers, Capitol Police officers, our neighbors, Members of Congress, no one, not a single person should feel safe with him as our President.",
+    "The President and House Republicans have tried to vanish the events of that day from our collective memory, but we will not let them.",
+    "We cannot allow that to happen. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "title": "SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH127-2.htm",
+   "sentences": [
+    "Mr. Speaker, House Republicans ended 2025 by failing to extend Affordable Care Act tax credits causing healthcare costs to skyrocket for millions of Americans.",
+    "If my colleagues were serious about governing, we would be voting on protecting healthcare, lowering costs, and addressing the real issues that working families are facing.",
+    "Mr. Speaker, I urge my Republican colleagues to get serious and focus on the priorities our constituents sent us here to address.",
+    "For all these reasons and so many more, I strongly oppose this bill."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPUBLICAN HEALTHCARE LEGISLATION",
+   "title": "REPUBLICAN HEALTHCARE LEGISLATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6098-5.htm",
+   "sentences": [
+    "Instead of extending Affordable Care Act tax credits and keeping premiums from skyrocketing, House Republicans are pushing a plan that would force more than 20 million Americans to pay, on average, twice as much for the same coverage they have today.",
+    "The House Republican solution is to cut a trillion dollars from healthcare, pass the largest cut to SNAP in history, and do nothing while Trump's tariffs raise costs across the board.",
+    "That is why we are forcing a vote to extend the ACA subsidies."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "Instead of working to lower energy bills, they are prioritizing legislation that props up the fossil fuel industry and blocks affordable, clean energy that is ready to be connected to the grid.",
+    "Due to skyrocketing demand, including from data centers, families in New Jersey saw a 20 percent spike in electricity bills this summer.",
+    "If we are serious about competing with China, we should take an all- of-the-above strategy to energy production and fast-track clean energy onto the grid.",
+    "Mr. Speaker, I rise to speak in opposition to H.R. 1949.",
+    "Mr. Speaker, I am strongly opposed to this bill, and I urge my colleagues to join me."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgE872.htm",
+   "sentences": [
+    "I urge my colleagues to join me in celebrating this historic visit. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP ADMINISTRATION CHAOS",
+   "title": "TRUMP ADMINISTRATION CHAOS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3549-6.htm",
+   "sentences": [
+    "This week, the House is coming to a standstill because Republicans refuse to address the Epstein files despite Trump's repeated commitments to the American people to do so.",
+    "Trump said his mass deportation agenda would only target violent criminals, but over 90 percent of detainees being held in New Jersey have no criminal conviction.",
+    "Trump said he would improve the Affordable Care Act, yet he just signed a bill into law that cuts over $1 trillion from healthcare and will cause an average ACA premium increase of over $1,200 for people in our district.",
+    "We will continue to present an alternative pathway forward, one that fulfills the promises of this country and delivers the results that all Americans deserve. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMUNICATIONS SECURITY ACT",
+   "title": "COMMUNICATIONS SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3218.htm",
+   "sentences": [
+    "The bill specifies that CSRIC must include representatives from a wide range of stakeholders from the communications industry, academia, the public-interest sector, and State, local, and Tribal Governments, ensuring that everyone is at the table to help keep our communities safe and secure.",
+    "Mr. Speaker, I rise today in support of H.R. 1717, the Communications Security Act.",
+    "Mr. Speaker, I urge all of my colleagues to vote in favor of the bill."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING FOR LGBTQ RIGHTS",
+   "title": "FIGHTING FOR LGBTQ RIGHTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2998-5.htm",
+   "sentences": [
+    "Mr. Speaker, 10 years ago today, our Nation made a remarkable step toward equality with the legalization of gay marriage.",
+    "These are blatant attempts to harm the LGBTQ community that has already overcome so much and made incredible strides towards equality.",
+    "Mr. Speaker, that is what I will always do and what I urge my colleagues across the aisle to do, as well. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING SENSITIVE DATA FOR MILLIONS OF AMERICANS",
+   "title": "PROTECTING SENSITIVE DATA FOR MILLIONS OF AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1888-2.htm",
+   "sentences": [
+    "Unfortunately, the newest threat to our personal data comes from within the Federal Government.",
+    "In fact, after DOGE infiltrated the National Labor Relations Board, suspicious attempts were made to access the data from an IP address in Russia.",
+    "Mr. Speaker, I urge all of my colleagues to stand alongside House Democrats in calling upon the Trump administration, the Office of Management and Budget, and DOGE to clarify what actions they are taking to safeguard the most sensitive taxpayer data that exists on our Federal systems."
+   ]
+  },
+  {
+   "date": "2025-05-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THREATS NONESSENTIAL HELICOPTERS POSE TO PUBLIC SAFETY",
+   "title": "THREATS NONESSENTIAL HELICOPTERS POSE TO PUBLIC SAFETY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-06/html/CREC-2025-05-06-pt1-PgH1861-2.htm",
+   "sentences": [
+    "In the 118th Congress, we introduced two pieces of legislation and directly engaged with the FAA to address these issues, hosting a workshop in Jersey City with stakeholders and local leaders, but this crash is a clarion call to every level of government that further urgent action is needed.",
+    "That is why, along with my colleagues from New Jersey and New York, I introduced the Improving Helicopter Safety Act, which bans all nonessential helicopter traffic within a 20-mile radius of the Statue of Liberty."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP'S IMMIGRATION ENFORCEMENT POLICIES",
+   "title": "PRESIDENT TRUMP'S IMMIGRATION ENFORCEMENT POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1385.htm",
+   "sentences": [
+    "Why is it, then, that last week ICE attempted to deport a constituent of mine who had been granted legal protections against removal under the Convention Against Torture?",
+    "The Chief Justice of the U.S. Supreme Court wrote in his `2024 Year End Report on the Federal Judiciary': ` . . .",
+    "Mr. Speaker, I rise today to speak against the administration's immigration enforcement policies.",
+    "As a grandson of immigrants and the Representative of a proud immigrant community, it is something that I will always fight against.",
+    "Considering the increasing physical threats to judges, these are clearly efforts to intimidate judges and our courts.'' ``We reject efforts to undermine the courts and the profession.",
+    "We will not stay silent in the face of efforts to remake the legal profession into something that rewards those who agree with the government and punishes those who do not."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING CONSTITUENTS' MOST IMPORTANT ISSUES",
+   "title": "ADDRESSING CONSTITUENTS' MOST IMPORTANT ISSUES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1320-6.htm",
+   "sentences": [
+    "Thousands have written asking me to protect Medicare, Social Security, and Medicaid.",
+    "Hundreds more wrote about the rising costs of childcare and housing.",
+    "Many have asked me to stop the scourge of gun violence in our communities.",
+    "Maybe it is because the Republican budget slashes billions of dollars from Medicaid and food assistance to the most vulnerable amongst us.",
+    "Democrats are ready to lower the costs of childcare by expanding the number of childcare facilities across the country.",
+    "We are pushing for record new investments in affordable housing and incentives for first-time home buyers."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL JUDICIARY AND JUDGES",
+   "title": "SUPPORTING FEDERAL JUDICIARY AND JUDGES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1231-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of our Federal judiciary and the judges who work tirelessly to uphold and defend our democracy.",
+    "Mr. Speaker, I urge everyone to stand against this reckless attack on our judiciary. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "Social Security employees in the Hoboken field office assist our seniors and those with disabilities in receiving the benefits they have earned and depend on.",
+    "Our civil service is a merit system protected by the right to due process, and attempts to implement Schedule F, union bust, and undermine our collective bargaining process will be met with swift and unyielding resistance from me, the Congressional Labor Caucus, and my colleagues on this side of the aisle.",
+    "We have your back, and we will not back down.",
+    "We will continue to oppose this administration's baseless and lawless attempts to diminish the important work you do every day."
+   ]
+  }
+ ]
+}

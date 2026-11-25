@@ -1,0 +1,182 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "malliotakis",
+ "name": "Nicole Malliotakis",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 13,
+  "sentences": 53
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING TAXPAYERS FROM GHOST PREPARERS ACT",
+   "title": "PROTECTING TAXPAYERS FROM GHOST PREPARERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5686.htm",
+   "sentences": [
+    "In Kentucky, two individuals pleaded guilty after preparing nearly 6,000 fraudulent Federal tax returns, resulting in more than $10 million in tax losses.",
+    "Mr. Speaker, I rise today in strong support of my legislation, H.R. 9499, the Protecting Taxpayers from Ghost Preparers Act.",
+    "I will continue working with my colleagues on both sides of the aisle on policies to ensure that fraudulent preparers and other bad actors are held accountable for taking advantage of hardworking taxpayers.",
+    "I thank Chairman Smith and the committee staff for their work to advance this legislation, and I urge my colleagues on both sides of the aisle to support it."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR THE CONDEMNATION AND DENOUNCEMENT OF SOCIALISM IN ALL ITS FORMS, AND FOR OTHER PURPOSES",
+   "title": "PROVIDING FOR THE CONDEMNATION AND DENOUNCEMENT OF SOCIALISM IN ALL ITS FORMS, AND FOR OTHER PURPOSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5401.htm",
+   "sentences": [
+    "It is what destroyed her family, what took her home, what took my grandfather's small business, and what caused my family to break up and never see each other again."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3840-4.htm",
+   "sentences": [
+    "More than 3 years ago, Congress ended the FDA's century-old animal testing mandate.",
+    "The second provision would prohibit USDA funding for significantly painful research on dogs and cats conducted through the National Institute of Food and Agriculture.",
+    "Taxpayers should not be forced to subsidize painful experiments on dogs and cats when Congress and Federal agencies have already recognized that these practices should be restricted.",
+    "This week, we saw EPA Administrator Lee Zeldin, our former colleague, announce the goal of eliminating all animal testing by his agency by 2035.",
+    "Mr. Chair, as co-chair of the Congressional Animal Protection Caucus, I rise in support of my amendments that are included in this en bloc.",
+    "Mr. Chair, I urge my colleagues to support my amendments."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "title": "SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3692.htm",
+   "sentences": [
+    "We are here today because we are voting on a very simple bill.",
+    "If Republicans have to carry the water again to deliver for the women of America, we will do so, but I really hope that this can remain a bipartisan measure.",
+    "The original version, which we have introduced, did not have those specific quadrants."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1041, VETERANS 2ND AMENDMENT PROTECTION ACT; PROVIDING FOR CONSIDERATION OF H.R. 6047, SHARRI BRILEY AND ERIC EDMUNDSON VETERANS",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1041, VETERANS 2ND AMENDMENT PROTECTION ACT; PROVIDING FOR CONSIDERATION OF H.R. 6047, SHARRI BRILEY AND ERIC EDMUNDSON VETERANS BENEFITS EXPANSION ACT OF 2026...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3632-4.htm",
+   "sentences": [
+    "Mr. Speaker, perhaps the party that is opposing a women's history museum on The National Mall because they want to have transgender exhibits, maybe they are the ones who are trans-obsessed."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "Mr. Speaker, today, millions of Americans across the country are benefiting from the working families tax cuts that President Trump and Republicans have passed.",
+    "The reality is that when you speak to people in my district-- teachers, firefighters, police officers, homeowners, small business owners, senior citizens, parents--they are seeing tremendous savings.",
+    "Eighty- eight percent of seniors across the country, 52 million seniors will benefit from the provision of Social Security tax being refunded to them.",
+    "Permanently lowering those tax rates was a significant win not for the wealthy but for, perhaps a first time in a long time, the middle class, the working class, and the senior citizen that relies on Social Security."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE HORRORS OF SOCIALISM",
+   "title": "DENOUNCING THE HORRORS OF SOCIALISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4883-2.htm",
+   "sentences": [
+    "Mr. Speaker, just ask your constituents from Russia, Poland, Albania, China, Korea, Vietnam, Venezuela, or Cuba, where my mother fled in 1959 to escape the very things that our new socialist mayor in New York City says he wants.",
+    "Mr. Speaker, look at Venezuela, a nearby country where self- proclaimed socialists destroyed the richest country in South America.",
+    "They seized the means of production, and it led to hyperinflation and complete economic collapse, which is why you have all these Venezuelans trying to come over our border illegally, Mr. Speaker."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS",
+   "title": "PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2594.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to ask the question: Why are the Democrats so obsessed with allowing noncitizens to vote in our election?",
+    "The lead debater on the other side of the aisle said that it is not just Washington, D.C., that is looking to allow noncitizens to vote in our elections.",
+    "In New York City, we had the same problem when the New York City Council passed legislation to allow noncitizens to vote in municipal elections.",
+    "It took not just one round in court, not just two rounds in court, but three rounds in court, where the city council and the mayor of New York used taxpayer money to continue to fight this each and every round despite being voted down in the New York State Supreme Court, the New York State Appellate Court, and, lastly, the New York Court of Appeals.",
+    "It is not constitutional for noncitizens to vote in our elections.",
+    "Just like we fought this in New York City and prevailed, we will do the same here in Washington, D.C. We will make sure that they stop allowing and don't allow noncitizens to vote in their municipal elections because we are exercising our constitutional responsibility to protect our elections.",
+    "Those who continue to push for noncitizens to vote in our elections to dilute citizenship and dilute the voice of citizens in our elections should be ashamed of themselves.",
+    "Mr. Speaker, I urge my colleagues to continue to be strong and vote in support of this because we know that it passed overwhelmingly with bipartisan support last year."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, in this bill, we are providing real tax relief for hardworking Americans, middle-class families, and our senior citizens, not the billionaires like the Democrats claim.",
+    "We provide tax relief by including my legislation to provide a bonus deduction to reduce the taxes that our seniors pay on their Social Security income.",
+    "We help young graduates with student loan debt get reimbursed by their employers tax-free.",
+    "All of that is for the working and middle class, not billionaires.",
+    "We also make sure that this bill keeps our borders secure and funds the deportation of criminal illegal immigrants.",
+    "We safeguard Medicaid for our seniors, disabled, and children with disabilities."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOVERY OF STOLEN CHECKS ACT",
+   "title": "RECOVERY OF STOLEN CHECKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1351.htm",
+   "sentences": [
+    "It is also happening with Social Security and other benefits that our constituents rely on.",
+    "We still need the DOJ and our law enforcement partners to continue their investigations to find and prosecute these fraudsters.",
+    "We are hearing of arrests and prosecutions on a regular basis, but we urge them to continue their good work."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN'S HISTORY MONTH",
+   "title": "WOMEN'S HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1359-4.htm",
+   "sentences": [
+    "Fifty years ago, women were still battling for so many rights, not just equal pay.",
+    "In 1981, Sandra Day O'Connor, also a Republican, made history as the first woman confirmed to the U.S. Supreme Court, paving the way for greater female representation in our legal system.",
+    "Today, we are fighting to get that museum that was authorized in 2020 its rightful place on The National Mall."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING MEDICAID FRAUD",
+   "title": "FIGHTING MEDICAID FRAUD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1075-2.htm",
+   "sentences": [
+    "Madam Speaker, I rise to highlight the rampant fraud, waste, and abuse in Medicaid that is draining American taxpayers and hurting our most vulnerable seniors, disabled, and other Americans who rely on this program.",
+    "Yesterday, the Director of the Office of Management and Budget, Russell Vought, told us something shocking, that one out of four Medicaid payments are improper payments--one out of every four.",
+    "This echoes a 2024 report from the Biden administration's Office of Management and Budget that designated Medicaid and Medicare as a high priority for susceptibility to fraud, waste, abuse, improper payments, and overpayments.",
+    "In 2024, the Government Accountability Office released a report estimating over $100 billion in improper payments were made in the Medicare and Medicaid programs for the fiscal year 2023.",
+    "There was a CNBC report that detailed how Medicare and Medicaid programs are being brazenly targeted by sophisticated criminals to the tune of $100 billion a year. ``Lack of State oversight spurs Medicaid fraud,'' says Spectrum New York. ``Scammers ripped off NY's controversial Medicaid home care program to the tune of $68 million,'' from the New York Post.",
+    "In July 2024, the Governor said that the State's Medicaid Consumer Directed Personal Assistance Program has ``become a racket.'' She said it is ``one of the most abused programs in the entire history of the State of New York.'' She said that the current trajectory of Medicaid spending is ``not sustainable.'' Other Democrats have pointed out the same things.",
+    "Attorney General Garland, President Biden's Attorney General, in a 2024 speech regarding healthcare fraud, announced charges against 193 defendants for over $2.75 billion in false Medicare and Medicaid claims, and that was just one event.",
+    "New York Attorney General Letitia James, in a January 2025 speech, said: ``Companies that illegally profit by exploiting Medicaid patients steal taxpayer money and undermine the healthcare system that all New Yorkers rely on.'' To my colleagues, Republicans and Democrats, let's work together to actually fix this."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "title": "PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1093-2.htm",
+   "sentences": [
+    "This bill will help crack down on this type of fraud and would extend the statute of limitations that law enforcement needs to pursue criminal charges or civil actions and also incentivizes States to help us crack down and recover these fraudulent payments, and it puts in checks and balances to stop future unemployment insurance payments from going to incarcerated and deceased people.",
+    "We must allow law enforcement to do their work.",
+    "We are fighting to protect taxpayers."
+   ]
+  }
+ ]
+}

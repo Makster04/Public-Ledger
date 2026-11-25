@@ -1,0 +1,59 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "simpson",
+ "name": "Michael K. Simpson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 11
+ },
+ "statements": [
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACTION FOR DENTAL HEALTH ACT",
+   "title": "ACTION FOR DENTAL HEALTH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4645.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2001, the Action for Dental Health Act.",
+    "Mr. Speaker, I look forward to getting this important bill across the finish line and sent to the President's desk, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "This bill eliminates waste and restores fiscal responsibility, prioritizes unleashing American energy, and protects public lands and access to those lands.",
+    "It bolsters national security and public safety by reducing our reliance on foreign countries for energy and mineral resources and by increasing law enforcement funding for our land management agencies and for our Tribes.",
+    "The bill increases support for public safety and justice through Indian Country and provides over $8 billion to the Indian Health Service for key healthcare programs, prioritizing Federal investment where it is needed.",
+    "Thoughtful cuts were made to the Department of the Interior, resulting in a nearly 2 percent reduction in the top line."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "title": "SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5066-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of S. 356, the Secure Rural Schools Reauthorization Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "There is nothing in here that cuts Social Security.",
+    "There is nothing in here that cuts Medicaid.",
+    "In Indian Country, the CR increases funding for Indian Health Services to expand availability and direct healthcare services funding the Bureau of Indian Affairs.",
+    "First, let me say I appreciate the work the chairman has done over the last several months trying to get our regular appropriations bills done and then trying to get this CR finished when it became apparent we weren't going to be able to negotiate a top line yet, something that we will continue to work on."
+   ]
+  }
+ ]
+}

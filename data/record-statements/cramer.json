@@ -1,0 +1,102 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cramer",
+ "name": "Kevin Cramer",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 27
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgS5729-6.htm",
+   "sentences": [
+    "NEPA--Clean Water Act, and the National Historic Preservation Act must be filed within 150 days rather than the 6-year window they are now.",
+    "In other words, to try to throw a legal wrench in the process, someone must have skin in the game.",
+    "NEPA is a procedural statute, according to the Supreme Court, not substantive.",
+    "Oil producers in North Dakota and Alaska and offshore wind projects in Rhode Island will benefit just as much as manufacturers and roads and bridges from coast to coast.",
+    "It is supported by investor-owned utilities, rural electric cooperatives, the White House, renewable energy groups, oil and gas producers, manufacturers, labor organizations, miners, farm groups, and many, many more.",
+    "We are going to get back to building, not balking."
+   ]
+  },
+  {
+   "date": "2025-10-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-09/html/CREC-2025-10-09-pt1-PgS7062-3.htm",
+   "sentences": [
+    "The use of our military to support local law enforcement, not to become law enforcement, is legal.",
+    "I oppose the amendment, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-08/html/CREC-2025-10-08-pt1-PgS7009.htm",
+   "sentences": [
+    "Mr. President, in a little while, we are going to vote to proceed to S.J. Res. 62, which I introduced with Senator Hoeven to repeal the Biden administration's Bureau of Land Management resource management plan for North Dakota.",
+    "And I will add that it needs to be undone by Congress so it is clear to the bureaucracy that this sort of resource management plan is out of bounds.",
+    "I urge my colleagues to support this resolution."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO \"NORTH DA",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO \"NORTH DAKOTA FIELD OFFICE RECORD OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-08/html/CREC-2025-10-08-pt1-PgS7031.htm",
+   "sentences": [
+    "Five children were born to this union.",
+    "He led many bus tours throughout the U.S. and tour groups 19 times to Israel, Jordan, and Egypt.",
+    "I will obviously miss it, being here in Washington, but I did want to, first of all, seek unanimous consent to submit his obituary to be printed in the Record tonight.",
+    "I just wish his family well and just know that I am going to miss him.",
+    "I am going to miss him but grateful that I knew him."
+   ]
+  },
+  {
+   "date": "2025-08-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nominations (Executive Session)",
+   "title": "Nominations (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-08-02/html/CREC-2025-08-02-pt1-PgS5481-6.htm",
+   "sentences": [
+    "When I introduced Shalanda Young in the Budget Committee in her hearing to become OMB Director, that was a decision I never regretted and still do not.",
+    "But I will tell you, this morning, as I stand here in early August on a Saturday morning, with this circle of zero percent bright-gray, as though there is such a thing as bright-gray, I am frustrated.",
+    "Well, we can't allow them to have their nominees on a simple voice vote."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: U.S. GOVERNMENT ACCOUNTABILITY OFFICE LEGAL OPINION",
+   "title": "U.S. GOVERNMENT ACCOUNTABILITY OFFICE LEGAL OPINION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgS3556.htm",
+   "sentences": [
+    "Finally, the North Dakota RMP implements, interprets, or prescribes law or policy, because it designates areas of BLM- administered land for certain purposes in accordance with BLM's responsibilities for land use management under FLPMA.",
+    "The North Dakota RMP implements FLPMA and prescribes policy by designating or foreclosing specific activities or land use on BLM-administer land.",
+    "As such, it was a rule of general applicability.\\35\\ Likewise, the North Dakota RMP establishes land use designations that govern all activities conducted by any person or entity on BLM-administered land and subsurface estate managed by the North Dakota Field Office, making it a rule of general applicability. (2) Rule of Agency Management or Personnel The North Dakota RMP is not a rule of agency management or personnel.",
+    "L. No. 94-579, title II, sec. 202(a), 90 Stat. 2743 (Oct. 21, 1976), 43 U.S.C. Sec. 1712(a). 7."
+   ]
+  },
+  {
+   "date": "2025-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-09/html/CREC-2025-01-09-pt1-PgS69-6.htm",
+   "sentences": [
+    "Mr. President, I am going to do what I do so well and so often and agree with John Hoeven.",
+    "I won't bore you with a lot of the same information.",
+    "But, anyway, we will wait for that to happen.",
+    "But, anyway, we will find them later."
+   ]
+  }
+ ]
+}

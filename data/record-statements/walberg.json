@@ -1,0 +1,702 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "walberg",
+ "name": "Tim Walberg",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 48,
+  "sentences": 258
+ },
+ "statements": [
+  {
+   "date": "2026-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESPONSIBLE CORMORANT MANAGEMENT AND CONTROL ACT OF 2026",
+   "title": "RESPONSIBLE CORMORANT MANAGEMENT AND CONTROL ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-17/html/CREC-2026-11-17-pt1-PgH6238.htm",
+   "sentences": [
+    "This legislation supports environmental stewardship and conservation, and I urge my colleagues to support the bill so that future generations of Americans can enjoy the same world-class fisheries as we do today."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COST ESTIMATE OF H.R. 1320, MODERN WORKER SECURITY ACT",
+   "title": "COST ESTIMATE OF H.R. 1320, MODERN WORKER SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgE945.htm",
+   "sentences": [
+    "Portable benefits include those commonly provided to full-time employees, such as workers' compensation, professional development, paid leave, health insurance coverage, and retirement savings.",
+    "CBO estimates that implementing H.R. 1320 would not significantly affect the operating costs of DOL or the National Labor Relations Board over the 2026-2031 period; any change in related spending would be subject to the availability of appropriated funds."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COST ESTIMATE OF H.R. 2528, ASSOCIATION HEALTH PLANS ACT",
+   "title": "COST ESTIMATE OF H.R. 2528, ASSOCIATION HEALTH PLANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgE947-3.htm",
+   "sentences": [
+    "Basis of estimate: For this estimate, CBO assumes that the legislation will be enacted in fiscal year 2026 and that additional enrollment in AHPs will begin in calendar year 2027.",
+    "CBO expects that enrollment in AHPs would increase under the bill because AHPs typically offer premiums that are less costly than the modified community-rated premiums available in the nongroup and small-group markets.",
+    "That change would increase federal costs for the premium tax credit for health insurance purchased through the marketplaces established by the Affordable Care Act and would shift a portion of some employees' compensation from taxable wages to tax-favored health insurance for those insured in the small- group market.",
+    "Both bills would expand AHP enrollment by establishing new rules for AHPs and the estimates are similar, but H.R. 6703 included several other provisions to modify requirements for individual and group health coverage, require contracts between plan sponsors and pharmacy benefit managers to meet certain standards, and appropriate funding for reductions in cost sharing."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETIRE THROUGH OWNERSHIP ACT",
+   "title": "RETIRE THROUGH OWNERSHIP ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5905.htm",
+   "sentences": [
+    "An employee stock ownership plan, or ESOP, is a retirement savings plan that allows employees to build wealth by owning shares in the company they work for.",
+    "It is a win- win for job creators and workers.",
+    "Mr. Speaker, I rise today in strong support of S. 2403, the Retire through Ownership Act."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENDING PREDATOR ACCESS TO UNION POWER ACT",
+   "title": "ENDING PREDATOR ACCESS TO UNION POWER ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5906.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 8775, Ending Predator Access to Union Power Act.",
+    "It came about after reports that a local of the Service Employees International Union, or SEIU, hired a convicted child sex offender as a business agent.",
+    "What makes this especially concerning is that SEIU represents public school employees, bus drivers, and childcare providers, positions that provide access to large groups of children.",
+    "I am thankful that the union recognized its mistake and fired this individual, but this never should have happened in the first place.",
+    "Mr. Speaker, I urge my colleagues to protect children and strengthen the integrity of unions by voting ``yes'' on H.R. 8775.",
+    "Mr. Speaker, Federal law, as we have said, already bars individuals convicted of serious crimes, including murder, rape, robbery, and embezzlement, from holding positions of power in labor unions and certain positions in employer management for up to 13 years after conviction or release.",
+    "H.R. 8775, Ending Predator Access to Union Power Act, closes this loophole with a simple and commonsense fix.",
+    "Unions lose credibility when individuals convicted of serious crimes are allowed to hold positions of power."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIT FUTURE ACT",
+   "title": "FIT FUTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5908.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 9723, the Fit Future Act, because a strong country starts with strong kids.",
+    "Mr. Speaker, physical fitness is critical for physical health, but there are more studies showing how it impacts mental health as well."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SCIENCE OF READING ACT OF 2026",
+   "title": "SCIENCE OF READING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5911.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 7890, the Science of Reading Act of 2026.",
+    "Mr. Speaker, I could stand here and rattle off test score after test score and study after study, but I will spare us the time and give you the gist: Our children's literacy rates are plummeting.",
+    "I urge my colleagues to vote ``yes'' on H.R. 7890 because we cannot continue relying on approaches that fail to give children the foundational skills that they need."
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT ECONOMIC AND ACADEMIC FREEDOM ACT OF 2026",
+   "title": "PROTECT ECONOMIC AND ACADEMIC FREEDOM ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5483-2.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1499, I call up the bill (H.R. 4795) to amend the Higher Education Act of 1965 to prohibit an institution that participates in a nonexpressive commercial boycott of Israel from being eligible for certain funds under that Act, to require an institution that participates in certain programs under that Act to certify that students are not unreasonably obstructed from participating in academic programs in Israel, and for other purposes, and ask for its immediate consideration in the House.",
+    "In recent years, we have seen campaigns to boycott Israel spread across American campuses.",
+    "These campaigns have pressured colleges and universities to cut financial, commercial, and academic ties with Israeli companies and institutions.",
+    "That can mean restricting study abroad opportunities, research partnerships, academic exchanges, conferences, and other programs involving Israel.",
+    "The Boycott, Divest and Sanctions, or BDS, movement singles out and demonizes Israel.",
+    "It rejects the truth that Israel is a close friend and strategic partner of the United States.",
+    "Our universities should not use taxpayer- funded Federal programs to discriminate against Israeli students, faculty, institutions, or businesses simply because they are Israeli.",
+    "H.R. 4795 would prohibit participating institutions from engaging in boycotts of Israel that are not based on legitimate business reasons.",
+    "It would also require colleges and universities to treat academic opportunities involving Israel the same as those involving other countries, ensuring Israeli students and faculty have the same access to academic programs and opportunities as their peers from around the world.",
+    "American taxpayers should not be funding institutions that utilize Federal programs while simultaneously pursuing discriminatory boycotts or unequal academic treatment based solely on ties to Israel.",
+    "Mr. Speaker, this legislation is about a simple principle: Our colleges and universities should not discriminate against Israel, Israeli institutions, or Israeli students; and Federal taxpayer dollars should never support institutions that engage in such discrimination.",
+    "It ensures that colleges participating in Federal higher education programs do not engage in certain unjustified commercial boycotts of Israel and that academic opportunities involving Israel are treated fairly and equally.",
+    "Mr. Speaker, I rise today in strong support of H.R. 4795, Protect Economic and Academic Freedom Act.",
+    "I urge my colleagues to support H.R. 4795 and send a clear message that academic and economic freedom must be protected on our campuses."
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING DOMESTIC MINING ACT OF 2025",
+   "title": "PROTECTING DOMESTIC MINING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5452.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1501, the Protecting Domestic Mining Act, to strengthen America's security, unlock economic investment, and support thousands of hardworking men and women."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR THE CONDEMNATION AND DENOUNCEMENT OF SOCIALISM IN ALL ITS FORMS, AND FOR OTHER PURPOSES",
+   "title": "PROVIDING FOR THE CONDEMNATION AND DENOUNCEMENT OF SOCIALISM IN ALL ITS FORMS, AND FOR OTHER PURPOSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5401.htm",
+   "sentences": [
+    "From defunding the police to letting noncitizens vote and seizing private small businesses, the DSA is promoting radical policies, Mr. Speaker, that undermine the values that have carried our Nation through 250 years and blessed the world.",
+    "Mr. Speaker, I rise today in strong support of H. Res. 1490 to condemn socialism and the dangerous policies being pushed by the Democratic Socialists of America, and, sadly, by my Democrat colleagues on the other side of the aisle.",
+    "I am proud to be a cosponsor of this resolution, and I urge my colleagues to listen to what we are talking about, to ultimately get past the idea of stupid and get on the idea of genius in favor of this resolution, to reject this radical ideology and protect the rights and freedoms of hardworking Michigan and American families."
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COST ESTIMATE OF H.R. 4795, PROTECT ECONOMIC AND ACADEMIC FREEDOM ACT OF 2026",
+   "title": "COST ESTIMATE OF H.R. 4795, PROTECT ECONOMIC AND ACADEMIC FREEDOM ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-31/html/CREC-2026-08-31-pt1-PgE820.htm",
+   "sentences": [
+    "No. H.R. 4795 would require, as a condition of program participation agreements between institutions of higher education and the Department of Education, that the institutions not engage in ``nonexpressive commercial boycotts'' of Israel and entities organized, licensed, or regulated under Israeli law.",
+    "A nonexpressive commercial boycott would include the refusal to deal or the termination of business activities intended to limit commercial relations with Israel, unless supported by a valid business reason.",
+    "The bill also would require institutions that receive funding from or plan to apply for funding from certain international education and foreign language programs at the Department of Education to certify annually that they will allow their students and faculty to participate in academic programs in Israel on the same terms as programs in other foreign countries.",
+    "Additionally, institutions would have to allow students and faculty from Israeli institutions to participate in their academic programs as they would participants from any other foreign institution."
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COST ESTIMATE OF H.R. 7661, STOP THE SEXUALIZATION OF CHILDREN ACT",
+   "title": "COST ESTIMATE OF H.R. 7661, STOP THE SEXUALIZATION OF CHILDREN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-31/html/CREC-2026-08-31-pt1-PgE823-3.htm",
+   "sentences": [
+    "No. H.R. 7661 would prohibit the use of federal funds awarded under the Elementary and Secondary Education Act of 1965 to provide or promote programs, literature, or other materials to children under the age of 18 that contain sexually oriented content, including gender dysphoria or transgenderism.",
+    "The bill would exempt certain content that includes science coursework, religious texts, and classic works of art and literature, and instruction intended to help students recognize sexual trafficking."
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COST ESTIMATE OF H.R. 2870, WORKING FAMILIES FLEXIBILITY ACT OF 2025",
+   "title": "COST ESTIMATE OF H.R. 2870, WORKING FAMILIES FLEXIBILITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-24/html/CREC-2026-08-24-pt1-PgE804-2.htm",
+   "sentences": [
+    "Mr. Speaker, I include in the Record the following cost estimate for H.R. 2870, Working Families Flexibility Act of 2025, prepared by the Congressional Budget Office, and was not made available to the Committee on Education and Workforce at the time of the filing of the legislative report.",
+    "H.R. 2870, WORKING FAMILIES FLEXIBILITY ACT OF 2025, AS REPORTED BY THE HOUSE COMMITTEE ON EDUCATION AND THE WORKFORCE ON FEBRUARY 12, 2026 ------------------------------------------------------------------------ By fiscal year, millions of dollars-- ----------------------------------- 2026 2026-2031 2026-2036 ------------------------------------------------------------------------ Direct Spending (Outlays)........... 0 0 0 Revenues............................ 0 0 0 Increase or Decrease (-) in the 0 0 0 Deficit............................",
+    "Such compensatory time could be provided only in accordance with a collective bargaining agreement or with the consent of affected employees during the 5-year period after enactment of the bill."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING PATIENTS FIRST BY STRENGTHENING PROVIDER ACCOUNTABILITY IN FECA ACT",
+   "title": "PUTTING PATIENTS FIRST BY STRENGTHENING PROVIDER ACCOUNTABILITY IN FECA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4654.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 8823, bipartisan legislation that protects both taxpayers and the Federal employees who rely on the Federal Employees' Compensation Act, when they are injured on the job.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 8823 and tell these scammers that their payday is over.",
+    "Mr. Speaker, I urge my colleagues to support this legislation, stand up for responsible stewardship of taxpayer dollars, and vote ``yes'' on H.R. 8823."
+   ]
+  },
+  {
+   "date": "2026-06-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FASTER LABOR CONTRACTS ACT",
+   "title": "FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-15/html/CREC-2026-06-15-pt1-PgE573-3.htm",
+   "sentences": [
+    "Re Opposition to the Faster Labor Contracts Act--H.R. 5408 June 9, 2026.",
+    "Re Policy and Operational Flaws of the Faster Labor Contracts Act--H.R. 5408 Hon.",
+    "Re Constitutional Defects of the Faster Labor Contracts Act-- H.R. 5408 Hon."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4029.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to H.R. 5408, the so-called Faster Labor Contracts Act.",
+    "Let's call this bill what it really is: a massive expansion of Washington's power over American workers and job creators.",
+    "For more than 90 years, Federal labor law has required employers and unions to bargain in good faith.",
+    "It takes decisions out of the hands of workers and job creators and places them in the hands of unelected bureaucrats.",
+    "I just have a significant concern that it is short-sighted to think that government intrusion into this process will ever work in the end and what would be considered optional wouldn't eventually become mandatory in the fact that the workers themselves aren't making these decisions, that the best interests of the union leadership may be carried on, but not the workers'.",
+    "It requires a report from the Government Accountability Office, examining the length of time between recognition of a union in the workplace and the initial collective bargaining agreement.",
+    "I think back to the 2010 ObamaCare vote, when Members of this body were told to pass the bill so we could find out what was in it.",
+    "Mr. Speaker, as a former union steelworker, I certainly understand the value that unions play in the workplace.",
+    "I sometimes have my concerns about union officials and where they put their greatest agenda items at and the greatest concerns.",
+    "Unions can only force workers to pay dues or fees if there is a signed contract in effect.",
+    "This means that between the time a union is certified and when a first contract is signed, the union is not getting paid to represent workers.",
+    "Once the dues spigot is open, nearly all unions funnel that money to opposing President Trump and the Republican Party goals to lower taxes and make the American Dream affordable.",
+    "For decades, unions have increasingly spent more of their money on political campaigns--it is part of the record--and fringe social issues with a paltry sum spent on actually representing their members at the bargaining table and fighting for their rights.",
+    "President Trump is a strong supporter of Israel, but millions of dollars of union dues from unions like the SEIU, United Electrical Workers Union, and United Auto Workers are going to a pro-Hamas, anti- Israel agenda.",
+    "President Trump has fought to get DEI initiatives out of our schools, workplaces, and government agencies.",
+    "Union money has been propping up that agenda for more than a decade.",
+    "President Trump supports a pro-life policy, but union money flows into Planned Parenthood and other pro-abortion organizations.",
+    "Union-funded House Democrats have not spent their time fighting for workers like they promise.",
+    "The Faster Labor Contracts Act is just the latest attempt to undermine the President and his proworker agenda.",
+    "It will go to union leadership.",
+    "Mr. Speaker, just to bring clarity, my exact words were: President Trump is a strong supporter of Israel, but millions of dollars of union dues from unions like SEIU, the United Electrical Workers, and the United Auto Workers are going to support a pro-Hamas, anti-Israel agenda.",
+    "For decades, employers and unions have negotiated contracts through good faith bargaining.",
+    "I will give credit to whoever named this bill because it certainly accomplishes two things faster: It fast-tracks government intrusion into private workplaces, and it erodes workers' rights faster than we have ever seen before.",
+    "Finally, Mr. Speaker, I will include a letter at a later time raising concerns about H.R. 5408 from G. Roger King, senior labor and employment counsel at CHRO Association, and Alex McDonald, co-chair of the Workplace Policy Institute at Littler Mendelson."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO AID FOR GHOST STUDENTS ACT OF 2026",
+   "title": "NO AID FOR GHOST STUDENTS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4037-4.htm",
+   "sentences": [
+    "While childcare and hospice care have dominated the headlines in recent months, our Federal student aid programs have also fallen victim to fraud.",
+    "When an application is flagged for identity verification, it is based on real fraud risk, not political agenda.",
+    "Further, the bill's program review priority categories applies only to institutions that display a pattern of disbursing aid to flagged applications, and only after giving those schools an opportunity to demonstrate compliance with the bill's reasonable, commonsense identity verification requirements.",
+    "Mr. Speaker, I rise in strong support of H.R. 7892, the No Aid for Ghost Students Act of 2026, a simple and commonsense piece of legislation to fight fraud in our Federal student aid system."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "title": "NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1333, I call up the bill (H.R. 7726) to amend the Child Care and Development Block Grant Act of 1990 to withhold funds from noncompliant States under such Act, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in strong support of the Stop Child Care Scams Act to fight childcare fraud and protect taxpayer dollars.",
+    "Every dollar stolen through fraud is a dollar that cannot help feed a hungry person or provide childcare for kids and families who need it.",
+    "That is $9 billion that could have supported real childcare services or fed families in need.",
+    "Each of the bills is included in the Stop Child Care Scams Act, which delivers commonsense reforms to restore integrity to these programs.",
+    "This bill is guided by a simple principle: Taxpayer money meant for children and working families should never be lost to waste, fraud, or abuse.",
+    "Mr. Speaker, we know most childcare providers are doing the right thing, but when fraud runs rampant, it drives up costs, reduces access, and undermines trust in the system.",
+    "If we want to protect access to affordable, high-quality childcare, we must first eliminate the fraud draining these programs.",
+    "Mr. Speaker, I urge my colleagues to support the Stop Child Care Scams Act to protect children, restore accountability, and ensure these programs serve those who truly need them.",
+    "The Stop Child Care Scams Act strengthens oversight, closes loopholes, and prevents bad actors from continuing their schemes across multiple programs.",
+    "Mr. Speaker, I urge my colleagues to support the Stop Child Care Scams Act.",
+    "Mr. Speaker, now I will get back on the germane issues that we are dealing with with this legislation and not rabid statements without foundation."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT",
+   "title": "PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3652.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1224, I call up the bill (H.R. 2616) to require public elementary and middle schools that receive funds under the Elementary and Secondary Education Act of 1965 to obtain parental consent before changing a minor's gender markers, pronouns, or preferred name on any school form or sex-based accommodations, including locker rooms or bathrooms, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in strong support of H.R. 2616, the Stopping Indoctrination and Protecting Kids Act.",
+    "Instead of focusing on the basics like math and reading, many teachers and schools were introducing controversial lessons on gender ideology and pronouns, all while student achievement plummeted and continues to this day.",
+    "Many schools are engaged in systematic attempts to erode parental rights.",
+    "One study from Defending Education found that at least 21,000 schools across the United States have policies that allow or encourage staff to hide a student's name change or gender identity.",
+    "In fact, we are now seeing a wealth of data to prove that children and teenagers who seek out drastic, life-altering medical procedures often struggle with mental health issues now and beyond.",
+    "That is why I am proud to lead H.R. 2616, the Stopping Indoctrination and Protecting Kids Act, alongside my friend and colleague, the vice chair of the Education and Workforce Committee, Congressman Burgess Owens.",
+    "This bill takes monumental strides to restore parental rights and educational sanity.",
+    "Mr. Speaker, I certainly would agree that this bill will promote good mental health and security and probably academic success in the process.",
+    "It gives them the opportunity to use the resources already available to them to protect students, but not do that at the expense of parental rights.",
+    "The Stopping Indoctrination and Protecting Kids Act is just what it says."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA THE BEAUTIFUL MOTORCYCLE FAIRNESS ACT",
+   "title": "AMERICA THE BEAUTIFUL MOTORCYCLE FAIRNESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2362.htm",
+   "sentences": [
+    "By restoring parity for motorcycle riders, we will expand access opportunities, strengthen local economies that depend on tourism as well, and allow our fellow Americans to explore our historic landmarks in the best way possible: on two wheels in the open air.",
+    "Mr. Speaker, I urge my colleagues to support the bill."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING DETECTION OF HUMAN TRAFFICKING ACT",
+   "title": "ENHANCING DETECTION OF HUMAN TRAFFICKING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2363.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 4307) to direct the Secretary of Labor to train certain employees of Department of Labor how to effectively detect and assist law enforcement in preventing human trafficking during the course of their official duties, and for other purposes, as amended.",
+    "Specifically, this legislation directs the Department of Labor to educate appropriate staff in how to effectively detect instances of human trafficking, ensure personnel regularly receive information on current trends and best practices, and establish a clear course of action for referring suspected instances of human trafficking to law enforcement.",
+    "It supports law enforcement without expanding government unnecessarily.",
+    "Mr. Speaker, I rise today in strong support of H.R. 4307, the Enhancing Detection of Human Trafficking Act.",
+    "I urge my colleagues to put an end to this modern-day slavery and to vote ``yes'' on H.R. 4307."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOME SCHOOL GRADUATION RECOGNITION ACT",
+   "title": "HOME SCHOOL GRADUATION RECOGNITION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2364.htm",
+   "sentences": [
+    "The Home School Graduation Recognition Act also reaffirms House Republicans' commitment to expand educational opportunity and school choice for American families."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERRITORIAL STUDENT ACCESS TO HIGHER EDUCATION ACT",
+   "title": "TERRITORIAL STUDENT ACCESS TO HIGHER EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2366.htm",
+   "sentences": [
+    "After graduation, students can return home with advanced degrees and credentials they can reinvest back into their homes and local economies.",
+    "Last year, we passed the Working Families Tax Cut Act, which included some of the most conservative reforms to higher education in decades, massively lowering costs and helping create new pathways for students to chase the American Dream.",
+    "We now have a chance to build off that success of the Working Families Tax Cut Act and lower postsecondary education costs for U.S. residents in U.S. territories so they can continue supporting our vital military operations.",
+    "Mr. Speaker, as President Trump said in his State of Union Address last week, America's military is the strongest in the world, but we continue to have enemies around every corner of the globe who would like to undermine our power.",
+    "The working families tax cuts were a strong step in lowering costs for students and borrowers.",
+    "Mr. Speaker, I rise today in support of H.R. 6472, sponsored by Congressman James Moylan of Guam, which allows residents of U.S. territories to access in-State tuition rates at public universities across the U.S. I am proud to rise in support of H.R. 6472, which ensures students of the U.S. territories of Guam, the Commonwealth of the Northern Mariana Islands, American Samoa, and the U.S. Virgin Islands receive in-State tuition at public universities across the country."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREGNANT STUDENTS' RIGHTS ACT",
+   "title": "PREGNANT STUDENTS' RIGHTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1325.htm",
+   "sentences": [
+    "Republicans just passed working families tax cuts, which gave American families the largest tax cut in American history.",
+    "The working families tax cuts promotes life by putting hardworking families first, ensuring that they keep their hard-earned money in their pockets for their necessary uses.",
+    "Mr. Speaker, I include in the Record a list of significant pro-family, pro-life medical community members, family research members, and students in support of the Pregnant Students' Rights Act.",
+    "Organizations that Support H.R. 6359, the Pregnant Students' Rights Act Susan B. Anthony Pro-Life America Students for Life Action National Right to Life Committee Iowa Right to Life Concerned Women for America American Association of Pro-life Obstetricians and Gynecologists (AAPLOG) Action Heritage Action Independent Women Center for Urban Renewal (CURE) Eagle Forum Family Research Council Mr. Speaker, I reserve the balance of my time.",
+    "In fact, for years, many of my Democratic colleagues acknowledged that abortion is a serious and difficult decision and supported efforts to ensure women were not forced into it by a lack of resources or support.",
+    "Yet, today, some of those efforts are being undermined unless amendments that explicitly promote abortion are included.",
+    "It is deeply disappointing that some of my Democratic colleagues have chosen to turn this straightforward transparency bill into an abortion debate, implying that support for pregnant students is contingent on including pro-abortion provisions.",
+    "Mr. Speaker, I rise today in support of the Pregnant Students' Rights Act, legislation that affirms a simple but powerful principle: Expecting mothers should be encouraged to pursue their education like any other student.",
+    "I urge my colleagues to join me in supporting the Pregnant Students' Rights Act and stand up for the dignity, opportunity, and educational success of every student.",
+    "But sadly, that has been left out as far as saying if you are pregnant and you want to continue as pregnant in this school, we are going to support you in that.",
+    "We are not going to be redundant.",
+    "We are just making sure that you also include, young lady, if you are pregnant and you want to continue in school, we are going to do our best to help you and provide all the resources.",
+    "Mr. Speaker, I will make a few factual comments in response and also provide some information relative to my colleague's previous comments."
+   ]
+  },
+  {
+   "date": "2026-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING PRUDENT INVESTMENT OF RETIREMENT SAVINGS ACT",
+   "title": "PROTECTING PRUDENT INVESTMENT OF RETIREMENT SAVINGS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-15/html/CREC-2026-01-15-pt1-PgH897-5.htm",
+   "sentences": [
+    "The Biden-Harris ESG rule was explicitly intended to advance the left's radical climate and social agenda that harms Americans' retirement and long-term financial well-being.",
+    "This legislation is needed to combat the Biden rule which was issued in response to not one but two executive orders on climate change.",
+    "The Biden Labor Department's explanation of the rule lists ESG factors that it believes are relevant to investment performance, including impacts to climate change, corporate board composition, and workplace diversity and inclusion.",
+    "Mr. Speaker, I rise today to speak in support of H.R. 2988, the Protecting Prudent Investment of Retirement Savings Act, introduced by Representative Rick Allen, chairman of the Subcommittee on Health, Employment, Labor, and Pensions.",
+    "This bill puts retirement savers first, and I urge my colleagues to vote ``yes'' on this bill."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FLEXIBILITY FOR WORKERS EDUCATION ACT",
+   "title": "FLEXIBILITY FOR WORKERS EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH677.htm",
+   "sentences": [
+    "Last summer, we passed a Working Families Tax Cuts Act, which expanded opportunities for young Americans to access short-term, high-quality credentialing and training opportunities.",
+    "That is why I am proud to support H.R. 2262, the Flexibility for Workers Education Act, to remove obstacles and give workers more controls over their own careers.",
+    "As chairman of the Education and Workforce Committee, I am committed to cutting red tape and removing roadblocks that make it harder for workers and businesses to succeed."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMPOWERING EMPLOYER CHILD AND ELDER CARE SOLUTIONS ACT",
+   "title": "EMPOWERING EMPLOYER CHILD AND ELDER CARE SOLUTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH681.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Empowering Employer Child and Elder Care Solutions Act, a bipartisan proposal that meets working families where they are and strengthens our economy at the same time.",
+    "Many employers want to provide child and elder care for their employees, but the law discourages them from doing so by asserting that routinely provided childcare must be included in an hourly employee's regular pay rates.",
+    "It reduces stress, improves mental health, and allows parents and caregivers to focus on their work, knowing their loved ones are safe and supported.",
+    "In fact, I believe it makes certain that there is more opportunity for small businesses especially to have the ability to have dollars that could be put toward the childcare.",
+    "My colleague on the other side of the aisle has said this bill is an assault on working families.",
+    "H.R. 2270 is a narrowly tailored solution to the growing challenge working families are facing when it comes to childcare.",
+    "I fail to see, again, how excluding the value of an employer-sponsored childcare subsidy in the calculation of an employee's regular rate will result in lower take-home pay as my colleagues have said on the other side.",
+    "The issue this legislation attempts to fix is that in many cases, employers are currently unable to offer childcare to employees due to the prohibitively high overtime cost.",
+    "This bill enhances the opportunity for the care that we need for childcare as well as dependent care.",
+    "Mr. Speaker, I know I spent my opening remarks discussing how the Empowering Employer Child and Elder Care Solutions Act helps empower working families.",
+    "In closing, I would like to highlight how access to affordable childcare benefits job creators and our Nation's economy.",
+    "Eldercare challenges can be just as disruptive and unpredictable as childcare needs, and yet they are often overlooked in policy decisions.",
+    "Mr. Speaker, I urge my colleagues to support this legislation, not only because it is good policy but because it reflects the lived reality of millions of Americans who are doing their very best every day to care for their families and contribute to our economy."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TIPPED EMPLOYEE PROTECTION ACT",
+   "title": "TIPPED EMPLOYEE PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH685.htm",
+   "sentences": [
+    "The Biden-Harris administration was perhaps the most striking example of government overreach and the harm it can do to working families' bottom lines.",
+    "The Tipped Employee Protection Act also ensures workers earn at least the minimum wage, and the bill respects States' authority to set higher wage levels.",
+    "This creates even more opportunities for tipped workers to earn more, often far above the minimum wage.",
+    "As part of the working families tax cuts, Republicans enacted landmark policies like no tax on tips and no tax on overtime, which put more money back into the working family's pockets.",
+    "The Fair Labor Standards Act sets the Federal minimum wage, as well as a separate minimum wage, for tipped workers.",
+    "If small restaurants were all required to pay the full Federal minimum wage to all tipped workers, as my Democrat colleagues suggest, on top of a complete elimination of the overall tip credit system, which has also been supported by my Democrat colleagues, there wouldn't be very many small restaurants remaining at the end of it all.",
+    "Mr. Speaker, I rise in support of H.R. 2312, the Tipped Employee Protection Act.",
+    "I am proud to support the Tipped Employee Protection Act.",
+    "I urge my colleagues to support the Tipped Employee Protection Act and help put more money back into American families' pockets."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6029-4.htm",
+   "sentences": [
+    "America is entering a golden age of energy dominance thanks to President Trump's policies and the Working Families Tax Cuts that Republicans passed earlier this year.",
+    "Mr. Chairman, as the Member who represents one-half of NEPA's original author's district, I rise in strong support of the SPEED Act.",
+    "For all those reasons, Mr. Chairman, I urge my colleagues to vote ``yes.'' Michigan will thank you."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAX CUTS FOR WORKING FAMILIES",
+   "title": "TAX CUTS FOR WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6096-7.htm",
+   "sentences": [
+    "Earlier this year, we passed the working families tax cut legislation, which is profamily, proworker, and pro-Michigan.",
+    "In addition, the legislation increases the child tax credit, strengthens paid family leave, and establishes savings accounts for newborns, allowing families to invest in their child's future from birth."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Bottom line, the Lower Health Care Premiums for All Americans Act empowers workers and job creators and makes healthcare more affordable for everyday Americans.",
+    "Mr. Speaker, I rise today in support of H.R. 6703."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESSIONAL AWARD PROGRAM REAUTHORIZATION ACT",
+   "title": "CONGRESSIONAL AWARD PROGRAM REAUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5856.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 284, the Congressional Award Program Reauthorization Act."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "title": "WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5857.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 222, the Whole Milk for Healthy Kids Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 50TH ANNIVERSARY OF THE INDIVIDUALS WITH DISABILITIES EDUCATION ACT",
+   "title": "50TH ANNIVERSARY OF THE INDIVIDUALS WITH DISABILITIES EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5066.htm",
+   "sentences": [
+    "As chairman of the Education and Workforce Committee, I am committed to expanding strong, personalized educational opportunities so every student can succeed."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING REPRESENTATIVE CAROLYN CHEEKS KILPATRICK",
+   "title": "MOMENT OF SILENCE HONORING REPRESENTATIVE CAROLYN CHEEKS KILPATRICK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5102-6.htm",
+   "sentences": [
+    "She showed firsthand how committed she was to serving our community, regardless of what community, and advocating for education and opportunity for working families."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING RESPONSIBLE OVERSIGHT TO ELIMINATE COMMUNIST TEACHINGS FOR OUR KIDS ACT",
+   "title": "PROMOTING RESPONSIBLE OVERSIGHT TO ELIMINATE COMMUNIST TEACHINGS FOR OUR KIDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5032-2.htm",
+   "sentences": [
+    "Malign foreign entities like the Chinese Communist Party are working to undermine American values not just on college campuses but across our K-12 schools, as well.",
+    "This legislation prohibits Federal funds from going to any school that also accepts funding from the Chinese Communist Party.",
+    "Its goal is indoctrination, teaching students that China is benevolent, while erasing events like the Tiananmen Square massacre and ignoring the ongoing Uyghur genocide and other human rights abuses.",
+    "Mr. Speaker, H.R. 1069, the PROTECT Our Kids Act, makes clear that schools receiving funding from the Chinese Communist Party will not receive Federal dollars.",
+    "Mr. Speaker, I rise in strong support of H.R. 1069.",
+    "That is why I proudly support H.R. 1069, the Promoting Responsible Oversight To Eliminate Communist Teachings for Our Kids, or the PROTECT Act, from Representative Kevin Hern and Representative Kevin Kiley.",
+    "I urge my colleagues to support H.R. 1069 to protect students, uphold American values, and safeguard our national security.",
+    "I guess I will leave it there at this point."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING THE LIES OF AUTHORITARIANS IN SCHOOL SYSTEMS ACT",
+   "title": "COMBATING THE LIES OF AUTHORITARIANS IN SCHOOL SYSTEMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5005-6.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 916, I call up the bill (H.R. 1005) to prohibit elementary and secondary schools from accepting funds from or entering into contracts with the Government of the People's Republic of China and the Chinese Communist Party, and for other purposes, and ask for its immediate consideration in the House.",
+    "In the years that followed, democracy and Western values flourished, but authoritarian regimes like the Chinese Communist Party have chosen repression over freedom, indoctrinating their citizens to embrace socialism and communism, ideals fundamentally opposed to American values of liberty, freedom, and self-determination.",
+    "These programs are funded and directed by the CCP's propaganda arm, targeting children for indoctrination.",
+    "Instead of free speech and open debate, we see censorship.",
+    "Instead of independent thought, we see indoctrination.",
+    "Too often, foreign funding comes with strings attached--maybe in every case--especially when those dollars come from adversaries like the Chinese Communist Party.",
+    "Students deserve strong education without indoctrination.",
+    "Students deserve better than indoctrination.",
+    "Mr. Speaker, I rise in strong support of H.R. 1005.",
+    "That is why I am proud to support H.R. 1005, the Combating the Lies of Authoritarians in School Systems, known as the CLASS Act, from Representative David Joyce and Representative Michael Rulli.",
+    "Mr. Speaker, I thank my colleagues, Representatives Joyce and Rulli, for their clear-eyed attention to this important and credible concern, and I urge my colleagues to support the legislation."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPARENCY IN REPORTING OF ADVERSARIAL CONTRIBUTIONS TO EDUCATION ACT",
+   "title": "TRANSPARENCY IN REPORTING OF ADVERSARIAL CONTRIBUTIONS TO EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5007.htm",
+   "sentences": [
+    "The Chinese Communist Party, for example, has spent untold sums across hundreds of schools to indoctrinate or influence thousands of children.",
+    "The Chinese Communist Party wants to control information and shape young minds.",
+    "The TRACE Act ensures transparency, strengthens parental rights, and protects students from foreign indoctrination.",
+    "We can take it, having our students know about the Chinese Communist Party and how they have taken Uyghur Muslims and committed genocide on them for years.",
+    "There are 500 Chinese Communist Party-affiliated Chinese nationals--I say ``affiliated'' because they are required when coming over to work in a new production center in my district that will be opened up very soon by a major corporation.",
+    "These 500 employees have signed a contractual agreement with the Chinese Communist Party to provide any information back to China that they come up with.",
+    "Mr. Speaker, I rise in strong support of H.R. 1049.",
+    "I urge my colleagues to support this legislation and defend the role of families in safeguarding our children's education.",
+    "Again, anytime we have legislation that makes a foundational principle, an actual fact, that we support parents having transparency about what is going on in their schools, for anything, it is important as a discussion and ultimately important to make sure in law that is put into motion in every way possible.",
+    "We will find that out, just without easily identifiable keywords such as ``Confucius,'' but what else will take place.",
+    "I urge my colleagues to support the TRACE Act and stand with families in defending the integrity of American education from foreign tyranny."
+   ]
+  },
+  {
+   "date": "2025-09-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVERING FOR HARDWORKING MICHIGANDERS",
+   "title": "DELIVERING FOR HARDWORKING MICHIGANDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-11/html/CREC-2025-09-11-pt1-PgH4254.htm",
+   "sentences": [
+    "I heard from a farmer in Horton who is relieved that it will be easier to pass his family farm to the next generation because this historic legislation doubles the death tax exemption."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GREAT LAKES MASS MARKING PROGRAM ACT OF 2025",
+   "title": "GREAT LAKES MASS MARKING PROGRAM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3543.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support the Great Lakes Mass Marking Program Act so that we can preserve our fisheries and be better stewards of this great national treasure."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3451-4.htm",
+   "sentences": [
+    "Mr. Speaker, the Biden administration's reckless spending caused rampant inflation, burdening workers, families, farmers, and small businesses, unless you believe the spin that continues tonight.",
+    "After passing the largest savings in America's history through the One Big Beautiful Bill Act earlier this month, the Rescissions Act builds on House Republicans' unprecedented success in reining in wasteful spending and the President's willingness to not spend everything that we give him.",
+    "The list of egregious foreign aid projects is endless.",
+    "The Rescissions Act would prioritize the needs of Americans over everyone else.",
+    "The Rescissions Act would prioritize the needs of American people instead of funding far-left foreign initiatives.",
+    "Mr. Speaker, I urge my colleagues to pass this bill, which represents a vital step in reining in wasteful spending and Big Government abuse of the taxpayer."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "As chair of the Education and Workforce Committee, I am concerned, though, as young people are going to colleges and universities and trying to lift themselves up, we find another challenge that goes on with Big Government and the control through student debt.",
+    "By curbing excessive student loan debt and holding colleges accountable, this legislation also puts an end to colleges hiking tuition and spending recklessly."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUT CONSUMERS BACK IN THE DRIVER'S SEAT",
+   "title": "PUT CONSUMERS BACK IN THE DRIVER'S SEAT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1317.htm",
+   "sentences": [
+    "While I am not against EVs or certainly against reducing emissions, we must not push misguided regulations that limit consumer choice, burden the American auto industry, and increase reliance on China.",
+    "That is why I have partnered with Representative Fulcher to introduce the Choice in Automobile Retail Sales, or CARS, Act, which will prevent similar EV mandates and safeguard Americans' freedom to choose the vehicle that is best for them."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "title": "DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1241.htm",
+   "sentences": [
+    "Foreign nations, including our biggest adversaries like the Chinese Communist Party, contribute billions of dollars to American universities.",
+    "The lack of transparency around foreign relationships should concern every American as we see stolen research, anti-Semitic propaganda, and academic censorship.",
+    "Last year, a congressional investigation of two research universities uncovered nearly $40 million in unreported research contracts with the Chinese Communist Party.",
+    "We should be loud and clear: No American university should be helping the hidden agendas of the Chinese Communist Party or other nations continue to threaten U.S. national security.",
+    "Take foreign money first, ask questions later is not the way to go.",
+    "Mr. Chair, I appreciate the concerns of my colleague, but my committee has worked very closely with the Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party to combat malign influence at our universities.",
+    "The annual thresholds in the DETERRENT Act are simple and align with other requirements in existing law such as in the CHIPS Act and the Presidential Memorandum on United States Government-Supported Research and Development National Security Policy.",
+    "Shockingly, this amendment includes no differences for America's biggest enemies, countries of concern and entities of concern.",
+    "In my Democratic colleagues' minds, it appears that gifts from Russia, China, and Iran are the exact same gifts as those from England.",
+    "The DETERRENT Act conforms section 117 with other existing regulations, which is why the bill's definitions of countries of concern come from existing law.",
+    "The four countries on the countries of concern list are rightfully in statute as unique threats to the United States.",
+    "China, Russia, North Korea, and Iran represent countries that are actively hostile to the U.S. and are serious security threats.",
+    "As President Trump has stated, the ICC has baselessly asserted jurisdiction over the United States--and our citizens agree-- and its allies like Israel and further abused its power by issuing frivolous arrest warrants.",
+    "I oppose this amendment that targets Israel and hurts American interests, and I reserve the balance of my time.",
+    "Mr. Chair, again, this amendment is designed, I believe, to target Israel at a time when it is desperately seeking to defend its citizens against terrorists.",
+    "It is important for our wealthiest institutions to be transparent with the public about this danger.",
+    "The ICC has baselessly asserted jurisdiction over the United States and its allies like Israel and further abused its power by issuing frivolous arrest warrants.",
+    "Mr. Chair, I oppose this amendment that targets Israel and hurts American interests.",
+    "I am not sure if my colleague was here during the debate to hear the actual statistics of the dollars that have been invested by malign actors, countries of concern, in this country that don't compare with any other that was in the list that my colleague read.",
+    "Again, this amendment on this bill, outside of the specifics of the bill, is designed to attack Israel for daring to defend itself from terrorists, which they did.",
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Mr. Thompson of Pennsylvania) having assumed the chair, Mr. Amodei, Acting Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 1048) to amend the Higher Education Act of 1965 to strengthen disclosure requirements relating to foreign gifts and contracts, to prohibit contracts between institutions of higher education and certain foreign entities and countries of concern, and for other purposes, had come to no resolution thereon. ____________________",
+    "Mr. Chair, I rise today in support of H.R. 1048.",
+    "Mr. Chair, I urge my colleagues to support the DETERRENT Act.",
+    "The American public deserves transparency, and I urge critics of the bill to ask why relationships, including those with our worst enemies and our adversaries, should continue to lie in the shadows.",
+    "Mr. Chair, I rise in opposition to the amendment.",
+    "I stand against this amendment.",
+    "I urge my colleagues to oppose this amendment and support the underlying bill.",
+    "Mr. Chairman, I rise in opposition to the amendment."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYERS SHOULD KNOW HOW THE GOVERNMENT IS SPENDING THEIR HARD-EARNED MONEY",
+   "title": "TAXPAYERS SHOULD KNOW HOW THE GOVERNMENT IS SPENDING THEIR HARD-EARNED MONEY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1081-2.htm",
+   "sentences": [
+    "Mr. Speaker, over the past few weeks, DOGE has been hard at work locating wasteful spending and improving the efficiency of the Federal Government, something that has been a priority for me during my time in Congress.",
+    "Over 4 years ago, my legislation, the Taxpayers Right-to-Know Act, passed the House and became law.",
+    "This bipartisan legislation required the Office of Management and Budget to publish an online inventory of each agency's Federal programs to streamline duplicative programs and prevent wasteful spending on ineffective programs."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "For too long, bureaucrats in Washington recklessly spent Americans' hard-earned tax dollars and drove up our national debt to nearly catastrophic levels, hurting all Americans, especially the most vulnerable.",
+    "Virtually nothing was done to control the cost of Federal student loan programs, meaning students will be able to take on even more in student loan debt and drive up the burden on all Americans, even those who never went to college or received a degree.",
+    "Something must change, and Americans are sick and tired of this wasteful spending.",
+    "As I begin to yield back, I will await the false report on Medicaid in Michigan."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 471, FIX OUR FORESTS ACT, AND PROVIDING FOR CONSIDERATION OF S. 5, LAKEN RILEY ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 471, FIX OUR FORESTS ACT, AND PROVIDING FOR CONSIDERATION OF S. 5, LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH268.htm",
+   "sentences": [
+    "Coming from the Great Lakes, the State of Michigan, I know the importance of clean air and clean water.",
+    "Mr. Speaker, I rise today in support of the rule and the underlying bill, the Fix Our Forests Act.",
+    "Mr. Speaker, I thank Chairman Westerman for his leadership on this critical legislation, and I urge support for the rule and the underlying bill."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to speak in support of H.R. 28, the Protection of Women and Girls in Sports Act of 2025, authored by Representative Greg Steube.",
+    "The Protection of Women and Girls in Sports Act of 2025 offers a new promise to America's women and girls.",
+    "Because you did nothing, that man walked into the women's locker room at your university and saw me undress down to full nudity."
+   ]
+  }
+ ]
+}

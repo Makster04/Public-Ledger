@@ -1,0 +1,540 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "kelly",
+ "name": "Mark Kelly",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 27,
+  "sentences": 285
+ },
+ "statements": [
+  {
+   "date": "2026-09-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Artificial Intelligence (Executive Session)",
+   "title": "Artificial Intelligence (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-22/html/CREC-2026-09-22-pt1-PgS4848.htm",
+   "sentences": [
+    "That is why I am introducing the Make AI Work for Americans Act, to make sure workers aren't left behind and that Big Tech pays their fair share.",
+    "The tech industry itself, communities worried about data centers, families who just want to be able to sleep at night--all of those groups would like regulation.",
+    "We weren't elected to just raise money or to trade stocks or to rubberstamp a President's agenda.",
+    "Instead, he wants a summit-- someday--but, in the meantime, we will revisit it after a 7-week recess."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WEAPONS SALES",
+   "title": "WEAPONS SALES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgS1774-2.htm",
+   "sentences": [
+    "Mr. President, later today, we are going to take a vote on the delivery of bulldozers and 1,000-pound bombs to Israel.",
+    "First, let me say that I cannot and will not abandon Israel.",
+    "Israel is one of our closest partners.",
+    "They have a right to defend themselves, and I will always support Israel's right to exist as a successful and prosperous nation.",
+    "As the Israeli people face the threat of missile and rocket attacks from Iran and its proxies, that support continues to be important today.",
+    "The United States and Israel are fighting a war against Iran without a clear strategy or goal.",
+    "I have been clear that I oppose this war in Iran and the reckless decisions being made by Prime Minister Netanyahu and President Trump.",
+    "Our partnership matters for Israel and for the United States.",
+    "Israel must maintain the capabilities and means to protect its people.",
+    "We have to work together toward a future where the Jewish State of Israel is secure and where there is a durable peace in the region.",
+    "I have been clear about that, and I will continue to be.",
+    "I am confident they can do that today and will be able to do so in the future with our partnership, and I will always support that."
+   ]
+  },
+  {
+   "date": "2026-01-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-28/html/CREC-2026-01-28-pt1-PgS301-9.htm",
+   "sentences": [
+    "I am the son of two police officers.",
+    "From a very young age, I learned that law enforcement should exist to serve and protect people.",
+    "It requires body cameras to be used, and it restricts the use of face masks.",
+    "It should be what all Americans expect from law enforcement, and it should be something that both Republicans and Democrats alike can support, because I believe that we are better than this.",
+    "That is why I will not vote for the Department of Homeland Security budget this week, because that Agency needs an overhaul from the top down and the bottom up.",
+    "And that is why I introduced the Stop Excessive Force in Immigration Act to rein in and stop this abuse of power."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgS186-2.htm",
+   "sentences": [
+    "Mr. President, 16 years after the Supreme Court's disastrous Citizens United decision, families across Arizona are paying more for groceries, rent, gas, and healthcare.",
+    "And they are wondering why the people they elect to represent them always seem to have time for the priorities of billionaires and big corporations but not enough time for them.",
+    "In 2010, the Supreme Court handed down a decision that put a ``for sale'' sign on our democracy.",
+    "The Citizens United ruling opened the door for corporations and billionaires to spend unlimited amounts of money to influence our elections, often without the public ever knowing who is behind it.",
+    "The loudest voices in Washington became billionaires and not everyday Americans.",
+    "It led to the rise of super PACs and dark money groups.",
+    "Last year, Republicans passed a bill to hand out massive tax breaks to billionaires and giant corporations, paid for by throwing 300,000 Arizonans off of their healthcare and slashing food assistance for families who need it.",
+    "He has stacked his Cabinet with billionaire friends who are completely out of touch with everyday, working Americans who are often living paycheck to paycheck.",
+    "Early in his term, he tapped an unqualified person, Elon Musk--the wealthiest man in the world--who spent more money than anybody else to get Donald Trump elected.",
+    "Sixteen years after Citizens United, this is not about relitigating a court case; it is about recognizing how deeply money and politics affect people's lives and about drawing a clear line between a political system that serves billionaires and one that serves people.",
+    "They are demanding a government that answers to voters, not to the billionaires and not to the special interests.",
+    "I have never taken a dime of corporate PAC money, and I never will, and I have introduced legislation to ban corporate PACs.",
+    "I have also led on legislation to ban Members of Congress from trading stocks.",
+    "One of the first things I did after being elected was move all of my assets and those of my wife Gabby Giffords to a qualified blind trust--the best standard identified by Senate ethics--and I think all Members of Congress need to do that.",
+    "These are not radical ideas; they are about restoring trust and making sure that this place works for people who don't have lobbyists, who don't have super PACs, who can't write a seven-figure check.",
+    "As long as big money and billionaires dominate our politics, it will continue to block progress on the issues that people care about most: lowering skyrocketing healthcare costs, making housing more affordable, increasing competition so families aren't left paying more every single month.",
+    "Do we accept a system where access is bought and outcomes are shaped by the wealthiest members in our society or do we set a higher bar and say that democracy should work for the people who vote, not the people who spend millions of dollars of their own money in elections?",
+    "I am proud to be joined by my colleagues today, as we mark 16 years since the Citizens United ruling, to make clear that the damage from that decision is real, and it is ongoing, and it is standing in the way of progress on the issues that people care most about.",
+    "I publish my schedule online so that everybody can see what I am working on, who I am meeting with, and how I am spending my time in this job, and I have introduced legislation to require all Senators to do the same exact thing."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026--Motion to Proceed--Resumed",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026--Motion to Proceed--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgS121-6.htm",
+   "sentences": [
+    "It is not the way things work in the United States of America, and I will not stand for it because our freedom of speech, the separation of powers, and due process are not just words on a page.",
+    "I have never backed down from a fight for our country, and I am not going to back down from this one."
+   ]
+  },
+  {
+   "date": "2026-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Anniversary of January 6 (Executive Calendar)",
+   "title": "Anniversary of January 6 (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-06/html/CREC-2026-01-06-pt1-PgS27.htm",
+   "sentences": [
+    "We had seen the large protests gathering outside the Capitol, and we knew the President was holding a rally and repeating his lies that, by the way, he still continues to repeat today--his lies that the election was stolen from him.",
+    "Protesters fighting with police inside.'' He used the word ``protesters.'' We would all come to later learn that maybe ``rioters'' or ``insurrectionists'' would have been more accurate.",
+    "Capitol Police made the call to evacuate, and we trusted them with our safety.",
+    "We didn't know that, at that very moment, Capitol Police officers were being pinned in doors, being beaten with flagpoles, and being attacked with bear spray.",
+    "These are the words of Inspector Thomas Lloyd of the U.S. Capitol Police, as reported in a new book by Mary Jalonick of the Associated Press.",
+    "This was an insurrection--an insurrection aimed at stopping the peaceful transfer of power, an insurrection aimed at overturning a free and fair election.",
+    "Five years ago on January 6, this did not happen spontaneously.",
+    "So when people minimize January 6 or try to rewrite what happened, I cannot accept that, and neither should any of us.",
+    "He has used the powers of his office to hand out pardons--pardons to let people off who attacked police officers.",
+    "It is insulting to me and to law enforcement officers across our Nation.",
+    "John Banuelos, who fired a gun during the insurrection, was later arrested for kidnapping in the Presiding Officer's State of Utah.",
+    "Edward Kelley is serving a prison term through 2061 for developing a plan to murder law enforcement officers while he was being investigated for his role on January 6.",
+    "So we have to start being honest about what happened and clear about who caused it, which I think is why we are here today--because this insurrection didn't happen far away.",
+    "Police officers weren't beaten in a foreign capital, and guns weren't drawn in some other senate somewhere else.",
+    "This failed because of patriotic police officers.",
+    "I am going to read you a quote here: The doors that lead into the Senate . . . are made of nothing but glass, mostly glass."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-07/html/CREC-2025-11-07-pt1-PgS7977.htm",
+   "sentences": [
+    "All of this--all of this--we have discussed over the last month is because Donald Trump and Republicans in the House and Senate wanted to give a big, giant tax cut to the wealthiest Americans--a $4 trillion giveaway."
+   ]
+  },
+  {
+   "date": "2025-10-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP ADMINISTRATION",
+   "title": "TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-21/html/CREC-2025-10-21-pt2-PgS7667-2.htm",
+   "sentences": [
+    "Those routes, by the way, Senator Merkley, are used generally to traffic cocaine and marijuana through the Caribbean, to Caribbean islands and on to Europe.",
+    "They do what we would call law enforcement.",
+    "It could be an F-18 or an F-35 or some other weapons system or folks that are operating an MQ-9 drone.",
+    "In Senator Merkley's State, in Portland, they are sending armed uniformed soldiers to do what we traditionally feel is police work-- intimidating the population, using tear gas against U.S. citizens for no reason.",
+    "In my 25 years in the Navy, I never once did anything that you would consider to be close to police work.",
+    "We have now experienced about 9\\1/2\\ months of this Presidency, and I am going to ask you a question about one thing in particular, and it is about the U.S. military and the leadership of the U.S. military.",
+    "And I will include the Coast Guard, too, because we like to count the Coast Guard, especially when they partnered with us on things that really mattered to the United States.",
+    "I was shocked the first time I flew with a guy who I will not share his last name."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026--Resumed",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-08/html/CREC-2025-10-08-pt1-PgS7004.htm",
+   "sentences": [
+    "It is about the price Americans pay for their healthcare--because if we don't work together to extend the Affordable Care Act's premium tax credits, millions of families will see their health insurance costs skyrocket overnight.",
+    "The premium tax credit has made it affordable for those of us who need health insurance but can't go out to the general market.",
+    "Now, Robin doesn't qualify for Medicaid, but she does work hard.",
+    "So for the past 8 years, she has relied on the Affordable Care Act for her health coverage.",
+    "She wrote to us: My monthly cardiac drug costs alone would be over $2,000 without my insurance from ACA.",
+    "I am not just listening, I am fighting for them and thousands more across my State who are in the same exact position."
+   ]
+  },
+  {
+   "date": "2025-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding (Executive Session)",
+   "title": "Government Funding (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-29/html/CREC-2025-09-29-pt1-PgS6816.htm",
+   "sentences": [
+    "We are watching the same pattern repeat itself again in Washington: partisan politics and dysfunction hurting hard-working families.",
+    "It is about costs going up for people who are already feeling squeezed by inflation and Trump's tariffs driving up the prices of everything from groceries to back-to-school supplies.",
+    "If these tax credits expire, working families in my State will see their monthly premiums spike when they go to sign up for a new plan in just a few weeks.",
+    "There is still time to extend the premium tax credits and protect families from higher costs while keeping the Federal Government open and serving Americans."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgS4381-6.htm",
+   "sentences": [
+    "And this is a good amendment and it will protect important elements of our public broadcast funding and it will preserve the vital funding for Ukraine, NATO, and other items that have bipartisan support that otherwise would be cut in the Republican rescissions package.",
+    "Now, let's be clear, Senate Democrats oppose this rescissions package.",
+    "I urge my colleagues on both sides of the aisle to vote yes."
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgS4358-6.htm",
+   "sentences": [
+    "These are areas where broadband is still limited and cell phone service can drop out for miles.",
+    "USAID and our international partners are often the first line of defense against pandemics, wars, and starvation.",
+    "This is not a serious plan for deficit reduction.",
+    "One way or another, we are going to end up having to pay for it, and tomorrow's price will be higher.",
+    "I urge my colleagues to think about what is really at stake here, what is at stake for families, and what is at stake for our leadership in the world, and please vote no, because this isn't how we move forward, this is how we fall behind."
+   ]
+  },
+  {
+   "date": "2025-06-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 1",
+   "title": "H.R. 1",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-28/html/CREC-2025-06-28-pt1-PgS3663-3.htm",
+   "sentences": [
+    "We are debating a budget that gives another round of tax cuts to billionaires and giant corporations on the backs of everyday Americans.",
+    "And it also adds trillions of dollars to our national debt.",
+    "If you are a billionaire, it says: We have got your back.",
+    "I have been to small towns like Clarkdale and Sierra Vista--talking to Arizonans face-to- face, listening to their stories, hearing what it would mean to them if Medicaid, food assistance, and other essential services got cut for them and their families.",
+    "And he told me that his patients--many of whom rely on Medicaid for dialysis--are now considering stopping treatment altogether because they might not be able to afford it.",
+    "It's a choice of either massive debt or death.",
+    "Her friend relies on Medicaid to help her deal with her chronic pain.",
+    "Without it--meaning Medicaid--she said that her friend might end her life because the pain is unbearable.",
+    "We can afford to care for everyone--if we change our priorities from giving tax cuts to billionaires to taking care of Americans who are in pain every day.",
+    "In Sierra Vista, I hosted a Medicaid townhall, and that is where I met this woman named Tara.",
+    "She told us how she was once a single mother and how programs like Medicaid and SNAP helped her raise her kid and build a stable life.",
+    "She doesn't rely on these programs anymore, but here is what she said: I'm deeply concerned about the proposed cuts to Medicaid, SNAP, and related programs.",
+    "These programs are funded through the United States Department of Agriculture, and they rely on data from SNAP and Medicaid to identify the children who need them the most.",
+    "Cheryl from Tucson, who is a 59-year-old widow, said: I receive Disabled Widow's Benefits, Medicaid, Medicare, and SNAP.",
+    "I used to have about $40 left over to buy some extra groceries for the unsheltered in my area.",
+    "She wrote: Many of the people I work with rely on Medicaid because they can only work part-time or because their employers don't offer benefits.",
+    "The rich do not need an extension on tax cuts at the expense of low-income and middle-class families.",
+    "And another, when asked whether cutting Medicaid would cost lives, said: Well, we are all going to die anyway.",
+    "Or is it a bunch of billionaires who have already made it and who don't need another handout?",
+    "Without this help, I don't know what I will do.",
+    "One of the most sacred promises we make to the men and women who serve is that we will take care of them when they return home.",
+    "If my colleagues don't believe me, I urge them to go read some of the emails and listen to some of the phone calls that they are getting."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALEX PADILLA",
+   "title": "ALEX PADILLA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgS3371-2.htm",
+   "sentences": [
+    "Senator Schatz mentioned that, other than the Presiding Officer, I don't think there are any other Republicans showing outrage for one of their colleagues on the other side of the aisle being violently handled by law enforcement."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+   "sentences": [
+    "So when they hear that Congress is once again debating another tax cut--but not for them, for billionaires and giant corporations--they wonder: Who in Washington really cares about me?",
+    "This is a handout to a tiny fraction of some of the wealthiest people in the world, people who already have more money than they could spend in a lifetime.",
+    "If you raise taxes on the billionaires and multimillionaires, which is what we should be doing, they would still be billionaires and multimillionaires.",
+    "But, once again, Republicans want to instead cut their taxes, and working families are going to be the ones left holding the bill because this debate is not about numbers on a spreadsheet.",
+    "It is about which kid doesn't get a meal at school, which family loses their home to cover medical care for their kid or their parent, which patient skips the medical care they need because Congress decided that billionaires needed a bigger tax break.",
+    "To give cuts to rich people, to billionaires, while all of us suffer?",
+    "She said: I am a hardworking Arizonan who is watching my family and community struggle while the wealthiest Americans get even richer.",
+    "I have family members who are disabled and rely on government assistance--programs like SNAP and Social Security Disability Insurance.",
+    "And yet, their benefits are being cut while billionaires and massive corporations get even more tax breaks.",
+    "We need tax policies that are fair, that hold the wealthiest accountable, and that protect the programs that keep our most vulnerable from being pushed even further into poverty.",
+    "Now, Nicholas is a medical student from Arizona, and he wrote to me about what these cuts would mean for him and his partner, who are both about to graduate with hundreds of thousands of dollars in student debt.",
+    "Nicholas said: Congress must pass a budget that benefits Americans instead of slashing funds to essential life-saving programs like Medicaid to finance tax breaks for the wealthy.",
+    "He said: I would not have been able to afford healthcare during medical school without Medicaid.",
+    "Medicaid and SNAP are the only way that she can access the care, medications, and the food she needs to stay alive.",
+    "Lexxie said, in her letter: Removing programs such as Medicaid and SNAP would be terribly detrimental to people like myself, with disabilities.",
+    "These are the voices we should be listening to, not billionaire donors, not corporate lobbyists.",
+    "These are the people we should be listening to, not an unelected billionaire working for another billionaire, trying to get billionaires more tax breaks.",
+    "In 2017, President Trump signed into law the so-called Tax Cuts and Jobs Act.",
+    "It showered benefits on the top 1 percent and promised big things.",
+    "The rich got richer; everybody else got screwed.",
+    "According to the Committee for a Responsible Federal Budget, extending these tax cuts, like they are planning to do, would add over $4.5 trillion to the debt in the next 10 years, and that would add up to about, over the next 30 years, $37 trillion.",
+    "That means doubling our current national debt--doubling it--just to give a tax cut to rich people.",
+    "And the Congressional Budget Office, which is the gold standard for this stuff, says that would push our national debt to 214 percent of GDP by 2054--214 percent.",
+    "Do we want to be a country that hands billionaires another break while a kid goes without lunch in school, where a retired veteran living on Social Security is told there is no money left for him, but there is plenty for the wealthiest Americans?",
+    "That is the choice in front of us because this budget doesn't just fail working families; it punishes them.",
+    "So let's stop wrecking the finances of working families just to hand out more tax breaks for billionaires.",
+    "Let's build an economy that actually works for the people who make the economy run instead of imposing tariffs that are actually just tax increases on everyday goods families depend on.",
+    "Let's bring back manufacturing and support union jobs.",
+    "And just for a second, just because Signal is encrypted does not make it secure.",
+    "Mr. President, this budget Republicans wrote would hand out massive tax cuts to the richest Americans and biggest corporations, paid for by blowing up our national debt and slashing programs that help working families, like cutting healthcare.",
+    "Working families are struggling to make ends meet and get ahead, and the American people don't believe that any multimillionaire or billionaire or big corporation needs another tax handout.",
+    "So, before this budget to give the wealthiest more tax breaks moves forward, I think the American people deserve a debate about who in this country is so rich that they don't need this massive tax cut.",
+    "She called my office to speak out against these budget cuts, and I am going to quote her directly.",
+    "They sent me here to fight for them and to stand up for them, and I am going to keep doing that.",
+    "And it could burn sources entirely, meaning that we won't get valuable information anymore like the location of targets."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Administration (Executive Calendar)",
+   "title": "Trump Administration (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt2-PgS2034-2.htm",
+   "sentences": [
+    "Eventually, my mother decided that she wanted to become a police officer like my dad, but this was New Jersey in the 1970s, and for a woman to become a cop, it was really, really hard.",
+    "To help my mom out in passing this test, my dad built a replica of this wall made out of a door between two pine trees in our backyard.",
+    "My mom became one of the first female police officers in Northern New Jersey.",
+    "And by the way, it was the union that protected her rights after being injured on the job.",
+    "Both of my parents having good-paying union jobs, it meant more money coming in the door, more money for our family, more money to play sports.",
+    "Trump's tariffs are going to jack up prices on nearly everything that families rely on: Groceries; rent; cars; housing.",
+    "If they are successful, their plan to gut Medicaid in order to pay for a giant tax cut for rich people, it is going to be even tougher for hard-working Americans, hard-working New Jerseyans and Arizonans to get ahead and achieve their American dream."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Medicaid (Executive Session)",
+   "title": "Medicaid (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgS1898.htm",
+   "sentences": [
+    "We focused on Medicaid and brought together healthcare providers and families who rely on it to talk about what Republicans are planning to do and what that would mean for them.",
+    "Republicans are working on a plan that could absolutely gut healthcare in our country by slashing Medicaid.",
+    "The way Republicans talk about it is about dollars saved and pay-fors for those tax cuts for the wealthiest.",
+    "When it is framed as a line item instead of what it actually is, which is healthcare that tens of millions of Americans rely on to survive, it is easy to lose track of who will bear the consequences of these decisions: hard-working families, kids, and seniors in Arizona and across the entire country.",
+    "My State has one of the largest Medicaid populations.",
+    "The Arizona Health Care Cost Containment System--or AHCCCS, as Arizona's Medicaid program is called--has been expanded under Republican Governors to be the backbone of healthcare for more than 2 million people.",
+    "Quianna is the mother of a 10-year-old girl that she and her husband adopted from foster care, and she has special needs, and she has a rare form of diabetes.",
+    "Her daughter was diagnosed and treated, thanks to Medicaid.",
+    "She finished her remarks at this townhall by comparing Medicaid to a house that Republicans are planning to burn down.",
+    "And Medicaid has allowed her to get the frequent screenings that her children need.",
+    "She shared that both her children meet the burden of placing them in a long-term care facility, but thanks to Arizona's Medicaid paid caregiver program, she can care for them at home.",
+    "Medicaid is a literal lifeline for her kids.",
+    "Tiffany shared that without Medicaid, she would be forced to limit care and evaluate whether she could continue to care for her at home--or would she have to place her daughter in a specialized facility for her severe needs?",
+    "He relies on Medicaid to afford his MRIs and his infusion treatments.",
+    "When he spoke at the townhall, he talked about the potential costs of his healthcare if he lost his Medicaid coverage.",
+    "To give more tax giveaways to rich people, to billionaires.",
+    "Amalia is a 5-year-old kid who uses Medicaid to receive care for a rare genetic disorder.",
+    "Disastrous, devastating, burning down a house with kids inside--that is what Arizonans had to say about these plans to gut Medicaid.",
+    "So that instead of pay-fors or line items, maybe you will think about Quianna and her kid or Chad who has MS or the countless other folks whose lives will be flipped upside down if they lost Medicaid.",
+    "Now, I don't think I have enough time here to talk about all of them today, but I am going to share a few.",
+    "So to my colleagues, I urge you: Stop trying to burn down the house."
+   ]
+  },
+  {
+   "date": "2025-03-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ukraine (Executive Calendar)",
+   "title": "Ukraine (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-12/html/CREC-2025-03-12-pt1-PgS1689-2.htm",
+   "sentences": [
+    "Mr. President, I returned Sunday night from 2 days in Ukraine.",
+    "He gave away two of Ukraine's primary goals: regaining their territory and becoming a member of NATO.",
+    "And President Trump also cut off security and intelligence to Ukraine, leaving them blind and at risk of losing ground.",
+    "So I made a decision to travel to Ukraine to show my support for the Ukrainian people and to bring back information--what I would learn on the ground--about how these policy changes were going to impact the war.",
+    "What I saw showed me just why we cannot give up on the Ukrainian people and why it is important to our security to keep Putin from winning.",
+    "But any agreement has to protect Ukraine's security, and it can't be a giveaway to Putin.",
+    "This war started with what Putin thought would be a 3-day operation to take Kyiv and then control all of Ukraine.",
+    "The Ukrainian people, with security and intelligence assistance from us and from our allies, have been fighting for every inch of their homeland.",
+    "I met with Ukrainian pilots, one of whom I had met with in Tucson when he was learning to fly the F-16.",
+    "Ukraine's underdog status against the heavyweight Russia has bred a scrappy innovation that the United States should envy and that we can learn from.",
+    "I heard it in their words when they said that they would fight--get this, Mr. President--they said they would fight with rocks and sticks if they had to, to defend their country against Putin.",
+    "We should learn from that because supporting Ukraine is not just about defending freedom.",
+    "Not only would victory make Putin stronger to strike further into Europe, but if the United States abandons Ukraine, what message does that send to our friends across the globe?",
+    "So I came back this week with the message that we need to fix this mess and get back to supporting Ukraine.",
+    "The announcement from the American and Ukrainian negotiations in Saudi Arabia yesterday, led by Secretary Rubio and the National Security Advisor Tim Walz, was a step forward.",
+    "Once again, we are supporting Ukraine with military security assistance and with intelligence aid, and we are working toward a resolution to this war that guarantees Ukraine's security.",
+    "And Ukraine accepted a proposal for an immediate 30-day cease-fire.",
+    "Now, this is going to come down to whether Putin will accept these terms and commit to a real negotiation.",
+    "Putin started this war by breaking a cease-fire.",
+    "We didn't get here by being bullies like Vladimir Putin.",
+    "That is what I will hold this President to, and I urge my colleagues--Republicans and Democrats alike--to do the same."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PRO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgS1477-2.htm",
+   "sentences": [
+    "And these layoffs--these layoffs are going to mean longer wait times for appointments, fewer options for mental health care, fewer options for pain management, more delays in processing benefits."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgS1367-3.htm",
+   "sentences": [
+    "We have to produce enough reliable energy to make utility bills affordable for families and to bring online the advanced manufacturing and data centers that are powering our economy and will power our economy into the future.",
+    "We are finally bringing the manufacturing of solar panels and batteries and wind turbines back to America.",
+    "One of his first actions as President--one of the first things he did--was to block approvals of new wind projects on Federal land and then freeze loans and freeze grants for clean energy projects.",
+    "There is no good reason to block wind projects, to block solar projects that, by the way, are already underway to bring more energy to American homes and businesses.",
+    "They would love to see President Trump drive clean energy manufacturers that are in America out of business.",
+    "They will be happy to do that, and we will pay the price."
+   ]
+  },
+  {
+   "date": "2025-02-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BUDGET RECONCILIATION",
+   "title": "BUDGET RECONCILIATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-19/html/CREC-2025-02-19-pt1-PgS1053-5.htm",
+   "sentences": [
+    "It is wrapped up in all this budget bureaucracy stuff, but here is the crux of it: making health coverage and food more expensive for working families--that is what is going to happen.",
+    "Slashing essential government functions and services that keep Americans safe, cutting investments in high-speed internet and energy manufacturing that creates jobs, and at the same time, exploding our national debt--all of this is so that the richest people and corporations in America can pay less taxes.",
+    "The richest of the rich billionaires, Elon Musk, is gutting the everyday programs that he doesn't agree with, and he is keeping the ones that cut checks to his businesses through big government contracts--all of this to pay for the tax cuts for him, for his companies, and for his billionaire friends.",
+    "He made the corporate tax rate so low that it is now lower than the rate for a married couple making about $100,000 a year.",
+    "This is a quote: As this debate unfolds, policymakers and the public should understand that the 2017 Trump tax law was skewed to the rich.",
+    "I go on: Households with incomes in the top 1 percent will receive an average tax cut of more than $60,000 in 2025, compared to an average tax cut of less than $500 for households in the bottom 60 percent, according to the Tax Policy Center.",
+    "As a share of after-tax income, tax cuts at the top--for both households in the top 1 percent and the top 5 percent-- are more than triple-- Three times--three times-- the total value of the tax cuts received for people with incomes in the bottom 60 percent.",
+    "Trump administration officials claimed their centerpiece corporate tax rate cut would ``very conservatively'' lead to a $4,000 boost in household income.",
+    "[However,] new research shows that workers who earned less than $114,000 on average in 2016 saw ``no change in earnings'' from the corporate tax rate cut, while top executive salaries increased sharply.",
+    "What this means, Mr. President, is that the rich got richer, and everybody else, they got left behind.",
+    "It also made it even tougher for hard-working families to get ahead.",
+    "Here is what an analyst from the same center, the Center on Budget and Policy Priorities, testified to Congress about his new plan: Permanently extending the tax cuts would benefit households in the top 1 percent more than twice as much as those in the bottom 60 percent as a share of their incomes--providing a roughly $41,000 annual tax cut for the top 1 percent compared to $500 for households in the bottom 60 percent, on average-- at a cost of around $300 billion per year.",
+    "Again, if you are in the top 1 percent, you are going to get $4,000, and all those people in the bottom 60 percent, what are they going to get? 500 bucks.",
+    "Extend tax cuts for rich people and create new loopholes, and do it all by going after the kind of things that create great-paying jobs, that help working families, and that move our economy into the future.",
+    "And in this program, she was going to learn how to be a microchip, semiconductor manufacturing technician.",
+    "It was a 2-week program, and, at the end of it, she had a guarantee that she would get an interview with a semiconductor manufacturer.",
+    "Now, Mr. President, that is a story that is being repeated over and over again in my State, in the semiconductor industry, and I am sure in West Virginia, where people are benefiting from these opportunities that we have created, not just in one industry but in multiple industries.",
+    "And they have set their sights on the very incentives that are making this happen, especially when it comes to clean energy manufacturing.",
+    "In the article it says: [Governor Stitt] has spearheaded a clean energy manufacturing boom in his State that has complimented Oklahoma's large oil and gas industry and a growing wind power sector that provides 40 percent of its electricity.",
+    "But some of Trump's moves could undermine that progress, including his halt on leasing, permitting and approvals of wind projects, along with his effort to claw back funds from the Inflation Reduction Act and the bipartisan infrastructure [bill].",
+    "[Governor] Stitt also said he doesn't-- He does not-- support Trump's call to repeal IRA clean energy tax credits that have drawn investments to GOP-led States like Oklahoma since companies have based their investments on these incentives.",
+    "So here you have a Republican Governor in the State of Oklahoma who is worried about clean energy jobs in his State being slashed--all of this so that President Trump can pay for tax cuts for rich people.",
+    "Now, President Donald Trump's broad funding freeze covering some of the Biden administration's clean energy spending has thrown tribal projects into limbo.",
+    "But it also kills jobs for hard-working Americans in the industries of the future, like clean energy.",
+    "I will never forget about speaking to one woman whom I met on a Zoom call about jobs and about opportunity."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security (Executive Calendar)",
+   "title": "Border Security (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS881.htm",
+   "sentences": [
+    "So this isn't just some bureaucratic decision that we are about to make; this is about whether the next HHS Secretary will protect public health or undermine it with dangerous misinformation.",
+    "In America Samoa, he spread misinformation about vaccines during a measles outbreak that killed 83 people.",
+    "It is not science; it is misinformation."
+   ]
+  },
+  {
+   "date": "2025-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Tulsi Gabbard (Executive Calendar)",
+   "title": "Nomination of Tulsi Gabbard (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgS847-2.htm",
+   "sentences": [
+    "Now, let's start here with her record on Edward Snowden.",
+    "Edward Snowden was a government contractor who stole and then leaked highly classified information from the National Security Agency in 2013.",
+    "Snowden could have used whistleblower protections to securely and legally share concerns that he had about the legality of certain surveillance programs, but he didn't do that.",
+    "After the Department of Justice revealed charges against him for committing espionage, Snowden fled to Russia, where he was welcomed with open arms.",
+    "Edward Snowden exposed our government's secrets to the world, including to our adversaries.",
+    "She introduced legislation calling on the Federal Government to drop all charges against Snowden and, unsurprisingly, it failed to gain support.",
+    "And she publicly lobbied President Trump to pardon Snowden during his first term.",
+    "And on October 6 of 2020, Gabbard called Snowden a brave whistleblower.",
+    "Two weeks later, Vladimir Putin gave Snowden permanent residency in Russia.",
+    "Vice Chairman Warner's first question was whether she thinks Edward Snowden is brave.",
+    "She said that Edward Snowden broke the law, but that he released information that led to reforms.",
+    "Then Senator Young asked if she agreed with the House Intelligence Committee report that Snowden caused damage to national security.",
+    "But the real moment of truth came when Senator Lankford of Oklahoma asked her what he himself has publicly said was a softball question, and the question was: Is Edward Snowden a traitor?",
+    "If you believe Edward Snowden broke the law and the law he broke is the Espionage Act, it is pretty clear that is exactly what he is.",
+    "Now, Colonel Gabbard came into our confirmation hearing with a plan to give the same nonanswer over and over about Edward Snowden, and she was counting on that being enough to skate by.",
+    "Colonel Gabbard would be leading the men and women of our intelligence Agencies whose work and lives Edward Snowden put at risk.",
+    "I ask my Republican colleagues: How can we entrust this responsibility with someone who wanted to free Edward Snowden and still, to this day, cannot say whether or not he is a traitor?",
+    "And another--my fear was a repeat of the deployment of another half million soldiers like we saw in Iraq towards what was the Obama administration's goals, which was regime change in Syria.",
+    "She lifted up Edward Snowden as a hero and is unwilling to call him a traitor."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)",
+   "title": "Nomination of Russell Vought (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgS635-2.htm",
+   "sentences": [
+    "Are there places where we need to make Federal spending more efficient and effective?",
+    "Elon Musk is himself a billionaire and an unelected, unaccountable bureaucrat who is illegally shutting down Federal Agencies that make Americans safer and more prosperous.",
+    "He held up critical funds to support Ukraine.",
+    "This was in 2019, before Russia invaded Ukraine.",
+    "He wants to cut housing support by 43 percent, including completely eliminating the largest source of housing assistance for Arizonans, and that is going to put working families on the streets.",
+    "He wants to end the expansion of Medicaid that has extended coverage to 600,000 Arizonans through a program called AHCCCS.",
+    "We won't be able to have a conversation about how to make housing assistance more effective for working families.",
+    "This is about billionaires paving the way to get another tax cut for themselves and for their corporations and to do so on the backs of you, hard-working Americans.",
+    "The plan is to double down on tax breaks for the rich while, behind closed doors, unelected and unaccountable bureaucrats like Russell Vought and Elon Musk, they gut programs that help working families.",
+    "Mr. President, I will bet a lot of folks watching tonight cannot believe that we are here, talking about the Office of Management and Budget.",
+    "And I will sit down with anybody to make that happen."
+   ]
+  },
+  {
+   "date": "2025-01-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP EXECUTIVE ORDERS",
+   "title": "TRUMP EXECUTIVE ORDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-29/html/CREC-2025-01-29-pt1-PgS488-4.htm",
+   "sentences": [
+    "Mr. President, Arizona is a couple thousand miles away from here, and as folks know, we are a bit unique in the sense that we do not observe daylight savings time.",
+    "When I spoke to Governor Hobbs, early in the morning, the State's portals for Medicaid and Head Start were both down.",
+    "Just yesterday, Phoenix Mayor Kate Gallego joined the Maricopa Association of Governments to conduct the annual HUD Point-in-Time Count, which is funded by Continuum of Care dollars.",
+    "This data is vital to Arizona's work to address homelessness, and a Federal freeze keeps homeless assistance grants from helping Arizonans.",
+    "In Mohave County, officials were concerned that Federal support through the Community Development Block Grant Program, which funds housing and economic opportunities for low-income communities, would no longer be available.",
+    "Organizations were looking at having to shut down programs that treat miners--coal miners--with black lung and suicide prevention programs and substance abuse services.",
+    "Not even our State and local law enforcement was spared from this chaos.",
+    "This is a critical program, by the way, that funds our law enforcement's frontline efforts with the Federal Government to combat the fentanyl crisis and battle the Mexican drug cartels.",
+    "This program that the administration tried to freeze helps fund the positions of over 700 law enforcement officers who are in the fight against drugs in Arizona.",
+    "Julie, in Sun City, works at a seniors center and has seen firsthand how Federal funding supports Arizona's elderly, helping them afford food and access to mental health services.",
+    "Kathy in Tucson, a mother of three daughters with disabilities, woke up to frantic messages from other parents who rely on Medicaid-funded support programs for their children.",
+    "In Apache Junction, Janice's husband is in a memory care unit, and Medicaid covers most of his room and board.",
+    "If Medicaid was disrupted, she will be forced to choose between food and lifesaving medication.",
+    "That means it doesn't only affect them--they are out of a job-- but there are 500 Arizona families who suddenly don't have childcare or the additional services that Head Start provides to parents and families.",
+    "It helps working parents with childcare so they can earn a paycheck."
+   ]
+  },
+  {
+   "date": "2025-01-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLOTURE MOTION",
+   "title": "CLOTURE MOTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-28/html/CREC-2025-01-28-pt1-PgS410.htm",
+   "sentences": [
+    "Mr. President, I stand before you today as the son of two police officers.",
+    "My mom was actually the first woman to become a police officer in our hometown of West Orange, NJ.",
+    "Now, that was a risk that she took for our community as a police officer.",
+    "Our New Jersey community and her union, they had her back.",
+    "Yet that is exactly what did happen when the President, Donald Trump, pardoned hundreds of criminals who violently assaulted Capitol Police officers and DC Police officers on January 6.",
+    "It wasn't to lower the price of gas or groceries or housing; it was to let violent criminals off the hook for storming this building and attacking the police, leaving many of them bleeding and bruised or worse--in some cases much, much worse.",
+    "These pardons are an insult to every man and woman, like my parents, who served and served our country in law enforcement."
+   ]
+  },
+  {
+   "date": "2025-01-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Peter Hegseth (Executive Session)",
+   "title": "Nomination of Peter Hegseth (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-24/html/CREC-2025-01-24-pt1-PgS356.htm",
+   "sentences": [
+    "In 2009, after just about 2 years leading a group called Vets for Freedom, it has been reported that forensic accountants found that the organization had about $1,000 in the bank, more than $400,000 in unpaid bills, and $75,000 in credit card debt.",
+    "In December 2014, at the CVA Christmas party at the Grand Hyatt in this city, Washington, DC, Hegseth was ``noticeably intoxicated and had to be carried up to his room.'' Another time, a CVA staffer stated that Hegseth ``passed out'' in the back of a party bus.",
+    "The FBI background check, which the entire committee was never given access to, was clearly inadequate and had to be updated multiple times.",
+    "You have to be able to move seamlessly between advising the President on matters of national security, sitting with foreign leaders to hammer out agreements, and discussing complex weapons systems with your staff.",
+    "The same has likely happened when North Korea has tested ballistic missiles that could threaten Guam or our allies."
+   ]
+  }
+ ]
+}

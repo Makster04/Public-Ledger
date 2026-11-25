@@ -1,0 +1,67 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "lieu",
+ "name": "Ted Lieu",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 10
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TYLER'S LAW",
+   "title": "TYLER'S LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5673.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2004, Tyler's Law.",
+    "Mr. Speaker, I urge my colleagues to support this bill so we can honor Tyler and prevent fentanyl deaths in the future."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELEASE THE EPSTEIN FILES",
+   "title": "RELEASE THE EPSTEIN FILES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3625-5.htm",
+   "sentences": [
+    "Mr. Speaker, in February of this year, Attorney General Pam Bondi went on national TV and told the American people that Jeffrey Epstein's client list was ``sitting on my desk right now.'' Why won't she release that client list?",
+    "Shortly after my speech, Congress is going to shut down until September because House Republicans want to avoid voting on releasing the Epstein files.",
+    "The Wall Street Journal just confirmed that in May of this year the Department of Justice told Donald Trump to his face that he is in the unreleased Epstein files.",
+    "Release the Epstein files. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA IN DECLINE UNDER REPUBLICAN ECONOMIC POLICIES",
+   "title": "AMERICA IN DECLINE UNDER REPUBLICAN ECONOMIC POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2997.htm",
+   "sentences": [
+    "They want to pass the big, ugly bill that is going to cut off healthcare for over 16 million Americans, all in service of massive tax breaks to billionaires.",
+    "Trump and Republicans should be working for the American people, not for billionaires. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO CONDITIONS ON AID",
+   "title": "NO CONDITIONS ON AID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH174-6.htm",
+   "sentences": [
+    "I am asking Republican Members of Congress to please stop using the pain and suffering of disaster victims for their own political purposes."
+   ]
+  }
+ ]
+}

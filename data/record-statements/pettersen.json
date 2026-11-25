@@ -1,0 +1,85 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "pettersen",
+ "name": "Brittany Pettersen",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 19
+ },
+ "statements": [
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HOUSING LEGISLATION HELD HOSTAGE",
+   "title": "AFFORDABLE HOUSING LEGISLATION HELD HOSTAGE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4216-2.htm",
+   "sentences": [
+    "Housing affordability is the number one issue that I hear from constituents.",
+    "This bill does not address all of the problems that we are facing, but I am so proud that we were able to come together to boost the housing supply, remove barriers to construction, and expand access to homes families can afford."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGHLIGHTING WOMEN'S HEALTH",
+   "title": "HIGHLIGHTING WOMEN'S HEALTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3447.htm",
+   "sentences": [
+    "Our access to healthcare is being decimated with cuts to Medicaid and the ACA, while women are also dealing with the ongoing consequences of the Dobbs decision across this country and, somehow, it might even get worse.",
+    "Republicans are working on a backend national abortion ban by trying to eliminate access to mifepristone, an abortion pill that is utilized for 63 percent of abortions in the United States.",
+    "Despite their lies, we know that mifepristone is a safe, effective medication, but access to this lifesaving drug now hangs in the balance before the Supreme Court.",
+    "Any restrictions of this medication for miscarriages and abortions will be another devastating attack on our ability to make our own decisions about our health, our bodies, and our futures."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "An 1115 waiver to Medicaid is something that we are not going to be able to go home and talk to constituents about what we were able to do for them.",
+    "Mr. Chair, 83 percent of people who are treated in the rural parts of Colorado and across the Nation are on Medicaid.",
+    "What I saw in my mom's fight when she was overdosing at a high rate when fentanyl started coming into the supply chain, and she was begging for help with nowhere to go, was that Medicaid did not cover substance use disorder treatment.",
+    "Addressing the Medicaid barrier is so important.",
+    "Mr. Chairman, 80 to 90 percent of people who are struggling with substance use disorder qualify for Medicaid."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LAR",
+   "title": "PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1473-2.htm",
+   "sentences": [
+    "The Speaker turned his back on moms and dads in Congress and working families across the country.",
+    "Mr. Speaker, I rise in opposition to the rule that will kill our bipartisan effort to allow parents who have welcomed a new child to vote remotely.",
+    "We are not going to back down.",
+    "We stand with the people from across the country who have reached out, inspired to see somebody like them who is struggling to manage having a new baby, balancing work, and having a work environment that does not support their needs.",
+    "We won't stop until we finally get this done."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LAR",
+   "title": "PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1389-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong opposition to this rule which restricts moms and dads from doing their jobs after welcoming a new child.",
+    "We are asking you to continue to stand with us because no mom or dad should be in the position that I was in and so many parents have found themselves in."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISASTROUS REPUBLICAN BUDGET",
+   "title": "DISASTROUS REPUBLICAN BUDGET",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH827-6.htm",
+   "sentences": [
+    "It also slashes SNAP, taking food off the plates for seniors, veterans, and kids all to fund tax breaks for billionaires like Elon Musk while increasing our national deficit by trillions of dollars."
+   ]
+  }
+ ]
+}

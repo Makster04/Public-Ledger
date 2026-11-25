@@ -1,0 +1,210 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "carson",
+ "name": "André Carson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 17,
+  "sentences": 45
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE ASAL SAYAS NATIONAL STRATEGY ON YOUNG ADULT CANCERS ACT",
+   "title": "INTRODUCTION OF THE ASAL SAYAS NATIONAL STRATEGY ON YOUNG ADULT CANCERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgE1206-3.htm",
+   "sentences": [
+    "I urge my colleagues on both sides of the aisle to join me in advancing the Asal Sayas National Strategy on Young Adult Cancers Act and reaffirming our commitment to ensuring that no generation is overlooked in our Nation's fight against cancer. ____________________"
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "That matters because many service-related conditions affect veterans over many years and require sustained, longitudinal study, VA researchers have used that experience to expand lung cancer screening to hundreds of thousands of veterans, advance precision medicine, and develop prosthetic technologies that help veterans regain mobility and independence.",
+    "VA researchers are using artificial intelligence and advanced imaging to detect disease earlier, testing new treatments for spinal cord injuries and bone regeneration, and advancing robotic and sensor-enabled prosthetics that help veterans with limb loss regain mobility, independence, and dignity.",
+    "Mr. Chair, I rise in strong support of my amendment No. 9 to H.R. 8469, the Fiscal Year 2027 Military Construction, Veterans Affairs, and Related Agencies Appropriations Act.",
+    "I urge my colleagues to support this amendment and help uphold our commitment to America's veterans."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "title": "AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2856.htm",
+   "sentences": [
+    "Madam Speaker, I urge all of my colleagues to join us in passing this remarkable bill that we have all worked so hard to improve and to bring to a vote."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "title": "ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2248.htm",
+   "sentences": [
+    "I urge the Speaker to refer this bill to our Committee for consideration and markup."
+   ]
+  },
+  {
+   "date": "2026-01-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REINTRODUCTION OF THE JUSTICE FOR SHIREEN ACT",
+   "title": "REINTRODUCTION OF THE JUSTICE FOR SHIREEN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-30/html/CREC-2026-01-30-pt1-PgE85-2.htm",
+   "sentences": [
+    "She was killed while wearing a clearly marked press vest on assignment, reporting on a military raid that took place in the Israeli occupied city of Jenin.",
+    "An Israeli investigation was concluded, finding that it was indeed an Israel Solider who shot Ms. Abu Akleh in her line of duty."
+   ]
+  },
+  {
+   "date": "2025-10-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF A JOINT RESOLUTION COMMEMORATING OCTOBER 2025 AS HEAD START AWARENESS MONTH",
+   "title": "INTRODUCTION OF A JOINT RESOLUTION COMMEMORATING OCTOBER 2025 AS HEAD START AWARENESS MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-31/html/CREC-2025-10-31-pt1-PgE1022-3.htm",
+   "sentences": [
+    "I urge my colleagues on both sides of the aisle to join me in commemorating October 2025 as Head Start Awareness Month, and in celebrating the generations of children and families who have benefited from this transformative program. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF A RESOLUTION RECOGNIZING \"MEDICAL RESEARCH WEEK\" FROM SEPTEMBER 15 THROUGH SEPTEMBER 19, 2025",
+   "title": "INTRODUCTION OF A RESOLUTION RECOGNIZING \"MEDICAL RESEARCH WEEK\" FROM SEPTEMBER 15 THROUGH SEPTEMBER 19, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgE851-4.htm",
+   "sentences": [
+    "I urge all my colleagues to join me in both these appropriations requests.",
+    "I urge the House to support this resolution. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE GUN SAFETY INCENTIVE ACT",
+   "title": "INTRODUCTION OF THE GUN SAFETY INCENTIVE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgE686-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to introduce the Gun Safety Incentive Act, a commonsense and life-saving measure to address one of the most urgent crises facing our Nation: the epidemic of gun violence, particularly as it affects our children.",
+    "Every year, more than 2,500 young lives are lost to gun violence.",
+    "The Gun Safety Incentive Act takes meaningful, practical steps to promote responsible firearm storage and protect our children.",
+    "This incentive directly supports gun owners who take steps to store their firearms safely--an action proven to reduce the risk of accidents, suicides, and theft.",
+    "The Gun Safety Incentive Act is a reasonable, measured, and life-saving response to an ongoing public health emergency.",
+    "I urge all my colleagues--Democrats and Republicans alike--to join me in supporting this critical legislation."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF RESOLUTION RECOGNIZING THE SIGNIFICANCE OF NATIONAL CARIBBEAN AMERICAN HERITAGE MONTH",
+   "title": "INTRODUCTION OF RESOLUTION RECOGNIZING THE SIGNIFICANCE OF NATIONAL CARIBBEAN AMERICAN HERITAGE MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgE628.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to join me in honoring National Caribbean American Heritage Month."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF MEDICAL RESEARCH FOR OUR TROOPS ACT",
+   "title": "INTRODUCTION OF MEDICAL RESEARCH FOR OUR TROOPS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgE561.htm",
+   "sentences": [
+    "Mr. Speaker, I am proud to introduce the Medical Research for Our Troops Act, a bill to amend the Full-Year Continuing Appropriations and Extensions Act, 2025, by restoring essential funding for Congressionally Directed Medical Research Programs within the Department of Defense Account.",
+    "I urge my colleagues to support this legislation to ensure that medical research for our troops and veterans remains strong, innovative, and fully funded. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "title": "DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2549.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H. Res. 137, which was approved unanimously by the Transportation and Infrastructure Committee in April.",
+    "Mr. Speaker, I urge all of my colleagues to join me in supporting passage of this resolution."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "It will hurt hard working families to pay for tax cuts for billionaires like Elon Musk.",
+    "My first amendment, No. 168, protects Medicaid by preventing implementation of provisions in this bill if they result in higher mortality rates or if Americans receive reduced access to health care services, as a result of this bill.",
+    "My second amendment, No. 428, requires a comprehensive audit by the Comptroller General of the bill's tax cuts on our federal deficit and national debt over the next 10, 20, and 30 years, plus the bill's economic impacts on employment, investment and GDP.",
+    "The worst provisions are the cuts to Medicaid; they're the most devastating to Hoosiers in my congressional district.",
+    "These women expressed their fears that Congress will cut Medicaid and other essential government programs.",
+    "I am here today to fight for the people of Indianapolis, who deserve a government that stands with them, not billionaires.",
+    "For 14 million Americans, healthcare and Medicaid cuts aren't a political discussion.",
+    "Republicans deny that this bill will slash Medicaid.",
+    "Even though a nonpartisan analysis found that this budget simply is not possible without cutting Medicaid and essential healthcare.",
+    "If you insist that this bill will not hurt Medicaid, if you insist this bill will not snatch healthcare out of the hands of 14 million men, women, and children, then prove it by passing my amendment to ensure none of the provisions of this bill will take effect if there is an increase in mortality rates or if Americans receive reduced access to health care services, as a result of this bill.",
+    "If Republicans truly believe this bill is not taking money away from Medicaid to give tax breaks to billionaires, then they should have no problem passing my amendment.",
+    "Mr. Speaker, I rise in strong opposition to this Big Ugly GOP Tax Scam."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2183-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of Medicaid and nutrition assistance.",
+    "She says that if Medicaid is cut, she and her five children will not be able to survive.",
+    "Bethany from Center Township says that without Medicaid, she would be dead.",
+    "If Trump cuts Medicaid, she will probably die."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTS TO FOREST SERVICE ENDANGER MILLIONS",
+   "title": "CUTS TO FOREST SERVICE ENDANGER MILLIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1502-2.htm",
+   "sentences": [
+    "They work with local government, businesses, community groups, and schools to plant trees, clean up litter, and transform vacant lots into vibrant community green spaces.",
+    "I urge the USDA to reverse its course, and I call on our colleagues to join us in demanding the restoration of these critical investments in our communities."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE YOUNG AMERICANS FINANCIAL LITERACY ACT",
+   "title": "INTRODUCTION OF THE YOUNG AMERICANS FINANCIAL LITERACY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgE40.htm",
+   "sentences": [
+    "I urge all of my colleagues to join me in supporting the Young Americans Financial Literacy Act. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE FOOD DESERTS ACT",
+   "title": "INTRODUCTION OF THE FOOD DESERTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgE41-2.htm",
+   "sentences": [
+    "Many families lacked a car or reliable public transportation to the nearest grocery alternative, often over a mile away.",
+    "In the world's wealthiest country, nutritious food should be an expectation, not a luxury."
+   ]
+  }
+ ]
+}

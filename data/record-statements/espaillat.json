@@ -1,0 +1,237 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "espaillat",
+ "name": "Adriano Espaillat",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 16,
+  "sentences": 81
+ },
+ "statements": [
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY AND JUSTICE FOR ALL",
+   "title": "LIBERTY AND JUSTICE FOR ALL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5413-2.htm",
+   "sentences": [
+    "That is why the Hispanic Caucus has continued to push for guardrails in all ICE funding, requiring for ICE agents to identify themselves, no masks during enforcement, body cameras recording all enforcement actions, limits on firearms used in civil immigration operations, and protections of sensitive locations, and many more."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3050-5.htm",
+   "sentences": [
+    "Mr. Speaker, I was at the Appropriations vote or the DACA Amendment and was held up at the committee."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY FUNDING",
+   "title": "DEPARTMENT OF HOMELAND SECURITY FUNDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2719.htm",
+   "sentences": [
+    "In fact, he has thrown gasoline on top of this conflict by adding a voter suppression bill, the SAVE Act, to this discussion, something that has nothing to do with the airports or TSA.",
+    "This week, Madam Speaker, we are voting on a dishonest resolution that supposedly shows support for Department of Homeland Security agencies."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HORRIFIC ICE ABUSES",
+   "title": "HORRIFIC ICE ABUSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2016-6.htm",
+   "sentences": [
+    "They paid for the slush fund by cutting healthcare and nutrition assistance while giving tax cuts to rich millionaires and billionaires.",
+    "This agency has been rampantly arresting not just green card holders, TPS recipients, Dreamers, moms, and dads, but also U.S. citizens.",
+    "We also call to redirect the $75 billion OBBB enforcement funding away from mass detention and quota-driven arrests toward humane community safety and affordability concerns.",
+    "We want to mandate body cameras with strong protocols; protect sensitive locations, including houses of worship, schools, and hospitals; and restrict the use of deadly force.",
+    "We also want to enforce humanitarian standards in ICE and CBP custody, ban military-grade equipment, strengthen civil rights, and the inspector general's oversight.",
+    "We want to protect whistleblowers and return Border Patrol where they should be, at the border."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VENEZUELA",
+   "title": "VENEZUELA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH142-3.htm",
+   "sentences": [
+    "In fact, I believe even most countries across the world would agree with those two things, maybe even the United Nations and the Organization of American States could agree with that, and I am confident even the Vatican could agree with that, and that is that Nicholas Maduro was not the legitimate president of Venezuela.",
+    "Again, so there is no confusion between these two positions, Nicolas Maduro was not a legitimate President, and unauthorized military action is illegal without the consent of Congress.",
+    "With Nicolas Maduro now in the rearview mirror, we must look forward and craft policies that support a free and democratic future for Venezuela and policies that return war powers to the United States Congress, as enshrined in the United States Constitution.",
+    "That is why I and the executive board of the Congressional Hispanic Caucus will propose a forward-looking framework for a democratic and stable Venezuela.",
+    "Hence, we have crafted a series of recommendations, a roadmap if you will, for democracy and prosperity for the people of Venezuela.",
+    "Our first priorities will support a free and democratic Venezuela.",
+    "Now that we are so deeply involved with Venezuela, we must act according to our principles.",
+    "We cannot deport people to a nation where our actions have set off a new wave of oppression.",
+    "In Venezuela, that means pushing for an end to that repression.",
+    "We must also ensure that Venezuela's future is decided by Venezuelans.",
+    "That is why we reject any further U.S. military intervention without congressional authorization."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING DHS IMMIGRATION RAIDS",
+   "title": "FIGHTING DHS IMMIGRATION RAIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5014-3.htm",
+   "sentences": [
+    "The woman was unarmed, nonviolent, and posed absolutely no threat to anyone.",
+    "Mr. Speaker, I will echo again what I said in Chicago during the hearing that we had there."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "title": "RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4692-2.htm",
+   "sentences": [
+    "At a moment where some are working overtime to protect the wealthy and gut healthcare for working families, we should stand together united to defend affordable healthcare.",
+    "We should be standing together to talk about how we are going to lift the least among us and make it easier for them."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "It does absolutely nothing to stop provisions in the reconciliation package that will strip 15 million people of their Medicaid coverage.",
+    "While families in my district are stretching every single dollar just to pay for food and rent, Senators want to get a personal payout if law enforcement dares to hold them accountable.",
+    "Mr. Speaker, I rise today in strong opposition to the Senate's amendment to H.R. 5371 because, once again, the Senate has put other interests ahead of those of the American people.",
+    "I will be casting my vote as a ``no.'' In fact, it will be a ``hell no'' tonight."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FY 2026 EDUCATION CUTS",
+   "title": "FY 2026 EDUCATION CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3764-2.htm",
+   "sentences": [
+    "They want to eliminate title III English acquisition grants for English language learners.",
+    "They want English to be the only language, an English-only country, making it less competitive than other countries that want their children to be proficient in several languages."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDICAID AND SOCIAL SECURITY CUTS",
+   "title": "MEDICAID AND SOCIAL SECURITY CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2151-2.htm",
+   "sentences": [
+    "They are scheduled to meet to discuss at length Medicaid cuts.",
+    "More than one-half of the residents in the district that I have the privilege to represent, the 13th Congressional District, encompassed by Harlem, east Harlem, Washington Heights, Inwood, and the northwest Bronx, more than one-half--close to 500,000 of my constituents--are Medicaid recipients.",
+    "Almost 4 million residents in New York City, one-half of the city, rely on Medicaid.",
+    "Mr. Speaker, this discussion that will be held in the middle of the night when most Americans will not be tuned in is a life-and-death discussion about cuts to perhaps the most important Federal program that impacts the daily health and life of people across the country, the Medicaid program.",
+    "Again, over 3 million New York City residents are also enrolled in the New York State Medicaid Pharmacy program, the so-called OTC program, the Over-the-Counter program, which allows coverage of prescription drugs and certain over-the-counter medication and goods, including food.",
+    "So this is a life-and-death discussion that our Republican colleagues are having in the middle of the night after promising the American people that Medicaid will be safe from deep cuts.",
+    "Republicans have spent time and will spend time delivering a bill that will devastate--again, Mr. Speaker, will devastate Medicaid enrollment rates.",
+    "The bill will require harsh work requirements for Medicaid recipients.",
+    "In the middle of the night, Republicans will cut Medicaid and will cut food stamps when people are not watching.",
+    "This is nothing more than a GOP tax scam that gives billions of dollars in tax breaks to millionaires and gives nothing back to working-class families but empty stomachs and Medicaid debt to the working class.",
+    "Mr. Speaker, the billionaire wins and families lose with this bill."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2240, IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT; PROVIDING FOR CONSIDERATION OF H.R. 2243, LEOSA RE",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2240, IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT; PROVIDING FOR CONSIDERATION OF H.R. 2243, LEOSA REFORM ACT; AND PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2014-10.htm",
+   "sentences": [
+    "Mr. Speaker, both Democrats and Republicans should be forever grateful to the police officers who protected this Capitol as an angry, racist, violent mob came in.",
+    "We will forever remember the 140 officers who were injured and the five officers who lost their lives as a result, including Brian Sicknick, a Capitol Police Officer; Howard Liebengood, a Capitol Police Officer; and Metropolitan Police Department Officers Jeffrey Smith, Gunther Hashida, and Kyle DeFreytag.",
+    "I am also grateful to those officers that testified in front of the January 6th Committee, including Michael Fanone, Officer Harry Dunn, Police Sergeant Aquilino Gonell, and Officer Daniel Hodges.",
+    "It has been more than 2 years, Mr. Speaker--take a look at this plaque--that the other side has failed to properly honor police officers.",
+    "Yet, they stand here and want to dictate to us how supportive they are of the men and women in police departments across this country.",
+    "That is what they intended to do, and you failed to recognize the police officers that protected all of us, Democrat and Republican.",
+    "As the ranking member of the Legislative Branch Subcommittee, I am more than willing to work with the Architect of the Capitol and Republican leadership to make sure that we honor our police officers, and this Police Week it is important that we do that.",
+    "Mr. Speaker, I am compelled to say to the Republican leadership that they must honor police officers in the proper way, particularly those of them that gave their lives for us and the American public."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSING ILLEGAL POWER GRABS",
+   "title": "OPPOSING ILLEGAL POWER GRABS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1885-2.htm",
+   "sentences": [
+    "He also continues to ignore court orders, including from the highest Court in the land, the U.S. Supreme Court, inching every day closer and closer to a constitutional crisis.",
+    "Within hours of taking office, President Trump issued an executive order that would have unlawfully denied birthright citizenship, which is guaranteed to everyone born in America by the 14th Amendment.",
+    "Mr. Speaker, I rise today in opposition to the Trump administration's illegal power grabs."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING THE LEGAL COMMUNITY",
+   "title": "PROTECTING THE LEGAL COMMUNITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1383-2.htm",
+   "sentences": [
+    "Many of these judges have been instrumental in pausing Trump's attack on birthright citizenship, and preventing ICE from going into sensitive locations such as churches, synagogues, funeral homes, schools, and emergency rooms.",
+    "Rulings like Brown v. Board of Education, Obergefell v. Hodges, and Roe v. Wade have been instrumental in ensuring that all communities have equality and protection under the law."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPUBLICAN BUDGET BETRAYAL",
+   "title": "REPUBLICAN BUDGET BETRAYAL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH873.htm",
+   "sentences": [
+    "Mr. Speaker, today the Congressional Hispanic Caucus comes to the floor united as one unit against this Republican budget resolution that slashes at least 1 trillion--that is right, 1 trillion with a capital T--dollars from Medicaid and other essential programs to the American people, to working-class families, to seniors, and to children, threatening 80 million individuals.",
+    "At the very least, 20 million Latinos, about one-third of our folks, rely on Medicaid.",
+    "More than one- half of the Latinos on Medicaid are children.",
+    "Many of them are diabetics, and they rely heavily on insulin, and they may not have the Medicaid coverage for insulin to save their lives.",
+    "This bill, again, presents a situation of life or death for many constituents across the country and the ones whom I represent in New York's 13th Congressional District, where over 500,000 residents of that district rely on Medicaid and over 100,000 rely on Medicare.",
+    "So over 600,000 of the 780,000 people I represent are either on Medicaid or Medicare.",
+    "CHC is committed to protecting Dreamers.",
+    "So CHC, the Congressional Hispanic Caucus, is in support of Dreamers, farmworkers, and keeping families together.",
+    "The budget passed last night only gives billionaires tax cuts and funds indiscriminate raids in our city, all paid for by working-class families.",
+    "Mr. Speaker, we stood here tonight to warn the American people of these massive cuts in vital programs like the Medicaid program, SNAP, and the Food Stamp program, which provides nutritional assistance to our families, as the Republican majority perpetrates a scam to provide the very wealthiest of Americans a $4.5 trillion tax cut at the expense of the health of the American people by cutting Medicaid.",
+    "Medicaid is a vital program for Americans all over the United States.",
+    "Republican Members have many constituents who are on Medicaid and Medicare and who receive SNAP benefits.",
+    "Yet, the savings will go to the fat-cat executives and shareholders, the wealthiest in America.",
+    "Mr. Speaker, we are asking for the American people to be alert of the Republican budget betrayal, that it is a life-or-death matter and puts their lives in danger by denying them the basic healthcare benefits that they are entitled to."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Out of those 780,000 constituents, 524,000 of them are Medicaid recipients, and over 100,000 of them are Medicare recipients, so over 600,000 of the 780,000 constituents who I represent receive either Medicaid or Medicare.",
+    "As the Republican majority proposes to cut Medicaid across this country to give a massive $4.5 trillion, with a capital T, trillion- dollar cut in taxes to the very rich, who would that go to?",
+    "There are diabetics who will see the price of insulin go up.",
+    "It is not a simple piece of legislation that we will pass."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT",
+   "title": "LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH277.htm",
+   "sentences": [
+    "That includes, of course, a child caught stealing a candy bar from Walmart, someone who jumps the turnstile in a New York City subway or takes a box of cornflakes because they otherwise have no way to make ends meet.",
+    "Mr. Speaker, this bill is redundant, and, frankly, the Laken Riley family should not be subject to the political theater that is about to happen here today.",
+    "In fact, we should be looking at this issue to fix the problems of both the border, but also to regularize Dreamers, farmworkers, and keep families whole.",
+    "At the end of the day, Dreamers are productive.",
+    "While they are targeting the immigrant communities for stealing a candy bar, the folks from January 6, get this, Mr. Speaker, were released.",
+    "Mr. Speaker, I rise in opposition to S. 5.",
+    "I rise in opposition to S. 5 because the bill is redundant.",
+    "Today, we will continue to fight for sanity and against any political theater that happens here on our floor."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,584 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "jjoyce",
+ "name": "John Joyce",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 42,
+  "sentences": 194
+ },
+ "statements": [
+  {
+   "date": "2026-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING RAILWAY SAFETY PART OF OUR HERITAGE",
+   "title": "MAKING RAILWAY SAFETY PART OF OUR HERITAGE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-17/html/CREC-2026-11-17-pt1-PgH6230-2.htm",
+   "sentences": [
+    "Recognizing Cambria County Transit Authority Mr. Speaker, I rise to recognize the Cambria County Transit Authority for 50 years of public transportation.",
+    "Buses have often been described as the backbone of regional transportation networks and as lifelines that connect people and places, families and jobs.",
+    "In fiscal year 2023, I was proud to support a Community Project Funding grant for CamTran to replace critical buses.",
+    "Mr. Speaker, Members of Congress have a responsibility to conduct oversight of actions that threaten the safety of their constituents, which is why I will continue to fight for accountability and take action to prevent further derailments in the communities where I serve.",
+    "Mr. Speaker, I will continue to support and advance policies that address this global health need, which concerns so many of my constituents and so many Americans. ____________________"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SALUTING OUR VETERANS",
+   "title": "SALUTING OUR VETERANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6173.htm",
+   "sentences": [
+    "Mr. Speaker, 250 years after the founding of the United States as a free and independent republic, we are reminded that the only debt our Nation can never pay is the gratitude owed to those who have defended our great country."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHOICES FOR INCREASED MOBILITY ACT OF 2026",
+   "title": "CHOICES FOR INCREASED MOBILITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4636-9.htm",
+   "sentences": [
+    "This important piece of legislation clarifies the payment rules for manual wheelchairs under Medicare part B. The bill allows Medicare patients the choice to decide whether a titanium or a carbon-fiber wheelchair is right for them, giving patients the option to pay out of pocket for wheelchair upgrades if that is their choice.",
+    "Mr. Speaker, I rise today in support of my legislation, H.R. 1703, the Choices for Increased Mobility Act.",
+    "Mr. Speaker, I am proud to see this important bill come to the House floor today, and I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING NATIONAL POLICE WEEK",
+   "title": "COMMEMORATING NATIONAL POLICE WEEK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgE432.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to commemorate National Police Week.",
+    "As we honor the courage, sacrifice, and unwavering dedication of our Nation's law enforcement officers, we pay special tribute to those who made the ultimate sacrifice in the line of duty.",
+    "As a Representative from Pennsylvania, I am especially honored to recognize the 19 fallen officers from our Commonwealth whose names were added this year to the National Law Enforcement Officers Memorial Wall.",
+    "In my district, we are fortunate to be served by exceptional law enforcement professionals.",
+    "Recently, I had the opportunity to meet with Blair County Sheriff Jim Ott, whose leadership in coordinating Pennsylvania's annual law enforcement memorial service in Hollidaysburg demonstrates the deep respect owed to those who have fallen in the line of duty."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REDUCING AND ELIMINATING DUPLICATIVE ENVIRONMENTAL REGULATIONS ACT",
+   "title": "REDUCING AND ELIMINATING DUPLICATIVE ENVIRONMENTAL REGULATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2909.htm",
+   "sentences": [
+    "The RED Tape Act removes an unnecessary and duplicative environmental review that the EPA currently conducts under the Clean Air Act.",
+    "I rise today in support of my legislation, the RED Tape Act.",
+    "I urge all of my colleagues to support its passage on the floor later this week."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING SPECIALIST KRYSTOFER LOPEZ",
+   "title": "MOMENT OF SILENCE HONORING SPECIALIST KRYSTOFER LOPEZ",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2585.htm",
+   "sentences": [
+    "He served as a military police officer and as a Personnel Force Innovation member of the 947th Quartermaster Company."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUNDING THE DEPARTMENT OF HOMELAND SECURITY",
+   "title": "FUNDING THE DEPARTMENT OF HOMELAND SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2344.htm",
+   "sentences": [
+    "With the war in Iran, we have reached an increase in global instability.",
+    "During the competition, students demonstrated their robot creations and offered presentations on how their robots would function in real- world settings."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPENING OF KONGSBERG DEFENSE EXPANSION",
+   "title": "OPENING OF KONGSBERG DEFENSE EXPANSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2237-5.htm",
+   "sentences": [
+    "Since its opening, this Johnstown site has produced over 20,000 remote weapon stations and remote turrets, providing high-skilled employment opportunities in Pennsylvania's 13th Congressional District.",
+    "This expansion signifies a strong commitment to domestic manufacturing, while also bolstering our military readiness and capabilities.",
+    "Restoring Fairness in Prescription Drug Market Mr. Speaker, I rise today to speak on the meaningful and long-overdue step toward restoring fairness and transparency in our prescription drug market by passing the Consolidated Appropriations Act of 2026, now signed into law by President Trump."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: U.S. ELECTIONS ARE FOR U.S. CITIZENS",
+   "title": "U.S. ELECTIONS ARE FOR U.S. CITIZENS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2044.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to speak on the importance of the SAVE America Act, which will come to the House floor for a vote this week.",
+    "The SAVE America Act is centered on an indisputable principle: U.S. elections are for U.S. citizens.",
+    "This legislation will ensure that voter registration systems accurately reflect the law and that citizenship requirements are consistently enforced.",
+    "By requiring a photo ID in Federal elections, this congressional action will work to prevent fraud before it even starts.",
+    "Supporting the SAVE America Act means promising every voter that their voice matters and that their vote will not be diluted.",
+    "This action signals a long overdue step towards election integrity, which will preserve the strength and the security of our democratic system for generations to come.",
+    "Very simply, our democracy is worth protecting, and by passing and enacting the SAVE America Act, we in Congress can ensure our constituents that their vote will count."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING REVIEW PROCESS FOR FEDERAL PROJECTS",
+   "title": "STREAMLINING REVIEW PROCESS FOR FEDERAL PROJECTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH927-5.htm",
+   "sentences": [
+    "The RED Tape Act amends the Clean Air Act to streamline the review process for Federal projects.",
+    "The U.S. is facing a rapidly growing demand for energy production and domestic manufacturing.",
+    "Since the passage of the Affordable Care Act, healthcare costs across all markets have spiked for patients, while large insurance companies continue to profit.",
+    "Under excessive ACA regulations, we entered an era of unprecedented mergers of insurers, providers, and pharmacies.",
+    "This package forms a key downpayment on delivering meaningful health cost reduction for all Americans."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SIGNIFICANT STRIDES TO STRENGTHEN UNITED STATES WARFIGHTERS",
+   "title": "SIGNIFICANT STRIDES TO STRENGTHEN UNITED STATES WARFIGHTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH617-4.htm",
+   "sentences": [
+    "These monuments stand as reminders of sacrifice, unity, and the ongoing work of perfecting this Union.",
+    "Mr. Speaker, I urge all constituents to uphold the highest respect for those who died so that we might enjoy the many freedoms that we continue to have today."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWERING HEALTHCARE COSTS FOR ALL AMERICANS",
+   "title": "LOWERING HEALTHCARE COSTS FOR ALL AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5843-4.htm",
+   "sentences": [
+    "Honoring Franklin County Board of Commissioners and Agricultural Land Preservation Board Mr. Speaker, I rise today to honor the Franklin County Board of Commissioners and Franklin County Agricultural Land Preservation Board for their joint efforts over the years that have preserved 20,000 acres of farmland.",
+    "As we enter the next crop year, I look forward to working with President Trump and the U.S. Department of Agriculture as we continue to support the American farmer by bringing down costs, securing new trade deals, and prioritizing American crop production."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "title": "WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5857.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Whole Milk for Healthy Kids Act of 2025.",
+    "Mr. Speaker, I urge all of my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LETTERKENNY ARMY DEPOT PLAYS IMPORTANT ROLE",
+   "title": "LETTERKENNY ARMY DEPOT PLAYS IMPORTANT ROLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5059-4.htm",
+   "sentences": [
+    "These bills will also reverse the trend of the last 4 years, such as restrictions on natural gas pipelines that were blocked by radical blue State governments' Green New Deal agenda.",
+    "Currently, she serves as the president of the Mount Union District School Board."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP'S PEACE THROUGH STRENGTH AGENDA",
+   "title": "PRESIDENT TRUMP'S PEACE THROUGH STRENGTH AGENDA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4271.htm",
+   "sentences": [
+    "Additionally, the NDAA secures made-in-America military equipment to provide our troops with the best tools that are made by hardworking American hands, not by foreign companies.",
+    "The NDAA builds on efforts started in the Working Families Tax Cuts Act to stimulate our economy and to bring jobs back home.",
+    "Addressing Misleading Advertising for Prescription Drugs Madam Speaker, President Trump took executive actions last week to address misleading prescription drug advertisements.",
+    "This action will direct the Secretary of Health and Human Services to ensure that full and accurate information is available on the risks associated with prescription drugs.",
+    "Unregulated prescription drug advertising often misinforms the public about a drug's full risks and potential benefits.",
+    "I strongly support President Trump's action to address this issue to ensure that patients can once again rebuild their trust in the American health system."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING THE STOP OF CHINESE FENTANYL",
+   "title": "SUPPORTING THE STOP OF CHINESE FENTANYL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3866.htm",
+   "sentences": [
+    "Madam Speaker, last week I was proud to support the Stop Chinese Fentanyl Act, legislation that will put sanctions on any individual, including senior members of the Chinese Communist Party, who are responsible for the production, the distribution, the sale, or the financing of synthetic opioids.",
+    "It is no secret that China is the leading producer of the base chemicals, the ingredients, that are needed to make fentanyl and that the Chinese Communist Party is more than willing to work directly with Mexican drug cartels to ensure that this poison continues to reach America.",
+    "With strong leadership under President Trump back in the White House, our southern border is finally becoming secure.",
+    "We here in the House must take every action possible to stop the flow of the poison that fentanyl is before it ever reaches our border.",
+    "This legislation will strengthen our immigration laws and deter criminal illegal aliens from crossing our southern border.",
+    "For 4 long years, President Biden and his administration were asleep at the switch, allowing our borders to be flooded with illegal immigrants, most of whom were simply released into our communities.",
+    "This legislation gives Federal officials more tools in their tool belt to prosecute illegal immigrants by requiring significant imprisonment for illegals who commit crimes.",
+    "Now it is our job here in Congress to ensure Federal law enforcement and prosecutors have the tools that they need to deter further illegal immigration.",
+    "A Century Farm is a farm that has been owned by the same family for at least 100 consecutive years, has a family member who still lives on that farm, and has at least 10 acres of the original farmland."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CRITICAL SUPPLY CHAINS",
+   "title": "CRITICAL SUPPLY CHAINS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3719-4.htm",
+   "sentences": [
+    "Approximately 10 percent of the active pharmaceutical ingredients required for domestic prescription drug manufacturing comes from foreign supplies.",
+    "Simply stated, the prescription drugs that save the lives of millions of Americans every year are at severe risk."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLEASHING AMERICAN ENERGY",
+   "title": "UNLEASHING AMERICAN ENERGY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3479-4.htm",
+   "sentences": [
+    "In March, President Trump and EPA Administrator Lee Zeldin undertook the largest day of deregulation in American history, releasing the shackles on our energy producers by President Biden's Green New Deal initiatives.",
+    "Honoring Our Brave Border Patrol and ICE Agents Mr. Speaker, I rise today to speak in support of our brave Border Patrol and ICE agents who tirelessly put their lives on the line each day to protect America.",
+    "These brave officers are producing historic results at our border and in our communities.",
+    "Whether in political office or in the media, calling for violence against law enforcement is simply unacceptable.",
+    "From the signing of the Declaration of Independence in Independence Hall in Philadelphia to the Battle of Gettysburg during the Civil War, Pennsylvania has always been at the center of American progress as we strive to form that more perfect Union.",
+    "Today, Pennsylvania remains at the center of our Nation's growth, especially as we enter a competitive race with China to dominate artificial intelligence.",
+    "During the summit, President Trump announced more than $90 billion of investments into the Commonwealth's energy industry and data centers."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+   "sentences": [
+    "Madam Chair, I rise today to speak in support of amendment No. 159, to provide funding for the purchase of heavy dump trucks, or HDTs, for the Active Army, the Army National Guard, and the Army Reserve.",
+    "Madam Chair, I urge my colleagues to support this commonsense amendment to ensure our servicemembers have the most up-to-date technology to support our warfighters."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOLDEN AGE OF AMERICA HAS ARRIVED",
+   "title": "GOLDEN AGE OF AMERICA HAS ARRIVED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3206-2.htm",
+   "sentences": [
+    "Unleashing American energy, further supporting our Border Patrol and ICE agents, and ensuring that working- class Americans keep more money in their pockets are commonsense policies that my constituents overwhelmingly support.",
+    "As President Trump returns our Nation to energy dominance and forges ahead in the race to dominate artificial intelligence, Pennsylvania stands ready to meet the energy needs that AI creates.",
+    "Under the Trump administration, we have already seen historic investments in the Pennsylvania economy, including the Nippon and U.S. Steel merger and Amazon's $20 billion investment in building data centers in the Commonwealth."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPERATION MIDNIGHT HAMMER SUCCESS",
+   "title": "OPERATION MIDNIGHT HAMMER SUCCESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2839-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to congratulate President Trump and our incredible servicemembers who planned and perfectly executed Operation Midnight Hammer to destroy the nuclear enrichment facilities in Iran.",
+    "President Trump has made it clear since he first ran for President in 2015 that Iran can never become a nuclear power.",
+    "The Iranian regime has supported terrorist groups throughout the Middle East that all have one goal in common: to destroy the United States and our allies in the region.",
+    "A nuclear-armed Iran is a threat to our servicemembers in the region and a threat to the entire Western world.",
+    "President Trump's decisive action this weekend stomped out the threat of an unstable nuclear power.",
+    "It is now time for the Iranian regime to negotiate in good faith, bring peace to the region, and end the conflict with Israel.",
+    "This is critical legislation that will prevent the largest tax hike in history by extending President Trump's Tax Cuts and Jobs Act of 2017, which ushered in historic economic growth for our country.",
+    "The legislation also provides rural Americans with much-needed tax relief by extending immediate expensing to help our Nation's farmers secure the most up-to-date technology and by delivering relief from the death tax to more than 2 million family-owned farms, which ensures that the next generation of American farmers can continue to feed this great Nation.",
+    "This legislation also furthers President Trump's goals of removing waste and abuse from our government by codifying his executive orders to end funding for ridiculous DEI and pro-abortion VA policies.",
+    "Additionally, this legislation ensures that programs to fight veteran homelessness are fully funded.",
+    "It also supports the Veterans Crisis Line and other VA suicide prevention programs.",
+    "I now urge my colleagues in the Senate to support this legislation and deliver on the promises that we made to the American people."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2625-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the HALT Fentanyl Act, critical legislation to crack down on the criminals who produce, traffic, and sell fentanyl and fentanyl- related substances.",
+    "We owe it to our future generations to end this plague on our society by passing the HALT Fentanyl Act.",
+    "Our courageous Border Patrol and law enforcement officers will be more effective in removing fentanyl and fentanyl-related substances that come across our border, end up in our communities, and poison our children, friends, and neighbors.",
+    "Additionally, this legislation will also result in harsher penalties for the criminals and cartel members who are responsible for the spread of this poison."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOGE RESCISSIONS PACKAGE",
+   "title": "DOGE RESCISSIONS PACKAGE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2537-4.htm",
+   "sentences": [
+    "Mr. Speaker, this week, the House will vote on the first DOGE rescissions package that will claw back nearly $10 billion in wasteful spending.",
+    "However, for years, billions of dollars have been shelled out for ridiculous, wasteful programs like the $6 million to create net zero cities in Mexico, the $3 million for Iraqi Sesame Street, or even the $2 million for Green New Deal policies in Africa and Asia.",
+    "During a time when our Nation is trillions of dollars in debt, our government needs to be focused on serving the needs of American citizens.",
+    "The Scourge of Deadly Fentanyl Mr. Speaker, I rise today to strongly support the HALT Fentanyl Act.",
+    "It is no secret that the Mexican drug cartels recruit college chemistry majors to chemically alter fentanyl precursors to make the drug even more deadly, and the Chinese Communist Party happily supplies them with the chemicals that they need to achieve this goal.",
+    "This legislation will classify fentanyl analogs as a schedule I drug to allow our law enforcement and Border Patrol the ability to effectively seize these drugs."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NIPPON STEEL AND U.S. STEEL MERGER",
+   "title": "NIPPON STEEL AND U.S. STEEL MERGER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2385-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Nippon Steel and U.S. Steel merger brokered by President Trump to ensure that a critical American company remains right at home in Pennsylvania.",
+    "This merger will be a huge benefit for the Pennsylvania economy and for our workers, as it not only includes a massive investment in U.S. Steel's operations already present in Pennsylvania but also includes up to $4 billion for a new steel mill, creating thousands of additional jobs.",
+    "Supporting Fentanyl Legislation Mr. Speaker, already this Congress, the House of Representatives passed the HALT Fentanyl Act, legislation to crack down on the criminals who create, traffic, and sell the deadly fentanyl that takes the lives of so many Americans.",
+    "This week, we will be taking another step to further support our fellow Americans struggling with the deadly cycle of addiction by passing the SUPPORT Act.",
+    "Supporting Whole Milk at School Lunches Mr. Speaker, I rise today in support of H.R. 649, the Whole Milk for Healthy Kids Act, legislation to permit schools to provide whole milk at school lunches."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "This important legislation will strengthen Medicaid by cutting waste, fraud, and abuse to ensure that the most vulnerable Americans have access to the critical services on which they rely.",
+    "Pregnant women, children, seniors, and disabled Americans need and deserve Medicaid benefits, not illegal immigrants or able-bodied adults simply choosing not to work.",
+    "Mr. Speaker, I rise in strong support of the One Big Beautiful Bill Act."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING ONE BIG, BEAUTIFUL BILL",
+   "title": "SUPPORTING ONE BIG, BEAUTIFUL BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2109-4.htm",
+   "sentences": [
+    "In the Energy and Commerce Committee, I was proud to support our legislation to unleash American energy, foster innovation in our telecommunications industry, and strengthen Medicaid programs by ensuring that it works best for the intended groups: children, pregnant women, seniors, and those with disabilities.",
+    "This legislation also fulfills President Trump's campaign promises of ending taxes on tips, overtime, and Social Security, and permanently extends President Trump's 2017 tax cuts, which ushered in unprecedented growth.",
+    "This one big, beautiful bill also further backs President Trump's incredible progress securing our southern border by funding 700 miles of new border wall construction, nearly 1,000 miles of new river barriers, and additional frontline personnel at our southern border.",
+    "Now, it is our time in Congress to fulfill these promises, and I look forward to doing just that on the House floor this week by passing the one big, beautiful bill. indicting the sinaloa cartel Madam Speaker, just 1 month into President Trump's term in office, he signed a historic executive order to designate the Sinaloa Cartel as a foreign terrorist organization.",
+    "This action allows for further collaboration among law enforcement agencies and additional resources from the Federal Government to track down and punish these criminals.",
+    "Its sole focus is tracking down and capturing the cartel leaders who have ravaged our Nation with their poisons.",
+    "Just last week, the Trump administration formally indicted the leaders of the Sinaloa Cartel on charges of narcoterrorism, drug trafficking, and money laundering.",
+    "While this might be the first action taken by the unit, it sends a clear message to the cartel leaders who have waged war on the citizens of this great country by trafficking deadly poisons that have taken the lives of millions of Americans.",
+    "This ends now, and I fully support President Trump's actions to hold these terrorists to account.",
+    "We will miss her, but we will never be far away. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVERING ON PRESIDENT TRUMP'S AGENDA",
+   "title": "DELIVERING ON PRESIDENT TRUMP'S AGENDA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1952.htm",
+   "sentences": [
+    "This legislation that we have produced in the Energy and Commerce Committee will strengthen Medicaid for low-income children, for pregnant women, for the elderly, and for those with disabilities.",
+    "For far too long, illegal immigrants and able-bodied Americans, who can return to the workforce, have been draining funds from the citizens who deserve and need Medicaid.",
+    "It removes taxes on Social Security.",
+    "Honoring our Courageous Law Enforcement Officers Madam Speaker, this week is National Police Week, where we have an opportunity to honor the courageous law enforcement officers who put their lives on the line each and every day to protect us.",
+    "On the House floor this week, we will address the Law Enforcement Officers Safety Reform Act, legislation to allow our active and retired law enforcement officers the ability to conceal carry firearms where it may normally be restricted.",
+    "Our law enforcement officers are committed to protecting their communities and their fellow citizens, and they receive rigorous training throughout their careers.",
+    "Honoring Police Chief Robert Glenny of Gettysburg Madam Speaker, I rise today to celebrate the service of Gettysburg Police Chief Robert Glenny as he makes the next step in his career.",
+    "Chief Glenny attended Juniata College before beginning his 35-year career as a law enforcement officer with the last 6 years spent as the chief of police in the Gettysburg Police Department.",
+    "Before arriving in Gettysburg, Chief Glenny started his career in the Ferguson Township, Pennsylvania, Police Department, where he spent 26 years on the force.",
+    "During his time in Ferguson Township, Chief Glenny held roles that included patrol officer, traffic enforcement, and police sergeant.",
+    "Then, after a brief stop in Colorado to serve as the police chief there, Chief Glenny returned to Pennsylvania to proudly serve the people of Gettysburg.",
+    "As he moves on to his next position, the chief of police is held in high esteem in Gettysburg."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CO",
+   "title": "PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CONTROL STANDARDS; ADVANCED CLEAN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1748.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to speak in strong support of H.J. Res. 88, my legislation to reverse California's radical electric vehicle mandate.",
+    "With one foot out the door, President Biden and his administration provided a waiver approving of California's policy to require all vehicle sales in the State to be electric vehicles by 2035.",
+    "The Biden EPA wrongly allowed California to enact an electric vehicle mandate that will ultimately affect the entire United States.",
+    "In my district, the average household income is $65,000 a year, while the average price of an electric vehicle is more than $55,000 a year.",
+    "Prices in the used car market will also surge, as dealers will not have the gas-powered vehicles to sell because of the inventory of unsellable EVs.",
+    "Congress cannot allow California to continue its abuse of its standing in the Clean Air Act to limit consumer freedom.",
+    "Mr. Speaker, I urge my colleagues to pass this legislation to protect our auto industry, to protect our autoworkers, and, most importantly, to protect the freedoms of all of America."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPEALING GREEN NEW DEAL POLICIES",
+   "title": "REPEALING GREEN NEW DEAL POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1629-4.htm",
+   "sentences": [
+    "Madam Speaker, this week, the House will vote on several bills under the Congressional Review Act to repeal out- of-touch Biden-era Green New Deal policies.",
+    "H.J. Res. 88, which I introduced this Congress, will repeal the Biden administration's approval of California's de facto electric vehicle mandate.",
+    "Modernizing Our Workforce Programs Madam Speaker, as President Trump bolsters our domestic manufacturing, returning production to the U.S., American companies need the workforce to support these industries.",
+    "We cannot allow Gavin Newsom and California Democrats to decide what vehicles my constituents in central Pennsylvania are allowed to purchase.",
+    "Madam Speaker, I urge my colleagues in both the House and the Senate to pass this legislation so that President Trump can end this mandate and save our American auto industry."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING REVERSAL OF CALIFORNIA EV MANDATE",
+   "title": "SUPPORTING REVERSAL OF CALIFORNIA EV MANDATE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1421-4.htm",
+   "sentences": [
+    "Encouraging Innovation Through Artificial Intelligence Base Mr. Speaker, at the beginning of this term, President Trump announced an aggressive artificial intelligence plan to keep the U.S. competitive with China.",
+    "Projects like this and the Three Mile Island nuclear plant's revitalization not only bring revenue in for local economies, it employs hardworking Americans.",
+    "It also helps our Nation stay competitive with China in the development of artificial intelligence.",
+    "As President Trump builds up our artificial intelligence base, the Commonwealth of Pennsylvania stands ready to fulfill its necessary energy needs.",
+    "Protecting Our Border Mr. Speaker, since President Trump was sworn into office, the daily number of border crossings has plummeted to record lows.",
+    "Currently, our Border Patrol agents are making fewer than 50 arrests per day at the U.S.-Mexico border.",
+    "Under President Biden, Border Patrol was averaging more than 1,000 arrests a day.",
+    "President Trump has promised to secure our border and make our communities safer by removing dangerous criminals from our streets.",
+    "Mr. Speaker, last week I introduced legislation to reverse the out-of-touch California EV mandate that the Biden administration approved with one foot already out the door."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING OUR ELECTIONS",
+   "title": "SECURING OUR ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1341-4.htm",
+   "sentences": [
+    "Mr. Speaker, under President Biden's administration, millions of illegal immigrants poured into our country, threatening the security of our communities and threatening our elections.",
+    "While President Trump is hard at work securing our border, it is now time for Congress to secure our elections from noncitizen voters.",
+    "This week, the House will vote on the SAVE Act, legislation that strengthens our election laws by requiring proof of citizenship to vote in Federal elections.",
+    "The SAVE Act also requires States to create a program to remove noncitizens from existing voter rolls."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF ENERGY EFFICIENCY AND RENEWABLE ENERGY, DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONS",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF ENERGY EFFICIENCY AND RENEWABLE ENERGY, DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1284-7.htm",
+   "sentences": [
+    "This regulation was implemented as a last-ditch effort by the Biden administration to force its Green New Deal agenda on the American people without regard to the impact that it will have on small businesses.",
+    "Repealing this out-of-touch energy regulation will keep costs low for the American consumer and allow small businesses to reinvest and to expand instead of being forced to meet bureaucratic regulations.",
+    "Mr. Speaker, I rise today to support H.J. Res. 75, legislation to repeal the Biden administration's energy efficiency standard for commercial refrigerators and freezers."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP BRINGING BACK INVESTMENTS",
+   "title": "PRESIDENT TRUMP BRINGING BACK INVESTMENTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1193-4.htm",
+   "sentences": [
+    "Mr. Speaker, during President Trump's inaugural address, he spoke of an aggressive artificial intelligence agenda to keep America competitive with the Chinese Communist Party.",
+    "This investment will support American artificial intelligence infrastructure.",
+    "It will support semiconductors made in America.",
+    "Agriculture Is Critical in Pennsylvania Mr. Speaker, as a leading producer of dairy products in the country, Pennsylvania dairymen know just how important food additives are for the safety of our food supply.",
+    "In the true spirit of Semper Fidelis, Lieutenant Peck continually demonstrated his steadfast loyalty to his fellow veterans and continually worked to help our Nation become that more perfect Union."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOLDEN AGE OF AMERICA",
+   "title": "GOLDEN AGE OF AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH923-6.htm",
+   "sentences": [
+    "The American people wanted to see that the dangerous illegal immigrants were removed from our communities, and they wanted to see that we could unleash, once again, the American energy that is under the feet of my constituents in Pennsylvania.",
+    "Protecting American Homeland from Chinese Influence Mr. Speaker, the Chinese Communist Party continues to infiltrate our homeland by purchasing American farmland and property around government installations.",
+    "I have heard the concerns from many farmers throughout Pennsylvania's 13th Congressional District about the aggressive infiltration of the Chinese Communist Party into American farmland as they outbid American farmers for critical land.",
+    "The Chinese Communist Party has tried to undermine not just our values but American industries for decades.",
+    "To push back against the Chinese aggression, I cosponsored the Protecting American Agriculture from Foreign Adversaries Act and the No American Land for Communist China Act.",
+    "I am proud to support these efforts to protect our national security and our food security, and I look forward to working with President Trump on making these bills the law of this great land."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL G",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL GAS SYSTEMS: PROCEDURES FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH846.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to strongly support H.J. Res. 35, legislation to repeal the Biden administration's waste emissions charge.",
+    "The waste emissions charge implemented by President Biden through the failed Inflation Reduction Act does nothing but shackle our energy producers, raising costs for consumers, and forcing our allies into the hands of adversaries.",
+    "Soon, with the help of H.J. Res. 35, we will once again be energy dominant.",
+    "I urge my colleagues to vote ``yes'' on this important legislation."
+   ]
+  },
+  {
+   "date": "2025-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOSTERING A PROSPEROUS AMERICA",
+   "title": "FOSTERING A PROSPEROUS AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-10/html/CREC-2025-02-10-pt1-PgH587-4.htm",
+   "sentences": [
+    "Protecting Law Enforcement Mr. Speaker, over the last 4 years, our Nation saw millions of illegal aliens stream across our borders.",
+    "In recent weeks, my colleagues and I in the House passed legislation to crack down on criminal aliens to better protect women and girls and to fight back against the fentanyl crisis.",
+    "Today, it is time to protect the brave law enforcement officers working to clean up our disastrous borders.",
+    "H.R. 35, the Agent Raul Gonzalez Officer Safety Act, creates new criminal offenses for those who flee law enforcement at our borders and includes mandatory prison time for chases that cause the loss of human life.",
+    "This is commonsense legislation that will save the lives of our law enforcement officers and make the streets safe for all Americans."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH520-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to give my emphatic support for H.R. 27, the HALT Fentanyl Act.",
+    "For years, the Mexican drug cartels have recruited college chemistry majors to chemically alter the fentanyl precursors that come from the Chinese Communist Party right into Mexico to make more deadly and less- illegal fentanyl analogues.",
+    "Classifying these fentanyl analogues as schedule I drugs will allow our law enforcement officers and our Border Patrol agents the ability to effectively seize these substances and will result in harsher penalties for the criminals who make, traffic, and sell these poisons.",
+    "The time is right now to stop this scourge on our society and to pass the HALT Fentanyl Act, which will allow us to do just that.",
+    "Mr. Speaker, I urge all of my colleagues on both sides of the aisle to help save American lives, starting today with their vote to pass the HALT Fentanyl Act."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING BARRIERS TO LIFESAVING MEDICAL INNOVATIONS",
+   "title": "REMOVING BARRIERS TO LIFESAVING MEDICAL INNOVATIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH535-4.htm",
+   "sentences": [
+    "Mr. Speaker, this week, I introduced the bipartisan ORPHAN Cures Act, legislation to remove barriers to lifesaving medical innovations.",
+    "The ORPHAN Cures Act protects the incentives for critical research and development implemented by the Orphan Drug Act of 1983, which has produced more than 800 treatments for rare diseases over the past 40 years.",
+    "I urge my colleagues to support this bipartisan legislation to foster innovative cures for patients throughout this great land. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN ENERGY INDEPENDENCE",
+   "title": "AMERICAN ENERGY INDEPENDENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgH437-4.htm",
+   "sentences": [
+    "This week, House Republicans will vote on the Protecting American Energy Production Act to ensure that States keep control of hydraulic fracking and that our energy resources continue to flow."
+   ]
+  },
+  {
+   "date": "2025-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVERING ON PRESIDENT TRUMP'S PROMISES",
+   "title": "DELIVERING ON PRESIDENT TRUMP'S PROMISES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-21/html/CREC-2025-01-21-pt1-PgH233-4.htm",
+   "sentences": [
+    "Laying Out New Vision for Nation Mr. Speaker, President Trump has laid out a vision for our Nation over the past few months, from the campaign trail to his first day back in office, a vision that he took action on immediately after being sworn in by signing numerous executive orders to secure our border, lower costs for the American public, and drain the swamp.",
+    "President Trump also shared his support for ending California's out- of-touch electric vehicle mandate.",
+    "I strongly support this action and look forward to working with President Trump to pass my legislation, the Preserving Choice in Vehicle Purchases Act, to protect the individual consumer's right to drive the type of vehicle that they want.",
+    "Preserving Life at All Stages Mr. Speaker, thousands of pro-life advocates will be coming to Washington for the annual March for Life this week.",
+    "This week, I was proud to be an original cosponsor of H.R. 21, the Born-Alive Abortion Survivors Protection Act.",
+    "This important piece of legislation will require medical attention for children who survive botched abortions and impose strong penalties for those who do not comply.",
+    "Life is truly a gift from God, and I will always work to preserve the sanctity of human life. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BIDEN ADMINISTRATION FORCING OUT-OF-TOUCH MANDATES ON THE AMERICAN PEOPLE",
+   "title": "BIDEN ADMINISTRATION FORCING OUT-OF-TOUCH MANDATES ON THE AMERICAN PEOPLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH96.htm",
+   "sentences": [
+    "To confront President Biden's Green New Deal agenda, I am proud to reintroduce the Preserving Choice in Vehicle Purchases Act, which passed this House in a bipartisan manner in the last Congress.",
+    "American People Want Safe Streets and Secure Borders Mr. Speaker, the election in this past November was a loud and clear signal from the American public that they want a secure border and safe streets.",
+    "That is why my Republican colleagues and I are quickly moving legislation to secure our border and ensure that violent criminals are removed from our communities.",
+    "The Preventing Violence Against Women by Illegal Aliens Act would make any sexual offense committed by illegal immigrants a deportable offense and would ensure that they are banned from these United States."
+   ]
+  },
+  {
+   "date": "2025-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A NEW PATH FORWARD",
+   "title": "A NEW PATH FORWARD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-07/html/CREC-2025-01-07-pt1-PgH51-6.htm",
+   "sentences": [
+    "Over the past 4 years, President Biden's administration has imposed needless regulations on the American energy industry, has spurred record-high inflation, and has left our southern border wide open.",
+    "It is now time to get to work to secure our border and to lower prices for the American people."
+   ]
+  }
+ ]
+}

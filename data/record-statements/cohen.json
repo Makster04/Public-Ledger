@@ -1,0 +1,309 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cohen",
+ "name": "Steve Cohen",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 26,
+  "sentences": 63
+ },
+ "statements": [
+  {
+   "date": "2026-10-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING POLITICAL CARTOONIST BILL DAY",
+   "title": "THANKING POLITICAL CARTOONIST BILL DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-10-19/html/CREC-2026-10-19-pt1-PgE1098-4.htm",
+   "sentences": [
+    "Bill is a particularly gifted artist and satirist with whom I became familiar with when he worked for my hometown newspaper, the Memphis Commercial Appeal."
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APPRECIATING POLITICAL CARTOONIST GARRY TRUDEAU AND DOONESBURY",
+   "title": "APPRECIATING POLITICAL CARTOONIST GARRY TRUDEAU AND DOONESBURY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-10-13/html/CREC-2026-10-13-pt1-PgE1073-2.htm",
+   "sentences": [
+    "Mr. Trudeau, a 1970 graduate of Yale University, was a valued political commentator even before he won the Pulitzer Prize for editorial cartooning in 1975, the first comic strip artist to receive that distinction."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BRING YOUR CHIPS TO THE TABLE",
+   "title": "BRING YOUR CHIPS TO THE TABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5028-5.htm",
+   "sentences": [
+    "Mr. Speaker, Mr. Hegseth said we have spent $37 billion on an unnecessary--he didn't say an ``unnecessary'' war, but it is an unnecessary and failed war in Iran--$37 billion and lost 17 soldiers.",
+    "We have resolved the fact that we can stop Iran from having a nuclear weapon when Barack Obama was President and negotiated a treaty.",
+    "Mr. Speaker, I will be willing to vote for a bill that has $70 billion in it when President Trump pays his share by paying his taxes on the $2.2 billion he earned last year, mostly in crypto, which cost the people that bought crypto a billion dollars.",
+    "When Trump pays his share, I will pay my share and vote for it.",
+    "I won't vote for it otherwise."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEGATIVE CONSEQUENCES OF PRESIDENT TRUMP'S TAX CUTS",
+   "title": "NEGATIVE CONSEQUENCES OF PRESIDENT TRUMP'S TAX CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4424.htm",
+   "sentences": [
+    "What he didn't tell you is that President Trump made a deal with himself when he sued the IRS for $1 billion for releasing his tax returns, along with thousands and thousands of other Americans.",
+    "He settled the case with himself and the man he wants to make Attorney General with a clause, an agreement, that the IRS would not prosecute or even look at his tax returns, his family's tax returns, or any businesses they are involved with.",
+    "He doesn't want to spend money on his failed war in Iran or his failure with ICE, who are killing Americans every day."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UKRAINE SUPPORT ACT",
+   "title": "UKRAINE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3879.htm",
+   "sentences": [
+    "This is a fight for supporting a country that is standing up to aggression from Russia; lies from Russia that they weren't going to invade Ukraine when they did it; and people who have killed innocent children, women, and civilians on a regular basis with missile attacks and drone attacks.",
+    "We need to stand with democracy, with freedom, and with courage and against authoritarianism and against Putin.",
+    "I support this resolution, am proud to do it, and thank the Ukrainian people for their sacrifices and their valor."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING 36TH ANNIVERSARY OF BLACK JANUARY",
+   "title": "COMMEMORATING 36TH ANNIVERSARY OF BLACK JANUARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgE55-4.htm",
+   "sentences": [
+    "As the Co-Chairman of the Congressional Azerbaijan Caucus, I urge my colleagues to recognize the sacrifices of the Azerbaijani people in their steps towards independence and encourage a recommitment to the democratic values for which many Azerbaijanis sacrificed their lives. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "For over 50 years, the Clean Water Act has protected rivers, streams, and wetlands that our communities rely on.",
+    "Mr. Chair, I rise in strong opposition to the PERMIT Act.",
+    "Therefore, I oppose the bill and urge a ``no'' vote."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL INSECURITY STRATEGY",
+   "title": "NATIONAL INSECURITY STRATEGY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5803-6.htm",
+   "sentences": [
+    "During Europe's largest land war since World War II, the strategy saves its harshest criticisms for our allies rather than Russia, with war criminal Putin, who started the war."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES INSTITUTE OF PEACE",
+   "title": "UNITED STATES INSTITUTE OF PEACE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5031-6.htm",
+   "sentences": [
+    "Subsequently, law enforcement removed the president of the United States Institute of Peace forcibly from his office, and then the Trump administration fired every employee and dismantled the office."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COUNT THE CRIMES TO CUT ACT",
+   "title": "COUNT THE CRIMES TO CUT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4923.htm",
+   "sentences": [
+    "I will miss him in working on this act, Article I bill."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JUSTICE SHOULD BE REQUIRED",
+   "title": "JUSTICE SHOULD BE REQUIRED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4813.htm",
+   "sentences": [
+    "Today, President Trump signed the Epstein documents release bill.",
+    "Lots of women were up here who were victims of Jeffrey Epstein's sexual felonies, and they celebrated when the House passed it and the Senate passed it, but it is clear today that classified documents therein will not be released and documents that might relate to an ongoing investigation which President Trump authorized going after Bill Clinton, Larry Summers, and others on the Democratic side which are false and improper investigations where Ms. Bondi said there was nothing there, will not allow for material to be disclosed.",
+    "That money should go to the Epstein victims."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE ICE OUT OF MEMPHIS",
+   "title": "TAKE ICE OUT OF MEMPHIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4699-2.htm",
+   "sentences": [
+    "I will write the Trump administration and ask them to take ICE out of Memphis."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BILLIONAIRES DON'T PAY THEIR FAIR SHARE OF TAXES",
+   "title": "BILLIONAIRES DON'T PAY THEIR FAIR SHARE OF TAXES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4397-5.htm",
+   "sentences": [
+    "Mr. Speaker, today Representative Beyer, Senator Whitehouse, Senator Wyden, and I introduced a billionaires tax bill.",
+    "Billionaires don't pay their fair share of taxes, and with the Trump tax program starting in 2017, they have increased their wealth tremendously.",
+    "Not paying taxes on real estate and stocks and all that they don't trade or sell, just accumulating that wealth over and over again while hardworking people, firemen, nurses, you name it, pay on their wages is wrong.",
+    "If that is the only thing that has value anymore, then we are in big trouble.'' We are in big trouble because that seems to be what is valued all the way to the White House, where they are using cryptocurrency to make money out of their position, and it is wrong. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE BILLIONAIRE INCOME TAX ACT AND NOTING THE POPE'S CONCERN ON INCOME INEQUALITY",
+   "title": "INTRODUCTION OF THE BILLIONAIRE INCOME TAX ACT AND NOTING THE POPE'S CONCERN ON INCOME INEQUALITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgE863-3.htm",
+   "sentences": [
+    "Mr. Speaker, I plan to introduce the Billionaire Income Tax Act on Wednesday and will hold a press conference with the House cosponsor Congressman Don Beyer and the Senate bill sponsor Ron Wyden.",
+    "It is an effort to establish a level of fairness in federal income taxation and prevent millionaires and billionaires, and the aspiring trillionaire, Elon Musk, from taking advantage of the tax code to pay what, for them is pocket change.",
+    "I have not asked him, but it looks like Pope Leo would endorse the Billionaire Income Tax Act.",
+    "One factor, he said, and I'm quoting him, is ``the continuously wider gap between the income levels of the working class and the money that the wealthiest receive."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELEASE EPSTEIN FILES",
+   "title": "RELEASE EPSTEIN FILES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3745-5.htm",
+   "sentences": [
+    "Mr. Speaker, what Members of the Democratic Caucus are doing to my right is signing a discharge petition to release the Epstein files.",
+    "Mr. Speaker, I am going to sign the petition."
+   ]
+  },
+  {
+   "date": "2025-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING CHAOTIC AND HARMFUL FAILINGS OF THIS CONGRESS",
+   "title": "CONDEMNING CHAOTIC AND HARMFUL FAILINGS OF THIS CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-25/html/CREC-2025-07-25-pt1-PgE727-4.htm",
+   "sentences": [
+    "We have taken away from women the right to go to Planned Parenthood to have health care that they need.",
+    "We have taken away protections for clean energy to change the rate of growth of global warming that affects our planet and affects our future with hotter and hotter summers, flash floods, fires and disasters.",
+    "I am ashamed to be a part of this Congress, but I will stay because people need to stand up, speak the truth, stand up for things the American people have always stood for: justice, due process, the rule of law, fairness, caring about the little guy, caring about giving people something when they need it, but not giving something to people who have too much--millionaires and billionaires.",
+    "Just think, Mr. Speaker, of the harm the rescissions bill did to public broadcasting--NPR and PBS--legacies of President Johnson's Great Society that help our citizens stay informed.",
+    "Think of the harm done to life-saving foreign aid that keeps children fed and vaccinated from dreadful diseases that can and will cross our borders in check.",
+    "And the Big Ugly Bill does substantial harm to critical programs and to the people who rely on them, so millionaires can get a tax break and the rest of the country gets huge and endless deficits and trillions more in debt.",
+    "Unfortunately, the biggest, ugliest bill we passed, and the rescissions package will contribute to incalculable pain, suffering, and death all around the world."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THIS CONGRESS DESERVES AN \"F\"",
+   "title": "THIS CONGRESS DESERVES AN \"F\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3550-3.htm",
+   "sentences": [
+    "We have taken away women's rights to go to Planned Parenthood to have the healthcare that they need, important healthcare about their bodies.",
+    "We have taken away protections for clean energy, to change the rate of growth of global warming that affects our planet and affects our future with hotter and hotter summers and more and more problems: flash floods, fires, and disasters.",
+    "I am ashamed to be a part of this Congress, but I will be because people need to stand up, speak the truth, and stand up for things that the American people have stood for for a long time like justice, due process, fairness, caring about the little guy, and caring about giving people something who have not enough but not something to people who have too much: millionaires and billionaires. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MORE FUNDING FOR FBI",
+   "title": "MORE FUNDING FOR FBI",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgH3257-3.htm",
+   "sentences": [
+    "Crime should be focused on in the FBI and not, as President Trump said today, that the FBI should be working on voter fraud, public corruption, and election fraud in the 2020 elections, and then he said thugs and criminals."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DO NO HARM",
+   "title": "DO NO HARM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2648-6.htm",
+   "sentences": [
+    "That is not even to mention the problems immediately to people from taking away their Medicaid, taking away their ACA, and taking away that healthcare."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOBILIZING AND ENHANCING GEORGIA'S OPTIONS FOR BUILDING ACCOUNTABILITY, RESILIENCE, AND INDEPENDENCE ACT",
+   "title": "MOBILIZING AND ENHANCING GEORGIA'S OPTIONS FOR BUILDING ACCOUNTABILITY, RESILIENCE, AND INDEPENDENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1823.htm",
+   "sentences": [
+    "What is going on is basically a revolution where Ivanishvili, who runs the party and has investments in Russia, is trying to bring them closer to Russia and Putin.",
+    "Madam Speaker, I thank Congressman Joe Wilson and the other co- leads of this important legislation, Congressman Veasey and Congressman Hudson, and I urge its passage."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Mr. Speaker, this is about the billionaires.",
+    "It is not about a budget deficit because the majority wouldn't have to give the money to the billionaires if my colleagues on the other side of the aisle gave it to decreasing the deficit.",
+    "This is the party that is trying to kill Social Security through the DOGE boys, who are cutting out services for people who use the phone to deal with their Social Security and eliminating employees from Social Security.",
+    "The majority is trying to kill Social Security.",
+    "That is who it is, and Republicans want to help the billionaires and hurt the folks who live on Social Security."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH781-3.htm",
+   "sentences": [
+    "Madam Speaker, this budget is about the millionaires, the trillionaires, the people earning over $400,000 a year, and giving them a $4 trillion tax cut over the next 10 years.",
+    "Americans are the people who give him the money to give it to the trillionaires and billionaires who were first in President Trump's inaugural crowd."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "Madam Speaker, I just find it unbelievable that we have called up a bill today to require the President to have congressional approval to stop fracking when we don't ask the President to not impound funds that have been appropriated through Article I by Congress, which is how they are supposed to be appropriated, and when we don't ask the President to not fire the IGs when legislation requires him to give 30 days' notice to Congress before he does so and to give good reason for it when the IGs are there to find fraud, abuse, and waste of government moneys."
+   ]
+  },
+  {
+   "date": "2025-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA IS UNDER ATTACK",
+   "title": "AMERICA IS UNDER ATTACK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgH454.htm",
+   "sentences": [
+    "We should also come together and remind our President that we don't know what the cause of it was, and it certainly wasn't DEI.",
+    "DEI has never caused deaths in this country's history.",
+    "We need to come together and remember we were all on this floor when it was invaded on January 6 by insurrectionists.",
+    "I don't think one of my colleagues on the other side has questioned the pardons given to all the January 6 insurrectionists who tried to take over this government, nor have they stood up to a President and his aide, private citizen Elon Musk, who are doing unconstitutional duties to take over government branches, which they don't have the right to do, that only Congress can pass bills to change.",
+    "America is under attack as much as it was on January 6."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING AZERBAIJAN'S \"BLACK JANUARY\"",
+   "title": "COMMEMORATING AZERBAIJAN'S \"BLACK JANUARY\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgE34-4.htm",
+   "sentences": [
+    "As the co-chairman of the Congressional Azerbaijan Caucus, I urge my colleagues to recognize the sacrifices of the Azerbaijani people in their steps towards independence and encourage a recommitment to the democratic values for which many Azerbaijanis sacrificed their lives. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TENNESSEE VALLEY AUTHORITY SALARY TRANSPARENCY ACT",
+   "title": "TENNESSEE VALLEY AUTHORITY SALARY TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH105.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 144, bipartisan legislation to promote additional transparency over the salary structure of the Tennessee Valley Authority, otherwise known as the TVA."
+   ]
+  }
+ ]
+}

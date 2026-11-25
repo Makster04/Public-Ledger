@@ -1,0 +1,115 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "pou",
+ "name": "Nellie Pou",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 31
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOVING LONG-DELAYED FLOOD PROTECTION PROJECTS FORWARD",
+   "title": "MOVING LONG-DELAYED FLOOD PROTECTION PROJECTS FORWARD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5836-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Water Resources Development Act.",
+    "Mr. Speaker, I urge my colleagues to pass the bill now, before the next flood comes. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LODI TEACHERS RECOGNITION",
+   "title": "LODI TEACHERS RECOGNITION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH109-2.htm",
+   "sentences": [
+    "Since joining Lodi in 2012, she has grown from school counselor to supervisor of school counseling, overseeing guidance and mental health support for students across her district.",
+    "I will continue working with our district school officials to use every single tool available to restore this funding and to fight to support public education.",
+    "I will not give up on our children. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "It undermines the 50 years of vital, clean water progress and weakens the ability of States like New Jersey to control pollution in its own waters.",
+    "Supporting localities in their efforts to provide clean water is one of my top priorities as a member of the Water Resources and Environment Subcommittee.",
+    "These environmental rollbacks will only make our wealthiest polluters richer and our riverfront communities sicker.",
+    "Mr. Chair, I rise to oppose this bill, H.R. 3898, because it is an affront to environmental stewardship everywhere.",
+    "This bill allows irreparable, preventable damage in our communities, and I urge all of my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4553, ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.J. RES. 104, ",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4553, ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.J. RES. 104, PROVIDING FOR CONGRESSIONAL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3771.htm",
+   "sentences": [
+    "Amidst the rising cost of living, Americans are now being denied an important tool to lower their energy costs solely so billionaires could get another unneeded tax giveaway.",
+    "That is why I introduced a commonsense amendment to study the impacts of tearing this program away from American homeowners.",
+    "I came to Congress to lower high costs, and I will not stop working to lower energy costs for hardworking Americans."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "Mr. Speaker, the massive cuts to Medicaid within this bill will unleash catastrophic impacts across America and my district.",
+    "More than 1.7 million New Jerseyans, including over one-third of all children in our State, get their healthcare through Medicaid.",
+    "Our State will lose one-quarter of the Federal funding it receives for Medicaid.",
+    "That is why I offered an amendment to require continuous Medicaid coverage through pregnancy and a year postpartum.",
+    "If my colleagues support women and working families, there is no reason to oppose this provision.",
+    "I urge my colleagues to please vote ``no'' on this cruel rule."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CALLING UPON LOCAL COMMUNITIES TO SUPPORT ORGANIZATIONS THAT PROVIDE RESOURCES AND AID GOLD SHIELD FAMILIES IN THEIR TIME OF NEED",
+   "title": "CALLING UPON LOCAL COMMUNITIES TO SUPPORT ORGANIZATIONS THAT PROVIDE RESOURCES AND AID GOLD SHIELD FAMILIES IN THEIR TIME OF NEED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1960-6.htm",
+   "sentences": [
+    "Gold Shield families suffer tremendous, heartbreaking loss when their loved ones--police officers, firefighters, emergency medical technicians, and corrections officers--are killed while serving their communities.",
+    "This is funding that Congress provided to the Justice Department to help prosecutors, police, and sheriffs' departments protect and enhance public safety.",
+    "While the Trump administration and my friends across the aisle call for law and order and public safety, the Department of Justice is terminating funding for congressionally authorized grant programs that keep our communities safe.",
+    "Mr. Speaker, I rise in support of H. Res. 364, which calls on local communities to support organizations that provide resources and assistance to the Gold Shield families.",
+    "Mr. Speaker, I support H. Res. 364 because Gold Shield families deserve recognition and need assistance.",
+    "Mr. Speaker, I support the resolution before us today.",
+    "I also urge my colleagues to express their opposition to the elimination of congressionally authorized public safety grant programs at the Department of Justice.",
+    "Mr. Speaker, I wholeheartedly support the resolution before us today, and I encourage all of my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REDESIGNATION OF PATERSON GREAT FALLS NHP FACILITIES",
+   "title": "REDESIGNATION OF PATERSON GREAT FALLS NHP FACILITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1979.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 249, a bill to redesignate parts of the Paterson Great Falls National Historical Park in honor of the late Congressman Bill Pascrell, Jr. I thank my friend and fellow New Jerseyan, Congressman Frank Pallone, for leading this effort."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "This GOP budget will destroy Medicaid and take healthcare away from millions of Americans.",
+    "In my district alone, this could strip healthcare from the 215,000 people on Medicaid, blow up hospital budgets, raise insurance premiums, all to give trillions in tax cuts to the millionaires.",
+    "Mr. Chair, I reject it, and I intend to vote ``no'' to this cruel Republican budget."
+   ]
+  }
+ ]
+}

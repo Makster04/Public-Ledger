@@ -1,0 +1,59 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cmiller",
+ "name": "Carol D. Miller",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 11
+ },
+ "statements": [
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1949, the Unlocking our Domestic LNG Potential Act of 2025.",
+    "Mr. Speaker, I urge my colleagues to support this important piece of legislation."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Today, thanks to the hard work of the Ways and Means Republicans, we will make those tax cuts permanent and prevent an end-of-the-year tax hike.",
+    "Mr. Speaker, I rise today in strong support of this big, beautiful bill.",
+    "This legislation will make the life of the average American better, and I support getting it to President Trump's desk.",
+    "Mr. Speaker, I urge all my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Working families got more money back in their paychecks from a simplified tax code.",
+    "Main Street America was able to utilize the small business deduction to weather the storm of high inflation during the Biden years, and larger businesses were able to invest more of their money domestically because of a globally competitive corporate rate.",
+    "Mr. Speaker, I rise today in strong support of the One Big Beautiful Bill Act."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "Last fall, I had the opportunity to visit Taipei and learn about the robust investments Taiwan is making right there in semiconductor manufacturing.",
+    "Mr. Speaker, I rise today in support of H.R. 33."
+   ]
+  }
+ ]
+}

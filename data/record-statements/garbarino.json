@@ -1,0 +1,236 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "garbarino",
+ "name": "Andrew R. Garbarino",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 20,
+  "sentences": 44
+ },
+ "statements": [
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SPENDING AVIATION FEES FOR EQUIPMENT, GUARANTEEING UPGRADED AND ADVANCED RISK DETECTION AND SAFETY ACT OF 2026",
+   "title": "SPENDING AVIATION FEES FOR EQUIPMENT, GUARANTEEING UPGRADED AND ADVANCED RISK DETECTION AND SAFETY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4388.htm",
+   "sentences": [
+    "I thank Representative Strong for his leadership, and I look forward to continuing our engagement on both sides of the aisle and with our colleagues on the Appropriations Committee to ensure that this bill improves deployment timelines for critical aviation security technology without any unintended consequences for the TSA workforce or any other TSA operations.",
+    "Mr. Speaker, I rise in support of H.R. 8770, the SAFEGUARDS Act."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING TRAVEL FOR MILITARY MEMBERS ACT",
+   "title": "IMPROVING TRAVEL FOR MILITARY MEMBERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4390.htm",
+   "sentences": [
+    "I rise in support of H.R. 9328, the Improving Travel for Military Members Act."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOMELAND SECURITY CAPABILITIES PRESERVATION REPORTING ACT OF 2026",
+   "title": "HOMELAND SECURITY CAPABILITIES PRESERVATION REPORTING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4391.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 8874, the Homeland Security Capabilities Preservation Reporting Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REIMBURSABLE SCREENING SERVICES PROGRAM EXTENSION ACT OF 2026",
+   "title": "REIMBURSABLE SCREENING SERVICES PROGRAM EXTENSION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4392.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 9391, the Reimbursable Screening Services Program Extension Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE-STOP PILOT PROGRAM EXTENSION ACT",
+   "title": "ONE-STOP PILOT PROGRAM EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4393.htm",
+   "sentences": [
+    "Under the usual screening process, passengers coming from outside the United States undergo inspections by Customs and Border Protection, collect their checked bags, and exit the sterile area of the airport.",
+    "Mr. Speaker, I rise in support of H.R. 9388, the One-Stop Pilot Program Extension Act."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WEATHERIZING INFRASTRUCTURE IN THE NORTH AND TERRORISM EMERGENCY READINESS ACT OF 2025",
+   "title": "WEATHERIZING INFRASTRUCTURE IN THE NORTH AND TERRORISM EMERGENCY READINESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4394.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3106, the Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING TRAVEL FOR AMERICAN FAMILIES ACT",
+   "title": "IMPROVING TRAVEL FOR AMERICAN FAMILIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4395.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 8897, the Improving Travel for American Families Act."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAJOR NON-NATO ALLY TERROR THREAT ASSESSMENT ACT",
+   "title": "MAJOR NON-NATO ALLY TERROR THREAT ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4396.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 8168) to require an assessment of terrorism threats to the United States posed by foreign terrorist organizations and Specially Designated Global Terrorists present in countries that are major non- NATO allies, and for other purposes.",
+    "Mr. Speaker, I rise in support of H.R. 8168, the Major Non-NATO Ally Terror Threat Assessment Act.",
+    "The Major Non-NATO Ally Terror Threat Assessment Act requires the Secretary of Homeland Security, in consultation with the Secretary of State and the Director of National Intelligence, to submit a report to Congress assessing terrorism threats from designated terrorist organizations operating in countries designated by the United States as a major non-NATO ally.",
+    "Major non-NATO allies benefit from expedited procedures in the foreign military sales process, and this status also makes them desirable for foreign military financing.",
+    "Major non-NATO allies are also eligible for enhanced defense research collaboration and the positioning of U.S. defense equipment.",
+    "Over time, there has been inconsistent oversight of the major non- NATO allies program, and today there are situations where U.S. designated terrorist organizations are present or operating in countries that have also been designated major non-NATO allies.",
+    "This legislation will strengthen oversight of the program to ensure the United States has an adequate threat picture when it comes to terrorist activity in designated major non-NATO allies."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELO REALIGNMENT AND STRATEGIC ENGAGEMENT REFORM ACT OF 2026",
+   "title": "ELO REALIGNMENT AND STRATEGIC ENGAGEMENT REFORM ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4398-2.htm",
+   "sentences": [
+    "This plan must specifically address ways to improve coordination with law enforcement agencies, centralize points of contact, and enhance information sharing.",
+    "I rise in support of H.R. 7574, the ELO Realignment and Strategic Engagement Reform Act of 2026.",
+    "Madam Speaker, I urge my colleagues to support H.R. 7574."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEASURING ILLICIT FENTANYL TRAFFICKING ACT",
+   "title": "MEASURING ILLICIT FENTANYL TRAFFICKING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4398.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 8535, the Measuring Illicit Fentanyl Trafficking Act."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 25TH ANNIVERSARY OF 9/11 COMMEMORATIVE COIN ACT",
+   "title": "25TH ANNIVERSARY OF 9/11 COMMEMORATIVE COIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3579.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the bill, the 25th Anniversary of 9/11 Commemorative Coin Act.",
+    "I thank my colleagues from both sides of the aisle for supporting this legislation, and I urge them all to support it."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7744, FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 7744, FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2380-3.htm",
+   "sentences": [
+    "This bill includes funding for body cameras, support for the DHS Office of Inspector General, additional resources for training, and new transparency and oversight requirements for ICE.",
+    "They are blocking our funding for our cybersecurity workforce while Iran is attacking us daily in our cybersecurity terrain.",
+    "Mr. Speaker, as chairman of the Committee on Homeland Security, I rise today in support of the rule providing for consideration of H.R. 7744.",
+    "Twenty-five years after the worst terrorist attack on U.S. soil, I urge my Democratic colleagues to not forget why this Department was established in the first place.",
+    "Mr. Speaker, I urge House Democrats to show their Senate counterparts that the right thing to do is support this bill."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "title": "RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2391.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my motion."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS INTELLIGENCE ROTATIONAL ASSIGNMENT PROGRAM AND LAW ENFORCEMENT SUPPORT ACT",
+   "title": "DHS INTELLIGENCE ROTATIONAL ASSIGNMENT PROGRAM AND LAW ENFORCEMENT SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4680.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2212, the DHS Intelligence Rotational Assignment Program and Law Enforcement Support Act.",
+    "As the only intelligence agency with a duty to share information with State and local law enforcement, it is imperative the Office of Intelligence and Analysis analysts have effective partnerships within the intelligence community."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY VEHICULAR TERRORISM PREVENTION AND MITIGATION ACT OF 2025",
+   "title": "DEPARTMENT OF HOMELAND SECURITY VEHICULAR TERRORISM PREVENTION AND MITIGATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4681.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 1608, the Department of Homeland Security Vehicular Terrorism Prevention and Mitigation Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "title": "STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4682.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 2659, the Strengthening Cyber Resilience Against State-Sponsored Threats Act.",
+    "Madam Speaker, I urge my colleagues to support H.R. 2659."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING INFORMATION BY LOCAL LEADERS FOR AGENCY RESILIENCE ACT",
+   "title": "PROTECTING INFORMATION BY LOCAL LEADERS FOR AGENCY RESILIENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4685.htm",
+   "sentences": [
+    "In recent years, local governments across the country have experienced attacks that shut down city services, delayed school operations, locked police and court records, and forced jurisdictions of all sizes to spend significant funds on recovery.",
+    "Madam Speaker, I rise today in support of H.R. 5078, the Protecting Information by Local Leaders for Agency Resilience Act, also known as the PILLAR Act."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BOTTLES AND BREASTFEEDING EQUIPMENT SCREENING ENHANCEMENT ACT",
+   "title": "BOTTLES AND BREASTFEEDING EQUIPMENT SCREENING ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4688.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of S. 260, the Bottles and Breastfeeding Equipment Screening Enhancement Act.",
+    "I am very pro-family and pro-parent, and I urge my colleagues to support S. 260."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING OVERSIGHT OF DHS INTELLIGENCE ACT",
+   "title": "STRENGTHENING OVERSIGHT OF DHS INTELLIGENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4690.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 2261, the Strengthening Oversight of DHS Intelligence Act."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING OUR NATION'S CAPITAL EMERGENCY ACT",
+   "title": "PROTECTING OUR NATION'S CAPITAL EMERGENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2589-2.htm",
+   "sentences": [
+    "At the core of the problem is a dangerously understaffed police force brought about by reckless policies.",
+    "Law enforcement in D.C. has been left without basic bargaining rights or procedural protections, something my colleagues on the other side usually support, but for some reason here they are against it.",
+    "The result is consistently high crime rates and a staffing shortfall of about 800 officers that puts both police and residents at risk.",
+    "That might not have happened if we weren't understaffed by about 800 officers in Washington, D.C. When we undermine law enforcement, we embolden the criminals.",
+    "I urge my colleagues to support this bill and send a clear message: We stand with law enforcement and will not allow D.C. to spiral further into lawlessness.",
+    "Madam Speaker, I rise in support of my bill, H.R. 2096, the Protecting Our Nation's Capital Emergency Act."
+   ]
+  }
+ ]
+}

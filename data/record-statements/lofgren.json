@@ -1,0 +1,238 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "lofgren",
+ "name": "Zoe Lofgren",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 18,
+  "sentences": 64
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION SEXUAL HARASSMENT AND ASSAULT PREVENTION IMPROVEMENTS ACT OF 2025",
+   "title": "NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION SEXUAL HARASSMENT AND ASSAULT PREVENTION IMPROVEMENTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgE937-2.htm",
+   "sentences": [
+    "Mr. Speaker, I support H.R. 2406."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADVANCING WATER RESEARCH AND COLLABORATION ACT OF 2025",
+   "title": "ADVANCING WATER RESEARCH AND COLLABORATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgE944-5.htm",
+   "sentences": [
+    "These challenges can create barriers to equitable access to clean water.",
+    "Mr. Speaker, I support H.R. 7889, a bill to reauthorize the water resources research and technology institutes program."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE ISSUED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO THE \"CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE ISSUED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO THE \"CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL STANDARDS; COMMERCIAL HARBOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5953.htm",
+   "sentences": [
+    "They are not reining in costs, not reining in ICE, not reining in the Iran war.",
+    "Why would we want to use diesel, that is selling in some parts of the State now at $8.99 a gallon, instead of cheaper, clean, electricity?",
+    "I urge a ``no'' vote on this ridiculous resolution."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL S",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL STANDARDS; OCEAN-GOING VESSELS AT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5680.htm",
+   "sentences": [
+    "How is encouraging ships to burn more expensive diesel going to help the families across America struggling with Trump's affordability crisis?",
+    "The war of choice in Iran that the President initiated has caused prices to spike.",
+    "The other day, I was driving by a gas station and saw diesel fuel at $8.99 a gallon.",
+    "Now, the State of California sued, and a Federal court has ordered the EPA to withdraw or correct the reclassifications of all six Clean Air Act section 209 waiver orders that it submitted to Congress because EPA violated the law in labeling them as rules and submitting them to Congress for action under the CRA."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgE708.htm",
+   "sentences": [
+    "Madam Chair, today I will vote for the bipartisan Amendment No. 8 offered by Representative Massie to prevent the United States from sending an additional $3.3 billion in foreign military financing to Israel.",
+    "I support Israel's sovereignty.",
+    "I support funding for defensive systems such as the Iron Dome.",
+    "It is worth noting that Netanyahu himself has indicated that Israel has sufficient resources so that his country no longer needs to rely on the United States for financial aid. ____________________",
+    "I support a two-state- solution with a sovereign Palestinian state."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING THE HONORABLE JAMES GALLAGHER TO THE HOUSE OF REPRESENTATIVES",
+   "title": "WELCOMING THE HONORABLE JAMES GALLAGHER TO THE HOUSE OF REPRESENTATIVES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4076-2.htm",
+   "sentences": [
+    "As chair of the Democratic congressional delegation, it is my honor to welcome you to the largest delegation in Congress, representing the greatest State in the Union."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FALLEN SERVICEMEMBERS RELIGIOUS HERITAGE RESTORATION ACT",
+   "title": "FALLEN SERVICEMEMBERS RELIGIOUS HERITAGE RESTORATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3160.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to reauthorizing FISA section 702 without meaningful reform.",
+    "I have opposed this abuse under both Republican and Democratic administrations, and I oppose it today."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS INNOVATION AND ECONOMIC SECURITY ACT",
+   "title": "SMALL BUSINESS INNOVATION AND ECONOMIC SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2491-9.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of S. 3971, a reauthorization of the SBIR and STTR Programs.",
+    "I strongly urge all of my colleagues to support S. 3971 without delay."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "Mr. Chair, while I am supportive of provisions in the minibus that would fund the Departments of Labor, Health and Human Services, Education, Transportation, and Housing and Urban Development, especially those pertaining to healthcare, I cannot in good conscience endorse a spending bill that continues to explode our Defense budget.",
+    "This bill provides a $400 million increase to the National Institutes of Health (NIH), a $1.7 billion increase to the Centers for Disease Control (CDC), and a $364 million increase to the Substance Abuse and Mental Health Services Administration (SAMHSA), rebuking the deep cuts made to these agencies in the Republican House bill.",
+    "These dollars mean that the United States will continue to provide the world with cutting edge medical research, accurate data for health guidance and disease prevention, and support services for those who are struggling with their mental health or substance use.",
+    "It restores funding to several programs that were eliminated by President Trump and House Republicans, including: Firearm Injury and Mortality Prevention Research, the Corporation for National and Community Service, the Department of Labor's Women's Bureau, and valuable Title X Family Planning funding.",
+    "It increases funding to Head Start, LIHEAP, and the Social Security Administration, ensuring that from beginning to end, Americans have the best chance at success from preschool to post-retirement.",
+    "The fiscal year 2026 Transportation, Housing, and Urban Development bill, which provides necessary funding to house our neighbors and build more affordable housing.",
+    "The agreement safeguards the Continuum of Care program--a federal program that fosters a community-wide commitment to ending homelessness--from Trump administration attacks ensuring that members of our community are not evicted by President Trump.",
+    "This is the sole federal program that helps communities build more affordable housing for rent and ownership.",
+    "I am pleased that the bill does not include additional funding to cover the President's illegal strikes in the Caribbean and Venezuela.",
+    "Finally, the bill reaffirms the ironclad support in Congress for the NATO alliance and all of its 32 member states, including Denmark.",
+    "He is also pursuing foreign entanglements around the globe, and I will not write him a blank check to potentially invade other countries or pit America's military against our allies.",
+    "Mr. Chair, I rise in support of H.R. 7148, the FY2026 Consolidated Appropriations Act.",
+    "I urge my colleagues to support this bipartisan agreement."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "He and I worked very closely together on the bipartisan Farm Workforce Modernization Act which would provide stabilization for farmworkers, farmers, and the ag sector, and he added so much because he really knew how farming worked and what would work and what wouldn't work, and he was a collaborator.",
+    "We also introduced together the bipartisan Utility Resilience and Reliability Act that really was commonsense safety standards to minimize power outages."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTENSION OF SBIR AND STTR AUTHORITY",
+   "title": "EXTENSION OF SBIR AND STTR AUTHORITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4273.htm",
+   "sentences": [
+    "Mr. Speaker, I support H.R. 5100, a bill that I cosponsored along with the Chair of the Science Committee, Representative Babin, and the Chair and Ranking Member of the Small Business Committee, Representatives Williams and Velazquez.",
+    "I do support a long-term comprehensive reauthorization of the program, and I am committed to taking a serious look at where the program has challenges and needs good governance updates.",
+    "What I do not accept is a repeat of the 2022 process, in which one corner out of six effectively dictated the process and rammed through a bill that narrowly reflected only their priorities and completely omitted Science Committee priorities, among others."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NTIA POLICY AND CYBERSECURITY COORDINATION ACT",
+   "title": "NTIA POLICY AND CYBERSECURITY COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgE680-4.htm",
+   "sentences": [
+    "For example, Congress authorized NIST, in collaboration with CISA, to conduct a cybersecurity activity related to the internet and communications networks in the Cybersecurity Enhancements Act of 2014, the CHIPS and Science Act of 2020, the HACKED Act of 2021, and more.",
+    "As such, this bill merits further vetting and input from the Department of Commerce.",
+    "Mr. Speaker, I rise today in opposition to H.R. 1766, The NTIA Policy and Cybersecurity Coordination Act."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Here's the broader picture: this legislation borrows over $3 trillion to pay for tax breaks that overwhelmingly benefit the wealthiest Americans.",
+    "Donald Trump said he would deport violent criminals."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "title": "CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3016-5.htm",
+   "sentences": [
+    "Trump said he was going to go arrest and deport violent criminals.",
+    "Instead, armed, masked ICE agents, some refusing to identify themselves, aggressively, and in some cases even violently, took down day workers at Home Depot, busboys, gardeners, and a union leader, and regular people in Los Angeles objected to that.",
+    "The police, LAPD, had the situation under control.",
+    "When President Trump deployed the Marines and National Guard in L.A., it was not at the request of local officials, the chief of police, or the Governor.",
+    "It was unprecedented, unnecessary, and a clear attempt to take over the State's law enforcement authority.",
+    "It expresses support for law enforcement and for the National Guard and for the Marines, and it condemns violence by those who committed it.",
+    "It says: ``Whereas California's leadership has prioritized protecting illegal immigrants and violent individuals over United States citizens.'' That is absurd.",
+    "Mr. Speaker, I oppose the Kim resolution.",
+    "I will point out to my colleagues on the other side of the aisle, in case they need a reminder, L.A. County is 4,060 square miles, not the 10 blocks.",
+    "I will just end with this: Who should we be more concerned about?"
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 60, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 60, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NATIONAL RECREATION AREA: MOTOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgH1693-6.htm",
+   "sentences": [
+    "That is not just my opinion, the nonpartisan Government Accountability Office has not once but twice found that waivers California receives under the Clean Air Act are not rules under the CRA.",
+    "Just one of California's standards that would be blocked, the Advanced Clean Cars II, is estimated to reduce healthcare costs by $13 billion over the next 25 years.",
+    "I also oppose the underlying resolutions because they directly risk our fellow Americans' health."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND USDA INTERAGENCY RESEARCH ACT",
+   "title": "DOE AND USDA INTERAGENCY RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgE247-7.htm",
+   "sentences": [
+    "Together these agencies can leverage their incredible capabilities to address some of our multi- disciplinary research challenges in crop science, biofuels, carbon storage, and precision agriculture technologies.",
+    "Codifying the partnership between these agencies would be a testament to our commitment to these communities, particularly rural America, and our climate.",
+    "The Science, Space, and Technology Committee generated substantial momentum through the bipartisan CHIPS and Science Act, which included research support towards agriculture productivity improvement goals.",
+    "Mr. Speaker, I rise in strong support of H.R. 1326, the ``DOE and USDA Interagency Research Act'' which I was proud to introduce alongside my colleague and friend, the gentleman from Oklahoma, Mr. Lucas."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCIAL REMOTE SENSING AMENDMENT ACT OF 2025",
+   "title": "COMMERCIAL REMOTE SENSING AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgE251.htm",
+   "sentences": [
+    "Commercial imagery of the advancement of Russia into Ukraine is but one example.",
+    "Mr. Speaker, I rise in strong support of H.R. 1325, the ``Commercial Remote Sensing Amendment Act of 2025.'' I would like to thank the gentleman from Oklahoma, Congressman Frank Lucas, who was former Chair of the Committee on Science, Space, and Technology where I serve as Ranking Member, for reintroducing this legislation.",
+    "Mr. Speaker, I urge my colleagues in the House to vote ``YEA'' on H.R. 1325, the ``Commercial Remote Sensing Amendment Act of 2025.'' ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVID",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVIDE SERVICES EFFECTUATING DIGITAL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1099.htm",
+   "sentences": [
+    "It is impossible that a more tailored rule aimed at appropriate tax compliance in the digital assets space could be appropriate."
+   ]
+  }
+ ]
+}

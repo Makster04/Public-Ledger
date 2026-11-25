@@ -1,0 +1,209 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "costa",
+ "name": "Jim Costa",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 71
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "I was proud to support Honoring our PACT Act, which expanded healthcare and benefits for veterans with toxic substances and also the passage of the COMPACT Act to strengthen mental health services and suicide prevention which is so critical.",
+    "Mr. Speaker, I rise today in support of the Major Richard Star Act to honor the brave men and women who have served our Nation.",
+    "I urge my colleagues on both sides of the aisle to support this important legislation, and I again thank my friend, Representative Takano, for his leadership."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HUNGER IS NOT A POSITIVE TREND",
+   "title": "HUNGER IS NOT A POSITIVE TREND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4418.htm",
+   "sentences": [
+    "A drop in enrollment has nothing to do with fraud or a stronger economy.",
+    "It is an international security issue when we look at food hunger around the globe and cuts that have taken place in USAID that were devastating, to make but one of those examples."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOOD IS NATIONAL SECURITY",
+   "title": "FOOD IS NATIONAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2427-2.htm",
+   "sentences": [
+    "Farmers are navigating misguided tariffs policy, volatile markets, and disease outbreaks.",
+    "We must stabilize farm income, or we will allow our producers to fall behind."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING UNREGULATED BIOLOGICAL LABORATORIES",
+   "title": "STOPPING UNREGULATED BIOLOGICAL LABORATORIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1985-3.htm",
+   "sentences": [
+    "The situation placed local law enforcement officers, code enforcement staff, and nearby residents at serious risk.",
+    "I urge my colleagues to join me in supporting legislation that I have introduced from the House committee recommendations.",
+    "That is why I have introduced legislation based upon committee recommendations.",
+    "I urge Members on both sides of the aisle to review these two pieces of legislation and to become cosponsors.",
+    "Mr. Speaker, I urge that we act on this legislation so that people around the country can feel safe from any kind of illegal biological labs that may crop up in their communities."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APPLAUDING STABILIZING CRIME VICTIMS FUND",
+   "title": "APPLAUDING STABILIZING CRIME VICTIMS FUND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH728-4.htm",
+   "sentences": [
+    "This bill heads to the Senate, and I am urging my colleagues there to act quickly on its passage for victims of crime and their families. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING AMERICANS FIRST",
+   "title": "PUTTING AMERICANS FIRST",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH144.htm",
+   "sentences": [
+    "It was an attack that resulted in the deaths of five law enforcement officers.",
+    "This administration has prioritized costly foreign entanglements without transparency or congressional approval while working families pay the price at home.",
+    "Instead of protecting the economic well-being of Americans, we are seeing the following: Tariff policies are increasing the costs of essential goods.",
+    "The cuts in Medicaid and the Affordable Care Act, as well as SNAP and other programs, are taking their toll.",
+    "The enhanced premium tax cuts that help millions afford coverage are now expired.",
+    "Middle-class Americans who are earning more than $62,000 are no longer eligible for the Federal premium tax credits, doubling cancellations from 8 percent to 16 percent.",
+    "In my district, over 65,000 families risk losing Medicaid, and another 22,000 families will face higher premiums and out-of-pocket costs.",
+    "Last year, Republicans passed a partisan bill that failed to renew the essential premium tax credits, forcing millions of Americans to pay higher costs this year, even though a bipartisan solution is at hand.",
+    "What we need are bipartisan solutions that create jobs, lower costs, and increase enhanced premium tax credits so millions of American families can afford their healthcare.",
+    "What we need is bipartisan legislation such as my bipartisan Rural Homeownership Continuity Act that will reduce financing costs and bipartisan legislation on permitting reform to get infrastructure like energy, transportation, and housing projects more quickly approved for working families."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KEEPING HEALTHCARE AFFORDABLE",
+   "title": "KEEPING HEALTHCARE AFFORDABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6028-4.htm",
+   "sentences": [
+    "Yesterday, my colleagues on the other side passed a partisan bill that fails to renew the Affordable Care Act's enhanced premium tax credits that help over 24 million American families afford coverage.",
+    "In my district, over 65,000 families risk losing Medicaid.",
+    "Madam Speaker, I will not be leaving town until we bring this measure to the floor."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY VERSUS TYRANNY",
+   "title": "LIBERTY VERSUS TYRANNY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6099-7.htm",
+   "sentences": [
+    "Mr. Speaker, I thank my colleague, the chairman of the Ukraine Caucus, Ms. Kaptur, for her leadership, and for my other colleagues who have spoken this afternoon: Speaker Emeritus Pelosi and Representative Steny Hoyer.",
+    "Mr. Speaker, I rise today to address the ongoing threat that Russia poses to Ukraine, to Europe, to the United States, and to the broader international order.",
+    "On February 24, 2022--I think all of us can remember--Russia, preplanned and unprovoked, attacked Ukraine.",
+    "From the illegal annexation of Crimea in 2014 to the full-scale invasion of Ukraine in 2022, Russia has shown a blatant disregard for international law, national sovereignty, and fundamental human rights.",
+    "Sadly, I believe that modern-day Russia is a syndicate masquerading as a country with a mob boss called Putin.",
+    "President Putin has violated, as any mob boss would, every international agreement he has ever signed, period.",
+    "That is why a peace deal must be backed up by strong military deterrence and strong commitments from Europe and the United States to back Ukraine with NATO-like defense guarantees.",
+    "Otherwise, Putin has no intention of keeping any agreement.",
+    "It is a hybrid conflict, combining military force with cyberattacks at all different levels and fronts, disinformation campaigns, and economic warfare, alongside deliberate efforts to weaken NATO and undermine democratic institutions.",
+    "Clearly, Putin is a war criminal.",
+    "To President Trump, Putin respects one thing and one thing only, and that is strength.",
+    "By supporting Ukraine, the United States is sending a clear message: authoritarian regimes cannot invade their neighbors without consequences.",
+    "I ask the President of the United States to be strong and stand by the brave people of Ukraine and our allies.",
+    "Any sustainable resolution to this conflict must include Ukraine at the negotiating table.",
+    "We must stand firmly with Ukraine and defend the democracy and international order that we helped create.",
+    "This is the test of our time. ``Glory to Ukraine''; ``Slava Ukraini.''",
+    "We cannot allow this aggression to go unanswered.",
+    "I urge my colleagues to act as we have--as Representative Steny Hoyer indicated, 12 times in an overwhelming bipartisan fashion--to stand up for America's values, to stand up for human rights, to act collectively in a bipartisan fashion."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTHCARE CRISIS",
+   "title": "HEALTHCARE CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5001-2.htm",
+   "sentences": [
+    "It slashed over $1 trillion from Medicaid, from children's healthcare coverage, from Medicare, and the Affordable Care Act, adding $4.2 trillion to our national debt.",
+    "Programs that protect children, seniors, and working families are being gutted.",
+    "In my district alone, over 65,000 people risk losing their Medicaid coverage, threatening access to essential healthcare for vulnerable populations.",
+    "Republicans are threatening the Affordable Care Act's enhanced premium tax credits that will expire at the end of this year in just four weeks.",
+    "Open enrollment is now, and Americans are seeing the cost that they are paying for this effort, which has failed so far.",
+    "This is not fiscal responsibility.",
+    "This is a Republican healthcare tax hike on working families, imposed in the richest country in the world.",
+    "Let us extend the Affordable Care Act tax premiums."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING CUTS TO K-12 SCHOOLS",
+   "title": "DENOUNCING CUTS TO K-12 SCHOOLS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3482.htm",
+   "sentences": [
+    "Across the San Joaquin Valley, districts were preparing for these devastating cuts in mental health services, after-school programs, and support for English learners and migrant students.",
+    "I am going to, and my colleagues will continue to, fight for every student, every family, and every school in America, including those in the San Joaquin Valley that I represent.",
+    "We will miss his voice, but his legacy will live on in every grove in California. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RENAMING THE GULF OF MEXICO TO THE GULF OF AMERICA",
+   "title": "RENAMING THE GULF OF MEXICO TO THE GULF OF AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1888.htm",
+   "sentences": [
+    "The facts during the first 100 days of Mr. Trump's administration are the following: The economy has shrunk; The stock market has taken a hit; 401(k)'s that are critical for a majority of Americans' retirement have declined; there has been a launch of a trade war that could cost the average family in America over $4,900 a year this year alone with no trade agreements in sight, threatening a recession.",
+    "I think the Gulf of America Act is an absurd bill.",
+    "Celebrating All Mothers on Mother's Day Mr. Speaker, on Sunday, we will celebrate Mother's Day."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH781-3.htm",
+   "sentences": [
+    "In California's 21st Congressional District which I have the honor and privilege to represent, the wonderful people in the San Joaquin Valley, 456,532 people could lose their Medicaid under this rule and budget resolution.",
+    "Mr. Speaker, I strongly oppose this rule that enables a reckless Republican budget resolution to go forward."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIX OUR FORESTS ACT",
+   "title": "FIX OUR FORESTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-6.htm",
+   "sentences": [
+    "We know that climate change is having its effect."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: General Leave",
+   "title": "General Leave",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH356-2.htm",
+   "sentences": [
+    "On January 6, 2021, I expressed numerous times to my constituents and to my colleagues that it was the saddest day of the 20 years that I have had the privilege and honor to serve in the Congress.",
+    "That day the world watched as a violent mob of insurrectionists breached the Capitol, attacked the police viciously, and tried to overturn a fair and free election.",
+    "It was a violent insurrection attempt to overthrow a fair and free election.",
+    "Just a handful of brave Capitol Police Officers up in that gallery that day stood between us and the violent mob that had already breached the Senate Chamber and now were trying to force their way in here to the people's House.",
+    "This week President Trump pardoned over 1,500 perpetrators convicted for assaulting police officers and, as was noted by some of my colleagues here this afternoon, some who lost their lives.",
+    "The police had them on the ground.",
+    "We cannot allow history to be rewritten nor can we forget the sacrifices of the brave Capitol Police who risked everything to protect our democracy.",
+    "The Capitol Police stood on the front lines, giving their all to defend the ideals that we hold dear.",
+    "We owe it to their families and to our constituents to ensure that the truth remains clear that justice is served and that we never let those who sought to tear us apart rewrite the story on January 6, 2021.",
+    "We cannot allow history to be rewritten."
+   ]
+  }
+ ]
+}

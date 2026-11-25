@@ -1,0 +1,64 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "franklin",
+ "name": "Scott Franklin",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "This legislation fully funds veterans' healthcare and benefits, while strengthening mental health services, suicide prevention, and critical medical research programs relied upon by veterans across the country.",
+    "This legislation also protects the Second Amendment rights of veterans by preventing the VA from sending veterans' information to the FBI without due process and a judicial determination.",
+    "Mr. Chairman, I rise today in strong support of the fiscal year 2027 Military Construction, Veterans Affairs, and Related Agencies Appropriations Act.",
+    "Mr. Chairman, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "Recent missions in Venezuela and Iran underscore that these dangers are not hypothetical.",
+    "Maintaining our edge requires sustained investment in advanced capabilities, including artificial intelligence.",
+    "Mr. Chair, I rise today in strong support of H.R. 7148 and the Defense appropriations bill as part of this broader spending package.",
+    "I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "It reins in the Biden administration's climate agenda that dismantled our energy independence and hurt American consumers.",
+    "Mr. Speaker, I rise today in strong support of H.R. 6938, which includes the FY26 Energy and Water Appropriations bill.",
+    "Mr. Speaker, this is a huge win for our national security and for all Americans, and I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EVENTS THIS WEEK",
+   "title": "EVENTS THIS WEEK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2036.htm",
+   "sentences": [
+    "Mr. Speaker, this evening as we recognize National Police Week, I rise to honor the brave men and women in uniform who serve with courage, integrity, and selflessness.",
+    "Every day, law enforcement officers put themselves in harm's way to protect our communities and uphold the rule of law.",
+    "Despite the danger, members of the Polk County Sheriff's Office and the Bartow Police Department responded swiftly to protect innocent lives.",
+    "Their story reminds us why we pause this week to honor law enforcement.",
+    "National Police Week is not only a time to honor those who were killed in the line of duty, but also to thank those who continue to answer the call with distinction."
+   ]
+  }
+ ]
+}

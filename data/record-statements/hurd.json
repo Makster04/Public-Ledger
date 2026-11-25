@@ -1,0 +1,177 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "hurd",
+ "name": "Jeff Hurd",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 15,
+  "sentences": 30
+ },
+ "statements": [
+  {
+   "date": "2026-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DON YOUNG DOUG LaMALFA INDIAN BUFFALO MANAGEMENT ACT",
+   "title": "DON YOUNG DOUG LaMALFA INDIAN BUFFALO MANAGEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-17/html/CREC-2026-11-17-pt1-PgH6236-8.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my legislation, H.R. 7954, the Don Young Doug LaMalfa Indian Buffalo Management Act.",
+    "As chairman of the Natural Resources Subcommittee on Indian and Insular Affairs, one of my priorities has been advancing practical legislation that respects Tribal sovereignty and strengthens Tribal self-determination.",
+    "I am also proud that this legislation now carries the names of two Members who cared deeply about Indian Country: Don Young of Alaska and my friend, Doug LaMalfa of California.",
+    "I thank the InterTribal Buffalo Council; the Wildlife Conservation Society; the National Bison Association; Chairman Westerman; and the Natural Resources Committee and staff, especially Kirstin Liddell on our Indian and Insular Affairs Subcommittee, for their work to move this legislation forward.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the 2026 Water Resources Development Act."
+   ]
+  },
+  {
+   "date": "2026-06-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CRYSTAL RESERVOIR CONVEYANCE ACT",
+   "title": "CRYSTAL RESERVOIR CONVEYANCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-02/html/CREC-2026-06-02-pt1-PgH3752.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 5911, the Crystal Reservoir Conveyance Act.",
+    "Mr. Speaker, I urge my colleagues to vote in favor of H.R. 5911."
+   ]
+  },
+  {
+   "date": "2026-06-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GEOTHERMAL ENERGY ADVANCEMENT ACT",
+   "title": "GEOTHERMAL ENERGY ADVANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-02/html/CREC-2026-06-02-pt1-PgH3760.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 5631, the Geothermal Energy Advancement Act.",
+    "Mr. Speaker, I thank Chairman Westerman for his invaluable help on this legislation, and I urge my colleagues to support H.R. 5631."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MADE IN AMERICA JOBS ACT OF 2026",
+   "title": "MADE IN AMERICA JOBS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2652.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 7342, the Made in America Jobs Act of 2026, which I am proud to lead with my colleague from Alabama, Congressman Shomari Figures.",
+    "I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCESSING SATELLITE CAPABILITIES TO ENABLE NEW DISCOVERIES ACT",
+   "title": "ACCESSING SATELLITE CAPABILITIES TO ENABLE NEW DISCOVERIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2242.htm",
+   "sentences": [
+    "In 2017, NASA launched the Commercial Small Satellite Data Acquisition Pilot Program to test whether commercially available Earth observation data could support NASA's scientific missions.",
+    "Mr. Speaker, I rise today in support of my legislation, H.R. 2600, the Accessing Satellite Capabilities to Enable New Discoveries Act, the ASCEND Act."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINISH THE ARKANSAS VALLEY CONDUIT ACT--VETO MESSAGE FROM THE PRESIDENT OF THE UNITED STATES",
+   "title": "FINISH THE ARKANSAS VALLEY CONDUIT ACT--VETO MESSAGE FROM THE PRESIDENT OF THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH205.htm",
+   "sentences": [
+    "When we talk about honoring Federal commitments, we are talking about whether the people who grow our food can have clean water.",
+    "It lets communities doing their part and repaying the government finally access clean water.",
+    "On October 3, 2020, President Trump's Department of the Interior issued a press release titled: ``Trump administration breaks ground on long-awaited Arkansas Valley Conduit to bring safe, clean water to rural Colorado communities.'' Earlier that year, the President visited Colorado and praised the Arkansas Valley Conduit.",
+    "However, I would ask every Member to consider the pressure felt by the communities they represent, especially those in rural America who need infrastructure built, who need clean water, and who need Washington to mean what it says."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "I will miss his humor, his directness, and the clarity he brought to a town that too often hides behind big words."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6033-2.htm",
+   "sentences": [
+    "Mr. Chairman, I support the SPEED Act because it fixes something that people back home understand instinctively: It takes too long to build anything in this country--water infrastructure, roads, power lines, housing, or energy projects."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Mr. Speaker, I will respond to something that was said at the beginning of this debate.",
+    "Mr. Speaker, I urge support for this bill."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "Across the country, Americans depend on timely answers from the Army Corps so they know whether their projects require Clean Water Act permits, but the Corps is not keeping up.",
+    "Mr. Chairman, I am proud to cosponsor the PERMIT Act, commonsense legislation to help America build the infrastructure we need faster and more responsibly."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DALLES WATERSHED DEVELOPMENT ACT",
+   "title": "DALLES WATERSHED DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5075.htm",
+   "sentences": [
+    "The Crow Creek Reservoir, located in the Mount Hood National Forest, is key to providing clean water for drinking, residential, and commercial uses in The Dalles.",
+    "Mr. Speaker, I rise today in strong support of H.R. 655, sponsored by my colleague, Representative Bentz."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CORMORANT RELIEF ACT OF 2025",
+   "title": "CORMORANT RELIEF ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5076.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2293, the Cormorant Relief Act of 2025, sponsored by Representative Ezell from Mississippi.",
+    "Mr. Speaker, I urge the passage of H.R. 2293 and yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SNOW WATER SUPPLY FORECASTING REAUTHORIZATION ACT OF 2025",
+   "title": "SNOW WATER SUPPLY FORECASTING REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5077.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3857, the Snow Water Supply Forecasting Reauthorization Act."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WETLANDS CONSERVATION AND ACCESS IMPROVEMENT ACT OF 2025",
+   "title": "WETLANDS CONSERVATION AND ACCESS IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3224.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my legislation, H.R. 2316, the Wetlands Conservation and Access Improvement Act of 2025."
+   ]
+  }
+ ]
+}

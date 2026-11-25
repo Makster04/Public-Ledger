@@ -1,0 +1,180 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "conaway",
+ "name": "Herbert C. Conaway, Jr.",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 15,
+  "sentences": 33
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "I urge my colleagues to vote ``yes'' on this bill."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6105.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Veterans' Compensation Cost-of-Living Adjustment Act.",
+    "It aligns increases in veterans' disability compensation, dependent benefits, clothing allowances, and survivor benefits with the annual cost-of-living adjustment provided to Social Security recipients.",
+    "I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTHONY \"TONY\" J. GALLOPO VA CLINIC",
+   "title": "ANTHONY \"TONY\" J. GALLOPO VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4472-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6007, to name the Department of Veterans Affairs community-based outpatient clinic in Newton, New Jersey, after Anthony ``Tony'' Gallopo.",
+    "Mr. Speaker, I urge all Members to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COLONEL MICHAEL H. BOYCE DEPARTMENT OF VETERANS AFFAIRS MULTISPECIALTY CLINIC",
+   "title": "COLONEL MICHAEL H. BOYCE DEPARTMENT OF VETERANS AFFAIRS MULTISPECIALTY CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4473.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 5362 to name the Department of Veterans Affairs multispecialty clinic in Marietta, Georgia, after Colonel Michael H. Boyce, a dedicated Marine Corps veteran, public servant, and community leader.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 5362, to honor this very deserving veteran."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RODNEY C. HAMILTON SR. VA CLINIC",
+   "title": "RODNEY C. HAMILTON SR. VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4474.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6963 to designate the community-based outpatient clinic in Lafayette, Louisiana, as the Rodney C. Hamilton Sr. VA Clinic."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CAPTAIN PAUL W. \"BUD\" BUCHA VA MEDICAL CENTER",
+   "title": "CAPTAIN PAUL W. \"BUD\" BUCHA VA MEDICAL CENTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4476.htm",
+   "sentences": [
+    "He also worked with several veterans organizations to advocate for mental health support, job training, and housing for veterans.",
+    "Mr. Speaker, I rise in support of H.R. 4647 to name the Department of Veterans Affairs Medical Center in West Haven, Connecticut, the ``Captain Paul W. `Bud' Bucha VA Medical Center.'' I thank my colleagues from Connecticut Senator Blumenthal and Representative DeLauro for their leadership to honor Captain Bucha's legacy.",
+    "Nevertheless, I urge my colleagues to support this bill, and I hope that it will become law without delay.",
+    "I urge all Members to support this legislation.",
+    "Mr. Speaker, I support H.R. 4647 to honor this very deserving veteran."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CORPORAL PATRICK D. TILLMAN VA CLINIC",
+   "title": "CORPORAL PATRICK D. TILLMAN VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4478.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4288 to name the Department of Veterans Affairs community-based outpatient clinic in San Jose, California, after Corporal Patrick ``Pat'' Daniel Tillman."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGHLIGHTING WOMEN'S HEALTH",
+   "title": "HIGHLIGHTING WOMEN'S HEALTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3447.htm",
+   "sentences": [
+    "Their work to provide standards of care, to guide decisionmakers, not only in the healthcare arena, but in the legislative arena, to improve outcomes for all people, and particularly those who suffer from disparities in our healthcare system, we owe to ACOG a tremendous debt of gratitude.",
+    "I will stand and commend ACOG for its decades of leadership, service, and advocacy on behalf of patients and physicians alike."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SBA FRAUD ENFORCEMENT EXTENSION ACT",
+   "title": "SBA FRAUD ENFORCEMENT EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4914.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 4495, the SBA Fraud Enforcement Extension Act.",
+    "Mr. Speaker, having said that, I urge all of my colleagues to support this very important legislation."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3838, STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026;",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 3838, STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026; AND PROVIDING FOR CONSIDERATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3907-2.htm",
+   "sentences": [
+    "As plans to house undocumented immigrants on military bases continue, base leadership must be informed about everyone that is coming onto the base and if their treatment and detention meets well-established Federal standards.",
+    "My amendments would require the Department of Homeland Security to create a registry of all undocumented immigrants held at DOD facilities and require a joint DOD-DHS report to the Congress on the use of force and compliance with Federal detention standards, standards designed to ensure humane treatment.",
+    "Unfortunately, these amendments aren't just needed but necessary given the reports of DHS violating the rights of undocumented immigrants and those with legal status at detention facilities all across our country."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELON CALLS IT QUITS",
+   "title": "ELON CALLS IT QUITS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2498-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because we are witnessing a tragic breakup between a Nazi-saluting billionaire and the President of the United States.",
+    "The majority stood by Trump through everything he has done, and now we will see if that support falters."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong opposition to the SAVE Act.",
+    "While everyday Americans are struggling from the fallout of Trump's disastrous tariff policies, Republicans are pushing through a bill that strips Americans' constitutional right to vote, a vote that was hard won and for which many died.",
+    "They claim the SAVE Act is intended to prevent undocumented immigrants from voting, but it is already illegal for them to vote, and it is extremely rare.",
+    "In reality, the SAVE Act makes it harder for Americans, especially women and people of color, to participate in our elections.",
+    "Mr. Speaker, I urge my colleagues to take a hard look in the mirror and ask themselves: Do you want to stand on the side of voter suppression or do you want to stand on the side of democracy?"
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUCCESSFUL ENTREPRENEURSHIP FOR RESERVISTS AND VETERANS ACT",
+   "title": "SUCCESSFUL ENTREPRENEURSHIP FOR RESERVISTS AND VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH746.htm",
+   "sentences": [
+    "That is why it is essential that, as Members of Congress, we support legislative initiatives aimed at identifying and addressing the obstacles that small business owners and entrepreneurs face."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ABORTION CARE IS MEDICAL CARE",
+   "title": "ABORTION CARE IS MEDICAL CARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH311.htm",
+   "sentences": [
+    "Like any other issue, abortion care is medical care and needs to be treated by a physician trained to deal with that very difficult situation for women.",
+    "This bill is just another attempt to strip women of their reproductive freedom by pushing misinformation that endangers not only the lives of women but the public health at large."
+   ]
+  }
+ ]
+}

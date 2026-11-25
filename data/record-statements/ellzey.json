@@ -1,0 +1,50 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ellzey",
+ "name": "Jake Ellzey",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 11
+ },
+ "statements": [
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "Today, patriotic companies across the country are putting their own skin in the game to help our country deter, if possible, and defeat, if necessary, our 21st century adversaries, and we must help them succeed.",
+    "Mr. Chair, I rise in strong support of this bill and I join Chairman Calvert and Ranking Member McCollum in saluting the hard work of the Defense Subcommittee staff, and of course, Chairman Cole.",
+    "As of today, the Biden-era CRs, numbers, and policies will come to an end, and we will pass a bill that addresses the needs of now and the future for our adversaries around the world."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3333.htm",
+   "sentences": [
+    "Mr. Chair, I rise in strong support of this bill, and I thank Chairman Cole for his leadership in getting this bill to the floor quickly.",
+    "We avoid war by ensuring that our enemy knows that we will win."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUTH TELLING WITH MATH AND FACTS",
+   "title": "TRUTH TELLING WITH MATH AND FACTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2186-6.htm",
+   "sentences": [
+    "Mr. Speaker, I thank my honorable friend from Arizona whose crusade against the debt is a true public service.",
+    "He has spent countless hours in here educating the American people on the dangers of the debt for our country, and we should all be grateful.",
+    "There, he played a key role in operations in the Middle East, focusing on Israel, Lebanon, and Syria.",
+    "We will miss him dearly but look forward to the day we will be reunited in Heaven.",
+    "So now I am going to tell you about that little story I was telling you about, Puppy Fecht.",
+    "With friends like my friend from Arizona, we will make it an even better place to live."
+   ]
+  }
+ ]
+}

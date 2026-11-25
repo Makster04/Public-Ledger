@@ -1,0 +1,188 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ossoff",
+ "name": "Jon Ossoff",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 15,
+  "sentences": 41
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 2347",
+   "title": "H.R. 2347",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgS5345-5.htm",
+   "sentences": [
+    "The bill intends to accelerate construction of energy transmission and clean energy infrastructure in order to lower energy prices for American families and accelerate the transition to renewable energy."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOGNITION OF THE MAJORITY LEADER",
+   "title": "RECOGNITION OF THE MAJORITY LEADER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgS2545-8.htm",
+   "sentences": [
+    "I urge my colleagues to vote yes."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMENDMENT 4732 to S. 1383",
+   "title": "AMENDMENT 4732 to S. 1383",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgS1665.htm",
+   "sentences": [
+    "Mr. President, I support voter ID.",
+    "Indeed, the State of Georgia has voter ID.",
+    "I will not support a half-baked partisan ``gotcha'' amendment cooked up with no serious deliberation, no committee hearings, no bipartisan consultation, no input from State and local election officials, where the stakes are potential infringement of the most sacred right at the core of our constitutional Republic. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY",
+   "title": "DEPARTMENT OF HOMELAND SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-12/html/CREC-2026-03-12-pt1-PgS1040.htm",
+   "sentences": [
+    "As I urged last week, I urge the Senate to adopt this measure and fund these Agencies. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY",
+   "title": "DEPARTMENT OF HOMELAND SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgS880.htm",
+   "sentences": [
+    "Mr. President, I support the measure offered by Senator Murray to appropriate funds for the Transportation Security Administration, the Cybersecurity and Infrastructure Security Agency, and other Agencies within the Department of Homeland Security."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING CHILD TRAFFICKING ACT OF 2025",
+   "title": "PREVENTING CHILD TRAFFICKING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgS8753.htm",
+   "sentences": [
+    "That is why Senator Grassley and I, together, have authored the Preventing Child Trafficking Act to strengthen prevention, investigation, and prosecution of child trafficking crimes and to ensure that prosecutors and law enforcement officials work together with those who provide supportive services to victims and survivors because too often the children who have endured this crime and this trauma fall through the cracks and are targeted and victimized again.",
+    "We have also found, through congressional investigations, that something that sounds simple--law enforcement working with those who serve victims--is essential to protecting children.",
+    "Mr. President, notwithstanding rule XXII, I ask unanimous consent that the Senate Committee on the Judiciary be discharged from further consideration of S. 1049 and the Senate proceed to its immediate consideration.",
+    "So I urge my colleagues to support this bipartisan legislation because there is nothing more important than protecting children."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgS8643-5.htm",
+   "sentences": [
+    "If Republicans allow these Affordable Care Act benefits to expire, her premiums will go up by hundreds of dollars, and she says she will have to cancel her health coverage.",
+    "The whole conversation about these Affordable Care Act tax credits in this town, in this building, has been focused on the politics of this issue.",
+    "I urge my Republican colleagues to put the politics aside and vote to extend these tax credits for the health of our constituents."
+   ]
+  },
+  {
+   "date": "2025-10-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S. 3012",
+   "title": "S. 3012",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-23/html/CREC-2025-10-23-pt1-PgS7728.htm",
+   "sentences": [
+    "Mr. President, the Senate remains at an impasse over the renewal of soon-to-expire health insurance premium tax credits under the Affordable Care Act.",
+    "The enrollment period for next year's insurance plans opens in just 9 days."
+   ]
+  },
+  {
+   "date": "2025-08-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-08-01/html/CREC-2025-08-01-pt1-PgS5189.htm",
+   "sentences": [
+    "I urge a vote for Senator Duckworth's amendment.",
+    "And I rise in support of this amendment.",
+    "I urge a ``yes'' vote to the amendment."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Appropriations (Executive Calendar)",
+   "title": "Appropriations (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgS4584.htm",
+   "sentences": [
+    "Asserting our constitutional power of the purse, this bill mandates specific funding levels for rural health, women's health, caregivers, research, and veteran homelessness prevention programs, in some cases, including required spending levels for those programs for the first time in legislative history.",
+    "I urge a ``yes'' vote to proceed to the bill."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+   "sentences": [
+    "Madam President, instead of adding trillions to the debt in tax cuts to the rich while destroying Medicaid and renewable energy, I propose we help our constituents afford health insurance.",
+    "If we allow Affordable Care Act benefits to expire, as this bill would, more than a million Georgians will pay more for health insurance next year.",
+    "And that is on top of the cuts to Medicaid and hospitals.",
+    "A vote against this amendment is a vote to gut the Affordable Care Act and raise health insurance premiums.",
+    "A vote against this amendment will repeal the Affordable Care Act benefits for your constituents and raise their healthcare premium."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. RES. 59",
+   "title": "S.J. RES. 59",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgS3595-3.htm",
+   "sentences": [
+    "Mr. President, on Saturday, June 21, 2025, at President Trump's direction, U.S. forces struck certain nuclear facilities in Iran.",
+    "Most of the Congress is united in our conviction that Iran must not build or acquire a nuclear weapon.",
+    "Such discharge would require the Senate to debate whether congressional authorization should be required for any further offensive military action against Iran."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amendment No. 1646 to Amendment No. 1717",
+   "title": "Amendment No. 1646 to Amendment No. 1717",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2350.htm",
+   "sentences": [
+    "Mr. President, this amendment will reverse Elon Musk's cuts to the Social Security Administration.",
+    "Mr. Musk calls Social Security a Ponzi scheme but refuses to testify before Congress.",
+    "Secretary Lutnick said his mother-in-law wouldn't complain if she missed a Social Security check.",
+    "Maybe that is because her son-in-law is a billionaire."
+   ]
+  },
+  {
+   "date": "2025-02-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-20/html/CREC-2025-02-20-pt1-PgS1075-2.htm",
+   "sentences": [
+    "Mr. President, the momentum that is growing in Washington to gut the Medicaid program is alarming my constituents in Georgia, and I call up my amendment No. 407 and ask it to be reported by number.",
+    "The sheer number of people affected: In Georgia 5 out of 7 seniors in nursing homes are covered by Medicaid; nearly 50 percent of all births are covered by Medicaid; two out of five children in Georgia are covered by Medicaid.",
+    "I was disappointed to see just moments ago the majority adopt an amendment to lay the foundation for deep cuts to Medicaid.",
+    "I hope we can build bipartisan support for my amendment to ensure that maternal and children's healthcare through Medicaid is protected.",
+    "Mr. President, the vote is whether to protect maternal and pediatric healthcare through Medicaid."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NOMINATION OF ROBERT F. KENNEDY, JR.",
+   "title": "NOMINATION OF ROBERT F. KENNEDY, JR.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS955.htm",
+   "sentences": [
+    "He is going to run the whole public health system--Medicare, Medicaid, the CDC, the NIH, all of it.",
+    "My constituent continues: This morning, I was placed on the DEI watch list web site and publicly identified as a target.",
+    "I will oppose the Kennedy nomination."
+   ]
+  }
+ ]
+}

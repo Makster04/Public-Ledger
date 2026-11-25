@@ -1,0 +1,237 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "llee",
+ "name": "Laurel M. Lee",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 16,
+  "sentences": 81
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFE CLOUD STORAGE ACT",
+   "title": "SAFE CLOUD STORAGE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5936.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 7834) to limit liability for certain entities storing child sexual abuse material for law enforcement agencies, and for other purposes, as amended.",
+    "Every day, law enforcement officers across this country confront some of the most disturbing crimes imaginable.",
+    "The Safe Cloud Storage Act is a direct response to what the men and women of law enforcement told us they need.",
+    "Law enforcement needs modern tools for modern investigations.",
+    "The Safe Cloud Storage Act establishes a trusted framework for vetted, law enforcement-approved technology providers to assist with this work while meeting rigorous cybersecurity and evidence storage standards.",
+    "This legislation will give law enforcement access to the modern capabilities they need while ensuring that some of the most sensitive evidence they handle is protected with the security and seriousness it demands.",
+    "The Safe Cloud Storage Act is the next step in allowing trusted technology providers to work directly with law enforcement so that investigators can use secure, modern systems to pursue these cases.",
+    "I am also very grateful to the men and women of law enforcement who come to us and share with us the things that they need to help them bring these important cases, to bring more children to safety, and to bring more predators to justice.",
+    "Mr. Speaker, I rise today in support of my bipartisan legislation, the Safe Cloud Storage Act."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BANKRUPTCY THRESHOLD ADJUSTMENT ACT",
+   "title": "BANKRUPTCY THRESHOLD ADJUSTMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5939.htm",
+   "sentences": [
+    "In many cases, it can provide an opportunity to reorganize debt, work with creditors, and keep the doors open.",
+    "The goal is simple: When a business is still viable but struggling under debt, we should give it a reasonable opportunity to reorganize, rather than making liquidation the only practical option.",
+    "For several years, businesses with up to $7.5 million in debt could qualify for this process, but that temporary threshold expired, significantly reducing the number of small businesses that could use it.",
+    "Mr. Speaker, I rise today in support of the bipartisan Bankruptcy Threshold Adjustment Act of 2026, legislation that I am proud to co-lead with my friend and colleague, Representative Cline.",
+    "I urge my colleagues to support the Bankruptcy Threshold Adjustment Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRISON STAFF SAFETY ENHANCEMENT ACT",
+   "title": "PRISON STAFF SAFETY ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-31/html/CREC-2026-08-31-pt1-PgH5268.htm",
+   "sentences": [
+    "We ask these law enforcement professionals to maintain order and security in Federal prisons, often working in close proximity to individuals who have been convicted of serious crimes.",
+    "First, it requires the Department of Justice inspector general to conduct a comprehensive review of the incidents and the effects of sexual harassment and sexual assault committed by incarcerated individuals against correction officers and other Bureau of Prisons employees.",
+    "Based on that work, the Attorney General will be required to establish national standards for the prevention, reduction, and punishment of sexual harassment and sexual assault against Bureau of Prisons personnel.",
+    "Mr. Speaker, I rise today in strong support of the Prison Staff Safety Enhancement Act, my bipartisan legislation to better protect the men and women who serve in our Federal corrections facilities.",
+    "That is why I introduced the Prison Staff Safety Enhancement Act."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING PRIVACY IN PURCHASES ACT",
+   "title": "PROTECTING PRIVACY IN PURCHASES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4441-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1181, the Protecting Privacy in Purchases Act."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "title": "KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+   "sentences": [
+    "While technology has created tremendous opportunities to learn and to connect, it has also exposed young people to online predators, sexual exploitation, privacy violations, and increasingly sophisticated threats driven by artificial intelligence.",
+    "The second is COPPA 2.0, which I am proud to lead along with Congressman Tim Walberg.",
+    "When Congress enacted the Children's Online Privacy Protection Act nearly three decades ago, social media did not exist, and online platforms were not collecting massive amounts of personal information to build user profiles and deliver targeted advertising.",
+    "This bill brings our privacy laws into the modern era by extending important protections to teenagers, limiting unnecessary data collection, prohibiting targeted advertising to children and to teens, creating clear expectations for tech platforms, and giving families greater control over their personal information.",
+    "Mr. Speaker, I rise today in support of H.R. 7757, the Kids Internet and Digital Safety Act, or the KIDS Act.",
+    "I urge all of my colleagues to support the KIDS Act."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY EMERGENCY LEADERSHIP ACT",
+   "title": "ENERGY EMERGENCY LEADERSHIP ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4297.htm",
+   "sentences": [
+    "Today, the United States is experiencing record energy demand, driven by artificial intelligence, data centers, renewed domestic manufacturing, and widespread electrification across our economy.",
+    "Madam Speaker, I rise today in support of H.R. 7258, the Energy Emergency Leadership Act.",
+    "I urge my colleagues to support H.R. 7258."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Secure America Act, legislation that will secure our border, provide critical resources to law enforcement, and make our communities safer.",
+    "Mr. Speaker, I urge my colleagues, Republicans and Democrats alike, to do the right thing: Fight for these children and support this legislation."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "title": "SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3692.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the creation of a Smithsonian museum dedicated to the history of American women.",
+    "For these reasons, I support this effort, and I encourage my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLOCAUST EXPROPRIATED ART RECOVERY ACT OF 2025",
+   "title": "HOLOCAUST EXPROPRIATED ART RECOVERY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2497.htm",
+   "sentences": [
+    "Hundreds of thousands of works of art and cultural objects were confiscated or misappropriated from Jewish families and other persecuted groups across Europe.",
+    "Even today, descendants of Holocaust victims are still searching for works of art that once hung in their grandparents' homes."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING ONLINE PREDATORS ACT",
+   "title": "COMBATING ONLINE PREDATORS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH628.htm",
+   "sentences": [
+    "Yet, under current law, law enforcement is not fully equipped with the tools necessary to prosecute those who push children into these acts.",
+    "Mr. Speaker, it provides law enforcement with the clarity, consistency, and tools necessary to hold offenders accountable and prevent future harm."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHILD PREDATORS ACCOUNTABILITY ACT",
+   "title": "CHILD PREDATORS ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH630.htm",
+   "sentences": [
+    "This is an issue that I have personally heard about from law enforcement officers who work on these cases every day.",
+    "Mr. Speaker, I rise today in support of H.R. 6715, the Child Predators Accountability Act, and I thank my colleague from North Carolina for his leadership in advancing this important legislation.",
+    "I urge my colleagues to support H.R. 6715."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COERCION AND SEXUAL ABUSE FREE ENVIRONMENT ACT",
+   "title": "COERCION AND SEXUAL ABUSE FREE ENVIRONMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH632.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of H.R. 6732, the Coercion and Sexual Abuse Free Environment Act, and I thank my colleague from Arizona (Mr. Biggs) for his leadership on this critical issue.",
+    "I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPERVISION SYSTEM THAT IMPROVES PUBLIC SAFETY AND SUPPORTS SUCCESSFUL REENTRY",
+   "title": "SUPERVISION SYSTEM THAT IMPROVES PUBLIC SAFETY AND SUPPORTS SUCCESSFUL REENTRY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4834-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Safer Supervision Act, a bipartisan bill backed by Federal law enforcement, probation officers, and public defenders.",
+    "Mr. Speaker, I urge my colleagues to support the Safer Supervision Act. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "title": "STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4682.htm",
+   "sentences": [
+    "It strengthens our national posture against a foreign adversary that has already shown its willingness to target essential American services.",
+    "Madam Speaker, I rise today in support of H.R. 2659, the Strengthening Cyber Resilience Against State-Sponsored Threats Act.",
+    "I urge my colleagues to join me in supporting this important legislation."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Safeguard American Voter Eligibility Act, or the SAVE Act.",
+    "The SAVE Act is an important step forward that will ensure elections are more secure and accurate across the United States.",
+    "One way that we will be able to help provide those resources to States is by passing the SAVE Act.",
+    "The SAVE Act will help protect our elections and ensure that only American citizens are casting ballots in American elections.",
+    "We know that some States have continued to discover noncitizens on their voter rolls, and there is evidence that some of them have voted in recent elections.",
+    "Finally, Mr. Speaker, I would like to address the claim that the SAVE Act will somehow negatively affect married women or others who might have changed their name because their legal documentation or identification may reflect two different names.",
+    "This bill will accommodate women who change their name and have not yet updated their documentation to reflect a name change because the SAVE Act explicitly directs States to establish a process for them to register to vote, irrespective of those discrepancies.",
+    "Like other areas of the law, citizens will be able to use combinations of existing identification documents in order to register to vote.",
+    "While States are the primary authority on how elections are conducted on election day, it is our role here in Congress to ensure that we support them, provide resources to them, and promote uniformity and best practices across the country.",
+    "I urge my colleagues to support this important legislation."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "title": "PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 5, I call up the bill (H.R. 30) to amend the Immigration and Nationality Act to provide that aliens who have been convicted of or who have committed sex offenses or domestic violence are inadmissible and deportable, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise in support of H.R. 30, the Preventing Violence Against Women by Illegal Aliens Act.",
+    "Over the past 4 years, President Biden and border czar Vice President Kamala Harris have allowed millions of unvetted illegal aliens into the United States.",
+    "At the same time that they facilitated the collapse of our southwest border, President Biden and Vice President Harris abandoned any semblance of interior immigration enforcement.",
+    "In a September 2021 memo, the Biden-Harris administration made enforcement more difficult for Immigration and Customs Enforcement officers.",
+    "In training materials obtained by the Judiciary Committee and published in a staff report last year, DHS failed to answer seemingly clear-cut questions such as whether an alien who served a 20-year drug-related prison sentence or an alien who discharged a firearm outside of a police station should be priorities for arrest and deportation.",
+    "Instead of making clear that ICE officers should carry out their duties to remove criminal aliens from American streets, the Biden-Harris administration instructed ICE officers to develop a full profile of a criminal alien before deciding whether to arrest someone who is in the country illegally.",
+    "The ICE official even acknowledged that because of the border crisis, fewer ICE officers are available to track down public safety and national security threats because they are left to do border administration-related tasks.",
+    "Last September, the Judiciary Committee heard from three mothers whose daughters were brutally assaulted and murdered by illegal aliens welcomed into the country by President Biden and Vice President Kamala Harris.",
+    "Tammy Nobles recounted how Joe Biden and Kamala Harris released into the country the MS-13 gang member who went on to murder and sexually assault her daughter, Kayla Hamilton.",
+    "The alleged murderer entered the country through border czar Kamala Harris' wide-open southwest border.",
+    "Alexis Nungaray spoke about how Joe Biden and Kamala Harris released at the border the two illegal aliens who went on to viciously assault and murder her 12-year-old daughter, Jocelyn.",
+    "According to local officials, the Guatemalan national crossed the U.S.-Mexico border in early January 2024, made his way to Florida shortly thereafter, and does not have an immigration court date until 2027.",
+    "The illegal alien crossed the border in January 2023 and was placed on alternatives to detention.",
+    "That is Joe Biden and Kamala Harris' immigration legacy: more unvetted aliens released into American communities, more criminal aliens on American streets, and more Americans endangered by radical, reckless policies.",
+    "The Preventing Violence Against Women by Illegal Aliens Act is just one of many bills Republicans have proposed that will help close immigration loopholes, reverse the disastrous policies of the Biden- Harris administration, and implement President Trump's immigration enforcement agenda.",
+    "The Preventing Violence Against Women by Illegal Aliens Act makes crystal clear that illegal aliens who commit sex offenses are inadmissible to and removable from the United States.",
+    "The time is now to take seriously the danger of criminal aliens in the United States.",
+    "Anything that makes it easier for adjudicators and officials to ensure a criminal alien's arrest and removal should receive overwhelming bipartisan support, particularly when it comes to sex offenses and domestic violence.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 30, the Preventing Violence Against Women by Illegal Aliens Act, and I reserve the balance of my time.",
+    "Take, for example, the fact that, under current immigration law, there is no explicit ground of inadmissibility for illegal aliens who commit domestic violence offenses, despite a ground of removability for aliens who commit such offenses, or consider that despite certain sex offenses making aliens removable from the country, there currently is not a ground of inadmissibility or removability for certain sex offenses.",
+    "It is to ensure that criminal aliens who endanger families and communities can be removed from the United States.",
+    "Making guests in our country inadmissible to and removable from the United States because they have committed a sex offense or domestic violence offense should be something that even open-border Democrats can agree with us on.",
+    "Mr. Speaker, the Preventing Violence Against Women by Illegal Aliens Act is a straightforward, commonsense bill that I urge my colleagues to support, and I yield back the balance of my time."
+   ]
+  }
+ ]
+}

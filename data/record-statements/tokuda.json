@@ -1,0 +1,433 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "tokuda",
+ "name": "Jill N. Tokuda",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 33,
+  "sentences": 124
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EASING GAS PRICES",
+   "title": "EASING GAS PRICES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6203-5.htm",
+   "sentences": [
+    "Last week, Americans spoke loud and clear: lower costs, end the war, and put working families first.",
+    "Since this reckless war in Iran began, gas prices have surged."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETURNING JAPANESE CITIZENS ABDUCTED BY NORTH KOREA",
+   "title": "RETURNING JAPANESE CITIZENS ABDUCTED BY NORTH KOREA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5628-2.htm",
+   "sentences": [
+    "There are 17 Japanese citizens officially recognized as having been abducted by North Korea.",
+    "David Sneddon, an American college student who disappeared while hiking in China in 2004, is also believed by his family and many others to have been abducted by North Korea.",
+    "We cannot allow silence to take away their last hope for answers. restoring funding for public broadcasting Madam Speaker, this is not the first time I have taken to the floor to talk about Kauai Community Radio, KKCR."
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OLOWALU FIRE STATION",
+   "title": "OLOWALU FIRE STATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5436.htm",
+   "sentences": [
+    "Then President Trump's steel tariff slapped over $300,000 to the cost, not because the project changed, not because it went over budget, but because the President changed our trade policy.",
+    "This is what reckless tariffs look like in real life.",
+    "Today, it is a fire station on Maui, but across our country, families, businesses, and communities are paying more because of the President's tariffs, including for the things that they need to keep themselves safe.",
+    "I am fighting to get relief for Olowalu, but we cannot fight these tariffs one fire station, one small business, or one community at a time.",
+    "Congress has the constitutional authority over tariffs and trade, and it is time we take that responsibility back.",
+    "No President should be able to unilaterally impose tariffs that make it harder and more expensive for Americans to protect their homes, their communities, and their lives."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5029-6.htm",
+   "sentences": [
+    "Childcare rooms were empty because they had no staff to care for servicemembers' children.",
+    "Bottom line, our war fighters rely on civilian employees for everything, from maintenance to acquisition, to healthcare, to childcare.",
+    "Mr. Chair, it is time we stop treating them as disposable.",
+    "Mr. Chair, I rise in opposition to the amendment.",
+    "Mr. Chair, I strongly oppose this amendment, which would require the Department of Defense to develop plans to eliminate 200,000 civilian employees."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5001.htm",
+   "sentences": [
+    "It creates a new, unfunded voucher program that diverts taxpayer dollars to private, including religious, schools instead of strengthening the public schools that educate most of our military-connected children.",
+    "A voucher is not a real choice if a school can simply turn a child away.",
+    "If Congress is prepared to invest more in military children's education, and I fully support that, we should be investing where most of them are already learning: our public schools."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMERGENCY CONSERVATION PROGRAM IMPROVEMENT ACT OF 2025",
+   "title": "EMERGENCY CONSERVATION PROGRAM IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4137-5.htm",
+   "sentences": [
+    "They could have repaired damaged infrastructure, restored farmland, and returned fields to production sooner.",
+    "Mr. Speaker, I rise in strong support of S. 629.",
+    "Mr. Speaker, I urge my colleagues to support S. 629."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AFFORDABILITY IN HAWAII",
+   "title": "ENERGY AFFORDABILITY IN HAWAII",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3715-2.htm",
+   "sentences": [
+    "While Donald Trump wages a war of choice in Iran, pushes a $1 billion-slush fund for his buddies, and fights for a royal ballroom in the White House, working families back home are being forced to make impossible choices.",
+    "Instead of lowering costs, this administration is making it worse with tariff and trade wars and blocking renewable energy projects that would help Hawaii build real energy independence and bring bills and costs down."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO THE HONORABLE COLLEEN HANABUSA",
+   "title": "PAYING TRIBUTE TO THE HONORABLE COLLEEN HANABUSA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3377.htm",
+   "sentences": [
+    "To her husband, John, who was her rock, and to her beloved fur babies, Frannie and Puppers, and Little, who is up there with her now, they were her soul."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-30/html/CREC-2026-04-30-pt1-PgH3299-3.htm",
+   "sentences": [
+    "Surely, we do not want our foreign adversaries to acquire agricultural land here in the United States, but ultimately, this is a solution in search of a problem.",
+    "As of December 2023, the USDA reported that foreignly held agricultural land is approximately 3.5 percent of all privately held agricultural land in the United States.",
+    "Let's be clear: I share the concern about protecting U.S. agricultural land and national security, but this amendment is overly broad and risks serious unintended consequences.",
+    "In recent years, States such as Florida and Texas have passed laws restricting ownership of agricultural land by citizens or entities from foreign adversaries, which has resulted in xenophobic and discriminatory practices against Asian Americans, with Realtors literally concerned about selling land to Chinese Americans, insinuating any kind of affiliation to the CCP.",
+    "There is a better way to protect national security, protect our agricultural land, and protect our Asian-American community from the threat of racism.",
+    "Mr. Chair, I think it is rich that the previous speaker insinuates that China may buy all our agricultural land when most of the land in Hawaii was stolen by the United States of America when it was illegally annexed by this country.",
+    "Mr. Chair, I rise in opposition to the amendment."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, earlier today, we sat in the Armed Services Committee and heard a $1.5 trillion defense budget request.",
+    "That is not including the $1 billion a day going to the Iran war.",
+    "Tariffs, taxes on our own farmers, have cost them billions and made food more expensive for everyone.",
+    "This amendment would also prohibit education activities on animal research in those countries, and I would ask my colleagues: Do we really want to limit education that could prevent the next outbreak of a zoonotic disease, even if the education is in a country of concern?",
+    "Mr. Chair, I urge my colleagues to reject this bill.",
+    "Vote ``no.'' Mr. Chair, I rise in opposition to the amendment.",
+    "Mr. Chairman, I continue to urge all Members to oppose this amendment.",
+    "Again, while I understand the perspectives and the points of view of the majority, again, eliminating ourselves from the opportunity to engage in shared research to the benefit of the health and wellness and the lives of all American people, we cannot support this amendment.",
+    "Mr. Chair, I support promoting healthier diets and lifestyles for all Americans, but I have serious concerns with any policy that would make life more difficult for Americans who are already struggling to make ends meet.",
+    "Mr. Chair, I rise in opposition to this amendment.",
+    "I rise to oppose this amendment which would extend automatic grazing renewals to the national grasslands, eliminating environmental review, public participation, and Tribal consultation in the management of our public lands.",
+    "Though I support responsible grazing of our public lands, this amendment would incentivize the Trump administration to keep cutting staff and degrade these landscapes, which are our national heritage.",
+    "Mr. Chair, I rise in opposition to this amendment, which would send us backwards when it comes to animal disease tracing and herd management."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMERGENCY CONSERVATION PROGRAM IMPROVEMENT ACT OF 2025",
+   "title": "EMERGENCY CONSERVATION PROGRAM IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2844-4.htm",
+   "sentences": [
+    "Farmers in my specific district deal with some of the most relentless climate pressures and diverse natural disasters anywhere in this country--wildfires, hurricanes, volcanic eruptions, tsunamis, landslides, and floods caused by increasingly powerful Kona low storms.",
+    "Climate change is real, and intense storms, more destructive wildfires than we have ever seen in our lifetimes, prolonged droughts, and extreme weather events of every single kind will continue to increase in frequency and intensity.",
+    "Mr. Speaker, I rise in strong support of H.R. 1011.",
+    "The question is whether we will meet them with the urgency they deserve."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISASTER RELIEF FOR HAWAII",
+   "title": "DISASTER RELIEF FOR HAWAII",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2714-2.htm",
+   "sentences": [
+    "We need a whole-of- government approach in response right now: disaster, SNAP, and hot food waivers for families who can't access their kitchens; debris removal so that people can begin to rebuild; the Army Corps of Engineers clearing and dredging our waterways; EPA testing soil and water to keep our communities safe from whatever ran off the farms or the mountainsides behind them; and National Health Corps support for wound care, mental health, and recovery that doesn't end when the water recedes.",
+    "We will always be standing with you.",
+    "We will not stop fighting to bring every possible resource to help our communities recover, rebuild, and come back even stronger. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REWRITING HISTORY",
+   "title": "REWRITING HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2022.htm",
+   "sentences": [
+    "In North Korea, they deleted political leaders from online archives.",
+    "We see it in efforts to attack birthright citizenship."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 7148 because for rural communities like mine in Hawaii, this bill isn't abstract policy."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESTORING ELECTION INTEGRITY",
+   "title": "RESTORING ELECTION INTEGRITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1162.htm",
+   "sentences": [
+    "Mr. Speaker, today marks the anniversary of Citizens United.",
+    "Before Citizens United, elections were about persuading voters.",
+    "After it, they became about courting billionaires.",
+    "As of 2025, there are 2,502 super-PACs.",
+    "For the 2024 election, they have taken in over $5 billion, much of it dark money, much of it undisclosed, and much of it designed to drown out the voices of everyday Americans.",
+    "Super-PACs were supposedly independent.",
+    "Meanwhile, teachers, nurses, construction workers, and police officers pay higher effective tax rates than private equity executives.",
+    "Families struggle with housing costs, healthcare, and childcare while Congress stalls, paralyzed by fear of angering the super-PACs that bankroll campaigns.",
+    "Dark money doesn't just influence policy.",
+    "Fifteen years later, the verdict is in: Citizens United has sold out our democracy and all Americans across the country.",
+    "It is past time to end the era when billionaires buy access, buy silence, and buy power.",
+    "Congress must act to close the coordination loopholes, rein in the super-PACs, and restore the simple idea that in America, people, not money, govern."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "We cosponsored bills, worked on disaster funding and rural health, and traded a lot of jabs and took funny pictures of each other in our Agriculture Committee hearings.",
+    "I will never forget November 8, 2023."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1834, BREAKING THE GRIDLOCK ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1834, BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH122-2.htm",
+   "sentences": [
+    "Mr. Speaker, imagine being a farmer choosing between insurance and seed, a small business owner weighing a doctor's visit against payroll, families hoping nothing goes wrong because they are one ER visit away from being homeless.",
+    "The big, ugly bill took a sledgehammer to rural healthcare, and letting the ACA enhanced premium tax credits expire will accelerate the damage and hasten the harm.",
+    "This clean extension of the ACA tax credits will save lives."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "Earlier this year, President Trump issued an executive order dismantling collective bargaining agreements for more than 1 million Federal employees.",
+    "Collective bargaining, grievance procedures, and whistleblower protections are the foundation of the strong civilian workforce that our national security, veterans, and communities across this country rely on.",
+    "That is why I stand firmly with our union ``ohana'' ``family'' across the country in rejecting these union-busting efforts and urging passage of the Protect America's Workforce Act."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING DHS IMMIGRATION RAIDS",
+   "title": "FIGHTING DHS IMMIGRATION RAIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5014-3.htm",
+   "sentences": [
+    "We just saw this on Kauai recently, where a raid that swept up 44 people ended with six Venezuelan men--who were legally here seeking asylum--self- deporting after the administration revoked temporary protected status for their country."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FISCAL YEAR 2026 NDAA",
+   "title": "FISCAL YEAR 2026 NDAA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4173-3.htm",
+   "sentences": [
+    "I also proposed raising the Taiwan Security Cooperation Initiative cap to $8.5 billion, fully paid for with existing tariff revenue that is coming in, to strengthen Indo-Pacific deterrence.",
+    "Many of my colleagues put forward commonsense ideas like prohibiting the deportation of veterans without due process, as in the case of my constituent, Mr. Sae Joon Park, or clarifying that the National Guard can't be turned into an immigration police force.",
+    "With regard to standing up to China, I introduced an amendment requiring congressional approval before advanced AI chips, critical to our most sophisticated weapons and intelligence systems, could be exported to Beijing.",
+    "I will always stand up for all of Hawaii's servicemembers, their families, and the communities that support them."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "Gender-affirming care is healthcare.",
+    "Denying it sends a harmful message to military families with transgender children that their needs, their dignity, who they are, and their very lives do not matter.",
+    "In Hawaii, where trust around military land use is damaged, quite frankly, and lease negotiations are ongoing, accountability is not optional.",
+    "A back-door taking of our lands is 100 percent unacceptable.",
+    "Mr. Chair, I rise in strong opposition to this amendment.",
+    "Mr. Chair, I rise in strong opposition to this amendment striking funding for the Taiwan Security Cooperation Initiative.",
+    "Madam Chair, I rise in opposition to this amendment, which would create broad exemptions from the Endangered Species Act on military and National Guard lands.",
+    "Madam Chair, I strongly urge my colleagues to reject this amendment."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BIDDING FAREWELL TO OFFICER SUZANNE O",
+   "title": "BIDDING FAREWELL TO OFFICER SUZANNE O",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3744-6.htm",
+   "sentences": [
+    "Mr. Speaker, last week, I joined our Maui ``ohana''; ``family,'' law enforcement, and officials from across Hawaii as we bid farewell to Suzanne O, a beloved member of the Maui Police Department, who was killed in the line of duty, the first for our department in 26 years.",
+    "One of those girls, her niece Oleya, spoke at her memorial, calling her aunty ``my favorite, beautiful police officer'' and asking her to visit her in her dreams.",
+    "Employee number: 30881; Call sign: One-Alpha-30; Officer: Suzanne O; end of watch: August 15, 2025.'' As Officer O watches over us now from above, we will do our very best to serve, live, and lead like she did. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING IMMIGRATION INEFFICIENCIES",
+   "title": "ADDRESSING IMMIGRATION INEFFICIENCIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2998-4.htm",
+   "sentences": [
+    "Yet despite his sacrifice, ICE officers gave him no choice but to deport himself back to South Korea after nearly 50 years.",
+    "I will not stand by while Republicans turn our veterans into bargaining chips."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSITION TO JOB CORPS CLOSURES",
+   "title": "OPPOSITION TO JOB CORPS CLOSURES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2498-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong opposition to the Trump administration's abrupt, unjustified attempt to close Job Corps centers nationwide."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2183-4.htm",
+   "sentences": [
+    "Atalina still works full time and still serves her neighbors and community. ``If I put my entire family on my employer insurance,'' she told me, ``it would cost more than half my paycheck.'' Medicaid gave her family access to lifesaving care.",
+    "These programs aren't ``handouts,'' she says. ``They are lifelines.'' Now, because her income barely crossed the threshold, she has lost SNAP. ``It doesn't mean we can suddenly afford groceries,'' she says. ``It just means we sacrifice even more.'' If we cut Medicaid and SNAP, we are not trimming fat.",
+    "Do we feed the greed of billionaires, or do we feed and care for families like Atalina's?"
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS EVERYONE",
+   "title": "GOP TAX SCAM HURTS EVERYONE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2191.htm",
+   "sentences": [
+    "Medicaid is the thin lifeline holding together that fragile system.",
+    "At Adventist Health Castle in Kailua, 75 percent of patients rely on Medicaid and Medicare.",
+    "Forty percent of her patients are on Medicaid.",
+    "Let's talk about the preschool teacher in my district whose son was born weighing less than 2 pounds--5 months in the NICU, emergency surgery, feeding tubes, with a hospital bill 50 times more than she will make in a single year covered by Medicaid.",
+    "He is alive only because Medicaid was there.",
+    "Slashing Medicaid won't balance a budget.",
+    "She told me plainly, as she sat in my office today with her 1-year-old, Kashi: If these cuts pass, we will not survive past this year."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP IMMIGRATION POLICIES",
+   "title": "TRUMP IMMIGRATION POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1767.htm",
+   "sentences": [
+    "Earlier this year, the administration invoked the Alien Enemies Act, an 18th century wartime statute, to deport 137 Venezuelan men to a notorious prison abroad.",
+    "The Supreme Court affirmed, by a 7-2 majority, these people deserve due process under our Constitution.",
+    "Mr. Speaker, I rise today in strong opposition to President Trump's unlawful and unjust deportations to El Salvador.",
+    "Mr. Speaker, I urge my colleagues to honor the oath we all took in this very Chamber to uphold the Constitution, protect due process, and defend the values that define our Nation."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAUI DISLOCATED WORKERS PROGRAM",
+   "title": "MAUI DISLOCATED WORKERS PROGRAM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1555-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to support the workers and families of Maui, still recovering from the devastating wildfires of 2023.",
+    "I will keep fighting to ensure that promise is kept. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH781-3.htm",
+   "sentences": [
+    "With up to $2.5 trillion in Medicaid cuts and $230 billion slashed from SNAP, this budget plan would leave millions of families and seniors without essential support.",
+    "Nationwide, more than 12 million rural Americans rely on Medicaid, and SNAP participation is higher in rural areas than urban ones.",
+    "In my home State of Hawaii, over 350,000 people rely on Medicaid, and nearly one in five depend on SNAP to eat.",
+    "At a time when too many are struggling, Republicans are delivering tax breaks to billionaires on the backs of our working families.",
+    "Mr. Speaker, I rise in strong opposition to the House Republican budget resolution, a blatant attempt to strip healthcare and food aid away from everyday Americans.",
+    "I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "Federal workers care for our veterans, keep us safe when we travel, and make sure our seniors get the Social Security payments that they need to put food on the table and to survive.",
+    "They don't serve a single master and his billionaire friends.",
+    "As a member of the Labor Caucus, I am proud to stand with these essential employees who keep our government running every single day."
+   ]
+  },
+  {
+   "date": "2025-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUED RAPID OHIA DEATH RESPONSE ACT OF 2025",
+   "title": "CONTINUED RAPID OHIA DEATH RESPONSE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-21/html/CREC-2025-01-21-pt1-PgH248.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 375, the Continued Rapid Ohia Death Response Act of 2025.",
+    "Mr. Speaker, I thank again all who have supported our bill, and I urge my colleagues to join me in voting ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING EVERY STUDENT FEELS SAFE, SEEN, SUPPORTED",
+   "title": "ENSURING EVERY STUDENT FEELS SAFE, SEEN, SUPPORTED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH155-3.htm",
+   "sentences": [
+    "As a mother of teenagers in public schools, I am appalled that instead of addressing urgent challenges, like the youth mental health crisis, gun violence in our schools, and the growing teacher shortage, this legislation diverts our attention to dangerous and divisive policies.",
+    "In doing so, I urge my colleagues to do the right thing and stand up for our values as a Nation."
+   ]
+  }
+ ]
+}

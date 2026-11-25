@@ -1,0 +1,133 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "feenstra",
+ "name": "Randy Feenstra",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 31
+ },
+ "statements": [
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING THAT SECTION 11 OF HOUSE RESOLUTION 1224 SHALL HAVE NO FORCE OR EFFECT",
+   "title": "PROVIDING THAT SECTION 11 OF HOUSE RESOLUTION 1224 SHALL HAVE NO FORCE OR EFFECT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3410.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of E15 year-round."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "Taxpayers across Iowa are seeing real relief through bigger refunds and higher take-home pay delivered by the historic working families tax cuts bill.",
+    "I am hearing from family farmers who now have the certainty that their operation will stay in their family for generations to come because this bill includes my provision to permanently double the death tax exemption.",
+    "I am hearing from hardworking parents excited to have access to family medical leave, have double child tax credit, and a $1,000 downpayment for children through Trump's tax accounts.",
+    "I am hearing from waitresses, delivery drivers, tradesmen, and millions of Americans who will finally keep more of what they earned because we delivered no tax on tips, no tax on overtime, and no tax on Social Security.",
+    "Mr. Speaker, I urge my colleagues to support this resolution."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the CLARITY Act.",
+    "The increasing adoption of digital assets and the use of blockchain technologies can grow our economy and provide American families with a new opportunity to grow wealth.",
+    "However, under President Biden, digital assets were attacked, which crushed innovation and created uncertainty for businesses.",
+    "We want digital asset innovation to happen in America and crypto jobs to be created in America without ceding ground to foreign countries.",
+    "That is why we must pass the CLARITY Act, to spur innovation and support economic growth by providing clear rules of the road for digital assets in the United States.",
+    "It fosters innovation by providing a pathway for digital asset firms to operate legally and with confidence, encouraging digital asset innovation to remain in the U.S. The CLARITY Act unlocks economic growth, global competitiveness, and financial opportunity for all.",
+    "Mr. Speaker, I urge my colleagues to support this bill and put America first in the race to lead the global digital asset marketplace for our country."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "This bill will help our Main Street businesses grow, invest, and hire, and it will increase the exemption for the death tax, which will help save 2 million family farms.",
+    "Additionally, this legislation formally funds the border wall, hires more ICE and Border Patrol agents, and creates American energy independence."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALS AWARENESS MONTH",
+   "title": "ALS AWARENESS MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgH2204-2.htm",
+   "sentences": [
+    "We will never forget Alex and Jaci, and we will continue to fight to find a cure for this tragic disease. congratulating dr. wendy wintersteen Mr. Speaker, I rise today to congratulate my friend, Dr. Wendy Wintersteen, on announcing her retirement as president of Iowa State University."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "We restored R&D expensing and 100 percent bonus depreciation to rebuild domestic manufacturing, creating new jobs, and bringing investment back to our country and back to our State."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTERNAL REVENUE SERVICE MATH AND TAXPAYER HELP ACT",
+   "title": "INTERNAL REVENUE SERVICE MATH AND TAXPAYER HELP ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1348.htm",
+   "sentences": [
+    "Mr. Speaker, if the IRS finds a mistake on a tax return, such as when a taxpayer accidentally adds a zero to their reported income, the agency should clearly indicate that error to the taxpayer and explain why the refund is different than expected.",
+    "Mr. Speaker, I will continue to work to simplify our tax filing system and push for full reauthorization of the Tax Cuts and Jobs Act so that our families, farmers, and small businesses can keep more of their hard-earned money.",
+    "Mr. Speaker, I rise today in strong support of my bill, the IRS MATH Act.",
+    "Mr. Speaker, I urge my colleagues to support this legislation, and I thank Chairman Smith for allowing this bill to come to the floor."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL TAXPAYER ADVOCATE ENHANCEMENT ACT OF 2025",
+   "title": "NATIONAL TAXPAYER ADVOCATE ENHANCEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1349.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, the National Taxpayer Advocate Enhancement Act.",
+    "Mr. Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECRUITING FAMILIES USING DATA ACT OF 2025",
+   "title": "RECRUITING FAMILIES USING DATA ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH962-2.htm",
+   "sentences": [
+    "Unfortunately, many vulnerable children in our foster care system lack a family that they can call their own due to the shortage of foster families.",
+    "My bill, the Recruiting Families Using Data Act, would help States uphold and strengthen their diligent recruitment plans by improving their processes with concrete facts and information that identifies, recruits, and retains qualified foster care homes.",
+    "If we are going to address the problems facing the foster care system, we need better data on those that are having a problem.",
+    "With the right tools and right resources, we can find a caring home for every child in our foster care program.",
+    "Mr. Speaker, I urge my colleagues to stand with me for foster families, and support our children and vote for this wonderful bill."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT",
+   "title": "LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH277.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Laken Riley Act which includes my bill, Sarah's Law, as an amendment.",
+    "I look forward to President Trump signing this bill into law so that illegal immigrants who break our laws are held accountable for their crimes.",
+    "Mr. Speaker, I urge my colleagues to support this legislation to deliver justice for Sarah and her family."
+   ]
+  }
+ ]
+}

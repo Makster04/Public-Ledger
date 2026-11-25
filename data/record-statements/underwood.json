@@ -1,0 +1,109 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "underwood",
+ "name": "Lauren Underwood",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 25
+ },
+ "statements": [
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "title": "NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4651.htm",
+   "sentences": [
+    "The United States has the highest pregnancy-related death rate of any high-income country, and Black women are dying at the highest rate of all.",
+    "Mr. Speaker, I rise today in support of my bill, the NIH IMPROVE Act.",
+    "So, today, I urge them to pass the NIH IMPROVE Act.",
+    "After that, we are going to keep it going until the entire momnibus is signed into law."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE CARE OF AMERICA'S VETERANS ACT",
+   "title": "TAKE CARE OF AMERICA'S VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4548-3.htm",
+   "sentences": [
+    "In the VA medical centers that lack a dedicated lactation space, moms are forced to use unsanitary places like bathrooms or struggle to find a private corner.",
+    "Mr. Speaker, I rise today in support of my bill, the Lactation Spaces for Veteran Moms Act."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STAFF SERGEANT JOSE DUENEZ JR. POST OFFICE BUILDING",
+   "title": "STAFF SERGEANT JOSE DUENEZ JR. POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2852.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of my bill, H.R. 6020, to designate the facility of the United States Postal Service located at 14855 South Van Dyke Road in Plainfield, Illinois, as the Staff Sergeant Jose Duenez Jr. Post Office Building.",
+    "That is why I introduced this bill to commemorate his sacrifice and establish a lasting reminder of his legacy.",
+    "Madam Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill to extend the Affordable Care Act tax credits and to put an end to the Republican healthcare crisis.",
+    "Mr. Speaker, the truth is that the ACA tax credits from my legislation work."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because, in just 2 weeks, the Affordable Care Act tax credits that help millions of Americans afford their premiums will expire, and this Republican healthcare bill does absolutely nothing to keep costs from surging.",
+    "My amendment would extend the enhanced premium tax credits for 3 years to do what this Republican bill fails to do and help American families afford their healthcare."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3898, PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT; PROVIDING FOR CONSIDERATION OF H.R. 3383, INCREASING INVES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 3898, PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT; PROVIDING FOR CONSIDERATION OF H.R. 3383, INCREASING INVESTOR OPPORTUNITIES ACT; PROVIDING...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5124-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because in just 3 weeks, the Affordable Care Act tax credits that helped millions of Americans afford their premiums will expire.",
+    "Mr. Speaker, I urge my Republican colleagues to vote ``no'' on the previous question and to join us in extending these tax credits today."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BABY CHANGING ON BOARD ACT",
+   "title": "BABY CHANGING ON BOARD ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2551.htm",
+   "sentences": [
+    "Mr. Speaker, my bill ensures that every new Amtrak train includes a baby-changing table in at least one restroom per car, including ADA- compliant restrooms, because, let's be real, babies don't wait for layovers when they need to be changed.",
+    "You make your way to the restroom with your kids and your bags, only to realize there is no changing table.",
+    "Mr. Speaker, I rise today in support of my bipartisan bill, the Baby Changing on Board Act.",
+    "Mr. Speaker, I will paint the picture: You are holding your baby in one arm, a diaper bag in the other, and probably some other stuff, too.",
+    "I urge everyone in this Chamber to vote ``yes.'' Let's make changing a diaper on a train a little less gross and a lot more humane."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "Republicans have been working through the night to hand Donald Trump a massive tax cut to all those billionaires who were in the front row of his inauguration.",
+    "Everything is on the table to get that done, including meals for hungry families, working families' healthcare, and the incredible gains that we have made to get more families affordable coverage.",
+    "The Medicaid and nutrition cuts that they are pushing will be devastating.",
+    "We will not stop fighting for the American people to have access to high-quality, affordable healthcare.",
+    "Mr. Speaker, I urge my colleagues to defeat the previous question."
+   ]
+  }
+ ]
+}

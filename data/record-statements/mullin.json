@@ -1,0 +1,159 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mullin",
+ "name": "Kevin Mullin",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 13,
+  "sentences": 30
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING NATHAN DADAP",
+   "title": "THANKING NATHAN DADAP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgE1237-5.htm",
+   "sentences": [
+    "Nathan has been instrumental in helping me write and amend legislation, conduct oversight, and push the policies that are a priority for my district, particularly addressing climate change, extreme weather, sea-level rise, grid resilience, and our transition to clean energy.",
+    "Nathan has also helped me write numerous pieces of related legislation, including the Battery and Regenerative Braking Act, Earthquake Resilience Act, Federal Flood Risk Management Act, Forging Ahead on Rail Electrification (FARE) Act, Groundwater Rise and Infrastructure Preparedness Act, Methane Removal Research and Innovation Act, Reasonable Adjustments To Energy Schedules (RATES) Act, Resilient Emergency Alert Communications and Training (REACT) Act, Reliable Emergency Alert Delivery Integrity (READI) Act, and several more."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "title": "AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5665.htm",
+   "sentences": [
+    "Supporting the adoption of cutting-edge computing tools is a practical way to achieve these goals.",
+    "Madam Speaker, I rise today in support of the Affordable Innovation for the Grid Act, bipartisan legislation that I was proud to introduce alongside Representative Harshbarger."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DANGERS OF NITROUS OXIDE",
+   "title": "DANGERS OF NITROUS OXIDE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4331.htm",
+   "sentences": [
+    "That is why I introduced the bipartisan Nitrous Oxide Safety Act to ban the sale of nitrous oxide to consumers and close the loophole that is being exploited."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPARENCY IN ELECTIONS",
+   "title": "TRANSPARENCY IN ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4064.htm",
+   "sentences": [
+    "Corporations and billionaires are spending more than ever in an effort to influence our elections, and we are seeing more and more campaigns paying social media influencers to promote their candidates.",
+    "They deserve to know where corporations are spending their money and which billionaires are buying elections and how.",
+    "Voters deserve to have basic information about the conflicts of interest, incentives, and who is paying for political ads.",
+    "In the California State Assembly, where I served as speaker pro tempore, I was proud to author the first-in-the-Nation DISCLOSE Act to require candidates, campaigns, and super-PACs to publicly disclose their largest donors in political ads."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OUR 250-YEAR-OLD EXPERIMENT IN DEMOCRACY",
+   "title": "OUR 250-YEAR-OLD EXPERIMENT IN DEMOCRACY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2721-2.htm",
+   "sentences": [
+    "Now, unfortunately, it is the party of following the lead of their President, overriding State laws to ``nationalize the vote.'' It is the party of an executive order attempting to eliminate voting by mail under the guise of voter fraud, which we know is virtually nonexistent.",
+    "The SAVE Act and the MEGA Act make it harder for voters to cast a ballot.",
+    "The Framers of the Constitution, flawed as they were, knew that we would one day be faced with this moment: A strongman and his followers ready to throw it all away to avoid another free and fair election, but we won't let them."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUARDRAILS NEEDED FOR AI CHATBOTS",
+   "title": "GUARDRAILS NEEDED FOR AI CHATBOTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2557-2.htm",
+   "sentences": [
+    "Artificial intelligence chatbots are becoming increasingly common in our daily lives.",
+    "We have seen this most clearly in the mental health space.",
+    "These limitations extend beyond mental health, too.",
+    "That is why I am introducing the CHATBOT Act.",
+    "I urge my colleagues on both sides of the aisle to support the CHATBOT Act. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "title": "STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5522.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in opposition to the so- called State Planning for Reliability and Affordability Act.",
+    "Madam Speaker, I urge my colleagues to reject this bill and work together on real solutions that lower energy bills for the American people."
+   ]
+  },
+  {
+   "date": "2025-11-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE PENINSULA HUMANE SOCIETY & SPCA",
+   "title": "COMMEMORATING THE PENINSULA HUMANE SOCIETY & SPCA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-04/html/CREC-2025-11-04-pt1-PgE1039.htm",
+   "sentences": [
+    "It has expanded to include a Wildlife Care Center opened in 2024 and a soon-to-open Animal Sanctuary to provide a permanent home to animals not supported by the current model.",
+    "And the 100 percent donor-funded Hope Program began, enabling the Society to provide enhanced behavior and medical support to pets who need it to become ready for adoption."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO MRS. CHRISTA SULLIVAN",
+   "title": "PAYING TRIBUTE TO MRS. CHRISTA SULLIVAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgE709.htm",
+   "sentences": [
+    "She was a steadfast supporter of the men and women of the South San Francisco Police Department and the founder and lifelong advocate for their association.",
+    "She lived a life rooted in service to her community and family, for which we will be forever grateful."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL INSTITUTES OF HEALTH",
+   "title": "NATIONAL INSTITUTES OF HEALTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1899-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to the Trump administration's proposal to gut the National Institutes of Health.",
+    "I invite my colleagues to explain to their constituents why they are against fighting cancer or Alzheimer's. ========================= END NOTE ========================= Mr. Speaker, I urge Members to reject those devastating cuts and stand up for the well-being of the American people. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE AND NONROAD ",
+   "title": "PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE AND NONROAD ENGINE POLLUTION CONTROL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1755.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in opposition to the Republicans' dangerous attempt to revoke California's ability to protect public health and reduce toxic vehicle emissions."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "The SAVE Act is a blatant attempt to undermine our election system, weaken American democracy, and unfairly suppress millions of eligible citizens from voting.",
+    "If the SAVE Act becomes law, eligible Americans would have to provide either a passport or a birth certificate to register to vote and cast their ballots.",
+    "The SAVE Act would do the opposite."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FOR WALK-IN COOLERS AND WALK-IN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1307-2.htm",
+   "sentences": [
+    "We will continue to fight for commonsense policies for everyday people, and that is why I oppose H.J. Res. 24."
+   ]
+  }
+ ]
+}

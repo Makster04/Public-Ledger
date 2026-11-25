@@ -456,10 +456,11 @@ export function recordText(html){
 // "[From the Washington Post, …]" to the end of the turn.
 export const withoutInserts=t=>String(t||'').replace(/\[From [^\]]{0,200}\][\s\S]*$/,' ')
   .replace(/\bDear (?:[A-Z][\w.]*\s?){1,5}[:,][\s\S]*?(?:\b(?:Sincerely|Respectfully(?: yours)?|Very truly yours|Best regards|Warm regards)\b[^.\n]*\.?|$)/g,' ');
-// What one member said on a Record page: their turns ("  Mr. OSSOFF. Mr. President, …") up to the next speaker's.
+// What one member said on a Record page: their turns ("  Mr. OSSOFF. Mr. President, …"; since Nov. 25, 2026 also the
+// names the Record prints in mixed case: "  Mr. McCONNELL.", "  Ms. DeLAURO.", "  Mr. LaHOOD.") up to the next speaker's.
 // person: {name, stateName}. A page whose turns can't be told apart gives nothing, rather than someone else's words.
 export function speakerText(text,person){
-  const turn=/^ {2,4}(?:(?:Mr|Mrs|Ms|Miss|Madam|Dr)\.\s+([A-Z][A-Z'’\- ]*[A-Z])(?:\s+of\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*))?|The\s+([A-Z][A-Za-z ]*?(?:pro tempore)?))\.\s/gm;
+  const turn=/^ {2,4}(?:(?:Mr|Mrs|Ms|Miss|Madam|Dr)\.\s+((?:Mc|Mac|De|Del|Di|La|Le|Du)?[A-Z][A-Z'’\- ]*[A-Z])(?:\s+of\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*))?|The\s+([A-Z][A-Za-z ]*?(?:pro tempore)?))\.\s/gm;
   const marks=[...String(text||'').matchAll(turn)];if(!marks.length)return '';
   const want=letters(surnameOf(person)),state=letters(person?.stateName);
   const parts=[];

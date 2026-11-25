@@ -1,0 +1,39 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "golden",
+ "name": "Jared F. Golden",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 2,
+  "sentences": 9
+ },
+ "statements": [
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NORTHEAST LOBSTERMAN PROTECTION ACT OF 2026",
+   "title": "NORTHEAST LOBSTERMAN PROTECTION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5395.htm",
+   "sentences": [
+    "With that in mind, I urge you to see this legislation for what it is."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2550 TO NULLIFY THE EXECUTIVE ORDER RELATING TO EXCLUSIONS FROM FEDERAL LABOR-MANAGEMENT RELATIONS PROGRAMS, AND FOR OTHER PURPO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2550 TO NULLIFY THE EXECUTIVE ORDER RELATING TO EXCLUSIONS FROM FEDERAL LABOR-MANAGEMENT RELATIONS PROGRAMS, AND FOR OTHER PURPOSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5520.htm",
+   "sentences": [
+    "The Protect America's Workforce Act would overturn President Trump's executive order from March that ended collective bargaining rights for roughly 1 million Americans who work for the Federal Government.",
+    "Since the order was made, the administration has ripped up more than 700,000 union contracts.",
+    "The order was the largest act of union busting in American history, and it left our Federal workforce more vulnerable to unfair treatment and political interference.",
+    "This majority includes Democrats and Republicans who recognize that collective bargaining is not a partisan issue.",
+    "In his order, President Trump said ending collective bargaining was about protecting our national defense, but in my district and many others, affected workers build our warships and care for our veterans.",
+    "If the majority we built over the past few months sticks together, we can overturn this union-busting executive order, and we can show America that this body will protect workers' rights.",
+    "Mr. Speaker, I support this motion, and I encourage my colleagues, including the 226 Members of this Chamber who cosponsored the bill and the 218 of them who signed the discharge petition, to support the motion.",
+    "I urge my colleagues to vote ``yes'' on the rule."
+   ]
+  }
+ ]
+}

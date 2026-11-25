@@ -1,0 +1,125 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "davids",
+ "name": "Sharice Davids",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 23
+ },
+ "statements": [
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIVE AMERICAN ENTREPRENEURIAL OPPORTUNITY ACT",
+   "title": "NATIVE AMERICAN ENTREPRENEURIAL OPPORTUNITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4138.htm",
+   "sentences": [
+    "A good idea shouldn't have a smaller chance of succeeding simply because it is in Indian Country.",
+    "Just as importantly, it creates accountability by requiring regular reports to Congress about how these efforts are working in Indian Country.",
+    "That is why I introduced the Native American Entrepreneurial Opportunity Act.",
+    "I urge my colleagues on both sides of the aisle to support this bill and to support the entrepreneurs, workers, and communities that it is going to benefit."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KANSAS CITY READY FOR FIFA WORLD CUP",
+   "title": "KANSAS CITY READY FOR FIFA WORLD CUP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3919-2.htm",
+   "sentences": [
+    "From local leaders and small businesses to first responders, transit workers, volunteers, and organizers, countless people have spent years preparing for these next 5 weeks."
+   ]
+  },
+  {
+   "date": "2026-05-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE 60TH ANNIVERSARY OF THE EAST CENTRAL KANSAS ECONOMIC OPPORTUNITY CORPORATION",
+   "title": "COMMEMORATING THE 60TH ANNIVERSARY OF THE EAST CENTRAL KANSAS ECONOMIC OPPORTUNITY CORPORATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-29/html/CREC-2026-05-29-pt1-PgE501.htm",
+   "sentences": [
+    "Serving a 16-county region including Kansas' Third District, ECKAN's Head Start and Early Head Start programs promote school readiness, family health, and childcare partnerships.",
+    "ECKAN also operates nine county community centers and a regional food recovery warehouse, offering emergency assistance, food and supply distributions, housing vouchers, and more.",
+    "ECKAN also operates programs that reduce energy costs for eligible households, administer Housing Choice Vouchers, and manage affordable rental units."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "title": "NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3421.htm",
+   "sentences": [
+    "Back home in Kansas, families are making tough choices every single day, whether it is filling up their gas tank, paying rent, buying groceries, or covering the cost of childcare.",
+    "Frankly, this administration's chaotic economic policies and reckless approach to tariffs are making things worse and harder.",
+    "I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING OUR SKIES SAFER",
+   "title": "MAKING OUR SKIES SAFER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2843-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the bipartisan ALERT Act.",
+    "I urge my colleagues on both sides of the aisle to vote ``yes'' and, after the passage of this bill, work together on a final, fully thought-out bill that ensures safety measures are efficiently implemented."
+   ]
+  },
+  {
+   "date": "2025-10-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE WEEK OF SEPTEMBER 30, 2025, AS NATIONAL ORANGE SHIRT WEEK",
+   "title": "COMMEMORATING THE WEEK OF SEPTEMBER 30, 2025, AS NATIONAL ORANGE SHIRT WEEK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-03/html/CREC-2025-10-03-pt1-PgE928-3.htm",
+   "sentences": [
+    "Also known as National Week of Remembrance, this designation aims to honor those who were forced to attend Indian boarding schools.",
+    "My grandparents, Ruth Stacy and Lawrence Little George, both survived Indian Boarding Schools.",
+    "Hearing the experiences of Indian boarding school victims and survivors serves to not only honor the Native spirit, but also to ensure that these types of injustices can never repeat themselves."
+   ]
+  },
+  {
+   "date": "2025-09-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE FINAL FLIGHT OF THE BRAVO COMPANY, 7-158TH CHINOOK HELICOPTER GENERAL SUPPORT AVIATION BATTALION",
+   "title": "COMMEMORATING THE FINAL FLIGHT OF THE BRAVO COMPANY, 7-158TH CHINOOK HELICOPTER GENERAL SUPPORT AVIATION BATTALION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-23/html/CREC-2025-09-23-pt1-PgE891-6.htm",
+   "sentences": [
+    "I urge Army leadership to keep these dedicated service members in mind as they continue with the Army Transformation Initiative."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES GRAIN STANDARDS REAUTHORIZATION ACT OF 2025",
+   "title": "UNITED STATES GRAIN STANDARDS REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3870-2.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING CONDOLENCES TO THE FAMILIES, FRIENDS, AND LOVED ONES OF THE VICTIMS OF THE CRASH OF AMERICAN EAGLE FLIGHT 5342 AND PAT 25",
+   "title": "EXPRESSING CONDOLENCES TO THE FAMILIES, FRIENDS, AND LOVED ONES OF THE VICTIMS OF THE CRASH OF AMERICAN EAGLE FLIGHT 5342 AND PAT 25",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH935.htm",
+   "sentences": [
+    "Responding parties initially included Washington, D.C., Fire and Emergency Medical Services, the Metropolitan Police Department, Virginia State and municipal police departments, and multiple Federal agencies, including the NTSB, FBI, and U.S. Coast Guard.",
+    "I rise in support of H. Res. 153, expressing condolences to the families, friends, and loved ones of the victims of the plane crash of American Eagle Flight 5342 and U.S. Army call sign PAT 25, introduced by my colleagues from Kansas, Representatives Ron Estes and Tracey Mann.",
+    "Mr. Speaker, I urge all of my colleagues to support H. Res. 153, and I continue to express condolences for all the victims to their families, friends, and loved ones."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUCCESSFUL ENTREPRENEURSHIP FOR RESERVISTS AND VETERANS ACT",
+   "title": "SUCCESSFUL ENTREPRENEURSHIP FOR RESERVISTS AND VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH746.htm",
+   "sentences": [
+    "I rise in support of the bipartisan Successful Entrepreneurship for Reservists and Veterans Act, or the SERV Act, which I introduced alongside Representatives Alford and Conaway.",
+    "Mr. Speaker, I urge my colleagues to support this bill and show our veterans that we have their backs, both in uniform and beyond."
+   ]
+  }
+ ]
+}

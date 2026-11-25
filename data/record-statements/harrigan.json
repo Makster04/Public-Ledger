@@ -1,0 +1,59 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "harrigan",
+ "name": "Pat Harrigan",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 11
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAND CONVEYANCE, FORT BRAGG, HARNETT COUNTY, NORTH CAROLINA",
+   "title": "LAND CONVEYANCE, FORT BRAGG, HARNETT COUNTY, NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5544-2.htm",
+   "sentences": [
+    "That is the problem H.R. 10159 helps solve, and it is why I am proud to cosponsor this bill.",
+    "I will provide some assurance to the sponsoring Member that I will work diligently to have this provision incorporated into the conference discussions of the National Defense Authorization Act that I hope will be finalized this Congress."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5029-6.htm",
+   "sentences": [
+    "Reporting this year revealed that foreign intelligence services spent years secretly accessing Tehran's traffic camera network to track the movements of Iran's top leadership ahead of a strike that killed its Supreme Leader.",
+    "To be clear about what this amendment does not do, installation commanders still keep the full authority to enforce speed limits through military police, exactly as they do today.",
+    "We have military police to enforce safety standards that are already issued by the base commanders across every installation that we have.",
+    "Mr. Chairman, I rise today in strong support of my amendment."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEXT-GENERATION GEOTHERMAL RESEARCH AND DEVELOPMENT ACT",
+   "title": "NEXT-GENERATION GEOTHERMAL RESEARCH AND DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4667.htm",
+   "sentences": [
+    "Madam Speaker, when Americans think about energy, they usually think about things that we can see: oil fields, natural gas pipelines, nuclear power plants, wind farms.",
+    "Madam Speaker, I thank Congresswoman Salinas for her partnership, and I urge all of my colleagues to support the Next-Generation Geothermal Research and Development Act."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025",
+   "title": "RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+   "sentences": [
+    "This rescissions package is our chance to prove that we still remember who we work for here in Washington.",
+    "We are cutting $2.5 million for electric vehicles in Vietnam, $47,000 for transgender surgeries in Colombia, and nearly $10 billion for NPR, PBS, and other bloated liberal pet projects that have no place in a responsible budget.",
+    "Mr. Speaker, I urge my colleagues to pass this bill and prove that Congress can still do the right thing."
+   ]
+  }
+ ]
+}

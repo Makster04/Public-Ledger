@@ -1,0 +1,425 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "courtney",
+ "name": "Joe Courtney",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 26,
+  "sentences": 179
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUTURE OF QATARI AIR FORCE ONE PLANE",
+   "title": "FUTURE OF QATARI AIR FORCE ONE PLANE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5536-2.htm",
+   "sentences": [
+    "It is a plane the U.S. taxpayers spent hundreds of millions of dollars over the last years to retrofit prior to its maiden flight to Turkiye for the NATO Summit.",
+    "Clearly, Mr. Speaker, the U.S. taxpayer has huge skin in the game regarding the future of this plane.",
+    "It is scheduled to go to the museum.'' Mr. Speaker, as the ranking member of the Seapower and Projection Forces Subcommittee, which has jurisdiction over the Air Force executive airlift programs, I will remind the House that this aircraft is not the property of any one person, including the President of the United States.",
+    "It is clear Congress needs to intervene to prohibit any unlawful attempt to send it ``to the museum.'' Today, Armed Services Committee Ranking Member Adam Smith and I will be introducing the Safeguarding Taxpayer Investment for Executive Airlift Act, which will very simply prohibit the transfer of the Qatari Air Force One, known as VC-25B bridge aircraft, from the possession of the U.S. Air Force.",
+    "Mr. Speaker, I urge my colleagues to join me and Ranking Member Smith to cosponsor this commonsense measure. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "The bill authorizes $15 billion for the Pentagon's number one acquisition priority, the Columbia-class ballistic submarine program.",
+    "Ukraine has demonstrated how effective unmanned systems are in their defense against Russia's Black Sea invasion, and we must embrace that trend and expand our unmanned capabilities.",
+    "Unfortunately, the NDAA rule passed earlier today merging the NDAA with a completely nongermane voter suppression bill, the SAVE America Act, violates that long tradition.",
+    "If Republican leadership is serious about passing a 66th NDAA with bipartisan support, the SAVE America Act merger should be stripped from the bill or later in conference."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5001.htm",
+   "sentences": [
+    "Mr. Chairman, this is a voucher program, and vouchers cost money.",
+    "Mr. Chair, I rise in strong opposition to this amendment.",
+    "We are going to be in a fight over at the Appropriations Committee to restore funding.",
+    "For that purpose, I oppose the amendment.",
+    "Mr. Chair, we are not in a place where there should even be a discussion about starting new funding programs for education paid for by the taxpayer until we keep the promise to those communities that we are going to reimburse the cost of educating military schoolchildren."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIMINISHED ACCESS TO HEALTHCARE",
+   "title": "DIMINISHED ACCESS TO HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4265-5.htm",
+   "sentences": [
+    "As the Congressional Budget Office documented, this bill will add 3.4 trillion new dollars to our national debt, provide permanent $1 trillion tax breaks to the top 1 percent of income earners, cut nutrition programs by at least $187 billion, and, worst of all, cut $1 trillion from America's largest healthcare program, Medicaid, starting on January 1.",
+    "According to them, the new work requirements in the law for vulnerable populations would have exemptions for the ``medically frail,'' and there was nothing to worry about.",
+    "A couple of weeks ago, however, these warnings sadly came true when RFK Jr.'s health department released the actual rule that State Medicaid directors will have to follow starting in January.",
+    "On this poster is a list of 48 patient groups vehemently denouncing this vicious rule, which Secretary Kennedy and the Centers for Medicare and Medicaid Services should withdraw immediately."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GROTON, CONNECTICUT: SUBMARINE CAPITAL OF THE WORLD",
+   "title": "GROTON, CONNECTICUT: SUBMARINE CAPITAL OF THE WORLD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgH2965.htm",
+   "sentences": [
+    "The boat is powered by a nuclear reactor and is armed with an arsenal to carry out its mission of deterrence."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ASSERTING CONGRESS' CONSTITUTIONAL ROLE",
+   "title": "ASSERTING CONGRESS' CONSTITUTIONAL ROLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2837-5.htm",
+   "sentences": [
+    "Mr. Speaker, this week, Congress will have an opportunity to assert its constitutional role when we vote for the second time on a War Powers Act resolution to force President Trump to seek legal authority for his unilateral military campaign in Iran.",
+    "On February 28, the President, without consultation with Congress and almost all of our longtime allies, ordered military strikes against Iran, taking the United States into a war now in its seventh week.",
+    "Hundreds of servicemembers have been injured, and hundreds of innocent civilians, some the very victims of Iran's brutal regime that President Trump said he would liberate, have been killed.",
+    "President Trump ignored U.S. military advice that Iran would close the Strait of Hormuz where 20 percent of the world's oil and 30 percent of its fertilizer transits.",
+    "Mr. Speaker, researchers at Brown University a few days ago released a real-time, running Iran war cost tracker that calculates the increased cost of gasoline and diesel fuel since February.",
+    "Diesel was $3.67, and today it is $5.65.",
+    "This morning, in my district, on the way to the airport in Enfield, Connecticut, gas is $4.29, and diesel is a staggering $6.19.",
+    "Any Member of this House visiting a farm, like a dairy farm that I visited back home during the Easter break, or small businesses like homebuilders who run their equipment on diesel, has heard about the shock and hit that they are taking in terms of keeping their operations sustainable and profitable.",
+    "But after negotiations fell through, the President announced that he was instituting a naval blockade of all Iranian ports with no allied support, another example that he continues to believe he is free to escalate this war without any obligation to adhere to constitutional norms.",
+    "It has accordingly with studied care, vested the question of war in the legislature.'' On March 5, I joined 211 of my colleagues in voting ``yes'' on the War Powers Resolution, H. Con. Res. 38.",
+    "This War Powers Resolution failed by a vote of 212 to 219.",
+    "As a member of the Armed Services Committee and a cosponsor of this measure, I strongly urge my colleagues in the House to vote ``yes'' to reclaim our constitutional role under Article I, Section 8, as the sole branch of government with the power to decide whether our country goes to war."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MUHAMMAD ALI AMERICAN BOXING REVIVAL ACT OF 2026",
+   "title": "MUHAMMAD ALI AMERICAN BOXING REVIVAL ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2641-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in opposition to H.R. 4624, which I also opposed in committee along with three other members who opposed the Muhammad Ali American Boxing Revival Act, a bill which radically amends the existing Muhammad Ali Act that was passed in 2000."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEW SOURCE OF ENERGY FOR NEW ENGLAND",
+   "title": "NEW SOURCE OF ENERGY FOR NEW ENGLAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2488-3.htm",
+   "sentences": [
+    "Even more significant is the fact that this power source is not at the mercy of the global fossil fuel markets that have skyrocketed the cost of home heating oil and gas at the pumps since the start of the war in Iran 16 days ago.",
+    "Union operating engineers, electricians, and laborers kept this project moving forward, despite the persistent, hostile obstruction of the Trump administration's Department of the Interior, which issued two illegal halt work orders in 2025.",
+    "As our economy is reeling today from the oil and gas aftershock of the war in Iran, the news this weekend that offshore wind can provide a reliable, affordable source of energy that is produced in America and for American energy consumers is hopefully going to force a reconsideration of the attack on renewable energy by this administration and, unfortunately, my colleagues in the House who have legislatively crushed this industry, depriving American consumers of an affordable source of home-grown energy.",
+    "Wind power alone will not solve our energy demands, but 700 new megawatts surging into New England is undeniable proof that our Nation's innovators, our building trades union, and the merchant mariners are up to the job to power our country in the 21st century. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING THE PEOPLE OF DENMARK AND GREENLAND",
+   "title": "THANKING THE PEOPLE OF DENMARK AND GREENLAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2240-8.htm",
+   "sentences": [
+    "In the north Atlantic, our subs have conducted joint NATO patrols in the waters off Greenland, Iceland, and the U.K. for many decades which benefits U.S. Homeland Security.",
+    "It is a team effort and Denmark's response to a U.S. sailor in distress is a powerful example of how the NATO alliance is not just based on words but rather meaningful deeds.",
+    "As the Representative of the USS Delaware's home port and ranking member of the Seapower and Projection Forces Subcommittee, I will publicly tell the people of that nation that your caring response to one of our sea servicemembers in distress is deeply appreciated and will be long remembered. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHINA IS NOT SCAMMING EUROPE AND UNITED STATES ON WIND POWER",
+   "title": "CHINA IS NOT SCAMMING EUROPE AND UNITED STATES ON WIND POWER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH667.htm",
+   "sentences": [
+    "During the televised gathering, he veered off topic and rambled on one of his pet peeves, wind power.",
+    "In addition to his usual complaints about how aesthetically ugly wind turbines are, he added another new, startling criticism to his repertoire, mainly that Europe and the U.S. are suckers for allowing China to sell us wind turbine parts while at the same time China doesn't even use wind power in its own country.",
+    "They make them and sell them to suckers like Europe and suckers like the United States.'' Mr. Speaker, the truth of the matter is, as this headline yesterday from Forbes magazine states: ``China Does In Fact Have Wind Turbines, A Lot Of Them.'' Forbes, of course, is hardly a leftwing, anti-Trump media outlet.",
+    "According to the International Energy Agency, which has been tracking energy production by country for decades, China not only manufactures wind equipment but also enjoys the largest wind production in the world and today has twice as much new wind power under construction as the rest of the world combined.",
+    "The wind turbines are sited both onshore and offshore.",
+    "China is not scamming Europe and the U.S. on wind power.",
+    "It is, in fact, the most aggressive domestic user and builder of wind power in the world.",
+    "I raise this point, Mr. Speaker, not to play gotcha--although this is a pretty embarrassing gotcha--but rather to remind the House that, right now, in real life, the Trump bogus attack on wind power, for no good reason, is destroying good American jobs and cutting off an abundant supply of new energy, which our economy and American electricity ratepayers desperately need.",
+    "For example, a couple of weeks ago, for the second time, the administration issued a decree terminating five offshore wind projects, many of which are close to completion and which were supported by billions of dollars of private investment and years of permitting approval.",
+    "Judge Lamberth, a Reagan appointee, thoroughly reviewed the record of the New England-based Revolution Wind offshore project and correctly determined that the Department, in fact, did not find a national security problem but instead specifically issued a written finding a year ago that Revolution's turbines ``would not have adverse impacts to DOD missions.'' Mr. Speaker, you may recall, last September, the House debated an amendment to the 2026 National Defense Authorization Act, where there was an attempt to create a statutory bar to offshore wind based on national security reasons.",
+    "The House voted to reject such a straitjacket on wind power and instead rely on the experts at DOD to judge each project on the facts and science.",
+    "Mr. Speaker, it is time for the administration's unfounded, irrational attack against wind power to stop.",
+    "For the United States to intentionally deprive American building trade workers of good-paying jobs and deprive our national grid of much-needed energy supply makes no sense.",
+    "Mr. Speaker, the only suckers in this area are policymakers in Washington who are spouting off blatantly false narratives about the value of wind energy. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NURSING EXCLUDED AS \"PROFESSIONAL\" DEGREE BY DEPARTMENT OF EDUCATION",
+   "title": "NURSING EXCLUDED AS \"PROFESSIONAL\" DEGREE BY DEPARTMENT OF EDUCATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4909-4.htm",
+   "sentences": [
+    "It is a healthcare monstrosity, which cut $1 trillion from Medicaid, cut out premium subsidies for 22 million Americans for their healthcare exchange plans, and now will suffocate the growth of our Nation's caring professions.",
+    "Every Member of this House--and I will be one of them--should write to the Department of Education saying that this rule makes no sense in terms of the healthcare system today and, also, is an insult to the people who go through extensive training, testing, and certification before they are allowed to practice their caring profession."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESS MUST TAKE ACTION ON TARIFFS",
+   "title": "CONGRESS MUST TAKE ACTION ON TARIFFS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4672.htm",
+   "sentences": [
+    "Mr. Speaker, after months and months of President Trump insisting that his tariffs are not paid by Americans, insisting that tariffs don't drive up prices, insisting that there will be no exclusions on exemptions from his liberation day tariffs that he imposed back in April, on Friday afternoon the White House very quietly released a statement that they, in fact, are exempting and carving out tariffs for a number of goods, which were blindingly obvious were going to be costing more because we do not produce any of those goods here in this country.",
+    "Obviously, if you talk to anybody who has been in a grocery store lately, the prices for all of those products have gone up by large margins, again, in the wake of the April tariffs that were put into place.",
+    "Again, it was so clear to anyone who was actually connected to the real world that grocery prices were going up and that we had to take steps to carve out exemptions for the sake of American consumers, our working families, and the middle class.",
+    "Again, these were tariffs that he imposed unilaterally without consulting Congress.",
+    "It begs the question about the rest of the economy that is getting harmed by tariffs.",
+    "The National Association of Home Builders announced after the tariffs were announced that it would raise the average cost of a new home by $11,000 because of the fact that so many parts and pieces that go into new home construction are imported.",
+    "Its analysis is that, by October, tariffs have raised retail prices on all goods by nearly 5 percent relative to their pretariff trend line.",
+    "Instead of solving high inflation, the Trump tariffs have continued it and, in some instances, increased it.",
+    "The fundamental problem here is that this President believed in his mind that he himself had the power to impose these tariffs.",
+    "A tariff is a tax on imported goods.",
+    "It was about a tariff on tea that the British Government was trying to force the American colonists to pay.",
+    "A case was argued just a couple of weeks ago before the U.S. Supreme Court, where, again, the plaintiffs powerfully stated that the President did not have the authority to impose those taxes back in April.",
+    "For the sake of reestablishing the checks and balances in our country and for the sake of the American economy, where issues like tariffs, which require a lot of analysis, are very complex, and require Congress to be part of that decisionmaking--in fact, we are the decisionmakers, according to the Constitution--those tariffs should be struck down.",
+    "The harm that has been done to the economy, the middle class, and working families because of the Trump tariffs, which, again, were just unilaterally and indiscriminately imposed against some countries that we actually have trade surpluses with, has to be rolled back.",
+    "There was an admission on Friday by the administration that their tariff policy has failed, and it is time for Congress to stand up and do its job to rebalance our economy. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "The most egregious is the Continuing Resolution's failure to ``continue'' tax credits for health insurance which have been on the books for 4 years, right at the same time 24 million Americans are enrolling for 2026 insurance coverage in the ACA health exchanges.",
+    "This program, which has been referred to as the ``number one acquisition priority'' of both the Department of the Navy and the Department of Defense, is building new ballistic submarines on a very tight schedule to replace the aging fleet of Ohio-class submarines, who have been on patrol starting in the 1980's.",
+    "We got a letter the other day that our rates will be increasing a lot due to ACA rates expiring.",
+    "It's hard to have so much of our monthly income going to medical bills and insurance.",
+    "Caleb--Norwich As a small business owner in Connecticut, I am writing to share my deep concern about the potential loss of the health insurance exchange and the premium tax credits.",
+    "For business owners like me, the ACA marketplace (the exchange) is often the only way to get affordable health coverage.",
+    "Anonymous--Clinton I won't be able to afford insurance next year without the ACA.",
+    "Premium tax credits are no longer available, leading to a monthly premium of $1,384.15 (258% increase) however, also need to add in a dental plan with premium of $23.56 so final monthly premium for 2026 will be $1,407.71.",
+    "At 54 I will go without coverage and hope I stay healthy."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "Mr. Chairman, I rise in strong opposition to this amendment, which would have our Nation turn its back on the brave people of Ukraine in their greatest hour of need by cutting off all military assistance.",
+    "As we stand here today, Russia's illegal invasion, which is now in its fourth year, is intensifying to the highest levels of the war, despite all of the oily, phony, happy talk coming from Vladimir Putin about seeking peace.",
+    "On Saturday, Russia launched the largest drone assault of the war, with 805 drones and 13 cruise missiles, killing 5 people and hitting the Cabinet of Ministers of Ukraine.",
+    "Just last night, Russian and Belarusian drones made 19 hits in sovereign Polish airspace, scrambling NATO F-35s and F- 16s to fend off civilian casualties.",
+    "It was Ukraine's air force that alerted their neighbors in Poland to these blatantly illegal incursions, demonstrating Ukraine's commitment to protecting not only their own population but the rest of Europe.",
+    "If this amendment were to pass, it would cripple not only Ukraine's legal right to defend itself but also our NATO Treaty allies."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "Madam Chair, I rise in support of H.R. 3838 as it came out of committee.",
+    "Madam Chair, I urge my colleagues to support a bill that can be passed in a closely divided Congress and stay focused on the core mission of Congress to provide a strong national defense."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT WORK ORDERS",
+   "title": "HALT WORK ORDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3867-2.htm",
+   "sentences": [
+    "Madam Speaker, on August 22, the Trump administration, with absolutely no warning, issued a halt work order to an offshore wind project off the coast of southern New England that has been in the works for 9 years.",
+    "The developers of this project have invested close to $4 billion, employed thousands of workers, and installed 45 out of 65 wind turbines that the Federal Government permitted in 2023.",
+    "The wind power contracts approved by both States at a guaranteed rate will over time save money for ratepayers, particularly during cold, winter months, and will add to the grid at a time we all know demand for electricity is going to increase.",
+    "It is no secret that the President doesn't like wind power, but this project has been permanent, paid for, and is 80 percent finished.",
+    "Leaving the halt work order in place is hurting working families and electric ratepayers."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESS' LONG TO-DO LIST",
+   "title": "CONGRESS' LONG TO-DO LIST",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3720.htm",
+   "sentences": [
+    "What they determined was that the number of people who will lose their health insurance coverage because of H.R. 1 is 10 million, 7.5 million people on Medicaid and another 2 million people who get their insurance through private health plans on the exchange.",
+    "They also calculated the debt impact in terms of H.R. 1 because of the massive giveaway to billionaires and the top 1 percent of this country.",
+    "The debt service on that additional debt is an additional $718 billion.",
+    "Because of that debt figure, the bill triggered another law called paygo, the pay-as-you-go law, which was passed in the 1990s to put pressure on Congress not to pass legislation with that big of a deficit impact.",
+    "What all of them are reporting is that the hit of $1 trillion of Medicaid is going to ripple through the system and cause impact for everybody who relies on those critical services."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING OUR COAST GUARD",
+   "title": "SUPPORTING OUR COAST GUARD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3535.htm",
+   "sentences": [
+    "There were brave whistleblowers that came forth, such as Dr. Kim Young-McLear who is now a retired commander from the Coast Guard."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING COMMUNITY ZIP CODES",
+   "title": "IMPROVING COMMUNITY ZIP CODES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3480-2.htm",
+   "sentences": [
+    "A high percentage of absentee ballot applications that we were required by law to send out . . . were returned--not because the people weren't in town, but because the USPS computer scanning system rejected their addresses.",
+    "People depend on it to get their medications, to get important documents, and to receive their monthly Social Security payments.",
+    "The situation is clearly damaging to us individually and as a community.'' What this bill does is it just simply says for Scotland and a number of other communities that have been identified by the community that basically we are going to unify a ZIP Code for those communities so they don't have to, again, experience what Scotland First Selectman Dana Barrow described."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP THIS INSANE ATTACK ON HEALTHCARE THAT AFFECTS EVERY SINGLE AMERICAN",
+   "title": "STOP THIS INSANE ATTACK ON HEALTHCARE THAT AFFECTS EVERY SINGLE AMERICAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2892-3.htm",
+   "sentences": [
+    "It increases the national debt by $5 trillion, with about $3.5 trillion in new debt with another $1.5 trillion in interest payments.",
+    "It cuts taxes for American families with a yearly income above $500,000 to the tune of over a trillion dollars with a pittance for middle-class and working families.",
+    "It raises the debt ceiling by $5 trillion so the government can sell bonds to finance debt.",
+    "For the State of Connecticut, where I am from, it is actually about a $9 billion cut over the next 10 years in terms of the Medicaid program, as well as eliminating the premium tax subsidies for people who get their health insurance through the Affordable Care Act.",
+    "All of my colleagues that are here today, I encourage them to look at this analysis which shows State by State, sector by sector within healthcare spending, hospitals, physicians, and prescription drugs, in terms of the impact that this bill will have.",
+    "Children's hospitals rely on Medicaid to a greater proportion than other hospitals because they don't have elderly patients, obviously.",
+    "Children's hospitals have no place to cost-shift, so they have uncompensated care with this devastating Medicaid cut that is going to hit every State in terms of its Federal matching funds.",
+    "Over 40 percent of their patient census is on Medicaid.",
+    "It is in the heart of New London, a wonderful, historic community, but it has a high Medicaid population."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG, UGLY BILL",
+   "title": "ONE BIG, UGLY BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2386.htm",
+   "sentences": [
+    "One was up in Tolland, Connecticut, near the border of Massachusetts.",
+    "In terms of healthcare, the bill is going to cut our Medicaid program, America's largest healthcare program, and extract roughly $700 billion from the system over the next 10 years.",
+    "The Affordable Care Act, subsidizes premiums, which provides health insurance for millions of Americans.",
+    "As a result of the deficit impact of this bill, which is going to add trillions of dollars to the national debt, it is going to trigger a sequestration, an automatic cut to the Medicare system.",
+    "The calculation of the Joint Committee on Taxation was $3.7 trillion of new debt on top of the $36 trillion of debt that we have today.",
+    "We are spending $89 billion a month in terms of interest costs on the existing debt.",
+    "It is to reward the top 1 percent whose tax cuts are going to be extended and enlarged for many over the coming years, leaving working families and the poor in the dust."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BUDGET RECONCILIATION BILL",
+   "title": "BUDGET RECONCILIATION BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1951-4.htm",
+   "sentences": [
+    "It has been clear from the outset that the Medicaid program, the program which provides more coverage for more Americans than any other program, 72 million Americans, was a target in this budget reconciliation bill.",
+    "The chairman of the Energy and Commerce Committee, who is a good friend and a good guy, came right out and said that Democrats are going to use this as an opportunity to engage in fear-mongering and misrepresent our bill as an attack on Medicaid.",
+    "Madam Speaker, it is not just Democrats and Republicans that have an opinion about what is happening here, it is about the people that the Medicaid cuts are going to impact, particularly our healthcare sector, particularly the hospital sector.",
+    "This morning, Politico's headline shows what their reaction has been over the last 48 hours, which is ``Hospital groups slam cuts to Medicaid in megabill.'' This is a sector that has many trade associations, the biggest one, the American Hospital Association, came right out and said that it will lead to millions of Americans losing access to healthcare and leaving many of our hospitals struggling to maintain services and stay open for their communities.",
+    "Children's hospitals, who depend on Medicaid, can't cost-shift to older patients on Medicare.",
+    "The American Cancer Society, not a Democrat organization, said the results of these Medicaid cuts will be devastating.",
+    "This bar here, that is the rich folks in this country, the top 20 percent; everybody else gets peanuts.",
+    "The Committee for a Responsible Federal Budget issued their report last night and they conclude that this plan is going to add $4 trillion to the national debt.",
+    "That is even with the cuts that were part of the Medicaid plan, which I talked about a little bit more.",
+    "We have a bill, which is going to cut services, basically put one of our most vulnerable sectors in our economy which we all rely on, our hospitals, at greater financial risk all for the benefit of the small slice of America's population and it is going to add to our national debt, which according to what the committee said is now $36.2 trillion.",
+    "Last month, we paid $89 billion in interest on that national debt.",
+    "Are we going to listen to that top 1 percent who are clamoring to make sure that their tax cuts--the Bezoses, the Musks, the Gateses--they don't really need the help.",
+    "We need to reject these Medicaid cuts and reject this plan."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COST OF LIVING STILL HIGH",
+   "title": "COST OF LIVING STILL HIGH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1342-3.htm",
+   "sentences": [
+    "However, then-President Trump was sworn in on January 20, and to this day, despite over 100 executive orders, countless rescissions that have come out of the White House, not one has been directed in terms of lowering the cost of living for Americans in this country.",
+    "It showed that prices jumped again at 2.8 percent, well above the Federal Reserve's target of 2 percent, which is why interest rates are going to continue to stay unnecessarily high.",
+    "On Wednesday, a couple days from now, so-called Liberation Day, he is now going to announce another wave of tariffs that every economist of every stripe will tell you is going to, in fact, raise the price of goods for Americans.",
+    "Don't take my word for it, listen to the National Association of Home Builders, a staunch Republican organization that has warned this administration that putting tariffs on everything from steel to copper and nickel is going to drive up the price of home construction.",
+    "They have already been hit with a 25 percent tariff from one of our biggest importers of steel, our friend and ally for many years, Canada.",
+    "He has invoked a law, a 1976 law, the International Emergency Economic Powers Act, which was put into place by Congress in this Chamber to provide the President with the ability to raise tariffs against a foreign adversary or threat.",
+    "Because, in fact, if you look at the data from DEA and people who work at the border, less than 1 percent of fentanyl comes from Canada.",
+    "It is really the people on Main Street who are going to feel the brunt of a tariff policy that goes completely in the opposite direction of the promises that he made on the campaign trail."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DON'T TOUCH SOCIAL SECURITY",
+   "title": "DON'T TOUCH SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1278-2.htm",
+   "sentences": [
+    "Mr. Speaker, last year, candidate Trump, President- elect Trump, and now-President Trump repeatedly told the American people that he won't touch Social Security.",
+    "A headline yesterday in The Washington Post read: ``Long waits, waves of calls, website crashes: Social Security is breaking down.'' Next to me is a poster board from The Wall Street Journal.",
+    "Some people may say that The Washington Post is always critical of President Trump, but this is The Wall Street Journal, an impeccable, center-right newspaper whose headline states: ``Dealing With Social Security Is Heading From Bad to Worse.'' The agency that administers benefits is cutting staff and restricting benefits as part of the Department of Government Efficiency review, or DOGE, the Trump initiative.",
+    "We know that there was a wave of those fork-in-the-road retirements that hit Social Security and reduced staff.",
+    "We know that Social Security has already announced that the workforce is going to be reduced from 57,000 all across America to 50,000.",
+    "The fact of the matter is, if you look at how many people are beneficiaries today, with the baby boomer retirements that are swelling the ranks of Social Security beneficiaries, it is 73 million Americans now who are receiving Social Security benefits.",
+    "We now have a bigger-than-ever population of people collecting Social Security benefits and a reduced staff.",
+    "To put this in perspective, in 2010, not that long ago, the size of the Social Security workforce was 68,000, 18,000 more than what the Trump administration is targeting for today, and the number of beneficiaries in 2010 was 54 million Americans as opposed to 73 million Americans today.",
+    "We have more people who need help with the Social Security system and fewer staff to help them navigate it.",
+    "In just 1 week from today, they are pretty much going to shut off phone service for Social Security beneficiaries who are trying to sign up with their bank information to get on Social Security.",
+    "By the way, Social Security's accuracy is 99.7 percent.",
+    "That has been verified by outside audits and by the Social Security trustees.",
+    "Yet, despite that track record, what they are going to tell Social Security beneficiaries, who sometimes struggle with online enrollment in other areas of their lives, is that they are not going to have the opportunity to use a phone service, which, again, has been in practice in the past for decades.",
+    "They are also closing 47 Social Security offices across the country.",
+    "Again, at a time when the number of people who need to interact and interface with the Social Security system is bigger than ever, they are shutting down offices, laying off staff, and shutting off phone service.",
+    "The notion that the Social Security system, by this administration, is not being trusted, the opposite is true.",
+    "Elon Musk, in an interview with FOX News, made it crystal clear his goal is to eliminate Social Security and get $800 billion to $900 billion of savings out of the Social Security system, which we know today is probably one of the most efficient agencies in the Federal Government in terms of the accuracy of their payouts.",
+    "Congress has to stand up as a coequal branch of government that enacted Social Security in 1935 and for 90 years--we are celebrating the 90th anniversary of Social Security--has been a pillar of middle-class retirement security and helping children who have lost a parent.",
+    "They should get that benefit when it is their turn to get the help from Social Security that we promised as Congress.",
+    "Don't touch Social Security. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPUBLICAN BUDGET BETRAYS MIDDLE CLASS",
+   "title": "REPUBLICAN BUDGET BETRAYS MIDDLE CLASS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH734.htm",
+   "sentences": [
+    "It appears that this week we actually are going to take up the budget reconciliation bill that again has been worked out down at the Mar-a- Lago hotel over the last 2 months or so, where a conga line of billionaires have been observed walking through, meeting with leadership of the Republican Conference, laying out their priorities, not the American people's priorities, in terms of what they want to see in that reconciliation bill.",
+    "For the people who benefited the most, the top 1 percent of this country in terms of their economic position, for them, that is their number one priority.",
+    "The top 1 percent in income--in the State of Connecticut from where I am from, that is people whose income is about $1.2 million a year--they are going to get a $70,000 tax cut.",
+    "Now, if we actually had a mature, reasonable process in this Chamber where Democrats would also be consulted in terms of putting together a plan to make sure that lower income and middle-income individuals' taxes don't go up, we could work out an arrangement, but not with a price tag of which the top 1 percent are going to continue to rake in tax cuts that were, again, shoved into the bill in 2017, lowering the top marginal rate from 39 percent to 36 percent.",
+    "The cost of extending those tax cuts for the top 1 percent is $4.5 trillion over the next 10 years.",
+    "The big one is to cut the Medicaid program, a program which provides healthcare for 70 million Americans, such as people in nursing homes.",
+    "Almost half the live births in this country are covered by Medicaid.",
+    "Young, working-class individuals, because of the ACA expansion, are covered by Medicaid.",
+    "It is extremely harmful to middle-class and working families of this country whose essential need for educational services and healthcare are going to be cut."
+   ]
+  },
+  {
+   "date": "2025-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TARIFFS AND ALLIES OF THE UNITED STATES",
+   "title": "TARIFFS AND ALLIES OF THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-10/html/CREC-2025-02-10-pt1-PgH587-5.htm",
+   "sentences": [
+    "Mr. Speaker, at the end of the first week of President Trump's Presidency, he announced with great fanfare that he was imposing 25 percent tariffs on our neighbors, Canada to the north and Mexico to the south.",
+    "The Wall Street Journal, hardly a Democratic newspaper, described this effort as the dumbest trade war ever.",
+    "Again, tariffs like that are completely violative of that agreement.",
+    "Number two, Canada and Mexico made it crystal clear that they would retaliate with tariffs of their own aimed at U.S. businesses and sectors of all sorts.",
+    "American Home Builders, hardly a Democratic group, warned that those tariffs were going to raise the costs of building materials, whether it was wood or metal materials.",
+    "Within hours, the President engaged in a face-saving measure to delay those tariffs for 30 days.",
+    "Yesterday, right before the Super Bowl, the President came out with another proposal of a 25 percent tariff on steel and aluminum indiscriminately across the globe to any and all countries who do business with the United States of America.",
+    "They have been a signatory with a free trade agreement with no tariffs going back to 2002.",
+    "We see a 25 percent tariff on steel and aluminum products coming from Australia into the U.S. at a time when we have a surplus with Australia.",
+    "Instead, what we are seeing is a completely needless insult to the people of Australia by raising tariffs on Australian products coming into this country at the same time we are working with them and they are buying three nuclear submarines, cash on the barrelhead, full price, no gimme, no giveaway.",
+    "We need their input and their help in terms of making sure that we are going to rebalance that security environment and protect the rule of law in the Indo-Pacific.",
+    "Again, we will do everything we can to make sure that this administration changes course and treats our friends and our allies with the respect that they deserve in terms of the contributions that they are making to their national security in a critical part of the world and our national security. ____________________"
+   ]
+  }
+ ]
+}

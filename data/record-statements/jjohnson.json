@@ -1,0 +1,460 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "jjohnson",
+ "name": "Julie Johnson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 31,
+  "sentences": 169
+ },
+ "statements": [
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARKING FOURTH ANNIVERSARY OF DOBBS RULING",
+   "title": "MARKING FOURTH ANNIVERSARY OF DOBBS RULING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4327.htm",
+   "sentences": [
+    "Mr. Speaker, we have just recognized 4 years since the Supreme Court overturned Roe v. Wade.",
+    "Abortion bans haven't decreased abortions.",
+    "The Texas abortion ban specifically is so confusing and restrictive that doctors are refusing to treat pregnant women until they face life- threatening complications because treating them too soon could send that doctor to jail.",
+    "Achieving a More Perfect Union Mr. Speaker, I rise today to recognize the 250th anniversary of the birth of our great Nation.",
+    "As we contemplate what it means to be an American today, we can look back and see that progress made by our ancestors and look forward knowing that, united under our ideals of freedom and equality, we can take steps to finally achieve that more perfect Union. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUCCEEDING IN AI-DRIVEN ECONOMY",
+   "title": "SUCCEEDING IN AI-DRIVEN ECONOMY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2559-7.htm",
+   "sentences": [
+    "Mr. Speaker, artificial intelligence is already transforming the way Americans live, work, and learn."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING LIFE MORE AFFORDABLE",
+   "title": "MAKING LIFE MORE AFFORDABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2589.htm",
+   "sentences": [
+    "Trump has significantly escalated military involvement in Iran, a war that puts American lives at risk.",
+    "Now, let's talk about what this means for working families.",
+    "Every increase in military spending and every escalation of conflict has a ripple effect that touches grocery bills, utility costs, and most immediately the price at the pump.",
+    "Gas prices are rising with an average gallon in Texas now between $3.26 and almost $3.50, while diesel approaches $5 a gallon, a jump of 25 cents just this past week.",
+    "It is families who are paying the price: parents who are driving their kids to school, commuters trying to get to work, and seniors who are trying to make their Social Security stretch just a bit further.",
+    "The billion dollars that we are spending each day on this war could be spent on supporting families, tax relief, the child tax credit, healthcare, the Affordable Care Act--everything.",
+    "While Republicans prioritize reckless wars over the well-being of the American people, Democrats are laser focused on protecting working families and making sure they can afford what they need to survive.",
+    "I urge Republicans to remember the people behind the numbers."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE T",
+   "title": "PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2121-6.htm",
+   "sentences": [
+    "Mr. Speaker, the SAVE America Act makes it harder for Americans to vote.",
+    "That is why I offered several comments and amendments to preserve online voter registration, ensure due process when an eligible citizen is denied the right to vote, mandate that citizenship only needs to be proven once, and allow the use of an expired passport to register to vote.",
+    "It isn't about so-called election integrity.",
+    "If Republicans really cared about people registering to vote, they would have online voter registration.",
+    "How are people expected to register to vote under these rules?",
+    "I urge my colleagues in this Chamber to vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, many of my colleagues have said that this bill, the SAVE America Act, and the constant attempts by Republicans to clamp down on voter fraud solves a problem that doesn't exist.",
+    "The SAVE America Act doesn't save anything.",
+    "Under this bill, Americans would be required to appear in person or by mail, just hoping that the elections clerk accepts their documentation, and present either a passport or a birth certificate to register to vote, and every single time they want to cast a ballot.",
+    "Because this legislation has a requirement to show documents, this legislation would eliminate online voter registration.",
+    "They quit trying to register to vote, and that results in them not voting, and their voices not being heard.",
+    "None of this is about election integrity or protecting the ballot box.",
+    "The SAVE America Act and the countless number of other efforts Republicans are pushing will deny millions of Americans their right to vote."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UPHOLDING RULE OF LAW FOR FEDERAL OFFICERS",
+   "title": "UPHOLDING RULE OF LAW FOR FEDERAL OFFICERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1989.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to introduce the Qualified Immunity Accountability Act because no one is above the law or the Constitution.",
+    "Across this country, we are witnessing a dangerous pattern: Federal law enforcement officers--specifically, ICE agents--operating with near total impunity.",
+    "Qualified immunity protects government officials, including police officers, from being held liable in civil lawsuits.",
+    "Qualified immunity was meant to be a good faith protection to protect good faith officers from frivolous lawsuits, but that is not how it functions today.",
+    "In practice, qualified immunity has become a get-out-of-jail-free card, a legal shield that blocks accountability even when an officer violates someone's constitutional rights or uses excessive force when none was needed.",
+    "The Qualified Immunity Accountability Act lowers the standard for prosecution so Federal law enforcement officers can be held accountable when they violate an individual's civil rights.",
+    "It protects law enforcement who act in good faith, while ensuring that those who abuse their power cannot hide behind a doctrine that was never intended to excuse misconduct.",
+    "It builds trust between communities and police.",
+    "There are so many brave law enforcement officers who do their jobs and serve their communities with honor and distinction.",
+    "Unfortunately, we have had some bad apples who are spoiling the bunch, and in doing so, are actually making it unsafe for law enforcement to do their jobs.",
+    "I urge my colleagues to support the Qualified Immunity Accountability Act, pass the George Floyd Justice in Policing Act, and stand on the side of the Constitution, the rule of law, and the basic principle that justice must apply equally to everyone. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; AND PROVIDING FOR CONSIDERATION OF H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPRO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; AND PROVIDING FOR CONSIDERATION OF H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026; AND FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1177-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to the Department of Homeland Security funding bill.",
+    "I cannot support funding for a Department that has shown repeated disregard for the Constitution, the rule of law, and the safety of the people it is supposed to protect."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1834, BREAKING THE GRIDLOCK ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1834, BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH122-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of this legislation to extend the Affordable Care Act and the tax credits.",
+    "I refuse to accept Republicans governing in the currency of cruelty.",
+    "I urge every Member of this body, Democrat and Republican alike, to support this bill and stand up for the American people.",
+    "I will never stop fighting to protect the basic necessities that every family needs to survive."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING HEALTHCARE APPRENTICESHIPS",
+   "title": "SUPPORTING HEALTHCARE APPRENTICESHIPS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5030-6.htm",
+   "sentences": [
+    "I urge all of my colleagues to join us in supporting this bill. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARWAN MAROUF NEEDS HUMANITARIAN PAROLE NOW",
+   "title": "MARWAN MAROUF NEEDS HUMANITARIAN PAROLE NOW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4811.htm",
+   "sentences": [
+    "I urge DHS to grant him humanitarian parole. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4595-3.htm",
+   "sentences": [
+    "In my district, nearly 100,000 of my constituents rely on the Affordable Care Act's tax credits to pay for their coverage.",
+    "Republicans are operating in the currency of cruelty and corruption while Democrats are fighting with courage and compassion.",
+    "Mr. Speaker, I rise today in strong opposition to this bill.",
+    "The American people deserve better, and I will never stop fighting to protect the basic necessities that every family needs to survive."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESPECT FOR SCIENCE AND PURSUIT OF TRUTH",
+   "title": "RESPECT FOR SCIENCE AND PURSUIT OF TRUTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4370.htm",
+   "sentences": [
+    "In Russia, Vladimir Putin has jailed scientists and censored research, all to preserve the illusion of control and strength.",
+    "It cannot be dictated by politicians, so when science becomes an affront to the goals of authoritarian leaders, they attack it, suppress it, deny it, and replace it with propaganda and misinformation.",
+    "He has mocked climate scientists, dismissed decades of evidence, even as Americans suffer record floods, droughts, and wildfires.",
+    "It is a safeguard against lies and misinformation.",
+    "When we put researchers, innovators, and problem-solvers to work--from curing polio to sending humans to the Moon and leading breakthroughs in clean energy and technology--our greatness has always come from empowering science, not mocking it."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VISIT TO BLUEBONNET DETENTION FACILITY",
+   "title": "VISIT TO BLUEBONNET DETENTION FACILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4317.htm",
+   "sentences": [
+    "Bluebonnet was built to house prisoners under the Texas Department of Criminal Justice, but in 2019 the first Trump administration handed a contract to a private prison company to convert it into an ICE detention center.",
+    "They dress up in ICE jackets, parade through detention centers, and turn detainees into props for their campaigns."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JEFFREY EPSTEIN'S ABUSE",
+   "title": "JEFFREY EPSTEIN'S ABUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4172.htm",
+   "sentences": [
+    "Madam Speaker, for decades, Jeffrey Epstein's abuse was an open secret powerful people knew.",
+    "Epstein's empire was built on money, blackmail, and connections, and those connections reached into the highest halls of power.",
+    "What makes this scandal unbearable is not just Epstein's evil but the way institutions, Republican and Democratic administrations alike, looked away.",
+    "In June of 2024, Trump said he would declassify the Epstein files.",
+    "We are told about protecting children, about being pro-life, and standing up against human trafficking.",
+    "Like Epstein survivors, the majority are now terrorized by men in power to stay silent.",
+    "It is the only way to end the rot of corruption that let Epstein thrive, and it is the only way to give survivors the justice they deserve.",
+    "Together, we can be the solution and send a message that we will not let this happen again."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRAGIC STORMS IN TEXAS",
+   "title": "TRAGIC STORMS IN TEXAS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3321-2.htm",
+   "sentences": [
+    "Republicans have historically denied the ongoing effects of climate change and what is happening in our country."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "In Texas, we are one of the largest creators of clean energy jobs.",
+    "We have vast amounts of oil and gas jobs, but we also are the largest creator of clean energy jobs.",
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP.",
+    "We will lose millions of jobs in our State because Republicans of this delegation are going to vote for this bill."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPUBLICAN BUDGET BILL",
+   "title": "REPUBLICAN BUDGET BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2150.htm",
+   "sentences": [
+    "In Texas, over 5 million people depend on Medicaid.",
+    "His entire life depends on the care they get through an emergency Medicaid waiver.",
+    "Mr. Speaker, one in seven Texans rely on SNAP at a time when Trump's tariffs have made groceries more expensive than ever.",
+    "This isn't about fiscal responsibility.",
+    "It is about choosing hedge fund managers and people like Elon Musk over hungry kids.",
+    "I will not vote for a bill that abandons families like Stephanie's and lets kids go hungry or that sells out our most vulnerable neighbors just to pay for another tax break for those who definitely do not need one.",
+    "If you show me your budget, I will show you your values."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPUBLICANS' ASSAULT ON AMERICAN ARTS, CULTURE, AND PUBLIC KNOWLEDGE",
+   "title": "REPUBLICANS' ASSAULT ON AMERICAN ARTS, CULTURE, AND PUBLIC KNOWLEDGE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2060-2.htm",
+   "sentences": [
+    "The administration has made it clear: They are not just trying to defund NPR, PBS, or make changes to the Library of Congress, they are trying to dismantle every institution that informs, educates, and inspires the American people.",
+    "Their goal is simple: Erase facts, silence independent voices, replace them with partisan noise, and use them as propaganda machines to spread disinformation and continue to divide our Nation.",
+    "Mr. Speaker, Republicans in this House are proposing a budget that includes devastating cuts to Medicaid.",
+    "This is about trying to balance the books on the backs of working families, children, seniors, and people with disabilities.",
+    "Mr. Speaker, one in four Texas children rely on Medicaid or CHIP, and more than one-half of Texas births are covered by Medicaid.",
+    "Instead of expanding Medicaid like we should have done over a decade ago, Republicans are trying to dismantle this basic-needs program altogether.",
+    "I will fight tooth and nail to protect Medicaid, to protect our hospitals, and to make sure no Texan is left behind simply because they are sick, struggling, or don't make enough money to exceed the meager income limits for Medicaid.",
+    "Mr. Speaker, Medicaid is the foundation of our healthcare system.",
+    "I won't stand by while they try to take healthcare away from Texans who need it most.",
+    "Mr. Speaker, I urge my colleagues on the other side of the aisle to join Democrats in defense of this vital program. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DALLAS WELCOMES EXCEPTIONAL LEADERS",
+   "title": "DALLAS WELCOMES EXCEPTIONAL LEADERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2064-9.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today during National Police Week to recognize a new chapter in public safety leadership for the city of Dallas.",
+    "On May 5, Dallas officially welcomed two exceptional leaders, Daniel Comeaux as chief of police and Justin Ball as chief of fire-rescue.",
+    "Chief Comeaux has over 30 years of law enforcement experience, including his recent role as Special Agent in Charge of the DEA's Houston Field Division."
+   ]
+  },
+  {
+   "date": "2025-05-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 276, GULF OF AMERICA ACT; AND PROVIDING FOR CONSIDERATION OF H.R. 881, DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTI",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 276, GULF OF AMERICA ACT; AND PROVIDING FOR CONSIDERATION OF H.R. 881, DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-06/html/CREC-2025-05-06-pt1-PgH1864-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to this complete waste of time, the Gulf of America Act.",
+    "Here is the choice this comes down to: We could focus on helping 40 million Americans saddled with medical debt, or we could rename the Gulf of Mexico.",
+    "We could address our Nation's lack of affordable housing, where families are struggling to find safe shelter, or we could rename the Gulf of Mexico.",
+    "We could be protecting Social Security and Medicare, protecting Medicaid, finding affordable childcare for the millions of children in this country and reducing the high cost of living that so many families in all of our districts are struggling to afford basic necessities, or we could rename the Gulf of Mexico.",
+    "I urge my colleagues to vote ``no'' on this stupid bill and focus on what matters to the American people."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "However, one of my concerns with this bill is, as it is written, it does not allow for mail or online voter registration.",
+    "This bill, let me be perfectly clear, requires hardworking American people who go to work at 8 in the morning and who don't get off until 5 p.m. to go in person to a voter registration office, to take off work to go in person to register to vote.",
+    "That is why I have offered an amendment to have online voter registration.",
+    "My amendment would ensure Americans could still register to vote and prove their citizenship online or by mail.",
+    "Republicans are refusing your ability to go and make it easy for citizens to register to vote in this country.",
+    "Mr. Speaker, I rise today in opposition to the Republicans' voter suppression act."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROLE OF THE JUDICIARY",
+   "title": "ROLE OF THE JUDICIARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1493-5.htm",
+   "sentences": [
+    "Mr. Speaker, I am rising in opposition to the Republicans' dismantling of the Judiciary Act."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING SOCIAL SERVICES AND PROGRAMS",
+   "title": "DEFENDING SOCIAL SERVICES AND PROGRAMS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1499.htm",
+   "sentences": [
+    "Let's call it what it is: It is a full on assault of the most essential lifelines millions of Americans count on, especially Social Security, Medicare, and Medicaid.",
+    "In Texas alone, more than 4 million people rely on Medicaid for healthcare, including half of the children in our State.",
+    "Half of the children in our State rely on Medicaid, one out of every two kids in Texas.",
+    "Companies like hospice companies provide a necessary but much more affordable access to the end of life with dignity for families, and they rely on Medicaid.",
+    "We still have to talk about Social Security.",
+    "Over 4 million Texans, retirees, veterans, widows, and people with disabilities rely on Social Security to keep the lights on, keep food on the table, and pay their bills.",
+    "Donald Trump's priorities are tax breaks for his buddies while working families are told to tighten their belts.",
+    "Texas families are watching and we will not let this administration destroy the programs that protect our health, our security, and our basic dignity.",
+    "I urge my colleagues, especially my Republican colleagues, you represent the same people I do, hardworking folks trying to make ends meet, trying to provide a life for their kids."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NIH CUTS PUT AMERICAN LIVES AT RISK",
+   "title": "NIH CUTS PUT AMERICAN LIVES AT RISK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1380.htm",
+   "sentences": [
+    "Cancer doesn't check your voter registration.",
+    "I urge my colleagues in Congress and every American listening to stand up for science, stand up for medical research, stand up for the NIH."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LAR",
+   "title": "PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1389-6.htm",
+   "sentences": [
+    "This bill is not about election integrity.",
+    "This is not about ensuring that only citizens vote.",
+    "Yet, in 2021, Texas has led the Nation in voter suppression, rejecting nearly 13 percent of mail-in ballots.",
+    "There are men and women in our service branches who are stationed abroad who cannot physically get back to their polling place in their jurisdiction to register to vote.",
+    "Mr. Speaker, I rise in opposition today to the Republicans' voter suppression act.",
+    "We don't care how hard it is, and we are going to make it impossible for them to vote."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNDERSTANDING TARIFFS",
+   "title": "UNDERSTANDING TARIFFS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1280.htm",
+   "sentences": [
+    "If you will, I want to take this opportunity to sort of ``Schoolhouse Rock'' tariffs.",
+    "Tariffs are taxes on imported goods, plain and simple.",
+    "When the government slaps a tariff on a product, it makes the product more expensive to buy from other countries.",
+    "Let's say the government puts a tariff on those materials.",
+    "A pair of sneakers that cost $30 might now cost $50 after tariffs are imposed.",
+    "The idea of tariffs is to protect American businesses and jobs.",
+    "Other countries hit back with their own tariffs, hurting American manufacturers and workers.",
+    "When used correctly, tariffs can be a powerful tool.",
+    "When a country imposes tariffs strategically on industries we need to rebuild, like steel and manufacturing and technology, we can give American businesses the breathing room to compete and grow.",
+    "When foreign countries play dirty with unfair trade practices, tariffs can be a productive way to respond to that.",
+    "Here is the key: Tariffs have to be smart.",
+    "When used correctly, tariffs can defend American industry.",
+    "Right now, the Trump administration is using tariffs in the wrong way, and their actions are causing costs to skyrocket for families in Texas and all American families.",
+    "To be clear, Trump's tariffs on Canada and Mexico are nothing but a tax on American businesses and consumers.",
+    "Instead of strengthening those relationships with our neighbors, Trump's tariffs are making everything more expensive for us.",
+    "Meanwhile, those countries have hit back with their own tariffs, hurting Americans across the board.",
+    "Instead of using tariffs for smart trade policy, Trump is using them as a political stunt that punishes the very people it claims to help.",
+    "Madam Speaker, these tariffs are self-inflicted wounds on the American economy.",
+    "These tariffs will benefit his businesses because they are being imposed on Elon's competition.",
+    "Madam Speaker, we need to end these reckless tariffs and get back to lowering costs for the people we serve. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DON'T VOTE FOR A BILL THAT DISMANTLES THE GOVERNMENT",
+   "title": "DON'T VOTE FOR A BILL THAT DISMANTLES THE GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1045-4.htm",
+   "sentences": [
+    "Madam Speaker, the House is soon going to vote on some legislation that guts Medicaid and it slashes healthcare for veterans.",
+    "I am fighting for $2 million to help our Dallas Police Officers tackle violent crime, gangs, and drug trafficking.",
+    "I will not vote for a bill that carries out Trump's mission to dismantle our government.",
+    "I will not vote for a bill that takes healthcare, food, and security from the people who need it most, especially as they work to line the pockets of Trump and his friends on the backs of hardworking Americans."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS",
+   "title": "DEMOCRATIC PROPOSALS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+   "sentences": [
+    "Last night, 217 Republicans voted to gut Texas Medicaid, raise costs, and take away healthcare from over 100,000 of my constituents, including over 80,000 children and over 12,000 seniors just in my district.",
+    "Over 4.8 million Texans currently rely on Medicaid, over 16 percent of our State.",
+    "Under the Republican budget they voted for just last night, the average premium for 103,000 people who receive coverage under the Affordable Care Act in my district will increase by 69 percent.",
+    "Texas Medicaid, Medicare, and Social Security programs must be protected.",
+    "The fact is that these cuts will mean life-altering changes for families across America and will lead to nursing homes being closed, doctors refusing to care for patients, healthcare claims being denied, and more debt and increased costs on the backs of families who are already struggling to make ends meet.",
+    "We have already lost 27 rural hospitals in Texas because of a lack of adequate Medicaid funding.",
+    "We have people with very high student loan debt.",
+    "Do you know what the minimum wage is in Texas? $7.75 an hour.",
+    "I will ask this question to my Republican colleagues: Are you ready to take in your aging parents to care for them when your local nursing homes close?",
+    "I am proud to stand with my Democratic colleagues as we fight against these devastating cuts, and I encourage my Republican colleagues to join us because their constituents want healthcare, too.",
+    "Mr. Speaker, I am committed to finding ways to improve healthcare and make it more reliable and affordable."
+   ]
+  },
+  {
+   "date": "2025-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING DATA AND PRIVATE INFORMATION OF AMERICANS",
+   "title": "PROTECTING DATA AND PRIVATE INFORMATION OF AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgH453.htm",
+   "sentences": [
+    "They are purging FBI agents, and they are trying to eliminate agencies like the USAID.",
+    "We are taking action to keep Americans safe and support our Constitution."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING HEALTHCARE AND REPRODUCTIVE RIGHTS",
+   "title": "SUPPORTING HEALTHCARE AND REPRODUCTIVE RIGHTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in opposition to the Republican reproductive healthcare surveillance act.",
+    "I will always make sure women and families have the tools they need to make their own healthcare-related decisions.",
+    "This misguided bill endangers the lives of women, and I urge my colleagues to oppose it. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GRATEFUL AND HONORED TO SERVE",
+   "title": "GRATEFUL AND HONORED TO SERVE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH123.htm",
+   "sentences": [
+    "I took those skills to the Texas State legislature where I fought for Medicaid expansion, a fair judicial court system, consumer protections, and for women to make their own healthcare decisions free from government intrusion.",
+    "When extremists decided to target the LGBTQ community in Texas, I raised my voice and helped kill hundreds of anti-LGBTQ bills that would have hurt the members of my community and their families.",
+    "That means working to lower costs across the board; support and expand infrastructure for the fastest growing metroplex in the country; secure our southern border; and make healthcare safe, affordable, and reliable for all Americans.",
+    "Texas also has the largest border with our neighbor to the south, and it will be up to Texas and Texas Democrats to provide meaningful solutions to the problems that we face.",
+    "I am thrilled I will be serving on three committees this Congress that will help me deliver these results to make life better for Texas' businesses, middle-class families, and our seniors.",
+    "On the House Homeland Security Committee and House Foreign Affairs Committee, I will work with my colleagues on both sides of the aisle to keep our Nation safe and to strengthen our alliances around the world.",
+    "On the House Administration Committee, I will work tirelessly to protect the people's right to vote and to make sure this institution, the people's House, functions in a way that is better for Texans and all of our Nation's citizens.",
+    "In Congress, I am committed to rising above the division and coming up with bipartisan solutions to solve our Nation's biggest problems.",
+    "I will work with anyone, Democrat or Republican, who is willing to come together, put partisanship aside, and to make life better for the people that we all serve.",
+    "I thank them so much, and I want them to know that I will always have their back here in the United States Congress. ____________________"
+   ]
+  }
+ ]
+}

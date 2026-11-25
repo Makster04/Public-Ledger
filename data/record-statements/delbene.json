@@ -1,0 +1,99 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "delbene",
+ "name": "Suzan K. DelBene",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 24
+ },
+ "statements": [
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 202",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2107-7.htm",
+   "sentences": [
+    "Speaker Johnson and House Republicans are trying again to prevent our ability to have an up-or-down vote on Trump's tariffs, like they have done multiple times over the last year.",
+    "The President's chaotic trade war has been crushing businesses and raising prices on families across the country.",
+    "I am hearing from communities across Washington about the devastating impact of these tariffs.",
+    "I know my colleagues are hearing the same, especially from farmers who are often the first and hardest hit when countries retaliate against these tariffs.",
+    "Tariffs are taxes that raise prices, plain and simple.",
+    "These illegal tariffs cost the average American family $1,700 last year.",
+    "If my colleagues think these sweeping tariffs are such a good idea, then vote for it, but stop hiding.",
+    "I am grateful for my colleagues who have been fighting with me against these tariffs since the beginning."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "title": "SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1139.htm",
+   "sentences": [
+    "That is why during last week's markup on this bill, I introduced a responsible amendment that would have prohibited fraudulent centers from receiving TANF funds funded by taxpayer dollars.",
+    "This bill defines pregnancy centers as organizations that support ``protecting the life of the mother and the unborn child,'' but Republican's commitment to funneling taxpayer dollars to medical grifters endangers both.",
+    "I urge my colleagues to vote No on this irresponsible bill."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to express my unwavering support for this extension of the enhanced ACA tax credits.",
+    "Because of that, I will be voting in favor of this legislation and supporting the extension of the enhanced ACA tax credits.",
+    "Mr. Speaker, I urge all of my colleagues to join me."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPACT OF EXPIRING TAX CREDITS",
+   "title": "IMPACT OF EXPIRING TAX CREDITS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5946-5.htm",
+   "sentences": [
+    "Gerry has cancer and depends on his Affordable Care Act coverage to afford treatment.",
+    "Without the ACA tax credits, the same plan next year will cost him nearly $4,500 a month.",
+    "Mr. Speaker, I am going to keep fighting for Gerry and the millions of other Americans so that they can afford the coverage they need. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "Healthcare premiums are skyrocketing because Republicans refuse to extend the ACA tax credits, causing healthcare costs to go up for everyone.",
+    "That is unacceptable for the wealthiest nation in the world.",
+    "I am going to keep fighting for affordable healthcare and lower costs."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Republicans have spent months fighting over how many Americans they are going to kick off of Medicaid and how fast.",
+    "She raised two kids with the support of Medicaid, SNAP, and the child tax credit.",
+    "Mr. Speaker, I urge Republicans to listen to their constituents and vote ``no'' on this big, broken promise."
+   ]
+  }
+ ]
+}

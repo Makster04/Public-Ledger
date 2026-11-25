@@ -1,0 +1,51 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "strickland",
+ "name": "Marilyn Strickland",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 12
+ },
+ "statements": [
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAIRNESS FOR SERVICEMEMBERS AND THEIR FAMILIES ACT OF 2025",
+   "title": "FAIRNESS FOR SERVICEMEMBERS AND THEIR FAMILIES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1439-2.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILL-CONCEIVED BUDGET RESOLUTION",
+   "title": "ILL-CONCEIVED BUDGET RESOLUTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH778-2.htm",
+   "sentences": [
+    "They want to take away Medicaid and Affordable Care Act premium assistance.",
+    "Instead of strengthening the social safety net, the MAGA majority has decided to strip Medicaid coverage from almost 65,000 children in my district alone.",
+    "Almost 40 percent of children in Washington State get their healthcare through Medicaid, 35 percent of moms giving birth and their newborn babies rely on Medicaid for their healthcare, and the MAGA majority wants to strip away their healthcare.",
+    "If any of my colleagues vote for this, they have forfeited the right to claim they are pro-life ever again.",
+    "It is not pro-life to take away a newborn baby's healthcare.",
+    "It is not pro-life to take away healthcare from 65,000 children in my district.",
+    "It is not pro-life to take away food from hungry children.",
+    "Mr. Tanner worked closely with San Francisco leader, Harry Bridges, to keep Black and White workers united during the strike so employers could not break the union.",
+    "He achieved what many seek when they join a union, the recognition of the dignity of all work, to rise out of poverty, and to provide a better life for his family.",
+    "I urge everyone to vote ``no'' on this resolution and stop the Republican rip-off."
+   ]
+  }
+ ]
+}

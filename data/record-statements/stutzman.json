@@ -1,0 +1,282 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "stutzman",
+ "name": "Marlin A. Stutzman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 21,
+  "sentences": 81
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOSTERING THE USE OF TECHNOLOGY TO UPHOLD REGULATORY EFFECTIVENESS IN SUPERVISION ACT",
+   "title": "FOSTERING THE USE OF TECHNOLOGY TO UPHOLD REGULATORY EFFECTIVENESS IN SUPERVISION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5605.htm",
+   "sentences": [
+    "For example, banks in Northeast Indiana are using tools like artificial intelligence and real-time data analytics to spot fraud faster, better manage risk, and enhance the banking experience for Hoosiers.",
+    "Mr. Speaker, I also rise in support of my bill, H.R. 8278.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5127-2.htm",
+   "sentences": [
+    "Over 80 percent of Americans agree that you must show proof of citizenship and ID to vote, and this budget framework moves us closer to enacting these reforms.",
+    "In addition to protecting our elections at home, U.S. servicemembers are working day and night to be sure that Americans are safe from a nuclear bomb in Iran and to advance peace in the Middle East.",
+    "Mr. Chairman, I rise today in support of the House budget resolution.",
+    "Therefore, I urge my colleagues to support this resolution."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING FAIR ELECTIONS",
+   "title": "ENSURING FAIR ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4228.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the SAVE America Act introduced by Representative Roy and Senator Lee.",
+    "Our Founders created a government by the people and for the people, and it is imperative that our elections continue to represent the views of American citizens only.",
+    "The SAVE America Act will do exactly that: ensure that our country's elections are decided only by American citizens and not foreign nationals.",
+    "Indiana first enacted voter ID laws in 2005, and it is time the rest of the country did the same.",
+    "Over 80 percent of Americans support voter ID and showing proof of citizenship to vote.",
+    "Senate colleagues must restore the talking filibuster and pass the SAVE America Act as soon as possible."
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER P",
+   "title": "CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER PAYMENT PREVENTION REFORMS WILL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4089.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H. Res. 1335 to condemn the waste, fraud, and abuse of taxpayer dollars.",
+    "I strongly support Vice President Vance's work leading the task force to eliminate fraud."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Secure America Act to fund ICE and CBP.",
+    "With the strong leadership of Secretary Mullin, CBP reached a milestone by seizing more than 100 million lethal doses of fentanyl along the southwest border since October.",
+    "ICE agents also have made progress toward making American cities safe again, with over 1,400 arrests of known or suspected terrorists."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWERING HOUSING COSTS AND ADVANCING MAIN STREET COMMUNITY BANKS",
+   "title": "LOWERING HOUSING COSTS AND ADVANCING MAIN STREET COMMUNITY BANKS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2090.htm",
+   "sentences": [
+    "Instead of throwing more taxpayer dollars at ineffective government programs, we are restoring housing affordability by getting government out of the way.",
+    "The result is simple: fewer delays, lower costs, and more homes built for working families across the country."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LESS GOVERNMENT RED TAPE",
+   "title": "LESS GOVERNMENT RED TAPE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5803-3.htm",
+   "sentences": [
+    "That is why I have introduced my Regulation A+ Improvement Act.",
+    "I am committed to ensuring businesses of all sizes--in northeast Indiana and across the country--have the tools that they need to grow, create jobs, and keep our economy strong. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING HOMES AFFORDABLE",
+   "title": "MAKING HOMES AFFORDABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5037-5.htm",
+   "sentences": [
+    "That is why I introduced the bipartisan Streamlining Rural Housing Act."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SIX MONTHS OF AMERICA FIRST LEADERSHIP",
+   "title": "SIX MONTHS OF AMERICA FIRST LEADERSHIP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3625-4.htm",
+   "sentences": [
+    "Outside of the economic impacts that have saved money for everyday Americans, President Trump has kept his commitment to protect American children and families by halting so-called gender-affirming care for children in this country.",
+    "As another testament to his impressive pace, President Trump has also signed 27 bills into law, the greatest of which, the One Big Beautiful Bill Act, delivers tax cuts to American families, solidifies funding for America's Golden Dome, and defunded Planned Parenthood."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTI-CBDC SURVEILLANCE STATE ACT",
+   "title": "ANTI-CBDC SURVEILLANCE STATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3427.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the anti-CBDC Surveillance State Act.",
+    "Yet, in 2022, the Biden administration issued an executive order that placed the highest urgency on the research and development of a central bank digital currency, a so-called digital dollar.",
+    "This bill ensures our digital assets policy is in the hands of the American people, not the administrative state.",
+    "It protects our values of privacy, individual freedom, and free market innovation by prohibiting a CBDC surveillance tool that could be wielded against the American way of life.",
+    "Mr. Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS PACKAGE IS FIRST STEP",
+   "title": "RESCISSIONS PACKAGE IS FIRST STEP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2661.htm",
+   "sentences": [
+    "We continue to spend taxpayer funds despite our $36 trillion debt.",
+    "This level of debt is massive, equaling over $323,000 per taxpayer when split up among the taxpayers of this country.",
+    "Funding for USAID programs is also frequently going to NGOs that work to promote their liberal agenda in the most conservative parts of the world.",
+    "It is a disgrace that Americans' hard-earned tax dollars are being used to support these programs and organizations under the guise of necessary foreign aid.",
+    "NPR and PBS have continued to have an ideological bias, promoting things like critical race theory and the LGBTQ agenda.",
+    "From foreign aid to NPR, massive amounts of taxpayer dollars are wasted every day with little to no government oversight.",
+    "This is why I am proud to support the rescissions package sent to Congress by President Trump.",
+    "This package will claw back $9.4 billion of wasteful government spending, including $8.3 billion allocated to dozens of wasteful programs at USAID and $1.1 billion to prop up the Corporation for Public Broadcasting.",
+    "This rescissions package is the first step in ensuring that taxpayer dollars are used to promote everyday Americans in very real ways.",
+    "I look forward to passing this first rescission package and look forward to continuing to support the work of President Trump and the DOGE team to identify and eliminate wasteful government spending.",
+    "End Misuse of Emergency Spending Mr. Speaker, speaking of spending, outside of wasteful spending on international aid and public media, Congress has another problem contributing to the national debt: emergency spending.",
+    "Over one-third of our current national debt, about $12 trillion, can be attributed to emergency spending.",
+    "This spending not only contributes to the national debt but furthers a spiral of spending for the next fiscal year.",
+    "These provisions will help to put Congress back on track toward fiscal responsibility and prevent further abuses of this funding mechanism."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support for H.R. 1, the One Big Beautiful Bill Act.",
+    "Mr. Speaker, I urge all of my colleagues to vote in favor of this bill."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP IN THE MIDDLE EAST",
+   "title": "PRESIDENT TRUMP IN THE MIDDLE EAST",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2011-2.htm",
+   "sentences": [
+    "Now, let's take that opportunity and help not only them, because that is going to help stabilize the region in the Middle East and it is going to help our ally, Israel, it is going to help our other allies who are participating in the Abraham Accords.",
+    "They manipulate their currency.",
+    "The tariff policy that he has implemented is bringing people to the table.",
+    "We here in Congress have a greater opportunity and a responsibility to be sure that we move towards a balanced budget and reduce our debt and deficits.",
+    "Trillions of dollars are going to the national debt.",
+    "Now we are in 2025, and the national debt is $36 trillion of debt.",
+    "So I believe that we, as Congress, are going to have to start taking measures to be sure that the cost isn't just continually passed on to the American people and driving our debt further and further.",
+    "Medicaid is the one that is now paying for it, and more and more people have been forced on to Medicaid.",
+    "We were told by the Democrats that ObamaCare was going to fix our healthcare problems.",
+    "It is worse today than what it was back in 2008 and 2009 when ObamaCare was passed."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BIG, BEAUTIFUL BILL",
+   "title": "BIG, BEAUTIFUL BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1901.htm",
+   "sentences": [
+    "Our debt crisis is out of control.",
+    "When I was first sworn into office in 2010, our Federal Government had $9 trillion of debt.",
+    "When I left temporarily in 2017, despite our efforts to curb spending, it had doubled to $18 trillion of debt, and now today in 2025, we are staring down the barrel of $36 trillion of debt.",
+    "This bill is also going to increase border security and restore fiscal sanity back to the greatest country on Earth.",
+    "Gone are the days of prioritizing wokeness, frivolous spending, and the leftist dream of open borders."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRST 100 DAYS ARE JUST THE BEGINNING",
+   "title": "FIRST 100 DAYS ARE JUST THE BEGINNING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1788-3.htm",
+   "sentences": [
+    "The Trump administration's swift and strong actions have caused illegal aliens to simply give up on crossing our borders illegally, proven by the 94 percent drop in apprehensions since March 2024.",
+    "These efforts have only been strengthened by Governor Braun sending the Indiana National Guard to the border and the House passage of the SAVE Act.",
+    "Governor Braun has made Indiana healthier by signing nine health- related executive orders, one of which addresses the same harmful food dyes and artificial ingredients that President Trump and the administration banned just this past week.",
+    "This was accomplished while the House literally saved lives by securing medical protection for babies who survived attempted abortions."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the resolution disapproving of the rule submitted by the CFPB relating to overdraft lending very large financial institutions.",
+    "Mr. Speaker, I urge my colleagues to support this resolution."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Mr. Chairman, I rise in strong support of this resolution because it delivers on the promise that we made to the American people by extending the Tax Cuts and Jobs Act and fulfilling President Trump's agenda.",
+    "For the past 4 years, the American people have lived through the longest sustained period of debt and deficit in our Nation's history.",
+    "This budget does so by extending the Tax Cuts and Jobs Act, which delivered wage increases of 4.9 percent and the lowest poverty and unemployment rates in 50 years.",
+    "This budget also achieves a deficit reduction of $1 billion over 10 years and achieves massive savings in our spending.",
+    "Mr. Chairman, I support this resolution, and I encourage my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APPLAUDING PRESIDENT TRUMP'S DECISIVE ACTION",
+   "title": "APPLAUDING PRESIDENT TRUMP'S DECISIVE ACTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682.htm",
+   "sentences": [
+    "Mr. Speaker, I applaud President Trump's decisive economic actions that have leveled the playing field between Hoosier businesses and the Chinese Communist Party.",
+    "The CCP has taken advantage of hardworking Hoosiers by engaging in currency manipulation, undermining our manufacturing sector, and buying American farmland in an attempt to control our agricultural future.",
+    "For too long the CCP has used the exchange rate of their currency as a dagger to be hidden under the cloak of what they describe as fair trade practices.",
+    "Trump has sent a clear message that America is finished with allowing the CCP to evade U.S. tariffs.",
+    "Hoosiers don't want the CCP to control our farmland or our markets."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOLDEN AGE OF AMERICAN FISCAL RESPONSIBILITY",
+   "title": "GOLDEN AGE OF AMERICAN FISCAL RESPONSIBILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH571.htm",
+   "sentences": [
+    "The golden age of American fiscal responsibility is upon us, and I, for one, am excited to join the ride. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT AMERICAN MANUFACTURING",
+   "title": "SUPPORT AMERICAN MANUFACTURING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH349-6.htm",
+   "sentences": [
+    "Trump knows how to make businesses successful, and following his lead, we will make America successful again."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETURNING TO THE HALLS OF CONGRESS",
+   "title": "RETURNING TO THE HALLS OF CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH204-3.htm",
+   "sentences": [
+    "Democrats are still out of touch with reality, just as we saw on our last vote 20 minutes ago on the Preventing Violence Against Women by Illegal Aliens Act.",
+    "The old way of business has doubled our national debt since I was last in these Halls and has gradually substituted million-dollar spending packages with billion-dollar ones."
+   ]
+  }
+ ]
+}

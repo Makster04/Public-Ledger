@@ -1,0 +1,312 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ross",
+ "name": "Deborah K. Ross",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 25,
+  "sentences": 75
+ },
+ "statements": [
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELEASE OF VENKATA VASAMSETTY",
+   "title": "RELEASE OF VENKATA VASAMSETTY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5489-2.htm",
+   "sentences": [
+    "We cannot allow this administration to continue detaining our neighbors and terrorizing our communities. ____________________"
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5625, CASHLESS BAIL REPORTING ACT; PROVIDING FOR CONSIDERATION OF H.R. 6260, KEEPING VIOLENT OFFENDERS OFF OUR STREETS ACT OF 20",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5625, CASHLESS BAIL REPORTING ACT; PROVIDING FOR CONSIDERATION OF H.R. 6260, KEEPING VIOLENT OFFENDERS OFF OUR STREETS ACT OF 2025; PROVIDING FOR CONSIDERATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3404-3.htm",
+   "sentences": [
+    "If we defeat the previous question, we will offer a bill, my bill, that will truly honor police officers: H.R. 7711, my No Rewards for January 6 Rioters Act.",
+    "On January 6, as we all know, violent rioters assaulted Capitol Police, beating them with flag poles, dragging them through crowds, and pepper spraying them in the face at point-blank range.",
+    "President Trump has not only called these criminals patriots, he decided January 6 insurrectionists deserved a blanket pardon for their attacks on police officers.",
+    "Now, the Trump administration is considering millions of dollars in payouts to these insurrectionists, which is a giant slap in the face to all the brave officers who fought to protect us--us, and our democracy on January 6.",
+    "My bill would prohibit the use of Federal funds to compensate any convicted January 6 rioter.",
+    "Mr. Speaker, if my colleagues on the other side of the aisle were serious about honoring police officers, they would take up my bill to prevent President Trump from paying off his favorite cop beaters."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NICS DATA REPORTING ACT OF 2026",
+   "title": "NICS DATA REPORTING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3369.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2267, the NICS Data Reporting Act, which would require the Attorney General to submit an annual report to Congress providing demographic data about the individuals who receive denials from the National Instant Criminal Background Check System, NICS, as part of an attempted firearm purchase in the preceding year.",
+    "The NICS background system has processed more than 300 million checks since the FBI launched the system in 1998.",
+    "NICS checks are critical to enforcing our laws that keep certain disqualified individuals from possessing a firearm.",
+    "The overwhelming majority of NICS checks determine that a prospective purchaser may legally purchase a firearm, and these checks are typically completed in just a few minutes.",
+    "But in some instances, a NICS search determines that a person may not legally purchase a firearm because the person is matched to a serious criminal conviction, a domestic violence restraining order, a dishonorable discharge from the armed services, a wanted person's list, or other disqualifying record.",
+    "Since its inception, NICS has denied sales to more than 1.5 million transactions, keeping firearms out of the hands of dangerous people who should not have them.",
+    "Mr. Massie has also expressed concern that erroneous NICS denials may disproportionately affect people based not just on race, ethnicity, and national origin, but also on sex, gender, age, disability, income, and English language proficiency.",
+    "This is why his legislation asks for the demographic data of individuals denied firearms through NICS for each of the categories I just listed.",
+    "In fact, when I was in North Carolina representing people who had been wrongly stopped by law enforcement officials, we instituted a data collection system that looks into whether or not people have been detained based on their race or their gender, and it has been very effective.",
+    "NICS is an essential tool that keeps guns out of dangerous people's hands.",
+    "We should seek to learn more about how NICS is working and make improvements, if any are necessary.",
+    "We need a universal violent criminal background check to close loopholes in current laws, like the internet loophole and the gun show loophole.",
+    "Mr. Speaker, this bill would require the Attorney General to provide demographic information about NICS denials.",
+    "I support collecting data to better understand and evaluate the effectiveness of NICS and determine whether it needs to be strengthened in any way.",
+    "I support this legislation, and I urge my Republican colleagues to stand with us in supporting public access to all information, including demographic data, so that we can be certain that our laws and our government are working for every American."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CRIMINAL HISTORY ACCESS ACT OF 2026",
+   "title": "CRIMINAL HISTORY ACCESS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3370.htm",
+   "sentences": [
+    "Every State has its own standards for determining who may serve as a State or local law enforcement officer.",
+    "These peace officer standards and training agencies, or POST agencies, are often also empowered to certify individuals who may be hired as law enforcement officers, train the potential officers, or assist with vetting other local law enforcement personnel.",
+    "This bill would authorize State POST agencies to directly access Federal criminal history records when vetting and certifying law enforcement trainees and officers.",
+    "POST agencies are essentially the gatekeepers to the law enforcement profession.",
+    "Over 50,000 people apply for law enforcement positions across the country every year, and applicants already sign off on disclosure of their criminal history records as part of that process.",
+    "This bill fixes this by amending 28 U.S.C. 534 to add POST agencies to the list of entities authorized to receive Federal criminal history records, the same access that law enforcement agencies already have.",
+    "I thank the International Association of Directors of Law Enforcement Standards and Training for their technical expertise and assistance with this legislation, which is also supported by the Major County Sheriffs of America, the International Association of Chiefs of Police, and the Association of State Criminal Investigative Agencies.",
+    "This bill would provide a limited and logical extension of the authority to share criminal history records so that those who help screen law enforcement officers have the information they need to maintain hiring standards.",
+    "As we observe National Police Week, I am pleased to support this legislation that strengthens our law enforcement agencies and improves public safety by ensuring that applicants are appropriately screened.",
+    "Mr. Speaker, I rise in strong support of H.R. 8352, the bipartisan Criminal History Access Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CURB PRESIDENT TRUMP'S USE OF MILITARY FORCE IN IRAN",
+   "title": "CURB PRESIDENT TRUMP'S USE OF MILITARY FORCE IN IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2453.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today with grave concerns about President Trump's unwarranted and unconstitutional war of choice on Iran.",
+    "This is why I just voted for a War Powers Resolution to curb President Trump's use of military force in Iran and protect American lives. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANOTHER TROVE OF EPSTEIN FILES",
+   "title": "ANOTHER TROVE OF EPSTEIN FILES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2013-4.htm",
+   "sentences": [
+    "Mr. Speaker, after months of delays and distractions, Trump's DOJ finally released another trove of documents from the Epstein files.",
+    "The DOJ claims it is in full compliance with the Epstein Files Transparency Act, but that is simply not true.",
+    "The survivors of Jeffrey Epstein's abuse have already endured unimaginable pain."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN'S HEALTH",
+   "title": "WOMEN'S HEALTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1131.htm",
+   "sentences": [
+    "Mr. Speaker, this week marks the 53rd anniversary of Roe v. Wade when the Supreme Court finally granted women the right to control their own reproductive healthcare.",
+    "Tragically, in 2022, one-half century of reproductive freedom was stripped away when the conservative majority on the Court overturned Roe.",
+    "Since then, we have seen extreme abortion bans enacted across the country, including in North Carolina.",
+    "First they took away our right to choose, and then they took away our healthcare coverage."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ICE RAIDS IN NORTH CAROLINA",
+   "title": "ICE RAIDS IN NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH727-4.htm",
+   "sentences": [
+    "She has work authorization, no criminal record, and is allowed to legally remain in this country while her asylum case is pending.",
+    "We cannot allow the Trump administration to continue violating the rights that all individuals in this country are guaranteed. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SPEEDING UP FLOW OF FEMA DOLLARS",
+   "title": "SPEEDING UP FLOW OF FEMA DOLLARS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6028-6.htm",
+   "sentences": [
+    "Madam Speaker, this week I introduced the FEMA Administrative Reform Act to accelerate the delivery of Federal disaster recovery aid to western North Carolina."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTHCARE CRISIS IN NORTH CAROLINA",
+   "title": "HEALTHCARE CRISIS IN NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5822-7.htm",
+   "sentences": [
+    "ACA tax credits are only weeks away from expiring."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING DEPLOYMENT OF CBP TO NORTH CAROLINA",
+   "title": "CONDEMNING DEPLOYMENT OF CBP TO NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4834-3.htm",
+   "sentences": [
+    "If they did, they would work with Democrats to ensure our border is secure, families stay together, and our farms and businesses can get the workers they need."
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING REPUBLICANS' BIG, UGLY LAW",
+   "title": "CONDEMNING REPUBLICANS' BIG, UGLY LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgH3256-4.htm",
+   "sentences": [
+    "Republicans have abandoned vulnerable, hungry people to pay for tax cuts for billionaires."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THREATS TO SOCIAL SECURITY",
+   "title": "THREATS TO SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2033-7.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today with grave concern about the threat that the Trump administration poses to Social Security.",
+    "Then a few weeks later, he referred to Social Security as the big one to eliminate These are not empty comments.",
+    "Under this administration, we are seeing mass firings at Social Security offices, hours-long wait times, delayed checks, websites crashing, and field offices closing.",
+    "We will not be silent while Trump and his cronies try to slash the benefits that our seniors have earned over a lifetime of hard work. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSING REPUBLICAN BUDGET PLAN",
+   "title": "OPPOSING REPUBLICAN BUDGET PLAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1897-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to the Republican's budget plan that would gut funding for Medicaid.",
+    "In 2023, my home State of North Carolina achieved a historic victory by finally implementing Medicaid expansion after a decade of political gridlock.",
+    "Medicaid expansion has helped new moms and their babies during a critical phase of life.",
+    "Republicans want to roll back this progress to pay for tax cuts for billionaires.",
+    "Their current budget would immediately terminate Medicaid expansion, ripping away healthcare from more than 600,000 North Carolinians and shuttering rural hospitals that may never be able to open their doors again."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING WOMEN'S HEALTH RESEARCH",
+   "title": "PROTECTING WOMEN'S HEALTH RESEARCH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1787-2.htm",
+   "sentences": [
+    "We must stay vigilant, and we will fight back. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to the SAVE Act, which is a transparent attempt to disenfranchise millions of voters.",
+    "The SAVE Act would change voter registration guidelines to require proof of U.S. citizenship in very narrow ways."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO ROGUE RULINGS ACT OF 2025",
+   "title": "NO ROGUE RULINGS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1482.htm",
+   "sentences": [
+    "Mr. Speaker, Article III of our Constitution vests judicial power of the United States in the Supreme Court and lower courts."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN'S HISTORY MONTH",
+   "title": "WOMEN'S HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1294.htm",
+   "sentences": [
+    "Like Jeanette, we cannot back down in the face of threats to women's healthcare, accessible childcare, equal pay, and more."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING CONCERN REGARDING JOB CUTS",
+   "title": "EXPRESSING CONCERN REGARDING JOB CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1229-9.htm",
+   "sentences": [
+    "I will fight this dangerous plan to fire Federal workers and silence scientists with everything I have. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA STILL SUPPORTS UKRAINE",
+   "title": "AMERICA STILL SUPPORTS UKRAINE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-06/html/CREC-2025-03-06-pt1-PgH1021-7.htm",
+   "sentences": [
+    "Mr. Speaker, for 3 years, Ukraine has fought for its survival against Russia's brutal assault.",
+    "For 3 years, America has supported the Ukrainian people in their brave fight for freedom.",
+    "For our future and theirs, we cannot--we must not--betray the courageous people of Ukraine. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING NIH GRANT FUNDING",
+   "title": "PROTECTING NIH GRANT FUNDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH664-3.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong opposition to President Trump's attempt to dramatically reduce NIH grant funding for research institutions, including those in my home State of North Carolina.",
+    "I won't stop fighting until these lifesaving resources are permanently restored. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELIMINATING THE DEPARTMENT OF EDUCATION",
+   "title": "ELIMINATING THE DEPARTMENT OF EDUCATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH514-2.htm",
+   "sentences": [
+    "Madam Speaker, I rise with grave concern about reports that President Trump is scheming to eliminate the Department of Education and similar concerns about legislation that has been introduced to do just that.",
+    "We will fight this every single way that we can. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING HEALTHCARE AND REPRODUCTIVE RIGHTS OF WOMEN",
+   "title": "SUPPORTING HEALTHCARE AND REPRODUCTIVE RIGHTS OF WOMEN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH311-5.htm",
+   "sentences": [
+    "Mr. Speaker, yesterday we marked 52 years since the Supreme Court issued its landmark ruling in Roe v. Wade.",
+    "We should be celebrating 52 years of reproductive freedom.",
+    "Instead, nearly 3 years after the Supreme Court overturned Roe v. Wade, we live in a very different America."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ATTACK ON NORTH CAROLINA ELECTIONS",
+   "title": "ATTACK ON NORTH CAROLINA ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH158-10.htm",
+   "sentences": [
+    "In November, Justice Allison Riggs won the election to retain her seat on the North Carolina Supreme Court.",
+    "Four years after January 6, we are once again reminded about how fragile our democracy truly is."
+   ]
+  }
+ ]
+}

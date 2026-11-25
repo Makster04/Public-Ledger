@@ -1,0 +1,85 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "emmer",
+ "name": "Tom Emmer",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 28
+ },
+ "statements": [
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KEEPING DEPOSITS LOCAL ACT",
+   "title": "KEEPING DEPOSITS LOCAL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3582.htm",
+   "sentences": [
+    "In response, my colleague, Representative Beatty, and I introduced the Keeping Deposits Local Act, a nonpartisan bill that updates existing thresholds so that community and regional banks can more easily qualify for nonbrokered treatment of reciprocal deposits."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING REVEREND EAMON KELLY",
+   "title": "WELCOMING REVEREND EAMON KELLY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4833-5.htm",
+   "sentences": [
+    "This past August, my colleague from California, Pete Aguilar, and I had the privilege of leading a bipartisan delegation of freshmen Members to Israel, where Father Kelly baptized several of our Members in the Sea of Galilee.",
+    "He told me: ``I am from the Holy Land, and I live in the Promised Land.'' Having served at the Notre Dame of Jerusalem Center for more than a decade and now serving as the vice director of the Magdala Center, Father Kelly's work in the Holy Land has impacted people from all walks of life from all over the globe.",
+    "It was a transformational experience that we will keep with us for the rest of our lives, and it was, in large part, thanks to Father Kelly's leadership, faith, and commitment to helping others experience the power and the history of the Holy Land."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "For many years, innovators and investors were forced to operate in a legal gray zone while agencies jostled for regulatory superiority over the digital asset ecosystem, leaving blockchain developers to pack up and move abroad.",
+    "The CLARITY Act fixes this by creating regulatory guardrails tailored to the unique attributes of blockchain technology while giving users and developers the confidence to engage and innovate in this ecosystem.",
+    "We are proud to have the Securities Clarity Act included in this legislation.",
+    "Subsequently, elements of the Blockchain Regulatory Certainty Act were included, clarifying, once and for all, that digital asset developers and service providers who do not custody consumer funds are not considered money transmitters.",
+    "Importantly, the CLARITY Act will help further decentralize our financial system so that Americans can forgo intermediaries and transact directly with each other.",
+    "Mr. Speaker, I thank Chairman Hill and Chairman Thompson for their leadership and for working with us to include our two bills in the CLARITY Act."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "title": "GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3405.htm",
+   "sentences": [
+    "Following his historic victory, President Trump gave Congress a mandate to pass landmark legislation to create rules of the road for the digital asset ecosystem.",
+    "The GENIUS Act is the first step in fulfilling that promise.",
+    "I applaud my Senate colleagues Chairman Scott and Senators Hagerty, Lummis, and Gillibrand for energizing an often calcified Senate and sending over the GENIUS Act.",
+    "Fundamentally, any stablecoin bill is about national security.",
+    "It is about preserving and extending the dollar's dominance as the world's reserve currency.",
+    "It is the currency the world counts on to do business, and the United States' global position relies on that status."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTI-CBDC SURVEILLANCE STATE ACT",
+   "title": "ANTI-CBDC SURVEILLANCE STATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3427.htm",
+   "sentences": [
+    "Mr. Speaker, after much debate, we can now codify President Trump's effort to prevent the development of a central bank digital currency, or CBDC, and ensure that the United States' digital currency policy remains in the hands of the American people and not the administrative state.",
+    "I am proud to have my legislation, the Anti-CBDC Surveillance State Act, being considered on the House floor for a vote today.",
+    "Unlike decentralized digital assets, a CBDC is a digital form of sovereign currency that is designed, issued, and monitored by the Federal Government.",
+    "There would be no cash, no anonymity, and no space for private financial decisionmaking.",
+    "The Chinese Communist Party employs a CBDC that is being used to monitor and restrict its citizens' spending.",
+    "In Canada, the former Trudeau administration demonstrated the power of Federal financial surveillance and control when it froze the bank accounts of hundreds of truckers protesting the COVID vaccine mandate in 2022.",
+    "In 2022, President Biden issued an executive order placing urgency on CBDC research and development.",
+    "Moreover, the agency reports created under that executive order made it clear that the previous administration was eager to create a CBDC and was willing to trade Americans' right to financial privacy for a CCP-style surveillance tool.",
+    "Our bill, the Anti-CBDC Surveillance State Act, prevents future administrations from weaponizing this technology against the American people while ensuring that any development of digital money reflects our American values of privacy, individual sovereignty, and free market competitiveness.",
+    "If not designed to be open, permissionless, and private--``private'' with a capital p--resembling cash, a government-issued CBDC is nothing more than an Orwellian surveillance tool that will be used to erode the American way of life.",
+    "We don't need or want a state-run digital dollar with Chinese Communist Party characteristics.",
+    "I urge all of my colleagues to support this bill."
+   ]
+  }
+ ]
+}

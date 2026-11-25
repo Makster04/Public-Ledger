@@ -1,0 +1,87 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "kustoff",
+ "name": "David Kustoff",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 21
+ },
+ "statements": [
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SALUTING LITTLE LEAGUE SOFTBALL WORLD SERIES",
+   "title": "SALUTING LITTLE LEAGUE SOFTBALL WORLD SERIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5463-5.htm",
+   "sentences": [
+    "I also worked to strengthen the employer-provided childcare credit under something known as section 45F.",
+    "Before we passed the One Big Beautiful Bill Act, I introduced the Child Care for American Families Act to make this credit more useful for employers, especially for small businesses.",
+    "For most employers, the law increased the credit from 25 percent to 40 percent of qualified childcare credit expenditures and raised the annual cap from $150,000 to $500,000.",
+    "Employers can now partner with outside organizations or other businesses to provide childcare.",
+    "That is so important because when childcare is reliable, parents can stay in the workforce and employers can retain valued employees.",
+    "For everybody who voted ``no'' on the One Big Beautiful Bill Act, I will tell them that my Republican colleagues and I worked with President Trump to make section 199 permanent, which delivered substantial relief for small businesses as well as American farmers."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING SOCIAL SECURITY'S SERVICE TO VICTIMS OF IDENTITY THEFT ACT",
+   "title": "IMPROVING SOCIAL SECURITY'S SERVICE TO VICTIMS OF IDENTITY THEFT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4938.htm",
+   "sentences": [
+    "Just last year, there were over 3,000 separate data breaches that were reported, including many leaks involving stolen Social Security numbers.",
+    "Currently, when somebody has their identity stolen, they have got to navigate a baffling process at the Social Security Administration.",
+    "Sometimes they even get conflicting advice from people within the Social Security Administration.",
+    "As identity theft becomes more commonplace, the system at the Social Security Administration needs to be streamlined to work better for the victims.",
+    "The Improving Social Security's Service to Victims of Identity Theft Act addresses this problem head-on.",
+    "Specifically, this bill will establish a single point of contact at the Social Security Administration for Americans who have had their Social Security numbers lost or stolen.",
+    "Having a single point of reference, one point of contact, at the Social Security Administration will simplify the process, making it easier and faster for victims to get relief.",
+    "Mr. Speaker, now it is time to act in a bipartisan manner to support Americans whose Social Security numbers fall into the wrong hands."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMARKABLE LIFE AND LEGACY OF FREDERICK W. SMITH",
+   "title": "REMARKABLE LIFE AND LEGACY OF FREDERICK W. SMITH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2891-4.htm",
+   "sentences": [
+    "Personally, I will remember Fred Smith as a man who loved his country and devoted his life to the American Dream."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "The message that we got from them was clear: Make permanent all those successful provisions from the Tax Cuts and Jobs Act of 2017.",
+    "There is no doubt that when we passed the Tax Cuts and Jobs Act of 2017, we ushered in a red-hot economy that created jobs and opportunities for all Americans."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FILING RELIEF FOR NATURAL DISASTERS ACT",
+   "title": "FILING RELIEF FOR NATURAL DISASTERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1347.htm",
+   "sentences": [
+    "For these reasons, Mr. Speaker, I urge all of my colleagues to support the Filing Relief for Natural Disasters Act, a bipartisan, pro- taxpayer piece of legislation that was passed out of the Ways and Means Committee unanimously by a vote of 42-0."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOVERY OF STOLEN CHECKS ACT",
+   "title": "RECOVERY OF STOLEN CHECKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1351.htm",
+   "sentences": [
+    "That does start with giving Federal law enforcement officers the tools and the resources that they need to detect, investigate, and prosecute those behind these thefts.",
+    "If I could, I will share just a few statistics: Between 2019 and 2022, there was an 87 percent increase in theft from mailboxes, according to the U.S. Postal Inspection Service.",
+    "Mr. Speaker, I urge all of our colleagues to support this bipartisan, commonsense piece of legislation which passed out of the Ways and Means Committee unanimously by a vote of 41-0."
+   ]
+  }
+ ]
+}

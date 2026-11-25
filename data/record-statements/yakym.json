@@ -1,0 +1,162 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "yakym",
+ "name": "Rudy Yakym III",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 12,
+  "sentences": 42
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VIOLENCE AGAINST LAW ENFORCEMENT",
+   "title": "VIOLENCE AGAINST LAW ENFORCEMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5020-5.htm",
+   "sentences": [
+    "Mr. Speaker, in the last 2 months northwest Indiana has sadly seen a rash of violence against law enforcement.",
+    "That is what separates us as a functioning society and why I and the thousands of Hoosiers I serve will always back the blue. ____________________"
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOSTERING THE FUTURE ACT",
+   "title": "FOSTERING THE FUTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3558.htm",
+   "sentences": [
+    "Mr. Speaker, I am proud to support the Fostering the Future Act, which will make meaningful changes to the Chafee program to better support foster youth and alleviate unnecessary challenges.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BARCODE AUTOMATION FOR REVENUE COLLECTION TO ORGANIZE DISBURSEMENT AND ENHANCE EFFICIENCY ACT",
+   "title": "BARCODE AUTOMATION FOR REVENUE COLLECTION TO ORGANIZE DISBURSEMENT AND ENHANCE EFFICIENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3100.htm",
+   "sentences": [
+    "This is a simple but powerful bill that will make tax return processing faster, more accurate, and more efficient.",
+    "That remaining 6 percent still accounts for 10 million tax returns.",
+    "Paper returns will still be necessary at times, but we can do better, Mr. Speaker, because there is proven commercially available technology that can end the hand entry of tax returns.",
+    "Mr. Speaker, I rise in strong support of H.R. 6956, the BARCODE Efficiency Act.",
+    "That is why my colleague, Mr. Schneider, and I have introduced the bipartisan BARCODE Efficiency Act.",
+    "Mr. Speaker, I urge my colleagues to support this bipartisan commonsense bill."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "title": "SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1139.htm",
+   "sentences": [
+    "They gave her an ultrasound, and for the very first time, we saw our child, who, at that time, was about the size of a peanut.",
+    "Half of that peanut was a heartbeat.",
+    "Mr. Speaker, I thank my colleague, the gentlewoman from Minnesota (Mrs. Fischbach), for the introduction of this bill, and I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "title": "AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH595-2.htm",
+   "sentences": [
+    "Manufactured housing is critical to giving Hoosier families affordable housing.",
+    "It gives options and supports our domestic manufacturing economy.",
+    "Mr. Speaker, I look forward to voting in favor of the bill, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STUDYING NEPA'S IMPACT ON PROJECTS ACT",
+   "title": "STUDYING NEPA'S IMPACT ON PROJECTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5086.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of my bipartisan bill, H.R. 573, the Studying NEPA's Impact on Projects Act, which I introduced with my good friend, Mr. Panetta from California.",
+    "I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMISES MADE, PROMISES KEPT",
+   "title": "PROMISES MADE, PROMISES KEPT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3745-7.htm",
+   "sentences": [
+    "I spoke with Camping World and other companies about how the Made in America provision and immediate expensing strengthened American manufacturing jobs.",
+    "I joined law enforcement officers at a drug enforcement roundtable to discuss how this bill invests billions of dollars in border security to stem the flow of fentanyl into our communities."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "President Trump inherited a disastrous open-border policy from the Biden-Harris administration.",
+    "There were nearly 9 million encounters at the southern border under President Biden, more than the last 14 years combined.",
+    "Now the One Big Beautiful Bill Act will permanently secure the southern border.",
+    "I urge my colleagues to vote ``yes'' because border security is national security.",
+    "Mr. Speaker, I rise in strong support of the One Big Beautiful Bill Act."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "We keep hearing the same tired claims from my friends on the other side of the aisle about giveaways to the rich.",
+    "They said the same things about the Tax Cuts and Jobs Act.",
+    "Why? ``To a large degree, the gap between perception and reality on the tax cuts appears to flow from a sustained and misleading effort by liberal opponents.'' Are the American people going to believe their bank accounts, or will they believe the same people who told them it was a racist conspiracy theory that COVID originated in a Wuhan lab, who censored Hunter Biden's laptop as Russian disinformation, and who insisted that the former President was doing cartwheels in the Oval Office?",
+    "Mr. Speaker, I rise in strong support of the One Big Beautiful Bill Act, the profamily, proworker, progrowth bill before us.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "title": "PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1093-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 1156, the Pandemic Unemployment Fraud Enforcement Act."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT",
+   "title": "LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH277.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Laken Riley Act.",
+    "The Biden-Harris administration was marked by failure and corruption, but the failure that sits head and shoulders above all others was their open-border policy.",
+    "Almost immediately after President Biden was sworn in, America was overrun by a massive, unprecedented surge in illegal immigrants.",
+    "The chart next to me shows just how dramatically President Biden failed compared to his predecessors, over double the southern border crossings of any President since 2001.",
+    "This border chaos was ignored for all 4 years of the Biden-Harris administration.",
+    "Illegal immigrants continued streaming across President Biden's open border in droves because they knew they would face no consequences from an administration that was more focused on inventing new rhetorical flourishes to paper over this very real crisis.",
+    "President Biden's failure at the border had impacts across America.",
+    "Cartels got rich, and small towns in my district were left scrambling for money and resources.",
+    "I urge my colleagues to vote for sanity and common sense."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the United States-Taiwan Expedited Double-Tax Relief Act.",
+    "I urge my colleagues to support this bill."
+   ]
+  }
+ ]
+}

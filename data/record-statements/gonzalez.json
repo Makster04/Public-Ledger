@@ -1,0 +1,78 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "gonzalez",
+ "name": "Vicente Gonzalez",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 12
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELIABLE WATER FOR CORPUS CHRISTI",
+   "title": "RELIABLE WATER FOR CORPUS CHRISTI",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5634.htm",
+   "sentences": [
+    "He then went on to say to the people of Corpus Christi: We are going to take care of it.",
+    "Today, I am asking him to keep that promise, and I urge you to ensure that he does."
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VISAS FOR SHRIMPERS",
+   "title": "VISAS FOR SHRIMPERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-15/html/CREC-2026-05-15-pt1-PgH3546.htm",
+   "sentences": [
+    "I strongly urge President Trump and this administration to release more H-2B or H-2A visas so we can bring certainty to the coastal communities and ensure the American shrimping and fishing industry can survive. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-06/html/CREC-2026-04-06-pt1-PgE301-2.htm",
+   "sentences": [
+    "Mexico's ongoing efforts to control a deep-water port owned by U.S.- based Vulcan Material Company not only puts American jobs at risk, but it is a direct violation of the United States-Mexico-Canada Agreement (USMCA).",
+    "I urge my colleagues to join me in supporting the Defending American Property Abroad Act.",
+    "With this bill, we will reinforce the rule of law, protect our supply chains, and assure that American businesses continue to create jobs and grow our economy. ____________________"
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING GRATITUDE TO THE CITY OF BROWNSVILLE'S ENGINEERING AND PUBLIC WORKS DEPARTMENT FOR THEIR SERVICE TO OUR COMMUNITY",
+   "title": "EXPRESSING GRATITUDE TO THE CITY OF BROWNSVILLE'S ENGINEERING AND PUBLIC WORKS DEPARTMENT FOR THEIR SERVICE TO OUR COMMUNITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-08/html/CREC-2025-10-08-pt1-PgE943-3.htm",
+   "sentences": [
+    "The Brownsville Police Department served more than 600 hot meals to affected families at Laureles County Park."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DON'T CALL IT BEAUTIFUL",
+   "title": "DON'T CALL IT BEAUTIFUL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3538-2.htm",
+   "sentences": [
+    "It wrapped its cruelty in buzz words like ``efficiency,'' ``modernization,'' and ``fiscal responsibility.'' However, beneath the surface, it is a cold and calculated attempt to strip millions of Americans of the dignity they have earned over a lifetime of work.",
+    "All of this was done at the behest of their master, their master who wants tax breaks for the ultra-wealthy billionaires and multinational corporations, with empty slogans for the rest of Americans.",
+    "We hear you, and we will not stop fighting. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WIPING OUT HISTORY",
+   "title": "WIPING OUT HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1342.htm",
+   "sentences": [
+    "This administration's appalling efforts to erase history under the disguise of eliminating DEI has seen no boundaries, prompting indiscriminate removals of Latinos, women, and other minorities from our Nation's archives.",
+    "This is not about eliminating DEI."
+   ]
+  }
+ ]
+}

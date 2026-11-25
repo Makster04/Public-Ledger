@@ -1,0 +1,63 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "salazar",
+ "name": "Maria Elvira Salazar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 24
+ },
+ "statements": [
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH PRESIDENTIALLY DESIGNATED",
+   "title": "DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH PRESIDENTIALLY DESIGNATED TERRORIST ORGANIZATIONS IN THE...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5978.htm",
+   "sentences": [
+    "It is trying to invoke the War Powers Resolution of 1973, which doesn't even apply in the case of Venezuela.",
+    "The War Powers Resolution applies when there is active combat with the United States forces.",
+    "It does not include law enforcement or counternarcotics operations against declared terrorists like Nicolas Maduro, who happens to be the head of a major drug cartel in the Western Hemisphere.",
+    "The United States is waging a noninternational armed conflict with Venezuela.",
+    "Our issue is not with Venezuela as a country but with Nicolas Maduro, the narcotrafficker who hijacked that country after he stole the elections last year.",
+    "Under the Law of Armed Conflict, we can use military force to stop his drug cartel from flooding the streets of the United States.",
+    "Today, the actions taken against the cartel of the los Soles, headed by Maduro, fall squarely into this same category--operations against nonstate actors and criminal organizations, not a war against a sovereign nation or a legitimate President.",
+    "They have totally destroyed the most prosperous country in Latin America, Venezuela.",
+    "Mr. Speaker, I am here today because I oppose this resolution.",
+    "Mr. Speaker, for those reasons, I strongly oppose this resolution, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE HORRORS OF SOCIALISM",
+   "title": "DENOUNCING THE HORRORS OF SOCIALISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4883-2.htm",
+   "sentences": [
+    "Just look at Russia, look at North Korea, and look at Iran.",
+    "Oh, my God, Venezuela is in the news.",
+    "Everyone is talking about Venezuela, my God, the Caribbean.",
+    "Maria Corina Machado, who is the legitimate President of Venezuela, who won 80-20 after President Biden gave the opportunity to Maduro to do fair and square elections and transparent elections, 2 years ago Maduro signs a document by the name of the Barbados Agreement, and he agrees to the Biden administration and to Juan Gonzalez, who used to be the National Security Advisor for Latin America, that he was going to leave if he did not win the elections.",
+    "Maduro is not only the head of the Suns Cartel, one of the most important drug trafficking cartels in the world, but he was also indicted in 2020 by a Federal grand jury in this country for being one of the major drug traffickers in the world.",
+    "Not only that, he is the head of the Suns Cartel.",
+    "The problem is that Venezuela is the perfect example, and the Venezuelans would make fun of the Cubans 25 years ago, saying that it was impossible for that to happen in Venezuela.",
+    "Mr. Speaker, I am going to say before I start, before I explain to this body why I am introducing this resolution, when I was a journalist covering stories for Univision Network, I interviewed many people who had lost their legs or lost their brothers or sisters in the middle of the ocean, trying to get to Miami, and the sharks ate them up.",
+    "The reason we are introducing this resolution is to condemn the horrors of socialism, and I am presenting just the facts.",
+    "Congresswoman Waters was in Havana, and she saw the destruction of Biblical proportions that Castro caused on that island, who, at the time, in 1960, had the highest per capita income in the Western Hemisphere. * * * Mr. Speaker, I am asking for unanimous consent to withdraw the violations of the rules and continue with my speech, which is that there are many people on this floor that have-- Mr. Speaker, there are many people on this floor who have seen the horrors of communism.",
+    "For this reason, Mr. Speaker, I am asking some of my colleagues on that side of the aisle, many of them who are very good friends of mine, to understand that denouncing communism and socialism is the right thing to do for the Democratic Party."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "title": "TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1644.htm",
+   "sentences": [
+    "The police couldn't do anything.",
+    "The President of the United States endorsed this legislation during the recent state of the Union that he conducted in front of Congress.",
+    "Mr. Speaker, I urge the House of Representatives to vote ``yes'' on the TAKE IT DOWN Act."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "pappas",
+ "name": "Chris Pappas",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 31
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "Today, we can put those words into action by passing the Major Richard Star Act and take another step to pay down the debt we owe those brave men and women who fought for our great Nation.",
+    "Mr. Speaker, I rise in strong support of the Major Richard Star Act because it is time to correct the injustice faced by thousands of combat-injured veterans who are seeing their benefits drastically reduced."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' TRANSITION TO TRUCKING ACT OF 2025",
+   "title": "VETERANS' TRANSITION TO TRUCKING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3576.htm",
+   "sentences": [
+    "Some companies opt out of offering apprenticeships due to the bureaucratic hurdles of obtaining approval from more than 20 different State approving agencies.",
+    "Mr. Speaker, I thank the ranking member for yielding, and I thank the chairman for his leadership and his endorsement of this commonsense legislation, the Veterans' Transition to Trucking Act, which is a bipartisan bill I introduced last year.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICANS NEED RELIEF",
+   "title": "AMERICANS NEED RELIEF",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgH2706-6.htm",
+   "sentences": [
+    "Mr. Speaker, everyone in New Hampshire is talking about the cost of living and skyrocketing gas prices as a result of the war in Iran.",
+    "That is simply unsustainable for the people of my district who are already facing record-high grocery costs due to President Trump's tariffs and the doubling and tripling of health insurance premiums because of the failure to extend ACA premium tax credits.",
+    "That is why I introduced the Gas Prices Relief Act of 2026 with Senator Mark Kelly of Arizona to suspend the Federal gas tax through September and provide Americans with lower costs at the pump.",
+    "I urge Congress to take up this legislation and provide Americans with the lower costs they deserve. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FAMILIES AND SMALL BUSINESSES STRUGGLING TO AFFORD HEALTH CARE",
+   "title": "SUPPORTING FAMILIES AND SMALL BUSINESSES STRUGGLING TO AFFORD HEALTH CARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH150-4.htm",
+   "sentences": [
+    "The millions of families who rely on the Affordable Care Act tax credits for health insurance have waited long enough for Congress to do the right thing.",
+    "I urge all my colleagues to support this legislation to ensure that hardworking Americans can maintain their coverage and have the health and financial security that they deserve. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CALLING FOR PERMANENT SCHEDULING FOR FENTANYL ANALOGUES",
+   "title": "CALLING FOR PERMANENT SCHEDULING FOR FENTANYL ANALOGUES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2649-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to urge my colleagues to support the HALT Fentanyl Act when it comes to the floor tomorrow.",
+    "For the past 5 years, I have engaged with law enforcement, public health experts, and colleagues across the aisle to ensure the scheduling of fentanyl analogues doesn't lapse and is finally made permanent.",
+    "Permanent scheduling will ensure that law enforcement retains important tools they need to tackle the opioid crisis and hold traffickers accountable.",
+    "I will continue fighting to ensure that our communities have the support that they need to save lives and confront addiction head-on. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOOD ASSISTANCE FOR WORKING FAMILIES AT RISK",
+   "title": "FOOD ASSISTANCE FOR WORKING FAMILIES AT RISK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2496-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because the Republicans' budget scheme pushed through in the middle of the night last month is putting school meals for hungry kids and food assistance for working families at risk.",
+    "It is a betrayal of working families for Republicans to take away food so they can give tax breaks to billionaires."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "The phones in my office won't stop ringing because people I represent are beyond angry about the proposal to slash Medicaid.",
+    "Thanks to Medicaid, she receives skilled nursing, transportation, and employment support.",
+    "Without Medicaid, he is not sure where he would go.",
+    "We know it is all being ripped away in order to give big tax breaks to billionaires and the biggest corporations.",
+    "I am a ``no'' on this reckless scheme, and I urge my colleagues to vote ``no'' as well."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTS TO MEDICAID",
+   "title": "CUTS TO MEDICAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1321.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because healthcare through Medicaid, covering more than 10 percent of residents and more than 30 percent of all kids in New Hampshire, is on the line.",
+    "Their access to lifesaving preventative care, long-term care, and mental health and addiction treatment will be put at risk by the cruel and fiscally reckless budget being proposed by Republicans in the House.",
+    "In addition, New Hampshire's Medicaid expansion, established on a bipartisan basis, would end with any decrease in Federal funds, leaving 68,000 Granite Staters uninsured and devastating our hospitals and community health centers.",
+    "I have heard from literally thousands of Granite Staters on this issue, including a woman who contacted my office and shared her fears that cuts to Medicaid would leave her family homeless.",
+    "I urge my colleagues to stand up against this betrayal of working families and instead focus on how we can work together to make life safer, healthier, and more affordable for all Americans. ____________________",
+    "I will continue to do everything I can to stop a budget that places the burden of cuts on New Hampshire families like hers to finance massive tax breaks to the superrich."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDAL OF HONOR ACT",
+   "title": "MEDAL OF HONOR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH857.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Medal of Honor Act.",
+    "Mr. Speaker, this is the right thing to do by our veterans and by our Medal of Honor recipients, and I urge all of my colleagues to support this legislation."
+   ]
+  }
+ ]
+}

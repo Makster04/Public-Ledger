@@ -1,0 +1,857 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "guthrie",
+ "name": "Brett Guthrie",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 60,
+  "sentences": 305
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RATEPAYER PROTECTION ACT",
+   "title": "RATEPAYER PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5656-3.htm",
+   "sentences": [
+    "The evidence is clear: When States have the proper processes in place to protect households, interconnecting large-load data centers have positive benefits for the communities in which they reside.",
+    "Data center growth can be a catalyst for investment in an aging grid, strengthening the tax base to fund essential public services and anchor tenants for utilities that lower rates for everyone else.",
+    "To do that, we have to have the data centers.",
+    "Mr. Speaker, I rise in support of H.R. 9340, the Ratepayer Protection Act, sponsored by my colleague and friend from Colorado, Congressman Evans.",
+    "This bill strikes the right balance of providing a modest but important level of accountability as we continue to support this vital industry."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APPLICATION OF LEAVE PROVISIONS FOR MEMBERS OF THE ARMED FORCES TO MEMBERS OF THE PUBLIC HEALTH SERVICE",
+   "title": "APPLICATION OF LEAVE PROVISIONS FOR MEMBERS OF THE ARMED FORCES TO MEMBERS OF THE PUBLIC HEALTH SERVICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5661.htm",
+   "sentences": [
+    "Madam Speaker, I move to suspend the rules and pass the bill (H.R. 2846) to amend title II of the Public Health Service Act to include as an additional right or privilege of commissioned officers of the Public Health Service (and their beneficiaries) certain leave provided under title 10, United States Code to commissioned officers of the Army (or their beneficiaries).",
+    "Madam Speaker, I rise today in strong support of H.R. 2846 led by the gentlewoman from Pennsylvania (Ms. Houlahan).",
+    "I have no further speakers, so I will be prepared to close.",
+    "We will miss seeing her around the Energy and Commerce room."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGH-CAPACITY GRID ACT",
+   "title": "HIGH-CAPACITY GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5662.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 6633, the High-Capacity Grid Act sponsored by my colleague, Congresswoman Fedorchak, from North Dakota."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOAD FORECASTING ENHANCEMENT ACT",
+   "title": "LOAD FORECASTING ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5663.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 9332, the Load Forecasting Enhancement Act, sponsored by my colleague Congressman Troy Balderson from Ohio."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "title": "AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5665.htm",
+   "sentences": [
+    "Madam Speaker, I move to suspend the rules and pass the bill (H.R. 9339) to require the Secretary of Energy to conduct an assessment on the use of artificial intelligence and high-performance computing technologies to enhance the bulk-power system, and for other purposes.",
+    "This bill directs the Secretary of Energy to develop a report on the opportunities to use artificial intelligence to enhance the reliability and affordability of our electric grid.",
+    "That makes it a particularly important use case for AI models that are designed to handle such complexities.",
+    "Madam Speaker, I rise in support of H.R. 9339, the Affordable Innovation for the Grid Act, sponsored by my colleague Congresswoman Harshbarger of Tennessee."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN MUSIC TOURISM ACT OF 2025",
+   "title": "AMERICAN MUSIC TOURISM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5666.htm",
+   "sentences": [
+    "Madam Speaker, I move to suspend the rules and pass the bill (S. 195) to amend the Visit America Act to promote music tourism, and for other purposes.",
+    "Bill Monroe is from Jerusalem Ridge in Ohio County, and the International Bluegrass Museum and Hall of Fame is in Owensboro, Kentucky.",
+    "I rise today to speak in support of S. 195, the America Music Tourism Act of 2025."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "title": "AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5667.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 979, the AM Radio for Every Vehicle Act."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KAY HAGAN TICK REAUTHORIZATION ACT",
+   "title": "KAY HAGAN TICK REAUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5670.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of S. 2398, the Senate companion to bipartisan legislation recently advanced by the Committee on Energy and Commerce led by Senator Collins and Congressman Chris Smith of New Jersey."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING ILLICIT XYLAZINE ACT",
+   "title": "COMBATING ILLICIT XYLAZINE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5671.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1266, the Combating Illicit Xylazine Act, led by my colleagues Representatives Panetta and Pfluger."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TYLER'S LAW",
+   "title": "TYLER'S LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5673.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 2004, led by the gentleman from California (Mr. Lieu) and the gentleman from Ohio (Mr. Latta)."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP PILLS THAT KILL ACT",
+   "title": "STOP PILLS THAT KILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5674.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 8005, the Stop Pills That Kill Act, that my good friend from Colorado (Mr. Evans) has brought forward."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIESEL EMISSIONS REDUCTION ACT OF 2025",
+   "title": "DIESEL EMISSIONS REDUCTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5679.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 2140) to amend the Energy Policy Act of 2005 to reauthorize the diesel emissions reduction program.",
+    "Mr. Speaker, the Diesel Emissions Reduction Act, DERA, of 2025, led by two members of our committee, Representative Matsui of California and Representative Langworthy of New York, reauthorizes a longstanding and successful bipartisan program.",
+    "This EPA program provides funding assistance to accelerate replacements and upgrades for older diesel engines.",
+    "I urge support of this bipartisan legislation with a track record of proven results."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL S",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL STANDARDS; OCEAN-GOING VESSELS AT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5680.htm",
+   "sentences": [
+    "It would overturn a Clean Air Act waiver allowing California to regulate tanker emissions while they are at berth in California ports.",
+    "Beyond the staggering costs, where is the meaningful, measurable decrease in emissions that proponents claim will follow?",
+    "Mr. Speaker, I rise today in support of this resolution led by Representative Vince Fong of California.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting H.J. Res. 210 to overturn the waiver and restore common sense in our environmental regulation."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENVIRONMENTAL MONITORING AND REMEDIATION TECHNOLOGY ASSESSMENT INITIATIVE AUTHORIZATION ACT OF 2026",
+   "title": "ENVIRONMENTAL MONITORING AND REMEDIATION TECHNOLOGY ASSESSMENT INITIATIVE AUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5682.htm",
+   "sentences": [
+    "This legislation enjoyed broad bipartisan support at the committee level, and I urge my colleagues in the House to support its passage."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHOICES FOR INCREASED MOBILITY ACT OF 2026",
+   "title": "CHOICES FOR INCREASED MOBILITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4636-9.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1703) to amend title XVIII of the Social Security Act to clarify payment rules for manual wheelchairs under part B of the Medicare program, as amended.",
+    "Mr. Speaker, I rise today in strong support of H.R. 1703, led by my good friend who previously spoke, the gentleman from Pennsylvania (Mr. Joyce)."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FDA MODERNIZATION ACT 3.0",
+   "title": "FDA MODERNIZATION ACT 3.0",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4639.htm",
+   "sentences": [
+    "However, given the concerns and scientific limitations of animal testing, researchers have increasingly turned to new approach methodologies to evaluate drugs when scientifically justified.",
+    "I commend the administration for their work to phase out animal testing where it is scientifically appropriate and for achieving the key goals in the first year of implementing the roadmap to reducing animal testing in preclinical safety studies.",
+    "Mr. Speaker, I rise today in strong support of H.R. 2821, led by my colleagues Representative Carter of Georgia and Representative Barragan, which requires the Secretary of HHS to publish rules amending certain regulations by replacing references to ``animal'' tests, data, studies, models, and research with the broader term ``nonclinical'' tests, data, studies, models, and research."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAUTHORIZING THE KAY HAGAN TICK ACT",
+   "title": "REAUTHORIZING THE KAY HAGAN TICK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4640.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 4348, led by my colleagues, the gentleman from New Jersey (Mr. Smith) and the gentleman from Texas (Mr. Doggett), which authorizes the national and regional centers for excellence in vector-borne disease in the CDC's cooperative agreements with health departments in high-risk areas for vector-borne diseases."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STEM CELL THERAPEUTIC AND RESEARCH REAUTHORIZATION ACT OF 2025",
+   "title": "STEM CELL THERAPEUTIC AND RESEARCH REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4642.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 5160, led by my colleagues Representatives Smith and Matsui to reauthorize the C.W. Bill Young Cell Transplantation Program and the National Cord Blood Inventory program."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCELERATING ACCESS TO DEMENTIA AND ALZHEIMER'S PROVIDER TRAINING ACT",
+   "title": "ACCELERATING ACCESS TO DEMENTIA AND ALZHEIMER'S PROVIDER TRAINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4643.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 3747, led by my colleagues Representatives Balderson and Barragan, which would reauthorize the technology-enabled collaborative learning program.",
+    "Mr. Speaker, I am proud to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACTION FOR DENTAL HEALTH ACT",
+   "title": "ACTION FOR DENTAL HEALTH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4645.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 2001 led by my colleagues Representative Kelly and Representative Simpson, which reauthorizes a grant program that helps States develop and implement programs to address the need for dental professionals in areas facing a workforce shortage."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROGRAMS TO PREVENT, DETECT, AND TREAT TRAUMATIC BRAIN INJURIES",
+   "title": "PROGRAMS TO PREVENT, DETECT, AND TREAT TRAUMATIC BRAIN INJURIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4646.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1493, led by my colleagues Representatives Pallone and Bacon, which would reauthorize HHS programs that allocate resources for traumatic brain injury prevention, improving access to TBI rehabilitation and TBI patient advocacy systems."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EARLY ACT REAUTHORIZATION OF 2025",
+   "title": "EARLY ACT REAUTHORIZATION OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4648.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 4541, led by my colleagues Representatives Wasserman Schultz and Miller-Meeks."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEONDRA DIXON INCLUDE PROJECT ACT OF 2025",
+   "title": "DEONDRA DIXON INCLUDE PROJECT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4649.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 3491, led by my colleagues Representatives DeGette and Hudson."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "title": "NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4651.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 6238, led by my colleagues Representatives Underwood and Fitzpatrick, which authorizes the Implementing a Maternal health and PRegnancy Outcomes Vision for Everyone Initiative within the National Institutes of Health.",
+    "In closing, I urge a ``yes'' vote on this legislation."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS REAUTHORIZATION ACT OF 2026",
+   "title": "ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4652.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 8205 led by my colleagues, Representative Quigley and Representative Calvert.",
+    "Mr. Speaker, I want them to know that I stand with them, and I ask that my colleagues do the same.",
+    "Mr. Speaker, in closing, I will mention Brian and Sandra testified before our committee."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "It is actually called the Sunshine Protection Act, and the reason is people like the longer daylight hours.",
+    "We all know that Arizona and Hawaii stay on standard time.",
+    "They will stay on standard time if their General Assembly so chooses.",
+    "I know in Kentucky they are not in session, but there is a provision that if Kentucky wants to stay on standard time, the Governor can call them into session and do so.",
+    "I believe it is the right time to do it, so I encourage my colleagues to support H.R. 139, the Sunshine Protection Act, and I believe it will be good for the American people."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "title": "KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+   "sentences": [
+    "It gives parents stronger tools to monitor and manage their children's online experiences, establishes safeguards for AI chatbots, creates new protections in online gaming environments, and requires age verification for pornography websites to ensure kids cannot access explicit content.",
+    "The legislation also modernizes children's privacy protections by requiring parental consent before collecting information from children under 14 and extending important new privacy protections to teenagers under 18.",
+    "Mr. Speaker, I rise today in strong support of H.R. 7757, the Kids Internet and Digital Safety Act, or the KIDS Act.",
+    "Before I continue, I will recognize two parents who are with us in the gallery today: Deb Schmill, mother of Becca, and Maurine Molak, mother of David."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING COMMUNITY UPGRADES FOR A RESILIENT GRID ACT",
+   "title": "SECURING COMMUNITY UPGRADES FOR A RESILIENT GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4296.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 7257, the SECURE Grid Act, sponsored by my colleague and Energy Subcommittee chairman from Ohio's Fifth Congressional District, Mr. Latta."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY EMERGENCY LEADERSHIP ACT",
+   "title": "ENERGY EMERGENCY LEADERSHIP ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4297.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 7258, the Energy Emergency Leadership Act, sponsored by my colleague Ms. Lee of Florida."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RURAL AND MUNICIPAL UTILITY CYBERSECURITY ACT",
+   "title": "RURAL AND MUNICIPAL UTILITY CYBERSECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4299.htm",
+   "sentences": [
+    "I rise in support of H.R. 7266, the Rural and Municipal Utility Cybersecurity Act, sponsored by Representative Mariannette Miller-Meeks from Iowa's First Congressional District."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY THREAT ANALYSIS CENTER ACT OF 2026",
+   "title": "ENERGY THREAT ANALYSIS CENTER ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4300.htm",
+   "sentences": [
+    "This is a critical operational program to strengthen the collective defense, response, and resilience of our energy sector.",
+    "Madam Speaker, I rise today in support of H.R. 7305, the Energy Threat Analysis Center Act, sponsored by the gentlewoman from Florida (Ms. Castor) and the gentleman from Colorado (Mr. Evans), my good friends.",
+    "I look forward to those efforts, and I will make that commitment on this floor.",
+    "I know we will work together to get there, but on this particular piece of legislation, I thank Congresswoman Castor for her hard work on the ETAC, along with Congressman Evans."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "title": "NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3421.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1224, I call up the bill H.R. 1346, to amend the Clean Air Act with respect to the ethanol waiver for Reid Vapor Pressure under that Act, and for other purposes, and ask for its immediate consideration in the House."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS STEWARDS OF THE ENVIRONMENT, MAJOR SUPPLIERS OF UNITED STATES ENERGY RESOURCES, CRITICAL PROVID",
+   "title": "EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS STEWARDS OF THE ENVIRONMENT, MAJOR SUPPLIERS OF UNITED STATES ENERGY RESOURCES, CRITICAL PROVIDERS OF FOOD PRODUCTION AND...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3052-4.htm",
+   "sentences": [
+    "Energy and Commerce Republicans have prioritized restoring program integrity in our government health programs throughout this entire Congress, starting with H.R. 1, by ensuring critical safety net programs can continue to serve their intended purpose of protecting our most vulnerable Americans to now launching a nationwide investigation into Medicaid programs across the country.",
+    "House Republicans have worked to ensure that rural manufacturers are not unfairly penalized for emissions they did not create when we passed commonsense reforms to the Clean Air Act permitting and permitting relief for broadband deployment.",
+    "House Republicans have worked to enhance healthcare quality and access through the Working Families Tax Cuts and Lower Health Care Premiums for All Americans Act.",
+    "House Republicans also enacted the SUPPORT Act and HALT Fentanyl Act, which provide crucial resources to rural communities devastated by the opioid crisis.",
+    "The other is regarding Medicaid.",
+    "The other one is we want to require that you check the rolls more than once a year and verify when people come on the rolls of Medicaid.",
+    "It seems like we passed the bill now that we found out about Medicaid.",
+    "The question is on adoption of the resolution.",
+    "Mr. Speaker, we stand behind this bill."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELIABLE FEDERAL INFRASTRUCTURE ACT",
+   "title": "RELIABLE FEDERAL INFRASTRUCTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3057-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4690, the Reliable Federal Infrastructure Act.",
+    "The legislation before us today to repeal section 433 brings Federal building policy back to reality, and I urge my colleagues to join me in voting ``yes'' on H.R. 4690, the Reliable Federal Infrastructure Act.",
+    "Mr. Speaker, in closing, I will point out that, in 2007, there was a vote in the House of Representatives to make sure that every Federal building built in 2030 is going to have only green energy and not have any type of fossil fuel energy whatsoever.",
+    "They keep disparaging the people who produce cheap energy, but I will tell you that, in 2007, the United States and the European Union had the same-sized economy."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "title": "FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+   "sentences": [
+    "These three bills are an essential part of the committee's broader efforts on permitting reform and aligned with the White House permitting priorities, which include modernizing the Clean Air Act.",
+    "A lot has changed since 1990, the last time that the Clean Air Act got a substantial overhaul.",
+    "A lot has changed since 1990, the last time the Clean Air Act got a substantial overhaul, and some parts of the law have become outdated, contributing also to more gridlock.",
+    "Notably, over 70 percent of projects require Clean Air Act permits, which have the most burdensome approval process of any permitting requirement.",
+    "Notably, over 70 percent of projects require these permits, and these three bills remove regulatory uncertainty and bureaucratic hoops that impact what and where job creators build new businesses, but they do not change the underlying environmental protections in the law.",
+    "The FENCES Act introduced by Congressman Pfluger ensures that States and local communities are not penalized for foreign air emissions emanating from outside of the U.S. The FENCES Act clarifies that all foreign emissions, whether natural or manmade, are not considered when determining whether a State meets national air quality standards.",
+    "The FENCES Act protects manufacturers and communities from unnecessary compliance burdens caused by events beyond their control, such as pollution from China, foreign wildfires, or dust storms, while upholding environmental standards under the Clean Air Act.",
+    "The FIRE Act, introduced by Congressman Gabe Evans and co-led by Congressman Adam Gray, updates the Clean Air Act to address the biggest threat in air pollution that this country faces today: wildfires.",
+    "Bipartisan legislation ensures that States are not punished for prescribed burns or emissions that they cannot control.",
+    "These bills provide commonsense solutions and long-needed updates to the Clean Air Act.",
+    "Today, I rise to support H.R. 6409, the FENCES Act; H.R. 6398, the RED Tape Act; and H.R. 6387, the FIRE Act.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting H.R. 6409, the FENCES Act; H.R. 6398, the RED Tape Act; and H.R. 6387, the FIRE Act."
+   ]
+  },
+  {
+   "date": "2026-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: (1420) DON'T MESS WITH MY HOME APPLIANCES ACT",
+   "title": "(1420) DON'T MESS WITH MY HOME APPLIANCES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-24/html/CREC-2026-02-24-pt1-PgH2279.htm",
+   "sentences": [
+    "They were rooted in ambitious climate goals.",
+    "Madam Speaker, I rise today in support of H.R. 4626, the Home Appliance Protection and Affordability Act, sponsored by my colleague from Georgia's 12th District.",
+    "Madam Speaker, I urge my colleagues to join me in supporting H.R. 4626, the Home Appliance Protection and Affordability Act to protect consumer choice, to modernize EPCA authorities, and to lower costs for American families.",
+    "It is just not realistic, and that is why we are fighting for affordability."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "title": "SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH127-2.htm",
+   "sentences": [
+    "Mr. Speaker, when we talk about affordability, we did pass and sign into law no tax on Social Security.",
+    "It is a deduction for people who generally have incomes that are almost all Social Security.",
+    "The basic law we are operating under is the Affordable Care Act.",
+    "Why is the Affordable Care Act not saving people money?",
+    "I was speaking to a Rotary Club, and a person said to me at the end that I was talking so negatively on the Affordable Care Act.",
+    "The underlying law is the Affordable Care Act.",
+    "I wish I would get an answer to the question of why did they set them to expire and why is the Affordable Care Act not working.",
+    "Mr. Speaker, my point when I talked about the Affordable Care Act is that once it was in place, I wish it had worked.",
+    "If we did have choice and we had more people provided--we didn't have consolidation, and we had cheaper health insurance.",
+    "If that happens, I will eat my words.",
+    "I will tell you that the Energy and Commerce Committee and the Ways and Means Committee are going to be focusing on the cost of health insurance.",
+    "We are going to spend this year to hopefully find ways that we can work together because the premiums reflect the cost of healthcare."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 953, I call up the bill (H.R. 498) to amend title XIX of the Social Security Act to prohibit Federal Medicaid funding for gender transition procedures for minors, and ask for its immediate consideration.",
+    "Mr. Speaker, I rise in strong support of H.R. 498, the Do No Harm in Medicaid Act.",
+    "This bill helps support our fellow hardworking Americans whose valuable and finite tax dollars should not continue to fund medically unnecessary care under the Medicaid program.",
+    "H.R. 498, Do No Harm in Medicaid Act, does just that.",
+    "It prohibits Federal dollars from going toward specified gender transition procedures for individuals under 18.",
+    "My fellow House Republicans, particularly my colleagues on the Energy and Commerce Committee, have worked diligently this Congress to eliminate waste, fraud, and abuse in the Medicaid program and the Working Families Tax Cut Act.",
+    "Our goal is to eliminate unnecessary and improper procedures and strengthen Medicaid for expectant mothers and children, low-income seniors, and individuals with disabilities.",
+    "It just simply prohibits the use of Medicaid funding on specified procedures that are medically unnecessary.",
+    "This critical legislation builds upon our work in the Working Families Tax Cut Act to create a more sustainable Medicaid program.",
+    "Remember, they were set to expire in the Inflation Reduction Act, or the Green New Deal.",
+    "Since that is the motion to recommit, maybe it would be a good opportunity for my friends on the other side of the aisle to let the country know when they decided to let these tax credits expire in the same bill that they have permanent tax credits for the Green New Deal.",
+    "I don't know, you would have to think maybe they want to take the money from the tax credits and spend it on the Green New Deal.",
+    "If you look at the enhanced tax credits that they set to expire to pay for the Green New Deal, so the moral cause that people are bringing up, they chose to put Green New Deal tax credits over extended premium tax credits.",
+    "At the same time, yesterday, we estimated a good half of the people on--we know, from a GAO study, there is waste, fraud, and abuse in the ObamaCare marketplace that we wanted to fix.",
+    "On Medicaid, we have this issue of States providing Medicaid to people who are here illegally.",
+    "That is the Medicaid administration.",
+    "If you are going to operate something through Medicaid, unless you say that you are going to use Federal dollars for this procedure but State dollars for that procedure, it is the same administration doing them."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "When the Democrats passed ObamaCare over a decade ago, they sold the bill on the promise that it would lower healthcare costs and preserve plan options.",
+    "Today, we know that ObamaCare has not lived up to the Democrats' lofty promises.",
+    "Healthcare spending has nearly doubled since ObamaCare passed.",
+    "Healthcare plan options have been decimated by Democratic overreach, and millions of Americans are saddled with medical debt across the country.",
+    "ObamaCare premiums are up 80 percent since the program's inception, with patients paying on average $5,000 out of their own pocket to hit their deductible.",
+    "Without a doubt, ObamaCare has proven to be unaffordable and unsustainable.",
+    "In an attempt to respond to the affordability crisis created by ObamaCare, Democrats leveraged a public health emergency to shovel hundreds of billions of dollars to big health insurance plans to mask the risk of rising unaffordability of coverage.",
+    "First, in the American Rescue Plan of 2021 and then again in the Inflation Reduction Act of 2023, Democrats sent temporary taxpayer-funded enhanced premium tax credits directly to the coffers of big insurance plans.",
+    "They could have made them permanent, but they chose instead to focus on advancing priorities for wealthy Americans, which some of these they did make permanent by subsidizing electric vehicles for politically connected cronies to siphon off Federal dollars of the greenhouse gas slush fund.",
+    "These include eliminating health plan gimmicks like silver loading, which will lower ACA premiums by 11 percent; increasing transparency for pharmacy benefit managers, the middlemen that will lower costs of drugs for all Americans; and increasing affordable plan choices and putting patients back in the driver's seat for their own healthcare plan choices by instituting association health plans, CHOICE arrangements, and stop-loss insurance.",
+    "These policies will also lower healthcare costs for all Americans, not just the roughly 7 percent enrolled in the ObamaCare marketplace.",
+    "Mr. Speaker, I will remind my friends that the premium tax credits from the ACA are extended.",
+    "These are the enhanced premium tax credits.",
+    "It is good, and sad, that my colleagues are recognizing that the Affordable Care Act is failing.",
+    "The Rules' ranking member was in townhalls and heard stories about people who had to buy care on the Affordable Care Act marketplace that is failing.",
+    "Do my colleagues explain to their constituents that in the bill that they voted for that gave billions of dollars of the Green New Deal; in the same bill they set these tax cuts to expire?",
+    "Not just the 7 percent in the ObamaCare marketplace will benefit but all Americans will benefit from this bill.",
+    "It is unconscionable that money was spent on the Green New Deal at the expense of the enhanced tax credits they talk about.",
+    "Mr. Speaker, 20 million people are trapped in the Affordable Care Act marketplace.",
+    "Mr. Speaker, I rise today in strong support of H.R. 6703, the Lower Health Care Premiums for All Americans Act."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "title": "STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5522.htm",
+   "sentences": [
+    "Unfortunately, in recent years, we have seen States move away from an integrated resource planning process centered on reliability and affordability toward one intended to achieve climate and environmental justice goals.",
+    "Unfortunately, the States that have taken the most aggressive stance on climate goals are the same States with the highest electricity rates in the country.",
+    "The Affordable Care Act passed 15 years ago.",
+    "We are talking about the affordability of green energy or clean energy.",
+    "When you talk about investing in your own utilities, if clean energy--they keep saying they are going to go for more expensive energy as opposed to the cleaner energy.",
+    "They have higher energy prices, and it is because their general assemblies and their State governments have put additional climate issues in place, not to make energy more affordable, but it makes it more expensive.",
+    "Madam Speaker, I rise in support of H.R. 3628, the State Planning For Reliability and Affordability Act, sponsored by my colleague Congressman Evans from Colorado."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTRIC SUPPLY CHAIN ACT",
+   "title": "ELECTRIC SUPPLY CHAIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5528.htm",
+   "sentences": [
+    "Historic projections of increasing electricity demand from domestic manufacturing, onshoring, and AI data centers have exposed systemic challenges facing our electric sector and the supply chain for components and infrastructure needed to power the system.",
+    "Mr. Chair, I appreciate my friend bringing up the enhanced or COVID- era premium tax credits that are expiring at the end of this month.",
+    "Since we are talking energy tonight, we need to understand that they were set to expire, without a single Republican vote, to expire them in the Inflation Reduction Act, which was spent money on the Green New Deal.",
+    "So when you put in context what President Trump said--when the premium tax credits were set to expire, we had a hearing on that and we were talking about it.",
+    "They say we are not addressing affordability when they created the affordability crisis, when they made the premium tax credits expire.",
+    "Mr. Chair, while our efforts to reshore domestic manufacturing facilities bolster our national security, it is also important to recognize the economic benefits of attracting new opportunities for job-creating industries.",
+    "Mr. Chairman, I rise in support of H.R. 3638, the Electric Supply Chain Act, sponsored by my colleague, the gentleman from Ohio (Mr. Latta).",
+    "Mr. Chairman, I rise in support of the amendment from my colleague, Representative Houlihan from Pennsylvania.",
+    "Mr. Chair, I support this amendment."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "title": "RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4835-6.htm",
+   "sentences": [
+    "Mr. Speaker, the American economy is fueled by petrochemical refineries providing affordable diesel and gasoline to families, critical inputs for our manufacturers, and products imperative for the maintenance of our defense systems.",
+    "H.R. 3109 will provide the Committee on Energy and Commerce the information we need to enact policies to deliver affordable, reliable, and clean energy to all Americans.",
+    "On the Epstein files, the Speaker tried to come and unanimous consent the Epstein files.",
+    "Remember, last week he came down and said let's pass the Epstein files, and the other side of the aisle objected to it.",
+    "Were they trying to get the Epstein files out, or were they trying to make sure people got in town for their rallies?",
+    "Other than Kentucky, I think California is one of the prettiest States we have in the Union.",
+    "China is building the electric car industry, but they are also building the power generation, like a coal plant a week, I think, to provide the energy for that.",
+    "This bill we are talking about is on gasoline and diesel.",
+    "Diesel prices, fuel prices, matter in terms of food prices and about everything else that we consume.",
+    "How do we efficiently, effectively, safely, and cleanly produce more gasoline and diesel?",
+    "I think Natural Resources today had a markup, T&I is working on a markup, and we hopefully can work together as Members across the aisle in the Energy and Commerce Committee to do our share to make sure this explosive growth of energy is not just in gas and diesel but also in electricity.",
+    "I know on our side of the aisle--I think on both sides of the aisle--we try to take as much information as we can to make a reasonable decision to make sure we have clean, sustainable, but ample and safe fuel for this country in order to get groceries to the grocery store, either through diesel or gasoline.",
+    "I will challenge them to do that.",
+    "I will say you can buy the most expensive gas in Kentucky, and we will compare that to what is going on in California.",
+    "I haven't been in the bay area in a couple of years, and we will figure out an opportunity to come there.",
+    "We will work together to get our prices down, but we have to produce more.",
+    "This is what our struggle is over, and this is what we are going to accomplish as a committee."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "U.S. LNG has played an undeniably important role in providing affordable, abundant, and clean energy to the world.",
+    "This could not have been more evident than in 2022, when Russia invaded Ukraine, disrupting global commodity markets and leaving Europe without secure access to energy.",
+    "However, in January 2024, the Biden-Harris administration announced an illegal and indefinite ban on new export authorizations, all in the name of vaguely stated climate change goals.",
+    "At a meeting a couple of years ago with people at the highest levels of the German Government, they said they needed American LNG gas to rain down on them because of what was going on in Eastern Europe and Ukraine.",
+    "Mr. Speaker, I urge all my colleagues to support H.R. 1949.",
+    "We want to work together to beat China, and we are going to work together to beat China because that unites all of us.",
+    "We are going to work together to do that."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING CROSS-BORDER ENERGY INFRASTRUCTURE ACT",
+   "title": "PROMOTING CROSS-BORDER ENERGY INFRASTRUCTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4423-7.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 707, I call up the bill (H.R. 3062) to establish a more uniform, transparent, and modern process to authorize the construction, connection, operation, and maintenance of international border-crossing facilities for the import and export of oil and natural gas and the transmission of electricity, and ask for its immediate consideration in the House.",
+    "As energy demand is projected to increase in staggering numbers over the coming years, the expansion of cross-border energy infrastructure throughout this integrated market will be important.",
+    "One challenge confronting the expansion of energy trade with Mexico and Canada is that Congress has not asserted authority to establish procedures for permitting cross-border infrastructure.",
+    "Cross-border infrastructure, especially oil and natural gas pipelines and electrical transmission lines, is essential to American communities across the Nation.",
+    "Instead of a clear statutory process, a myriad of executive orders over decades have provided the legal context for permitting procedures of cross-border energy infrastructure.",
+    "Under this permitting regime that has been cobbled together, the Secretary of State has the authority to issue Presidential permits for cross-border liquid pipelines; the Federal Energy Regulatory Commission, or FERC, for cross-border natural gas pipelines; and the Department of Energy for cross-border electric transmission facilities.",
+    "Instead of the complex existing process, projects would simply be required to receive a certificate of crossing from the relevant agency for the border- crossing segment.",
+    "Nothing in this legislation alters additional permitting requirements of other statutes, like the National Environmental Policy Act or Clean Water Act.",
+    "It is past time for Congress to assert its authority and establish a modern and transparent process for cross-border energy infrastructure.",
+    "Mr. Speaker, before I introduce my next speaker, I will make clear that tariffs don't affect these products.",
+    "USMCA-qualifying products, which is crude oil, natural gas, refined petroleum products, and biofuels, are tariff-free.",
+    "Mr. Speaker, I want to say that this does not replace any need for permits, so the idea that there would be no environmental review or any review for a cross-border project approved by FERC or the State Department is just not accurate.",
+    "If the Keystone pipeline is not going to happen, which by Presidential fiat didn't happen, we have to worry about future situations when we are in Congress.",
+    "Also, I am a big believer that we have to continue to have economic development and growth, and work in a fair way to make sure our products are being traded fairly as well with Canada and Mexico.",
+    "Hopefully, we are going to be able to work on a lot of issues because we do care about the cost of electricity."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL COAL COUNCIL REESTABLISHMENT ACT",
+   "title": "NATIONAL COAL COUNCIL REESTABLISHMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4428.htm",
+   "sentences": [
+    "We know either we have the scaling data centers here, or China is going to dominate.",
+    "There are more retired union coal miners in Kentucky and the surrounding areas than there are current coal miners.",
+    "I will tell you, if you ask any coal miner, retired coal miner in Kentucky with a pension, a union benefit, retired union benefit, they will tell you who spent time on that issue, who was the leader on that issue.",
+    "Our retired union coal miners have the benefits they have today because in an omnibus or spending bill--I can't remember, probably both together--he put in a provision that preserved their benefits.",
+    "Mr. Speaker, I rise in support of the National Coal Council Reestablishment Act, introduced by my colleague from Ohio's Sixth District (Mr. Rulli).",
+    "Mr. Speaker, I just want to say that over the next decade, we are going to need 152 gigawatts of power.",
+    "We know we need the power or we are going to lose the great battle of our time of who is going to control AI and supercomputing, eventually quantum computing.",
+    "I will tell you, we all worked on it."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUARANTEEING RELIABILITY THROUGH THE INTERCONNECTION OF DISPATCHABLE POWER ACT",
+   "title": "GUARANTEEING RELIABILITY THROUGH THE INTERCONNECTION OF DISPATCHABLE POWER ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4433.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1047, the GRID Power Act, sponsored by my colleague, Representative Troy Balderson of Ohio's 12th District.",
+    "If we fail to build the dispatchable resources needed to power next- generation industries, we will cede American leadership on the world stage to Communist regimes such as China and raise costs on consumers along the way.",
+    "Mr. Speaker, I urge my colleagues to support the legislation as it will make our grid more reliable and lower America's electricity bills."
+   ]
+  },
+  {
+   "date": "2025-09-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NDAA RESTORES PEACE THROUGH STRENGTH",
+   "title": "NDAA RESTORES PEACE THROUGH STRENGTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-11/html/CREC-2025-09-11-pt1-PgH4251-2.htm",
+   "sentences": [
+    "House Republicans, alongside President Trump, are investing in our military-industrial capabilities, securing all servicemembers a well- deserved pay raise, making meaningful strides to secure our southern border, and so much more."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMISES MADE, PROMISES KEPT",
+   "title": "PROMISES MADE, PROMISES KEPT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3745-7.htm",
+   "sentences": [
+    "For months, there has been a campaign of fear-mongering and misinformation about the bill's impact on our most vulnerable.",
+    "For Americans who rely on Medicaid, the truth is that the One Big Beautiful Bill Act restores integrity back into our Federal healthcare programs by ensuring that ineligible recipients do not cut the line in front of those in most need.",
+    "Just last week, the Congressional Budget Office found that the One Big Beautiful Bill Act removes 2.1 billion ineligible individuals from the ACA marketplace coverage, with 1.2 million of those being unauthorized immigrants or noncitizens.",
+    "CBO also found that 5.3 million able-bodied, unemployed adults covered by Medicaid will now have to work in order to continue receiving their fully subsidized healthcare.",
+    "The vast majority of Americans agree that Medicaid should be a safety net, not a long-term entitlement for those who are able to work but choose not to.",
+    "The One Big Beautiful Bill Act strengthens and secures Medicaid for expectant mothers, children, low-income seniors, and people with disabilities.",
+    "The individual who lives on their Social Security will have more money in their pocket because they won't have to pay taxes on that--we exempt taxes--or the waitress in Glasgow, Kentucky, who won't have to pay taxes on her tips; or the farmers in Owensboro who will be able to pass their family land down to their family because of the death tax exemption that we made permanent.",
+    "Our legislation provides much-needed tax cuts for working families, unleashes American energy, supports innovation, and safeguards healthcare for Americans who need it most."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "We secure Medicaid for those who need it most.",
+    "Democrats continue to fearmonger and misrepresent what is in this bill, but let me be clear: House Republicans are eliminating waste, fraud, and abuse to focus Medicaid on the most vulnerable and not on able-bodied adults who choose not to work.",
+    "Mr. Speaker, today I rise in support of the One Big Beautiful Bill Act, which includes the work of the House Committee on Energy and Commerce, to unleash American energy, promote innovation, and protect healthcare for the most vulnerable Americans.",
+    "We support technological innovation by reauthorizing the spectrum auction authority.",
+    "We are fighting for commonsense policies to protect America's children, pregnant women, mothers, individuals with disabilities, and low-income seniors.",
+    "Mr. Speaker, this bill delivers on the promises the President and congressional Republicans made to the American people, and that is why I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2625-5.htm",
+   "sentences": [
+    "What the Energy and Commerce Committee is doing, today we are doing the HALT Fentanyl Act to address the criminal justice side of it.",
+    "We are equally committed to ensuring that people that are purveying this poison on our communities, our cities, bringing it across the border, deserve to have their day in court, and deserve to answer to justice.",
+    "I will tell you there are people who are purveyors of this illicit fentanyl that deserve to be put in jail and throw away the key.",
+    "We are committed to ensuring that people have access to treatment."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "Earlier this year, the House took a critical step to get illicit fentanyl off our streets in passing the HALT Fentanyl Act, which was led by my friend, Congressman Morgan Griffith.",
+    "Mr. Chair, I want to point out that Medicaid reform specifically exempted people with substance use disorder from being defined as able-bodied for the purpose of the work requirement.",
+    "We understand that Medicaid is a big payer for people with substance use disorder recovery services, and our bill exempted them.",
+    "Mr. Chair, I want to point out one more time that in Medicaid reform, people with substance use disorder and mental health issues are exempted from having to comply with the work requirement so that hardworking taxpayers who go to work will provide the categories we were just talking about today with Medicaid.",
+    "They are not going to provide for the able-bodied.",
+    "There is an exemption from the able-bodied requirement for substance use disorder recovery and mental health.",
+    "Mr. Chair, I will remind you that we spend about almost $700 billion in Medicaid.",
+    "When this bill goes into effect, 10 years from now, we are going to spend $1.1 trillion in Medicaid.",
+    "You have the supply coming across the border that he is shutting down and trying to shut down, but we also have to deal with the demand side.",
+    "The section 1115 waivers are important to the Medicaid program.",
+    "Section 1115 waivers provide key State flexibility to test new authorities and ideas in the Medicaid program.",
+    "In substance use disorder alone, 1115 waivers were pivotal in early efforts to lift the IMD exclusion, an obsolete edifice to the Medicaid program that undermines access to mental health care and substance use disorder care by only allowing for Medicaid to reimburse for care in- patient facilities with fewer than 16 beds.",
+    "The 1115 waivers have been on the books for decades, and States have used them a multitude of ways to transform the Medicaid program.",
+    "Nonetheless, the Biden administration in the use of 1115 waiver authorities put forth new guidance that allowed States to rely on so- called hypothetical expenditures that let States spend Medicaid dollars on services that were over budget and unrelated to the core functions of the Medicaid program.",
+    "This isn't to say that HVAC systems in a hot climate or legal supports aren't important or may have some potential relation to someone's health, but they fall far outside the scope of what Medicaid is intended for.",
+    "Specifically, in this CMS, I wrote: ``The committee is also concerned about the potential for fraud, waste, and abuse in calculation and application of States' budget neutrality limits under Section 1115 Medicaid waivers.'' As chairman of the full committee, those concerns remain.",
+    "We need to be good stewards for programs like Medicaid and to make sure that it is spending in a fiscally responsible manner and that we aren't just writing blank checks to States who can spend money how they choose.",
+    "Mr. Chair, I rise today in support of H.R. 2483, the SUPPORT for Patients and Communities Reauthorization Act.",
+    "We will put the bill on the President's desk, and I believe the President will sign the bill.",
+    "I don't think the answer is to say we believe in these programs, therefore we are not going to vote to reauthorize them because we don't believe they are going to be carried out.",
+    "I am committed to doing that, and I look forward to hopefully a bipartisan vote on this bill.",
+    "Madam Chair, I rise in opposition to the amendment."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOU",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOURCES AS AREA SOURCES UNDER...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgH2212-7.htm",
+   "sentences": [
+    "It was the ``once in, always in'' rule that penalized job creators and energy producers who took steps to invest in new technologies that lowered pollution.",
+    "If your emissions are at such a level you become a major source, once in under this rule that we are overturning today, you are always a major source, no matter what you do with your businesses.",
+    "If you lower emissions, if you lower standards, you put in new equipment, you do operating hours differently, you do whatever you can to lower your emissions, you can't go back to being an area source and regulated with a level of emissions.",
+    "We want lowered emissions, and we want to incentivize businesses to get there.",
+    "In the last Congress, I was proud to lead the legislation to overturn this burdensome regulation, which is a one-way ratchet that creates a disincentive for businesses to take steps to reduce their emissions.",
+    "I urge all of my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "In 1965, President Lyndon B. Johnson created the Medicaid program to protect low-income families, individuals who were disabled, and seniors.",
+    "Medicaid should not cover illegal immigrants, deceased, or duplicative beneficiaries or able-bodied adults without dependents who choose not to work.",
+    "When they say they are opposed to our bill, what they are really saying is that the 1.4 million illegal immigrants should be prioritized over U.S. citizens.",
+    "When they say they oppose our bill, what they are really saying is that people who aren't eligible for Medicaid should be prioritized over children, mothers, or people with disabilities for whom the program was intended.",
+    "House Republicans make no apologies for prioritizing Americans in need over illegal immigrants or other able-bodied beneficiaries who are choosing not to work.",
+    "Along with work requirements, our bill rolls back restrictive Biden- Harris era regulations, promotes transparency for pharmacy benefit managers, and increases seniors' access to medication.",
+    "Mr. Speaker, today I rise in support of the One Big Beautiful Bill Act, which includes a title from the Energy and Commerce Committee that unleashes American energy, promotes American innovation, and protects care for our most vulnerable Americans.",
+    "We are fighting for pregnant women and mothers.",
+    "We are fighting for individuals with disabilities, and we are fighting for seniors who need long-term care.",
+    "That is why I urge my colleagues to support this legislation as part of our effort."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CO",
+   "title": "PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CONTROL STANDARDS; ADVANCED CLEAN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1748.htm",
+   "sentences": [
+    "You have California doing mandates on having to buy electric cars or non-internal combustion engine cars.",
+    "I rise in strong support of the waivers before us today: H.J. Res. 87 by Representative James of Michigan; H.J. Res. 88, led by the vice chairman of the full committee, Representative Joyce of Pennsylvania; and H.J. Res. 89, led by Representative Obernolte of California.",
+    "This certainly fits right in it, and I urge my colleagues to reject these policies and support the underlying resolutions."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "title": "TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1644.htm",
+   "sentences": [
+    "I thank Congresswoman Dingell and Senator Cruz for their determination in combating this crisis of malicious, deepfake pornography.",
+    "It is time to send the TAKE IT DOWN Act to the President's desk so we can give survivors and law enforcement the tools they need to combat this crisis.",
+    "Mr. Speaker, I rise today in support of S. 146, the TAKE IT DOWN Act.",
+    "I urge my colleagues to vote in favor of this legislation."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF ENERGY EFFICIENCY AND RENEWABLE ENERGY, DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONS",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF ENERGY EFFICIENCY AND RENEWABLE ENERGY, DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1284-7.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to oppose this.",
+    "I don't have anything in my family business in any of these businesses, but I will tell you what we look at is do we get a return on investment and can we serve our customers better."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NATIONAL EMISSION STANDARDS FOR HAZARDOUS AIR POLL",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NATIONAL EMISSION STANDARDS FOR HAZARDOUS AIR POLLUTANTS: RUBBER TIRE MANUFACTURING\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH986.htm",
+   "sentences": [
+    "When finalizing the rule, the EPA stated the goal was to reduce emissions from hazardous air pollutants.",
+    "However, the rule also adds emissions limitations for total hydrocarbons.",
+    "In short, limiting hydrocarbons does not reduce emissions from hazardous air pollutants.",
+    "Use of RTOs will result in higher carbon dioxide emissions, as they require significant energy inputs to operate and maintain.",
+    "Mr. Speaker, let us be pragmatic and use common sense in our policymaking, and I urge my colleagues to join me in supporting H.J. Res. 61."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM FOR APPLIANCE STANDARDS: CERTIFIC",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM FOR APPLIANCE STANDARDS: CERTIFICATION REQUIREMENTS, LABELING...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH991.htm",
+   "sentences": [
+    "I will get down to the business in front of us.",
+    "I rise today in support of H.J. Res. 42 to repeal the Biden administration's burdensome and unnecessary certification, labeling, and enforcement provisions for 20 different products that American families and businesses rely on day in and day out.",
+    "I urge all of my colleagues to join me in supporting H.J. Res. 42.",
+    "We will miss our good friend from Texas, as I said, who I really got to know in the last 24 hours.",
+    "Mr. Speaker, I urge support of this resolution."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL G",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL GAS SYSTEMS: PROCEDURES FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH846.htm",
+   "sentences": [
+    "This resolution would overturn the rule implementing the EPA's waste emissions charge which was published following the 2024 Presidential election as part of the Methane Emissions Reduction Program established in the Inflation Reduction Act.",
+    "Energy produced in the United States has some of the lowest methane emissions intensity in the world.",
+    "U.S. upstream oil and gas producers have reduced their total methane emissions intensity by 42 percent since 2015.",
+    "We have our entrepreneurial spirit to thank for this success, not policies like the WEC, which are unworkable for American producers and will lead to our allies being forced to rely on gas with higher emissions coming from adversarial nations like Venezuela.",
+    "Mr. Speaker, I rise in support of H.J. Res. 35 to repeal the Biden- Harris administration's natural gas tax.",
+    "Mr. Speaker, I urge my colleagues to support this legislation that will enable us to enact President Trump's energy agenda and restore American energy dominance."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH520-3.htm",
+   "sentences": [
+    "What we know about these lethal substances is that they are largely created with chemicals sourced from China and trafficked into our country and communities by Mexican drug cartels.",
+    "Part of making this Nation safer and more secure is empowering law enforcement with the tools necessary to prosecute those who traffic this poison into our communities.",
+    "The HALT Fentanyl Act plays an important role in that objective by permanently placing fentanyl- related substances into schedule I of the Controlled Substances Act so law enforcement can crack down on drug traffickers.",
+    "Mr. Speaker, we are going to work on the SUPPORT Act, but the vote before us today that people are going to put their names to, a yes or no: Do we want to make illegal derivatives of fentanyl produced and conceived in China sent to Mexico and across our border to kill our people?",
+    "What the people in China do who send their recipes for fentanyl to Mexico to be manufactured and sent across the border is if they could slightly change the molecule just enough that it is no longer fentanyl, it is no longer scheduled.",
+    "Our police officers have to find it and get it tested.",
+    "What we need to do today, what we are going to put our name on and record our vote on, yes or no, is: Do we believe that derivatives of fentanyl that are being trafficked from China to Mexico across our border, do we believe that should be schedule I and give the tools to our law enforcement officers to fight it?",
+    "We have record treatment that has happened since the SUPPORT Act first passed, and we will work on it again this Congress.",
+    "That is what we are voting on today.",
+    "I urge my colleagues to vote ``yes'' on this bill.",
+    "Mr. Speaker, I rise in opposition to the amendment.",
+    "Mr. Speaker, I urge the defeat of this amendment and support the underlying bill."
+   ]
+  }
+ ]
+}

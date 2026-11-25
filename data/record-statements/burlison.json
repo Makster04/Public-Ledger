@@ -1,0 +1,148 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "burlison",
+ "name": "Eric Burlison",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 11,
+  "sentences": 37
+ },
+ "statements": [
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING FEDERAL PURCHASING EFFICIENCY ACT",
+   "title": "ENSURING FEDERAL PURCHASING EFFICIENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4656-2.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 7283) to amend title 41, United States Code, to amend the time period for certain acquisition-related dollar thresholds.",
+    "The Federal Acquisition Regulatory Council is required to adjust certain dollar thresholds, such as the simplified acquisition threshold, every 5 years."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VALUE OVER COST ACT OF 2026",
+   "title": "VALUE OVER COST ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4656.htm",
+   "sentences": [
+    "Mr. Speaker, I support the Value Over Cost Act, H.R. 1118, which modernizes the General Services Administration's governmentwide Multiple Award Schedule program.",
+    "Mr. Speaker, I thank Representatives Byron Donalds and Jared Moskowitz for their leadership on this issue, and I urge my colleagues to support this targeted government efficiency bill."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP SECRET SPENDING ACT OF 2025",
+   "title": "STOP SECRET SPENDING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4657.htm",
+   "sentences": [
+    "The Federal Funding Accountability and Transparency Act, as later amended by the DATA Act of 2014, established USAspending.gov, a public database of all government spending.",
+    "It is critical that government spending is transparent to the American people so that they can be assured that agencies are appropriately using their hard-earned tax dollars.",
+    "OTAs are not subject to certain Federal acquisition laws and requirements and, most importantly, are not required to be reported to USAspending.gov under current law.",
+    "To be clear, the DATA Act of 2014 intended for all Federal spending to be captured on USAspending.gov.",
+    "Madam Speaker, I urge my colleagues to support this important governmentwide Federal spending transparency reform bill that will help the public and Congress understand exactly how Federal agencies are using the very limited tax dollars that we have, and I yield back the balance of my time.",
+    "Madam Speaker, I support this bill, H.R. 2069, the Stop Secret Spending Act of 2025, which requires Federal agencies to report complete and accurate information to USAspending.gov."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL IMPROVEMENT IN TECHNOLOGY PROCUREMENT ACT",
+   "title": "FEDERAL IMPROVEMENT IN TECHNOLOGY PROCUREMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4659.htm",
+   "sentences": [
+    "The legislation focuses on reducing unnecessary administrative burdens, improving coordination across agencies, and strengthening the acquisition workforce through better training and clearer guidance.",
+    "To improve workforce capability, the bill requires the Director of Federal Acquisition Institute to develop and implement cross-functional information and communications technology training for acquisition professionals.",
+    "It raises the micro- purchase threshold from $10,000 to $25,000 and the simplified acquisition threshold from $250,000 to $500,000.",
+    "Raising this threshold alone is estimated to save more than $40 million annually while allowing contracting officers to focus on larger, higher-risk acquisitions where oversight matters the most.",
+    "Increasing the simplified acquisition threshold further reduces administrative costs and improves economic efficiency for small businesses that are competing for Federal contracts.",
+    "Taken together, these reforms streamline procurement, reduce wasteful spending, and improve accountability without expanding government or creating new bureaucracy, ultimately leading to disciplined acquisition practices and real savings for the American taxpayer.",
+    "Madam Speaker, I rise today in support of my bill, the FIT Procurement Act."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL RELOCATION PAYMENT IMPROVEMENT ACT",
+   "title": "FEDERAL RELOCATION PAYMENT IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4661.htm",
+   "sentences": [
+    "Fortunately, there is a tested alternative to the current system, as demonstrated by agencies such as the Fish and Wildlife Service and Customs and Border Protection in a recent pilot program.",
+    "Madam Speaker, I thank my colleague for offering this legislation, and I urge my colleagues to vote in favor.",
+    "Madam Speaker, I urge my colleagues to support this important governmentwide reform bill that will save hundreds of millions of dollars while improving the lives of the Federal workforce."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BILLION DOLLAR BOONDOGGLE ACT",
+   "title": "BILLION DOLLAR BOONDOGGLE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4663.htm",
+   "sentences": [
+    "Madam Speaker, I urge my colleagues to support this important bipartisan and bicameral government reform bill that will ensure the necessary oversight of the over-budget and behind-schedule Federal projects that take place."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPANDING WHISTLEBLOWER PROTECTIONS FOR CONTRACTORS ACT OF 2026",
+   "title": "EXPANDING WHISTLEBLOWER PROTECTIONS FOR CONTRACTORS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4664.htm",
+   "sentences": [
+    "Madam Speaker, I move to suspend the rules and pass the bill (H.R. 5578) to ensure that whistleblowers, including contractors, are protected from retaliation when a Federal employee orders a reprisal, and for other purposes, as amended.",
+    "However, contractors with the Federal Government have different whistleblower protections than typical government employees.",
+    "The Department of Housing and Urban Development Office of the Inspector General found that a lack of whistleblower protections for contractors discouraged them from coming forward.",
+    "The Expanding Whistleblower Protections for Contractors Act would address this by strengthening whistleblower protections for Federal contractors by prohibiting reprisals for certain actions.",
+    "Madam Speaker, I urge my colleagues to support this important whistleblower reform bill, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMART SPACE ACT OF 2026",
+   "title": "SMART SPACE ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2650.htm",
+   "sentences": [
+    "The Smart Space Act requires the General Services Administration to convene real estate experts to identify alternative financing solutions for acquisition of or disposal of Federal properties through leveraging public-private partnership.",
+    "Mr. Speaker, I rise today to support my bill, the Smart Space Act of 2026, legislation that modernizes how the Federal Government manages its real estate portfolio.",
+    "Mr. Speaker, I thank Chairman Graves for his leadership and commitment to advancing this legislation, and I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE FOR DEPUTIES MICHAEL HISLOPE AND GABRIEL RAMIREZ",
+   "title": "MOMENT OF SILENCE FOR DEPUTIES MICHAEL HISLOPE AND GABRIEL RAMIREZ",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2308-4.htm",
+   "sentences": [
+    "Deputy Ramirez was murdered during a traffic stop while doing what law enforcement officers across this country do every day: protecting the public and enforcing the law.",
+    "Please join me in praying for their families, the injured officers, and the entire law enforcement community as they carry this profound loss on their hearts."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "Mr. Chairman, I rise today in support of this amendment that ends Federal funding for the National Endowment for Democracy, a program that Elon Musk, while leading DOGE, publicly said was a scam, that it was rife with corruption and an evil organization that should be dissolved."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "This bold legislation delivers a long-overdue blow to the radical environmental agenda that has weaponized the Clean Water Act, paving the way for critical infrastructure projects to move forward and be free from the regulatory shackles imposed by this Washington swamp.",
+    "My Judicial Review Timeline Clarity Act, which is included in this vital permitting reform package, establishes a strict 60-day window to challenge section 404 permits once the Army Corps of Engineers grants authorization.",
+    "Section 404 of the Clean Water Act exists to safeguard our waters, not empower radical environmentalists to harass hardworking Americans with legal hurdles years after permits are granted.",
+    "Mr. Chair, I rise today in support of the PERMIT Act introduced by my good friend and chairman of the Water Resources and Environment Subcommittee, Congressman Mike Collins.",
+    "Mr. Chair, I commend Chairman Graves and Subcommittee Chairman Collins for their leadership in advancing this pro-growth, America First legislation, and I urge my colleagues to support this bill."
+   ]
+  }
+ ]
+}

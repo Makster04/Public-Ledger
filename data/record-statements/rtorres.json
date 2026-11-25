@@ -1,0 +1,55 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rtorres",
+ "name": "Ritchie Torres",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2026-08-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE LIFE AND LEGACY OF VICTOR BACH",
+   "title": "THE LIFE AND LEGACY OF VICTOR BACH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-27/html/CREC-2026-08-27-pt1-PgE812.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to honor the life and legacy of Victor Bach, a pioneering housing advocate, researcher, educator, and tireless champion for New Yorkers who spent his life fighting for affordable housing, stronger public housing, and economic justice.",
+    "Beginning in 1983, Mr. Bach spent approximately four decades directing housing research and advocacy at the Community Service Society, where he became one of New York City's most respected and influential voices on affordable housing.",
+    "Throughout his career, Mr. Bach produced groundbreaking research on homelessness, housing affordability, rent burdens, and the challenges facing low-income New Yorkers.",
+    "For decades, Victor Bach reminded policymakers that affordable housing is not simply a matter of bricks and mortar.",
+    "This message carries particular significance in the Bronx and throughout New York City, where working families, seniors, and low- income residents continue to confront extraordinary housing costs and persistent threats of displacement.",
+    "The fight for affordable housing that Victor Bach championed remains as urgent today as ever.",
+    "His work strengthened the movement for affordable housing and gave a stronger voice to those too often left out of policy discussions."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SETTING CONSUMER STANDARDS FOR LITHIUM-ION BATTERIES ACT",
+   "title": "SETTING CONSUMER STANDARDS FOR LITHIUM-ION BATTERIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1637.htm",
+   "sentences": [
+    "Since 2021, micromobility devices using high energy density batteries have been linked to hundreds of fires and dozens of fatalities, including the deaths of multiple children.",
+    "As organizations committed to the build-out of electric charging infrastructure in New York City, we support H.R. 973--the Setting Consumer Standards for Lithium-Ion Batteries Act.",
+    "Rechargeable, personal vehicles present a great opportunity to expand transportation alternatives, but their adoption must be met with safety precautions in mind.",
+    "By requiring the adoption of well-established voluntary standards like UL 2271, UL 2849, and UL 2272, H.R. 973 ensures a strong federal framework to protect consumers and workers.",
+    "Mr. Speaker, I rise in strong support of my bipartisan bill titled the Setting Consumer Standards for Lithium-Ion Batteries Act.",
+    "I urge my colleagues to support this legislation.",
+    "We support this bipartisan product safety legislation, which would ensure that the Consumer Product Safety Commission (CPSC) can set federal safety standards for micromobility devices, such as e-bikes, e-scooters, and hoverboards, in a timely manner.",
+    "We are committed to keeping our communities safe, which is why we strongly support H.R. 973, which will keep unsafe batteries off of the market."
+   ]
+  }
+ ]
+}

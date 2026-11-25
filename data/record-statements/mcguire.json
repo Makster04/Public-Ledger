@@ -1,0 +1,182 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mcguire",
+ "name": "John J. McGuire III",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 11,
+  "sentences": 71
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "This bill supercharges our industrial base and builds on last year's acquisition reforms.",
+    "For Virginia's Fifth District, this bill unleashes local expertise in munitions manufacturing and next-generation nuclear power.",
+    "Mr. Chairman, I rise in support of this historic National Defense Authorization Act.",
+    "Mr. Chairman, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt1-PgH2782-8.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 7084, the Defending American Property Abroad Act of 2026.",
+    "I am proud to support H.R. 7084, which ensures that there are real consequences when American property is seized abroad.",
+    "Mr. Speaker, I urge all of my colleagues to vote in favor of this bill and show the world that America stands firmly behind its workers, businesses, and investments at home and abroad."
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKE THE DISTRICT OF COLUMBIA SAFE AND BEAUTIFUL ACT OF 2025",
+   "title": "MAKE THE DISTRICT OF COLUMBIA SAFE AND BEAUTIFUL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgH2698-3.htm",
+   "sentences": [
+    "Specifically, we show that D.C. leadership pressured and, at times, directed police commanders to manipulate crime data in order to maintain the appearance of low crime in the Nation's Capital.",
+    "Unfortunately, years of soft-on-crime policies have turned Washington, D.C., into a city with high crime rates, rampant homelessness, and graffiti on historic buildings and monuments.",
+    "Mr. Speaker, H.R. 5103 establishes the District of Columbia Safe and Beautiful Commission, made up of key Federal law enforcement and other Federal partners, to focus on ensuring the safety of District residents and visitors through full enforcement of Federal and local laws in the District.",
+    "Now, as I have been in Congress for 14 months, I have been around the District of Columbia talking with law enforcement and people that have lived here for years.",
+    "I ran into a young woman, who went into a Subway, and a homeless woman said: Let me get the door for you.",
+    "So the homeless woman opened the door.",
+    "It seems like the policies coming out of the D.C. Council indicate to the American citizens visiting and living here that police are bad, criminals are good, and nobody cares about the victim.",
+    "What they see in The National Mall, the memorials, in our parks, and transit quarters shapes their pride and our shared heritage.",
+    "When people visit D.C., they should feel safe while taking in the scenery and historic landmarks, not scared to walk two blocks because of the crime or confronted with a homeless encampment while walking on The National Mall.",
+    "Metropolitan Police Department of the District of Columbia Chief Pamela Smith actually resigned immediately following the release of the Oversight Committee's report.",
+    "This pressure demoralized the D.C. Metropolitan Police Department making the city less safe.",
+    "My bill, H.R. 5103, facilitates the deployment of more robust Federal law enforcement presence in D.C. in coordination with local law enforcement, providing vital support to ensure that both Federal and local laws are being followed to keep D.C. safe.",
+    "Now, sanctuary cities are sanctuaries for criminals.",
+    "If you are a criminal, would you rather go to a city where local and Federal police authorities cooperate, communicate, and work as a team, or would you rather go to one where they don't work as a team?",
+    "On the concealed carry permit aspect of the bill, D.C. has some of the most complicated and strict gun laws in the country.",
+    "Law-abiding residents who wish to protect themselves and their loved ones are forced to wait 4 months on average for a concealed carry permit appointment.",
+    "This is unacceptable and, frankly, infringes on their Second Amendment rights, which are enshrined in our founding documents.",
+    "My bill establishes the District of Columbia Safe and Beautiful Commission which will collaborate with appropriate local government entities to speed up and reduce the cost of D.C.'s concealed carry permit process.",
+    "Streamlining concealed carry permits will decrease crime by allowing law-abiding citizens to better protect themselves and their families.",
+    "We talked about the D.C. Metropolitan Police Department.",
+    "We are ensuring that they cooperate, communicate, and work as a team, and they will be less attracted to D.C. Mayor Bowser herself stated that she appreciated the surge of Federal law enforcement officers as it enhanced the Metropolitan Police Department's law enforcement efforts.",
+    "My bill will ensure coordination between Federal and local law enforcement continues, providing local police the additional Federal resources and personnel they need to combat crime in the District.",
+    "Again, on the concealed carry permit, nowhere in the United States do you have to wait 4 months, Mr. Speaker.",
+    "That is an infringement on our Second Amendment, for whatever excuse they have.",
+    "Mr. Speaker, I support the Make the District of Columbia Safe and Beautiful Act of 2025, which codifies core components of President Trump's Executive Order No. 14252 titled: ``Making the District of Columbia Safe and Beautiful.'' Our Nation's Capital is a direct reflection of our great country and should be a symbol of pride for the American people and a safe and beautiful location for all who reside and visit.",
+    "Key Federal and local leaders will be tasked--I will repeat that one."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WINTERGREEN EMERGENCY EGRESS ACT",
+   "title": "WINTERGREEN EMERGENCY EGRESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2347-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of my bill, H.R. 6365, the Wintergreen Emergency Egress Act.",
+    "I thank Chairman Westerman for his friendship and leadership in helping me address this important issue for my district, and I urge all of my colleagues to vote in favor of H.R. 6365."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTRIC SUPPLY CHAIN ACT",
+   "title": "ELECTRIC SUPPLY CHAIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5528.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of my amendment, H.R. 3638, which adds essential language to address the threat posed by foreign entities of concern seeking to disrupt supply chains and undermine United States leadership in artificial intelligence development.",
+    "The United States is in a race with the Chinese Communist Party to be the global leader in the development and deployment of artificial intelligence.",
+    "Our Nation has already faced significant challenges in scaling artificial intelligence infrastructure.",
+    "Disruptions to the artificial intelligence supply chain will not just weaken our country in our race against China but will have a significant, negative impact on our economy, our ability to defend ourselves, and our capacity to innovate.",
+    "This amendment recognizes that protecting the artificial intelligence supply chain is both a defensive measure and a strategic investment in our infrastructure.",
+    "Establishing periodic assessments of vulnerabilities in the artificial intelligence supply chain that foreign entities of concern could exploit helps ensure our country maintains stable access to necessary components, boosting domestic manufacturing and innovation.",
+    "Any disruption threatens not only our progress but also our national security, our economic strength, and our global position in the artificial intelligence race.",
+    "This amendment strengthens our ability to safeguard America's advancements in artificial intelligence by ensuring we identify, monitor, and address vulnerabilities that foreign adversaries could exploit to the detriment of our national interests.",
+    "It reinforces our commitment to securing the technologies that will define the next century and ensures the United States remains the world leader in artificial intelligence.",
+    "The Department of Energy is adequately staffed by very bright and talented individuals who have the capacity to monitor vulnerabilities in our supply chain that the Chinese Communist Party or other foreign adversaries could exploit to halt our progress in the artificial intelligence sphere.",
+    "The United States is in a race with the Chinese Communist Party to be the global leader in the development and deployment of artificial intelligence and other capabilities such as quantum computers.",
+    "Any vulnerabilities in our supply chain that our adversaries can exploit not only threaten our global standing in the artificial intelligence space, but it also threatens our national security.",
+    "I, again, encourage adoption of this amendment.",
+    "We cannot allow foreign manipulation or interference to add to these challenges."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "Since the end of the Cold War, the United States' defense industrial base has severely atrophied, and the Pentagon's overburdensome and bureaucratic acquisition process hasn't kept up with the speed needed to procure and field the cutting edge technology.",
+    "As we have seen from conflicts in Ukraine and the Middle East, our adversaries are not wasting time innovating and changing the face of modern warfare."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "It eliminates over $700 billion in wasteful Medicaid spending for illegal aliens and people who can work but refuse to work, instead of America's most vulnerable.",
+    "Mr. Speaker, I urge all of my colleagues to vote ``yes'' on this historic piece of legislation."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "These are impactful tax cuts, reducing Social Security taxes, eliminating taxes on tips, and eliminating taxes on overtime will help the middle-class American people.",
+    "Over 8,000 family-owned farms would have their death tax exemption slashed in half."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2240, IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT; PROVIDING FOR CONSIDERATION OF H.R. 2243, LEOSA RE",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2240, IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT; PROVIDING FOR CONSIDERATION OF H.R. 2243, LEOSA REFORM ACT; AND PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2014-10.htm",
+   "sentences": [
+    "Since 2020 respect for law enforcement around our country has been on the decline, and we have seen the effects this has had in our communities.",
+    "They have the strictest gun laws and the most gun violence by criminals who don't care about gun laws.",
+    "We need more good guys with guns on the street, mostly because Biden's open-border policy brought more illegal criminals into our country who are robbing, raping, and killing the American people.",
+    "If we entrust law enforcement officers to uphold the laws of our Nation and risk their lives daily, then we should be able to entrust them to carry their weapons unrestricted off duty and to purchase their former service weapons.",
+    "Like many of my colleagues, I agree that we would not have a nation without those we entrust in uniform, whether they serve in the military, as first responders, or as law enforcement officers.",
+    "If we want to see safer streets and communities in our country, then we must ensure that we give law enforcement every tool possible so that they can make it through the day and return home safely.",
+    "Mr. Speaker, I rise in support of the rule and the three bills it provides consideration for."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELIEF FOR VIRGINIA'S FARMERS AND LOGGERS",
+   "title": "RELIEF FOR VIRGINIA'S FARMERS AND LOGGERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH844-6.htm",
+   "sentences": [
+    "Last week, I introduced my first bill as a Member of this body.",
+    "I introduced the Agricultural and Forestry Hauling Efficiency Act.",
+    "I am proud that the first bill that I introduced in Congress is very important not only for my district but for the rest of the Commonwealth."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VIRGINIA IS A BORDER STATE",
+   "title": "VIRGINIA IS A BORDER STATE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH172.htm",
+   "sentences": [
+    "Virginia, thousands of miles from the border, is a border State.",
+    "Every county, city, and town is a border county, city, and town under the current administration.",
+    "Last week, I voted on my first bill, the Laken Riley Act.",
+    "Illegal aliens are robbing, sexually assaulting, and murdering American citizens.",
+    "This bill detains illegal immigrants who commit additional crimes, like theft, until they get deported.",
+    "I was proud to vote in favor of this legislation introduced by my good friend, the gentleman from Georgia (Mr. Collins), who is empowering law enforcement to do their job. ____________________"
+   ]
+  }
+ ]
+}

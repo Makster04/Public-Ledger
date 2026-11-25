@@ -1,0 +1,57 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mgp",
+ "name": "Marie Gluesenkamp Perez",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 18
+ },
+ "statements": [
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "That is what has happened through a lack of respect and regard for people who actually work in childcare, through, candidly, an establishment that is so old that they don't have kids in daycare or so rich that they had nannies instead of ordinary daycare.",
+    "Let's post these on a website somewhere, and let's say that States who are taking money for childcare will not negatively impact the licenses of daycare centers based on their provision of these foods to children given a handwashing sink is available.",
+    "We need to bring down the cost of childcare, and that is what this legislation does.",
+    "Mr. Chairman, I think we all agree that childcare is underfunded.",
+    "Mr. Chair, today I rise in support of my amendment to direct the Secretary of Agriculture, in coordination with the Secretary of Health and Human Services, to develop a low-risk classification for healthy fresh fruits and vegetables and other fruits that are typically consumed raw."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "title": "RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4692-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today with humility, fear, and conviction, conviction that American citizens have a right to choose their elected Representatives, fear that my convictions will be dismissed as naive, and humility that I am as liable to deceive myself about my first duties, where my strength comes from, and to whom I owe my loyalty as anyone else on this floor today.",
+    "I am asking the body to consider a set of facts laid before us tonight about how he chose his successor and deprived Americans the right to choose their elected Representative.",
+    "Mr. Speaker, true love persists in a confidence, not in your supremacy in making a choice for your voters, but in your service and humility that they have the right to choose.",
+    "It is long work to remain committed to the primacy of Americans' right to choose their elected representatives.",
+    "The question is: Do you have the right to choose your successor?",
+    "We do not dutifully serve the long work of building a self-determining country by turning our constituents into petitioners who would only demand free things from us, a relief from this pressure of the consolidation of corporate power.",
+    "I would argue that there is a very loud demand, a fervent, clear call by Americans right now for accountability and transparency, and it is not just about the Epstein files.",
+    "Nothing gives him the right to choose his successor."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING GRATITUDE FOR THE FBI INVESTIGATION IN KELSO",
+   "title": "EXPRESSING GRATITUDE FOR THE FBI INVESTIGATION IN KELSO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2573-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to express my profound and deep gratitude to the Kelso Police Department, the FBI, and Columbia County Sheriff's Office.",
+    "An investigation was immediately launched in coordination with local partners, and law enforcement was able to identify the teenage suspect the next day.",
+    "During the investigation, law enforcement had discovered the suspect had shared heinous, detailed plans for a mass shooting in online chat rooms and had the intent and means to carry out a horrific attack.",
+    "I think it is incredibly important that we pause and recognize the skill, dedication, intelligence, and the bravery that these officers and law enforcement agents exemplified in preventing what would have been a horrifying event.",
+    "After assaulting the man who found them with both a hammer and a knife, they fled with about $14,000 worth of stolen military equipment and weapons."
+   ]
+  }
+ ]
+}

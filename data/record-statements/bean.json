@@ -1,0 +1,327 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bean",
+ "name": "Aaron Bean",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 26,
+  "sentences": 81
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SALUTING OUR VETERANS",
+   "title": "SALUTING OUR VETERANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6173.htm",
+   "sentences": [
+    "Mr. Speaker, before the sun rose over Normandy, before the snow fell in Korea, before the jungles of Vietnam echoed with the sound of battle, and before America answered the call on the attacks of 9/11, there were Americans who stepped forward, raised their right hands, and said, ``I will serve.'' On Veterans Day we honor the brave men and women who answered our Nation's call and defended the freedoms we hold dear."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "title": "PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3805.htm",
+   "sentences": [
+    "Taking care of our most vulnerable citizens is what a civilized society does, and it is why Congress created TANF, Temporary Assistance for Needy Families.",
+    "TANF is just that, temporary assistance for the most needy among us.",
+    "My question for this body is, should we ever have to worry about the States using TANF dollars for any program other than TANF?",
+    "It seems we do have to worry about States using TANF dollars for other than TANF recipients.",
+    "The crown gem offender, Madam Speaker, is a State, which will remain nameless today, that has built a sports stadium with TANF dollars.",
+    "It is not what TANF was intended to do, nor is it the creative, cooperative partnership that was intended by working with the States.",
+    "That is why I have sponsored a bill with Claudia Tenney from the great State of New York to create TANF dollars as a general revenue targeted specifically to the neediest among us and not as a revenue slush fund for these States.",
+    "I am proud to be an original cosponsor of this bill, H.R. 8872, the Preventing Waste, Fraud, and Abuse in TANF Act, which includes many reforms, but this one right here, States, we have to trust them with the money given.",
+    "Madam Speaker, I remind everybody in this room that every TANF family is different, but the typical TANF family is a single mom.",
+    "I urge my colleagues to join me, to join everybody, in voting ``yes'' for TANF reform so that we can help the neediest among us."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BACK THE BLUE",
+   "title": "BACK THE BLUE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3510-2.htm",
+   "sentences": [
+    "It is called the police, Mr. Speaker.",
+    "During National Police Week, I appreciate our officers, deputies, troopers, and the entire law enforcement family who put their lives on the line every day to protect others.",
+    "But for our police, it is just part of the job.",
+    "I will always back the blue, Mr. Speaker. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "With the Working Families Tax Cut Act, we turned the wheel.",
+    "No tax on tips, no tax on overtime, a new deduction for Social Security benefits, a new deduction for auto loan interest on American- made vehicles, a new higher standard deduction, a stronger tax credit, all of these mean the same thing, Mr. Speaker: More take-home pay, more breathing room, and more opportunities for the families who make this country work and the families who pay the bills.",
+    "The Working Families Tax Cut Act is real relief for real people: parents juggling rising costs, workers picking up extra shifts, and seniors who spent a lifetime paying in and deserve to keep a little bit more of what they have earned."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESERVING THE PAST FOR THE FUTURE IN NASSAU COUNTY, FLORIDA",
+   "title": "PRESERVING THE PAST FOR THE FUTURE IN NASSAU COUNTY, FLORIDA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2637-2.htm",
+   "sentences": [
+    "Together, these students developed TruthSnap, a mobile app that uses--get this--artificial intelligence to instantly verify the accuracy of any video content--and here is the kicker--without the users having to leave the platform they are already on."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the SAVE America Act, to show an ID before you cast your ballot.",
+    "I don't think it is too much to ask that we show an ID to restore election integrity.",
+    "Let's pass the SAVE America Act now, and let's save voter integrity and voter elections right now."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGHLIGHTING REPUBLICAN SUCCESSES IN 2025",
+   "title": "HIGHLIGHTING REPUBLICAN SUCCESSES IN 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1159-6.htm",
+   "sentences": [
+    "It starts with tax relief for American families with the working families tax cut.",
+    "With the new deduction, you are not going to pay any tax on Social Security benefits.",
+    "We have restored law and order and brought accountability by securing the border, supporting law enforcement, strengthening the rule of law, shrinking the Federal bureaucracy, cutting wasteful spending, and demanding accountability for every taxpayer dollar.",
+    "Finally, we have brought transparency and common sense back to our institutions, dismantling DEI mandates, and restoring fairness, merit, and basic common sense.",
+    "The best days of our Nation are still ahead, and together, we will make America stronger, safer, and greater than ever before."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENDING IMPROPER PAYMENTS TO DECEASED PEOPLE ACT",
+   "title": "ENDING IMPROPER PAYMENTS TO DECEASED PEOPLE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH634.htm",
+   "sentences": [
+    "As founder and co-chair of the DOGE Caucus, I am proud to support the Ending Improper Payments to Deceased People Act.",
+    "Madam Speaker, this bill is a big step toward accountability, and I urge my colleagues on all sides of the aisle to join me in supporting this vital antifraud, antiwaste, antiabuse legislation."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "Such is the case with ObamaCare.",
+    "Mr. Speaker, we all remember those promises made when Obama signed the Affordable Care Act into law.",
+    "It is also not true the promise made that this ObamaCare will bend the cost curve for healthcare downward.",
+    "Premiums for the average ObamaCare plan have skyrocketed much higher than traditional inflation leaving patients with higher costs and fewer choices.",
+    "If Americans are just tuning in to C-SPAN, you might assume that Republicans are eliminating the Affordable Care Act or ObamaCare altogether.",
+    "The premium tax credits were developed during COVID to subsidize Americans making more than 400 percent of the Federal poverty level, including those making up to $600,000.",
+    "In northeast Florida, we call people making $600,000 rich, and that is who we are subsidizing with these premium tax credits.",
+    "We made these premium tax credits during COVID.",
+    "ObamaCare will continue for those who need it.",
+    "To call this, and I have heard it said a couple of times already, a Republican healthcare crisis is fake news.",
+    "Mr. Speaker, I urge everybody, the right answer is to vote ``no'' on extending these horrible tax credits."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "In 2020, Florida became the third State, joining Michigan and New Jersey, to implement and run a Clean Water Act section 404 Permitting program."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPARENCY IN REPORTING OF ADVERSARIAL CONTRIBUTIONS TO EDUCATION ACT",
+   "title": "TRANSPARENCY IN REPORTING OF ADVERSARIAL CONTRIBUTIONS TO EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5007.htm",
+   "sentences": [
+    "This is particularly true for China, whose strategy is to gain a foothold in America's educational system to steal personal data and to manipulate the material children are being taught.",
+    "Millions of dollars of Chinese funds have flowed into America's K-12 classrooms where students are subject to Chinese Communist Party propaganda under the guise of Chinese language and culture programming.",
+    "In fact, a recent Parents Defending Education investigation found that 143 schools across 34 States hosted a Confucius classroom or otherwise had ties to the Chinese Communist Party.",
+    "Classroom maps where they funded omitted Israel and instead labeled it Palestine.",
+    "We cannot allow our students, the future of our great Nation, to be corrupted by foreign adversaries who are systematically and aggressively attempting to influence our Nation's K-12 schools."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SKYROCKETING COST OF HEALTHCARE",
+   "title": "SKYROCKETING COST OF HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4881-7.htm",
+   "sentences": [
+    "When President Obama signed the Affordable Care Act, he promised affordable coverage for all."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SKYROCKETING COST OF HEALTHCARE",
+   "title": "SKYROCKETING COST OF HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4851-5.htm",
+   "sentences": [
+    "When President Obama signed the Affordable Care Act, he promised affordable coverage for all."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL PRISONER OF WAR/MISSING IN ACTION RECOGNITION DAY",
+   "title": "NATIONAL PRISONER OF WAR/MISSING IN ACTION RECOGNITION DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4422-8.htm",
+   "sentences": [
+    "That is why I have introduced legislation to designate the POW/MIA Memorial Museum at Cecil Field in northeast Florida, just outside of Jacksonville, as a national landmark."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAUNCHING GOLDEN AGE OF AMERICA",
+   "title": "LAUNCHING GOLDEN AGE OF AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3902.htm",
+   "sentences": [
+    "Some say it should be called the strengthening Medicaid bill because it protects Medicaid for those who really need it most, pregnant women, children, seniors, people with disabilities, and low- income families, by eliminating waste, fraud, and abuse.",
+    "Mr. Speaker, I can't deny that a crowd favorite is calling it the working families tax cut bill because it delivers the largest tax cut in American history.",
+    "It puts money back in the pockets of people who need it most: people who rely on tips and overtime and people living on Social Security."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING PAWS IN MOTION",
+   "title": "SUPPORTING PAWS IN MOTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3481.htm",
+   "sentences": [
+    "I am talking about canines and horses that serve our law enforcement officers on the front line every single day.",
+    "From narcotics detection to crowd control, search and rescue to border patrol, these animals are more than sidekicks.",
+    "Under my legislation, the Federal penalty will be up to 15 years when someone uses a deadly weapon to harm a Federal police animal.",
+    "In addition, this legislation will expand the Federal statute to apply to any State, county, or local police animal assisting a Federal agency.",
+    "Last year, 21 police canines made the ultimate sacrifice in the line of duty, including K9 Leo of Marion County, Florida, who the bill is named after and who is pictured right beside me.",
+    "That is why, today, I am introducing the Leo K9 Protection Act, a straightforward bill to strengthen the penalties for those who assault or injure these animals in the line of duty.",
+    "Mr. Speaker, I urge my colleagues to support this critical legislation. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3451-4.htm",
+   "sentences": [
+    "As founder of the DOGE Caucus, I am proud to say that, with this rescissions package, the first of its kind in 25 years, we are taking one small step to cut wasteful spending but one giant leap toward fiscal sanity.",
+    "We are still $37 trillion in debt.",
+    "Here is my challenge to the White House: Let's do a rescissions package every month because America has had enough--enough to wasteful spending, enough to out-of-control deficits.",
+    "This year alone, we will run a $1.7 trillion deficit."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BUZZ FROM BREAK ROOMS TO BACKYARDS",
+   "title": "BUZZ FROM BREAK ROOMS TO BACKYARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2981.htm",
+   "sentences": [
+    "The One Big Beautiful Bill Act is about boosting wages, backing small businesses, bolstering border security, and it brings tax relief."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025",
+   "title": "RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+   "sentences": [
+    "H.R. 4, the Rescissions Act of 2025, cuts unnecessary spending and ensures tax dollars are not wasted on reckless foreign aid.",
+    "There will be no more tax dollars to fund DEI programs in Serbia.",
+    "There will be no more taxes to fund DEI musicals in Ireland and no more tax dollars to fund electric vehicles in Vietnam."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCOUNTABILITY AND TRANSPARENCY IN GOVERNMENT",
+   "title": "ACCOUNTABILITY AND TRANSPARENCY IN GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2811-3.htm",
+   "sentences": [
+    "If only, Mr. Speaker, there was a bill to require the Department of the Treasury to ensure accuracy and eligibility in Federal spending.",
+    "I urge all my colleagues to join me, and I am saving a cosponsorship for each of them."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "It secures our border and enhances education and health savings options."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TOWN OF HILLIARD REMEMBERS OUR VIETNAM VETERANS",
+   "title": "TOWN OF HILLIARD REMEMBERS OUR VIETNAM VETERANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgE311-4.htm",
+   "sentences": [
+    "Mr. Speaker, we will never be able to repay our debt to those who have given their last measure of devotion for the spirit of America."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "We are here because this previous administration, the Biden administration, imported 10 to 15 million illegal aliens who have come here and we have evidence that they are participating in our elections.",
+    "The next thing you will say is: Did they get Social Security numbers?",
+    "The DOGE team just announced millions of illegals now have Social Security numbers.",
+    "It is happening, and it ends today when we vote on the SAVE Act.",
+    "The right answer on the SAVE Act is a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SALUTING VIETNAM VETERANS",
+   "title": "SALUTING VIETNAM VETERANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1318.htm",
+   "sentences": [
+    "Mr. Speaker, we may never be able to repay our debt to those who have given the last measure of devotion for the spirit of America, but we can continue to do our duty to remember."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING YOUR MONEY WHERE YOUR MOUTH IS",
+   "title": "PUTTING YOUR MONEY WHERE YOUR MOUTH IS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH892-4.htm",
+   "sentences": [
+    "Now, as a result, our national debt is a staggering $36 trillion and growing every day.",
+    "Mr. Speaker, I am willing to put my money where my mouth is, and that is why I have introduced the Put Your Money Where Your Mouth Is Act to reduce congressional office budgets by $100,000, just a paltry 5.2 percent."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "Mr. Speaker, standing up to the Chinese Communist Party is a no- brainer, and standing up to Communist China means standing with Taiwan.",
+    "Mr. Speaker, I urge my colleagues to stand with me and support my friend from Missouri, Chairman Jason Smith, and his timely bill to strengthen our economic ties with Taiwan and empower Americans doing business in the country."
+   ]
+  }
+ ]
+}

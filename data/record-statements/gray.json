@@ -1,0 +1,31 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "gray",
+ "name": "Adam Gray",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 1,
+  "sentences": 10
+ },
+ "statements": [
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH781-3.htm",
+   "sentences": [
+    "In fact, some of my Republican colleagues, led by Congressman Tony Gonzales, wrote in a letter to Speaker Johnson that the proposed cuts to Medicaid within this budget would have serious consequences, particularly in rural and Hispanic communities where hospitals and nursing homes are already struggling to keep their doors open.",
+    "Over 450,000 people in my congressional district rely on Medicaid for their health coverage.",
+    "These proposed cuts to Medicaid only stand to worsen the crisis.",
+    "These cuts wouldn't just impact individuals covered by Medicaid.",
+    "In my congressional district, 59 percent of individuals are covered by California's Medicaid program.",
+    "That means that doctors and hospitals in my district rely on Medicaid for nearly two-thirds of their revenue.",
+    "This proposal would steal from the poor to give to the rich.",
+    "My amendment to the proposed budget would prevent consideration of any legislation that would result in cuts to Medicaid in order to provide such tax cuts.",
+    "To my Republican colleagues who agreed that we must protect Medicaid, I hope they will join me in support of this amendment should I have the opportunity to offer it here.",
+    "I urge my colleagues to oppose the previous question and support this amendment."
+   ]
+  }
+ ]
+}

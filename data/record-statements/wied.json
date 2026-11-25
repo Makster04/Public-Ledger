@@ -1,0 +1,116 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "wied",
+ "name": "Tony Wied",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 32
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CYBERSECURITY FOR SMALL BUSINESSES ACT OF 2026",
+   "title": "CYBERSECURITY FOR SMALL BUSINESSES ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6157.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 10238, the Cybersecurity for Small Businesses Act.",
+    "Mr. Speaker, I urge all my colleagues to support this important legislation and stand with the America's small businesses."
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESHORING AMERICAN MANUFACTURING ACT OF 2026",
+   "title": "RESHORING AMERICAN MANUFACTURING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6158.htm",
+   "sentences": [
+    "For decades, offshoring manufacturing has pulled jobs and production capacity from citizens and towns across our Nation.",
+    "Mr. Speaker, I rise today in support of my bill, H.R. 9718, the Reshoring American Manufacturing Act.",
+    "Mr. Speaker, I urge my colleagues to support this important legislation."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAL INGREDIENTS, REAL STANDARDS, REAL BUTTER",
+   "title": "REAL INGREDIENTS, REAL STANDARDS, REAL BUTTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4326-2.htm",
+   "sentences": [
+    "Billionaire food experiments are no longer hypothetical.",
+    "Bill Gates is funding a lab-grown butter project made from carbon dioxide instead of milk from a cow right in Illinois, right in the backyard of America's Dairyland."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MASTER SERGEANT MELVIN O. HANDRICH POST OFFICE BUILDING",
+   "title": "MASTER SERGEANT MELVIN O. HANDRICH POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2855-2.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of this bill to rename the United States Post Office in Waupaca, Wisconsin, in honor of Master Sergeant Melvin O. Handrich, a Waupaca County native, a Medal of Honor recipient, and a hero who served our Nation in both World War II and the Korean war.",
+    "Madam Speaker, I urge my colleagues to join me in supporting this bill."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL BLOOD DONOR MONTH",
+   "title": "NATIONAL BLOOD DONOR MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1158-3.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support the BLOOD Centers Act so we can expedite the ability of blood centers to open new locations and collect lifesaving blood for those who need it."
+   ]
+  },
+  {
+   "date": "2025-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESTROYING UNNECESSARY, MISALIGNED, AND PROHIBITIVE RED TAPE ACT",
+   "title": "DESTROYING UNNECESSARY, MISALIGNED, AND PROHIBITIVE RED TAPE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-02/html/CREC-2025-12-02-pt1-PgH4989.htm",
+   "sentences": [
+    "Family-owned shops face costly data privacy mandates designed for multinational corporations, while contractors struggle with ever- shifting OSHA paperwork requirements that eat up their time better spent on the jobsite.",
+    "Mr. Speaker, I rise today in support of my bill, H.R. 4305, the Destroying Unnecessary, Misaligned, and Prohibitive Red Tape Act, also known as the DUMP Red Tape Act.",
+    "Mr. Speaker, I urge all of my colleagues to support this important piece of legislation and stand with America's small businesses."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FACILITY FOR RUNWAY OPERATIONS AND SAFE TRANSPORTATION ACT",
+   "title": "FACILITY FOR RUNWAY OPERATIONS AND SAFE TRANSPORTATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3875.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 3423, the Facility for Runway Operations and Safe Transportation Act, or the FROST Act.",
+    "I urge my colleagues to support this commonsense measure."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGAL IMMIGRATION",
+   "title": "ILLEGAL IMMIGRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH538-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today with my colleagues to address an issue that has plagued our Nation over the last 4 years and to let the American people know that the House GOP is working alongside President Trump to secure our border and make the safety of American citizens our number one priority.",
+    "When President Trump left office 4 years ago, our border was secure, and significant progress was being made on the border wall.",
+    "On the first day of the Biden administration, Joe Biden unilaterally reversed nearly all of the successful policies of the Trump administration and invited an invasion at our southern border.",
+    "Every State became a border State, including my home state of Wisconsin.",
+    "Every county became a border county.",
+    "Every town became a border town.",
+    "We saw unprecedented numbers of illegal aliens crossing our border and invading our country.",
+    "I also heard from sheriffs who had gang members taking up spaces in their jails with no plans to deport them.",
+    "They purposely shredded President Trump's successful border security playbook and allowed unmitigated illegal immigration to continue uninterrupted and unimpeded for 4 straight years.",
+    "In just over 2 weeks since President Trump has taken office, he has done more to secure our border and protect Americans than President Biden did in 4 years.",
+    "As you can see, over the past 2 years, there was an average of more than 1,500 illegal migrants encountered at our border every single day.",
+    "Since then, we have continued to see a 63 percent drop in illegal encounters at the border on average.",
+    "President Trump has reinstated the remain in Mexico policy, and I am proud to cosponsor a bill by Representative Brandon Gill to make this policy permanent so that future, radical administrations cannot undo our progress.",
+    "We also passed the Laken Riley Act and the Violence Against Women by Illegal Aliens Act.",
+    "These bills ensure that anyone in this country illegally who commits a crime, whether it be a theft or sexual assault, will have an ICE detainer placed on them immediately.",
+    "The House of Representatives just passed the HALT Fentanyl Act, permanently criminalizing fentanyl.",
+    "We will not rest until our border is secure again and Americans feel safe in their communities again."
+   ]
+  }
+ ]
+}

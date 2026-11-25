@@ -1,0 +1,153 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "foushee",
+ "name": "Valerie P. Foushee",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 11,
+  "sentences": 42
+ },
+ "statements": [
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL WOMEN IN AEROSPACE DAY",
+   "title": "NATIONAL WOMEN IN AEROSPACE DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3664.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to recognize a bipartisan effort to designate today, May 20, as National Women in Aerospace Day, honoring the extraordinary women whose talent, courage, and innovation have shaped America's leadership in aviation and space exploration.",
+    "As ranking member of the House Science, Space, and Technology Subcommittee on Space and Aeronautics, I am proud to help lead this bipartisan resolution, and I urge my colleagues to join me in celebrating the remarkable contributions of women in aerospace. ____________________"
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANOTHER BLIGHT ON AMERICAN HISTORY",
+   "title": "ANOTHER BLIGHT ON AMERICAN HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3379-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today alongside my colleagues in opposition to the all-out assault on Black Americans' right to vote in the wake of Trump's Supreme Court's choice to gut the Voting Rights Act.",
+    "Now, as if we needed any confirmation of the rationale behind the senseless Supreme Court ruling, Republican statehouses nationwide are now mobilizing in an effort to target Black Members of Congress and Black majority districts.",
+    "As one of the few Members of Congress left who experienced the systemic segregation put in place across the South firsthand as a young girl in an all-Black elementary school, I stand here with this message: We will not go back.",
+    "As we feel their pain with every step back that this government forces upon us, rest assured that we will always come back stronger.",
+    "We will not rest, and we will continue to honor the work of our ancestors with action."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESTORING ELECTION INTEGRITY",
+   "title": "RESTORING ELECTION INTEGRITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1162.htm",
+   "sentences": [
+    "Mr. Speaker, today marks 16 years since the Supreme Court handed down its disastrous Citizens United decision, a ruling that opened the floodgates to unlimited corporate money in our elections and fundamentally distorted our democracy.",
+    "By discarding decades of precedent, the Supreme Court declared that unlimited spending in elections poses no threat to our democratic system and that corporations are entitled to the same political rights as the people whose lives are governed by the outcomes of those elections.",
+    "Since Citizens United, we have watched a parallel political system take shape, one dominated by super-PACs and dark money organizations that can raise and spend unlimited sums and operate with fewer rules, less transparency, and the ability to determine election outcomes long before voters cast a ballot.",
+    "Healthcare, housing, childcare, energy, and grocery costs are all rising, yet policies that could provide immediate relief are repeatedly stalled.",
+    "Although Citizens United did not create these problems, it enabled them to persist and grow.",
+    "While the long-term goal must be to overturn Citizens United through a constitutional amendment, Congress has the power and the responsibility to act immediately to limit its damage."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BUILDING A BELOVED COMMUNITY",
+   "title": "BUILDING A BELOVED COMMUNITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH942-7.htm",
+   "sentences": [
+    "We see it in attacks on our voting rights, in efforts to criminalize protests, in targeting immigrants and asylum seekers, in the rollback of civil rights protections, and in policies that deepen economic inequality while shielding the powerful from accountability.",
+    "We refuse to accept the vision of America where cruelty is policy and inequality is the goal.",
+    "We will continue to speak out, to act, and to fight until the promise of this Nation is fully realized."
+   ]
+  },
+  {
+   "date": "2026-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JANUARY 6 ATTACK",
+   "title": "JANUARY 6 ATTACK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-06/html/CREC-2026-01-06-pt1-PgH6-3.htm",
+   "sentences": [
+    "Law enforcement officers stood between that mob and the Constitution.",
+    "The attack on January 6 was the result of a President who chose division over truth, grievance over governance, and chaos over accountability."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP RESCISSIONS REQUEST AND USAID CUTS",
+   "title": "TRUMP RESCISSIONS REQUEST AND USAID CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2648-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in opposition to Trump's rescission package, which includes an unfathomable $8.2 billion cut to USAID funding.",
+    "My home State of North Carolina is the fourth largest recipient of USAID funding, which invests roughly $194 million into our State economy.",
+    "In my district alone, the damaging effects of the administration's cuts to USAID are already being felt.",
+    "USAID is a cornerstone of our national security, advancing global health, powering research across the country, and reinforcing America's leadership on the world stage.",
+    "We cannot stand for it. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL GUN VIOLENCE AWARENESS MONTH",
+   "title": "NATIONAL GUN VIOLENCE AWARENESS MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2411.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today with urgency, grief, and determination during National Gun Violence Awareness Month, a time for us to recognize the heartbreaking toll that gun violence continues to take on communities across the country.",
+    "Gun violence is a public health epidemic that affects Americans and ravages communities in every ZIP Code in every State.",
+    "Yet, year after year, we see the same devastating trend: Black Americans are dying from gun violence at nearly three times the rate of White Americans.",
+    "For years, Black Americans have faced a persistent and disproportionate risk of being killed in police encounters involving firearms.",
+    "Due to the dangers they pose, these devices have been highly regulated for nearly 100 years, and this provision would make it easier for individuals to use firearms with less risk of detection, further endangering our communities already suffering from gun violence.",
+    "A majority of Americans support universal background checks, closing loopholes in gun sales, red flag laws, and safe storage legislation.",
+    "I urge my Republican colleagues to join House Democrats, the Congressional Black Caucus, and the House Gun Violence Prevention Task Force in advancing meaningful, commonsense reforms that will save lives, reduce violence, and protect all Americans."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP TRUMP'S CHAOS--STAND UP FOR SCIENCE",
+   "title": "STOP TRUMP'S CHAOS--STAND UP FOR SCIENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2086.htm",
+   "sentences": [
+    "I like the idea of an America that supports domestic manufacturing and is a leader in innovation, not an America that does China's manufacturing work."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN WILL NOT BE ERASED",
+   "title": "WOMEN WILL NOT BE ERASED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1358-2.htm",
+   "sentences": [
+    "Republicans also recently passed a budget which includes billions in cuts for community projects in districts across the country, many of which were intended for domestic violence shelters, youth community centers, and childcare centers.",
+    "This would require deep cuts to Medicaid specifically, which helps provide coverage for over 40 percent of births in the United States."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INNOVATIVE MITIGATION PARTNERSHIPS FOR ASPHALT AND CONCRETE TECHNOLOGIES ACT",
+   "title": "INNOVATIVE MITIGATION PARTNERSHIPS FOR ASPHALT AND CONCRETE TECHNOLOGIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1209.htm",
+   "sentences": [
+    "U.S. producers are leading the way in the innovation of critical building materials production, and we have a real opportunity in front of us to bolster our Nation's infrastructure while making significant strides to reduce global emissions.",
+    "The climate crisis remains one of the most pressing issues of our lifetime, and it is vital that we take action now by investing in clean technologies and creating pathways here at home to accelerate and commercialize these new opportunities to reduce harmful emissions.",
+    "Globally, cement manufacturing accounts for nearly 8 percent of all carbon emissions, and we have a unique opportunity to reduce pollution in industrial emissions by creating new manufacturing opportunities here at home that can take the place of aging processes based on fossil fuels.",
+    "The United States is leading the way into the 21st century, and this can be seen in my own district, North Carolina's Fourth, where local startup Biomason is revolutionizing the cement industry through its use of biotechnology to manufacture low-carbon concrete.",
+    "With global demand for building materials set to rise through this century, we must prioritize investments in advanced materials science and scale-up domestic manufacturing by fostering an innovation pipeline that creates jobs and enhances our competitiveness on the world stage.",
+    "It will help us achieve measurable and meaningful emissions reductions, modernize manufacturing, and improve workers' health and public health, all while creating good-paying jobs across America.",
+    "It has received strong and bicameral support from industry and industry partners, innovators, climate organizations, manufacturing, and trade associations nationwide.",
+    "Mr. Speaker, I rise today in support of H.R. 1534, the bipartisan Innovative Mitigation Partnerships for Asphalt and Concrete Technologies Act, or the IMPACT Act, which will strengthen the competitiveness of American manufacturing through innovation and development of technologies to decarbonize and improve the efficiency of cement, concrete, and asphalt production."
+   ]
+  }
+ ]
+}

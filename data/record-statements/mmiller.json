@@ -1,0 +1,276 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mmiller",
+ "name": "Mary E. Miller",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 19,
+  "sentences": 93
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADVISORY COMMITTEE ON THE RECORDS OF CONGRESS SUNSET ACT",
+   "title": "ADVISORY COMMITTEE ON THE RECORDS OF CONGRESS SUNSET ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5545.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 9360, which will sunset the Advisory Committee on the Records of Congress.",
+    "Mr. Speaker, as we continue to improve the efficiency of our government, I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP INSIDER TRADING ACT",
+   "title": "STOP INSIDER TRADING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5143.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of Chairman Steil's bill, H.R. 7008, the Stop Insider Trading Act, of which I am a proud cosponsor.",
+    "My colleague claimed that this bill is a poison pill because the SAVE America Act is included, which we have passed multiple times out of this House, with not any support from the Democrats."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "title": "KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+   "sentences": [
+    "More than a dozen have declared children's exposure to pornography a public health crisis, and more than two dozen States have enacted age verification requirements for adult websites.",
+    "Last year, the Supreme Court upheld Texas' age verification law.",
+    "For that reason, I am grateful that Chairman Guthrie included the SCREEN Act in this legislative package.",
+    "Senator Mike Lee and I drafted this legislation to establish age verification requirements for adult websites, creating a minimum requirement that every State must meet while allowing flexibility to enact stronger protections for children.",
+    "Our laws already require age verification to purchase alcohol, tobacco, firearms, or to enter a casino.",
+    "The SCREEN Act is one of the most consequential bills to protect children in the digital age.",
+    "Today, we have an opportunity to make the internet safer for the next generation, and I urge all my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "title": "FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4229-6.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Vice Chair Moore for hosting this important Special Order commemorating one of the greatest triumphs in our pursuit to protect the lives of the unborn.",
+    "After 50 years of peacefully praying outside clinics and marching in Washington, Roe v. Wade is no more.",
+    "While the Dobbs decision was a monumental victory, the fight for life has only just begun.",
+    "Many States have stepped up to the plate, with over half of them enacting laws protecting the unborn.",
+    "However, blue States have doubled down on the murderous assault of the unborn.",
+    "Sadly, my home State of Illinois, is one of those States and has become the destination State of the Midwest for abortions.",
+    "In 2023 we recorded the most abortions ever in our State's history, and Illinois' Governor proudly signed legislation allowing abortions through 9 months of pregnancy.",
+    "Since the Biden administration rescinded safety regulations for chemical abortions, women are being harmed, and our water supply is being severely contaminated.",
+    "That is why I have introduced legislation like H.R. 796, the Second Chance for Moms Act, which would require the FDA to place a warning label on chemical abortion drugs so that women can reverse the chemical abortion before it is too late.",
+    "I have also introduced H.R. 797, the Ultrasounds Save Lives Act, which would mandate an ultrasound be performed before an abortion can take place.",
+    "The ultrasound is a window to the womb.",
+    "Up to 80 percent of women who get an ultrasound before attempting an abortion change their minds and choose life.",
+    "The Dobbs decision ended the greatest human rights violation of our time, but the work has just begun."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4029.htm",
+   "sentences": [
+    "Mr. Speaker, I join the majority of my Republican colleagues in voicing strong opposition to H.R. 5408, the Faster Labor Contracts Act.",
+    "This bill puts the selfish needs of the union bosses above the welfare of American workers.",
+    "It would force employers to begin bargaining with new unions within 10 days of certification.",
+    "Employers and unions already meet at the negotiating table.",
+    "The Faster Labor Contracts Act is bad for employers, bad for employees, and bad for the economy.",
+    "Mr. Speaker, I urge my colleagues to reject this bill and vote ``no.''"
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "title": "NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 7726, the Stop Child Care Scams Act, which joins with the administration's efforts to rid the Federal Government of waste, fraud, and abuse.",
+    "Last month, President Trump announced serious reforms to safeguard Federal taxpayer dollars spent in the Child Care and Development Block Grant program to ensure that this program is serving the families who need it most.",
+    "The Stop Child Care Scams Act builds on those actions by enforcing program integrity to ensure every State is compliant with Federal requirements.",
+    "Since 2002, the block grant has been identified as a Federal program at risk for improper payments.",
+    "In fact, a 2020 GAO report estimated that under the block grant program, there were $325 million in improper payments nationwide during the 2019 fiscal year.",
+    "HHS data shows that the rate of improper payments in Minnesota's Federal Child Care Assistance Program is nearly twice the national average.",
+    "In 2024, the owner of several Chicago childcare centers was sentenced to 4 years in prison for stealing more than $3 million of taxpayer funds.",
+    "That is why I am leading H.R. 7726, the Stop Child Care Scams Act.",
+    "This bill includes many reforms championed by my colleagues on the Education and Workforce Committee to make commonsense updates to the Child Care and Development Block Grant program so that Federal dollars continue to go to working families, not fraudsters.",
+    "Congressman Mark Messmer's Child Care Payment Integrity and Fraud Accountability Act requires States to assess how many block grant payments are fraudulent.",
+    "Congressman Bob Onder's Child Care Integrity Monitoring Act requires an audit of State childcare assistance programs every 3 years.",
+    "Congresswoman Virginia Foxx's Safeguarding Taxpayer Dollars in Child Care Act prevents fraudulent providers from receiving future grant funds.",
+    "Congressman Mike Rulli's Stop Child Care Fraud Act requires States to ensure all relevant agencies have access to necessary data and are examining it to prevent fraud.",
+    "Lastly, my No Funds for Repeat Child Care Violations Act withholds block grant funds from noncompliant States.",
+    "Every dollar lost to fraud is a dollar that doesn't support working families.",
+    "It is sensible, responsible, and a moral choice to protect working families who contribute to our communities and help our local economies thrive.",
+    "House Republicans are taking waste, fraud, and abuse seriously, and I urge my colleagues to do the same and support this bill."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT",
+   "title": "PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3652.htm",
+   "sentences": [
+    "As reports continue to come out from the Department of Education, we have seen that public schools are blatantly violating FERPA by secretly encouraging children to adopt so-called transgender identities behind their parents' back.",
+    "H.R. 2616, the Stopping Indoctrination and Protecting Kids Act, takes an important step forward by codifying these executive orders and by rescinding Federal funding from any school that seeks to undermine parents.",
+    "Republicans are here fighting to protect parental rights, shield children from radical gender ideology, and restore sanity to America's classrooms.",
+    "Mr. Speaker, I urge all of my colleagues to support H.R. 2616."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHARIA-FREE AMERICA",
+   "title": "SHARIA-FREE AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2761.htm",
+   "sentences": [
+    "Let me be very clear: We will not allow sharia to take root in our schools or our institutions.",
+    "We will not allow it to erode the foundation of our civilization.",
+    "We will remain strong, sovereign, and free."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, the SAVE America Act ensures that only American citizens vote in American elections."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREGNANT STUDENTS' RIGHTS ACT",
+   "title": "PREGNANT STUDENTS' RIGHTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1325.htm",
+   "sentences": [
+    "Nearly 30 percent of all abortions in the United States are performed on women in college.",
+    "Mr. Speaker, I rise in strong support of H.R. 6359, the Pregnant Students' Rights Act."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "May they receive comfort from Revelation 21:4 and the promise that: ``He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore, for the former things have passed away.'' We thank Doug for his friendship, and we will carry on with the work that he started."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 498, the Do No Harm in Medicaid Act.",
+    "Medicaid was designed as a safety net to be used only by U.S. citizens when they fall onto hard times and need medical support.",
+    "The most egregious actor is none other than Planned Parenthood, the leading abortion provider in the Nation and now the leading provider of these dangerous procedures.",
+    "The Do No Harm in Medicaid Act shields innocent children from predatory companies and stops Medicaid from being weaponized against our next generation.",
+    "I thank my colleagues for leading this bill, and I urge all to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 60, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 60, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NATIONAL RECREATION AREA: MOTOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgH1693-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the rule, which includes several Congressional Review Acts against the disastrous Biden-era electric vehicle mandates.",
+    "In fact, the heavy-duty trucks in cold weather States lose 20 percent of their battery capacity.",
+    "Vehicle decisions should be left up to the American consumers, not woke extreme climate activists.",
+    "I urge the passage of this rule."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the SAVE Act, which includes robust measures to prevent illegal aliens from participating in our elections.",
+    "Under Joe Biden, millions of illegal aliens flooded into our country, and many were given the benefits and privileges that should be reserved for American citizens.",
+    "In Illinois, JB Pritzker and the Democrats rolled out the red carpet and actively enticed illegals and those covered by Biden's bogus asylum programs to settle in my State, to the tune of over 500,000 people.",
+    "They received welfare benefits, CDL licenses, and State identification.",
+    "The Democrats have even voted to allow them to be law enforcement officers.",
+    "Mr. Speaker, I urge the passage of this bill."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP IS GETTING IT DONE FOR THE AMERICAN PEOPLE",
+   "title": "PRESIDENT TRUMP IS GETTING IT DONE FOR THE AMERICAN PEOPLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH982.htm",
+   "sentences": [
+    "I thank President Trump for securing our border and deporting the murderers, rapists, terrorists, and gang members.",
+    "I thank him that we are not going to be taken advantage of anymore by unfair tariffs, trade agreements, and funding wars around the world.",
+    "Mr. Speaker, I urge our country, as it says in 1 Timothy, to pray for those who are in authority."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BLOCKING AND FILTERING SOFTWARE IS INEFFECTIVE",
+   "title": "BLOCKING AND FILTERING SOFTWARE IS INEFFECTIVE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH842-3.htm",
+   "sentences": [
+    "Mr. Speaker, today, Senator Mike Lee and I will reintroduce the Shielding Children's Retinas from Egregious Exposure on the Net Act, also known as the SCREEN Act.",
+    "There are 16 States that have declared youth exposure to pornography to be a serious public health issue, and 19 States have enacted some form of website age verification requirement.",
+    "The Supreme Court is poised to rule on the Texas age verification law.",
+    "Whether they apply strict scrutiny or a lower form of judicial review, it is abundantly clear that the SCREEN Act is the answer.",
+    "I urge the House and Senate to act swiftly in passing the SCREEN Act so that President Trump can sign it into law. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING PRESIDENT TRUMP",
+   "title": "THANKING PRESIDENT TRUMP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH513.htm",
+   "sentences": [
+    "On his first day in office, President Trump declared a national emergency at the southern border and reinstated policies to stop the flood of illegal immigrants into the United States.",
+    "Under the Biden administration, migrant encounters at the U.S.-Mexico border reached an all-time high.",
+    "Open-border policies made it easier for military-aged men to enter our country and allow drug and human traffickers to take control of our borders.",
+    "In 2024 alone, Customs and Border Protection seized over 21,000 pounds of fentanyl at the U.S.-Mexico border.",
+    "I applaud President Trump for taking border security seriously, including his threat to impose tariffs on Mexico, which led their President to deploy 10,000 members of the Mexican National Guard to strengthen border security."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP INSTALLING CHINESE SOLAR PANELS ON AMERICAN FARMLAND",
+   "title": "STOP INSTALLING CHINESE SOLAR PANELS ON AMERICAN FARMLAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH519-5.htm",
+   "sentences": [
+    "Mr. Speaker, as a family farmer, I am very concerned with America's prime farmland being covered with taxpayer- subsidized solar panel installations.",
+    "That is why we should be alarmed by the increasing number of solar panels being installed on our most fertile farmland, especially when the Federal Government is handing out tax credits for it.",
+    "Today, I reintroduced the No Solar Panels on Fertile Farmland Act to stop Federal Government tax incentives for installing Chinese solar panels on American farmland.",
+    "Food security is national security, and if we cover our farm ground with Chinese solar panels, we will become dependent on foreign adversaries for food."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "I rise in support of the Protection of Women and Girls in Sports Act which safeguards our daughters from the radical Democrats' agenda to have our daughters and granddaughters compete against and share locker rooms with men.",
+    "This bill ensures that individuals participate in sports according to their biological sex and keeps men out of our daughters' locker rooms and showers.",
+    "Mr. Speaker, we are sending a clear message to the radical Democrats we will no longer tolerate our daughters being taken advantage of."
+   ]
+  }
+ ]
+}

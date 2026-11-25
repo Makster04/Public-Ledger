@@ -1,0 +1,60 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "donalds",
+ "name": "Byron Donalds",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 12
+ },
+ "statements": [
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKE STATE WILDLIFE ACTION PLANS EFFICIENT ACT OF 2025",
+   "title": "MAKE STATE WILDLIFE ACTION PLANS EFFICIENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5078.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 1676, the Make SWAPs Efficient Act."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "title": "DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4333.htm",
+   "sentences": [
+    "This is simply insane, and that is why I introduced the DC CRIMES Act, which lowers the definition of youth from under the age of 25 to under the age of 18, removes the ability of judges to sentence youth offenders below mandatory minimum guidelines, and requires the D.C. attorney general to establish a public website containing much-needed statistics on juvenile crime in D.C. The Trump administration's efforts have shown that lawlessness is a choice, and it is time for Congress to step up, adhere to our constitutional duty, and firmly address crime in the Nation's Capital.",
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 4922, the DC CRIMES Act.",
+    "I will remind my colleagues on the other side of the aisle that some of their colleagues have been victimized by the crime here in Washington, D.C. Rather than prioritizing the safety of law-abiding citizens and protecting the lives of innocent residents and visitors, District officials have actively facilitated dysfunction and chaos through their progressive, soft-on-crime policies.",
+    "For the citizens of D.C., I would say, we wish your Council did this the right way, but they did not and we will act."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "title": "DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2549.htm",
+   "sentences": [
+    "During the Civil War, Douglass recruited Black soldiers, met with President Lincoln to advocate for equal pay and treatment, and worked to assist those escaping slavery.",
+    "Mr. Speaker, I rise today in strong support of H. Res. 137 to rename the House Press Gallery the Frederick Douglass Press Gallery, in honor of a man whose life and work embodied the very best of American ideals and shattered through glass ceilings.",
+    "I urge my colleagues to support H. Res. 137."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFE AND SMART FEDERAL PURCHASING ACT",
+   "title": "SAFE AND SMART FEDERAL PURCHASING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH932.htm",
+   "sentences": [
+    "For background, lowest price technically acceptable is the source selection method outlined in the Federal Acquisition Regulation, or FAR.",
+    "In fact, in August 2017, Homeland Security Investigations issued an intelligence bulletin warning that DJI was providing critical infrastructure and law enforcement data to the Chinese Government.",
+    "Mr. Speaker, I rise in strong support of my bill, the Safe and Smart Federal Purchasing Act.",
+    "Mr. Speaker, I thank the ranking member, Mr. Connolly, for co-leading this bipartisan initiative with me, and I urge my colleagues to support this commonsense piece of legislation."
+   ]
+  }
+ ]
+}

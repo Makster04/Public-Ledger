@@ -1,0 +1,716 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bost",
+ "name": "Mike Bost",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 57,
+  "sentences": 191
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "There have been rumors from my Democrat colleagues accusing House Republicans of passing my bill through some backdoor deal.",
+    "On December 4, 1979, when I entered the United States Marine Corps, our national debt was $800 billion.",
+    "It is projected that by next summer our country will reach the debt ceiling again.",
+    "Mr. Speaker, I rise today in support of the Major Richard Star Act, though I have concerns about how it will be paid for.",
+    "Mr. Speaker, make no mistake, I support ending the wounded warrior tax, and that is why I will vote ``yes'' on this bill.",
+    "I stand by the sweeping package we passed yesterday, and I am even prouder that we passed it on Veterans Day."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESSIONAL FIRE SERVICES CAUCUS RECOGNIZES THE 25TH ANNIVERSARY OF SEPTEMBER 11, 2001",
+   "title": "CONGRESSIONAL FIRE SERVICES CAUCUS RECOGNIZES THE 25TH ANNIVERSARY OF SEPTEMBER 11, 2001",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgE908.htm",
+   "sentences": [
+    "May we continue to support those who wear the uniform of the fire and emergency services."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE CARE OF AMERICA'S VETERANS ACT",
+   "title": "TAKE CARE OF AMERICA'S VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4548-3.htm",
+   "sentences": [
+    "Too many veterans still face delays, confusion, and barriers when trying to use VA community care.",
+    "This bill would also improve mental health care and community-based suicide prevention.",
+    "Mr. Speaker, I also want to address how this bill is funded, as I have heard a lot of misinformation about this point.",
+    "The question is whether the savings associated with the proposed deployment and changes by the VA should remain in their control and the bureaucrats' control, or do we make it through our Article I power to reinvest into our veterans and their families.",
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 9237, the Take Care of America's Veterans Act.",
+    "We support advancing the Take Care of America's Veterans Act because the bill represents a net expansion of benefits and support for the veteran community and contains protections intended to prevent reductions for current beneficiaries.",
+    "As Congress continues its consideration of this legislation, we urge Members to preserve and strengthen key protections: no retroactive harm to veterans currently receiving compensation; prospective application only to future claims or future requests for increased ratings; full transparency from VA, the White House, and the Administration regarding any independent regulatory or policy action; and a final package that ensures expanded benefits are delivered responsibly and effectively.",
+    "We are committed to working with Congress, VA, the Administration, coalition partners, and the broader veteran community to improve the pay-for, identify any credible alternative path forward, and secure the strongest possible outcome.",
+    "We support the Take Care of America's Veterans Act so the process can continue and so Congress can deliver lasting results for veterans, their families, caregivers, and survivors.",
+    "We urge swift action to advance this legislation and stand ready to work with lawmakers in both chambers to honor our commitments to all who have served.",
+    "I will respond to a few claims that the veterans do not want this package.",
+    "At some point, we have to decide whether we are going to keep talking about these promises or actually move a package that can become law.",
+    "I believe that this package is a serious, responsible step forward, and I reject the idea that veterans do not want this Congress to act on this bill.",
+    "If you don't believe this marine is serious about helping veterans--and I am telling you I took a lot of crap this week--I can tell you this: I will stand and always stand for my veterans.",
+    "I am going to tell you, we have worked hard and did the best we can to put the best bill forward."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTHONY \"TONY\" J. GALLOPO VA CLINIC",
+   "title": "ANTHONY \"TONY\" J. GALLOPO VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4472-2.htm",
+   "sentences": [
+    "I rise today in support of H.R. 6007 to name the Department of Veterans Affairs community-based outpatient clinic in Newton, New Jersey, as the Anthony ``Tony'' J. Gallopo VA Clinic."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COLONEL MICHAEL H. BOYCE DEPARTMENT OF VETERANS AFFAIRS MULTISPECIALTY CLINIC",
+   "title": "COLONEL MICHAEL H. BOYCE DEPARTMENT OF VETERANS AFFAIRS MULTISPECIALTY CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4473.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 5362, Colonel Michael H. Boyce Department of Veterans Affairs Multispecialty Clinic, sponsored by Representative Loudermilk."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RODNEY C. HAMILTON SR. VA CLINIC",
+   "title": "RODNEY C. HAMILTON SR. VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4474.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 6963, to designate the community-based outpatient clinic of the Department of Veterans Affairs in Lafayette, Louisiana, as the Rodney C. Hamilton Sr. VA Clinic sponsored by Representative Higgins."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CAPTAIN PAUL W. \"BUD\" BUCHA VA MEDICAL CENTER",
+   "title": "CAPTAIN PAUL W. \"BUD\" BUCHA VA MEDICAL CENTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4476.htm",
+   "sentences": [
+    "He challenged the stigma surrounding mental health care and encouraged countless fellow veterans to seek help.",
+    "Mr. Speaker, I rise today in support of H.R. 4647, the Captain Paul W. ``Bud'' Bucha VA Medical Center Act of 2025, sponsored by Representative DeLauro."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CORPORAL PATRICK D. TILLMAN VA CLINIC",
+   "title": "CORPORAL PATRICK D. TILLMAN VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4478.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 4288, to name the Department of Veterans Affairs community-based outpatient clinic in San Jose, California, as the ``Corporal Patrick D. Tillman VA Clinic,'' sponsored by Representative Panetta."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS 2ND AMENDMENT PROTECTION ACT",
+   "title": "VETERANS 2ND AMENDMENT PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3684-5.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1300, I call up the bill (H.R. 1041) to amend title 38, United States Code, to prohibit the Secretary of Veterans Affairs from transmitting certain information to the Department of Justice for use by the National Instant Criminal Background Check System, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 1041, as amended, the Veterans 2nd Amendment Protection Act.",
+    "VA overturned a longstanding policy of automatically reporting veterans and beneficiaries to the FBI's National Instant Criminal Background Check System, also called NICS, simply because they needed help managing their VA benefits.",
+    "VA reported them to NICS simply because they needed help managing their benefits.",
+    "That is why I have long- championed this bill, as well as my bipartisan provision in this, the yearly VA appropriation bill, to prohibit VA's fiduciary program from reporting veterans' names to NICS.",
+    "Most importantly, it is about protecting our veterans' Second Amendment rights.",
+    "It is time we put a permanent end to the practice of treating our veterans' Second Amendment rights as an option and pass H.R. 1041.",
+    "Generally, a civilian cannot lose their Second Amendment rights without involvement from a judge, but veterans did for three decades.",
+    "A veteran goes to the VA to ask for help, and the VA bureaucracy answers ``yes,'' but only in exchange for your Second Amendment rights.",
+    "Frankly, it paints the veterans' mental health issues in a way that should concern everyone.",
+    "Over 200,000 veterans were reported to the NICS list under this practice.",
+    "I want to be clear that no person, veteran or otherwise, reported to NICS by a State judge, law enforcement agency, or other reporting bodies for any other reason was removed.",
+    "Incompetence in financial ability is not and should not be something that should take away your Second Amendment right.",
+    "Yes, veterans struggle with suicide and mental health greater than the rest of the population.",
+    "He also said that some of them might not want to have their Second Amendment rights.",
+    "There is nothing in our Constitution that forces you to use your Second Amendment rights.",
+    "She explained that if someone has a mental health condition or someone has these other concerns, that she would offer an amendment to that.",
+    "This is about the constitutional right of a veteran who has fought for those rights that a bureaucrat has the power to take away their ability to have that Second Amendment, which is in the Constitution.",
+    "Now, they might not agree with that Second Amendment and that has been debated here several times.",
+    "This bill is also supported by Second Amendment groups, including: Gun Owners of America, the National Rifle Association, the National Association for Gun Rights, the National Shooting Sports Foundation.",
+    "Importantly, H.R. 1041, as amended, is supported by the civil liberties groups and organizations who advocate for the elderly and those with disabilities, including the American Civil Liberties Union, not necessarily a conservative group, the National Disability Rights Network, the Bazelon Center for Mental Health Law, the Association of Mature American Citizens Action, the Autistic Self Advocacy Network, and the Disability Rights, Education & Defense Fund.",
+    "Mr. Speaker, most of the people who have spoken on the Democrat side of the aisle would carry other laws that would take away your Second Amendment right.",
+    "We are not saying that someone that is a veteran and is a danger to themselves or a danger to other people can't go through the process like everybody else and say, okay, we do need to go ahead and look over their ability to have that Second Amendment right.",
+    "That is why we have the NICS list.",
+    "But whenever the NICS list is overburdened, matter of fact, with our veterans at the percentage that it is, something is wrong.",
+    "Mr. Speaker, I include in the Record letters of support from many of those organizations that I mentioned previously: The American Legion, National Disability Rights Network, National Rifle Association of America, Vietnam Veterans of America, and American Civil Liberties Union.",
+    "Chairman Bost: I am writing to express my strong support for the Veterans 2nd Amendment Protection Act, which seeks to amend Title 38 of the United States Code to prohibit the Secretary of Veterans Affairs from transmitting certain information to the Department of Justice for use by the National Instant Criminal Background Check System (NICS).",
+    "Our main reason for supporting this legislation is to ensure a level of fairness for veterans concerning the current VA fiduciary process, particularly as it relates to the reporting of veterans to NICS without due process.",
+    "The existing process can lead to unjust consequences where veterans may lose their Second Amendment rights based solely on a determination made by the Secretary without judicial oversight.",
+    "By passing the Veterans 2nd Amendment Protection Act, we send a clear message that our nation values the rights and well-being of our veterans.",
+    "I urge all members to support the Veterans 2nd Amendment Protection Act to ensure fairness for all veterans in our country.",
+    "Sincerely, Jack McManus, National President. ____ American Civil Liberties Union, National Political Advocacy Department, Washington, DC, May 20, 2026.",
+    "VOTE YES FOR THE VETERANS 2ND AMENDMENT PROTECTION ACT (H.R. 1041) Mike Zamore, National Director of Policy & Government Affairs.",
+    "It is unacceptable, and, as a veteran, I am not going to stand for it anymore.",
+    "I am going to tell you this wasn't for political purposes."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHARRI BRILEY AND ERIC EDMUNDSON VETERANS BENEFITS EXPANSION ACT OF 2026",
+   "title": "SHARRI BRILEY AND ERIC EDMUNDSON VETERANS BENEFITS EXPANSION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3699.htm",
+   "sentences": [
+    "When Eric was 25, his vehicle was destroyed by an IED on the Syrian border.",
+    "Mr. Speaker, I also will address the offsets in this legislation because there has been a great deal of misinformation surrounding them.",
+    "These monthly payments were intended to provide surviving spouses with the means to maintain some semblance of economic stability after the loss of their loved one.",
+    "This legislation represents an initial downpayment on what is truly owed to veterans' survivors, and we are committed to continuing to work to bring DIC in parity with other federal survivor benefits.",
+    "This legislative body has long understood that fiscal responsibility is not separated from caring for our veterans and their survivors.",
+    "We see it in disability compensation, in survivor benefits, in prosthetics, in mental health care, and in long- term care of catastrophically disabled veterans.",
+    "Mr. Speaker, I rise today in support of H.R. 6047, as amended, the Sharri Briley and Eric Edmundson Veterans Benefits Expansion Act, introduced by my friend and fellow veteran, Representative Tom Barrett.",
+    "Donovan gave his life in defense of freedom, the type of sacrifice we will commemorate on Memorial Day.",
+    "I urge all Members to support H.R. 6047.",
+    "My fellow GOP colleagues and I are fighting for them, not the gavel.",
+    "We are asking to help those who need the help, and this is the way to do it today.",
+    "In the future, if we want to increase it and we want to work towards a larger amount, which I believe they deserve, both of the groups that are mentioned in this, the families who survived and those who have received the most heinous and most difficult wounds that they have to suffer through the rest of their lives, then we will do that, but this is the bill before us today.",
+    "I am going to tell the other side; the veterans and their voices here have spoken.",
+    "I am going to stand for them because I am a grandson of a veteran; a son of a veteran; a nephew of a veteran, who had to have a lot of these services that we deal with in the VA; a son who still serves; a grandson who is going to have to receive some of these benefits; and another grandson who is serving at this time."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS COMMUNITY CARE SCHEDULING IMPROVEMENT ACT",
+   "title": "VETERANS COMMUNITY CARE SCHEDULING IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3573.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3482) to amend title 38, United States Code, to establish an online program through which an employee of the Department of Veterans Affairs may schedule an appointment for a covered veteran with a non- Department health care provider under the Veterans Community Care Program, and for other purposes, as amended.",
+    "This bill would make much-needed improvements to make community care work better for our veterans.",
+    "It would equip VA employees with a modernized system to view, search, and sort real-time availability for both VA and non-VA providers.",
+    "This would let veterans across the entire country schedule many of their community care appointments in minutes, instead of waiting days on end.",
+    "Mr. Speaker, I rise today in support of H.R. 3482, as amended, offered by my friend and colleague, Representative Tom Barrett of Michigan.",
+    "This is a good, commonsense bill, and I urge my colleagues to support H.R. 3482, as amended."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FISCAL YEAR 2025 VETERANS AFFAIRS MAJOR MEDICAL FACILITY AUTHORIZATION ACT",
+   "title": "FISCAL YEAR 2025 VETERANS AFFAIRS MAJOR MEDICAL FACILITY AUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3575.htm",
+   "sentences": [
+    "S. 2393 authorizes up to $1.76 billion to modernize and expand the St. Louis VA, including new clinical space, a bed tower, and a dedicated mental health and substance abuse clinic.",
+    "This new clinical space would give care teams more room to serve patients, while the mental health and substance abuse clinic would strengthen access to important services for veterans and their families.",
+    "Mr. Speaker, I rise today in support of S. 2393, the Senate companion to my bill, H.R. 6710, the Fiscal Year 2025 Veterans Affairs Major Medical Facility Authorization Act, offered by Senator Moran.",
+    "I am proud to support this bill because it is a practical, forward- looking investment in the veterans who depend on the St. Louis VA."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' TRANSITION TO TRUCKING ACT OF 2025",
+   "title": "VETERANS' TRANSITION TO TRUCKING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3576.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2954, as amended, offered by my colleagues, the gentleman from New Hampshire (Mr. Pappas) and the gentlewoman from Virginia (Mrs. Kiggans)."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FISHER HOUSE AVAILABILITY ACT OF 2026",
+   "title": "FISHER HOUSE AVAILABILITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3577.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 3726, the Fisher House Availability Act of 2026, offered by Representative Dr. Miller-Meeks.",
+    "Mr. Speaker, I urge all of my colleagues to support H.R. 3726, as amended."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRST RESPONDER NETWORK AUTHORITY REAUTHORIZATION ACT OF 2026",
+   "title": "FIRST RESPONDER NETWORK AUTHORITY REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgH2967-6.htm",
+   "sentences": [
+    "Firefighters, police, and EMS could not talk to each other across agencies.",
+    "Mr. Speaker, I urge my colleagues to support this effort."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOVING NATIONAL WOMAN'S RELIEF CORPS INCORPORATION AND DOMICILE TO ILLINOIS; PRINCIPAL OFFICE TO MURPHYSBORO, ILLINOIS",
+   "title": "MOVING NATIONAL WOMAN'S RELIEF CORPS INCORPORATION AND DOMICILE TO ILLINOIS; PRINCIPAL OFFICE TO MURPHYSBORO, ILLINOIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1927.htm",
+   "sentences": [
+    "He played a key role in establishing Memorial Day as a national holiday in his 11th general order when he was commandant of the Grand Army of the Republic.",
+    "That is why I introduced legislation to update the charter to recognize Murphysboro, my hometown, as the Woman's Relief Corps' home.",
+    "I am proud to support this measure and am grateful for the opportunity to assist an organization that has done so much for veterans and our communities.",
+    "Mr. Speaker, I urge all of my colleagues to join me in supporting this legislation and in recognizing Murphysboro, Illinois, as the home of the Woman's Relief Corps."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS READINESS AND EMPLOYMENT IMPROVEMENT ACT OF 2025",
+   "title": "VETERANS READINESS AND EMPLOYMENT IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1929.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 980, as amended, offered by my friend and colleague, Representative Derrick Van Orden of Wisconsin."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ERNEST PELTZ ACCRUED VETERANS BENEFITS ACT",
+   "title": "ERNEST PELTZ ACCRUED VETERANS BENEFITS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1930.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 3123, as amended, offered by my colleague Representative Elise Stefanik of New York."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ESTABLISHMENT OF QUALIFICATIONS FOR THE APPOINTMENT OF A PERSON AS A MARRIAGE AND FAMILY THERAPIST, QUALIFIED TO PROVIDE CLINICAL SUPERVISION, IN THE VETERANS HEALT",
+   "title": "ESTABLISHMENT OF QUALIFICATIONS FOR THE APPOINTMENT OF A PERSON AS A MARRIAGE AND FAMILY THERAPIST, QUALIFIED TO PROVIDE CLINICAL SUPERVISION, IN THE VETERANS HEALTH ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1932.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 658, as amended."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS EDUCATION AND TECHNICAL SKILLS OPPORTUNITY ACT OF 2025",
+   "title": "VETERANS EDUCATION AND TECHNICAL SKILLS OPPORTUNITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1933.htm",
+   "sentences": [
+    "Madam Speaker, I appreciate the concerns of the minority, and I would like to dispel some misinformation provided by the ranking member.",
+    "Madam Speaker, I rise today in support of H.R. 1458, as amended, offered by my friend and colleague, Representative Juan Ciscomani of Arizona."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1131-5.htm",
+   "sentences": [
+    "That is why I rise today in strong support of the pro-life bills included in this rule, including safeguarding funding for pregnancy resource centers act and the Pregnant Students' Rights Act.",
+    "These bills are about something very simple: Protecting the dignity of the unborn and meeting very real needs of mothers and families.",
+    "Being pro-life is about doing more than just talking about it.",
+    "This Friday, this Mall out here will be packed with a powerful demonstration of the sanctity of life.",
+    "Mr. Speaker, I urge my colleagues to support this rule and these pro- life, profamily priorities."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS LAW JUDGE EXPERIENCE ACT OF 2025",
+   "title": "VETERANS LAW JUDGE EXPERIENCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH936.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 659.",
+    "I support this commonsense legislation, and I urge all of my colleagues to support H.R. 659.",
+    "Hopefully, we will continue working together, as we still have a lot of things to get done."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS SCAM AND FRAUD EVASION ACT OF 2025",
+   "title": "VETERANS SCAM AND FRAUD EVASION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH937.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1663, as amended, offered by Representative Calvert from California."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2025",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4676-4.htm",
+   "sentences": [
+    "Each year, Congress passes the Veterans' Compensation Cost-of-Living Adjustment Act.",
+    "This bill would help them meet that need by increasing certain VA benefits to the same percentage as the annual Social Security cost-of- living adjustment increase.",
+    "Mr. Speaker, I rise today in support of S. 2392."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING VETERAN ACCESS TO TELEMEDICINE SERVICES ACT OF 2025",
+   "title": "PROTECTING VETERAN ACCESS TO TELEMEDICINE SERVICES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4279.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1107 offered by Representative Womack.",
+    "I will continue to do whatever I can to ease access to care and critical treatment for veterans living in rural areas of this country."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SERVICEMEMBER RESIDENCE PROTECTION ACT",
+   "title": "SERVICEMEMBER RESIDENCE PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4281.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 2334) to amend the Servicemembers Civil Relief Act to preempt any squatter's rights established by State law regarding real property owned by a member of the uniformed services, as amended.",
+    "This bill would protect servicemembers' homes from squatters while they are away on Active Duty.",
+    "Due to this lack of protection, a squatter might be able to move in and make a claim to that servicemember's home when that servicemember is deployed.",
+    "We must ensure that servicemembers' homes are not occupied by squatters while a servicemember is away serving our great country.",
+    "Mr. Speaker, I rise today in support of H.R. 2334, as amended, offered by the gentleman from Florida (Mr. Mast), my friend and colleague.",
+    "Mr. Speaker, it should go without saying that this should not be happening, and I will do what I can to protect our servicemembers."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN VETERANS CANCER CARE COORDINATION ACT",
+   "title": "WOMEN VETERANS CANCER CARE COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4282.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1860, as amended, offered by Representative Sylvia Garcia of Texas."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERRITORIAL RESPONSE AND ACCESS TO VETERANS' ESSENTIAL LIFECARE ACT",
+   "title": "TERRITORIAL RESPONSE AND ACCESS TO VETERANS' ESSENTIAL LIFECARE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4284.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 3400, as amended, offered by my colleague on the Veterans' Affairs Committee Representative King-Hinds."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTH PROFESSIONALS SCHOLARSHIP PROGRAM IMPROVEMENT ACT OF 2025",
+   "title": "HEALTH PROFESSIONALS SCHOLARSHIP PROGRAM IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4285.htm",
+   "sentences": [
+    "Critical healthcare jobs, like nurses, physician assistants, and mental health providers, continue to be short-staffed and need good people in these roles.",
+    "Mr. Speaker, I rise today in support of H.R. 3767, as amended, offered by my friend and colleague, Representative Hamadeh."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS READINESS AND EMPLOYMENT PROGRAM INTEGRITY ACT",
+   "title": "VETERANS READINESS AND EMPLOYMENT PROGRAM INTEGRITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4288.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 3579 offered by my friend and colleague, Representative Ciscomani of Arizona."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RURAL VETERANS' IMPROVED ACCESS TO BENEFITS ACT OF 2025",
+   "title": "RURAL VETERANS' IMPROVED ACCESS TO BENEFITS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4289.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3951) to amend the Veterans' Benefits Improvements Act of 1996 and the Johnny Isakson and David P. Roe, M.D. Veterans Health Care and Benefits Improvement Act of 2020 to improve the temporary licensure requirements for contract health care professionals who perform medical disability examinations for the Department of Veterans Affairs, and for other purposes, as amended.",
+    "This bill would extend the license portability authority for contracted medical professionals conducting compensation and pension examinations for veterans until 2031.",
+    "Under current law, license portability only applies to physician assistants, nurse practitioners, audiologists, and psychologists.",
+    "Mr. Speaker, I rise today in support of H.R. 3951, introduced by my colleague Representative Ciscomani from Arizona."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MODERNIZING ALL VETERANS AND SURVIVORS CLAIMS PROCESSING ACT",
+   "title": "MODERNIZING ALL VETERANS AND SURVIVORS CLAIMS PROCESSING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4290.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 3854, as amended, sponsored by Representative Valadao."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EDITH NOURSE ROGERS STEM SCHOLARSHIP OPPORTUNITY ACT",
+   "title": "EDITH NOURSE ROGERS STEM SCHOLARSHIP OPPORTUNITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4293.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2034, as amended, offered by my colleague, Representative Nikki Budzinski of Illinois."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FALLEN SERVICEMEMBERS RELIGIOUS HERITAGE RESTORATION ACT",
+   "title": "FALLEN SERVICEMEMBERS RELIGIOUS HERITAGE RESTORATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4294.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 2701, as amended, offered by Representative Wasserman Schultz."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVERING DIGITALLY TO OUR VETERANS ACT OF 2025",
+   "title": "DELIVERING DIGITALLY TO OUR VETERANS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4295.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 3481, as amended, offered by my friend and colleague, Representative Tom Barrett from Michigan."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VA HOSPITAL INVENTORY MANAGEMENT SYSTEM AUTHORIZATION ACT",
+   "title": "VA HOSPITAL INVENTORY MANAGEMENT SYSTEM AUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4296.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 3494, as amended, offered by Representative Kiggans.",
+    "I urge all my colleagues to support H.R. 3494, as amended."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOCUSED ASSISTANCE AND SKILLS TRAINING FOR VETERANS' EMPLOYMENT AND TRANSITION SUCCESS ACT",
+   "title": "FOCUSED ASSISTANCE AND SKILLS TRAINING FOR VETERANS' EMPLOYMENT AND TRANSITION SUCCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4298.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 4446 offered by my colleague, Representative Maxine Dexter, from Oregon."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING REGULAR ORDER FOR VETERANS ACT OF 2025",
+   "title": "PROTECTING REGULAR ORDER FOR VETERANS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3484-6.htm",
+   "sentences": [
+    "When they hear of senior executives filling each other's pockets with improper bonuses, what does that tell the frontline VA police officer, the hospital housekeepers, and the food service staff?",
+    "Mr. Speaker, I rise today in support of S. 423, introduced by my colleague and fellow marine from across the Capitol, Senator Dan Sullivan from Alaska.",
+    "We won't lose frontline workers.",
+    "We will be good stewards of the taxpayers' dollars."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACES ACT OF 2025",
+   "title": "ACES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3487.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 201.",
+    "We will take the ranking member's comments under advisement.",
+    "We will set the agenda and figure out what we will have hearings on and what we won't."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEONARD G. \"BUD\" LOMELL VA CLINIC",
+   "title": "LEONARD G. \"BUD\" LOMELL VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3489.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2170, a bill to rename the community-based outpatient clinic of the Department of Veterans Affairs in Toms River, New Jersey, as the Leonard G. ``Bud'' Lomell VA Clinic."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO WRONG DOOR FOR VETERANS ACT",
+   "title": "NO WRONG DOOR FOR VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2175-2.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1969) to amend and reauthorize the Staff Sergeant Parker Gordon Fox Suicide Prevention Grant Program of the Department of Veterans Affairs, as amended.",
+    "The bill is a powerful reminder that mental health and physical health go hand in hand.",
+    "This bill extends authorization for the Staff Sergeant Parker Gordon Fox Suicide Prevention Grant Program.",
+    "House Republicans created the Fox grant program to expand the reach of VA's mental health services through community-based organizations where veterans and their families live.",
+    "The organizations that have qualified for the Fox grant program provide traditional and nontraditional mental health and therapy support services to veterans in need.",
+    "This bill, as amended, preserves VA's flexibility to ensure the best results for veterans who are seeking mental health services in their most desperate moments.",
+    "It is common sense to allow those who are already providing mental health services to receive grants for a suicide prevention program.",
+    "The idea that this creates a loophole or expands community care is far from reality.",
+    "Adding qualified providers to the list of grantees helps keep the door open for veterans seeking mental health services.",
+    "Adding qualified mental health providers will only help.",
+    "Mr. Speaker, I rise today in support of H.R. 1969, as amended.",
+    "This bill is a fantastic idea that will save veterans' lives, and I urge all of my colleagues to support H.R. 1969, as amended.",
+    "I look forward to continuing to work with stakeholders and veterans groups to find ways to make even more improvements to the Fox Grant Program, but I won't let perfect be the enemy of the good.",
+    "The reality is this program is set to expire in September, and we cannot allow this to happen."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMUNITIES HELPING INVEST THROUGH PROPERTY AND IMPROVEMENTS NEEDED FOR VETERANS ACT OF 2025",
+   "title": "COMMUNITIES HELPING INVEST THROUGH PROPERTY AND IMPROVEMENTS NEEDED FOR VETERANS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2121-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 217, as amended."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2123.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1147 offered by my colleague, Representative David Valadao of California."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SIMPLIFYING FORMS FOR VETERANS CLAIMS ACT",
+   "title": "SIMPLIFYING FORMS FOR VETERANS CLAIMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2124.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1286, as amended."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VA HOME LOAN PROGRAM REFORM ACT",
+   "title": "VA HOME LOAN PROGRAM REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2126.htm",
+   "sentences": [
+    "Mr. Speaker, this Biden program was estimated to cost over $15 billion in tax dollars.",
+    "Mr. Van Orden's bill, H.R. 1815, as amended, is a fiscally responsible solution to enhance the VA home loan program and give veterans the assistance they might need if they are in home loan debt.",
+    "The Congressional Budget Office estimates that this bill would have saved money by keeping the veterans out of foreclosure.",
+    "At least it gives off-step to secure these loans to make sure that as few as possible face foreclosure.",
+    "Mr. Speaker, I rise today in support of H.R. 1815, as amended, offered by the gentleman from Wisconsin (Mr. Van Orden), my friend and colleague.",
+    "Mr. Speaker, I continue to urge support of H.R. 1815.",
+    "Representative Van Orden and I will continue working on a cure to this problem."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VA BUDGET SHORTFALL ACCOUNTABILITY ACT",
+   "title": "VA BUDGET SHORTFALL ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2129.htm",
+   "sentences": [
+    "Last July, VA informed Congress about a potential $15 billion shortfall.",
+    "Mr. Speaker, I rise today in support of H.R. 1823, as amended.",
+    "I am proud to support General Bergman's bill to do exactly that."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING VA TRAINING FOR MILITARY SEXUAL TRAUMA CLAIMS ACT",
+   "title": "IMPROVING VA TRAINING FOR MILITARY SEXUAL TRAUMA CLAIMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2130.htm",
+   "sentences": [
+    "This bill would require that VA claims processors and contracted disability compensation examiners undergo annual sensitivity training to prevent retraumatizing survivors of military sexual trauma who are pursuing claims for VA benefits.",
+    "Mr. Speaker, today, I rise in support of H.R. 2201, as amended."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTOMOTIVE SUPPORT SERVICES TO IMPROVE SAFE TRANSPORTATION ACT OF 2025",
+   "title": "AUTOMOTIVE SUPPORT SERVICES TO IMPROVE SAFE TRANSPORTATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2132.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1364, as amended."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS CLAIMS EDUCATION ACT OF 2025",
+   "title": "VETERANS CLAIMS EDUCATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2133.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1578, as amended, introduced by my colleague from California (Mr. Peters).",
+    "I thank Representative Peters for his work on this bill, and I urge all of my colleagues to support H.R. 1578, as amended."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS EDUCATION TRANSPARENCY AND TRAINING ACT",
+   "title": "VETERANS EDUCATION TRANSPARENCY AND TRAINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1430-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 981 offered by the gentleman from Wisconsin (Mr. Van Orden), my friend and colleague.",
+    "I support a veteran getting accurate estimates of what their expenses would look like.",
+    "I do not support veterans having to choose a school based off of incorrect financial information."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MONTGOMERY GI BILL SELECTED RESERVES TUITION FAIRNESS ACT OF 2025",
+   "title": "MONTGOMERY GI BILL SELECTED RESERVES TUITION FAIRNESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1432.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 983, offered by my friend and colleague, the gentleman from Wisconsin (Mr. Van Orden)."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRIORITIZING VETERANS' SURVIVORS ACT",
+   "title": "PRIORITIZING VETERANS' SURVIVORS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1433.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1228, offered by my friend and colleague Representative Ciscomani of Arizona.",
+    "Now, I am proud to co-lead this bill with Representative Ciscomani on behalf of the surviving families of our Nation's heroes, and I urge my colleagues to support H.R. 1228."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VIETNAM VETERANS LIVER FLUKE CANCER STUDY ACT",
+   "title": "VIETNAM VETERANS LIVER FLUKE CANCER STUDY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1435.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 586, as amended, offered by Representative LaLota from New York, my friend and fellow veteran.",
+    "I urge my colleagues to support H.R. 586, as amended."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLEAR COMMUNICATION FOR VETERANS CLAIMS ACT",
+   "title": "CLEAR COMMUNICATION FOR VETERANS CLAIMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1437.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1039, as amended."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAIRNESS FOR SERVICEMEMBERS AND THEIR FAMILIES ACT OF 2025",
+   "title": "FAIRNESS FOR SERVICEMEMBERS AND THEIR FAMILIES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1439-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 970 offered by my colleague from Washington (Ms. Strickland)."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVER FOR VETERANS ACT",
+   "title": "DELIVER FOR VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1439.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 877, as amended, offered by my friend and colleague, the delegate from Guam (Mr. Moylan)."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDAL OF HONOR ACT",
+   "title": "MEDAL OF HONOR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH857.htm",
+   "sentences": [
+    "The Medal of Honor special pension is intended to repay part of the debt that our Nation owes them.",
+    "Mr. Speaker, I rise today in support of H.R. 695, offered by my colleague, the gentleman from Texas (Mr. Nehls).",
+    "The bill is fully offset by using a bipartisan offset related to older veterans and pensions, and I urge all of my colleagues to support H.R. 695, as amended."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "capito",
+ "name": "Shelley Moore Capito",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 23,
+  "sentences": 192
+ },
+ "statements": [
+  {
+   "date": "2026-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Bipartisan American Affordability and Jobs Act of 2026 (Executive Calendar)",
+   "title": "Bipartisan American Affordability and Jobs Act of 2026 (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-20/html/CREC-2026-11-20-pt1-PgS5832-4.htm",
+   "sentences": [
+    "Similarly, I would like to thank my House classmate Chairman Sam Graves and his staff led by Nick Christensen for their work on the PERMIT Act that served as a basis for the Clean Water Act permitting provisions in this bill.",
+    "Senator Whitehouse, the Senate's foremost champion of action to address climate change; Senator Lee is one of the body's most committed conservatives; Senator Heinrich is fiercely committed to protecting our Nation's public lands; and I am a West Virginian who supports wholeheartedly my State's coal and natural gas industry."
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SURVIVOR JUSTICE TAX PREVENTION ACT",
+   "title": "SURVIVOR JUSTICE TAX PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgS5797-2.htm",
+   "sentences": [
+    "I am going to yield, with the permission of the Chair, to the ranking member of the Indian Affairs Committee to explain an important part of the managers' amendment.",
+    "Mr. President, I ask unanimous consent that notwithstanding adoption of the substitute amendment No. 6883, the following be the only amendment in order, the Lee-Heinrich-Capito- Whitehouse No. 7030; further, that the Senate vote on the amendment with no further intervening action or debate, with 60 affirmative votes required for adoption; and following the disposition of the amendment, Calendar No. 463, H.R. 2347, as amended, be read a third time, and the Senate vote on passage of the bill as amended; finally, if passed, the motion to reconsider be considered made and laid upon the table.",
+    "We are going to really face a test here in this Chamber--a test of our ability to work together, to hold to making meaningful difference in the lives of people we serve.",
+    "After we introduced the bill, we continued working together to prepare a bipartisan substitute amendment, made changes in response to feedback from our colleagues in both the House and Senate and from stakeholders across the country.",
+    "Mr. President, since there is not time now to work out an agreement, disappointingly, after we have spent all this time on the amendments, given the objections we just heard, I am going to ask for unanimous consent now to call up the bipartisan managers' amendment."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgS5337-7.htm",
+   "sentences": [
+    "This is, I think, something that all of us--and I appreciate the fact that he made the point: If you are voting against this bill, you are voting against 100,000 new jobs, and you are voting against making data centers pay.",
+    "NEPA--we have heard a lot of about NEPA; it has been in effect, I think, since the seventies--and the Clean Water Act and the Endangered Species Act are in the EPW section.",
+    "This is legislation that would make potential data centers pay their own way-- pay their own way--instead of American consumers facing higher electric bills, higher power bills, higher utility bills.",
+    "It includes oil and gas producers and solar energy groups, labor unions and business associations.",
+    "Demonstrating the breadth of support this bill has, the Laborers' International Union of North America general president, Brent Booker, gave the following statement of support: For more than a decade, LIUNA has testified before Congress, submitted comments, participated in roundtables, and endorsed numerous iterations of permitting [reform].",
+    "And, finally, representing a broad coalition of labor groups, in a letter from Sean McGarvey, president of North America's Building Trades Unions, he said: This legislation represents a significant step toward a more efficient permitting system that supports job creation, strengthens America's energy and infrastructure capabilities, and helps reduce costs for working families.",
+    "We have introduced the Bipartisan American Affordability and Jobs Act of 2026.",
+    "I have introduced multiple bills over multiple years to approve this process.",
+    "This legislation reflects a vast amount of perspectives and priorities, and I am proud of the product that we are voting on today."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. RES. 188",
+   "title": "S.J. RES. 188",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgS2508.htm",
+   "sentences": [
+    "According to the EPA, by 2021, mercury emissions from coal-fired powerplants were down 90 percent compared to pre-2012 levels.",
+    "Mr. President, I rise today in opposition to S.J. Res. 188, the CRA introduced by my colleague from Rhode Island Senator Whitehouse to overturn the Trump EPA's repeal of the Biden MATS rule.",
+    "So I urge my colleagues to vote no on this CRA."
+   ]
+  },
+  {
+   "date": "2026-03-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgS1314.htm",
+   "sentences": [
+    "It requires all voters show a photo ID.",
+    "It requires all voters provide proof of citizenship when registering to vote, and it ends the abuses of the absentee voting system that we have seen in several States.",
+    "And it does not allow transgender mutilation surgery for children.",
+    "The SAVE America Act reflects the basic expectation that America's elections need to be safe and secure.",
+    "The SAVE America Act ensures that those who are registered to vote are actually those who are eligible to vote.",
+    "The SAVE America Act makes that expectation explicit by requiring proof of citizenship at the point of registration--again, not complicated.",
+    "It provides them an opportunity to register and vote without a proof of citizenship.",
+    "The SAVE America Act closes this illegal voting loophole by requiring photo ID to vote, proof of citizenship to register, and requiring States to remove noncitizens from the voter rolls.",
+    "In fact, 62 percent of Americans support proof of citizenship in order to register to vote.",
+    "Let me be clear: This legislation does not eliminate absentee voting or mail- in voting.",
+    "In some States, we have seen practices that go well beyond traditional absentee voting.",
+    "Or it includes also automatically enrolling voters in advance in absentee voting simply because they had used it once before.",
+    "The SAVE America Act vote puts guardrails in place to prevent those abuses while still preserving absentee voting for those who truly need it.",
+    "In the 2024 general election, only 2.9 percent of our West Virginia ballots cast mail-in ballots.",
+    "We have got FEMA, the Coast Guard, and thousands of law enforcement officers operating during a time when Americans expect and deserve effective emergency response.",
+    "This shutdown weakens America's border security.",
+    "And I will note this issue is not an issue in West Virginia.",
+    "I urge my colleagues to end this shutdown, restore stability, and put the safety of our Nation first."
+   ]
+  },
+  {
+   "date": "2026-01-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-30/html/CREC-2026-01-30-pt1-PgS411.htm",
+   "sentences": [
+    "As she has stated, this amendment would eliminate HHS funding provided in the bill--which the Trump administration actually requested in their budget--that will allow the Agency to drastically improve sponsor vetting for unaccompanied children, ensuring that they are no longer released to human traffickers.",
+    "Thus, this funding will help to reimburse States, like Texas and Florida, for the cost of statutorily required assistance to certain legal refugees and to support victims of trafficking and victims of torture.",
+    "I do thank Senator Paul, but I rise in opposition to his amendment.",
+    "I urge my colleagues to vote against this amendment."
+   ]
+  },
+  {
+   "date": "2026-01-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-29/html/CREC-2026-01-29-pt1-PgS357-8.htm",
+   "sentences": [
+    "Not surprisingly, fossil fuels and nuclear power provided the bulk of electricity during this week's storm and the intense cold that has followed.",
+    "At 8 a.m. on Tuesday morning, fossil energy sources, including coal, natural gas, and oil, provided two-thirds of PJM's power, and another 23.6 percent of that was nuclear power.",
+    "Wind power produced more on Friday--wind is the blue--but then it basically disappears on Saturday because the wind wasn't blowing.",
+    "The Biden EPA had an entire strategy for pursuing multiple regulations, and I will just name a few of them: Clean Power Plan 2.0, ELG rules for powerplants, coal ash regulations, unachievable particulate matter rules, ozone rules, and the MATS rule--all to make it impossible to keep a coal plant open.",
+    "The administration canceled the Keystone XL Pipeline and, working with their allies in State governments, stood in the way of pipelines that could move abundant natural gas produced in West Virginia, Pennsylvania, and Ohio to gas-starved areas in our Northeast and in our Southeast.",
+    "I was very proud of the bipartisan work that we did in passing the ADVANCE Act to make nuclear licensing more efficient, but even that overwhelmingly bipartisan bill took years longer to pass because of a handful of Democrat opponents.",
+    "The bill includes a number of Member priorities, such as greater investments in America's biomedical research, childcare, mental and rural health, workforce development, and continued efforts to combat the opioid epidemic.",
+    "Common sense tells us that in the peak heat of summer or the depth of a winter cold, we are going to consume more electricity.",
+    "But our country must have enough dispatchable baseload energy--that is from green on down--the type of reliable power that fossil fuels and nuclear provide, if we are going to stay warm in situations such as this during the depths of the winter.",
+    "Going forward, I will continue working with my colleagues on both sides of the aisle to lock in commonsense permitting reform so that projects of all types, including sources of dispatchable baseload electricity, can be permitted through a fair and efficient process.",
+    "Government Funding Mr. President, I am going to switch gears here to another hat that I wear, and I want to talk about another topic--and that is the progress we have made in restoring a functioning appropriations process--and the critical importance of the work before us.",
+    "So we are supporting prevention, treatment, research, and recovery programs."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgS8211-9.htm",
+   "sentences": [
+    "Fracking and shale gas have revolutionized American energy, leading to lower prices, job growth, and increased energy security.",
+    "According to the Energy Information Administration, the rapid expansion of natural gas in the United States has decreased-- decreased--the power sector's carbon dioxide emissions by over 35 percent in the last 20 years.",
+    "Additionally, upstream oil and gas production reduced its methane emissions by more than 40 percent over the last 10 years.",
+    "Natural gas is an affordable, reliable, and clean source of energy, vital to reducing our emissions.",
+    "Our Nation is poised to unleash a nuclear power revival, and a strong NRC, guided by exceptional leadership, is central to enabling the use of nuclear energy.",
+    "Fully realizing nuclear energy's potential will improve electric reliability, which I spoke about in my former remarks, strengthen American energy and national security, and drive economic growth.",
+    "In the years since, our nuclear energy sector has matured, technology has advanced, and safety has been prioritized, as always.",
+    "Last year, in passing my bill, the ADVANCE Act, Congress spoke with an overwhelming bipartisan voice that we must urgently modernize our regulations to prioritize what matters most.",
+    "The ADVANCE Act and President Trump's Executive order both empower the Commission to deliver on a vision of deploying more nuclear power and doing so quickly and safely.",
+    "I am confident that Ho Nieh will carry the principles of good regulation forward as the Commission implements our Nation's nuclear energy policy.",
+    "As the leader of the most consequential office of the NRC--that office is called the Office of Nuclear Reactor Regulation--he laid out a vision of the NRC's role to make sure that the safe use of nuclear energy is possible.",
+    "This set the tone for what the Commission established earlier this year when they revised their mission statement, as directed by the ADVANCE Act.",
+    "He also served on loan to the Institute of Nuclear Power Operations--the industry's own nuclear safety watchdog that seeks to promote excellence in nuclear performance.",
+    "The CRA is an attempt to take us back to Biden-era energy policy, and I urge my colleagues to swiftly reject this motion to proceed.",
+    "Nomination of Ho Nieh Mr. President, I rise today in support of Ho Nieh's confirmation to be a member of the Nuclear Regulatory Commission.",
+    "I support Ho Nieh's nomination to serve as a member of the Nuclear Regulatory Commission because of his outstanding technical expertise, his real-world knowledge of regulatory compliance, his strong leadership and experience, and his commitment to executing the recently updated NRC mission statement.",
+    "I urge my colleagues to join me in voting for his confirmation to the NRC."
+   ]
+  },
+  {
+   "date": "2025-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-08/html/CREC-2025-11-08-pt1-PgS8009-9.htm",
+   "sentences": [
+    "Capitol Police, folks here, many of the folks in and around the DC area, and many West Virginians, because we have a lot of Federal employees, don't know where their next paycheck is coming from.",
+    "So instead of ending the shutdown, the Democrats have come forward with their so-called offer, which is a 1-year extension of the ObamaCare act subsidies.",
+    "They are out of the COVID era, from the healthcare that they created and proudly called ObamaCare, which none of us voted for.",
+    "They want to double down on the failures of ObamaCare.",
+    "How many times have I sat on this floor and heard the argument from the other side that all we hear about are millionaires and billionaires, eliminating taxes for them, when they themselves are putting $26 billion into the hands of very wealthy companies but, also, individuals are able to take advantage of these.",
+    "People who keep our communities safe, they are forced to wait, to wonder, and to worry.",
+    "The chart here, which I am going to put up here myself, is something that I think really hasn't been talked about enough, but it is really something we need to focus on because it shows the fairness of what is going on today.",
+    "But we are not going to negotiate until the government is open.",
+    "We passed three bipartisan bills through the full Senate, and, hopefully, we will be able to vote on those shortly.",
+    "So, today, I urge my Democratic colleagues: Stop with the gimmicks."
+   ]
+  },
+  {
+   "date": "2025-10-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Anniversary of Hurricane Helene (Executive Session)",
+   "title": "Anniversary of Hurricane Helene (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-01/html/CREC-2025-10-01-pt1-PgS6894-4.htm",
+   "sentences": [
+    "Unfortunately, hard-working families all across this country who rely on critical government services are the ones who are suffering.",
+    "So, to all of those public servants who are bearing the brunt of this nonsense, please know how much I value your contribution every day and that I will work tirelessly to get you back to work, to get you back to that certainty that you need.",
+    "As Leader Thune has indicated, we will continue bringing forward opportunities for the Democrats to join us in reopening the government.",
+    "We will keep voting to do the right thing and giving them a chance to do the same.",
+    "So I urge my colleagues across the aisle to quit playing the political games, to end the shutdown, and join us in funding the government."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"EM",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"EMISSIONS BUDGET AND ALLOWANCE...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgS6631-2.htm",
+   "sentences": [
+    "I rise today in opposition as well to S.J. Res. 60, a CRA that is introduced by my colleague from Rhode Island Senator Whitehouse to overturn this technical correction to the State of Indiana's emissions.",
+    "The interim technical correction is necessary due to the Supreme Court's stay of the good neighbor rule.",
+    "In 2022, those powerplants announced they would no longer close, which EPA counted for in their good neighbor rule, so the Supreme Court subsequently stayed that rule, meaning that Indiana was forced into their now-outdated 2021 emissions budget.",
+    "The Trump administration's EPA finalized this interim rule that this CRA would repeal to adjust Indiana's emissions budget to reflect what it would have looked like in 2021 had those plants not announced retirement.",
+    "I urge my colleagues to vote no and return the Senate floor to our business of confirming President Trump's nominees in the face of historic obstruction.",
+    "If we are going to win the race in AI, if we are going to win the next race in innovation, we have to have more power."
+   ]
+  },
+  {
+   "date": "2025-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Permitting Reform (Executive Calendar)",
+   "title": "Permitting Reform (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-30/html/CREC-2025-07-30-pt1-PgS4862.htm",
+   "sentences": [
+    "And while we were able to include some reforms in the bipartisan Fiscal Responsibility Act, it is very clear that much more needs to be done.",
+    "The Supreme Court delivered a unanimous decision in the Seven County Infrastructure Coalition case in May that validated what many of my colleagues and I have long been saying, and that is that the responsibilities of Federal Agencies under the NEPA policy act have evolved beyond what Congress intended, creating roadblocks instead of considering the environment in Federal decision- making.",
+    "Mr. President, I am really pleased to be here on the last week--or around the last week--that we are going to be here before we return in September.",
+    "Throughout my time in the Senate, I have introduced multiple bills on the subject and have been involved in the regulations on this topic.",
+    "I do believe--and Senator Whitehouse and I know this well--that there are areas of strong disagreement in this area between the two of us, and what we are going to try to do is to find those areas of like thinking that moves the process along.",
+    "And I can guarantee you that I will be at the forefront of these efforts to make sure that these reforms can become a reality."
+   ]
+  },
+  {
+   "date": "2025-07-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of David Wright (Executive Calendar)",
+   "title": "Nomination of David Wright (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-28/html/CREC-2025-07-28-pt1-PgS4761-4.htm",
+   "sentences": [
+    "Nuclear energy is absolutely central to achieving these goals.",
+    "Through this time, the NRC has evolved on how it functions, but far too frequently, these functions have been inefficient, time-consuming, expensive, and have not allowed our nuclear innovators and the American people to fully realize the benefits of nuclear power.",
+    "That is why, last year, Congress passed the ADVANCE Act with overwhelming, bipartisan support to make the NRC's functions more efficient, predictable, and affordable.",
+    "In January, as required by the ADVANCE Act, the Commission updated its mission statement for the first time in a generation.",
+    "Chairman Wright worked with his colleagues to revise the mission statement which reads: The NRC protects public health and safety and advances the nation's common defense and security by enabling the safe and secure use and deployment of civilian nuclear energy technologies and radioactive materials through efficient and reliable licensing, oversight, and regulation for the benefit of society and the environment.",
+    "I support this revised mission statement as it aligns with what Congress intended by passing the ADVANCE Act.",
+    "Madam President, I rise today in support of David Wright's nomination to serve as a member of the Nuclear Regulatory Commission."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 1",
+   "title": "H.R. 1",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4080.htm",
+   "sentences": [
+    "Section 60002 both repeals Section 134 of the Clean Air Act which established the Greenhouse Gas Reduction Fund--GGRF--and rescinds all unobligated funds that were appropriated to carry it out.",
+    "Section 134 of the Clean Air Act was established in section 60103 of the Inflation Reduction Act, IRA (Public Law 117-169).",
+    "Of this amount, $19.97 billion was appropriated pursuant to paragraphs (2) and (3) of subsection (a)-- to finance greenhouse gas reduction initiatives.",
+    "Title VI of the OBBA includes rescissions from other IRA programs.",
+    "By both repealing Section 134 of the Clean Air Act and rescinding all unobligated funding for the program, section 60002 of the OBBBA makes clear that Congress does not want the GGRF program to continue and does not want funding to be reobligated."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of David Fotouhi (Executive Session)",
+   "title": "Nomination of David Fotouhi (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgS3281.htm",
+   "sentences": [
+    "I rise today in support of the nomination of David Fotouhi to be the Deputy Administrator of Environmental Protection Agency."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.J. RES. 61",
+   "title": "H.J. RES. 61",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgS3252.htm",
+   "sentences": [
+    "I did so because this rule is fundamentally flawed and does not reflect the intent of section 112 of the Clean Air Act.",
+    "This application of section 112 of the Clean Air Act runs contrary to congressional intent.",
+    "Section 112 of the Clean Air Act was enacted to protect public health and the environment."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.J. RES. 88",
+   "title": "H.J. RES. 88",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgS3086-3.htm",
+   "sentences": [
+    "Mr. President, as chairman of the Environment and Public Works Committee, I rise in support of my resolution to block the Biden EPA's rule approving California's Clean Air Act waiver for its Advanced Clean Cars II regulation.",
+    "I want to explain to my colleagues why they should join me in disapproving of this job-killing electric vehicle mandate and why the use of the Congressional Review Act is appropriate and correct in this instance.",
+    "Typically, the Clean Air Act stops State laws that regulate emissions for motor vehicles in favor of a national standard by the Environmental Protection Agency.",
+    "Since 1966, the Clean Air Act has given California, and only California, the ability to seek a waiver of Federal mobile source emissions standards.",
+    "But over the past two decades, California has used its waiver authority to push its extreme climate policies on the rest of the country, which was never the intent of the Clean Air Act's decision to grant the waiver.",
+    "As EPA recognized in 2008, the rationale for California's ability to seek waivers does not extend to greenhouse gases, as these levels are not unique to California but are global in nature.",
+    "But now, in addition to establishing an EV mandate, California is also seeking to use its waiver authority to eliminate diesel trucks.",
+    "The Advanced Clean Trucks and Low NOX truck rules set unattainable standards that will harm our ability to ship goods across this country.",
+    "While my remarks today will focus on the resolution of disapproval that I have offered on the Advanced Clean Cars II EV mandate, I strongly support the resolutions that will follow that are offered by Senator Fischer and Senator Mullin to block these rules.",
+    "California's Advanced Clean Cars II program requires all--and I did say ``all''--vehicles sold in that State, Washington, DC, and 11 other States that have adopted California's standard--all cars--to be zero- emissions vehicles by the year 2035; meaning, in one decade, these States, totaling 30 percent of the new car market, will have a full ban on the sale of gasoline-powered vehicles--and not just those but also on traditional hybrids as well.",
+    "The regulation begins in 2026--next year--by requiring affected States to sell 35 percent electric vehicles.",
+    "I want to be clear, I have no problem with electric vehicles.",
+    "But I do have a big problem with electric vehicle mandates that replace the will of the consumer and the will of the government.",
+    "Only 2.3 percent of new vehicle registrations in West Virginia last year were electric vehicles.",
+    "Nationwide, EVs accounted for only 10.2 percent of new vehicle registrations.",
+    "The plain truth is, electric vehicles are not popular.",
+    "Well, there is no practical reason that the Biden EPA couldn't have acted on California's waiver in 2023 or even during the first 11 months of 2024, but we know why the previous administration decided to wait: President Biden and his team knew that electric vehicle mandates were unpopular with most American voters, especially swing State voters that would decide the Presidential and congressional elections.",
+    "Both the text of the Clean Air Act and public sentiment should have led the Biden EPA to reject California's application.",
+    "EPA's approval was published in the Federal Register on January 6, 2025, the same day Congress certified President Trump's victory.",
+    "I decided to use the CRA process and introduce this resolution against EPA's approval of the California electric vehicle mandate for two reasons.",
+    "The issue in 2008 was an action by the Centers for Medicare and Medicaid Services directing States on how they were to administer the Children's Health Insurance Program.",
+    "I have personally gone to the GAO myself on several occasions when I believed that an Agency action not submitted to Congress under the CRA should, in fact, be considered a rule, like I did in 2022, when GAO agreed with me that guidance from the Federal Highway Administration instructing State departments of transportation to prioritize bike and pedestrian projects over new highway capacity projects should be a rule.",
+    "I want to quickly talk about the filibuster and the Parliamentarian because this has been raised.",
+    "My Democrat colleagues say that our action today undermines the legislative filibuster, and that is simply not true.",
+    "I support the legislative filibuster.",
+    "I have supported the legislative filibuster as a Senator in the majority and as a Senator in the minority.",
+    "The Congressional Review Act, which was passed with the legislative filibuster in place, has stood since 1996, providing a narrow exception to the Senate's normal practice of extended debate.",
+    "I want to make two things crystal clear: The procedural action we have taken today is not about the filibuster and not about the Parliamentarian.",
+    "We are deciding whether California, DC, and 11 other States can impose an electric vehicle mandate that will take away consumer choice, drive up prices, and eliminate jobs across the country.",
+    "West Virginians don't want California's climate policy.",
+    "I strongly oppose these California EV mandates and strongly oppose a process that allows such a major national policy decision to be made against the will of the American people, without input from their Members of Congress.",
+    "I urge my colleagues to vote tomorrow for the resolution of disapproval."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING THE NATIONAL EMERGENCY DECLARED TO IMPOSE GLOBAL TARIFFS",
+   "title": "TERMINATING THE NATIONAL EMERGENCY DECLARED TO IMPOSE GLOBAL TARIFFS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgS2683-2.htm",
+   "sentences": [
+    "This misguided rule would remove a major incentive for dozens of industries to reduce emissions.",
+    "Under this rule, once you classify as a major source, you are always considered a major source even though--you would even be prohibited from ever achieving an ``area source'' status again even if your emissions output decreased below the applicable threshold.",
+    "We should instead provide incentives for industries to lower their emissions and keep alive the option of returning to an area source once emissions are reduced.",
+    "Over the last 20 years, no other country has reduced its emissions like the United States, and we do not need overly restrictive regulations to continue this.",
+    "The former rule, which was put into place by President Trump's first administration, encourages industries to take proactive steps to reduce emissions without increasing regulatory burdens.",
+    "We need to take every opportunity available to rightsize regulatory requirements prohibiting our ability to revitalize American manufacturing and achieve energy dominance, while taking steps that reduce emissions through innovative technologies that I have advocated for alongside my colleagues across both aisles of this Chamber.",
+    "Mr. President, I rise today in support of my friend from Utah, Senator Curtis, and his Congressional Review Act resolution to overturn the final rule of the Biden Environmental Protection Agency's review of final rule reclassification of major sources as area sources."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING THE NATIONAL EMERGENCY DECLARED WITH RESPECT TO ENERGY",
+   "title": "TERMINATING THE NATIONAL EMERGENCY DECLARED WITH RESPECT TO ENERGY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgS1383-2.htm",
+   "sentences": [
+    "Mr. President, I rise today in support of my friend from North Dakota, Senator Hoeven's Congressional Review Act resolution to block the implementation of the Biden administration's waste emissions charge, otherwise known as the natural gas tax.",
+    "Fracking and shale gas have both revolutionized and transformed American energy, leading to lower prices, job growth, and increased American energy security.",
+    "According to the Energy Information Administration, the rapid expansion of natural gas-fired powerplants in this country has decreased the power sector's carbon dioxide emissions by 35 percent over the last 25 years.",
+    "Natural gas has the potential to further reduce American greenhouse gas emissions if we continue to increase production.",
+    "The rule would not only radically expand the scope of emissions required to be reported by each facility under the Greenhouse Gas Reporting Program, but it also excessively expands the number of facilities that are covered by subpart W and consequently responsible to pay the natural gas tax.",
+    "Due to this uninformed and artificial overestimate of U.S. methane emissions, some smaller operators who were once below the waste emissions threshold are now at risk of seeing their reported methane emissions inflated and owing large sums under the natural gas tax.",
+    "As chairman of the Environment and Public Works Committee, I have long intended to stop the natural gas tax, and we will continue to pursue this through the reconciliation process."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: U.S. SENATE COMMITTEE ON ENVIRONMENT AND PUBLIC WORKS RULES OF PROCEDURE",
+   "title": "U.S. SENATE COMMITTEE ON ENVIRONMENT AND PUBLIC WORKS RULES OF PROCEDURE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgS663.htm",
+   "sentences": [
+    "SUBCOMMITTEES (a) Regularly Established Subcommittees: The committee has four subcommittees: Transportation and Infrastructure; Clean Air, Climate, and Nuclear Innovation and Safety; Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight; and Fisheries, Water, and Wildlife. (b) Membership: The Chair, after consulting with the Ranking Minority Member, shall select members of the subcommittees.",
+    "STATUTORY RESPONSIBILITIES AND OTHER MATTERS (a) Environmental Impact Statements: No project or legislation proposed by any executive branch agency may be approved, or otherwise acted upon, unless the committee has received a final environmental impact statement relative to it, in accordance with section 102(2)(C) of the National Environmental Policy Act, and the written comments of the Administrator of the Environmental Protection Agency, in accordance with section 309 of the Clean Air Act.",
+    "A project described in the report may be considered for committee action only if it is submitted as a prospectus in accordance with section 7(a) and is subject to the provisions of paragraph (1) of this rule. (d) Naming Public Facilities: The Committee may not name a building, structure or facility for any living person, except: former Presidents or former Vice Presidents of the United States; former Members of Congress over 70 years of age; former Justices of the United States Supreme Court over 70 years of age; or Federal judges over 75 years of age who are fully retired or have taken senior status."
+   ]
+  },
+  {
+   "date": "2025-01-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Lee Zeldin (Executive Session)",
+   "title": "Nomination of Lee Zeldin (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-29/html/CREC-2025-01-29-pt1-PgS460.htm",
+   "sentences": [
+    "American energy producers were hit with regulation after regulation, intended to shut down reliable and affordable electric generation, strangling the very innovation and economic growth that led to decreasing emissions and pollutants, and America's energy dominance during President Trump's first term in office.",
+    "Energy demand is sharply increasing as we strive to bolster America's energy security, bring manufacturing back to our shores, and compete with China to win the artificial intelligence race.",
+    "Mr. President, I rise today in support of the nomination of Lee M. Zeldin to serve as the Administrator of the Environmental Protection Agency.",
+    "I urge my colleagues to support Lee Zeldin to serve as the EPA Administrator."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgS161.htm",
+   "sentences": [
+    "Mr. President, this week, the Senate is proud to take another step forward toward securing our southern border as we consider the Laken Riley Act.",
+    "With this bill, the Senate will be taking a bold step for the safety and prosperity of American citizens after 4 years of mismanagement and decline and, ultimately, chaos at the border.",
+    "The Laken Riley Act is the answer to a loud and clear call made at the ballot box by the American people to unite us as a country, to put America first, and to address the tragic lawlessness that we see on our southern border.",
+    "The radical open border policies of the left have caused untold suffering to families across the Nation--families like the Riley family, who is still grieving the unimaginable loss of their beautiful daughter Laken.",
+    "The Laken Riley Act, while too late to prevent Laken's tragedy, is a targeted bill that will save countless other lives.",
+    "It will ensure that other illegal immigrants who are not dissimilar to her killer are detained for their crimes before they get a chance to commit another and maybe a more serious offense.",
+    "Laken's killer was arrested three times and released three times--once at the border, again in New York City, and a third time in Athens, GA, mere weeks before he took Laken's life.",
+    "That will not happen and cannot happen under the Laken Riley Act.",
+    "We all want to keep our communities safe--all Republicans and Democrats.",
+    "Our Republican conference is completely unified behind the Laken Riley Act, and we have managed to win over a majority of Senate Democrats for the bill's initial consideration, including two who have signed on as cosponsors.",
+    "With that, I look forward to advancing the Laken Riley Act this week.",
+    "To the families watching who have lost loved ones, like the Riley family, we stand with you.",
+    "We feel your grief and your pain, and we will guard against this heartbreak ever happening again."
+   ]
+  },
+  {
+   "date": "2025-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT--Motion To Proceed",
+   "title": "LAKEN RILEY ACT--Motion To Proceed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-08/html/CREC-2025-01-08-pt1-PgS46-3.htm",
+   "sentences": [
+    "So I am very excited, as I know all of us are, to embark on a serious mission of not just government waste but pulling in our government spending to make it make sense and more toward a balanced budget.",
+    "Under President Biden, wasteful government spending has just spiraled out of control, harming our hard-working Americans and their livelihood.",
+    "In the 119th Congress, Federal spending comes with a promissory note of accountability to the American people.",
+    "When it comes to wasteful government spending in the jurisdiction of my committee, which is the Environment and Public Works Committee--I am very thrilled, as of yesterday's meeting, to become the new chairman there--look no further than the groundwork we laid last year through the investigations of my committee.",
+    "Most importantly, we want a clear paper trail so the bureaucrats at the EPA can't bury wasteful spending on the way out the door.",
+    "The committee has already uncovered handouts to groups that are anti- American, anti-Semitic, anti-Israel, anti-police, and anti-border security.",
+    "For example, of the $3 billion of the IRA dedicated to the new environmental and climate justice block grant program through the IRA, the EPA announced over the last several months that it would give $50 million to Climate Justice Alliance, $50 million to the New York Immigration Coalition, and $100 million to the NDN Collective.",
+    "The Climate Justice Alliance promotes wildly anti- Semitic rhetoric.",
+    "The New York Immigration Coalition advocates for radical open border policies.",
+    "If we are to spend taxpayers' dollars, I do not believe there is an article I role for unlimited government spending; it must be in the furtherance of the benefit of our Nation.",
+    "We will end the reckless spending spree, we will put an end to bureaucratic waste, and we will aim to ensure that every dollar that leaves the Federal Treasury is used in service to the American people.",
+    "But I have seen this on the TV, and I would say it from this podium, that I urge all residents, if you are told to evacuate, don't waste any time.",
+    "We plan to hit the ground running, really, on day one of the Trump administration, to take aim at the worst excesses left over."
+   ]
+  }
+ ]
+}

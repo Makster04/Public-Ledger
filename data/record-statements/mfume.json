@@ -1,0 +1,76 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mfume",
+ "name": "Kweisi Mfume",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 10
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SETTLEMENT AGREEMENT INFORMATION DATABASE ACT OF 2026",
+   "title": "SETTLEMENT AGREEMENT INFORMATION DATABASE ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgH6270.htm",
+   "sentences": [
+    "Some of those agreements deal with police departments and how they function.",
+    "We are going to spend millions of your dollars, and here is what we want you to know, and here is what we don't include in it."
+   ]
+  },
+  {
+   "date": "2026-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JANUARY 6 ATTACK",
+   "title": "JANUARY 6 ATTACK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-06/html/CREC-2026-01-06-pt1-PgH6-3.htm",
+   "sentences": [
+    "Five police officers were murdered that day, 150 or so were taken to the hospital, 18 of which had to stay there."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO A DEDICATED CONGRESSIONAL STAFF MEMBER, MS. DEBORAH PERRY",
+   "title": "PAYING TRIBUTE TO A DEDICATED CONGRESSIONAL STAFF MEMBER, MS. DEBORAH PERRY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgE1181-4.htm",
+   "sentences": [
+    "She began her career as a civil servant, spending nearly a decade working for Baltimore City's Police Department and Department of Social Services.",
+    "After briefly working in the Congressional offices of Frederick Richmond (D-NY-14) and Julian Dixon (D-CA-28), Ms. Perry started a business, Case Management Plus, providing outsourcing services to attorneys to assist with personal injury and workers' compensation cases.",
+    "In a testament to her character, after the 2008 financial crash, Ms. Perry came out of retirement to help handle the influx of housing and foreclosure cases.",
+    "She worked tirelessly for struggling Baltimoreans, developing and organizing 12 Foreclosure Prevention Workshops."
+   ]
+  },
+  {
+   "date": "2025-10-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO A GREAT AUTHOR, DIRECTOR, AND BALTIMOREAN: JOHN WATERS",
+   "title": "PAYING TRIBUTE TO A GREAT AUTHOR, DIRECTOR, AND BALTIMOREAN: JOHN WATERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-17/html/CREC-2025-10-17-pt1-PgE972-5.htm",
+   "sentences": [
+    "A veritable gay ambassador himself, his artistic adaptations have provided a safe haven for his fans to embrace their creativity and self-expression while showing the world the brilliance contained within the LGBTQ community."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO TIM TOOTEN",
+   "title": "PAYING TRIBUTE TO TIM TOOTEN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH695-4.htm",
+   "sentences": [
+    "We will miss you, my friend, but we will never ever forget you. ____________________"
+   ]
+  }
+ ]
+}

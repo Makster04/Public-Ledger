@@ -1,0 +1,252 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "palmer",
+ "name": "Gary J. Palmer",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 16,
+  "sentences": 96
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF ENERGY NUCLEAR TRANSPARENCY ACT",
+   "title": "DEPARTMENT OF ENERGY NUCLEAR TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6099.htm",
+   "sentences": [
+    "We can advance American nuclear energy while maintaining public trust, protecting our communities, and ensuring responsible stewardship of these critical facilities.",
+    "Mr. Speaker, I rise in support of the bill from the gentlewoman from Florida (Ms. Castor).",
+    "Mr. Speaker, I am happy to support Representative Castor's bill, and I urge my colleagues to do so as well."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN ENRICHMENT DEPLOYMENT ACT",
+   "title": "AMERICAN ENRICHMENT DEPLOYMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6100.htm",
+   "sentences": [
+    "America must take control of its nuclear fuel supply chain and reduce our dependence on foreign sources of uranium enrichment.",
+    "Nuclear energy is essential to meeting our growing energy demands, strengthening our national security, and maintaining our competitive edge.",
+    "Mr. Speaker, I rise in support of H.R. 9612, the American Enrichment Deployment Act, and I thank the gentleman from South Carolina (Mr. Fry) for its introduction.",
+    "I am proud to support Congressman Fry's American Enrichment Deployment Act, and I encourage my colleagues to do the same.",
+    "Mr. Speaker, I urge my colleagues to support each of these bills."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE ISSUED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO THE \"CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE ISSUED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO THE \"CALIFORNIA STATE NONROAD ENGINE POLLUTION CONTROL STANDARDS; COMMERCIAL HARBOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5953.htm",
+   "sentences": [
+    "H.J. Res. 213, led by Representative James Gallagher from California, would overturn a waiver allowing California to regulate emissions from tugboats, ferries, and other commercial harbor craft.",
+    "It would expand California's EV and zero-emissions mandates to ferries and would impose the most stringent emissions standard for diesel engines to tugboats and other harbor craft.",
+    "The State rules would require the use of engine technology that may be appropriate for trucks, including the use of diesel particulate filters, but it would require significant reengineering for use on boats.",
+    "The use of diesel particulate filters poses fire risks on land, which is a problem in itself, but it would be disastrous when used on a boat.",
+    "Multiple maritime labor unions also oppose California's regulations and urged EPA to reject the waiver due to these safety concerns.",
+    "The air emissions from tugboats and the tugboat industry are very low.",
+    "Mr. Speaker, I rise in support of H.J. Res. 213.",
+    "I will comment on whether or not the EPA has the authority to declare these as rulemaking.",
+    "We have got a lot more work to do, but we are committed to doing it."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COORDINATING AND HARNESSING AMERICA'S RECOVERY OF MINERALS ACT",
+   "title": "COORDINATING AND HARNESSING AMERICA'S RECOVERY OF MINERALS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5676.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to speak in support of my bill, H.R. 9617."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ZEROING OUT MONETARY BENEFITS IMPROPERLY EXPENDED ACT",
+   "title": "ZEROING OUT MONETARY BENEFITS IMPROPERLY EXPENDED ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3925.htm",
+   "sentences": [
+    "Absent major systematic reforms, we will continue to violate the public trust at increasingly unsustainable levels."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LULU'S LAW",
+   "title": "LULU'S LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3642-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 1003, Lulu's Law."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT",
+   "title": "FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3013.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1174, I call up the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildfire risk, and ask for its immediate consideration in the House.",
+    "Unlike wildfires, prescribed burns do not automatically qualify as exceptional events under the current provisions of the Clean Air Act.",
+    "Congress must amend the Clean Air Act to allow wildfire mitigation to be included as an exceptional events exception.",
+    "The FIRE Act directly amends the Clean Air Act so that prescribed burns are treated as exceptional events and States are not penalized for wildfire mitigation measures.",
+    "With what is projected to be a severe wildfire season around the corner, Congress must modernize the Clean Air Act to ensure that wildfire mitigation practices are eligible for the exceptional events rule.",
+    "When you compare the emissions from a prescribed burn to the emissions from a wildfire, it could be as little as 17 percent of what a wildfire produces.",
+    "They both emit fine particulate matter and carbon dioxide and carbon monoxide, but prescribed burns are managed to ensure more complete combustion and less overall polluted output per acre, whereas a wildfire consumes more fuel and produces denser and more toxic smoke.",
+    "It is about reducing emissions by prescribed burns.",
+    "If my colleagues on the other side of the aisle are interested in looking up this data, what they are saying is in direct contradiction to what the science shows: A prescribed burn reduces the amount of emissions compared to a wildfire.",
+    "The Republicans in the Working Families Tax Cut Act put in $50 billion to transform rural healthcare, and every one of my Democratic colleagues voted against it.",
+    "The data shows, as I have already pointed out, that the emissions from controlled burns, from prescribed burns, could be as low as 17 percent of what would come from a wildfire.",
+    "As I pointed out numerous times about my Democratic colleagues and their talking about what they want to do for healthcare and worried about people's health, we put $50 billion into the Working Families Tax Cut Act to help rural healthcare, to transform rural healthcare.",
+    "They have talked about healthcare, and I pointed out three or four times already that Congress put $50 billion into the Working Families Tax Cuts Act specifically to modernize and improve rural healthcare.",
+    "This year, 51.4 million senior citizens paid no income tax on their Social Security.",
+    "In the Working Families Tax Cuts Act, Congress eliminated taxes on tips.",
+    "It reduces the amount of emissions into the atmosphere.",
+    "They cite climate change in the frequency and intensity of wildfires.",
+    "Mr. Speaker, I rise today in support of H.R. 6387, the FIRE Act, a bipartisan bill introduced by Congressman Gabe Evans of Colorado and co-led by Congressman Adam Gray of California."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "title": "FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1174, I call up the bill (H.R. 6409) to amend the Clean Air Act to clarify standards for emissions emanating from outside of the United States, and for other purposes, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in support of H.R. 6409, the FENCES Act, which addresses the need for commonsense reforms on how emissions impact our Nation's ability to support domestic manufacturing and unleash affordable and reliable energy.",
+    "Many of these costly regulations result from regulatory burdens associated with the Clean Air Act.",
+    "The legislation considered today makes targeted and effective reforms that will support American job creators while continuing to protect our environment and the air we breathe.",
+    "The legislation produced by my colleague Congressman August Pfluger of Texas ensures that States and local communities are not penalized for foreign air emissions emanating from outside our borders.",
+    "Across the country, States are being unfairly penalized for pollution that originates from foreign nations, including air emissions from natural events, like the Canadian wildfires.",
+    "Currently, the Clean Air Act allows States to adjust their plans when foreign emissions prevent them from meeting Federal standards.",
+    "However, the guidance from the EPA under the previous administration narrowed that relief, limiting it to only human-caused emissions from abroad.",
+    "This bill clarifies that all foreign emissions, whether natural or man-made, are excluded from consideration when determining whether a State meets national air quality standards.",
+    "Importantly, the bill allows States to account for foreign emissions earlier in the regulatory process, instead of forcing them to wait until the very end and risk costly delays or Federal sanctions.",
+    "That is a big part of what we are trying to do with the modernization of the Clean Air Act and these bills that we bring before the House today.",
+    "What we are trying to do with this long overdue effort to modernize the Clean Air Act is to not only continue to keep our air clean and our water clean, but to improve economic opportunity to people, particularly people who are disadvantaged such as I was growing up.",
+    "I will remind them again that, in particular, the State of Ohio received $202,030,262 from the Rural Health Transformation Fund that every Democrat voted against."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REDUCING AND ELIMINATING DUPLICATIVE ENVIRONMENTAL REGULATIONS ACT",
+   "title": "REDUCING AND ELIMINATING DUPLICATIVE ENVIRONMENTAL REGULATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2909.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1174, I call up the bill (H.R. 6398) to amend the Clean Air Act relating to review by the Environmental Protection Agency of proposed legislation, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in support of H.R. 6398, the RED Tape Act, which would address burdensome regulations in the Clean Air Act and provide the permitting reform needed to support American innovation.",
+    "The legislation, which was introduced by my friend Congressman John Joyce of Pennsylvania eliminates the duplicative requirement in the Clean Air Act that requires the EPA to assess and provide feedback on environmental impact statements other agencies prepare under NEPA.",
+    "Requiring them to provide a secondary review under section 309 is unnecessary, duplicative, and inefficient, leading to more delays and higher costs for American job creators.",
+    "The Clean Air Act is long overdue for an update to eliminate outdated provisions that are holding back American manufacturing.",
+    "Mr. Speaker, one of the things I will point out is in 2025, the Supreme Court decision in Seven County Infrastructure Coalition v. Eagle County, Colorado, ruled that upstream-downstream impacts of Federal action fall outside the scope of the environmental impact statement under NEPA."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt1-PgH2782-8.htm",
+   "sentences": [
+    "The illegal action is more like an action by a cartel than it is a trustworthy government, and it raises serious questions about entering into any agreements with Mexico.",
+    "Mr. Speaker, I rise today in strong support of H.R. 7084, the Defending American Property Abroad Act of 2026.",
+    "I thank Representative Pfluger for his work on this important issue, and I urge my colleagues to vote ``yes'' on H.R. 7084."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE T",
+   "title": "PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2121-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of this rule and the SAVE America Act.",
+    "This essential legislation would require, as we have said previously, proof of citizenship when registering to vote and the presentation of a valid ID when at the ballot box.",
+    "Currently, only 13 States do not require any form of voter ID.",
+    "My Democratic colleagues claim that requiring a photo ID to vote is too burdensome.",
+    "Purchasing insurance or donating blood requires a photo ID.",
+    "I hope that people who don't have a photo ID don't get sick because they need a photo ID to purchase things like Sudafed, NyQuil, and Mucinex D. I hope they don't have to pick up a package at the post office because we have to have a photo ID to pick up a package at the post office.",
+    "If we require a photo ID to prevent fraud in these areas I just mentioned, why are my colleagues so opposed to preventing fraud in elections?",
+    "It is hard to argue that a photo ID is too much to ask for in voting when Americans already use it routinely for far less important activities.",
+    "Mr. Speaker, protecting election integrity should be a priority.",
+    "I urge my colleagues to support this rule and the underlying SAVE America Act to secure our elections.",
+    "Mr. Speaker, I point out that in 2005, 18 of the 21 members of a bipartisan Federal commission headed by former President Jimmy Carter and former Secretary of State James Baker came out in support of photo ID requirements more stringent than what Indiana had at that time. ``Voters in nearly 100 democracies use a photo identification card without fear of infringement on their rights,'' the commission stated.",
+    "In regard to voter registration fraud, just last year, six people were indicted for fraudulent voter registration forms submitted ahead of last year's Presidential election.",
+    "There was an ACORN whistleblower who worked for both it and its Project Vote registration affiliate from 2005 until 2006.",
+    "She said: I assure you if you can get them on the rolls, you can get them to vote, especially using absentee ballots.",
+    "There were documents that were provided by the whistleblower that indicated that the goal of ACORN's New Mexico affiliate was that only 40 percent of its submitted registrations had to be valid.",
+    "I think fraudulent voter registration is a problem.",
+    "I think requiring a valid photo ID, as President Jimmy Carter and former Secretary of State Jim Baker said, is totally a way to ensure integrity in our elections and is not a burden on the people."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT",
+   "title": "SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2150.htm",
+   "sentences": [
+    "If the United States hasn't learned anything else from the war in Ukraine, it should be this, this is a fundamental principle: No nation, let alone America, should be reliant on adversarial nations for energy and refined materials, critical minerals, rare earth elements that would threaten our economy and threaten our national security, but that is where we find ourselves and where we put ourselves in terms of access to critical minerals, processed and refined critical minerals.",
+    "I will just add that up for them.",
+    "We cannot allow the prosperity of future generations to be dictated by adversarial nations.",
+    "Mr. Speaker, I urge my colleagues to keep America at the forefront of the next generation's economy and support H.R. 3617."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "Doug was a dear friend whom I will miss.",
+    "I will miss Doug and our weekly Thursday morning Bible studies.",
+    "I will miss his humbleness, his even temper, his humor, and his presence in this body.",
+    "I will miss hearing him call me Francis Gary Powers after the U.S. spy plane pilot who was shot down over Russia and captured in the 1960s."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: POWER PLANT RELIABILITY ACT OF 2025",
+   "title": "POWER PLANT RELIABILITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5927.htm",
+   "sentences": [
+    "Making a bad situation worse, we need significant energy resources to compete in the artificial intelligence arms race.",
+    "Manufacturing, industrial processing, and AI data centers all require affordable and abundant electricity that only comes from baseload and dispatchable resources.",
+    "Mr. Speaker, I rise in support of H.R. 3632, the Power Plant Reliability Act, sponsored by my colleague Mr. Griffith from Virginia's Ninth Congressional District.",
+    "Mr. Speaker, I urge my colleagues to support the legislation."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TUSKEGEE AIRMEN MOMENT OF SILENCE",
+   "title": "TUSKEGEE AIRMEN MOMENT OF SILENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4810.htm",
+   "sentences": [
+    "I will share a little bit about them."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FOR CONSUMER GAS-FIRED...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH884-6.htm",
+   "sentences": [
+    "Mr. Speaker, during the first week of the Biden administration, my colleagues on the other side of the aisle shut down the Keystone XL Pipeline.",
+    "Additionally, this rule mandate of fuel switching would set a dangerous precedent for natural gas appliances.",
+    "Mr. Speaker, in conclusion, H.J. Res. 20 is essential for prioritizing consumer choice, protecting natural gas appliances, keeping prices affordable, and undoing the damage inflicted on the American people by the Biden-Harris administration for the past 4 years.",
+    "I introduced this resolution because we are determined to restore a quality of life in this country that we enjoyed before the Democratic Party took over the White House and the House and the Senate.",
+    "Mr. Speaker, I rise in support of H.J. Res. 20.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes.''"
+   ]
+  }
+ ]
+}

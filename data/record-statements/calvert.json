@@ -1,0 +1,183 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "calvert",
+ "name": "Ken Calvert",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 13,
+  "sentences": 54
+ },
+ "statements": [
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS REAUTHORIZATION ACT OF 2026",
+   "title": "ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4652.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the ACT for ALS Reauthorization Act, H.R. 8205, legislation that will reauthorize programs that support research and development of drugs and other therapies to address ALS.",
+    "I urge all of my colleagues to stand with these families, give them hope, and pass the ACT for ALS Reauthorization Act."
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO JOHN R. FORBES",
+   "title": "PAYING TRIBUTE TO JOHN R. FORBES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgE266-4.htm",
+   "sentences": [
+    "Among many consequential assignments, he developed and coordinated the Chairman's foreign engagement plan in response to the threat of Russian incursion into Ukraine and Chinese influence in the region."
+   ]
+  },
+  {
+   "date": "2026-03-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BILL TO OUTLAW WOUNDING OF OFFICIAL WORKING ANIMALS ACT OF 2025",
+   "title": "BILL TO OUTLAW WOUNDING OF OFFICIAL WORKING ANIMALS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgH2600-3.htm",
+   "sentences": [
+    "This legislation was inspired by a member of Customs and Border Protection's Beagle Brigade named Freddie.",
+    "Freddie is a 5-year-old agricultural inspection beagle who works for Customs and Border Protection.",
+    "With increased attacks on law enforcement, it is vital that our working animals receive the protections that they deserve.",
+    "This legislation would make the assault of any Federal working animal by a non-U.S. citizen a deportable offense.",
+    "Mr. Speaker, I rise today in strong support of H.R. 4638, the Federal Working Animal Protection Act.",
+    "For that reason, I introduced the Federal Working Animal Protection Act.",
+    "I urge all my colleagues to approve this bill."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER COLORADO RIVER MULTI-SPECIES CONSERVATION PROGRAM AMENDMENT ACT OF 2025",
+   "title": "LOWER COLORADO RIVER MULTI-SPECIES CONSERVATION PROGRAM AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2527.htm",
+   "sentences": [
+    "There are multiple examples of funds established by congressional action in the U.S. Treasury that are directed to be invested or to earn interest, such as the Social Security Trust Fund.",
+    "I urge all of my colleagues to approve this bill."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1960.htm",
+   "sentences": [
+    "Russia and Iran remain persistent threats.",
+    "Madam Speaker, I rise today in strong support of the Senate amendment to H.R. 7148, which includes my bill, the Department of Defense Appropriations Act, 2026.",
+    "Madam Speaker, these are strategic investments to protect the American people and to project strength abroad, and I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "While bloodied, Russia and Iran continue to threaten Europe and the Middle East.",
+    "It enhances investments in the fifth and sixth-generation aircraft, including the F-35, the F-47, and the F/A-XX.",
+    "Madam Chair, I rise today in strong support of this bill, the Department of Defense Appropriations Act for Fiscal Year 2026."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS SCAM AND FRAUD EVASION ACT OF 2025",
+   "title": "VETERANS SCAM AND FRAUD EVASION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH937.htm",
+   "sentences": [
+    "That is why I introduced H.R. 1663, the Veterans Scam And Fraud Evasion Act, or VSAFE Act."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "They understood his dislike of food waste, smartphones, and ketchup on hot dogs.",
+    "I will very much miss my friend and my colleague."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+   "sentences": [
+    "It is not a manufacturer and does not manufacture lab-grown meat.",
+    "BioMADE has never funded research projects for lab-grown meat, has no current research projects on lab-grown meat, and has no plans to fund projects on lab- grown meat in the future.",
+    "I point out that Taiwan makes 90 percent of the world's chips and close to 100 percent of the highly needed chips for artificial intelligence and high technical devices.",
+    "Mr. Chair, the amendment strikes $15 million for HIV prevention education activities undertaken in connection with the United States military training exercises and the humanitarian assistance activities conducted primarily in African nations.",
+    "Mr. Chair, the gentlewoman's amendment would strike $500 million in funding for the vital Israeli missile defense capability.",
+    "Over the past 2 years, Israel repeatedly has been attacked by Iran and its terrorist proxy groups, Hezbollah, Hamas, and the Houthis.",
+    "Each time, these groups have vowed to destroy the State of Israel.",
+    "The United States has affirmed our resolve to stand with Israel by helping defend against the recent missile raids launched by Iran against Israel's civilian population.",
+    "The success of Israel's robust missile defense capability is, in part, because these funds were provided in this bill and prior bills.",
+    "Sadly, we saw for years how the Biden administration failed to provide Ukraine the resources necessary to fight back in an effective way against Russian aggression.",
+    "Just the other day, President Trump took decisive action to provide weapons to Ukraine to defend against these unprovoked attacks.",
+    "As he continues to work toward a peaceful solution, we should not remove the ability to provide what he thinks will help the Ukrainian people to prevent further losses and use as leverage to negotiate a peace agreement hopefully very soon.",
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Mr. Fine) having assumed the chair, Ms. Malliotakis, Acting Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 4016) making appropriations for the Department of Defense for the fiscal year ending September 30, 2026, and for other purposes, had come to no resolution thereon. ____________________",
+    "Mr. Chair, I rise in opposition to the amendment.",
+    "We cannot allow China to be the world innovation leader in any field, including bioindustrial manufacturing.",
+    "I am going to make a point here.",
+    "I urge a ``no'' vote on this amendment.",
+    "With that, I urge a ``no'' vote on the amendment.",
+    "Madam Chair, I rise in opposition to the gentlewoman's amendment.",
+    "Madam Chair, I urge a ``no'' vote on the amendment.",
+    "What I am going to do is work with the gentlewoman as we move forward on this legislation to make sure that we don't have any unintended consequences in the language.",
+    "We will do that as we move this legislation forward.",
+    "Madam Chair, I certainly rise in support of the amendment."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3333.htm",
+   "sentences": [
+    "Further, many fled repressive Taliban rule and have been afforded temporary protected status given the unstable situation that still exists in Afghanistan today.",
+    "We should be clear that the Special Immigrant Visa background check process is robust, but that diligent process can take time, which is why it is critical that those Afghans who still have Special Immigrant Visa applications pending should be given protection to remain in the United States until the applications are adjudicated.",
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Mr. Harris of North Carolina) having assumed the chair, Mr. Fine, Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 4016) making appropriations for the Department of Defense for the fiscal year ending September 30, 2026, and for other purposes, had come to no resolution thereon. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of the fiscal year 2026 Military Construction, Veterans Affairs, and Related Agencies Appropriations Act.",
+    "Mr. Chair, I urge all of my colleagues to support this important bill."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE OUR PORTS ACT OF 2025",
+   "title": "SECURE OUR PORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2556.htm",
+   "sentences": [
+    "Last year, the Select Committee on the Chinese Communist Party issued a report highlighting its national security concerns over the influence of critical port infrastructure by Chinese-owned enterprise.",
+    "Allowing foreign adversaries like China, Russia, North Korea, and Iran to own and operate port infrastructure would threaten that very foundation and creates a serious liability.",
+    "America's ports are vital to our economic and national security, and I urge all my colleagues to approve this bill."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIX OUR FORESTS ACT",
+   "title": "FIX OUR FORESTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-6.htm",
+   "sentences": [
+    "In the wake of these fires, there's been a lot of discussion about state policies that need to be examined to better protect our residents and I wholeheartedly support reform at the state level.",
+    "I urge my colleagues to support this important bipartisan bill and protect Americans from wildfires."
+   ]
+  }
+ ]
+}

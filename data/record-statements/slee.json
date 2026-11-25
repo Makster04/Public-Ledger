@@ -1,0 +1,73 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "slee",
+ "name": "Susie Lee",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2026-06-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GEOTHERMAL ENERGY ADVANCEMENT ACT",
+   "title": "GEOTHERMAL ENERGY ADVANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-02/html/CREC-2026-06-02-pt1-PgH3760.htm",
+   "sentences": [
+    "Let me be clear: This is baseload, 24/7 clean energy, and that is why I am proud to co-lead the Geothermal Energy Advancement Act with Congressman Hurd.",
+    "At long last, we will be leveling the playing field for this promising and proven 24/7 clean energy source.",
+    "Mr. Speaker, I rise today in support of a rare issue that is uniting Americans from the right, the left, and the center: geothermal energy.",
+    "Mr. Speaker, I urge my colleagues to support our bipartisan, commonsense, and cost-saving legislation."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING ORGANIZED RETAIL CRIME ACT OF 2025",
+   "title": "COMBATING ORGANIZED RETAIL CRIME ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3364.htm",
+   "sentences": [
+    "Mr. Speaker, during Police Week, I am proud to stand in support of the Combating Organized Retail Crime Act.",
+    "Our local and State law enforcement agencies are doing incredible work, but this shouldn't be left up to local police alone.",
+    "CORCA would update the law to designate organized retail crime as a Federal offense and give law enforcement the tools they need to crack down on criminal operations.",
+    "I am grateful that over 200 of my colleagues cosponsored this legislation, and I ask both Democrats and Republicans to join me in passing it to support our local businesses, equip our law enforcement with the resources they need, and keep our retail workers and customers safe."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3050-5.htm",
+   "sentences": [
+    "Mr. Speaker, I was in committee voting on DACA."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6033-2.htm",
+   "sentences": [
+    "That is why I am leading 30 of my colleagues in championing the most supported amendment to the SPEED Act by far to save solar and wind from this administration's war on clean energy.",
+    "On July 15, President Trump's Interior Department actively chose to wrap the biggest piece of permitting red tape around the neck of the renewable energy sector that we have ever seen, directing the Interior Secretary to personally sign off on every permit to solar and wind energy.",
+    "Mr. Chair, every day, more Americans are concerned about huge data centers causing their electric prices to spiral even further out of control.",
+    "If we are going to bring down energy bills for everyone, the path forward is obvious."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ON BEHALF OF THE CONSUMER FINANCIAL PROTECTION BUREAU",
+   "title": "ON BEHALF OF THE CONSUMER FINANCIAL PROTECTION BUREAU",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH653-8.htm",
+   "sentences": [
+    "Let me tell you what the CFPB has done to protect working families for years, such as capping bank overdraft fees and credit card late fees, suing big banks for taking advantage of families, saving Americans over $20 billion from abusive corporations.",
+    "Now, Elon Musk and DOGE want to kill it because it is better for billionaires and big corporations and not for you.",
+    "If you are concerned about these attacks on working families and attacks on our Constitution itself, I implore you to call your nearest Republican."
+   ]
+  }
+ ]
+}

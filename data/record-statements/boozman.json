@@ -1,0 +1,133 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "boozman",
+ "name": "John Boozman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 31
+ },
+ "statements": [
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM BILL",
+   "title": "FARM BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgS3042.htm",
+   "sentences": [
+    "Hard-working farmers and ranchers are struggling to break even, let alone profit, in this current economic climate.",
+    "That is why we took urgent action last year to update farm programs in the Working Families Tax Cut.",
+    "The Working Families Tax Cut enhances commodity programs, expands access to more affordable crop insurance, and makes those tools more responsive to real-world risk.",
+    "It strengthens local economies, improves quality of life, and delivers critical infrastructure and services from safe and reliable drinking water to expanded broadband access, medical care, and affordable childcare--helping families thrive and supporting growth in our rural communities.",
+    "I urge my colleagues to join me in sending a clear message to rural America: The Senate stands with our farm families, and we are committed to ensuring they have the certainty, the tools, and the support they need to succeed."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "title": "WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgS8259-2.htm",
+   "sentences": [
+    "I rise today in support of S. 222, the Whole Milk for Healthy Kids Act."
+   ]
+  },
+  {
+   "date": "2025-08-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-08-01/html/CREC-2025-08-01-pt1-PgS5189.htm",
+   "sentences": [
+    "The VA reports that veterans who contact VCL are 10 times more likely to receive mental health care than those who do not.",
+    "I support this amendment and urge its adoption and would be glad to scream out ``yes'' with a voice vote.",
+    "Vote on Amendment No. 3432 Mr. President, veterans who are found by competent judicial authority to be a danger to themselves or others are reported to NICS under current law.",
+    "Under the terms of current law with this amendment in place, veterans who are found to be a danger to themselves or others by a judge, magistrate, or other judicial authority are reported to the NICS system, as is entirely appropriate.",
+    "For this reason, I urge a ``no'' vote."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026--Motion to Proceed",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026--Motion to Proceed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgS4585.htm",
+   "sentences": [
+    "Additionally, we allocated approximately $23 billion to support critical mental health issues and programs to prevent veterans' homelessness and provide funding for innovative medical research."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+   "sentences": [
+    "Any individual who is physically or mentally unfit for employment continues to be exempt from the work requirement.",
+    "I urge my colleagues to vote to waive the point of order.",
+    "Vote on Motion Mr. President, I rise in opposition to the motion raised by my colleague from New Mexico.",
+    "I urge my colleagues to vote no.",
+    "Vote on Motion Mr. President, I rise in opposition to the motion raised by my colleague from Illinois.",
+    "Vote on Motion Mr. President, I rise in opposition to the motion raised by my colleague from California.",
+    "Mr. President, I rise in opposition to the amendment offered by my colleague from Minnesota."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Stephen Vaden",
+   "title": "Nomination of Stephen Vaden",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgS3298-2.htm",
+   "sentences": [
+    "Mr. President, I rise today in support of Judge Stephen Vaden's nomination to be the Deputy Secretary of Agriculture.",
+    "Judge Vaden is ready to serve again, and I urge my colleagues to confirm him."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+   "sentences": [
+    "Mr. President, I rise in opposition to Amendment No. 1726.",
+    "I urge my colleagues to vote no on the amendment."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amendment No. 1646 to Amendment No. 1717",
+   "title": "Amendment No. 1646 to Amendment No. 1717",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2350.htm",
+   "sentences": [
+    "Mr. President, I rise in opposition to amendment No. 1441.",
+    "I urge my colleagues to vote against this amendment."
+   ]
+  },
+  {
+   "date": "2025-02-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-20/html/CREC-2025-02-20-pt1-PgS1075-2.htm",
+   "sentences": [
+    "This budget resolution is focused on securing the border, strengthening the military, and bolstering American energy independence.",
+    "Madam President, I rise in opposition to amendment No. 664.",
+    "I urge my colleagues to vote against the amendment.",
+    "Vote on Amendment No. 664 Madam President, I rise in opposition to amendment No. 233.",
+    "For this reason, I urge my colleagues to vote no on this amendment."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Brooke Rollins (Executive Session)",
+   "title": "Nomination of Brooke Rollins (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgS958-2.htm",
+   "sentences": [
+    "Hard-working farmers who grow our food are struggling to operate, let alone make a profit in this current economic climate."
+   ]
+  }
+ ]
+}

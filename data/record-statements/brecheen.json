@@ -1,0 +1,45 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "brecheen",
+ "name": "Josh Brecheen",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 2,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL JUBILEE OF PRAYER, PRAISE, AND THANKSGIVING",
+   "title": "NATIONAL JUBILEE OF PRAYER, PRAISE, AND THANKSGIVING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3385.htm",
+   "sentences": [
+    "We have forgotten the gracious hand which preserved us in peace and multiplied and enriched and strengthened us. . . . we have become too self- sufficient to feel the necessity of redeeming and preserving grace, too proud to pray to the God that made us. ``It behooves us, then, to humble ourselves before the offended power, to confess our national sins and pray for clemency and forgiveness.'' When pondering Lincoln's words, I was personally reminded of Deuteronomy 8:11, I will paraphrase, where Moses warns the people of God not to turn away from the Lord.",
+    "I am going to further delay my remarks.",
+    "I am going to ask him to share some remarks also.",
+    "Given the rest of their schedules and the delay of my commentary, I am going to continue on with my commentary.",
+    "This mandate is not only a part of our biblical heritage, as we will continue to point out in this special hour, it is part of our congressional and our Nation's heritage.",
+    "If America continues down a path of immorality, pride, and turning to idolatry, we will see the demise of our Nation.",
+    "Before I do that, I will extend that I am truly grateful that he and I in talking about doing this said to me, I think this is bigger than even that.",
+    "Mr. Speaker, I am going to land the plane with this."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDICAID",
+   "title": "MEDICAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1898-4.htm",
+   "sentences": [
+    "Mr. Speaker, Medicaid was created to provide health insurance for the poor, blind, disabled, pregnant, and elderly.",
+    "Mr. Speaker, as you can see from this Paragon chart, Medicaid is no longer for the poor and now serves more people living above the poverty line than below it.",
+    "Additionally, since 2012, the Medicaid population has grown 60 percent, while the U.S. population has only grown about 6 percent according to the Foundation for Government Accountability.",
+    "Following ObamaCare's Medicaid expansion, able-bodied adults now make up its largest subgroup according to FGA.",
+    "In reality, FGA has records for 21 million beneficiaries among 23 States showing that 6 in 10 of these able-bodied beneficiaries do not work at all.",
+    "As more able-bodied individuals are added to Medicaid, truly needy and disabled Americans are being displaced from priority services. 700,000 disabled Americans are stuck on Medicaid wait lists while able- bodied adults above the poverty line have access to taxpayer-funded healthcare.",
+    "The goal of social programs should never be to gain able-bodied enrollees, but to decrease government dependency and help them escape poverty as shown during this chart's depiction of the Contract With America and the first Trump administration time period. ____________________"
+   ]
+  }
+ ]
+}

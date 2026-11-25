@@ -1,0 +1,137 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "finstad",
+ "name": "Brad Finstad",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 35
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SBIC REPORTING MODERNIZATION ACT OF 2026",
+   "title": "SBIC REPORTING MODERNIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6156.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 10353, the SBIC Reporting Modernization Act of 2026.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 9576, NATIONAL FRAUD ENFORCEMENT DIVISION ACT OF 2026; PROVIDING FOR CONSIDERATION OF H.R. 10326, PREVENTING RIP-OFFS AND OBTAIN",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 9576, NATIONAL FRAUD ENFORCEMENT DIVISION ACT OF 2026; PROVIDING FOR CONSIDERATION OF H.R. 10326, PREVENTING RIP-OFFS AND OBTAINING OVERSIGHT OF FUNDS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5646.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the rule and my bill, H.R. 9576, the National Fraud Enforcement Division Act of 2026.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SBA ARTIFICIAL INTELLIGENCE UTILIZATION ACT OF 2026",
+   "title": "SBA ARTIFICIAL INTELLIGENCE UTILIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4148.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 8881, the SBA Artificial Intelligence Utilization Act.",
+    "In a time when artificial intelligence and machine learning continue to become more accessible and revolutionize the way businesses operate, it is important to ensure our Federal agencies adopt AI responsibly, especially in the SBA.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER P",
+   "title": "CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER PAYMENT PREVENTION REFORMS WILL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4089.htm",
+   "sentences": [
+    "It has allowed bad actors to steal billions of hard-earned taxpayer dollars, taxpayer dollars meant to feed hungry children, taxpayer dollars meant to help with and assist low-income adults, taxpayer dollars that were intended to help veterans afford housing, and taxpayer dollars that were meant to provide affordable childcare.",
+    "Mr. Speaker, I rise today in support of H. Res. 1335.",
+    "I am proud to support this legislation that holds fraudsters accountable.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "title": "NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3421.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1346, delivering on year-round, nationwide sales of E15.",
+    "I will choose reliance on my neighbors in southern Minnesota over our foreign adversaries to produce our domestic fuel supply every day of the week."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "The ag title of working families tax cuts made the most significant investment in farm safety net spending since the 2002 farm bill.",
+    "Mr. Chair, I rise today in strong support of H.R. 7567, the Farm, Food, and National Security Act of 2026.",
+    "I am committed to addressing these issues by passing a strong, bipartisan farm bill that is written by farmers and for farmers, by rural communities and for rural communities."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "title": "WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5857.htm",
+   "sentences": [
+    "As a father of seven, my wife and I have purchased our fair share of milk on trips to the grocery store.",
+    "Moving forward, every child across southern Minnesota and the rest of the Nation will have access to whole and 2 percent milk products when they go through the school lunch line.",
+    "I rise today in support of S. 222, the Whole Milk for Healthy Kids Act, which I was proud to help introduce alongside Chairman Thompson."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA A",
+   "title": "CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA AND ACROSS THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2909-4.htm",
+   "sentences": [
+    "I also express my personal gratitude to members of the New Ulm Police Department, the Brown County Sheriff's Office, and Sheriff Jason Seidl.",
+    "We have our fair share of that political disagreement in Minnesota, and we even have it here in the House Chamber.",
+    "Mr. Speaker, I rise today in support of H. Res. 519.",
+    "I will forever cherish the conversations and friendship that I had with her then and throughout the 20 years since.",
+    "I was proud to join every Member of the Minnesota delegation on both sides of the aisle to call out this act of hatred, and we will continue to do so together.",
+    "Mr. Speaker, I urge my colleagues to support this important resolution."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2483, SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2931, SAVE SBA FROM ",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2483, SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2931, SAVE SBA FROM SANCTUARY CITIES ACT OF 2025...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2431-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of this rule and the underlying bill, H.R. 2931, the Save SBA from Sanctuary Cities Act of 2025.",
+    "Over the past 4 years, the Biden administration's open-border policies have allowed millions of illegal immigrants to pour into our country.",
+    "Making matters worse, Democratic politicians in cities across our country have enacted sanctuary city policies that have further encouraged waves of illegal immigrants to come into our communities, circumventing Federal law and raising serious public safety concerns.",
+    "Last November, the American people overwhelmingly elected President Trump with a clear mandate to secure the border and restore public safety in our communities.",
+    "Despite the incredible efforts by this administration to secure our border and remove criminal aliens from our country, Democratic mayors have doubled down on their failed sanctuary city policies that harbor criminal illegal aliens and defy cooperation with Federal immigration enforcement.",
+    "For years, Minneapolis has passed several sanctuary city policies while at one point attempting to defund its own police department, further jeopardizing public safety.",
+    "My legislation, the Save SBA from Sanctuary Cities Act of 2025, would require the Small Business Administration to relocate its offices out of sanctuary city jurisdictions to better ensure that resources benefit American small businesses in rural communities without being entangled in local policies that promote lawlessness.",
+    "Mr. Speaker, I urge my colleagues to support this rule and the underlying bill."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INVESTING IN MAIN STREET ACT OF 2025",
+   "title": "INVESTING IN MAIN STREET ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH743.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 754, the Investing in Main Street Act of 2025, legislation which I am honored to co-lead with my colleague from California.",
+    "Mr. Speaker, I thank Representative Chu for partnering with me on this important legislation, and I urge my colleagues to vote in support of the Investing in Main Street Act of 2025."
+   ]
+  }
+ ]
+}

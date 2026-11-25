@@ -1,0 +1,83 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "leepa",
+ "name": "Summer L. Lee",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 35
+ },
+ "statements": [
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM LEBANON",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM LEBANON",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3814-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Lebanon War Powers Resolution introduced by my friend Congresswoman Rashida Tlaib.",
+    "The United States is actively participating in Israel's illegal invasion and bombing of Lebanon and its mass displacement of the Lebanese people.",
+    "This resolution is urgently needed to stop using our tax dollars to fund Israeli war crimes.",
+    "Israel is engaging in chemical warfare with U.S.-supplied white phosphorus.",
+    "The U.S. is providing targeting intelligence for Israeli strikes.",
+    "There are even credible reports that President Trump personally green-lit specific Israeli military operations in Lebanon.",
+    "This is exactly the kind of military involvement that Congress intended the War Powers Resolution to cover.",
+    "I urge my colleagues to consider that by supplying Israel with weapons and logistical support, we are giving Netanyahu the means to continue bombing and displacing thousands and thousands of people.",
+    "The American people overwhelmingly oppose Trump's cruel, wasteful, and illegal war in Iran.",
+    "If Trump is serious about ending this war, then we must prevent Israeli escalation in Lebanon.",
+    "As recently as this week's floor votes, Republicans are still out here inventing reasons why we can't help families here in America get food, support students trying to afford college, or fund childcare for working parents here.",
+    "Meanwhile, they are trying to give $1.5 trillion to the Pentagon, some of which will fund the kinds of U.S. weapons and systems for Israel that are being used to undermine a peace deal with Iran.",
+    "I urge my colleagues to vote ``yes'' on this important resolution."
+   ]
+  },
+  {
+   "date": "2026-05-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TESTIMONY OF MS. DANI BENSKY, \"SURVIVORS FIGHT FOR JUSTICE: EXPOSING EPSTEIN'S CRIMES IN PALM BEACH AND ACROSS THE WORLD\"",
+   "title": "TESTIMONY OF MS. DANI BENSKY, \"SURVIVORS FIGHT FOR JUSTICE: EXPOSING EPSTEIN'S CRIMES IN PALM BEACH AND ACROSS THE WORLD\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-26/html/CREC-2026-05-26-pt1-PgE490.htm",
+   "sentences": [
+    "Mr. Speaker, on May 12, 2026, Oversight Committee Democrats convened the first-ever hearing to solicit testimony from survivors of Jeffrey Epstein and Ghislaine Maxwell's crimes.",
+    "The hearing, ``Survivors Fight for Justice: Exposing Epstein's Crimes in Palm Beach and Across the World,'' marked a critical step forward in the fight for justice and accountability.",
+    "On behalf of all the survivors of Jeffrey Epstein and Ghislaine Maxwell's crimes, I rise to include in the Record the testimony offered by Ms. Dani Bensky: Hello, my name is Dani Bensky, I was abused by Jeffrey Epstein in 2004-05.",
+    "While there are co-conspirators who need to be held accountable for the parts they played in the operation of my abuse, I was trafficked only to Epstein, which was unfortunately not the case for so many others.",
+    "I'm here to tell you my story, which happens to fall in the middle of the 30 years of the Epstein timeline.",
+    "I was groomed prior to meeting Jeffrey Epstein.",
+    "I had seen the name ``Epstein'' listed on a donor wall and believed that his wealth and power had come from the medical profession.",
+    "Once my mother was rehabilitated, and I knew she would live, I finally extricated myself from Jeffrey Epstein and his web.",
+    "The Epstein case demonstrates that institutional systems have failed survivors time and time again.",
+    "Jeffrey had already threatened my friend, and he had told me that I would be charged with prostitution if I ever interacted with law enforcement.",
+    "The systemic failures of survivors extend beyond the victims of Jeffrey Epstein and Ghislane Maxwell, as documented by the passage of the Epstein Files Transparency Act.",
+    "The passage of the Epstein Files Transparency Act was meant to be a moment when survivors could regain their power and finally obtain the truth, transparency, and justice they deserve.",
+    "Who is the next Jeffrey Epstein?"
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMPOWERING EMPLOYER CHILD AND ELDER CARE SOLUTIONS ACT",
+   "title": "EMPOWERING EMPLOYER CHILD AND ELDER CARE SOLUTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH681.htm",
+   "sentences": [
+    "Mr. Speaker, we have a childcare crisis in this country.",
+    "That is almost one-half of the average annual salary of the childcare workers in my district.",
+    "Childcare, if folks can even find it, is pushing families into poverty as they are forced to make impossible choices between paying the rent or paying for care, between staying employed or staying home.",
+    "Republicans are doing everything in their power to undermine investments in childcare, including with this bill, which will allow employers to exclude childcare benefits from overtime pay.",
+    "Employees working overtime are the ones who need childcare the most and the bill undermines workers' ability to pay for that care.",
+    "My amendment would replace the text of this bill with the Child Care for Working Families Act.",
+    "Mr. Speaker, my legislation with Ranking Member Bobby Scott would make sure families actually have access to childcare slots, that no family spends more than 7 percent of their income on childcare, and that all early childhood educators make a livable wage.",
+    "If Republicans actually care about children and families, then I encourage them to pass the Child Care for Working Families Act."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  }
+ ]
+}

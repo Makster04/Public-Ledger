@@ -1,0 +1,88 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rounds",
+ "name": "Mike Rounds",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-08-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 5373",
+   "title": "Introductory Statement on S. 5373",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-07/html/CREC-2026-08-07-pt1-PgS4567-3.htm",
+   "sentences": [
+    "For many, this can be the difference between a tax return being on time or an absentee ballot being counted, simply because of where you live.",
+    "And that is the reason that I am introducing the USPS Executive Benefit and Bonus Removal Act."
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATEMENTS ON INTRODUCED BILLS AND JOINT RESOLUTIONS",
+   "title": "STATEMENTS ON INTRODUCED BILLS AND JOINT RESOLUTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-07/html/CREC-2026-08-07-pt1-PgS4567.htm",
+   "sentences": [
+    "For many, this can be the difference between a tax return being on time or an absentee ballot being counted, simply because of where you live.",
+    "And that is the reason that I am introducing the USPS Executive Benefit and Bonus Removal Act."
+   ]
+  },
+  {
+   "date": "2026-03-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVE America Act (Executive Session)",
+   "title": "SAVE America Act (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-21/html/CREC-2026-03-21-pt1-PgS1467-3.htm",
+   "sentences": [
+    "Mr. President, I rise today in support of the SAVE America Act, legislation that I have cosponsored to make certain that only U.S. citizens are voting in our elections.",
+    "This legislation would require proof of citizenship in our elections, and it would require that this citizenship be identified when registering to vote and by presenting a valid photo ID when casting your vote at the ballot box.",
+    "You need your photo ID to open a bank account, to rent a car, to start a job, or to board a plane."
+   ]
+  },
+  {
+   "date": "2026-03-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-12/html/CREC-2026-03-12-pt1-PgS1018.htm",
+   "sentences": [
+    "Housing affordability is not just an issue in major metropolitan areas; it is a challenge in small towns, farming communities, and rural counties across America.",
+    "In my home State of South Dakota, communities are growing, but the housing supply has not kept pace with demand.",
+    "Across rural America, thousands of affordable housing units financed through USDA's Section 515 Program are reaching the end of their mortgage terms.",
+    "Without congressional action, up to 400,000 Americans nationwide could face rent increases or displacement as these mortgages mature.",
+    "It also modernizes the USDA housing programs by allowing income calculations with HUD standards, streamlining loan approval and foreclosure processes, updating outdated information technology systems, and expanding eligibility for loan guarantees to include properties with a small additional home on the property and in-home daycare services.",
+    "The Unlocking Housing Supply Through Streamlined and Modernized Reviews Act modernizes the environmental review process under the National Environmental Policy Act for HUD-funded housing projects.",
+    "Mr. President, I rise today in support of the 21st Century ROAD to Housing Act--a bipartisan, bicameral effort to address one of the most pressing challenges facing families across the country: the cost and availability of housing.",
+    "First, the bill includes the Rural Housing Service Reform Act that I introduced with Senator Smith from Minnesota.",
+    "The bill also incorporates two additional pieces of legislation I introduced with Senator Kim to streamline housing development to bring new units online faster.",
+    "I urge my colleagues to support this bipartisan legislation and help put our Nation on a stronger path toward expanding housing opportunities for families in South Dakota and across the country."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"AI",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"AIR PLAN APPROVAL; SOUTH DAKOTA...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgS72.htm",
+   "sentences": [
+    "South Dakota has made substantial progress toward meeting EPA's ambitious 2064 visibility goals and has determined that no additional emissions goals are needed to make reasonable progress.",
+    "In recent years, the primary driver of visibility impairment has been wildfire smoke from Canada and the western United States, not in-State emissions.",
+    "Mr. President, I rise in opposition to S.J. Res. 86.",
+    "For these reasons, I urge my colleagues to vote against this resolution."
+   ]
+  },
+  {
+   "date": "2025-10-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-09/html/CREC-2025-10-09-pt1-PgS7062-3.htm",
+   "sentences": [
+    "Madam President, I rise in opposition to the amendment, but let me explain why."
+   ]
+  }
+ ]
+}

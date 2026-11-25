@@ -1,0 +1,25 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "harder",
+ "name": "Josh Harder",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 1,
+  "sentences": 4
+ },
+ "statements": [
+  {
+   "date": "2025-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NUTRIA ERADICATION AND CONTROL REAUTHORIZATION ACT OF 2025",
+   "title": "NUTRIA ERADICATION AND CONTROL REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgH449.htm",
+   "sentences": [
+    "My bill would reauthorize funding to strengthen eradication efforts for the invasive swamp rats, nutria, which are destroying our levees, harming local farmland, and infecting our very drinking water.",
+    "Last year, more than 1,300 nutria were captured in California, which is a record-breaking year for takings in the State.",
+    "Madam Speaker, I rise in support of my bill, the Nutria Eradication and Control Reauthorization Act of 2025, because communities in California and across the country are in a war right now against these giant swamp rats.",
+    "Madam Speaker, I urge my colleagues to pass my bill to stop this infestation from poisoning our waterways and damaging our communities."
+   ]
+  }
+ ]
+}

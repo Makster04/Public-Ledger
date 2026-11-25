@@ -1,0 +1,50 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rutherford",
+ "name": "John H. Rutherford",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 11
+ },
+ "statements": [
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "It aligns with President Trump's agenda to close our border and supports local, State, and Federal law enforcement officers that are deporting dangerous criminal aliens out of our communities.",
+    "Mr. Speaker, today I rise in support of the fiscal year 2026 Department of Homeland Security Appropriations Act and urge my colleagues to do the same.",
+    "It protects Americans and secures our homeland, and I urge all my colleagues to vote ``yes'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+   "sentences": [
+    "Iran, and its terrorist proxy groups, are threatening our allies and disrupting free trade in the Red Sea.",
+    "Finally, South American cartels and drug smugglers are harming the health and well-being of American citizens.",
+    "These ships assist in stopping narcotics, protecting the homeland from illicit maritime drug trafficking, and securing our border.",
+    "Mr. Chair, I rise in opposition to the Davidson amendment."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "I happen to know that House Republicans have been working diligently to fully fund the core Federal Government services so that President Trump and his administration can continue to identify the waste, fraud, and abuse of American tax dollars, protect our border, and support Americans, including our veterans--contrary to what you heard--our military families, first responders, of which I am a former, and our seniors.",
+    "Let's be clear, this bill will not hurt law enforcement by slashing COPS grants, nor will it zero out the toxic exposure fund for veterans.",
+    "Mr. Speaker, this bill would maintain government operations while responsibly protecting Social Security, Medicaid, and Medicare recipients from unnecessary disruption and the confusion that comes along with a government shutdown, promote public safety, renew our commitment to supporting law enforcement officers, raise pay for our junior enlisted troops by the largest amount in 40 years, fund important nutritional assistance for mothers, infants, and children, and the list goes on.",
+    "Mr. Speaker, I am committed to passing this bill, and I urge my colleagues to do the same."
+   ]
+  }
+ ]
+}

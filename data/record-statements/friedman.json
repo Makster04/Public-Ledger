@@ -1,0 +1,81 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "friedman",
+ "name": "Laura Friedman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 24
+ },
+ "statements": [
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAUL IGNATIUS POST OFFICE",
+   "title": "PAUL IGNATIUS POST OFFICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4279.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill to designate the United States Postal Service facility on San Fernando Road in Glendale, California, as the Paul Ignatius Post Office.",
+    "Mr. Speaker, I thank my colleagues again for their support, and I urge passage of this bill."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ARMENIAN GENOCIDE",
+   "title": "ARMENIAN GENOCIDE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3029-2.htm",
+   "sentences": [
+    "I will fight to protect Armenia from ongoing threats from Turkiye and Azerbaijan."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to this so-called SAVE Act, a bill that is a modern-day poll tax targeting American women and low- income Americans.",
+    "It bans using driver's licenses as a voter ID unless they are backed by additional proof of citizenship, a requirement that excludes nearly all driver's licenses and REAL IDs issued today."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESSIONAL SPENDING",
+   "title": "CONGRESSIONAL SPENDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1129.htm",
+   "sentences": [
+    "This is in the Constitution, and it is clear as day, and it has been affirmed over and over again by the Supreme Court.",
+    "They want to let Elon Musk, an unelected billionaire, wreck our government with illegal cuts, but they seem to lack the courage of their convictions to actually vote on these cuts.",
+    "They lack that courage because they know how toxic these cuts are, deep cuts to healthcare, cuts to childcare, cuts that help the most vulnerable among us."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS",
+   "title": "DEMOCRATIC PROPOSALS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+   "sentences": [
+    "Now, was this done by the Republicans out of a sense of fiscal responsibility?",
+    "It is a direct attack on Medicaid, meaning that fewer families will have access to affordable healthcare at a time when healthcare access is so out of reach for Americans.",
+    "It is just to pad the pockets of the wealthiest Americans, the same people who don't need another handout.",
+    "Those are the same people who answer the phone if you need to help a veteran get services or help yourself get Social Security or need to access Medicaid.",
+    "For all the talking that Republicans do about cutting the deficit, with more than $4.5 trillion in tax breaks for the ultrawealthy, this is an upside-down approach that will still manage to increase and blow up the debt by almost $3 trillion.",
+    "That is not fiscal responsibility.",
+    "It is slashing critical programs, raising taxes on the majority of Americans, and handing out checks to the top 1 percent.",
+    "This is research that powers our economy, that gives us the next generation of inventors, and gives us the inventions which have led to the internet, which have led to a lot of what we do with the space program, which leads to advancements in clean energy.",
+    "For those of us who care about the health and well-being of our families, it is not just about Medicaid, even though that is important.",
+    "It is particularly in that portion of the infrastructure that allows us to deal with the critical issue of climate change which brings me to that issue and the infrastructure needed to address that.",
+    "The solution that the President is proposing is that we are going to protect ourselves with tariffs.",
+    "If we are interested in keeping the cost to individuals down, then don't go to tariffs.",
+    "There is a need for balance here, and tariffs have a role.",
+    "The use of tariffs being proposed by the President will raise costs and will not enhance because the other elements that we need--a well-educated society, infrastructure, and access to research--will not be available.",
+    "I am now, and I will always be, a big fat ``hell no'' on this slash- and-burn Republican budget.",
+    "Democrats stand united against raising costs on American families, and I will continue to fight for an economy that puts hardworking families first and that will invest in the kind of educational opportunities that will truly make our Nation great."
+   ]
+  }
+ ]
+}

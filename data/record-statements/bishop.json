@@ -1,0 +1,93 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bishop",
+ "name": "Sanford D. Bishop, Jr.",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 36
+ },
+ "statements": [
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3840-4.htm",
+   "sentences": [
+    "It makes substantial reductions across rural development, farm production and conservation, nutrition, and foreign aid programs.",
+    "While there is an unauthorized war in Iran, a single week's spending for the war could fully fund WIC for almost an entire year.",
+    "Just as our producers are getting hit with increased fuel and input costs from this unauthorized war and chaotic tariffs, this administration has gutted the experienced Federal workforce and shuttered offices when our producers and rural communities need them the most.",
+    "We cannot shut the door on our rural communities at a time when we need to do the opposite: invest in research at our land-grant universities and in rural development, preserve our farmland and forests, and ensure the safety of our food, medicine, and medical devices.",
+    "Everyone needs safe medicine and clean water.",
+    "I support adoption of the amendments, and I reserve the balance of my time.",
+    "Mr. Chair, I rise in opposition to H.R. 8646.",
+    "At this time, I urge my colleagues to oppose the bill and look forward to working with both sides to craft a better bill for our constituents and the American people.",
+    "We will do what we always do, and we will get the most accurate estimate for conference from the USDA, and we will use that number.",
+    "Mr. Chair, for these reasons, I urge my colleagues to oppose this bill and to come together to work toward a measure that truly meets the needs of America's farmers, families, and our rural communities.",
+    "Mr. Chair, I rise in support of the amendments.",
+    "Mr. Chair, I urge all my colleagues to support this."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "Healthcare providers and patients are frustrated and frightened by the imminent skyrocketing of healthcare costs caused by the loss of the ACA tax credits and cuts to Medicaid, Medicare, and lifesaving biomedical research.",
+    "When ordered to do so by the courts, they fought it all the way to the Supreme Court to keep hungry families from receiving food.",
+    "It fully funds SNAP and WIC, replenishes the SNAP and WIC contingency funds, and fully funds cash value vouchers for fruits and vegetables for women and children.",
+    "This bill fails to address the healthcare crisis, and bipartisan outrage has erupted over language in this bill to pay millions of taxpayer dollars to a handful of Senators whose phone records were subpoenaed in relation to the January 6 investigation.",
+    "Mr. Speaker, as ranking member of the Agriculture, Rural Development, and Food and Drug Administration Subcommittee, I rise to oppose this bill.",
+    "It is a bad bill, and I oppose it."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "Community care is an important tool, but it must remain just that, a supplement, not a substitute.",
+    "Veterans should be referred to community care only when the VA cannot meet their needs, not as part of a systematic effort to privatize the entire system.",
+    "Here, the simplest explanation for this unprecedented increase in outsourced care is a broader goal to dismantle the VA system itself, aligning with Project 2025's dangerous objective to privatize veterans' healthcare.",
+    "Equally troubling is the underfunding of military construction, particularly housing and childcare.",
+    "A stable home and quality childcare are foundational to military readiness.",
+    "We cannot expect excellence from our Armed Forces if we do not support the very people who make excellence possible.",
+    "I urge every one of my colleagues, especially those who may view this bill as just another line item, to pause and consider the real impact these decisions have on the people we are sworn to serve."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Most budget experts have agreed that it would require deep cuts in Medicaid to produce these savings.",
+    "In my home state of Georgia, Medicaid is a lifeline for its low- income populations, seniors, disabled individuals, and children.",
+    "It is the primary source of long-term care, the single largest payer in the country for behavioral health services, and a principal source of insurance for pregnant women and children with disabilities.",
+    "One of the proposals that is now being discussed in Congress to achieve Medicaid savings is adding work requirements.",
+    "In fact, Georgia added work requirements to its Medicaid program in July 2023 through its Pathways to Coverage program.",
+    "It is currently the only state to offer Medicaid coverage to low-income adults that is contingent on work and other qualifying activities.",
+    "According to the Georgia Budget and Policy Institute, however, there have been significant problems since this experiment in Medicaid reform was established two years ago.",
+    "The Georgia Budget and Policy Institute also found that Georgia's Pathways to Coverage program created burdensome red tape and paperwork for state agencies and Medicaid recipients.",
+    "Georgia's experience offers a stark warning for the Nation as Republicans consider steep Medicaid cuts and work requirements for low- income Americans.",
+    "The focus must be on increasing enrollment in health insurance for people who need it."
+   ]
+  }
+ ]
+}

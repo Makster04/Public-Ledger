@@ -1,0 +1,43 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "loudermilk",
+ "name": "Barry Loudermilk",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 4
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING MR. RICHARD PHILLIP STROUD SR.'S 100TH BIRTHDAY",
+   "title": "COMMEMORATING MR. RICHARD PHILLIP STROUD SR.'S 100TH BIRTHDAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgE900-3.htm",
+   "sentences": [
+    "Over the course of his career, Richard contributed to aircraft programs including the B-29 Superfortress, B-47 Stratojet, C-130 Hercules, C-141 Starlifter, C-5, P-3, S-3, F-22, and F-35."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAIN STREET CAPITAL ACCESS ACT",
+   "title": "MAIN STREET CAPITAL ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4707.htm",
+   "sentences": [
+    "To conclude, Mr. Speaker, I believe this legislative package with my bills included is much more aligned with the goal of a safe and sound financial system that works for all the American people, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3333.htm",
+   "sentences": [
+    "Meanwhile, access to mental health support remains limited, especially in key military regions.",
+    "Mr. Chair, I urge Members to support this amendment."
+   ]
+  }
+ ]
+}

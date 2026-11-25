@@ -1,0 +1,80 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "gosar",
+ "name": "Paul A. Gosar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 23
+ },
+ "statements": [
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "In the harsh desert climate, where heat and scavengers can quickly degrade a carcass, that standard is often unrealistic and unworkable.",
+    "This bipartisan, commonsense amendment puts guardrails on taxpayer dollars by restricting USDA funding for animal research conducted in adversarial nations like China and Russia, countries that pose clear risks to our national security.",
+    "Mr. Chair, I rise today in strong support of H.R. 7567 the Farm, Food, and National Security Act of 2026, and in particular, my amendment No. 15, to ensure Arizona farmers are not left behind.",
+    "Mr. Chair, I rise today in support of H.R. 7567, the Farm, Food, and National Security Act of 2026, and in strong support of my amendment No. 16 to restore fairness for ranchers in Arizona and across the Southwest.",
+    "Mr. Chair, I urge my colleagues to support this amendment, No. 16, and pass the farm bill.",
+    "Mr. Chair, I will address the gentlewoman first.",
+    "Mr. Chair, I rise today in support of H.R. 7567, the Farm, Food, and National Security Act of 2026, and in support of my amendment No. 18.",
+    "Mr. Chairman, I urge my colleagues to support my amendment No. 18 and pass the farm bill."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTRIC SUPPLY CHAIN ACT",
+   "title": "ELECTRIC SUPPLY CHAIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5528.htm",
+   "sentences": [
+    "It directs the Secretary of Energy to identify any vulnerabilities to our domestic energy grid that may arise from noncitizens' access to U.S. facilities that generate or transmit electricity.",
+    "Earlier this year, the House passed H.R. 3062, the Proposing Cross- Border Energy Infrastructure Act, to streamline energy transmission across our international borders."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINISH THE ARKANSAS VALLEY CONDUIT ACT",
+   "title": "FINISH THE ARKANSAS VALLEY CONDUIT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3497.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 131, the Finish the Arkansas Valley Conduit Act, sponsored by Representative Boebert of Colorado."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LA PAZ COUNTY SOLAR ENERGY AND JOB CREATION ACT",
+   "title": "LA PAZ COUNTY SOLAR ENERGY AND JOB CREATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3498.htm",
+   "sentences": [
+    "As Arizona expands its technology and semiconductor industries, it is critical to meet the needs of our electric grid, and I believe we must take an all-of-the-above energy approach to ensure the grid's reliability.",
+    "It requires consultation with the Colorado River Indian Tribes if any Tribal artifacts are uncovered during the conveyance process.",
+    "Mr. Speaker, I rise in support of my legislation, H.R. 1043, the La Paz County Solar Energy and Job Creation Act."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+   "sentences": [
+    "Mr. Chair, my amendment No. 106 prohibits funds for the DOD's bioindustrial manufacturing and design ecosystem, or BioMADE, that funds lab-grown meat and protein products for the military from feeding our men and women.",
+    "With a national debt of over $37 trillion, we can't afford to litter sensible appropriation bills with wasteful spending.",
+    "An October 20 press release revealed BioMADE received $87 million in Federal dollars under the Biden-Harris administration to produce lab- grown meat to reduce carbon emissions on military bases.",
+    "One is called the ``Potential Benefit of Superbrewed Food's Sustainable Postbiotic Protein on Warfighter Health.'' That one produces lab-grown protein to shorten recovery time and improve the concentration of servicemembers.",
+    "The ``Alternative Protein Bars,'' is a lab-grown protein derived from a microbiological agent similar to fungus.",
+    "Why do marines, sailors, guardsmen, and coasties need lab-grown meat when the U.S. is full of delicious beef?",
+    "Serving lab-grown meat over domestic beef or poultry rewards the government-funded bioindustry and punishes the American cattle ranchers who have a far smaller so-called carbon footprint than these big corporations.",
+    "In 2024, Florida and Alabama banned lab-grown meat to protect farmers and the cattle industry.",
+    "Then, we are talking about the ``Sustainable, Low-Cost, Oil Process for Heart-Healthy DOD Rations.'' The other side's mantra is to do low carbon, getting rid of cows, but now they wonder why the cattle industry has problems understanding why they are doing this."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cleaver",
+ "name": "Emanuel Cleaver",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 8
+ },
+ "statements": [
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRIA PROGRAM REAUTHORIZATION ACT OF 2026",
+   "title": "TRIA PROGRAM REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4273.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to support H.R. 7128, the TRIA Program Reauthorization Act of 2026, sponsored by Representative Flood."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4151-3.htm",
+   "sentences": [
+    "This legislation strengthens existing programs, improves coordination among regulators, encourages governments to address local barriers to housing supply, and includes key banking reforms, including raising the public welfare investment cap to unlock billions in private capital.",
+    "I am proud to stand with my colleagues in this effort."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR THE CONCURRENCE BY THE HOUSE IN THE SENATE AMENDMENT TO H.R. 6644, WITH AMENDMENT",
+   "title": "PROVIDING FOR THE CONCURRENCE BY THE HOUSE IN THE SENATE AMENDMENT TO H.R. 6644, WITH AMENDMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3588.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the revision of H.R. 6644, the 21st Century ROAD to Housing Act introduced by Chairman Hill, Ranking Member Waters, Chairman Flood, and myself."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2050.htm",
+   "sentences": [
+    "If enacted, the Housing for the 21st Century Act would streamline regulations, expand affordable housing financing, and modernize Federal housing programs to significantly expand the Nation's housing supply.",
+    "Mr. Speaker, I rise in support of H.R. 6644, also known as the Housing for the 21st Century Act."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "title": "STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2038.htm",
+   "sentences": [
+    "Mr. Speaker, it is pretty clear to me, while it may not always come across your television, radio, or cell phone, I believe that the overwhelming majority of Members of Congress are good and decent people.",
+    "If they know they are wrong, they ought to support this legislation or tell the public I believe in enriching myself and I am not going to support it."
+   ]
+  }
+ ]
+}

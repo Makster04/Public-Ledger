@@ -1,0 +1,192 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "graves",
+ "name": "Sam Graves",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 15,
+  "sentences": 45
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise in strong support of H.R. 9497, the Water Resources Development Act of 2026, or WRDA 2026.",
+    "These are just a few of the very important ways that this bill delivers for all Americans, Mr. Speaker, and I urge support of the legislation.",
+    "Mr. Speaker, I urge support of the bill and yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING POLITICAL DISCRIMINATION IN DISASTER ASSISTANCE ACT",
+   "title": "STOPPING POLITICAL DISCRIMINATION IN DISASTER ASSISTANCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5893.htm",
+   "sentences": [
+    "As we crafted the reconciliation bill, hunter's expertise was also integral in providing the $12.5 billion downpayment for air traffic control modernization efforts at the FAA.",
+    "Mr. Speaker, I rise in support of H.R. 1342.",
+    "Mr. Speaker, I appreciate the time, and I urge support of this legislation."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "title": "AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2856.htm",
+   "sentences": [
+    "We will continue to work with our colleagues in the Senate and ensure that we are sending a comprehensive safety bill to the President, and anything short of that would be a disservice to the flying public."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "title": "ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2248.htm",
+   "sentences": [
+    "The NTSB, along with their Federal partners and law enforcement agencies, jumped into action that cold January night.",
+    "Unfortunately, the ROTOR Act, or this piece of legislation, touches on only two of the NTSB's 50 recommendations and provides an overly prescriptive approach to mandating a specific technology, which is still largely under development, in a manner that can prove burdensome to some operators and create burdens to its adoption.",
+    "As a pilot myself, I unequivocally support the adoption of safety enhancement technologies, and I want to get this right.",
+    "Mr. Speaker, while I rise in opposition to this bill, I know that all Members of this body across the Capitol have a shared priority, and that is commitment to aviation safety.",
+    "Here in the House, we will continue our legislative effort around the bipartisan ALERT Act to ensure that all NTSB recommendations are addressed, and that is coming.",
+    "For these reasons and the reasons I stated previously, I will, regretfully, be voting against this legislation."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "Mr. Chair, I am proud to rise in support of H.R. 3898, the Promoting Efficient Review for Modern Infrastructure Today Act, or the PERMIT Act, which will make permitting processes under the Clean Water Act more efficient, consistent, and transparent while continuing to protect our Nation's water quality.",
+    "Our Clean Water Act permitting regime is broken.",
+    "When it takes up to 18 months to receive a permit under just the Clean Water Act to build a pipeline, dam, road, pond, or home, something is simply wrong.",
+    "When one State can weaponize the Clean Water Act to stop a pipeline that would allow citizens in other States to move off heating oil in the winter to a cheaper and more reliable source of energy, for reasons not remotely related to water quality, something is wrong.",
+    "The partnership between the private sector, States, and the Federal Government envisioned by the Clean Water Act has worked to improve water quality nationwide.",
+    "We all share the goal of achieving clean water.",
+    "However, 50 years after its passage, the Clean Water Act needs modernization.",
+    "The bottom line is that without reforming the Clean Water Act, America cannot efficiently build roads, bridges, pipelines, ponds, dams, levees, airports, homes, farms, and other infrastructure that we need.",
+    "Mr. Chairman, I yield 2 minutes to the gentleman from North Carolina (Mr. Rouzer), the chairman of the Subcommittee on Highways and Transit.",
+    "Mr. Chairman, in closing, H.R. 3898 is critical to achieving more efficient, predictable, and useful permitting for many important projects by streamlining and improving the Clean Water Act's permitting process.",
+    "As has been stated, H.R. 3898 will support everyday Americans in every district across this Nation by making commonsense reforms to the Clean Water Act, unleashing America's ability to increase transparency in the development of water quality standards.",
+    "I urge my colleagues who support commonsense solutions to vote in favor of H.R. 3898."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COAST GUARD AUTHORIZATION ACT OF 2025",
+   "title": "COAST GUARD AUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3572-4.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 4275 which is the Coast Guard Reauthorization Act of 2025.",
+    "I will take just a moment to thank my subcommittee staff who worked tirelessly on this legislation: John Rayfield, Reed Linsk, Lindsay Sakal, Spencer Thompson, Nicole Bredariol, as well as Matt Dwyer and the ranking member's team."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "title": "DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2549.htm",
+   "sentences": [
+    "Mr. Speaker, I urge support of the legislation and reserve balance of my time.",
+    "I will take a moment to recognize someone who has made a particular impact on myself and this body, and that is Transportation and Infrastructure Republican Staff Director Jack Ruddy, who is leaving the Hill after 15 years."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the One Big Beautiful Bill Act which fulfills President Trump's agenda by securing our border, keeping taxes low for families and job creators, and restoring the Nation's energy dominance in cutting waste, fraud, and abuse.",
+    "The Transportation and Infrastructure Committee's portion of today's legislation combines critical investments in border security, national defense, and modernization of America's air traffic control system, while eliminating wasteful spending and other deficit reduction measures.",
+    "The Transportation and Infrastructure Committee included more than $21 billion to recapitalize Coast Guard assets, including the acquisition of cutters, aircraft, polar icebreakers, along with the facilities needed to support them.",
+    "In light of serious operational and financial challenges facing the FAA, the Transportation and Infrastructure Committee provided a $12.5 billion downpayment for finally modernizing our outdated air traffic control infrastructure.",
+    "Finally, the bill addresses the chronic shortfall in the highway trust fund by instituting a $250 annual fee on electric vehicles and $100 on hybrid vehicles, ensuring that all drivers contribute their fair share to maintaining our roads and bridges.",
+    "In this measure, the Transportation and Infrastructure Committee prioritized core Federal responsibilities, which included national defense, transportation safety, and infrastructure modernization, while also responsibly offsetting these investments with cuts to wasteful spending.",
+    "Mr. Speaker, I urge my colleagues to support the legislation."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Mr. Chairman, I rise today in support of the House's fiscal year 2025 budget resolution, which is a critical step needed to unlock a reconciliation bill that is going to help secure our border and revitalize our military.",
+    "As chairman of the Transportation and Infrastructure Committee, we are ready to do our part to produce a bill that fulfills President Trump's border security agenda by providing funding for the United States Coast Guard for drug and migrant interdiction."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL DISASTER ASSISTANCE COORDINATION ACT",
+   "title": "FEDERAL DISASTER ASSISTANCE COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH100.htm",
+   "sentences": [
+    "That is why I am proud to support H.R. 152, which would address this concern by amending the FEMA-led working group created in the Disaster Recovery Reform Act of 2018."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: POST-DISASTER ASSISTANCE ONLINE ACCOUNTABILITY ACT",
+   "title": "POST-DISASTER ASSISTANCE ONLINE ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH101.htm",
+   "sentences": [
+    "H.R. 153 passed the House in the 116th, 117th, and 118th Congresses, and I urge continued support for this commonsense legislation."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING OPPORTUNITIES TO WIDEN ELECTRICAL RESILIENCE ACT OF 2025",
+   "title": "PROMOTING OPPORTUNITIES TO WIDEN ELECTRICAL RESILIENCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH103.htm",
+   "sentences": [
+    "H.R. 164 is going to address this by clarifying that electric utilities may build in mitigation measures that provide essential assistance and that it does not disqualify electric utilities from permanent work eligibility later in the disaster recovery process."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURITIES AND EXCHANGE COMMISSION REAL ESTATE LEASING AUTHORITY REVOCATION ACT",
+   "title": "SECURITIES AND EXCHANGE COMMISSION REAL ESTATE LEASING AUTHORITY REVOCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH104.htm",
+   "sentences": [
+    "Mr. Speaker, by ensuring that the SEC continues to use GSA for its space needs, H.R. 189 is going to help reduce costs and protect taxpayers against wasteful spending.",
+    "This is why I urge support of H.R. 189, which would revoke the SEC's leasing authority for general office space and bring them in line with current leasing practices through the General Services Administration."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TENNESSEE VALLEY AUTHORITY SALARY TRANSPARENCY ACT",
+   "title": "TENNESSEE VALLEY AUTHORITY SALARY TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH105.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 144, the Tennessee Valley Authority Salary Transparency Act."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMTRAK EXECUTIVE BONUS DISCLOSURE ACT",
+   "title": "AMTRAK EXECUTIVE BONUS DISCLOSURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH99-4.htm",
+   "sentences": [
+    "I very much appreciate the gentleman from North Carolina Representative Rouzer's work on this legislation, and I would urge adoption by the House."
+   ]
+  }
+ ]
+}

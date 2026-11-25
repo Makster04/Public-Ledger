@@ -1,0 +1,72 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "riley",
+ "name": "Josh Riley",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING UTILITY COMPANIES FROM PAYING BONUSES TO THEIR CEOS",
+   "title": "STOPPING UTILITY COMPANIES FROM PAYING BONUSES TO THEIR CEOS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5805-3.htm",
+   "sentences": [
+    "While these families are scraping by, the foreign-owned utility monopolies are jacking up rates again and doling out millions of dollars to CEOs sitting in boardrooms halfway around the world.",
+    "Mr. Speaker, I just introduced bipartisan legislation to stop utility companies from paying bonuses to their CEOs.",
+    "We are not going to let you take money out of our pockets to line the pockets of corporate executives in Spain. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGH UTILITY RATES BY FOREIGN MONOPOLIES",
+   "title": "HIGH UTILITY RATES BY FOREIGN MONOPOLIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4447-3.htm",
+   "sentences": [
+    "Now the utility monopolies, which are owned by foreign corporations, are raising rates again.",
+    "They have been getting away with it for years because they work the refs, hire lobbyists, and grease the politicians with corporate PAC checks.",
+    "We are going to take our power back. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "You have rigged the economy so the corporate PACs that are funding your campaigns make huge profits, jacking up costs on folks who can't afford it, and now this.",
+    "This bill will kill good, blue-collar manufacturing jobs that we need to rebuild the economy in this country, close rural hospitals, and defund healthcare, all to give trillions of dollars in tax cuts to your cronies."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "My amendment would have used this opportunity to negotiate prescription drug prices.",
+    "We could have used this opportunity to close the carried interest loophole and make Wall Street finally pay its fair share.",
+    "We know where all that super-PAC cash comes from."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RISING UTILITY BILLS",
+   "title": "RISING UTILITY BILLS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH695-3.htm",
+   "sentences": [
+    "Mr. Speaker, working families are getting screwed.",
+    "However, then you have to pay for more childcare.",
+    "I am introducing a bipartisan bill to create good union jobs making homes more efficient.",
+    "Mr. Speaker, $400 is a lot of money for daycare, groceries, and rent because that young family in Sullivan County needs that money a hell of a lot more than the utility monopolies do. ____________________"
+   ]
+  }
+ ]
+}

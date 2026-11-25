@@ -1,0 +1,808 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "hoyle",
+ "name": "Val T. Hoyle",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 68,
+  "sentences": 184
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVERING FOR VOTERS",
+   "title": "DELIVERING FOR VOTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6151.htm",
+   "sentences": [
+    "In Oregon, we vote by mail, and we had a 61-percent voter turnout, and almost 2 million ballots were cast.",
+    "The President tried to stop the Postal Service from delivering mail ballots."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGAL RED SNAPPER AND TUNA ENFORCEMENT ACT",
+   "title": "ILLEGAL RED SNAPPER AND TUNA ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5557-2.htm",
+   "sentences": [
+    "These illegal practices harm our economy, disadvantage fishermen, and threaten the long-term health of our oceans and fish stocks.",
+    "If successful, this could assist law enforcement in identifying products from illegal, unreported, and unregulated fishing."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL WILDLIFE REFUGE SYSTEM INVASIVE SPECIES STRIKE TEAM ACT OF 2025",
+   "title": "NATIONAL WILDLIFE REFUGE SYSTEM INVASIVE SPECIES STRIKE TEAM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5560.htm",
+   "sentences": [
+    "I thank the gentleman from Hawaii (Mr. Case) for his work on this important program, and I urge my colleagues to support the bill."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL PARK SYSTEM LONG-TERM LEASE INVESTMENT ACT",
+   "title": "NATIONAL PARK SYSTEM LONG-TERM LEASE INVESTMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5562.htm",
+   "sentences": [
+    "The national park leasing authority is a successful program, but it cannot be a back door that leads to the privatization of our national parks."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ARCHIE CAVANAUGH MIGRATORY BIRD TREATY CLARIFICATION ACT",
+   "title": "ARCHIE CAVANAUGH MIGRATORY BIRD TREATY CLARIFICATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5564.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 6021, the Archie Cavanaugh Migratory Bird Treaty Clarification Act.",
+    "This language ensures that while we will continue to have strong protections against wasteful harvesting and illegal poaching of birds, we are not doing so at the expense of Alaska Native traditions."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PETER G. THURLAND, SR., BANDSTAND",
+   "title": "PETER G. THURLAND, SR., BANDSTAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5566.htm",
+   "sentences": [
+    "It symbolizes the rich, cultural heritage of St. Croix and has served as a community gathering place since its construction."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSFER OF ADMINISTRATIVE JURISDICTION OVER CERTAIN FEDERAL LAND IN THE STATE OF CALIFORNIA",
+   "title": "TRANSFER OF ADMINISTRATIVE JURISDICTION OVER CERTAIN FEDERAL LAND IN THE STATE OF CALIFORNIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5567.htm",
+   "sentences": [
+    "We should be working together to increase conservation and improve the management of our public lands, not trying to cut deals and exclusive access for millionaires."
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING DOMESTIC MINING ACT OF 2025",
+   "title": "PROTECTING DOMESTIC MINING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5452.htm",
+   "sentences": [
+    "This administration's corruption playbook is impacting industries across the board and raising costs for working families like the ones I represent.",
+    "Mr. Speaker, I rise in opposition to this bill.",
+    "Mr. Speaker, I urge my colleagues to oppose this bill and work on something better for the American people and the resources that we depend on."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTIONS CLAUSE",
+   "title": "ELECTIONS CLAUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5367-4.htm",
+   "sentences": [
+    "There is a court order saying the administration may not interfere with vote by mail.",
+    "In Oregon, we only vote by mail and have done so since 1995, and yet, here we are."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAREWELL TO DOGE",
+   "title": "FAREWELL TO DOGE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4531-5.htm",
+   "sentences": [
+    "They purged USAID by getting rid of 83 percent of USAID projects.",
+    "They gained access to personal data, like our Social Security numbers, our tax returns, and our health records.",
+    "I will work with anyone to make that happen."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4029.htm",
+   "sentences": [
+    "Mr. Speaker, it is hard enough to form a union, and in this building and in States across the country, we see efforts every day to make it even more difficult.",
+    "We are seeing yet another strategy to delay and deny union representation from workers who have overcome every hurdle to vote to belong to a union.",
+    "The average time between forming a union and a contract being signed is 458 days, and it is 548 days for nonprofits.",
+    "Workers should not have to wait years after forming a union to get a contract, and employers should not be able to move the goalposts after the decision has been made to form a union.",
+    "My friend Representative Norcross brought forward the Faster Labor Contracts Act to address this issue, and I am proud to speak in favor of this bill.",
+    "I am a Member of Congress as a third-generation union member.",
+    "Because my father and grandfather fought for or won better wages, hours, and working conditions with their unions, I am able to be here today.",
+    "Today, I am proud to stand with the workers of this country and support this very good bill.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROSEBURG VA HOME",
+   "title": "ROSEBURG VA HOME",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3466.htm",
+   "sentences": [
+    "That is less than we spend in day on the war in Iran.",
+    "We should all agree that large insurance companies, hedge funds, and venture capital firms should not be able to buy up healthcare systems, driving up costs while limiting service to everyone but their shareholders.",
+    "That is why I have introduced the people over profits bill to prevent squeezing every bit of profit out of a medical care system at the expense of our constituents when they are at their most vulnerable."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO FUNDS FOR WAR THROUGH RECONCILIATION",
+   "title": "NO FUNDS FOR WAR THROUGH RECONCILIATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-30/html/CREC-2026-04-30-pt1-PgH3328-2.htm",
+   "sentences": [
+    "Mr. Speaker, today, I introduced the No War Appropriations Through Reconciliation Act, or the No WAR Act, which would prevent the partisan process from being used to fund military action in Iran.",
+    "We have already spent $45 billion on this illegal, immoral war in Iran, and this administration is asking for $1.5 trillion more after already requesting $350 billion in mandatory defense spending that was passed through the last reconciliation."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "title": "AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2856.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of the ALERT Act, and I thank Chairman Graves, Ranking Member Larsen, Air Line Pilots Association, International, the Association of Flight Attendants, Jennifer Homendy and the NTSB staff, T&I members, and mostly the families who put such passion and advocacy into getting this bill right."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGHLIGHTING OREGON'S HEALTHCARE SYSTEM",
+   "title": "HIGHLIGHTING OREGON'S HEALTHCARE SYSTEM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgE274.htm",
+   "sentences": [
+    "A side hustle.'' Allowing venture capital firms and hedge funds to siphon off money from our healthcare systems instead of providing quality, affordable and appropriate care to our communities is what's wrong with our healthcare system.",
+    "And I assure you, we will fight to keep local providers caring for our community. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENACTING FEDERAL CORPORATE PRACTICE OF MEDICINE LAW",
+   "title": "ENACTING FEDERAL CORPORATE PRACTICE OF MEDICINE LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2755.htm",
+   "sentences": [
+    "Allowing venture capital firms and hedge funds to siphon money from our healthcare system instead of providing quality, affordable, and appropriate care to our communities is what is wrong with our healthcare system."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERALLY RECOGNIZED TRIBE LEASING AUTHORITY",
+   "title": "FEDERALLY RECOGNIZED TRIBE LEASING AUTHORITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2348.htm",
+   "sentences": [
+    "Mr. Speaker, the Federal Government has a long history of restricting the autonomy of Tribal nations, and it is reflected throughout Federal Indian law.",
+    "A 25-year lease is often too short to provide the certainty necessary for development in Indian Country, where long-term investments in housing and infrastructure are critical to supporting Tribal communities."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHUGACH ALASKA LAND EXCHANGE OIL SPILL RECOVERY ACT OF 2025",
+   "title": "CHUGACH ALASKA LAND EXCHANGE OIL SPILL RECOVERY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2349.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3903, a bill to address the longstanding split-estate challenges in the Chugach region of Alaska."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING ADMINISTRATIVE REVIEWS FOR BROADBAND DEPLOYMENT ACT",
+   "title": "ENHANCING ADMINISTRATIVE REVIEWS FOR BROADBAND DEPLOYMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2352.htm",
+   "sentences": [
+    "Public lands host a lot of communications infrastructure that Americans rely on every day to connect our smartphones, laptops, and televisions."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA'S NATIONAL CHURCHILL MUSEUM NATIONAL HISTORIC LANDMARK ACT",
+   "title": "AMERICA'S NATIONAL CHURCHILL MUSEUM NATIONAL HISTORIC LANDMARK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2356.htm",
+   "sentences": [
+    "I am proud to support the designation of this museum as a historic landmark."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MASHPEE WAMPANOAG TRIBE AND WAMPANOAG TRIBE OF GAY HEAD (AQUINNAH) LEASING AUTHORITY",
+   "title": "MASHPEE WAMPANOAG TRIBE AND WAMPANOAG TRIBE OF GAY HEAD (AQUINNAH) LEASING AUTHORITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2357.htm",
+   "sentences": [
+    "This restriction, as we mentioned earlier, often has hindered economic development in Indian Country where growth is essential to providing services and opportunities for Tribal citizens.",
+    "Mr. Speaker, I rise in strong support of Mr. Keating's bill to amend the Long-Term Leasing Act for the Mashpee Wampanoag Tribe and the Wampanoag Tribe of Gay Head (Aquinnah)."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CAPTAIN ACCURSIO \"GUS\" SANFILIPPO YOUNG FISHERMEN'S DEVELOPMENT ACT",
+   "title": "CAPTAIN ACCURSIO \"GUS\" SANFILIPPO YOUNG FISHERMEN'S DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2358.htm",
+   "sentences": [
+    "I urge my colleagues to join me in support of H.R. 3692 and investing in the future of America's commercial fishing industry."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRIBAL TRUST LAND HOMEOWNERSHIP ACT OF 2025",
+   "title": "TRIBAL TRUST LAND HOMEOWNERSHIP ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2359.htm",
+   "sentences": [
+    "Mr. Speaker, the Tribal Trust Land Homeownership Act would codify existing Bureau of Indian Affairs procedures for reviewing and processing mortgage packages on Indian lands.",
+    "Given the urgent housing needs in Indian Country, it is essential that the BIA conduct these reviews in an efficient and timely manner."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA THE BEAUTIFUL MOTORCYCLE FAIRNESS ACT",
+   "title": "AMERICA THE BEAUTIFUL MOTORCYCLE FAIRNESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2362.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to vote ``yes'' on H.R. 4386 and to support access to recreation on our public lands."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HORRIFIC ICE ABUSES",
+   "title": "HORRIFIC ICE ABUSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2016-6.htm",
+   "sentences": [
+    "Mr. Speaker, I stand in memory of Renee Nicole Good and Alex Pretti, who were murdered for standing up for what is right and exercising their constitutional First Amendment right to speech and assembly, and in the case of Mr. Pretti, his Second Amendment right to carry arms.",
+    "We will not let them disappear into the system.",
+    "We will not stand by and let ICE bring more violence to our cities and open detention facilities in rural communities like Newport, Oregon, that I represent.",
+    "We will not normalize cruelty as public policy."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPIRATION OF NEW START",
+   "title": "EXPIRATION OF NEW START",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH804.htm",
+   "sentences": [
+    "The cost of nuclear acquisition programs will be 11.8 percent of the Department of Defense's planned acquisition costs over the next 10 years.",
+    "We will always find the money for war, but not to take care of our workers or Tribal partners or to compensate the communities who paid the price for that last generation of weapons, so we must act in good faith to ensure an open-ended arms race does not happen."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2988, PROTECTING PRUDENT INVESTMENT OF RETIREMENT SAVINGS ACT; PROVIDING FOR CONSIDERATION OF H.R. 2262, FLEXIBILITY FOR WORKERS",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2988, PROTECTING PRUDENT INVESTMENT OF RETIREMENT SAVINGS ACT; PROVIDING FOR CONSIDERATION OF H.R. 2262, FLEXIBILITY FOR WORKERS EDUCATION ACT; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH670-5.htm",
+   "sentences": [
+    "Rent, food, gas, and childcare have all exploded, but tipped workers are still stuck with a base wage from decades ago.",
+    "The law says that your employer has to make up the difference if your tips don't reach minimum wage, but in most States there is no real enforcement unless you catch it, document it, and risk retaliation by demanding the pay that you have earned.",
+    "My colleagues on the other side of the aisle rejected my amendment to ensure these workers have the bare minimum wage protections.",
+    "Again, I will remind people that the minimum wage in this country has not changed in decades.",
+    "Mr. Speaker, I rise today in opposition to the rule and H.R. 2312, the Tipped Employee Protection Act.",
+    "I urge my colleagues to vote ``no'' on this rule."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GO DUCKS",
+   "title": "GO DUCKS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH606-3.htm",
+   "sentences": [
+    "We will be cheering them on against Indiana tonight, and Go Ducks. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "title": "PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH238.htm",
+   "sentences": [
+    "We invaded Venezuela; threatened to invade Greenland; put Cuba, Mexico, and Colombia on notice that they could be next; had the administration and many of my colleagues, who know better because they were here, try and rewrite the history of what happened on January 6; and an ICE agent shot and killed a woman in Minnesota, and DHS immediately blamed the victim with no pretense of wanting to find out what the facts were.",
+    "Mr. Speaker, today, 17 Republicans joined Democrats to override the Speaker's attempt to stifle the will of this body to vote to extend subsidies for the Affordable Care Act for 3 years.",
+    "Without the Affordable Care Act subsidies, we will have more uninsured people, and these hospitals could go under.",
+    "Prior to being in Congress, I worked at the United Way before the Affordable Care Act working on healthcare access, and my county had a 21 percent uninsured rate.",
+    "Now, if people want to talk about how to deliver quality, affordable, appropriate healthcare with less money going to hedge fund-owned medical practices or to insurance companies, I would love to work with my colleagues on that.",
+    "We have a Medicare for All bill that anybody can get on."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Families back home are struggling with the increasing costs of groceries, housing affordability, natural disaster recovery, and healthcare.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this bill, and I am looking forward to hearing further discussions from my colleagues.",
+    "Instead of investing time and money into supporting proven paths of success, we are voting on far-reaching and unscientific proposals that don't actually solve the problem and won't make it into law.",
+    "Mr. Speaker, I will just clarify.",
+    "I will work with anyone on addressing those legitimate conflicts."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT CHILDREN'S INNOCENCE ACT",
+   "title": "PROTECT CHILDREN'S INNOCENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5992.htm",
+   "sentences": [
+    "Madam Speaker, today, we are not voting to reduce the cost of healthcare or make groceries or housing more affordable or to take back the power of Congress from the executive branch in determining tariffs or deciding whether or not we should invade a sovereign nation.",
+    "To listen to my Republican colleagues, you would think there is an epidemic of children being forced into unnecessary gender- affirming care.",
+    "The epidemics killing our children are drug addiction, overdoses, gun violence, and preventable diseases like measles.",
+    "Banning doctors from providing healthcare to transgender young people has serious unintended consequences.",
+    "We are voting today on inserting government into private medical decisions."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2550 TO NULLIFY THE EXECUTIVE ORDER RELATING TO EXCLUSIONS FROM FEDERAL LABOR-MANAGEMENT RELATIONS PROGRAMS, AND FOR OTHER PURPO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2550 TO NULLIFY THE EXECUTIVE ORDER RELATING TO EXCLUSIONS FROM FEDERAL LABOR-MANAGEMENT RELATIONS PROGRAMS, AND FOR OTHER PURPOSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5520.htm",
+   "sentences": [
+    "Mr. Speaker, on March 27, President Trump issued an executive order that took away the collective bargaining rights of more than a million Federal workers at over 30 agencies under the guise of protecting our national security.",
+    "These workers now have had their voices silenced and have no whistleblower protection if they report about working conditions or safety or even illegal actions taken by their agency.",
+    "The Protect America's Workforce Act nullifies this order and restores all collective bargaining agreements that were in effect before March 26, 2025.",
+    "These collective bargaining agreements were bargained in good faith and are a contract between the Federal Government and the people that work for us.",
+    "Anyone who says that they are looking out for American workers should support restoring and protecting the collective bargaining rights to allow everyday people, our Federal workforce, to achieve economic security and dignity by speaking with one powerful, unified voice.",
+    "A union helps workers use their power by standing together to level the playing field."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FREE IRAN",
+   "title": "FREE IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5104-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of a free Iran and in solidarity with the women that are leading that fight.",
+    "No government should be able to control a woman's body or take away her voice or determine her future, not here nor in Iran.",
+    "In Oregon, where thousands of families with Iranian roots have built their lives, we understand that their fight for freedom is not distant.",
+    "The people of Iran deserve a future without fear, a future with free speech, free assembly, and the right to choose their own leaders and their own path.",
+    "I stand with the women of Iran.",
+    "I will continue fighting for a future where every person in Iran can live free, speak freely, and dream without fear."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "title": "DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4398-5.htm",
+   "sentences": [
+    "Across the central and south coast of Oregon, where I represent, we have seen the real consequences of the Trump administration's reckless tariff policies.",
+    "They have created ripple effects that hurt working families up and down the supply chains.",
+    "Rising costs due to the erratic tariff policy of this administration are increasing their costs, which means that they have to increase their costs to consumers.",
+    "We also have our world-class winegrowers, and they are facing fallout from the tariffs against some of our closest allies such as Canada, which alone makes up nearly half of Oregon wine's export market.",
+    "Some of our manufacturers are also closing up shop and moving offshore to avoid the tariff uncertainty, so the pain spreads to our machinists and our welders and also to the parts makers, the shippers, and the communities counting on those paychecks.",
+    "The Constitution has directed that Congress should be the ones determining tariffs.",
+    "I am proud to stand with the Congressional Labor Caucus tonight to make sure their voices are heard and to fight for an economy where every worker, from the mill floor to the vineyard to the factory line, has the security and the respect that they have earned."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAW ENFORCEMENT OFFICER AND FIREFIGHTER RECREATION PASS ACT",
+   "title": "LAW ENFORCEMENT OFFICER AND FIREFIGHTER RECREATION PASS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3495.htm",
+   "sentences": [
+    "Madam Speaker, H.R. 183 would amend the Federal Lands Recreation Enhancement Act to provide free America the Beautiful passes to law enforcement officers and firefighters.",
+    "This legislation builds on this framework by waiving entrance, standard amenity, and day-use fees at over 2,000 Federal recreation sites for law enforcement officers and firefighters.",
+    "Mr. Speaker, I agree with my colleagues that we should defend the police and firefighters.",
+    "I come from a family of police and firefighters who put their lives on the line every day when they went to work.",
+    "I will happily work with my Republican colleagues to defend police and firefighters and make sure not to defund them by protecting their public pensions, collective bargaining rights, cancer prevention, training grants, and grants to our local police departments that are now being frozen, putting us in limbo."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINISH THE ARKANSAS VALLEY CONDUIT ACT",
+   "title": "FINISH THE ARKANSAS VALLEY CONDUIT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3497.htm",
+   "sentences": [
+    "My Democratic colleagues and I are committed to addressing the barrier that rural communities face in securing clean water.",
+    "These investments are critical for ensuring communities across the West have reliable access to clean drinking water, especially as climate change is continuing to make drought conditions worse."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LA PAZ COUNTY SOLAR ENERGY AND JOB CREATION ACT",
+   "title": "LA PAZ COUNTY SOLAR ENERGY AND JOB CREATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3498.htm",
+   "sentences": [
+    "This project represents a step toward our clean energy future and underscores the support for renewable energy development and infrastructure, particularly at the State and local level.",
+    "After Republicans' reckless budget bill rolled back critical renewable energy programs, I hope this bill signals at least a partial recognition that in America we must keep building, not dismantling our clean energy capacity where possible.",
+    "Importantly, this bill ensures that the Colorado River Indian Tribes and the Tribal Historic Preservation Office are actively consulted to protect any culturally significant artifacts.",
+    "I rise in support of H.R. 1043, the La Paz County Solar Energy and Job Creation Act, introduced by the gentleman from Arizona (Mr. Gosar)."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SINKHOLE MAPPING ACT OF 2025",
+   "title": "SINKHOLE MAPPING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3223.htm",
+   "sentences": [
+    "This bill is a commonsense, forward-looking investment in our communities and infrastructure, especially as climate change increases the risk of sinkholes across the country."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WETLANDS CONSERVATION AND ACCESS IMPROVEMENT ACT OF 2025",
+   "title": "WETLANDS CONSERVATION AND ACCESS IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3224.htm",
+   "sentences": [
+    "Whether you are a duck hunter on the river or a birder exploring the coastal marshes or a family counting on clean water and flood protection, wetlands deliver for everyone."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BOLTS DITCH ACT",
+   "title": "BOLTS DITCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3225.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1729, the Bolts Ditch Act, introduced by my colleague and good friend from Colorado (Mr. Neguse)."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JOCELYN NUNGARAY NATIONAL WILDLIFE REFUGE ACT",
+   "title": "JOCELYN NUNGARAY NATIONAL WILDLIFE REFUGE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3226-2.htm",
+   "sentences": [
+    "Spanning 39,000 acres along Texas' Gulf Coast, this refuge is a vital sanctuary for migratory waterfowl, endangered species, and countless other wildlife.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting S. 1596 and help preserve Jocelyn's legacy in a place that reflects the beauty and wonder she saw in the world."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMENDMENT TO KAWEAH PROJECT PROVISION",
+   "title": "AMENDMENT TO KAWEAH PROJECT PROVISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3226.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1044 introduced by my colleague Representative Valadao of California."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALASKA NATIVE VIETNAM ERA VETERANS LAND ALLOTMENT EXTENSION ACT OF 2025",
+   "title": "ALASKA NATIVE VIETNAM ERA VETERANS LAND ALLOTMENT EXTENSION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3227.htm",
+   "sentences": [
+    "I rise today in support of H.R. 410, a bill that would extend the Alaska Native Vietnam era veterans land allotment program until 2030, giving those brave men and women who served in the Vietnam war additional time to apply for and claim the land allotments that they were promised."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2181-2.htm",
+   "sentences": [
+    "Mr. Speaker, Medicaid is a critical and important safety net and a provider of affordable, accessible, appropriate healthcare, especially in the rural communities I represent.",
+    "For her, Medicaid isn't just a safety net, it is a lifeline.",
+    "Because Medicaid helps her manage her health, Florence is able to raise her 10-year-old daughter and care for her elderly parents.",
+    "Without Medicaid, this entire support system would collapse.",
+    "Mr. Speaker, Medicaid isn't just about individual coverage.",
+    "We must protect and strengthen Medicaid.",
+    "Today, I will share a story of Florence from North Bend, Oregon."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BENEFITS THAT ENDURE FOR LIFETIMES OF SERVICE ACT",
+   "title": "BENEFITS THAT ENDURE FOR LIFETIMES OF SERVICE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1965.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1682, a crucial measure that would guarantee free access to our national treasures for all Gold Star families."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FLATSIDE WILDERNESS ADDITIONS ACT",
+   "title": "FLATSIDE WILDERNESS ADDITIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1966.htm",
+   "sentences": [
+    "They support and provide essential ecosystem services, including clean air, water, carbon sequestration, and critical wildlife habitat.",
+    "Mr. Speaker, I rise in support of H.R. 1612, the Flatside Wilderness Additions Act, introduced by my colleague from Arkansas (Mr. Hill)."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMUNITY RECLAMATION PARTNERSHIPS ACT OF 2025",
+   "title": "COMMUNITY RECLAMATION PARTNERSHIPS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1970.htm",
+   "sentences": [
+    "To make matters worse, even if a Good Samaritan group wants to volunteer to help clean up the pollution themselves, current law requires them to take on full liability for the site under the Clean Water Act.",
+    "Even if the groups manage to do that, it is nearly impossible to get a permit for this work because of the high standards in the Clean Water Act.",
+    "Mr. Speaker, I rise in support of my colleague, Representative LaHood's bill, the Community Reclamation Partnerships Act.",
+    "Mr. Speaker, I urge support for this bill."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEMORANDUM OF UNDERSTANDING TO ADDRESS POTENTIAL IMPACTS OF A CERTAIN RECORD OF DECISION ON THE UPPER COLORADO RIVER BASIN FUND",
+   "title": "MEMORANDUM OF UNDERSTANDING TO ADDRESS POTENTIAL IMPACTS OF A CERTAIN RECORD OF DECISION ON THE UPPER COLORADO RIVER BASIN FUND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1972.htm",
+   "sentences": [
+    "However, persistent drought, over-allocation of water resources, and the escalating impacts of climate change have placed unprecedented strain on the basin.",
+    "I hope to work with my colleagues across the aisle on advancing meaningful legislation to safeguard environmental and cultural resources while addressing the long-term challenges of drought and climate change."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPEDITED APPEALS REVIEW ACT",
+   "title": "EXPEDITED APPEALS REVIEW ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1973.htm",
+   "sentences": [
+    "Taking the case to district court is time-and resource-intensive, so only the wealthiest appellants are likely to use the expedited review process."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APACHE COUNTY AND NAVAJO COUNTY CONVEYANCE ACT OF 2025",
+   "title": "APACHE COUNTY AND NAVAJO COUNTY CONVEYANCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1975.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1829, the Apache County and Navajo County Conveyance Act of 2025, a commonsense bill that will help rural Arizona communities meet an essential public service need."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REDESIGNATION OF PATERSON GREAT FALLS NHP FACILITIES",
+   "title": "REDESIGNATION OF PATERSON GREAT FALLS NHP FACILITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1979.htm",
+   "sentences": [
+    "Mr. Speaker, it is also fitting that, on the week that we honor police officers, who put their lives on the line to protect and serve us, this is the time that we will pass this bill honoring Bill Pascrell.",
+    "From the halls of city hall to Congress, he was a tireless advocate for working families, veterans, public health, and local infrastructure.",
+    "Mr. Speaker, I rise today in support of H.R. 249, a bill that would ensure that the name of Congressman Bill Pascrell, Jr., will forever be etched into the landscape of the city that he so passionately served."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APEX AREA TECHNICAL CORRECTIONS ACT",
+   "title": "APEX AREA TECHNICAL CORRECTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1980.htm",
+   "sentences": [
+    "I rise today in strong support of H.R. 618, the Apex Area Technical Corrections Act, a forward-looking bill by my colleague Representative Horsford that will strengthen economic opportunity and improve land management in southern Nevada."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REVERSIONARY INTEREST CONVEYANCE ACT",
+   "title": "REVERSIONARY INTEREST CONVEYANCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1982.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Reversionary Interest Conveyance Act, introduced by my colleague from California, Representative Matsui."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRE SAFE ELECTRICAL CORRIDORS ACT OF 2025",
+   "title": "FIRE SAFE ELECTRICAL CORRIDORS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1983.htm",
+   "sentences": [
+    "It will support community safety in his district and throughout the country.",
+    "Mr. Speaker, I rise in support of H.R. 2492, the Fire Safe Electrical Corridors Act of 2025, introduced by the gentleman from California (Mr. Carbajal)."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SALEM MARITIME NATIONAL HISTORICAL PARK REDESIGNATION AND BOUNDARY STUDY ACT",
+   "title": "SALEM MARITIME NATIONAL HISTORICAL PARK REDESIGNATION AND BOUNDARY STUDY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1984.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Salem Maritime National Historical Park Redesignation and Boundary Study Act introduced by the gentleman from Massachusetts (Mr. Moulton)."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTIONS FOR FIREFIGHTERS",
+   "title": "PROTECTIONS FOR FIREFIGHTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-08/html/CREC-2025-05-08-pt1-PgH1926-3.htm",
+   "sentences": [
+    "Madam Speaker, 2 days ago I got a text from a firefighter in my district saying: Get a rare blood cancer and find out there is no firefighter cancer registry.",
+    "The cancer registry is hosted by NIOSH, and on April 1 and last week, the agency was gutted.",
+    "I will tell you something, we are going to never forget the deafening silence and the inaction as these investigators and protections for firefighters who put their lives on the line, they did nothing and let them die.",
+    "We will never forget. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPANDING SOCIAL SECURITY",
+   "title": "EXPANDING SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1899-2.htm",
+   "sentences": [
+    "Mr. Speaker, my district has more Social Security recipients than 87 percent of the congressional districts nationwide.",
+    "They are scared because Social Security and Medicaid are not luxuries.",
+    "I introduced the Social Security Expansion Act with Representative Schakowsky, Senator Sanders, and Senator Warren because we believe in protecting the promise of Social Security is our duty."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP IMMIGRATION POLICIES",
+   "title": "TRUMP IMMIGRATION POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1767.htm",
+   "sentences": [
+    "Mr. Speaker, our immigration system is broken, and I will work with anyone in a bipartisan way to fix it."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC POPULISM",
+   "title": "ECONOMIC POPULISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+   "sentences": [
+    "I am a proud third-generation union member with a background in sales and international trade, and I came to Congress to fight for working people.",
+    "My grandfather emigrated from Ireland and worked as a union laborer building bridges.",
+    "Those conditions are significantly better because of the building trades unions.",
+    "My father was a firefighter and became president of his union to fight for better wages and safer working conditions.",
+    "Mr. Speaker, I grew up going to union halls and picket lines and with my father fighting to elect proworker candidates.",
+    "Naturally, I became a member of UNITE HERE Local 26 as a union waitress during the AIDS crisis, where fellow union members had the dignity of healthcare and death benefits when they needed them because we belonged to a union.",
+    "Republicans have tied in with billionaires and restricted the rights of workers to organize and have union representation wherever possible while they are telling them that their enemy is their neighbor.",
+    "We need to listen to them and hold Big Pharma accountable.",
+    "Democrats are the party that champion and protect the things that working people rely on, like the Affordable Care Act, Social Security, stronger unions and workplace protections, the 40-hour workweek, overtime pay, public education, and strong consumer protections."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "As a third-generation union member, I am particularly outraged by the obvious intimidation and union-busting tactics that this administration has used on these essential workers.",
+    "Firing Federal workers means delays in receiving Social Security checks and fewer law enforcement officers keeping our communities safe.",
+    "Mr. Speaker, I rise today in support of our Nation's Federal workers.",
+    "As a member of the Labor Caucus, I am proud to stand with these public servants who have dedicated their careers to delivering for the American people."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIX OUR FORESTS ACT",
+   "title": "FIX OUR FORESTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-6.htm",
+   "sentences": [
+    "Mr. Chair, after the House considered the Fix Our Forests Act last fall, I led a multi-member letter to Senate leadership urging them to pass comprehensive wildfire legislation and adopt the Wildland Fire Mitigation and Management Commission's consensus recommendations.",
+    "I will do everything in my power to get this done.",
+    "I have co-led efforts to secure full funding for Forest Service staffing and tribal forestry programs, and I will continue to do so.",
+    "I also plan to re-introduce my bill, the Wildfire Resilient Communities Act, which would provide consistent funding for hazardous fuels reduction.",
+    "While imperfect, the Fix Our Forests Act takes meaningful steps to protect our forests, our communities, and my constituents, and that's why I will vote yes."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSITION TO H.R. 30, PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "title": "OPPOSITION TO H.R. 30, PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgE58-2.htm",
+   "sentences": [
+    "Mr. Speaker, last week, I voted no on H.R. 30, the so-called ``Preventing Violence Against Women By Illegal Aliens Act.'' Let me be clear: none of us are interested in protecting domestic abusers or predators.",
+    "We all want to keep our communities safe from those who seek to inflict harm on vulnerable people.",
+    "In reality, this bill is more about House Republican messaging than providing meaningful solutions to keep our communities safe.",
+    "Worse, it makes it easier to deport survivors who have acted in self- defense or who have been falsely accused by their abusers.",
+    "I have heard horrific stories from law enforcement about women who are threatened with deportation if they report rape or torture, with their children being held hostage as leverage.",
+    "Some simple, common-sense proposals could have strengthened the bill, including offering greater protections to victims or providing law enforcement with additional tools to prosecute offenders.",
+    "It also would have given law enforcement more resources to get violent criminals out of our communities and out of country."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL DISASTER ASSISTANCE COORDINATION ACT",
+   "title": "FEDERAL DISASTER ASSISTANCE COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH100.htm",
+   "sentences": [
+    "I rise in support of H.R. 152, the Federal Disaster Assistance Coordination Act.",
+    "I urge my colleagues to support this bill, and, hopefully, the Senate will move it through."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: POST-DISASTER ASSISTANCE ONLINE ACCOUNTABILITY ACT",
+   "title": "POST-DISASTER ASSISTANCE ONLINE ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH101.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 153."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING OPPORTUNITIES TO WIDEN ELECTRICAL RESILIENCE ACT OF 2025",
+   "title": "PROMOTING OPPORTUNITIES TO WIDEN ELECTRICAL RESILIENCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH103.htm",
+   "sentences": [
+    "This bill empowers publicly owned electric utilities to implement hazard mitigation improvements during disaster recovery.",
+    "As we are seeing more extreme weather because of climate change, we need to step up and spend taxpayer dollars more efficiently and better.",
+    "This bill would help public power make their systems more resilient at the time of repair, increasing efficiency and cutting overall costs.",
+    "Mr. Speaker, I rise in support of H.R. 164, my legislation with Representative Ezell."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURITIES AND EXCHANGE COMMISSION REAL ESTATE LEASING AUTHORITY REVOCATION ACT",
+   "title": "SECURITIES AND EXCHANGE COMMISSION REAL ESTATE LEASING AUTHORITY REVOCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH104.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 189, the Securities and Exchange Commission Real Estate Leasing Authority Revocation Act.",
+    "Mr. Speaker, I support H.R. 189, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMTRAK EXECUTIVE BONUS DISCLOSURE ACT",
+   "title": "AMTRAK EXECUTIVE BONUS DISCLOSURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH99-4.htm",
+   "sentences": [
+    "I rise in support of the Amtrak Executive Bonus Disclosure Act.",
+    "I urge my colleagues to support this legislation."
+   ]
+  }
+ ]
+}

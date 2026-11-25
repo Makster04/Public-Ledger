@@ -1,0 +1,323 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "tcarter",
+ "name": "Troy A. Carter",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 22,
+  "sentences": 113
+ },
+ "statements": [
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING PORT OF NEW ORLEANS FIRST RESPONDERS",
+   "title": "THANKING PORT OF NEW ORLEANS FIRST RESPONDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgH6297-2.htm",
+   "sentences": [
+    "That is when first responders, including Harbor Chief of Police Melanie Montroll, Sergeant Logan Tillery, and Officer Devon Allen, leapt into action.",
+    "Mr. Speaker, I will take this moment to publicly thank Harbor Chief of Police Melanie Montroll and every single first responder for their heroism and quick thinking in the face of a disaster."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPORTATION WORKER IDENTIFICATION CREDENTIAL EFFICIENCY ACT",
+   "title": "TRANSPORTATION WORKER IDENTIFICATION CREDENTIAL EFFICIENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5896.htm",
+   "sentences": [
+    "After being incarcerated, Joel wanted to work in Louisiana's offshore energy industry, where many of the jobs require TWIC credentials.",
+    "He then entered the 60-day appeal process, which required a variety of forms, letters, and recommendations, and resolving discrepancies in his background check.",
+    "Mr. Speaker, I rise today in support of my bill, H.R. 5109, the TWIC Efficiency, or TWICE Act.",
+    "I am proud to introduce this bipartisan bill with my Louisiana colleague, Congressman Clay Higgins and my dear friend from Texas who will be joining us shortly.",
+    "The TWICE Act is scheduled for consideration under suspension on the House Floor during the week of September 14, and we urge passage.",
+    "Mr. Speaker, I urge passage of this commonsense bill, H.R. 5109."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESTRUCTION OF HAZARDOUS IMPORTS ACT",
+   "title": "DESTRUCTION OF HAZARDOUS IMPORTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4637.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2715, the Destruction of Hazardous Imports Act, which I introduced with my Louisiana colleague Representative Clay Higgins.",
+    "Mr. Speaker, I urge the passage of this critical legislation."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FDA MODERNIZATION ACT 3.0",
+   "title": "FDA MODERNIZATION ACT 3.0",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4639.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 2821, the FDA Modernization Act 3.0, introduced by the gentleman from Georgia (Mr. Carter).",
+    "Over 3 years ago, the FDA Modernization Act 2.0 was signed into law, allowing the agency to approve human drugs without requiring animal testing through modern, often more effective, alternatives.",
+    "Despite this progress, the FDA has still not issued updated regulations to clarify where alternatives to animal testing are, in fact, permissible.",
+    "This legislation takes action to close the gap by requiring the FDA to fully implement the reforms that Congress has already enacted and to help reduce unnecessary animal testing in drug development.",
+    "By ensuring the full implementation of the FDA Modernization Act 2.0, this legislation will help modernize and transform drug development for the 21st century; accelerate safer, more effective medical breakthroughs; and advance more humane scientific research."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 139, the Sunshine Protection Act.",
+    "H.R. 139, the Sunshine Protection Act, ends that twice-yearly clock change and makes daylight saving time permanent year round.",
+    "Hourly workers, shift workers, and families relying on public transit are hit hardest by sudden schedule changes and reduced evening visibility.",
+    "For Louisiana families, many of whom work in agriculture, fishing, and outdoor industries tied to the Gulf Coast, permanent daylight saving time would mean more usable evening daylight for safer work conditions, recreation, and valuable time with their families.",
+    "The American Farm Bureau Federation supports the Sunshine Protection Act because it would provide consistency and reduce disruptions for farmers and ranchers.",
+    "H.R. 139 offers a simple, permanent fix: no more clock changes, more usable evening daylight, and a system that works better for working families, rural communities, and American agriculture."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOMELAND SECURITY CAPABILITIES PRESERVATION REPORTING ACT OF 2026",
+   "title": "HOMELAND SECURITY CAPABILITIES PRESERVATION REPORTING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4391.htm",
+   "sentences": [
+    "I rise today in support of my bill, H.R. 8874, the Homeland Security Capabilities Preservation Reporting Act of 2026.",
+    "That is why I introduced H.R. 8874, the Homeland Security Capabilities Preservation Reporting Act of 2026.",
+    "I urge all my colleagues to support this vital, commonsense legislation."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE-STOP PILOT PROGRAM EXTENSION ACT",
+   "title": "ONE-STOP PILOT PROGRAM EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4393.htm",
+   "sentences": [
+    "The One-Stop Pilot Program Extension Act extends authorization for the One-Stop Security program for four more years, giving TSA, Customs and Border Protection, and participating airports time to scale the program, expand international partnerships, and evaluate the infrastructure needed for broader implementation.",
+    "Mr. Speaker, I rise in support of H.R. 9388, the One-Stop Pilot Program Extension Act, which I am proud to co-lead with Congressman Gimenez.",
+    "Mr. Speaker, I thank Representative Gimenez for his leadership on this bill, and I urge favorable passage."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, for months, Democrats have urged Republicans to come to the table to work together on a clean extension of the Affordable Care Act tax credits.",
+    "Most importantly, it does nothing to extend the ACA tax credits.",
+    "Mr. Speaker, I stand with Leader Jeffries and House Democrats as we continue our fight for affordable, quality healthcare in this country."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "title": "WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5857.htm",
+   "sentences": [
+    "Not long ago, I had a young lady from Louisiana, a precious little baby girl, who had a horrible accident because the teacher would not allow her to go to the restroom again after complaining of a tummy ache.",
+    "Mr. Speaker, I rise today in support of the Whole Milk for Healthy Kids Act, as amended by the Senate, which allows for plant-based milk alternatives to be more easily and readily available for children with lactose intolerance.",
+    "Mr. Speaker, I urge my colleagues to support this commonsense, bipartisan reform that will allow our children to receive the nutrition they need to feel healthy and have successful lives in and out of school.",
+    "I urge support for this measure."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTHCARE AFFORDABILITY CRISIS",
+   "title": "HEALTHCARE AFFORDABILITY CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5891-4.htm",
+   "sentences": [
+    "I met Mike in October, about 1 week before open enrollment began.",
+    "His family signed up for insurance through the Affordable Care Act because his husband was also laid off in the spring.",
+    "If MAGA Republicans don't join Democrats in extending the ACA tax credit, Mike doesn't know how he or his family will afford healthcare.",
+    "He just turned 61, and the ACA is the only option for his family.",
+    "Republicans have turned the situation into a crisis with the largest Medicaid cut in the history, outrageous threats to Medicare, and relentless targeting of the Affordable Care Act.",
+    "Demonstrate that to our small business people, our people living with disabilities, our veterans, our working people who go to work every single day who make just a little bit too much money to access Medicaid, but not enough money to pay for their healthcare.",
+    "Republicans' failure to extend the ACA tax credits will hurt Louisianians and Americans across this country.",
+    "Let's extend the ACA tax credits and show America that we can get our business done and that everything we do is not subject to a red or a blue.",
+    "We are fighting for them every single day regardless of their name, background, even party because when we are elected to Congress, we are not elected to only represent those who are in our party, but to represent the American people.",
+    "We will not give up the fight to address the healthcare crisis in our country.",
+    "We will not give up the fight to fight for those businesspeople who every day create tax dollars and sales taxes for our local governments, that hire people from the community, that provide the resources that keep our economy going."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgE849-4.htm",
+   "sentences": [
+    "They view his presence here as an opportunity to celebrate the rich spiritual and cultural heritage of Orthodox Christianity and to reaffirm the strong bonds between the United States and the Ecumenical Patriarchate."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPEN RAN OUTREACH ACT",
+   "title": "OPEN RAN OUTREACH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3217.htm",
+   "sentences": [
+    "I am proud to introduce this bipartisan Open RAN Outreach Act with Representative Richard Hudson of North Carolina."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any Medicaid cuts and any cuts to SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLDING POWER ACCOUNTABLE",
+   "title": "HOLDING POWER ACCOUNTABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2962-4.htm",
+   "sentences": [
+    "We owe it to the American people to ask hard questions, to demand honest answers, and to ensure that no one--I mean no one--not even the President, is above the law."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAISING AWARENESS ABOUT MEN'S HEALTH",
+   "title": "RAISING AWARENESS ABOUT MEN'S HEALTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2562-3.htm",
+   "sentences": [
+    "The caucus focuses on key areas like mental health care, prostate cancer screening, traumatic brain injury, and urological health.",
+    "Real strength is talking about mental health before it becomes a crisis.",
+    "We talk to someone, but with mental health, we somehow think we will just stick our head in the sand and it will go away; but it won't.",
+    "Let's make America healthy again by keeping programs like Medicaid.",
+    "We must realize the importance of exercising and taking care of our mental health, particularly in the stressful jobs that we are fortunate to have in this very body.",
+    "It is our mental health, and our physical health all tied together that is so important.",
+    "It is important to our teachers, our taxi drivers, our nurses, our men and women in uniform, our police officers, our firefighters, and the people that are working everyday jobs who keep America moving.",
+    "Mental health is the very same way.",
+    "According to the Anxiety and Depression Association of America, men suffering from mental health illnesses are less likely to receive mental health treatment or diagnoses because we stick our heads in the sand.",
+    "Consider calling the mental health hotline.",
+    "Consider calling not the police because you think it is unsavory to see this, Mr. Speaker, but consider calling a mental health hotline to get them help.",
+    "He has the resources to get them the level of mental health care that they need to be better and to be productive and to silence those voices in their head.",
+    "Mental health care needs resources.",
+    "Yes, it is through making sure that Congress, in one of our most important constitutionally given tools, uses the power of the purse, as found in Article I of the United States Constitution in order to provide resources to States, to local communities, and to the National Institutes of Health to study dreaded diseases, to have preventive care, to have mental health professionals in our schools dealing with our young people, to have senior living facilities funded with professionals who are there for them.",
+    "Medicaid is a tool that allows us to pay me now and pay me far less.",
+    "As chair, I am committed to continuing this important work and encouraging men to take a proactive approach to their health not just during June but every month of the year."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL GUN VIOLENCE AWARENESS MONTH",
+   "title": "NATIONAL GUN VIOLENCE AWARENESS MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2411.htm",
+   "sentences": [
+    "Mr. Speaker, I rise tonight during National Gun Violence Awareness Month not just with sorrow but with a sense of urgency.",
+    "I rise tonight during the National Gun Violence Awareness Month to shake the core of our very beings.",
+    "I want to be abundantly clear that this is not about taking away anyone's Second Amendment right to bear arms.",
+    "I do believe in the Second Amendment, but I am a responsible gun owner.",
+    "Yes, the Second Amendment stands, but our common sense stands, too.",
+    "Gun violence has ravaged this country.",
+    "Black communities die from gun violence at 2.7 times the rate of our White counterparts.",
+    "Over 13,300 Black lives are lost every year to gun violence.",
+    "It has been 3 years since the Bipartisan Safer Communities Act was signed into law by President Biden.",
+    "The Gun Violence Archive has already reported that 133 mass shootings have happened this year, and it is only the first week of June.",
+    "We are also disproportionately impacted by rogue police violence, police shootings, and shootings of unarmed men and women, often young people.",
+    "The truth can't be ignored when we talk about gun violence in our country.",
+    "Gun violence is not a political issue.",
+    "Let's demonstrate to the American people that while Republicans and Democrats may disagree philosophically on many things, let us agree that gun violence is no way for Americans to have to live."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2182-5.htm",
+   "sentences": [
+    "They traveled all the way from Louisiana to join me for the Energy and Commerce Committee's budget reconciliation markup because they, like so many Americans, are proof that Medicaid saves lives.",
+    "Medicaid funding and waivers like the New Opportunities Waiver, NOW, have been and continue to be the lifeline for the Corkerns.",
+    "His Medicaid waiver is the reason he is able to live today.",
+    "When Republicans attack Medicaid, they attack families like the Corkerns.",
+    "Cutting Medicaid means that a little boy born today with Connor's medical needs might not make it to his high school graduation."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIVERSITY, EQUITY, AND INCLUSION: ERASING BLACK HISTORY",
+   "title": "DIVERSITY, EQUITY, AND INCLUSION: ERASING BLACK HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2139-5.htm",
+   "sentences": [
+    "Why is this Republican administration so threatened by this museum that it would seek to defund, defame, and deface?",
+    "Mr. Speaker, today I rise in support of our museums, our cultural institutions.",
+    "We will not stand by as our history is dismissed, diminished, or defunded.",
+    "We will continue to use all of the tools in our toolbox.",
+    "You have heard me speak of the three Cs--the Congress, the courts, and the community--and we will use every one of them, and we will continue to fight until victory is won."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP IMMIGRATION POLICIES",
+   "title": "TRUMP IMMIGRATION POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1767.htm",
+   "sentences": [
+    "Right now, this administration is defying a Supreme Court decision that ordered them to facilitate the return of an individual who was deported without due process.",
+    "We will not stand by while they violate the principles that form the bedrock of our democracy.",
+    "There are many individuals whose stories deserve to be told, so today I am going to highlight just a few."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING THE CITIES IMPROVEMENT ACT",
+   "title": "SECURING THE CITIES IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1056.htm",
+   "sentences": [
+    "After crashing, he exited the vehicle and engaged in a shootout with law enforcement before being fatally shot by courageous New Orleans police officers who rushed to the scene, putting themselves in harm's way to protect our citizens, visitors, and guests.",
+    "Mr. Speaker, I rise today in support of my bill, the Securing the Cities Improvement Act, a critical piece of legislation designed to help us build and maintain our Nation's security capabilities.",
+    "In memory of the lives lost in New Orleans and in recognition of ever-present and evolving threats, I urge my colleagues to support the Securing the Cities Improvement Act."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAPID RESPONSE SUBGROUP",
+   "title": "RAPID RESPONSE SUBGROUP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH863-5.htm",
+   "sentences": [
+    "Mr. Speaker, President Trump has falsely suggested that Ukraine was responsible for the war with Russia and should have resolved the conflict years ago.",
+    "Senator Kennedy went further, calling Russia's dictator, Vladimir Putin, a gangster with a black heart, a figure responsible for unprovoked war and atrocities on a sovereign nation.",
+    "It was Russia's invasion that shattered Ukraine's peace, beginning with the invasion and annexation of Crimea in 2014 and through the full-scale invasion that began just over 3 years ago.",
+    "Russian forces are committing horrific and documented war crimes against Ukrainian soldiers and innocent civilians.",
+    "Senator Cassidy called it out for what it was: A war of aggression initiated by Putin, not Ukraine.",
+    "Senator Kennedy also rightly emphasized that negotiating with Russia without Ukraine at the table is problematic.",
+    "They are speaking up because they recognize that these are lies and that we should stand firm in our support and push back against communism and against the hate of Russia and support Ukraine.",
+    "Mr. Speaker, I urge us to do the right thing. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "They process Social Security benefits, safeguard our airports, and protect our communities.",
+    "Firing Federal workers leads to delays in Social Security payments, longer VA wait times, and fewer law enforcement officers on the street.",
+    "We must also oppose Schedule F, which would strip civil service protections, making employees at will and vulnerable to political purges.",
+    "Finally, Trump's union-busting tactics, including rejecting legally bargained contracts, cannot stand.",
+    "The right to collective bargaining is a fundamental right, and these agreements must be honored.",
+    "Mr. Chairman, I rise today in strong support of our Nation's Federal workers.",
+    "As a proud member of the Labor Caucus, I stand with these professionals who keep our government running.",
+    "We cannot allow reckless policies to dismantle these vital services.",
+    "The Labor Caucus has your back, and we will fight for your rights, your jobs, your dignity, and your livelihood.",
+    "Know this: We stand with you, and we have your backs."
+   ]
+  }
+ ]
+}

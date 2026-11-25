@@ -1,0 +1,63 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ryan",
+ "name": "Patrick Ryan",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5001.htm",
+   "sentences": [
+    "It is personal to the now 18 families who lost their loved ones in this reckless war in Iran--sons, daughters, husbands, wives, somebody's whole world.",
+    "This is a straight-up betrayal from a President, by the way, who promised to end wars, not start wars; a President who has never spent a single day in uniform but is more than willing to send other people's kids to fight in his wars; a President who is now blatantly disregarding the widely held will of the American people and the bipartisan view of this Congress as recognizing the successful passage of a War Powers Resolution by escalating this war rather than winding it down.",
+    "That is why I have been fighting to include my No Funds for Iran War Act in this NDAA, to make sure we don't spend a single penny more on this reckless forever war in the Middle East; to make sure we are investing here at home to lower housing costs, lower grocery costs, lower utility costs, and lower healthcare costs.",
+    "That is what I am fighting for, and that is what my colleagues here are fighting for.",
+    "Unfortunately, Mr. Chair, since the majority has refused to include my provision in this bill, I do plan to offer a motion to recommit this bill back to committee, and I urge my colleagues to support it.",
+    "I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "title": "REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1317.htm",
+   "sentences": [
+    "The last thing, Mr. Speaker, the American people want is another regime change war, a forever war for oil.",
+    "I urge my colleagues to support this resolution and to not repeat history."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING ECUMENICAL PATRIARCH BARTHOLOMEW TO WASHINGTON, D.C.",
+   "title": "WELCOMING ECUMENICAL PATRIARCH BARTHOLOMEW TO WASHINGTON, D.C.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgE859-2.htm",
+   "sentences": [
+    "Be it climate change, wars, violations of human rights, His All-Holiness is undaunted and unwavering in his commitment to alleviating suffering and championing justice."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC POPULISM",
+   "title": "ECONOMIC POPULISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+   "sentences": [
+    "I gave former President Biden hell for failing to secure our border.",
+    "In fact, everything he has done in office has helped his billionaire cronies, who, by the way, gave hundreds of millions of dollars to his campaign at the expense of families like the ones that I represent in my district across the Hudson Valley.",
+    "Just over a year ago, I stood on this very floor and ultimately successfully called on the CEO of a local utility monopoly in my district which had been screwing over my constituents, robbing them blind, literally emptying their dwindling savings accounts due to a failure of their billing practices.",
+    "I am proud that as a Democrat our party stands with law enforcement and police officers, stands with small businesses, stands with veterans, stands with hardworking families, with nurses, teachers, and truck drivers.",
+    "Unlike some of my colleagues on the other side of the aisle, I won't try to deny the outcome of the election in November 2024.",
+    "Democrats stand with our constituents, whether they voted for us or not, and, yes, we stand against Donald Trump and his harmful policies, but we stand for so, so much more."
+   ]
+  }
+ ]
+}

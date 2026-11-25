@@ -1,0 +1,130 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "curtis",
+ "name": "John R. Curtis",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 9,
+  "sentences": 37
+ },
+ "statements": [
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE CALENDAR",
+   "title": "THE CALENDAR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgS5792.htm",
+   "sentences": [
+    "Madam President, Utahns are blessed to have in our own backyard some of the world's best outdoor recreational opportunities.",
+    "When fully connected, the route is expected to stretch approximately 280 miles from the Utah-Idaho border to Nephi, UT.",
+    "Madam President, notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of the following bills en bloc: Calendar No. 473, S. 1135, Bonneville Shoreline Trail; Calendar No. 658, S. 4538, Washington's Trail; Calendar No. 632, S. 1288, Finger Lakes NHA; and Calendar No. 657, S. 4238, Endless Mountains NHA."
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISCOURAGING EXPLOITATIVE ASSASSINATION, TRAGEDY, AND HARM BETTING IN EVENT TRADING SYSTEMS ACT",
+   "title": "DISCOURAGING EXPLOITATIVE ASSASSINATION, TRAGEDY, AND HARM BETTING IN EVENT TRADING SYSTEMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgS5794.htm",
+   "sentences": [
+    "This amendment ensures that our legislation cannot be interpreted as changing their legal status under existing law."
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER ASSISTANCE AND SERVICE ACT",
+   "title": "TAXPAYER ASSISTANCE AND SERVICE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5207-2.htm",
+   "sentences": [
+    "My staff pointed out that had you put a snail on the Russian-Ukraine border the day the war started, it would actually make more progress than Russia has made.",
+    "Ukraine, we learned, is not the adversary we thought it was 4 years ago.",
+    "In reality, what we found while we were there is that Ukraine is not only not weak and not dependent on the United States, they are actually now a partner with the United States in providing us things and help that will help us in the future.",
+    "What Ukrainians are learning, the data they are collecting--imagine the data from thousands and tens of thousands and millions of drone strikes.",
+    "I would also like to mention that one of the aspects that doesn't get talked a lot about is how much humanitarian aid is going to Ukraine that is nongovernmental.",
+    "I had a chance to talk to a couple of people in this village and hear their stories of imprisonment and torture by Russia.",
+    "It just may be in Utah that we have more people who speak Ukrainian as a second language than anywhere else in the United States, and certainly it touches a lot of the hearts of Utahans.",
+    "I will be brief because I want you to have the last word, but I came home convinced that we should continue finding ways to do four simple things: 1, help Ukraine to defend itself; 2, affirm NATO's resolve to use force against any threats or attacks on our members; 3, impose costs on Russia and those sustaining its war machine; and 4, one of the things we learned over there is that signals from the United States matter.",
+    "And I will clearly say that Ukrainians are allies and friends, and Putin is not.",
+    "I think we will see that at a greater rate in the future.",
+    "We need to send a signal and make it clear that, from Moscow to Beijing, invading your neighbors is not a successful strategy and we will push back."
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WILDFIRE EMISSIONS PREVENTION ACT OF 2026",
+   "title": "WILDFIRE EMISSIONS PREVENTION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5148.htm",
+   "sentences": [
+    "Yet States that proactively use prescribed burns can face regulatory consequences for the temporary emissions created by the very work that prevents far greater emissions in our environment.",
+    "Our bill, the Wildfire Emissions Prevention Act, provides States with greater certainty by ensuring that prescribed fires and other wildfire mitigation activities can be treated as exceptional events under the Clean Air Act.",
+    "The people of Utah are not looking for an emissions loophole.",
+    "I also urge my House colleagues to support WEPA and help us get this commonsense legislation across the finish line."
+   ]
+  },
+  {
+   "date": "2026-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SENATE RESOLUTION 812--RECOGNIZING THE 179TH ANNIVERSARY OF THE ARRIVAL OF PIONEERS BELONGING TO THE CHURCH OF JESUS CHRIST OF LATTER-DAY SAINTS TO THE GREAT SALT L",
+   "title": "SENATE RESOLUTION 812--RECOGNIZING THE 179TH ANNIVERSARY OF THE ARRIVAL OF PIONEERS BELONGING TO THE CHURCH OF JESUS CHRIST OF LATTER-DAY SAINTS TO THE GREAT SALT LAKE VALLEY, HONORING THE ENDURING...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-23/html/CREC-2026-07-23-pt1-PgS4268.htm",
+   "sentences": [
+    "The early members of The Church of Jesus Christ of Latter-day Saints sought to actualize our first freedom and something every American should cherish: religious liberty.",
+    "That is why the resolution I am introducing with my colleagues today is about more than honoring the past."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Religious Freedoms (Executive Calendar)",
+   "title": "Religious Freedoms (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgS3189.htm",
+   "sentences": [
+    "Dr. Matthew Holland has written of how civic charity is deeply embedded in our thoughts; John Winthrop, leader of the Massachusetts Bay Colony, of Thomas Jefferson, America's apostle of religious liberty, and of Abraham Lincoln, who so powerfully invoked the better angels of our nature at a time of national crisis.",
+    "Charity is the only way whereby we flourish in our differences, even as we work together for a more perfect Union.",
+    "The words ``kindness,'' ``civility,'' and ``charity'' nowhere appear in our Constitution or our Declaration of Independence, whose anniversary we will commemorate next week.",
+    "We will never achieve consensus on the particulars of our religious commitments or our lack of religious commitments, nor should we."
+   ]
+  },
+  {
+   "date": "2025-10-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-09/html/CREC-2025-10-09-pt1-PgS7062-3.htm",
+   "sentences": [
+    "Mr. President, I rise today in support of my amendment to create a pilot program to address the shortcomings in the locality pay system that are impacting Utah and likely impacting all of you in your military installations and all of your Federal employees around this country.",
+    "I urge my colleagues to vote for my amendment."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgS6512-3.htm",
+   "sentences": [
+    "Together, these men embodied the best of Utah law enforcement: service rooted in responsibility.",
+    "To give you perspective, the Tremonton-Garland Police Department has just 17 people, officers and staff together.",
+    "And our commitment should be to work for solutions to better support our law enforcement, strengthen protections for families and individuals, and bring peace of mind to our hard-working citizens."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Maiden Speech (Executive Calendar)",
+   "title": "Maiden Speech (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgS2917-2.htm",
+   "sentences": [
+    "They were in an untried climate.",
+    "Today, we are outsourcing more than just governance.",
+    "We are outsourcing responsibility.",
+    "So let's be honest, it is time we talk more openly about the importance of clean energy.",
+    "We, and I mean we, Democrats and Republicans in this body, are not being honest with the American people when we pretend that Social Security, Medicaid, and Medicare don't need reform.",
+    "That may sound like it is radical in our social media-driven world here in DC, but I am committed to following her advice.",
+    "Sometimes that desire requires us to be wildly honest, something that I think we will all agree we could use a little more of in Washington, DC."
+   ]
+  }
+ ]
+}

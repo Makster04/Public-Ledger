@@ -1,0 +1,400 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "davisnc",
+ "name": "Donald G. Davis",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 35,
+  "sentences": 73
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUED UNCERTAINTY FOR SOYBEAN GROWERS",
+   "title": "CONTINUED UNCERTAINTY FOR SOYBEAN GROWERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5645-5.htm",
+   "sentences": [
+    "Mr. Speaker, I urge President Trump, ahead of his meeting with President Xi Jinping, to secure a clear and verifiable timeline for China to fulfill its purchasing commitments and remove the 10 percent tariff on soybeans."
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHERE IS THE BEEF?",
+   "title": "WHERE IS THE BEEF?",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-31/html/CREC-2026-08-31-pt1-PgH5264.htm",
+   "sentences": [
+    "Mr. Speaker, I stand with the cattle producers of eastern North Carolina and those across America who work hard every day to put American beef on our tables."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 100TH BIRTHDAY OF VAN BUREN ANDERSON, JR.",
+   "title": "100TH BIRTHDAY OF VAN BUREN ANDERSON, JR.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5021.htm",
+   "sentences": [
+    "Whether wearing the uniform of the United States Army or volunteering in his hometown, Mr. Anderson lived by a simple principle: When people needed help, he stepped forward to provide a helping hand, and we will always be grateful. ____________________"
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REOPEN MARTIN GENERAL HOSPITAL",
+   "title": "REOPEN MARTIN GENERAL HOSPITAL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3823.htm",
+   "sentences": [
+    "I believe in practical solutions, which is why I am fighting to bring our hard-earned tax dollars back home to work for us."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 2026 APP CHALLENGE WINNERS",
+   "title": "2026 APP CHALLENGE WINNERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3121-2.htm",
+   "sentences": [
+    "Mr. Speaker, these incredible young minds from Martin County High School earned top honors at the Congressional App Challenge for North Carolina's First District with their app, Positive Pathways, designed to support mental health through interactive tools that help manage anxiety, depression, and OCD."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHERRY POINT VISIT",
+   "title": "CHERRY POINT VISIT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgH2984-5.htm",
+   "sentences": [
+    "I am so proud to support $40 million for the F-35 Aircraft Sustainment Center, strengthening our national security.",
+    "When we stand with our marines, we are also standing for eastern North Carolina. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BUXTON COASTAL EROSION",
+   "title": "BUXTON COASTAL EROSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-16/html/CREC-2026-04-16-pt1-PgH2928-6.htm",
+   "sentences": [
+    "I urge Congress to pass H.R. 3161, the Preventing Environmental Hazards Act."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS EDUCATION AND TECHNICAL SKILLS OPPORTUNITY ACT OF 2025",
+   "title": "VETERANS EDUCATION AND TECHNICAL SKILLS OPPORTUNITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1933.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 1458, the VETS Opportunity Act of 2025."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCOUNTABILITY FOR SECRETARY NOEM",
+   "title": "ACCOUNTABILITY FOR SECRETARY NOEM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1939-2.htm",
+   "sentences": [
+    "Mr. Speaker, Americans expect us to address the alarming behavior of the ICE and CBP agents who have operated beyond acceptable boundaries of law enforcement.",
+    "While we must stand with our law enforcement community and enforce our immigration laws, it is crucial that Federal agencies operate within the framework of public trust.",
+    "We must uphold the rights of Americans to exercise their First and Second Amendment freedoms, and we also expect our Federal immigration officers to adhere to reasonable standards of conduct without interference."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACA SUBSIDIES",
+   "title": "ACA SUBSIDIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH929.htm",
+   "sentences": [
+    "Mr. Speaker, over 130,000 eastern North Carolinians depend on ACA subsidies to afford basic health coverage.",
+    "ACA subsidies are about stability, dignity, and the simple belief that access to healthcare should not depend on luck."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INVESTING IN INFRASTRUCTURE AND PUBLIC SAFETY",
+   "title": "INVESTING IN INFRASTRUCTURE AND PUBLIC SAFETY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH650-3.htm",
+   "sentences": [
+    "We understand that aging water infrastructure, prone to leaks and contamination, and law enforcement agencies lacking the tools they need to be successful, directly impact the well-being of our communities.",
+    "Funds will also be used to purchase safety gear to better protect our law enforcement officers.",
+    "There is so much work to be done, and we plan to continue working with our local communities.",
+    "By investing strategically in vital infrastructure and public safety, we are supporting eastern North Carolina's communities and economy for decades to come. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 2025 YEAR-END REVIEW",
+   "title": "2025 YEAR-END REVIEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-06/html/CREC-2026-01-06-pt1-PgH5-4.htm",
+   "sentences": [
+    "Mr. Speaker, in 2025, we fought every day to deliver real results for eastern North Carolinians, putting working families, veterans, and rural communities first.",
+    "After 2024 redistricting, we expanded our offices so people could get help close to home, and we will do it again."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACA PREMIUM TAX CREDIT EXPIRATION",
+   "title": "ACA PREMIUM TAX CREDIT EXPIRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5891-3.htm",
+   "sentences": [
+    "As millions across the country face the uncertainty and anxiety about their health coverage, without congressional action, the enhanced premium tax credits under the Affordable Care Act will soon expire, leading to higher costs and risking healthcare coverage for some altogether."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING UP POINTS ON THE SCOREBOARD",
+   "title": "PUTTING UP POINTS ON THE SCOREBOARD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5814-3.htm",
+   "sentences": [
+    "It is wrong for Democrats and it is wrong for Republicans to draw maps mid-decade for the sole purpose of putting up points on the scoreboard, which is why I introduced the RESET Act and call on Congress to pass it."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NDAA WINS FOR NORTH CAROLINA",
+   "title": "NDAA WINS FOR NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5767-6.htm",
+   "sentences": [
+    "We also authorized $41 million for Seymour Johnson's Combat Arms Training and Maintenance Complex to ensure our airmen are ready to deploy."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OUR FARMERS NEED RELIEF",
+   "title": "OUR FARMERS NEED RELIEF",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5037-4.htm",
+   "sentences": [
+    "Tariffs are hitting many of our farmers hard.",
+    "We must not sit back, but that means we need tariff-relief assistance so our farmers can stay open and our rural economy can be strong."
+   ]
+  },
+  {
+   "date": "2025-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RURAL DEVELOPMENT AND FAMILY FARMS LEGISLATION",
+   "title": "RURAL DEVELOPMENT AND FAMILY FARMS LEGISLATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-02/html/CREC-2025-12-02-pt1-PgH4977-3.htm",
+   "sentences": [
+    "People back home in eastern North Carolina are concerned about the lack of investment in rural communities, programs that are hard to access, high input costs, low return on their crops, and increasing debt just to keep the farm open.",
+    "That is why I am introducing two key bills to strengthen rural communities and family farms."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PIES OF THANKS",
+   "title": "PIES OF THANKS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4956-4.htm",
+   "sentences": [
+    "At each stop we delivered pecan, apple, and pumpkin pies to law enforcement officers, firefighters, EMS professionals, and our 911 telecommunicators."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REOPENING THE GOVERNMENT AND LOWERING PREMIUMS",
+   "title": "REOPENING THE GOVERNMENT AND LOWERING PREMIUMS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4698-4.htm",
+   "sentences": [
+    "Mr. Speaker, many in eastern North Carolina and throughout the Nation who purchased healthcare through the ACA marketplace are deeply worried about rising premiums.",
+    "As open enrollment is underway, constituents remain uncertain and are in a holding pattern, waiting to see if Congress will fix it.",
+    "I have signed on to a discharge petition, calling to extend ACA premium tax credits."
+   ]
+  },
+  {
+   "date": "2025-09-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING RURAL HEALTHCARE",
+   "title": "PROTECTING RURAL HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-19/html/CREC-2025-09-19-pt1-PgH4461-2.htm",
+   "sentences": [
+    "Nearly 70,000 in my district rely on the Affordable Care Act premium tax credits."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS EMPLOYMENT READINESS YIELD ACT OF 2025",
+   "title": "VETERANS EMPLOYMENT READINESS YIELD ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3491.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2625, the Veterans Employment Readiness Yield Act of 2025.",
+    "On behalf of the more than 56,000 veterans in North Carolina's First Congressional District, which I am proud to represent, and so many across our country, I urge my colleagues to vote in favor of this commonsense legislation.",
+    "We will continue to stay in this fight until every disabled veteran has what they need to get the assistance they have earned.",
+    "Mr. Speaker, I urge my colleagues to do exactly that, and I thank the chair and the ranking member for yielding time."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3633, known as the CLARITY Act.",
+    "The digital asset industry is growing, evolving, changing the way people around the world engage with financial markets and emerging technologies.",
+    "The CLARITY Act provides us with an opportunity then to change that, to lead, to establish thoughtful and balanced guardrails that support innovation, protect consumers, and foster confidence in our markets.",
+    "The CLARITY Act builds on this work.",
+    "Let's pass the CLARITY Act and send a strong message to the American people and the world that the United States will lead in building a forward-looking digital economy.",
+    "Yes, I acknowledge this bill provides more flexibility to deal with hiring, but we also need to see more resources because we are asking the CFTC to take on a major role here.",
+    "Mr. Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VISITING HERTFORD COUNTY, NORTH CAROLINA",
+   "title": "VISITING HERTFORD COUNTY, NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3208-7.htm",
+   "sentences": [
+    "It is vital that we prioritize the hardworking families in eastern North Carolina, especially those who count on programs like Medicaid and SNAP without abusing them."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHERIFFS' VISIT TO ROCKY MOUNT",
+   "title": "SHERIFFS' VISIT TO ROCKY MOUNT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2495-5.htm",
+   "sentences": [
+    "The sheriffs underscored the importance of regional collaboration, emphasizing how sharing resources, intelligence, and support across county lines can enhance community safety."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL POLICE WEEK",
+   "title": "NATIONAL POLICE WEEK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2035.htm",
+   "sentences": [
+    "Mr. Speaker, I rise during National Police Week to honor the brave men and women in law enforcement who served across eastern North Carolina and our Nation.",
+    "Mr. Speaker, I acknowledge the Elizabeth City State University Police Department for working so hard to keep our students safe."
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ICE STEWART DETENTION CENTER",
+   "title": "ICE STEWART DETENTION CENTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgH1713-5.htm",
+   "sentences": [
+    "Mr. Speaker, for far too long, Congress has kicked the can down the road on meaningful action on immigration reform, and there is still significant work to be done to secure our border.",
+    "Clearly, this isn't just an issue for border communities.",
+    "With a decline in unlawful entries into our country, our attention has shifted to Immigration and Customs Enforcement.",
+    "Recently, I visited the ICE Detention Center servicing eastern North Carolina, followed by the Stewart Detention Center in Lumpkin, Georgia, where detainees from eastern North Carolina are transported.",
+    "I also made a trip to Guantanamo Bay with members of the Armed Services Committee."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SEYMOUR JOHNSON DECORATION CEREMONY",
+   "title": "SEYMOUR JOHNSON DECORATION CEREMONY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1513-5.htm",
+   "sentences": [
+    "Our servicemembers defended U.S. coalition partners, including Israel, embodying the true essence of service."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING TOWNHALL PARTICIPANTS",
+   "title": "THANKING TOWNHALL PARTICIPANTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1343-7.htm",
+   "sentences": [
+    "Residents voiced concerns about the pressing issues highlighted in the news and concerns related to Social Security, Medicaid, and Medicare."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURE OUR GROWERS HAVE ACCESS TO CUTTING-EDGE PRECISION AGRICULTURE TECHNOLOGIES",
+   "title": "ENSURE OUR GROWERS HAVE ACCESS TO CUTTING-EDGE PRECISION AGRICULTURE TECHNOLOGIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1045-6.htm",
+   "sentences": [
+    "Madam Speaker, I rise to highlight the Promoting Precision Agriculture Act, legislation I introduced with the gentleman from Kansas, Tracey Mann."
+   ]
+  },
+  {
+   "date": "2025-03-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING PASTOR FRANK RICE",
+   "title": "WELCOMING PASTOR FRANK RICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-06/html/CREC-2025-03-06-pt1-PgH1013-5.htm",
+   "sentences": [
+    "He is also known for God and Country Day to honor the first responders: fire and rescue, EMS, law enforcement, government officials, and all branches of the military."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SCHOOL BUS DRIVER APPRECIATION WEEK",
+   "title": "SCHOOL BUS DRIVER APPRECIATION WEEK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH780-3.htm",
+   "sentences": [
+    "During School Bus Driver Appreciation Week, I had the privilege of riding along on Mrs. Pamela Respess' schoolbus at Banks Elementary School in Lenoir County.",
+    "It was an early morning, and we hopped on the bus after the prechecks.",
+    "My experience highlights the vital role of schoolbus drivers who face enormous challenges like bus shortages and overcrowding."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WE MUST CONTINUE TO SUPPORT UKRAINE",
+   "title": "WE MUST CONTINUE TO SUPPORT UKRAINE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH737-4.htm",
+   "sentences": [
+    "Madam Speaker, I rise to voice my unwavering support for the people of Ukraine.",
+    "As Russia persists in its unprovoked invasion of Ukraine, it is crucial that we unite against Putin as defenders of freedom.",
+    "By coming together, we can safeguard Ukraine's sovereignty and the future of democracy.",
+    "I remain steadfast in supporting democracy, standing with Ukraine, and opposing all of the enemies of freedom around the world. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING THE FARMERS OF EASTERN NORTH CAROLINA",
+   "title": "SUPPORTING THE FARMERS OF EASTERN NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-2.htm",
+   "sentences": [
+    "We cannot overlook the well-known effects that tariffs have on our agriculture communities."
+   ]
+  },
+  {
+   "date": "2025-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPACT OF FENTANYL ON NORTH CAROLINA",
+   "title": "IMPACT OF FENTANYL ON NORTH CAROLINA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgH622-6.htm",
+   "sentences": [
+    "The deadly drug is causing kids to overdose, destroying families, and overwhelming law enforcement.",
+    "Congress must take action to address this crisis, which is why I introduced the MAP Act and supported the HALT Fentanyl Act.",
+    "We must secure our border, hold the cartels accountable, and stop this poison from entering communities across America.",
+    "Mr. Speaker, the opioid crisis is not just a border State problem.",
+    "Congress must protect our families by properly equipping our law enforcement community and working to decrease the demand for illicit drugs. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FENTANYL EPIDEMIC",
+   "title": "FENTANYL EPIDEMIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH519-6.htm",
+   "sentences": [
+    "Over the past year, law enforcement has seized more than 80 million fentanyl-laced fake pills nationwide.",
+    "During a trip to the southern border, I visited the Tucson Border Patrol sector, the epicenter of the fentanyl crisis.",
+    "To combat these lethal and counterfeit pills, I am introducing the Modern Authentication of Pharmaceuticals Act, or the MAP Act.",
+    "I urge Congress to pass this legislation. ____________________"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cammack",
+ "name": "Kat Cammack",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 12,
+  "sentences": 48
+ },
+ "statements": [
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise in strong support for H.R. 139, the Sunshine Protection Act, introduced by my friend and fellow Floridian, Congressman Vern Buchanan.",
+    "This legislation does exactly what Americans have been asking Congress to do not just for years but decades: End outdated practices of changing our clocks twice a year by making daylight saving time permanent.",
+    "It also respects the choices of States that have already opted out of daylight saving time under current law.",
+    "Mr. Speaker, I urge all of my colleagues to support H.R. 139, the Sunshine Protection Act."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "title": "FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4229-6.htm",
+   "sentences": [
+    "Mr. Speaker, 4 years ago, the Supreme Court's decision in Dobbs returned one of the most important questions in our society to the American people and their elected representatives.",
+    "Since then, there has been a lot of rhetoric, a lot of fear, and a lot of misinformation.",
+    "See, 2 years after Dobbs, I experienced one of the most dangerous pregnancy complications a woman can face, an ectopic pregnancy.",
+    "The confusion, in fact, came from misinformation from pro-abortion activists who had geofenced hospitals with digital ads convincing healthcare providers that they would face consequences for providing lifesaving care and convincing them that treating miscarriages and ectopics is an abortion.",
+    "It never has been, not in Florida, not in any State, not by the medical establishment, and, heck, not even by Planned Parenthood.",
+    "Planned Parenthood has even stated this.",
+    "This is an uncomfortable fact that the pro-abortion lobby is fighting like hell to change.",
+    "Four years after Dobbs, it is clear that we need a whole heck of a lot less political theater and a whole heck of a lot more honest conversations.",
+    "The pro-abortion lobby would love for Americans to believe that a ``wanted pregnancy'' is a precious baby worthy of protection and love while simultaneously labeling an ``unwanted pregnancy'' merely a clump of cells that does not deserve love or protection.",
+    "It is the pro-abortion lobby's position that they are hoping Americans abandon logic in order to accept a narrative that is false.",
+    "Recently, I introduced the Bereaved Parents Rights Act."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "title": "SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3692.htm",
+   "sentences": [
+    "I rise today in strong support of H.R. 1329, the Smithsonian American Women's History Museum Act, and I want to start by recognizing my colleague Nicole Malliotakis for her tenacity and her leadership in bringing this legislation to the floor.",
+    "Mr. Speaker, I urge my colleagues to reject the political noise around this bill, pass this legislation, and ensure that future generations like little Augusta's can walk through these Halls, if she chooses to, and know without question what American women are made of."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL POLICE WEEK",
+   "title": "NATIONAL POLICE WEEK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3446-2.htm",
+   "sentences": [
+    "Mr. Speaker, this week, during National Police Week, we honor the brave men and women in law enforcement who put on the badge every single day and run toward danger while others are running away.",
+    "Our law enforcement officers, firefighters, EMTs corrections officers, and public safety telecommunicators face disproportionately high rates of depression, PTSD, substance abuse, and suicide because of the traumatic situations they encounter on the job.",
+    "In fact, over the last 5 years, over 850 law enforcement officers have taken their own lives, and we know that number is underreported.",
+    "To every law enforcement officer serving across Florida's Third District, across the Sunshine State, and across this country, I thank them for their courage, their sacrifice, and their service.",
+    "May God bless our law enforcement officers and their families who stand beside them every single day.",
+    "That is why I have introduced the Answering the Call Act of 2026, legislation to strengthen the 988 Suicide and Crisis Lifeline and ensure it effectively serves first responders."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "On behalf of the 44,000 family farms that call Florida home and the nearly 2 million family farms across this country, I strongly urge my colleagues to support this farm bill."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPLOYING INFRASTRUCTURE WITH GREATER INTERNET TRANSACTIONS AND LEGACY APPLICATIONS ACT",
+   "title": "DEPLOYING INFRASTRUCTURE WITH GREATER INTERNET TRANSACTIONS AND LEGACY APPLICATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2511.htm",
+   "sentences": [
+    "Today, I rise in support of H.R. 1665, the DIGITAL Applications Act, legislation that I introduced to modernize how our Federal agencies process applications for communications infrastructure on Federal lands.",
+    "Mr. Speaker, I urge all of my colleagues to support the DIGITAL Applications Act."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Unlocking Our Domestic LNG Potential Act.",
+    "LNG has a huge part to play in this vision, but we are fighting with one hand tied behind our back."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPLOYING AMERICAN BLOCKCHAINS ACT OF 2025",
+   "title": "DEPLOYING AMERICAN BLOCKCHAINS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2855.htm",
+   "sentences": [
+    "Blockchain technology is not a passing trend.",
+    "From supply chains and finance to healthcare and identity management, blockchain is transforming the way our systems function.",
+    "Meanwhile, nations like China are investing heavily in blockchain infrastructure and making it clear that their intent is to control the digital rails of the future.",
+    "The Deploying American Blockchains Act takes a strategic, thoughtful approach by directing the Commerce Department to lead the Federal Government's blockchain effort.",
+    "The Department will advise the President, establish a Blockchain Deployment Program, and ensure that the United States remains competitive in the development and application of this critical technology.",
+    "Importantly, this bill affirms that blockchain is not just a buzzword.",
+    "It is the backbone of next-generation innovations in areas like supply chain security, smart contracts, digital identity, and fraud prevention.",
+    "I rise today in support of H.R. 1664, the Deploying American Blockchains Act of 2025, bipartisan legislation that I am proud to lead alongside my colleague Representative Darren Soto.",
+    "We will build, not just consume.",
+    "We intend to shape the global standards for digital trust and transparency, and we will not allow authoritarian regimes to do so in our absence.",
+    "I urge my colleagues on both sides of the aisle to join me in supporting this commonsense legislation."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "title": "CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2858.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1520, the Charlotte Woodward Organ Transplant Discrimination Prevention Act.",
+    "Mr. Speaker, I urge my colleagues to support this bill and fight for life."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "Our colleagues on the other side of the aisle for the last 4 years have continuously voted against the HALT Fentanyl Act and have stood in opposition to any effort to curb the opioid crisis in this country, which up until recently was killing 100,000 people every single year.",
+    "The SUPPORT for Patients and Communities Reauthorization Act of 2025 has the backing of more than 160 different organizations dedicated to substance abuse disorder treatment and recovery, and it expands care for pregnant and postpartum women, strengthens prescription drug monitoring, and helps individuals in recovery reenter the workforce and rebuild their lives.",
+    "Mr. Chair, I thank Chairman Guthrie again for leading on this issue, and I urge every single one of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the resolution as a woman and as the chairwoman of the Republican Women's Caucus, not only for election integrity but clearly literacy because Democrats have not read the resolution.",
+    "Why should people not have to verify their citizenship to register to vote?",
+    "Mr. Speaker, I urge my colleagues to support the SAVE Act."
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING MR. JEFFREY ASKEW",
+   "title": "THANKING MR. JEFFREY ASKEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-14/html/CREC-2025-03-14-pt1-PgE214.htm",
+   "sentences": [
+    "Jeffrey participated in the Iran Hostage rescue where he was awarded the Armed Forces Expeditionary Medal."
+   ]
+  }
+ ]
+}

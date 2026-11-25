@@ -1,0 +1,34 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "gooden",
+ "name": "Lance Gooden",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 2,
+  "sentences": 4
+ },
+ "statements": [
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "When President Biden was President, the border was wide open.",
+    "They won't actually come out and say what we know they mean, and that is that they want an open border."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "January 6, of course, they mention that.",
+    "I am proud to vote ``yes.'' I am so disappointed in my Democratic colleagues because, for the life of me, throughout my time in the House, I have heard them talk about how wonderful it is to keep the government open and that a shutdown is so bad and can never happen."
+   ]
+  }
+ ]
+}

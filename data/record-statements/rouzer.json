@@ -1,0 +1,93 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rouzer",
+ "name": "David Rouzer",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 18
+ },
+ "statements": [
+  {
+   "date": "2026-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BILL (H.R. 7567) TO PROVIDE FOR THE REFORM AND CONTINUATION OF AGRICULTURAL AND OTHER PROGRAMS OF THE DEPARTMENT OF AGRICULTURE THROUGH FISCAL YEAR 2031, AND TO OTH",
+   "title": "BILL (H.R. 7567) TO PROVIDE FOR THE REFORM AND CONTINUATION OF AGRICULTURAL AND OTHER PROGRAMS OF THE DEPARTMENT OF AGRICULTURE THROUGH FISCAL YEAR 2031, AND TO OTHER PURPOSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-30/html/CREC-2026-04-30-pt1-PgE393-2.htm",
+   "sentences": [
+    "I urge my colleagues in the Senate to advance this legislation so that our Nation's farmers can continue to farm and meet the food and nutritional needs of America and the world. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "Mr. Speaker, boy, do I have many stories that I could tell, but I will not."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "The Nationwide Permitting Improvement Act narrows the scope of the Clean Water Act section 401 certifications to actual water quality impacts and establishes timelines and procedural guardrails of State- level review to prevent misuse and delay.",
+    "This amendment builds directly on the critical Clean Water Act section 401 certification reforms that I authored in the underlying bill.",
+    "This amendment will give the IBWC access to additional funding sources, enabling it to properly maintain these assets and, in turn, support cleaner training waters for our warfighters while strengthening security along our southern border.",
+    "I urge adoption of it, and I yield back the balance of my time.",
+    "Mr. Chair, I am proud to support this much-needed effort to modernize our Nation's water permitting system.",
+    "Mr. Chair, I rise in support of the amendment offered by Mr. Babin.",
+    "It is actually exceptionally pro-environment, and I support this amendment."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "Madam Chair, I rise in support of my amendment to include the Lumbee Fairness Act in the bill before us today, providing the Lumbee Tribe of North Carolina the full Federal recognition they have been unfairly denied for decades."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARITIME SUPPLY CHAIN SECURITY ACT",
+   "title": "MARITIME SUPPLY CHAIN SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2548.htm",
+   "sentences": [
+    "This information could easily be used to disrupt trade, track shipments of military equipment, or gain intelligence on U.S. supply chains, among many other concerns.",
+    "Mr. Speaker, I urge my colleagues to support this very important piece of legislation."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NATIONAL EMISSION STANDARDS FOR HAZARDOUS AIR POLL",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NATIONAL EMISSION STANDARDS FOR HAZARDOUS AIR POLLUTANTS: RUBBER TIRE MANUFACTURING\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH986.htm",
+   "sentences": [
+    "It would increase CO2 emissions by requiring facilities to install additional costly technologies that will increase energy consumption.",
+    "Madam Speaker, I rise in strong support of H.J. Res. 61, which would repeal the Biden-Harris EPA's rule amending National Emission Standards on the domestic rubber tire manufacturing industry.",
+    "Madam Speaker, I urge my colleagues to join me in supporting this resolution."
+   ]
+  },
+  {
+   "date": "2025-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMTRAK EXECUTIVE BONUS DISCLOSURE ACT",
+   "title": "AMTRAK EXECUTIVE BONUS DISCLOSURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-13/html/CREC-2025-01-13-pt1-PgH99-4.htm",
+   "sentences": [
+    "The Transportation Workers Union, which represents 1,500 Amtrak service workers, said that these bonuses are an affront to every Amtrak worker and American taxpayers, which is why the TWU endorsed this bill during the previous Congress when it last passed the House.",
+    "Mr. Speaker, I rise in support of this bill, the Amtrak Executive Bonus Disclosure Act, which increases accountability and transparency at Amtrak by requiring public disclosure of taxpayer- funded bonuses given to its top executives.",
+    "Mr. Speaker, I urge support of this legislation."
+   ]
+  }
+ ]
+}

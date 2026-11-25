@@ -1,0 +1,24 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "fwilson",
+ "name": "Frederica S. Wilson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 1,
+  "sentences": 3
+ },
+ "statements": [
+  {
+   "date": "2026-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO THE LATE MR. HARCOURT IRVIN CLARK, SR.",
+   "title": "PAYING TRIBUTE TO THE LATE MR. HARCOURT IRVIN CLARK, SR.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-23/html/CREC-2026-07-23-pt1-PgE735-4.htm",
+   "sentences": [
+    "He became the first African-American police officer in the city of Coral Gables, Florida.",
+    "Determined to break more barriers, he went on to serve as Chief of Police for the University of Miami Police Department, Director of Campus Safety for Florida International University, and as the first Administrative Director for the Miami-Dade County Equal Opportunity Program Social Service Agency, which is now the Community Action Agency of Miami-Dade County.",
+    "He went on to pursue his entrepreneurial spirit by opening ``The Hickory Pit Barbeque Restaurant.'' Before his stellar career in law enforcement, Mr. Clark dutifully served his country as a solider in the United States Army."
+   ]
+  }
+ ]
+}

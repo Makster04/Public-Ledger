@@ -1,0 +1,48 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "moskowitz",
+ "name": "Jared Moskowitz",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 9
+ },
+ "statements": [
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LAR",
+   "title": "PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1389-6.htm",
+   "sentences": [
+    "I will refer to him as Representative of Texas."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 25, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEE",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 25, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1083-3.htm",
+   "sentences": [
+    "In any given year, another colleague said that if Congress raises the debt ceiling, passes the CR, and rams through an omnibus bill, no Member of Congress should receive a paycheck.",
+    "You sent me to Congress to cut wasteful spending, and I am a woman of my word.",
+    "I mean, they were great, but they are breaking up.",
+    "I am going to miss the never CR group."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Mr. Chair, Representative Thomas Massie is a budget hawk who walks around with the debt clock--which, by the way, I bought.",
+    "They convinced me that he is a ``no.'' The reason he is a ``no,'' he said, over the next 3 years, it is going to add almost a trillion dollars to the debt, and that is in the best case, the most rosy scenario.",
+    "This clock that we have that has the debt, it is still going up.",
+    "We are going to go to $37 trillion in debt."
+   ]
+  }
+ ]
+}

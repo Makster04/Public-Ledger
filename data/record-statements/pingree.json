@@ -1,0 +1,92 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "pingree",
+ "name": "Chellie Pingree",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 26
+ },
+ "statements": [
+  {
+   "date": "2026-10-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL OSTOMY AWARENESS DAY",
+   "title": "NATIONAL OSTOMY AWARENESS DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-10-01/html/CREC-2026-10-01-pt1-PgE1004.htm",
+   "sentences": [
+    "I am proud to stand with the Maine ostomy community and with ostomy communities across our Nation."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "People suffering from non-Hodgkin's lymphoma and other devastating cancers are racking up outrageous medical bills.",
+    "Unfortunately, the work we did in that committee did not deter Bayer, which, armed with 53 lobbyists and millions of dollars, immediately got to work to get their get-out-of-jail-free card elsewhere: on this farm bill and at the Supreme Court.",
+    "Litigation on this topic was discussed at the Supreme Court on Monday.",
+    "Quite literally, it would preserve the status quo and allow the Supreme Court to examine this issue separately and the complicated legal issues at its core.",
+    "The question of Federal preemption also sits next to a truly poisonous provision that would waive all other laws for registered pesticides, including the Clean Water Act and Clean Air Act.",
+    "Let's be clear: The Clean Water Act already includes a broad exemption for agricultural stormwater runoff because Congress knew that some amount of pesticide runoff was inevitable.",
+    "I urge my colleagues to support this amendment.",
+    "I urge all Members to support this."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHANGES AT THE KENNEDY CENTER",
+   "title": "CHANGES AT THE KENNEDY CENTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1983-2.htm",
+   "sentences": [
+    "Changing that requires an act of Congress, and I will do everything in my power to make sure this institution stays the way it is. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "The bill also protects funding for programs important to combating and adapting to climate change.",
+    "It rejects House Republicans' effort to gut funding for renewable energy and funds USGS climate science.",
+    "Finally, this bill supports Native American families by investing in a strong and resilient Indian Country, including through education, public safety and justice, and healthcare programs.",
+    "Mr. Speaker, I rise to support the consolidated appropriations act.",
+    "Mr. Speaker, I will give the most applause and great thanks to our committee staff, Rita Culp, Jocelyn Hunn, and Michael Schmeltz, who put in many long hours, as we know, and worked over the holidays.",
+    "Mr. Speaker, I urge my colleagues to support the bill."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025",
+   "title": "RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong opposition to this reckless attack on public media contained within this rescission bill and the millions of Americans who rely on and treasure their local public television and radio stations.",
+    "Every State will feel the impact of this $1.1 billion rescission.",
+    "This is not about fiscal responsibility or finding waste, fraud, and abuse.",
+    "In this political climate, that kind of consensus is unheard of.",
+    "I urge my colleagues to vote ``no'' on this rescission."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "The bill does not set funding levels for individual programs, and because it doesn't, it creates another dangerous opportunity for President Trump and Elon Musk to defund congressional priorities, and we all know what a disaster that has been for our country: an illegal, unconstitutional disaster.",
+    "For example, the Indian Health Service needs an additional $345 million just to maintain current direct healthcare services.",
+    "As ranking member of the Subcommittee on the Interior, Environment, and Related Agencies of the Appropriations Committee, I am deeply concerned that the Republican majority is giving the administration a free pass to abandon programs that protect the public from pollution, that safeguard human health, and that address the climate crisis.",
+    "Mr. Speaker, I oppose this full-year continuing resolution and urge my colleagues to reject it.",
+    "Mr. Speaker, I urge a ``no'' vote."
+   ]
+  }
+ ]
+}
