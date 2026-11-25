@@ -55,13 +55,20 @@ export const COMMITTEE_AGENCIES={
   HSAP:['*'],SSAP:['*']};
 export const fullCommittee=id=>String(id||'').replace(/\d+$/,'');
 
-// The organization an item names, without the city and state the Senate pages add ("Chipotle Mexican Grill, Inc.
-// Newport Beach, CA"), and, for an agreement, the parties before its terms.
+// The organization an item names, as written (the Senate pages add a city and state: "Chipotle Mexican Grill, Inc.
+// Newport Beach, CA"); for an agreement, the parties before its terms.
 export function orgOf(x){
-  let n=String(x?.source||x?.org||x?.terms||'').split(' · ')[0].trim();
-  n=n.replace(/^(Filer|Myself|Spouse)\s+and\s+(the\s+)?/i,'');
-  n=n.replace(/\s+[A-Z][A-Za-z.' -]+,\s*(?:[A-Z]{2}|Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)$/,'');
-  return n.replace(/\s+/g,' ').trim();
+  const n=String(x?.source||x?.org||x?.terms||'').split(' · ')[0].trim();
+  return n.replace(/^(Filer|Myself|Spouse)\s+and\s+(the\s+)?/i,'').replace(/\s+/g,' ').trim();
+}
+// The names to look an organization up by, longest first: without the state, then without one, two or three more
+// words (the city, which can't be told from the name by itself). A lookup keeps only a match on the whole name.
+const STATE=new RegExp(`,\\s*(?:[A-Z]{2}|Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)$`);
+export function nameCandidates(org){
+  if(!STATE.test(org))return [org];
+  const words=org.replace(STATE,'').trim().split(' '),out=[];
+  for(let k=0;k<=3&&words.length-k>=1;k++){const c=words.slice(0,words.length-k).join(' ');if(words.length-k>=2||k===0)out.push(c);}
+  return out;
 }
 // Organizations that can't be an interested party: public employers and their pension plans, the member's own trusts,
 // holding companies and family foundations, accounts, and houses of worship. They're not looked up.
@@ -84,29 +91,36 @@ async function getJSON(url,opts={}){
   throw new Error(`rate limited ${url}`);
 }
 // Lobbying: the LDA clients whose name matches, and their filings in the years asked: issue codes and spending.
-export async function ldaLookup(name,years){
-  const core=norm(name);if(!core)return null;
-  const q=encodeURIComponent(name.replace(/,?\s+(Inc|LLC|LLP|Corp|Corporation|Co|Ltd)\.?$/i,''));
-  const res=(await getJSON(`https://lda.gov/api/v1/clients/?client_name=${q}&page_size=25`)).results||[];
-  const hits=res.filter(c=>{const n=norm(c.name);return n===core||n.startsWith(core+' ')||core.startsWith(n+' ');});
-  if(!hits.length)return {match:null,candidates:res.slice(0,3).map(c=>c.name)};
+export async function ldaLookup(org,years){
+  let hits=[],tried=null;
+  for(const name of nameCandidates(org)){
+    const core=norm(name);if(!core||core.split(' ').length<1)continue;
+    const q=encodeURIComponent(name.replace(/,?\s+(Inc|LLC|LLP|Corp|Corporation|Co|Ltd)\.?$/i,''));
+    const res=(await getJSON(`https://lda.gov/api/v1/clients/?client_name=${q}&page_size=25`)).results||[];
+    hits=res.filter(c=>norm(c.name)===core);tried=name;if(hits.length)break;
+  }
+  if(!hits.length)return {match:null};
   const issues=new Set(),filings=[];let spent=0;
   for(const c of hits.slice(0,5))for(const y of years){
     const f=(await getJSON(`https://lda.gov/api/v1/filings/?client_id=${c.client_id}&filing_year=${y}&page_size=25`)).results||[];
     for(const x of f){for(const a of x.lobbying_activities||[])if(a.general_issue_code)issues.add(a.general_issue_code);spent+=Number(x.income||x.expenses||0);
       filings.push({year:x.filing_year,period:x.filing_period,registrant:x.registrant?.name,url:x.filing_document_url});}
   }
-  return {match:hits.map(c=>c.name),description:hits[0].general_description||null,issues:[...issues].sort(),filings:filings.length,spent:Math.round(spent),sample:filings.slice(0,3)};
+  return {match:hits.map(c=>c.name),as:tried,description:hits[0].general_description||null,issues:[...issues].sort(),filings:filings.length,spent:Math.round(spent),sample:filings.slice(0,3)};
 }
-// Federal contracts: awards to recipients by this name in the fiscal years asked, by awarding agency.
-export async function contractsLookup(name,from,to){
-  const body={filters:{recipient_search_text:[name.replace(/,?\s+(Inc|LLC|LLP|Corp|Corporation|Co|Ltd)\.?$/i,'')],award_type_codes:['A','B','C','D'],time_period:[{start_date:from,end_date:to}]},
-    fields:['Award ID','Recipient Name','Award Amount','Awarding Agency'],limit:100,page:1,sort:'Award Amount',order:'desc'};
-  const j=await getJSON('https://api.usaspending.gov/api/v2/search/spending_by_award/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-  const core=norm(name),by={};
-  for(const r of j.results||[]){if(!norm(r['Recipient Name']).startsWith(core.split(' ').slice(0,2).join(' ')))continue;
-    const a=r['Awarding Agency']||'?';by[a]=(by[a]||0)+Number(r['Award Amount']||0);}
-  return Object.keys(by).length?{agencies:Object.fromEntries(Object.entries(by).map(([a,v])=>[a,Math.round(v)]))}:null;
+// Federal contracts: the recipient whose name matches, then its contract awards in the fiscal years asked, by agency.
+export async function contractsLookup(org,from,to){
+  for(const name of nameCandidates(org)){
+    const core=norm(name);if(!core)continue;
+    const ac=await getJSON('https://api.usaspending.gov/api/v2/autocomplete/recipient/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({search_text:name,limit:20})});
+    const rec=(ac.results||[]).filter(r=>norm(r.recipient_name)===core);if(!rec.length)continue;
+    const body={filters:{recipient_search_text:[rec[0].recipient_name],award_type_codes:['A','B','C','D'],time_period:[{start_date:from,end_date:to}]},
+      fields:['Award ID','Recipient Name','Award Amount','Awarding Agency'],limit:100,page:1,sort:'Award Amount',order:'desc'};
+    const j=await getJSON('https://api.usaspending.gov/api/v2/search/spending_by_award/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const by={};for(const r of j.results||[]){if(norm(r['Recipient Name'])!==core)continue;const a=r['Awarding Agency']||'?';by[a]=(by[a]||0)+Number(r['Award Amount']||0);}
+    return {recipient:rec[0].recipient_name,agencies:Object.fromEntries(Object.entries(by).map(([a,v])=>[a,Math.round(v)]))};
+  }
+  return null;
 }
 
 // The members to match: everyone in the disclosure file with committee seats; their items from the latest report
@@ -122,6 +136,31 @@ export function scope(disclosures,committees){
     out.push({id,name:p.name,chamber:p.chamber,committees:[...new Set(seats)],report:{year:r0.year,url:r0.url},items});
   }
   return out;
+}
+
+// An item's dollar amount, or null when the report doesn't give one (Senate spouse income is "over $1,000", not $1,000).
+export function itemAmount(kind,x){
+  if(/(&gt;|>|over)\s*\$1,000\b/i.test(String(x?.text||'')))return null;
+  const v=kind==='income'?(x?.amounts||[]).reduce((n,a)=>n+(Number(a)||0),0):Number(x?.value);
+  return Number.isFinite(v)&&v>0?v:null;
+}
+// One member's record for public/conflicts.json, from their items and the reviewed decisions (keyed by organization).
+// Null when an organization on the report has no decision yet: a half-reviewed report isn't scored.
+export function buildRecord(m,decisions,reviewedAt,person){
+  const rec={report:m.report,reviewed:{at:reviewedAt,src:{t:'Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts',u:'https://lda.gov/'}},income:[],positions:[],agreements:[],gifts:[],travel:[]};
+  const missing=[];
+  for(const it of m.items){
+    const org=orgOf(it.x),skip=notAnInterest(org,person||m),d=decisions?.[org];
+    if(!skip&&!d)missing.push(org);
+    const interested=!skip&&d?.interested===true,why=skip||d?.why||null;
+    const src={t:`${it.year} report`,u:m.report.url},base={year:it.year,interested,why,src};
+    if(it.kind==='income')rec.income.push({source:org,type:it.x.type||null,amount:itemAmount('income',it.x),paidTo:it.x.paidTo||null,...base});
+    else if(it.kind==='positions')rec.positions.push({position:it.x.position||null,org,...base});
+    else if(it.kind==='agreements')rec.agreements.push({kind:String(it.x.terms||'').split(' · ')[1]||'agreement',org,date:it.x.date||null,...base});
+    else if(it.kind==='gifts')rec.gifts.push({source:org,value:itemAmount('gifts',it.x),...base});
+    else rec.travel.push({sponsor:org,dates:[it.x.from,it.x.to].filter(Boolean).join(' – ')||null,value:itemAmount('travel',it.x),...base});
+  }
+  return missing.length?{missing:[...new Set(missing)]}:rec;
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
@@ -146,5 +185,18 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
         const hit=L?.lobbying?.issues?.filter(c=>issues.has(c))||[];
         console.log(`  ${it.year} ${it.kind.padEnd(10)} ${org.slice(0,60).padEnd(60)} ${skip?`— ${skip}`:L?`lobbies: ${L.lobbying?.match?`${L.lobbying.issues.join(' ')||'(no issues)'}${hit.length?` ← ${hit.join(' ')}`:''}`:'not found'}; contracts: ${L.contracts?Object.keys(L.contracts.agencies).join('; '):'none'}`:'not looked up'}`);}
     }
+  }
+  if(mode==='build'){
+    const reviews=read(REVIEWS),out={about:'Each sitting member\'s outside income, board seats, agreements, gifts and paid travel from their latest annual reports, with the reviewed matches of the organizations on them: an organization is interested when it lobbies on an issue one of their committees handles, works in an industry their committees oversee, or holds contracts from an agency their committees oversee. Written by npm run conflicts:build from data/conflict-reviews.json.',built:new Date().toISOString().slice(0,10),people:{}};
+    for(const m of members){
+      const r=reviews.people?.[m.id];if(!r){console.log(`  ${m.name}: not reviewed yet`);continue;}
+      const rec=buildRecord(m,r.orgs,r.reviewedAt||reviews.reviewedAt,nameOf[m.id]||m);
+      if(rec.missing){console.log(`  ${m.name}: no decision yet for ${rec.missing.join('; ')}`);continue;}
+      out.people[m.id]=rec;
+      const n=['income','positions','agreements','gifts','travel'].reduce((k,x)=>k+rec[x].filter(i=>i.interested).length,0);
+      console.log(`  ${m.name}: ${n} interested of ${m.items.length}`);
+    }
+    fs.writeFileSync(path.join(root,OUT),JSON.stringify(out,null,1)+'\n');
+    console.log(`${OUT}: ${Object.keys(out.people).length} members`);
   }
 }
