@@ -90,23 +90,21 @@ async function getJSON(url,opts={}){
   }
   throw new Error(`rate limited ${url}`);
 }
-// Lobbying: the LDA clients whose name matches, and their filings in the years asked: issue codes and spending.
+// Lobbying: the LDA filings in the years asked whose client name matches the whole name: issue codes and spending.
 export async function ldaLookup(org,years){
-  let hits=[],tried=null;
   for(const name of nameCandidates(org)){
-    const core=norm(name);if(!core||core.split(' ').length<1)continue;
+    const core=norm(name);if(!core)continue;
     const q=encodeURIComponent(name.replace(/,?\s+(Inc|LLC|LLP|Corp|Corporation|Co|Ltd)\.?$/i,''));
-    const res=(await getJSON(`https://lda.gov/api/v1/clients/?client_name=${q}&page_size=25`)).results||[];
-    hits=res.filter(c=>norm(c.name)===core);tried=name;if(hits.length)break;
+    const issues=new Set(),filings=[],names=new Set();let spent=0,description=null;
+    for(const y of years){
+      const f=(await getJSON(`https://lda.gov/api/v1/filings/?client_name=${q}&filing_year=${y}&page_size=100`)).results||[];
+      for(const x of f){if(norm(x.client?.name)!==core)continue;names.add(x.client.name);description??=x.client.general_description||null;
+        for(const a of x.lobbying_activities||[])if(a.general_issue_code)issues.add(a.general_issue_code);spent+=Number(x.income||x.expenses||0);
+        filings.push({year:x.filing_year,period:x.filing_period,registrant:x.registrant?.name,url:x.filing_document_url});}
+    }
+    if(filings.length)return {match:[...names],as:name,description,issues:[...issues].sort(),filings:filings.length,spent:Math.round(spent),sample:filings.slice(0,3)};
   }
-  if(!hits.length)return {match:null};
-  const issues=new Set(),filings=[];let spent=0;
-  for(const c of hits.slice(0,5))for(const y of years){
-    const f=(await getJSON(`https://lda.gov/api/v1/filings/?client_id=${c.client_id}&filing_year=${y}&page_size=25`)).results||[];
-    for(const x of f){for(const a of x.lobbying_activities||[])if(a.general_issue_code)issues.add(a.general_issue_code);spent+=Number(x.income||x.expenses||0);
-      filings.push({year:x.filing_year,period:x.filing_period,registrant:x.registrant?.name,url:x.filing_document_url});}
-  }
-  return {match:hits.map(c=>c.name),as:tried,description:hits[0].general_description||null,issues:[...issues].sort(),filings:filings.length,spent:Math.round(spent),sample:filings.slice(0,3)};
+  return {match:null};
 }
 // Federal contracts: the recipient whose name matches, then its contract awards in the fiscal years asked, by agency.
 export async function contractsLookup(org,from,to){
