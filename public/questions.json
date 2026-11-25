@@ -1,5 +1,5 @@
 {
- "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the lean or the compass); axis is the compass axis it counts on (econ: across, social: up and down), or null. groups names the interest groups whose scorecard is about the question, each with the side a high rating from it favors (public/question-scores.js ratingItems); groups that rate across many topics are on no question. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
+ "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the Ideology lean); axis is the compass axis it counts on, the Political Compass way (approved Nov. 25, 2026): econ (across; axisSide is the economic-left side, the one with more government in the economy) or auth (up and down; axisSide is the authoritarian side, the one with more state power over what people may do, say or consume), or null for neither. axisWeight 0.5 marks a question that leans only slightly that way, and counts half. groups names the interest groups whose scorecard is about the question, each with the side a high rating from it favors (public/question-scores.js ratingItems); groups that rate across many topics are on no question. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
  "credit": "Questions modeled on the topics of iSideWith.com's political quiz (https://www.isidewith.com/political-quiz), in our own wording, with questions added for votes the quiz doesn't cover.",
  "left_out": {
   "local": [
@@ -97,7 +97,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "algorithm-disclosure",
@@ -108,7 +109,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "data-privacy",
@@ -119,7 +121,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "deepfake-ads",
@@ -130,7 +133,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "right-to-delete",
@@ -141,7 +145,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "social-media-under-16",
@@ -152,7 +157,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "robot-tax",
@@ -163,7 +169,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "social-media-real-id",
@@ -174,7 +181,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "social-media-age-id",
@@ -185,7 +193,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "break-up-big-tech",
@@ -196,7 +205,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "crypto-regulation",
@@ -208,6 +218,7 @@
    ],
    "liberal": 0,
    "axis": "econ",
+   "axisSide": 0,
    "groups": {
     "standwithcrypto": 1
    }
@@ -221,7 +232,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "self-custody-wallets",
@@ -232,7 +244,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "art-sale-reporting",
@@ -243,7 +256,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "ai-pay-creators",
@@ -254,7 +268,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "right-to-repair",
@@ -265,7 +280,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "loot-boxes",
@@ -276,7 +292,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "facial-recognition",
@@ -287,7 +304,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "target-terrorists-abroad",
@@ -342,7 +360,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "military-vs-cartels",
@@ -375,7 +394,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "cancel-f35",
@@ -408,7 +428,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "abortion",
@@ -419,7 +440,8 @@
     "Pro-choice"
    ],
    "liberal": 1,
-   "axis": "social",
+   "axis": "auth",
+   "axisSide": 0,
    "groups": {
     "sba": 0,
     "rfa": 1,
@@ -435,7 +457,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social",
+   "axis": "auth",
+   "axisSide": 1,
    "added": true
   },
   {
@@ -447,7 +470,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "assisted-dying",
@@ -458,7 +482,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "marital-rape",
@@ -480,7 +505,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "same-sex-adoption",
@@ -491,7 +517,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "minors-transition-care",
@@ -502,7 +529,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "religious-refusal",
@@ -513,7 +541,7 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "women-combat",
@@ -524,7 +552,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "same-sex-marriage",
@@ -535,7 +564,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "sex-work",
@@ -546,7 +576,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "hate-speech",
@@ -557,7 +588,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "planned-parenthood",
@@ -568,7 +600,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "end-dei-hiring",
@@ -579,7 +612,7 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "face-veils",
@@ -590,7 +623,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "assault-weapons",
@@ -601,7 +635,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social",
+   "axis": "auth",
+   "axisSide": 0,
    "note": "Widens the quiz's buyback question: Congress has had no bill to require a buyback, so bans on assault weapons and large magazines count, and so do paid buyback programs."
   },
   {
@@ -613,7 +648,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "women-on-boards",
@@ -624,7 +660,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "epstein-files",
@@ -657,7 +694,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "justice-ethics",
@@ -690,7 +728,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "national-id",
@@ -701,7 +740,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "foreign-agent-lobbyists",
@@ -723,7 +763,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": null,
+   "axis": "auth",
+   "axisSide": 0,
    "added": true
   },
   {
@@ -736,6 +777,7 @@
    ],
    "liberal": 0,
    "axis": "econ",
+   "axisSide": 0,
    "groups": {
     "lcv": 0
    }
@@ -760,7 +802,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "geoengineering",
@@ -782,7 +825,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "wind-subsidies",
@@ -793,7 +837,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "arctic-drilling",
@@ -804,7 +849,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "ev-support",
@@ -816,6 +862,7 @@
    ],
    "liberal": 0,
    "axis": "econ",
+   "axisSide": 0,
    "note": "Merges the quiz's two EV questions (charging network; EV subsidies)."
   },
   {
@@ -827,7 +874,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "factory-farming",
@@ -838,7 +886,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "offshore-drilling",
@@ -849,7 +898,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "paris-agreement",
@@ -860,7 +910,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "dakota-access",
@@ -871,7 +922,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "carbon-capture",
@@ -882,7 +934,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "deep-sea-mining",
@@ -893,7 +946,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "gas-stoves",
@@ -904,7 +958,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "equal-pay",
@@ -915,7 +970,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "welfare-restrictions",
@@ -926,7 +982,8 @@
     "Fewer restrictions"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "company-tax-breaks",
@@ -948,7 +1005,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "postal-banking",
@@ -959,7 +1017,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "audit-the-fed",
@@ -981,7 +1040,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "cut-spending-debt",
@@ -993,6 +1053,7 @@
    ],
    "liberal": 1,
    "axis": "econ",
+   "axisSide": 1,
    "groups": {
     "clubforgrowth": 0,
     "afp": 0
@@ -1018,7 +1079,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "paid-leave",
@@ -1029,7 +1091,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "data-center-ban",
@@ -1040,7 +1103,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "universal-basic-income",
@@ -1051,7 +1115,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "block-mega-mergers",
@@ -1062,7 +1127,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "corporate-tax",
@@ -1073,7 +1139,8 @@
     "Lower"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "public-pensions",
@@ -1084,7 +1151,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "usmca",
@@ -1107,6 +1175,7 @@
    ],
    "liberal": 0,
    "axis": "econ",
+   "axisSide": 0,
    "added": true
   },
   {
@@ -1118,7 +1187,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null,
+   "axis": "econ",
+   "axisSide": 0,
    "added": true
   },
   {
@@ -1130,7 +1200,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social",
+   "axis": "auth",
+   "axisSide": 0,
    "groups": {
     "goa": 1
    }
@@ -1144,7 +1215,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "retirement-age",
@@ -1155,7 +1227,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "gun-age-21",
@@ -1166,7 +1239,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "eminent-domain",
@@ -1177,7 +1251,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "congress-stock-trading",
@@ -1199,7 +1274,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "misinformation-rules",
@@ -1210,7 +1286,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "term-limits",
@@ -1243,7 +1320,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "flag-burning",
@@ -1254,7 +1332,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "permanent-dst",
@@ -1276,7 +1355,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "no-fly-no-buy",
@@ -1287,7 +1367,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "snowden-immunity",
@@ -1298,7 +1379,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "whistleblowers",
@@ -1309,7 +1391,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "ai-diagnosis",
@@ -1331,7 +1414,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "marijuana",
@@ -1342,7 +1426,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "drug-prices",
@@ -1354,6 +1439,7 @@
    ],
    "liberal": 0,
    "axis": "econ",
+   "axisSide": 0,
    "note": "Merges the quiz's two drug-price questions (regulate prices of life-saving drugs; cap prescription prices)."
   },
   {
@@ -1365,7 +1451,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "pre-existing-conditions",
@@ -1376,7 +1463,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "medical-debt",
@@ -1387,7 +1475,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "medicaid-funding",
@@ -1398,7 +1487,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "single-payer",
@@ -1409,7 +1499,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "medicaid-work",
@@ -1420,7 +1511,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "va-privatization",
@@ -1431,7 +1523,8 @@
     "Less"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "food-dyes",
@@ -1442,7 +1535,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "fund-who",
@@ -1464,7 +1558,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "drug-ads",
@@ -1475,7 +1570,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "doctor-misinformation",
@@ -1486,7 +1582,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "fix-it-first",
@@ -1508,7 +1605,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "nationalize-grid",
@@ -1519,7 +1617,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "free-school-meals",
@@ -1531,6 +1630,7 @@
    ],
    "liberal": 0,
    "axis": "econ",
+   "axisSide": 0,
    "note": "Merges the quiz's two school-meal questions."
   },
   {
@@ -1542,7 +1642,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "tax-rich-student-loans",
@@ -1553,7 +1654,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "corporal-punishment",
@@ -1564,7 +1666,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "school-vouchers",
@@ -1575,7 +1678,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "universal-preschool",
@@ -1586,7 +1690,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "abolish-education-dept",
@@ -1597,7 +1702,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "common-core",
@@ -1619,7 +1725,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "school-phone-ban",
@@ -1630,7 +1737,9 @@
     "No"
    ],
    "liberal": null,
-   "axis": null,
+   "axis": "auth",
+   "axisSide": 0,
+   "axisWeight": 0.5,
    "note": "Merges the quiz's two school-phone questions."
   },
   {
@@ -1642,7 +1751,7 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "charter-schools",
@@ -1653,7 +1762,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "sex-ed-opt-out",
@@ -1664,7 +1774,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "college-loan-accountability",
@@ -1686,7 +1797,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "legacy-admissions",
@@ -1719,7 +1831,9 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1,
+   "axisWeight": 0.5
   },
   {
    "id": "convicted-candidates",
@@ -1741,7 +1855,7 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "electoral-college",
@@ -1785,7 +1899,9 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1,
+   "axisWeight": 0.5
   },
   {
    "id": "proportional-representation",
@@ -1841,7 +1957,9 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0,
+   "axisWeight": 0.5
   },
   {
    "id": "ranked-choice",
@@ -1863,7 +1981,7 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "fine-nonvoters",
@@ -1874,7 +1992,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "social-media-political-ads",
@@ -1896,7 +2015,7 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "body-cameras",
@@ -1907,7 +2026,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "release-nonviolent",
@@ -1918,7 +2038,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "ai-justice",
@@ -1940,7 +2061,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "death-penalty-traffickers",
@@ -1951,7 +2073,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "military-equipment-police",
@@ -1962,7 +2085,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "qualified-immunity",
@@ -1973,7 +2097,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "private-prisons",
@@ -1984,7 +2109,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "civil-forfeiture",
@@ -1995,7 +2121,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null,
+   "axis": "auth",
+   "axisSide": 0,
    "note": "Merges the quiz's three property-seizure questions (one from National Security, two from Criminal)."
   },
   {
@@ -2007,7 +2134,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "mandatory-minimums",
@@ -2018,7 +2146,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "felon-voting",
@@ -2029,7 +2158,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "restorative-justice",
@@ -2040,7 +2170,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "genealogy-searches",
@@ -2051,7 +2182,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "license-plate-readers",
@@ -2062,7 +2194,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "police-union-limits",
@@ -2109,7 +2242,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "war-with-iran",
@@ -2167,7 +2301,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "strike-north-korea",
@@ -2255,7 +2390,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "ukraine-aid",
@@ -2288,7 +2424,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null,
+   "axis": "auth",
+   "axisSide": 1,
    "added": true
   },
   {
@@ -2300,7 +2437,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "high-risk-entry-ban",
@@ -2311,7 +2449,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "citizenship-test",
@@ -2333,7 +2472,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "learn-english",
@@ -2344,7 +2484,7 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": null
   },
   {
    "id": "local-police-ice",
@@ -2355,7 +2495,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "sanctuary-funding",
@@ -2366,7 +2507,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "dual-citizenship",
@@ -2377,7 +2519,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "deport-serious-crime",
@@ -2388,7 +2531,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "border-security",
@@ -2399,7 +2543,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social",
+   "axis": "auth",
+   "axisSide": 0,
    "groups": {
     "numbersusa": 0
    }
@@ -2413,7 +2558,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "undocumented-healthcare",
@@ -2424,7 +2570,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "skilled-visas",
@@ -2446,7 +2593,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "border-wall",
@@ -2457,7 +2605,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "remain-in-mexico",
@@ -2468,7 +2617,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "e-verify",
@@ -2479,7 +2629,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "no-traffic-laws",
@@ -2490,7 +2641,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "diesel-emissions",
@@ -2501,7 +2653,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "transit-spending",
@@ -2512,7 +2665,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "accessible-transit",
@@ -2523,7 +2677,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "fuel-efficiency",
@@ -2534,7 +2689,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "gps-tracking",
@@ -2545,7 +2701,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "ev-mandate",
@@ -2556,7 +2713,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "carpool-incentives",
@@ -2567,7 +2725,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "distracted-driving",
@@ -2578,7 +2737,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "self-driving-rules",
@@ -2589,7 +2749,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null,
+   "axis": "econ",
+   "axisSide": 0,
    "note": "Merges the quiz's two self-driving questions (one from Technology)."
   },
   {
@@ -2601,7 +2762,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "smart-roads",
@@ -2612,7 +2774,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "high-speed-rail",
@@ -2623,7 +2786,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "frequent-flier-rules",
@@ -2634,7 +2798,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "classic-car-design",
@@ -2656,7 +2821,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "space-funding",
@@ -2711,7 +2877,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": null
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "gmo-labels",
@@ -2722,7 +2889,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "homeless-funding",
@@ -2733,7 +2901,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "rent-algorithms",
@@ -2744,7 +2913,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "rent-control",
@@ -2755,7 +2925,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "affordable-housing",
@@ -2766,7 +2937,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "dense-housing",
@@ -2788,7 +2960,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 1
   },
   {
    "id": "squatter-removal",
@@ -2799,7 +2972,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "auth",
+   "axisSide": 0
   },
   {
    "id": "national-sales-tax",
@@ -2810,7 +2984,8 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 1
   },
   {
    "id": "first-time-buyers",
@@ -2821,7 +2996,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "investor-home-buying",
@@ -2832,7 +3008,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "foreign-home-buyers",
@@ -2854,7 +3031,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "foreclosure-help",
@@ -2865,7 +3043,8 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "axisSide": 0
   },
   {
    "id": "backyard-cottages",
@@ -2876,7 +3055,8 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": "econ",
+   "axisSide": 1
   }
  ]
 }
