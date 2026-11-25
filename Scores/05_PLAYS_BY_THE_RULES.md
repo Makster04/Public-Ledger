@@ -24,12 +24,12 @@
   - **Status:** confirmed finding 20, open investigation 15, unresolved allegation 15, closed without a finding (acquitted, dismissed, declined or dropped) 5. Context (a reported tie with no accusation of breaking a rule) is shown, not scored.
   - **Kind:** criminal × 1.5, ethics or civil × 1, technical × 0.5.
   - **Age:** half for a closed case decided over 10 years ago. Open cases and unresolved allegations always count in full.
-- **Outside Income & Conflicts and Gifts & Travel** need the disclosure reader, which isn't built yet. For now only Trade Conflicts, Stock Disclosure Dodger and Legal Trouble count. A missing part drops out and the others are rescaled.
+- **Outside Income & Conflicts and Gifts & Travel (since Nov. 25, 2026):** read from the latest annual reports of sitting members with committee seats (13 so far), counting only organizations reviewed as interested: they lobbied in 2024–2025 on an issue one of the member's committees handles, work in an industry those committees oversee, or hold federal contracts from an agency they oversee. Outside Income & Conflicts = 60 × Hill(income from interested organizations, $50,000) + 20 for each board seat with one, or each income source from one with no amount given (spouse pay is listed only as "over $1,000" or "N/A"), at most 40 together + 40 for an agreement with one. Gifts & Travel = 60 × Hill(value, $10,000) + 10 a gift or trip, at most 40. Everyone else's are not counted yet; a missing part drops out and the others are rescaled.
 - **Needs:** a dated, sourced legal review (done Nov. 14, 2026 for every profile but the president's) plus at least two of the four parts (since Nov. 20, 2026: one part alone, or no trades at all, had given 100%).
 
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 
-- **Outside Income & Conflicts (35%) and Gifts & Travel (20%)** need the disclosure reader, which isn't built: every part of the annual reports into `public/conflicts.json`, matched against lobbying, contracts and foreign-agent filings.
+- **Outside Income & Conflicts (35%) and Gifts & Travel (20%)** cover only the 13 sitting members whose reports are read and reviewed. The rest need their reports read; Lobbyist Overlap, Contracts for Donors and Foreign Agent aren't matched yet.
 - **Committee sectors** (which industries each committee oversees, for Trade Conflicts) are a draft that needs review.
 - **Senate annual reports' due and filed dates** for the last 3 years, for Stock Disclosure Dodger's annual part.
 - **Legal cases:**

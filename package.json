@@ -26,6 +26,8 @@
     "bills:cosponsors": "node --env-file-if-exists=.dev.vars scripts/fill-bill-cosponsors.mjs",
     "pacs:types": "node --env-file-if-exists=.dev.vars scripts/build-pac-types.mjs",
     "pacs:lines": "node --env-file-if-exists=.dev.vars scripts/fill-pac-lines.mjs",
+    "conflicts:lookup": "node scripts/match-conflicts.mjs lookup",
+    "conflicts:build": "node scripts/match-conflicts.mjs build",
     "disclosures:export": "node --no-warnings=ExperimentalWarning scripts/export-disclosures.mjs",
     "corporate:pacs": "node --env-file-if-exists=.dev.vars scripts/build-corporate-pacs.mjs",
     "superpacs:races": "node scripts/build-super-pac-races.mjs",

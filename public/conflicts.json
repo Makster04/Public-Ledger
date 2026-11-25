@@ -1,4 +1,964 @@
 {
- "about": "Each profile's outside income, board seats, agreements, gifts and paid travel from their latest annual or candidate report, with reviewed matches of the organizations on it (Plays by the Rules: Outside Income & Conflicts, Gifts & Travel). Filled by the disclosure reader, which is not built yet; empty until then, so the page reads an empty file instead of asking for a missing one.",
- "people": {}
+ "about": "Each sitting member's outside income, board seats, agreements, gifts and paid travel from their latest annual reports, with the reviewed matches of the organizations on them: an organization is interested when it lobbies on an issue one of their committees handles, works in an industry their committees oversee, or holds contracts from an agency their committees oversee. Written by npm run conflicts:build from data/conflict-reviews.json.",
+ "built": "2026-11-25",
+ "people": {
+  "ossoff": {
+   "report": {
+    "year": 2025,
+    "url": "https://efdsearch.senate.gov/search/view/annual/9af964b6-5eba-41e6-87fb-d6651c5b90b0/"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Emory Healthcare Atlanta, GA",
+     "type": "Salary",
+     "amount": null,
+     "paidTo": "Spouse",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/9af964b6-5eba-41e6-87fb-d6651c5b90b0/"
+     }
+    }
+   ],
+   "positions": [],
+   "agreements": [],
+   "gifts": [],
+   "travel": []
+  },
+  "booker": {
+   "report": {
+    "year": 2025,
+    "url": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "St. Martin's Publishing Group New York, NY",
+     "type": "Other (Advance)",
+     "amount": 365500,
+     "paidTo": "Self",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/"
+     }
+    },
+    {
+     "source": "Trinet HR III, Inc. Dublin, CA",
+     "type": "Salary",
+     "amount": null,
+     "paidTo": "Spouse",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/"
+     }
+    }
+   ],
+   "positions": [],
+   "agreements": [
+    {
+     "kind": "Royalty Agreement",
+     "org": "Penguin Random House LLC New York, New York",
+     "date": "Apr 2015",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; contracts only from Department of the Interior, which their committees don’t oversee",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/"
+     }
+    },
+    {
+     "kind": "Continuing participation in an employee benefit plan",
+     "org": "New Jersey Public Employee Retirement System Newark, New Jersey",
+     "date": "Oct 2013",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/"
+     }
+    },
+    {
+     "kind": "Royalty Agreement",
+     "org": "St. Martin's Publishing Group New York, NY",
+     "date": "Jun 2025",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/"
+     }
+    }
+   ],
+   "gifts": [],
+   "travel": []
+  },
+  "hickenlooper": {
+   "report": {
+    "year": 2025,
+    "url": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Liberty Media Corporation Englewood, CO",
+     "type": "Salary",
+     "amount": null,
+     "paidTo": "Spouse",
+     "year": 2025,
+     "interested": true,
+     "why": "Lobbied in 2024–2025 (24 filings) on telecommunications, media and aviation, which Commerce handles, and labor, which HELP handles; Telecom & Media is an industry Commerce oversees",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    },
+    {
+     "source": "Chipotle Mexican Grill, Inc. Newport Beach, CA",
+     "type": "Board Compensation",
+     "amount": null,
+     "paidTo": "Spouse",
+     "year": 2025,
+     "interested": true,
+     "why": "Lobbied in 2024–2025 (21 filings) on consumer safety, which Commerce handles",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    },
+    {
+     "source": "Denver Employees Retirement Plan Denver, CO",
+     "type": "Pension",
+     "amount": 17433.12,
+     "paidTo": "Self",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    },
+    {
+     "source": "Fidelity Investments Albuquerque, NM",
+     "type": "Other (Required Minimum Distribution)",
+     "amount": 130800.36,
+     "paidTo": "Self",
+     "year": 2025,
+     "interested": false,
+     "why": "Lobbies only on financial institutions, which their committees don’t handle; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    },
+    {
+     "source": "Wesleyan University Middletown, CT",
+     "type": "Other (Annuity payment)",
+     "amount": 6580.72,
+     "paidTo": "Self",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    }
+   ],
+   "positions": [
+    {
+     "position": "Trustee",
+     "org": "Anne Morris Macdonald Marital Trust Philadelphia, PA",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    }
+   ],
+   "agreements": [
+    {
+     "kind": "Royalty Agreement",
+     "org": "Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY",
+     "date": "Dec 2015",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying; its one federal contract was a single $65,000 speaker booking for a National Park Service commemoration, not business before their committees",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    },
+    {
+     "kind": "Continuing participation in an employee benefit plan",
+     "org": "Denver Employees Retirement Pension Plan Denver, CO",
+     "date": "Jan 2011",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    },
+    {
+     "kind": "Continuing participation in an employee benefit plan",
+     "org": "Colorado PERA DC Plan Denver, CO",
+     "date": "Apr 2011",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/"
+     }
+    }
+   ],
+   "gifts": [],
+   "travel": []
+  },
+  "kaptur": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077103.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [],
+   "positions": [
+    {
+     "position": "Trustee",
+     "org": "The Anastasia Fund",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077103.pdf"
+     }
+    }
+   ],
+   "agreements": [],
+   "gifts": [],
+   "travel": []
+  },
+  "mgp": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Dean's Car Care Spouse S-Corp",
+     "type": null,
+     "amount": null,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf"
+     }
+    },
+    {
+     "source": "US House of Representatives",
+     "type": "Salary",
+     "amount": 187896,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf"
+     }
+    },
+    {
+     "source": "Dean's Car Care",
+     "type": "Salary",
+     "amount": 28478,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf"
+     }
+    },
+    {
+     "source": "Dean's Car Care",
+     "type": "Spouse Salary",
+     "amount": null,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf"
+     }
+    }
+   ],
+   "positions": [
+    {
+     "position": "Secretary",
+     "org": "Dean's Car Care Inc",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf"
+     }
+    }
+   ],
+   "agreements": [],
+   "gifts": [],
+   "travel": []
+  },
+  "castor": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076959.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Butler Weihmuller Katz Craig",
+     "type": "Spouse Salary",
+     "amount": null,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076959.pdf"
+     }
+    }
+   ],
+   "positions": [
+    {
+     "position": "Vice President/Director",
+     "org": "Castor-Bell-Lewis Family Foundation (uncompensated)",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076959.pdf"
+     }
+    }
+   ],
+   "agreements": [
+    {
+     "kind": "agreement",
+     "org": "State of Florida Florida pension plan agreement is defined benefit",
+     "date": "October 1991",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076959.pdf"
+     }
+    }
+   ],
+   "gifts": [],
+   "travel": [
+    {
+     "sponsor": "Aspen Institute",
+     "dates": "04/18/2025 – 04/26/2025",
+     "value": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; contracts only from U.S. International Development Finance Corporation, Department of Defense, Millennium Challenge Corporation, National Aeronautics and Space Administration, Agency for International Development, Department of Transportation, which their committees don’t oversee",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076959.pdf"
+     }
+    }
+   ]
+  },
+  "pappas": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077615.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Uber Technologies",
+     "type": "Spouse Salary",
+     "amount": null,
+     "paidTo": null,
+     "year": 2025,
+     "interested": true,
+     "why": "Lobbied in 2024–2025 (37 filings) on transportation and roads, which Transportation & Infrastructure handles; Transportation is an industry it oversees",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077615.pdf"
+     }
+    }
+   ],
+   "positions": [
+    {
+     "position": "Member",
+     "org": "Pilgrim Realty",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077615.pdf"
+     }
+    },
+    {
+     "position": "Member",
+     "org": "Puritan Confectionery Co.",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077615.pdf"
+     }
+    }
+   ],
+   "agreements": [],
+   "gifts": [
+    {
+     "source": "NH Lottery Commission (Concord, NH, US) Lottery Winnings",
+     "value": 7609.61,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077615.pdf"
+     }
+    }
+   ],
+   "travel": []
+  },
+  "barr": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10074914.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [],
+   "positions": [],
+   "agreements": [
+    {
+     "kind": "agreement",
+     "org": "KY employees Retirement System KY state pension, cash value approximately $35,000 (2025), benefits payable beginning 8/1/38",
+     "date": "January 2004",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10074914.pdf"
+     }
+    }
+   ],
+   "gifts": [],
+   "travel": [
+    {
+     "sponsor": "Former Members of Congress",
+     "dates": "04/12/2025 – 04/19/2025",
+     "value": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10074914.pdf"
+     }
+    },
+    {
+     "sponsor": "Ripon Society",
+     "dates": "11/07/2024 – 11/12/2024",
+     "value": null,
+     "year": 2024,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2024 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10074914.pdf"
+     }
+    }
+   ]
+  },
+  "moore": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076378.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Chicken and biscuits spouse",
+     "type": null,
+     "amount": 60000,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076378.pdf"
+     }
+    }
+   ],
+   "positions": [],
+   "agreements": [],
+   "gifts": [],
+   "travel": []
+  },
+  "hageman": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076067.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "RBC Capital markets LLC IRA Spouse IRA",
+     "type": null,
+     "amount": null,
+     "paidTo": null,
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076067.pdf"
+     }
+    }
+   ],
+   "positions": [],
+   "agreements": [],
+   "gifts": [],
+   "travel": [
+    {
+     "sponsor": "The Heritage Foundation",
+     "dates": "02/15/2025 – 02/20/2025",
+     "value": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076067.pdf"
+     }
+    },
+    {
+     "sponsor": "American Israel Education Foundation (AIEF)",
+     "dates": "08/03/2025 – 08/11/2025",
+     "value": null,
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076067.pdf"
+     }
+    }
+   ]
+  },
+  "hern": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10075834.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [],
+   "positions": [
+    {
+     "position": "Director",
+     "org": "Hern Family Foundation",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10075834.pdf"
+     }
+    },
+    {
+     "position": "Member",
+     "org": "Firstrike",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10075834.pdf"
+     }
+    }
+   ],
+   "agreements": [],
+   "gifts": [],
+   "travel": []
+  },
+  "letlow": {
+   "report": {
+    "year": 2025,
+    "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076014.pdf"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [],
+   "positions": [],
+   "agreements": [
+    {
+     "kind": "agreement",
+     "org": "LA State Retirement System Filer worked for University of Louisiana at Monroe and participated in the retirement system",
+     "date": "January 2008",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076014.pdf"
+     }
+    }
+   ],
+   "gifts": [],
+   "travel": []
+  },
+  "ricketts": {
+   "report": {
+    "year": 2025,
+    "url": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+   },
+   "reviewed": {
+    "at": "2026-11-25",
+    "src": {
+     "t": "Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts",
+     "u": "https://lda.gov/"
+    }
+   },
+   "income": [
+    {
+     "source": "Northside Entertainment Holdings LLC Chicago, IL",
+     "type": "Other (Taxable Income)",
+     "amount": 15684,
+     "paidTo": "Self",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    }
+   ],
+   "positions": [
+    {
+     "position": "Director",
+     "org": "Chicago Cubs Charities Chicago, IL",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Director Emeritus)",
+     "org": "Bellevue University Bellevue, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Director",
+     "org": "Lumen Christi Institute Chicago, IL",
+     "year": 2025,
+     "interested": false,
+     "why": "a house of worship or religious ministry",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Director",
+     "org": "Mid-America Council of Boy Scouts of America Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Director",
+     "org": "Nebraska Game and Parks Foundation Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Non-voting board member)",
+     "org": "Opportunity Education Foundation Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Trustee",
+     "org": "2001 Grandchildren's Trust FBO Eleanor Elaine Ricketts Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Trustee",
+     "org": "2001 Grandchildren's Trust FBO Margot Elizabeth Ricketts Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Trustee",
+     "org": "2001 Grandchildren's Trust FBO Roscoe Rollins Ricketts Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Trustee",
+     "org": "Exempt Trust under the Susanne E. Shore Special Trust (2012) Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Adviser)",
+     "org": "Exempt Trust under the J. Peter Ricketts Special Trust (2012) Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Adviser)",
+     "org": "J. Peter Ricketts PTC Trust Jackson, WY",
+     "year": 2025,
+     "interested": false,
+     "why": "the member's own trust, account, holding or family foundation",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Manager)",
+     "org": "Ptolemy, LLC Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Manager)",
+     "org": "Ortelius, LLC Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Member)",
+     "org": "Progress, Inc. - Strategic Command Consultation Committee Omaha, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Director",
+     "org": "Offutt Advisory Council Offutt AFB, NE",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Manager)",
+     "org": "Cellarius, LLC Omaha, Nebraska",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    },
+    {
+     "position": "Other (Manager)",
+     "org": "Andor, LLC Omaha, Nebraska",
+     "year": 2025,
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    }
+   ],
+   "agreements": [
+    {
+     "kind": "Continuing participation in an employee benefit plan",
+     "org": "State of Nebraska Lincoln, NE",
+     "date": "Jan 2015",
+     "year": 2025,
+     "interested": false,
+     "why": "a public employer or its pension plan",
+     "src": {
+      "t": "2025 report",
+      "u": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/"
+     }
+    }
+   ],
+   "gifts": [],
+   "travel": []
+  }
+ }
 }

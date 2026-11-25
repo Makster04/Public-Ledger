@@ -1,0 +1,277 @@
+{
+ "about": "The reviewed decisions for Conflicts of Interest: for each sitting member, whether each organization on their latest reports is interested (lobbies on an issue one of their committees handles, works in an industry their committees oversee, or holds contracts from an agency their committees oversee), and why. Pensions, public employers, the member’s own trusts and foundations, and houses of worship are left out automatically. Read by npm run conflicts:build.",
+ "reviewedAt": "2026-11-25",
+ "people": {
+  "ossoff": {
+   "name": "Jon Ossoff",
+   "committees": [
+    "SLIN",
+    "SSAP",
+    "SSRA"
+   ],
+   "orgs": {
+    "Emory Healthcare Atlanta, GA": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "booker": {
+   "name": "Cory A. Booker",
+   "committees": [
+    "SSAF",
+    "SSFR",
+    "SSJU",
+    "SSSB"
+   ],
+   "orgs": {
+    "St. Martin's Publishing Group New York, NY": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Trinet HR III, Inc. Dublin, CA": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Penguin Random House LLC New York, New York": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; contracts only from Department of the Interior, which their committees don’t oversee"
+    }
+   }
+  },
+  "hickenlooper": {
+   "name": "John W. Hickenlooper",
+   "committees": [
+    "SSCM",
+    "SSEG",
+    "SSHR",
+    "SSSB"
+   ],
+   "orgs": {
+    "Liberty Media Corporation Englewood, CO": {
+     "interested": true,
+     "why": "Lobbied in 2024–2025 (24 filings) on telecommunications, media and aviation, which Commerce handles, and labor, which HELP handles; Telecom & Media is an industry Commerce oversees"
+    },
+    "Chipotle Mexican Grill, Inc. Newport Beach, CA": {
+     "interested": true,
+     "why": "Lobbied in 2024–2025 (21 filings) on consumer safety, which Commerce handles"
+    },
+    "Fidelity Investments Albuquerque, NM": {
+     "interested": false,
+     "why": "Lobbies only on financial institutions, which their committees don’t handle; no federal contracts in fiscal 2024–2025"
+    },
+    "Wesleyan University Middletown, CT": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY": {
+     "interested": false,
+     "why": "No lobbying; its one federal contract was a single $65,000 speaker booking for a National Park Service commemoration, not business before their committees"
+    }
+   }
+  },
+  "kaptur": {
+   "name": "Marcy Kaptur",
+   "committees": [
+    "HSAP",
+    "HSBU"
+   ],
+   "orgs": {
+    "The Anastasia Fund": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "mgp": {
+   "name": "Marie Gluesenkamp Perez",
+   "committees": [
+    "HSAP"
+   ],
+   "orgs": {
+    "Dean's Car Care Spouse S-Corp": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Dean's Car Care": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Dean's Car Care Inc": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "castor": {
+   "name": "Kathy Castor",
+   "committees": [
+    "HSIF",
+    "HSZS"
+   ],
+   "orgs": {
+    "Butler Weihmuller Katz Craig": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Aspen Institute": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; contracts only from U.S. International Development Finance Corporation, Department of Defense, Millennium Challenge Corporation, National Aeronautics and Space Administration, Agency for International Development, Department of Transportation, which their committees don’t oversee"
+    }
+   }
+  },
+  "pappas": {
+   "name": "Chris Pappas",
+   "committees": [
+    "HSPW",
+    "HSVR"
+   ],
+   "orgs": {
+    "Uber Technologies": {
+     "interested": true,
+     "why": "Lobbied in 2024–2025 (37 filings) on transportation and roads, which Transportation & Infrastructure handles; Transportation is an industry it oversees"
+    },
+    "Pilgrim Realty": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Puritan Confectionery Co.": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "NH Lottery Commission (Concord, NH, US) Lottery Winnings": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "barr": {
+   "name": "Andy Barr",
+   "committees": [
+    "HSBA",
+    "HSFA",
+    "HSZS"
+   ],
+   "orgs": {
+    "Former Members of Congress": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Ripon Society": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "moore": {
+   "name": "Barry Moore",
+   "committees": [
+    "HSAG",
+    "HSJU"
+   ],
+   "orgs": {
+    "Chicken and biscuits spouse": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "hageman": {
+   "name": "Harriet Hageman",
+   "committees": [
+    "HSII",
+    "HSJU",
+    "HSQJ"
+   ],
+   "orgs": {
+    "The Heritage Foundation": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "American Israel Education Foundation (AIEF)": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "hern": {
+   "name": "Kevin Hern",
+   "committees": [
+    "HSWM"
+   ],
+   "orgs": {
+    "Firstrike": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  },
+  "letlow": {
+   "name": "Julia Letlow",
+   "committees": [
+    "HSAP",
+    "HSED"
+   ],
+   "orgs": {}
+  },
+  "ricketts": {
+   "name": "Pete Ricketts",
+   "committees": [
+    "SSBK",
+    "SSBU",
+    "SSEV",
+    "SSFR"
+   ],
+   "orgs": {
+    "Northside Entertainment Holdings LLC Chicago, IL": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Chicago Cubs Charities Chicago, IL": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Bellevue University Bellevue, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Mid-America Council of Boy Scouts of America Omaha, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Nebraska Game and Parks Foundation Omaha, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Opportunity Education Foundation Omaha, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Ptolemy, LLC Omaha, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Ortelius, LLC Omaha, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Progress, Inc. - Strategic Command Consultation Committee Omaha, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Offutt Advisory Council Offutt AFB, NE": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Cellarius, LLC Omaha, Nebraska": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    },
+    "Andor, LLC Omaha, Nebraska": {
+     "interested": false,
+     "why": "No lobbying filings in 2024–2025; no federal contracts in fiscal 2024–2025"
+    }
+   }
+  }
+ }
+}

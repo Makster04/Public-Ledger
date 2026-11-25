@@ -1,0 +1,459 @@
+{
+ "about": "What lda.gov (lobbying filings, 2024–2025) and USAspending.gov (federal contracts, fiscal 2024–2025) show for each organization on sitting members' disclosures. Written by npm run conflicts:lookup; read when the matches are reviewed (data/conflict-reviews.json).",
+ "orgs": {
+  "Emory Healthcare Atlanta, GA": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "St. Martin's Publishing Group New York, NY": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Trinet HR III, Inc. Dublin, CA": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Penguin Random House LLC New York, New York": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "PENGUIN RANDOM HOUSE LLC",
+    "agencies": {
+     "Department of the Interior": 65000
+    }
+   },
+   "checked": "2026-11-25"
+  },
+  "Liberty Media Corporation Englewood, CO": {
+   "lobbying": {
+    "match": [
+     "LIBERTY MEDIA CORPORATION"
+    ],
+    "as": "Liberty Media Corporation",
+    "description": "Owns interests in video/online commerce, media, communications &amp; entertainment industries",
+    "issues": [
+     "AVI",
+     "CPT",
+     "HOM",
+     "LBR",
+     "MIA",
+     "TAX",
+     "TEC"
+    ],
+    "filings": 24,
+    "spent": 1300000,
+    "sample": [
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "K&L GATES, LLP",
+      "url": "https://lda.gov/filings/public/filing/06127833-e621-4bef-93c7-61534a470529/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "INVARIANT LLC",
+      "url": "https://lda.gov/filings/public/filing/ae9ff0a8-0bde-487b-8824-f1d0277c45df/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "BGR GOVERNMENT AFFAIRS",
+      "url": "https://lda.gov/filings/public/filing/48708f3b-48a0-467b-96d4-b23f38c5d7c1/print/"
+     }
+    ]
+   },
+   "contracts": {
+    "recipient": "LIBERTY MEDIA",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Chipotle Mexican Grill, Inc. Newport Beach, CA": {
+   "lobbying": {
+    "match": [
+     "CHIPOTLE MEXICAN GRILL, INC.",
+     "CHIPOTLE MEXICAN GRILL INC",
+     "CHIPOTLE MEXICAN GRILL, INC"
+    ],
+    "as": "Chipotle Mexican Grill, Inc.",
+    "description": "Restaurant",
+    "issues": [
+     "ACC",
+     "AGR",
+     "BAN",
+     "CSP",
+     "FOO",
+     "IMM",
+     "TAX",
+     "TRD"
+    ],
+    "filings": 21,
+    "spent": 2382000,
+    "sample": [
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "FIERCE GOVERNMENT RELATIONS",
+      "url": "https://lda.gov/filings/public/filing/a442860a-dbd6-4a6a-8d17-35513669f816/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "CHIPOTLE MEXICAN GRILL, INC",
+      "url": "https://lda.gov/filings/public/filing/be6d70fc-1a9b-452f-86f5-ebd7fe280716/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "FGS GLOBAL (US) LLC (FKA FGH HOLDINGS LLC)",
+      "url": "https://lda.gov/filings/public/filing/4675d6d2-0bc8-4bcc-9292-97d56a8cb105/print/"
+     }
+    ]
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Fidelity Investments Albuquerque, NM": {
+   "lobbying": {
+    "match": [
+     "FIDELITY INVESTMENTS"
+    ],
+    "as": "Fidelity Investments",
+    "description": "Financial Services",
+    "issues": [
+     "FIN"
+    ],
+    "filings": 17,
+    "spent": 295000,
+    "sample": [
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "MR. DOYCE BOESCH",
+      "url": "https://lda.gov/filings/public/filing/1cc44fbe-41c0-4ea0-a2b1-552815e28cd1/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "GEOFFREY P. GRAY",
+      "url": "https://lda.gov/filings/public/filing/fdaf38b0-6ca2-4acb-b5ae-509390e2dad6/print/"
+     },
+     {
+      "year": 2024,
+      "period": "second_quarter",
+      "registrant": "GEOFFREY P. GRAY",
+      "url": "https://lda.gov/filings/public/filing/977f822f-70e2-490a-8e2c-76e5d8001e98/print/"
+     }
+    ]
+   },
+   "contracts": {
+    "recipient": "FIDELITY INVESTMENTS HOLDING GROUP",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Wesleyan University Middletown, CT": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "WESLEYAN UNIVERSITY",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "The Anastasia Fund": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Dean's Car Care Spouse S-Corp": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Dean's Car Care": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "DEAN'S CAR CARE, INC",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Dean's Car Care Inc": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "DEAN'S CAR CARE, INC",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Butler Weihmuller Katz Craig": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "BUTLER WEIHMULLER KATZ CRAIG LLP",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Aspen Institute": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "ASPEN INSTITUTE, INC. (THE)",
+    "agencies": {
+     "U.S. International Development Finance Corporation": 27000,
+     "Department of Defense": 24500,
+     "Millennium Challenge Corporation": 21600,
+     "National Aeronautics and Space Administration": 13950,
+     "Agency for International Development": 13950,
+     "Department of Transportation": 26400
+    }
+   },
+   "checked": "2026-11-25"
+  },
+  "Uber Technologies": {
+   "lobbying": {
+    "match": [
+     "UBER TECHNOLOGIES INC.",
+     "UBER TECHNOLOGIES, INC.",
+     "UBER TECHNOLOGIES. INC."
+    ],
+    "as": "Uber Technologies",
+    "description": "Ridesharing",
+    "issues": [
+     "BAN",
+     "BUD",
+     "CPT",
+     "ENV",
+     "HCR",
+     "IMM",
+     "LBR",
+     "ROD",
+     "SCI",
+     "TAX",
+     "TRA",
+     "TRD"
+    ],
+    "filings": 37,
+    "spent": 5180000,
+    "sample": [
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "BROWNSTEIN HYATT FARBER SCHRECK, LLP",
+      "url": "https://lda.gov/filings/public/filing/9bc7bd0e-a634-4097-893e-cb2ff429bb44/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "MAYER BROWN LLP",
+      "url": "https://lda.gov/filings/public/filing/a373000c-075c-45bd-ba47-aad29a1d7826/print/"
+     },
+     {
+      "year": 2024,
+      "period": "first_quarter",
+      "registrant": "CAPITOL TAX PARTNERS, LLP",
+      "url": "https://lda.gov/filings/public/filing/68e7b4d3-0075-470c-b6eb-41e618bec9c6/print/"
+     }
+    ]
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Pilgrim Realty": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "PILGRIM REALTY INC",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Puritan Confectionery Co.": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "NH Lottery Commission (Concord, NH, US) Lottery Winnings": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Former Members of Congress": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "FORMER MEMBERS OF CONGRESS",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Ripon Society": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Chicken and biscuits spouse": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "The Heritage Foundation": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "THE HERITAGE FOUNDATION",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "American Israel Education Foundation (AIEF)": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Firstrike": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Northside Entertainment Holdings LLC Chicago, IL": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "NORTHSIDE ENTERTAINMENT GROUP INC.",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Chicago Cubs Charities Chicago, IL": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Bellevue University Bellevue, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "BELLEVUE UNIVERSITY",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Mid-America Council of Boy Scouts of America Omaha, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": {
+    "recipient": "MID-AMERICA COUNCIL OF BOY SCOUTS OF AMERICA",
+    "agencies": {}
+   },
+   "checked": "2026-11-25"
+  },
+  "Nebraska Game and Parks Foundation Omaha, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Opportunity Education Foundation Omaha, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Ptolemy, LLC Omaha, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Ortelius, LLC Omaha, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Progress, Inc. - Strategic Command Consultation Committee Omaha, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Offutt Advisory Council Offutt AFB, NE": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Cellarius, LLC Omaha, Nebraska": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  },
+  "Andor, LLC Omaha, Nebraska": {
+   "lobbying": {
+    "match": null
+   },
+   "contracts": null,
+   "checked": "2026-11-25"
+  }
+ }
+}

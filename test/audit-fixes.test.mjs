@@ -72,8 +72,10 @@ test('outdated text: the retired Integrity grade, people taken off the site, the
   assert.ok(!fs.existsSync(new URL('../Public Ledger.html',import.meta.url)),'the October snapshot with people taken off the site is gone');
 });
 
-test('the conflicts file exists (empty until the disclosure reader is built), so no page asks for a missing file',()=>{
-  const c=JSON.parse(read('public/conflicts.json'));assert.deepEqual(c.people,{});assert.match(c.about,/not built yet/);
+test('the conflicts file holds only reviewed records, each with its report, review date and every item marked',()=>{
+  const c=JSON.parse(read('public/conflicts.json'));
+  for(const r of Object.values(c.people)){assert.ok(r.report?.year&&r.reviewed?.at);
+    for(const k of ['income','positions','agreements','gifts','travel'])for(const x of r[k])assert.equal(typeof x.interested,'boolean');}
 });
 
 test('the removal script reaches the tracker history\'s routed gifts, named donors and linked campaigns',()=>{
