@@ -42,6 +42,7 @@ test('the words: within 20 of the middle is the middle',()=>{
   assert.equal(compassWord(-100,'econ'),'left');assert.equal(compassWord(38,'econ'),'right');assert.equal(compassWord(20,'econ'),'center');assert.equal(compassWord(-20,'econ'),'center');
   assert.equal(compassWord(-25,'social'),'liberal');assert.equal(compassWord(100,'social'),'conservative');assert.equal(compassWord(0,'social'),'moderate');
   assert.equal(compassWord(null,'social'),'not placed yet');
+  assert.equal(compassWord(-25,'auth'),'libertarian');assert.equal(compassWord(60,'auth'),'authoritarian');assert.equal(compassWord(15,'auth'),'moderate');
   assert.equal(signedLean(38),'+38');assert.equal(signedLean(-25),'−25');assert.equal(signedLean(0),'0');assert.equal(signedLean(null),'—');
 });
 
@@ -57,10 +58,10 @@ test('everyone else in bubbles: by party and spot, the biggest first; the person
 test('the chart: drawn at its size, quadrants and labels, a lone member linked to their profile, the person\'s portrait',()=>{
   const svg=compassSvg({me:{id:'me',name:'Pat Example',short:'Example',party:'R'},place:{x:0,y:-25},list:LIST,size:420,portrait:'/portraits/me.jpg'});
   assert.match(svg,/viewBox="0 0 420 420" width="420" height="420"/);
-  for(const t of ['Socially conservative','Socially liberal','Economic left','Economic right'])assert.ok(svg.includes(`>${t}</text>`),t);
+  for(const t of ['Authoritarian','Libertarian','Economic left','Economic right'])assert.ok(svg.includes(`>${t}</text>`),t);
   assert.equal((svg.match(/class="cmp-q /g)||[]).length,4);
   assert.match(svg,/<a href="#d-ideology"><circle class="cmp-b cmp-R"/);
-  assert.match(svg,/3 Democrats at economic −100, social −100: a, b, c/);
+  assert.match(svg,/3 Democrats at economic −100, authoritarian–libertarian −100: a, b, c/);
   assert.match(svg,/<image href="\/portraits\/me.jpg"/);assert.match(svg,/>Example<\/text>/);
   assert.ok(!svg.includes('cmp-me-here'),'no one else at their spot');
   // counts only on bubbles of 10 or more

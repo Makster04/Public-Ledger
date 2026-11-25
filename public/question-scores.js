@@ -163,11 +163,21 @@ export function ideologyLeans(stances,questions,categories){
   const scored=cats.filter(c=>c.lean!=null),m=mean(scored.map(c=>c.lean));
   return {categories:cats,scored:scored.length,lean:scored.length>=IDEOLOGY_MIN_CATEGORIES&&m!=null?Math.round(m):null};
 }
-// The compass: economic (across) and social (up and down) leans, from the questions on each axis.
+// The compass, the Political Compass way (approved Nov. 25, 2026): economic left (−100) to right (+100) across, from the
+// questions with axis 'econ', and libertarian (−100) to authoritarian (+100) up and down, from those with axis 'auth'. On
+// each question, a stance toward its axisSide (the economic-left side, or the authoritarian side) points that way; a
+// question with axisWeight 0.5 counts half. An axis needs a stance on at least COMPASS_MIN_QUESTIONS of its questions.
+export const COMPASS_MIN_QUESTIONS=3;
+export function axisLean(s,q){
+  if(s==null||!q?.axis||q.axisSide==null)return null;
+  const toward=q.axisSide===0?s:-s;               // +1: all the way to axisSide
+  return Math.round(100*(q.axis==='econ'?-toward:toward));
+}
 export function compassFrom(stances,questions){
-  const on=axis=>(questions||[]).filter(q=>q.axis===axis).map(q=>questionLean(stances?.[q.id]?.s??null,q)).filter(v=>v!=null);
-  const ex=on('econ'),so=on('social'),mx=mean(ex),my=mean(so);
-  return {x:mx==null?null:Math.round(mx),y:my==null?null:Math.round(my),nx:ex.length,ny:so.length};
+  const on=axis=>(questions||[]).filter(q=>q.axis===axis).map(q=>({v:axisLean(stances?.[q.id]?.s??null,q),w:q.axisWeight??1})).filter(x=>x.v!=null);
+  const avg=L=>L.length<COMPASS_MIN_QUESTIONS?null:Math.round(L.reduce((t,x)=>t+x.v*x.w,0)/L.reduce((t,x)=>t+x.w,0));
+  const ex=on('econ'),au=on('auth');
+  return {x:avg(ex),y:avg(au),nx:ex.length,ny:au.length};
 }
 // Your match: agreement on each question = (1 + your side × their stance) ÷ 2 (your side +1 for sides[0], −1 for
 // sides[1]), weighted by the importance you set (1–5), over the questions where you both have a position. As before

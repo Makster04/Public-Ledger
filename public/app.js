@@ -1332,9 +1332,9 @@ function compassBlock(s){
   const line=(label,v,n,axis)=>`<span><b class="cmp-k">${label}:</b> ${v==null?`<span class="muted">${compassWord(v,axis)}</span>`:`<b class="num"${leanStyle(v)}>${signedLean(v)}</b> ${compassWord(v,axis)}`} <span class="muted">(${n} question${n===1?'':'s'})</span></span>`;
   const chamber=s.chamber==='H'||s.chamber==='S';
   return `<section class="cmp-card" id="i-compass"><h2>Political compass</h2>
-    <p class="cmp-nums">${line('ECONOMIC',c.x,c.nx,'econ')}<span class="cmp-sep"> · </span>${line('SOCIAL',c.y,c.ny,'social')}</p>
+    <p class="cmp-nums">${line('ECONOMIC',c.x,c.nx,'econ')}<span class="cmp-sep"> · </span>${line('AUTHORITARIAN–LIBERTARIAN',c.y,c.ny,'auth')}</p>
     <div class="cmp-box"></div>
-    ${placed?'':`<p class="small muted" style="margin:6px 0 0">Not on the compass yet: it needs a lean on at least one economic and one social question.</p>`}
+    ${placed?'':`<p class="small muted" style="margin:6px 0 0">Not on the compass yet: it needs a stance on at least 3 economic and 3 authoritarian–libertarian questions.</p>`}
     ${chamber?`<div class="cmp-legend small"><span><i class="cmp-dot cmp-D"></i>Democrats</span><span><i class="cmp-dot cmp-R"></i>Republicans</span><span><i class="cmp-dot cmp-I"></i>Independents</span><span class="muted">Bigger bubble = more members</span></div>`:''}</section>`;
 }
 // Drawn at the size it's shown. Beside the position card, it's sized so the left column (the compass and DW-NOMINATE)

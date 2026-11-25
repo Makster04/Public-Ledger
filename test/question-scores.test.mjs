@@ -32,8 +32,8 @@ test('stance: at least 3 points; Yes / Leans yes / Mixed / Leans no / No or the 
   assert.equal(ratingPoints(100),3);assert.equal(ratingPoints(50),0);assert.equal(ratingPoints(0),3);assert.equal(ratingPoints(75),1.5);
 });
 
-const Q=[{id:'wage',cat:'econ',q:'Raise it?',sides:['Yes','No'],liberal:0,axis:'econ'},{id:'tax',cat:'econ',q:'Tax?',sides:['Yes','No'],liberal:0,axis:'econ'},
-  {id:'guns',cat:'social',q:'Limits?',sides:['Yes','No'],liberal:0,axis:'social'},{id:'ab',cat:'health',q:'Abortion?',sides:['Pro-life','Pro-choice'],liberal:1,axis:'social'},
+const Q=[{id:'wage',cat:'econ',q:'Raise it?',sides:['Yes','No'],liberal:0,axis:'econ',axisSide:0},{id:'tax',cat:'econ',q:'Tax?',sides:['Yes','No'],liberal:0,axis:'econ',axisSide:0},
+  {id:'guns',cat:'social',q:'Limits?',sides:['Yes','No'],liberal:0,axis:'auth',axisSide:0},{id:'ab',cat:'health',q:'Abortion?',sides:['Pro-life','Pro-choice'],liberal:1,axis:'auth',axisSide:0},
   {id:'ukr',cat:'foreign',q:'Aid?',sides:['Yes','No'],liberal:null,axis:null}];
 const C=[{id:'econ',name:'Economic'},{id:'social',name:'Social'},{id:'health',name:'Healthcare'},{id:'foreign',name:'Foreign Policy'}];
 
@@ -45,7 +45,7 @@ test('leans: a question\'s lean is conservative-positive; categories average the
   assert.equal(by.econ.lean,75);assert.equal(by.econ.n,2);assert.equal(by.social.lean,100);assert.equal(by.health.lean,100);assert.equal(by.foreign.lean,null);assert.equal(by.foreign.onRecord,1);
   assert.equal(L.scored,3);assert.equal(L.lean,92);
   assert.equal(ideologyLeans({wage:{s:-1},guns:{s:1}},Q,C).lean,null,'two categories are too few');
-  assert.deepEqual(compassFrom(st,Q),{x:75,y:100,nx:2,ny:2});
+  assert.deepEqual(compassFrom(st,Q),{x:null,y:null,nx:2,ny:2},'two questions on an axis are too few');
 });
 
 test('match: (1 + your side × their stance) ÷ 2, weighted by importance, over the questions where both have a position',()=>{
@@ -125,4 +125,18 @@ test('repeats count once: a reintroduced bill (co)sponsored again, and votes on 
   const rows=recordRows(items.map(x=>[x.ref,x.kind,x.date,x.side]),Object.fromEntries(Object.entries(titles).map(([k,t])=>[k,[0,'why',t]])));
   const why=Object.fromEntries(rows.map(r=>[r.ref,r.repeat]));
   assert.equal(why['116-hr-5'],'reintroduced');assert.equal(why['117-hr-5#H117-39'],'congress');assert.equal(why['118-hr-15#H118-5'],'bill');assert.equal(why['118-hr-15'],null);
+});
+
+// The compass, the Political Compass way (approved Nov. 25, 2026).
+import {axisLean,COMPASS_MIN_QUESTIONS} from '../public/question-scores.js';
+test('the compass: economic left negative, authoritarian positive, half-weight questions, at least 3 questions an axis',()=>{
+  const q=(id,axis,axisSide,axisWeight)=>({id,cat:'x',q:`${id}?`,sides:['Yes','No'],liberal:null,axis,axisSide,...(axisWeight?{axisWeight}:{})});
+  const QS=[q('e1','econ',0),q('e2','econ',0),q('e3','econ',1),q('a1','auth',0),q('a2','auth',1),q('a3','auth',0),q('a4','auth',0,0.5),q('n','',null)];
+  assert.equal(axisLean(1,QS[0]),-100,'all the way to the economic-left side');assert.equal(axisLean(1,QS[2]),100);
+  assert.equal(axisLean(1,QS[3]),100,'all the way to the authoritarian side');assert.equal(axisLean(1,QS[4]),-100);assert.equal(axisLean(0.5,QS[7]),null);
+  // economic: −100, −100, +100 → −33; up and down: +100, +100 (No on a2), −100, and the half one +100 → (100+100−100+50)/3.5 = 43
+  const st={e1:{s:1},e2:{s:1},e3:{s:1},a1:{s:1},a2:{s:-1},a3:{s:-1},a4:{s:1},n:{s:1}};
+  assert.deepEqual(compassFrom(st,QS),{x:-33,y:43,nx:3,ny:4});
+  assert.equal(COMPASS_MIN_QUESTIONS,3);
+  assert.deepEqual(compassFrom({e1:{s:1},a1:{s:1}},QS),{x:null,y:null,nx:1,ny:1});
 });

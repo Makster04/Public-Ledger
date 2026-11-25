@@ -18,8 +18,11 @@ test('each question: a unique id, its wording, two sides, a liberal side or none
     assert.ok(q.q.length>15&&/\?$/.test(q.q),q.id);
     assert.ok(Array.isArray(q.sides)&&q.sides.length===2&&q.sides.every(s=>typeof s==='string'&&s.trim()),q.id);
     assert.ok([0,1,null].includes(q.liberal),q.id);
-    assert.ok([null,'econ','social'].includes(q.axis),q.id);
-    if(q.axis)assert.notEqual(q.liberal,null,`${q.id}: an axis needs a liberal side`);
+    assert.ok([null,'econ','auth'].includes(q.axis),q.id);
+    if(q.axis)assert.ok([0,1].includes(q.axisSide),`${q.id}: an axis needs its side`);else assert.equal(q.axisSide,undefined,q.id);
+    assert.ok(q.axisWeight===undefined||q.axisWeight===0.5,q.id);
+    // (economic left is the liberal side wherever a question has one)
+    if(q.axis==='econ'&&q.liberal!=null)assert.equal(q.axisSide,q.liberal,`${q.id}: economic left is its liberal side`);
   }
 });
 
