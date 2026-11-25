@@ -428,7 +428,7 @@
     "Yes",
     "No"
    ],
-   "liberal": null,
+   "liberal": 1,
    "axis": "auth",
    "axisSide": 0
   },
@@ -1313,7 +1313,7 @@
     "Yes",
     "No"
    ],
-   "liberal": null,
+   "liberal": 1,
    "axis": null
   },
   {
@@ -1462,7 +1462,7 @@
     "Yes",
     "No"
    ],
-   "liberal": null,
+   "liberal": 0,
    "axis": "econ",
    "axisSide": 0,
    "added": true
@@ -2799,7 +2799,7 @@
     "Yes",
     "No"
    ],
-   "liberal": null,
+   "liberal": 1,
    "axis": null,
    "groups": {
     "niac": 1
@@ -3007,14 +3007,14 @@
    "id": "war-powers",
    "cat": "foreign",
    "q": "Should the President need Congress's approval before using military force abroad, except to respond to an attack?",
-   "statement": "The President should need Congress's approval before using military force abroad, except to answer an attack.",
-   "agree": 0,
+   "statement": "The President shouldn't have to wait for Congress to use military force abroad.",
+   "agree": 1,
    "label": "Congressional approval for military force",
    "sides": [
     "Yes",
     "No"
    ],
-   "liberal": null,
+   "liberal": 0,
    "axis": "auth",
    "axisSide": 1,
    "added": true
@@ -3596,7 +3596,7 @@
     "Yes",
     "No"
    ],
-   "liberal": null,
+   "liberal": 0,
    "axis": "econ",
    "axisSide": 0
   },
