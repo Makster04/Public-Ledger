@@ -1,6 +1,6 @@
 {
  "about": "Proposed tags from the Congressional Record (npm run record:collect), waiting for approval: {person: {question: [[side, quote, date, link, where]]}}. Once approved they move into data/question-statements.json (npm run statements:record).",
- "status": "proposed",
+ "status": "approved 2026-11-25, moved into data/question-statements.json",
  "people": {
   "barrasso": {
    "border-wall": [
