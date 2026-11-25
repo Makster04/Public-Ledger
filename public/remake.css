@@ -1704,6 +1704,10 @@ input, select { accent-color: var(--accent); }
 .lg-votes{display:grid;gap:6px;margin:4px 0 10px}.lg-v{border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:var(--surface-2)}
 .lg-v b{display:block;font-size:.84rem;color:var(--ink)}.lg-v span{font-size:.76rem;color:var(--muted)}
 .lg-flags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 4px}
+.lg-issues{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.lg-issue{font:inherit;font-size:.74rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--surface);color:var(--ink-2);cursor:pointer;line-height:1.3}
+.lg-issue:hover,.lg-issue:focus-visible{border-color:var(--ink-2);color:var(--ink)}
+.lg-bh .lg-issues{margin:8px 0 4px}
 .lg-flag{font-size:.72rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--ink-2)}.lg-dark{border-color:#e0a63a;color:#f0c068}
 .lg-card .hc-ft{margin-top:auto}.lg-sw-for{background:var(--lg-for)}.lg-sw-against{background:var(--lg-against)}
 .lg-for{color:var(--lg-for);font-weight:700}.lg-against{color:var(--lg-against);font-weight:700}
