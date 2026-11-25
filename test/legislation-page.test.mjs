@@ -90,7 +90,7 @@ test('a bill\'s issues: its questions\' categories with the questions, then its 
   assert.deepEqual(coded.map(i=>i.id),['healthcare','economic','environmental'],'the questions first, then the area adds Environmental');
   assert.match(coded[0].questions[0],/drug/i);assert.deepEqual(coded[2].questions,[]);assert.equal(coded[0].icon,'🏥');assert.equal(coded[0].name,'Healthcare');
   assert.deepEqual(billIssues({id:'y',title:'GENIUS Act (stablecoin rules)',area:'Finance & crypto'},QX).map(i=>i.id),['economic','technology'],'crypto is Technology, as the questions have it');
-  assert.deepEqual(billIssues({id:'z',title:'Restore Trust in Congress Act (ban on members\' stock ownership and trading)',area:'Ethics & money in politics'},QX).map(i=>i.id),['domestic'],'from its title, where stock trading sits');
+  assert.deepEqual(billIssues({id:'z',title:'Restore Trust in Congress Act (ban on members\' stock ownership and trading)',area:'Ethics & money in politics'},QX).map(i=>i.id),['governance'],'from its title, where stock trading sits');
   assert.deepEqual(billIssues({id:'w',title:'Something',area:null},QX),[]);
   const cats=new Set(QUESTIONS.categories.map(c=>c.id));
   for(const [area,list] of Object.entries(AREA_ISSUES))for(const c of list)assert.ok(cats.has(c),`${area}: ${c} is a category`);

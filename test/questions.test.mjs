@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import Q from '../public/questions.json' with {type:'json'};
 
 test('17 categories, every question in one, no Trending',()=>{
-  assert.deepEqual(Q.categories.map(c=>c.name),['Technology','National Security','Social','Governance','Environmental','Economic','Domestic Policy','Healthcare','Infrastructure','Education','Electoral','Criminal','Foreign Policy','Immigration','Transportation','Science','Housing']);
+  assert.deepEqual(Q.categories.map(c=>c.name),['Technology','National Security','Social','Governance','Environmental','Economic','Gun Policy','Healthcare','Infrastructure','Education','Electoral','Criminal','Foreign Policy','Immigration','Transportation','Science','Housing']);
   const cats=new Set(Q.categories.map(c=>c.id));
   for(const q of Q.questions)assert.ok(cats.has(q.cat),q.id);
   for(const c of Q.categories)assert.ok(Q.questions.some(q=>q.cat===c.id),`${c.name} has questions`);

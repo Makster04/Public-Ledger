@@ -43,8 +43,8 @@
    "name": "Economic"
   },
   {
-   "id": "domestic",
-   "name": "Domestic Policy"
+   "id": "guns",
+   "name": "Gun Policy"
   },
   {
    "id": "healthcare",
@@ -594,7 +594,7 @@
   },
   {
    "id": "assault-weapons",
-   "cat": "social",
+   "cat": "guns",
    "q": "Should the federal government ban assault weapons or buy them back?",
    "sides": [
     "Yes",
@@ -1123,7 +1123,7 @@
   },
   {
    "id": "gun-purchase-limits",
-   "cat": "domestic",
+   "cat": "guns",
    "q": "Should buying a gun come with more restrictions than it does now?",
    "sides": [
     "Yes",
@@ -1137,7 +1137,7 @@
   },
   {
    "id": "decriminalize-drugs",
-   "cat": "domestic",
+   "cat": "criminal",
    "q": "Should drug use be decriminalized?",
    "sides": [
     "Yes",
@@ -1148,7 +1148,7 @@
   },
   {
    "id": "retirement-age",
-   "cat": "domestic",
+   "cat": "economic",
    "q": "Should the retirement age for Social Security go up?",
    "sides": [
     "Yes",
@@ -1159,7 +1159,7 @@
   },
   {
    "id": "gun-age-21",
-   "cat": "domestic",
+   "cat": "guns",
    "q": "Should the minimum age to buy any gun be raised to 21?",
    "sides": [
     "Yes",
@@ -1170,7 +1170,7 @@
   },
   {
    "id": "eminent-domain",
-   "cat": "domestic",
+   "cat": "economic",
    "q": "Should the government be able to take private property for public use if it pays fair compensation?",
    "sides": [
     "Yes",
@@ -1181,7 +1181,7 @@
   },
   {
    "id": "congress-stock-trading",
-   "cat": "domestic",
+   "cat": "governance",
    "q": "Should members of Congress be allowed to trade stocks while in office?",
    "sides": [
     "Yes",
@@ -1192,7 +1192,7 @@
   },
   {
    "id": "armed-teachers",
-   "cat": "domestic",
+   "cat": "guns",
    "q": "Should teachers be allowed to carry guns at school?",
    "sides": [
     "Yes",
@@ -1203,7 +1203,7 @@
   },
   {
    "id": "misinformation-rules",
-   "cat": "domestic",
+   "cat": "social",
    "q": "Should social media sites be regulated to curb fake news and misinformation?",
    "sides": [
     "Yes",
@@ -1214,7 +1214,7 @@
   },
   {
    "id": "term-limits",
-   "cat": "domestic",
+   "cat": "governance",
    "q": "Should members of Congress have term limits?",
    "sides": [
     "Yes",
@@ -1225,7 +1225,7 @@
   },
   {
    "id": "court-reform",
-   "cat": "domestic",
+   "cat": "governance",
    "q": "Should the Supreme Court get more seats and term limits for justices?",
    "sides": [
     "Yes",
@@ -1236,7 +1236,7 @@
   },
   {
    "id": "nsa-metadata",
-   "cat": "domestic",
+   "cat": "national-security",
    "q": "Should the NSA be allowed to collect records of people's phone calls, such as numbers, times and lengths?",
    "sides": [
     "Yes",
@@ -1247,7 +1247,7 @@
   },
   {
    "id": "flag-burning",
-   "cat": "domestic",
+   "cat": "social",
    "q": "Should burning the American flag be illegal?",
    "sides": [
     "Yes",
@@ -1258,7 +1258,7 @@
   },
   {
    "id": "permanent-dst",
-   "cat": "domestic",
+   "cat": "governance",
    "q": "Should the U.S. stop changing the clocks and make Daylight Saving Time permanent?",
    "sides": [
     "Yes",
@@ -1269,7 +1269,7 @@
   },
   {
    "id": "net-neutrality",
-   "cat": "domestic",
+   "cat": "technology",
    "q": "Should internet providers be allowed to speed up websites that pay more and slow down those that pay less?",
    "sides": [
     "Yes",
@@ -1280,7 +1280,7 @@
   },
   {
    "id": "no-fly-no-buy",
-   "cat": "domestic",
+   "cat": "guns",
    "q": "Should people on the no-fly list be banned from buying guns and ammunition?",
    "sides": [
     "Yes",
@@ -1291,7 +1291,7 @@
   },
   {
    "id": "snowden-immunity",
-   "cat": "domestic",
+   "cat": "national-security",
    "q": "Should the U.S. grant Edward Snowden immunity?",
    "sides": [
     "Yes",
@@ -1302,7 +1302,7 @@
   },
   {
    "id": "whistleblowers",
-   "cat": "domestic",
+   "cat": "governance",
    "q": "Should there be stronger legal protections for whistleblowers?",
    "sides": [
     "Yes",

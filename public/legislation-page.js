@@ -17,9 +17,9 @@ export const LEG={summaryLines:3};
 export const AREA_ISSUES={'Government ethics':['governance'],'Government oversight & accountability':['governance'],'Ethics & money in politics':[],
   'Finance & crypto':['economic'],'Banking & finance':['economic'],'Labor & workers':['economic'],'Trade & tariffs':['economic'],'Budget & fiscal policy':['economic'],
   'Budget, taxes & health':['economic','healthcare'],'Economy & public health':['economic','healthcare'],'Climate, health & taxes':['environmental','healthcare','economic'],
-  'Health care':['healthcare'],'Social Security & Medicare':['domestic'],'Foreign policy & defense':['foreign'],'Elections & voting':['electoral'],
+  'Health care':['healthcare'],'Social Security & Medicare':['economic'],'Foreign policy & defense':['foreign'],'Elections & voting':['electoral'],
   'Immigration & border':['immigration'],'Reproductive rights':['social'],'Civil rights':['social'],'Civil liberties':[],
-  'Technology & industrial policy':['technology','economic'],'Guns & public safety':['domestic'],'Infrastructure & transportation':['infrastructure','transportation'],
+  'Technology & industrial policy':['technology','economic'],'Guns & public safety':['guns'],'Infrastructure & transportation':['infrastructure','transportation'],
   'Criminal justice & policing':['criminal'],Housing:['housing']};
 // (crypto is Technology, where the alignment questions put it)
 const CRYPTO=/crypto|stablecoin|digital asset/i;

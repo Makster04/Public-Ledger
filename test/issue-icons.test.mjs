@@ -17,7 +17,7 @@ test('each question category has its approved emoji',()=>{
 test('every reviewed check\'s topic gets a category, the way the questions file them',()=>{
   const r=read('../public/research.json');
   for(const s of [...r.members,...(r.cands||[]),...(r.featured||[])])for(const x of s.statements||[])assert.ok(topicCategory(x.topic),`${s.id}: "${x.topic}" has no category`);
-  for(const [topic,cat] of [['Medical debt relief','healthcare'],['Gun policy','domestic'],['Congressional stock trading ban','domestic'],['Right to repair','technology'],['Property taxes','housing'],
+  for(const [topic,cat] of [['Medical debt relief','healthcare'],['Gun policy','guns'],['Congressional stock trading ban','governance'],['Social Security cuts','economic'],['Flag burning','social'],['Marijuana legalization','criminal'],['Right to repair','technology'],['Property taxes','housing'],
     ['Abortion rights after Dobbs','social'],['Voter ID and the SAVE Act','electoral'],['Laken Riley Act','immigration'],['Iran war','foreign'],['NSA surveillance and privacy','national-security'],
     ['Rail safety after East Palestine','transportation'],['Tariffs on Canada','economic'],['2025 government shutdown and ACA tax credits','healthcare'],['Government shutdowns','governance']])assert.equal(topicCategory(topic),cat,topic);
   assert.equal(topicCategory('Something else entirely'),null,'no match: no emoji');
@@ -26,5 +26,5 @@ test('every reviewed check\'s topic gets a category, the way the questions file 
 test('each tracker has its emojis, shown after its name',()=>{
   assert.deepEqual(Object.fromEntries(TRACKERS.map(t=>[t.key,t.icon])),{aipac:'🇮🇱🎁',pharma:'💊🎁',insurers:'☂️🎁',oil:'🛢️🎁',tech:'🤖🎁',crypto:'🤑🎁',defense:'🪖🎁',wallstreet:'💰🎁'});
   for(const t of TRACKERS)assert.equal(t.emoji+'🎁',t.icon,`${t.key}: the report card's emoji is its icon without the 🎁`);
-  assert.deepEqual(Object.fromEntries(Object.entries(PLEDGE_CATEGORY).map(([k,c])=>[k,ISSUE_ICON[c]])),{lobbying:'🏛️','stock-trading':'🇺🇸','citizens-united':'🗳️'});
+  assert.deepEqual(Object.fromEntries(Object.entries(PLEDGE_CATEGORY).map(([k,c])=>[k,ISSUE_ICON[c]])),{lobbying:'🏛️','stock-trading':'🏛️','citizens-united':'🗳️'});
 });
