@@ -1,6 +1,6 @@
 {
  "about": "Each full profile's latest annual financial disclosures as the refresh read them (src/schedules.mjs): earned income, positions held outside government, agreements, gifts and paid travel, from the newest two reports read. Written by npm run disclosures:export; matched by scripts/match-conflicts.mjs.",
- "built": "2026-11-24",
+ "built": "2026-11-25",
  "people": {
   "ossoff": {
    "name": "Jon Ossoff",
@@ -281,6 +281,126 @@
        "date": "Apr 2011",
        "terms": "Colorado PERA DC Plan Denver, CO · Continuing participation in an employee benefit plan · Defined contribution pension plan.",
        "text": "Apr 2011 · Colorado PERA DC Plan Denver, CO · Continuing participation in an employee benefit plan · Defined contribution pension plan. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "kaptur": {
+   "name": "Marcy Kaptur",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-05-14",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077103.pdf",
+     "income": [],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "The Anastasia Fund",
+       "text": "Trustee The Anastasia Fund",
+       "comment": "P o sit io n is u nco m pensa t ed . T h e A na st a sia F u nd , P . O . B o x 2 12 1, T o l ed o , O H 4 36 0 3. [ a ch a r it y est a b l ish ed in t h e na m es o f A na st a sia a nd S t eph en K a pt u r ]"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-14",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10067506.pdf",
+     "income": [],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "The Anastasia Fund",
+       "text": "Trustee The Anastasia Fund",
+       "comment": "T h e A na st a sia F u nd , P . O . B o x 2 12 1, T o l ed o , O H 4 36 0 3. [ a ch a r it y est a b l ish ed in t h e na m es o f A na st a sia a nd S t eph en K a pt u r ]"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "castor": {
+   "name": "Kathy Castor",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-05-24",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076959.pdf",
+     "income": [
+      {
+       "source": "Butler Weihmuller Katz Craig",
+       "type": "Spouse Salary",
+       "amounts": [
+        null
+       ],
+       "text": "Butler Weihmuller Katz Craig Spouse Salary N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Vice President/Director",
+       "org": "Castor-Bell-Lewis Family Foundation (uncompensated)",
+       "text": "Vice President/Director Castor-Bell-Lewis Family Foundation (uncompensated)"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "October 1991",
+       "terms": "Myself and the State of Florida Florida pension plan agreement is defined benefit",
+       "text": "October 1991 Myself and the State of Florida Florida pension plan agreement is defined benefit"
+      }
+     ],
+     "gifts": [],
+     "travel": [
+      {
+       "source": "Aspen Institute",
+       "from": "04/18/2025",
+       "to": "04/26/2025",
+       "itinerary": "Washington, DC - Bellagio, Italy - Washington, DC",
+       "text": "Aspen Institute 04/18/2025 04/26/2025 Washington, DC - Bellagio, Italy - Washington, DC 2"
+      }
+     ]
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-15",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10066133.pdf",
+     "income": [
+      {
+       "source": "Butler Weihmuller Katz Craig",
+       "type": "Spouse Salary",
+       "amounts": [
+        null
+       ],
+       "text": "Butler Weihmuller Katz Craig Spouse Salary N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Vice President/Director",
+       "org": "Castor-Bell-Lewis Family Foundation (uncompensated)",
+       "text": "Vice President/Director Castor-Bell-Lewis Family Foundation (uncompensated)"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "October 1991",
+       "terms": "Myself and the State of Florida Florida pension plan agreement is defined benefit",
+       "text": "October 1991 Myself and the State of Florida Florida pension plan agreement is defined benefit"
       }
      ],
      "gifts": [],
@@ -1491,6 +1611,62 @@
     }
    ]
   },
+  "barr": {
+   "name": "Andy Barr",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-10",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10074914.pdf",
+     "income": [],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "January 2004",
+       "terms": "KY employees Retirement System KY state pension, cash value approximately $35,000 (2025), benefits payable beginning 8/1/38",
+       "text": "January 2004 KY employees Retirement System KY state pension, cash value approximately $35,000 (2025), benefits payable beginning 8/1/38"
+      }
+     ],
+     "gifts": [],
+     "travel": [
+      {
+       "source": "Former Members of Congress",
+       "from": "04/12/2025",
+       "to": "04/19/2025",
+       "itinerary": "Lexington, KY - Tokyo, Japan - Lexington, KY",
+       "text": "Former Members of Congress 04/12/2025 04/19/2025 Lexington, KY - Tokyo, Japan - Lexington, KY 0"
+      }
+     ]
+    },
+    {
+     "year": 2024,
+     "filed": "2025-08-11",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10066141.pdf",
+     "income": [],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "January 2004",
+       "terms": "KY employees Retirement System KY state pension, cash value approximately $30,000 (2024), benefits payable beginning 8/1/38",
+       "text": "January 2004 KY employees Retirement System KY state pension, cash value approximately $30,000 (2024), benefits payable beginning 8/1/38"
+      }
+     ],
+     "gifts": [],
+     "travel": [
+      {
+       "source": "Ripon Society",
+       "from": "11/07/2024",
+       "to": "11/12/2024",
+       "itinerary": "Lexington, KY - Vienna, Austria - Washington, DC",
+       "text": "Ripon Society 11/07/2024 11/12/2024 Lexington, KY - Vienna, Austria - Washington, DC 0"
+      }
+     ]
+    }
+   ]
+  },
   "alme": {
    "name": "Kurt Alme",
    "chamber": "S",
@@ -1523,6 +1699,161 @@
        "date": "Feb 2022",
        "terms": "National Christian Foundation 401(k) Plan Alpharetta, Georgia · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions.",
        "text": "Feb 2022 · National Christian Foundation 401(k) Plan Alpharetta, Georgia · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "hageman": {
+   "name": "Harriet Hageman",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076067.pdf",
+     "income": [
+      {
+       "source": "RBC Capital markets LLC IRA Spouse IRA",
+       "amounts": [
+        null
+       ],
+       "text": "RBC Capital markets LLC IRA Spouse IRA N/A"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": [
+      {
+       "source": "The Heritage Foundation",
+       "from": "02/15/2025",
+       "to": "02/20/2025",
+       "itinerary": "Washington, DC - London, United Kingdom - Washington, DC",
+       "text": "The Heritage Foundation 02/15/2025 02/20/2025 Washington, DC - London, United Kingdom - Washington, DC 0"
+      },
+      {
+       "source": "American Israel Education Foundation (AIEF)",
+       "from": "08/03/2025",
+       "to": "08/11/2025",
+       "itinerary": "Denver, CO - Tel Aviv, Israel - Denver, CO",
+       "text": "American Israel Education Foundation (AIEF) 08/03/2025 08/11/2025 Denver, CO - Tel Aviv, Israel - Denver, CO 0"
+      }
+     ]
+    },
+    {
+     "year": 2024,
+     "filed": "2025-08-10",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10066903.pdf",
+     "income": [
+      {
+       "source": "RBC Capital markets LLC IRA Spouse IRA",
+       "amounts": [
+        null
+       ],
+       "text": "RBC Capital markets LLC IRA Spouse IRA N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Owner",
+       "org": "Karriet, LLC",
+       "text": "Owner Karriet, LLC"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "hern": {
+   "name": "Kevin Hern",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-06-25",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10075834.pdf",
+     "income": [],
+     "positions": [
+      {
+       "position": "Director",
+       "org": "Hern Family Foundation",
+       "text": "Director Hern Family Foundation"
+      },
+      {
+       "position": "Member",
+       "org": "Firstrike",
+       "text": "Member Firstrike"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-08-04",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10067143.pdf",
+     "income": [],
+     "positions": [
+      {
+       "position": "Director",
+       "org": "Hern Family Foundation",
+       "text": "Director Hern Family Foundation"
+      },
+      {
+       "position": "Member",
+       "org": "Firstrike",
+       "text": "Member Firstrike"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "letlow": {
+   "name": "Julia Letlow",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076014.pdf",
+     "income": [],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "January 2008",
+       "terms": "Filer and LA State Retirement System Filer worked for University of Louisiana at Monroe and participated in the retirement system",
+       "text": "January 2008 Filer and LA State Retirement System Filer worked for University of Louisiana at Monroe and participated in the retirement system"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2026-08-13",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10077160.pdf",
+     "income": [],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "January 2008",
+       "terms": "Filer and LA State Retirement System Filer worked for University of Louisiana at Monroe and participated in the retirement system",
+       "text": "January 2008 Filer and LA State Retirement System Filer worked for University of Louisiana at Monroe and participated in the retirement system"
       }
      ],
      "gifts": [],
@@ -2285,6 +2616,197 @@
     }
    ]
   },
+  "conley": {
+   "name": "Cait Conley",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-05-19",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076406.pdf",
+     "income": [
+      {
+       "source": "Hidden Level, Inc.",
+       "type": "salary",
+       "amounts": [
+        null,
+        152743.07
+       ],
+       "text": "Hidden Level, Inc. salary N/A $152,743.07"
+      },
+      {
+       "source": "Hidden Level, Inc.",
+       "type": "Consulting",
+       "amounts": [
+        92500,
+        48040.08
+       ],
+       "text": "Hidden Level, Inc. Consulting Fee $92,500.00 $48,040.08",
+       "comment": "I t r a nsit io ned f r o m sa l a r ied em pl o y ee in 2 0 2 5 t o ex t er na l co nsu l t a nt in 2 0 2 5 ."
+      },
+      {
+       "source": "Primer",
+       "type": "Consulting",
+       "amounts": [
+        10000,
+        25000
+       ],
+       "text": "Primer Consulting Fee $10,000.00 $25,000.00"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-08-12",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10068477.pdf",
+     "income": [
+      {
+       "source": "Hidden Level, Inc.",
+       "type": "salary",
+       "amounts": [
+        68000,
+        null
+       ],
+       "text": "Hidden Level, Inc. salary $68,000.00 N/A"
+      },
+      {
+       "source": "Primer",
+       "type": "Consulting",
+       "amounts": [
+        12500,
+        null
+       ],
+       "text": "Primer Consulting Fee $12,500.00 N/A"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "bohannan": {
+   "name": "Christina Bohannan",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076765.pdf",
+     "income": [
+      {
+       "source": "University of Iowa",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "University of Iowa Spouse salary N/A N/A"
+      },
+      {
+       "source": "Iowa City VA Health Care System",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Iowa City VA Health Care System Spouse salary N/A N/A"
+      },
+      {
+       "source": "Common Sense Policy Fellowship",
+       "type": "Consulting",
+       "amounts": [
+        null,
+        15000
+       ],
+       "text": "Common Sense Policy Fellowship Consulting N/A $15,000.00"
+      },
+      {
+       "source": "University of Iowa",
+       "type": "salary",
+       "amounts": [
+        73960,
+        153949
+       ],
+       "text": "University of Iowa salary $73,960.00 $153,949.00"
+      }
+     ],
+     "positions": [
+      {
+       "org": "Lauridsen Family Fellow in Law University of Iowa",
+       "text": "Lauridsen Family Fellow in Law University of Iowa"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "June 2025",
+       "terms": "University of Iowa Decrease from full time to 60% appointment and salary fall 2025 to spring 2026. On total leave at 0% salary July 2026-Spring 2027.",
+       "text": "June 2025 University of Iowa Decrease from full time to 60% appointment and salary fall 2025 to spring 2026. On total leave at 0% salary July 2026-Spring 2027."
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-10-15",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10071781.pdf",
+     "income": [
+      {
+       "source": "University of Iowa",
+       "type": "salary",
+       "amounts": [
+        132990,
+        75957
+       ],
+       "text": "University of Iowa salary $132,990.00 $75,957.00"
+      },
+      {
+       "source": "University of Iowa",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "University of Iowa Spouse salary N/A N/A"
+      },
+      {
+       "source": "Iowa City VA Health Care System",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Iowa City VA Health Care System Spouse salary N/A N/A"
+      }
+     ],
+     "positions": [
+      {
+       "org": "Lauridsen Family Fellow in Law University of Iowa",
+       "text": "Lauridsen Family Fellow in Law University of Iowa"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "June 2025",
+       "terms": "University of Iowa Decrease from full time to 60% appointment and salary fall 2025 to spring 2026",
+       "text": "June 2025 University of Iowa Decrease from full time to 60% appointment and salary fall 2025 to spring 2026"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "colom": {
    "name": "Scott Colom",
    "chamber": "S",
@@ -2664,6 +3186,324 @@
     }
    ]
   },
+  "dandiya": {
+   "name": "Pia Dandiya",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076314.pdf",
+     "income": [
+      {
+       "source": "Roivant Sciences",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Roivant Sciences Spouse salary N/A N/A"
+      },
+      {
+       "source": "Apple, Inc.",
+       "type": "Salary",
+       "amounts": [
+        null,
+        148280.05
+       ],
+       "text": "Apple, Inc. Salary N/A $148,280.05"
+      }
+     ],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "January 2022",
+       "terms": "Apple, Inc.; Filer Continued participation in Apple, Inc.'s 401(k) plan.",
+       "text": "January 2022 Apple, Inc.; Filer Continued participation in Apple, Inc.'s 401(k) plan."
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-05-05",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076291.pdf",
+     "income": [
+      {
+       "source": "Apple, Inc.",
+       "type": "Salary",
+       "amounts": [
+        121067.15,
+        235861.08
+       ],
+       "text": "Apple, Inc. Salary $121,067.15 $235,861.08"
+      },
+      {
+       "source": "Roivant Sciences",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Roivant Sciences Spouse salary N/A N/A"
+      },
+      {
+       "source": "NewtonX, Inc. Spouse",
+       "type": "consulting fees",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "NewtonX, Inc. Spouse consulting fees N/A N/A"
+      },
+      {
+       "source": "GLG Spouse",
+       "type": "consulting fees",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "GLG Spouse consulting fees N/A N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Member",
+       "org": "Illinois P-20 Education Council",
+       "text": "Member Illinois P-20 Education Council"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "January 2022",
+       "terms": "Apple, Inc.; Filer Continued participation in Apple, Inc.'s 401(k) plan.",
+       "text": "January 2022 Apple, Inc.; Filer Continued participation in Apple, Inc.'s 401(k) plan."
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "lawrence": {
+   "name": "William Lawrence",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-17",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10082709.pdf",
+     "income": [
+      {
+       "source": "ERACCE",
+       "type": "spouse income",
+       "amounts": [
+        38604,
+        60014
+       ],
+       "text": "ERACCE spouse income $38,604.00 $60,014.00"
+      },
+      {
+       "source": "University of Michigan speaking",
+       "type": "honorarium",
+       "amounts": [
+        675
+       ],
+       "text": "University of Michigan speaking honorarium $675.00"
+      },
+      {
+       "source": "Detroit Action my",
+       "type": "salary",
+       "amounts": [
+        55365
+       ],
+       "text": "Detroit Action my salary $.00 $55,365.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Secretary",
+       "org": "Mid-Michigan Tenant Resource Center",
+       "text": "Secretary Mid-Michigan Tenant Resource Center"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-08-20",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082728.pdf",
+     "income": [
+      {
+       "source": "Commonwealth Foundation/Convergence Magazine contract income",
+       "amounts": [
+        5000,
+        10000
+       ],
+       "text": "Commonwealth Foundation/Convergence Magazine contract income $5,000.00 $10,000.00"
+      },
+      {
+       "source": "ERACCE",
+       "type": "spouse salary",
+       "amounts": [
+        60000,
+        9398.16
+       ],
+       "text": "ERACCE spouse salary $60,000.00 $9,398.16"
+      },
+      {
+       "source": "Ash St Redevelopment LLC",
+       "type": "spouse salary",
+       "amounts": [
+        null,
+        15974.56
+       ],
+       "text": "Ash St Redevelopment LLC spouse salary N/A $15,974.56 Dinah DeWald Coaching LLC spouse self-employment income"
+      },
+      {
+       "amounts": [
+        null,
+        2600
+       ],
+       "text": "N/A $2,600.00"
+      },
+      {
+       "source": "University of Illinois fellowship",
+       "type": "stipend",
+       "amounts": [
+        null,
+        1050
+       ],
+       "text": "University of Illinois fellowship stipend N/A $1,050.00"
+      },
+      {
+       "source": "Detroit Action my",
+       "type": "salary",
+       "amounts": [
+        53625,
+        40429
+       ],
+       "text": "Detroit Action my salary $53,625.00 $40,429.00"
+      }
+     ],
+     "positions": [
+      {
+       "org": "Statewide Housing Organizer Detroit Action",
+       "text": "Statewide Housing Organizer Detroit Action"
+      },
+      {
+       "position": "Board Chair",
+       "org": ", then Secretary Mid-Michigan Tenant Resource Center",
+       "text": "Board Chair, then Secretary Mid-Michigan Tenant Resource Center"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "hines": {
+   "name": "Christina Hines",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10075530.pdf",
+     "income": [
+      {
+       "source": "General Motors",
+       "type": "Spouse Salary",
+       "amounts": [
+        33946.17,
+        133426
+       ],
+       "text": "General Motors Spouse Salary $33,946.17 $133,426.00"
+      },
+      {
+       "source": "Law Office of James Gerometta My",
+       "type": "Salary",
+       "amounts": [
+        3543.75
+       ],
+       "text": "Law Office of James Gerometta My Salary $.00 $3,543.75"
+      },
+      {
+       "source": "Mogill & Lemanski, PLLC My",
+       "type": "Salary",
+       "amounts": [
+        43600
+       ],
+       "text": "Mogill & Lemanski, PLLC My Salary $.00 $43,600.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "President",
+       "org": "Women of Warren",
+       "text": "President Women of Warren"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-07-29",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10071722.pdf",
+     "income": [
+      {
+       "source": "General Motors",
+       "type": "Spouse Salary",
+       "amounts": [
+        79650.79,
+        131635.53
+       ],
+       "text": "General Motors Spouse Salary $79,650.79 $131,635.53"
+      },
+      {
+       "source": "Wayne County Gov't & Wayne State University My",
+       "type": "Salary",
+       "amounts": [
+        null,
+        16410.47
+       ],
+       "text": "Wayne County Gov't & Wayne State University My Salary N/A $16,410.47"
+      },
+      {
+       "source": "Mogill & Lemanski, PLLC My",
+       "type": "Salary",
+       "amounts": [
+        43600,
+        null
+       ],
+       "text": "Mogill & Lemanski, PLLC My Salary $43,600.00 N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "President",
+       "org": "Women of Warren",
+       "text": "President Women of Warren"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "ager": {
    "name": "Jamie Ager",
    "chamber": "H",
@@ -2760,6 +3600,489 @@
        "position": "CEO",
        "org": "Hickory Nut Gap Farm LLC",
        "text": "CEO Hickory Nut Gap Farm LLC"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "brooks": {
+   "name": "Bob Brooks",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076935.pdf",
+     "income": [
+      {
+       "source": "PA Professional firefighters association",
+       "type": "Salary",
+       "amounts": [
+        26013.65,
+        51740
+       ],
+       "text": "PA Professional firefighters association Salary $26,013.65 $51,740.00"
+      },
+      {
+       "source": "Brooks Lawn Care LLC Business Income",
+       "amounts": [
+        43000,
+        63454
+       ],
+       "text": "Brooks Lawn Care LLC Business Income $43,000.00 $63,454.00"
+      },
+      {
+       "source": "City of Bethlehem",
+       "type": "Pension",
+       "amounts": [
+        39633.09,
+        60913.27
+       ],
+       "text": "City of Bethlehem Pension $39,633.09 $60,913.27"
+      },
+      {
+       "source": "City of Bethlehem",
+       "type": "Salary",
+       "amounts": [
+        null,
+        48986
+       ],
+       "text": "City of Bethlehem Salary N/A $48,986.00"
+      },
+      {
+       "source": "Arbor Insurance Group",
+       "type": "Spouse Salary",
+       "amounts": [
+        46666.67,
+        80000
+       ],
+       "text": "Arbor Insurance Group Spouse Salary $46,666.67 $80,000.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Member/Owner",
+       "org": "Brooks Lawn Care LLC",
+       "text": "Member/Owner Brooks Lawn Care LLC"
+      },
+      {
+       "position": "President",
+       "org": "Pennsylvania Professional Firefighters Association",
+       "text": "President Pennsylvania Professional Firefighters Association"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "March 2025",
+       "terms": "Robert Brooks and City of Bethlehem Continuing participation in the City of Bethlehem Firemen's Pension Plan, a defined benefit plan maintained by a former employer. Filer retired from the City of Bethlehem Fire Department in March 2025 and receives monthly retirement benefits under the plan.",
+       "text": "March 2025 Robert Brooks and City of Bethlehem Continuing participation in the City of Bethlehem Firemen's Pension Plan, a defined benefit plan maintained by a former employer. Filer retired from the City of Bethlehem Fire Department in March 2025 and receives monthly retirement benefits under the plan."
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10073291.pdf",
+     "income": [
+      {
+       "source": "Brooks Lawn Care LLC Business Income",
+       "amounts": [
+        63454,
+        60755
+       ],
+       "text": "Brooks Lawn Care LLC Business Income $63,454.00 $60,755.00",
+       "comment": "P er so na l S no w P l o wing a nd L a nd sca ping b u siness. T h ese a r e g r o ss r eceipt s."
+      },
+      {
+       "source": "City of Bethlehem",
+       "type": "Salary",
+       "amounts": [
+        20000,
+        76865.92
+       ],
+       "text": "City of Bethlehem Salary $20,000.00 $76,865.92"
+      },
+      {
+       "source": "City of Bethlehem",
+       "type": "Pension",
+       "amounts": [
+        60913.27,
+        null
+       ],
+       "text": "City of Bethlehem Pension $60,913.27 N/A"
+      },
+      {
+       "source": "Arbor Insurance Group",
+       "type": "spouse salary",
+       "amounts": [
+        75000,
+        69145
+       ],
+       "text": "Arbor Insurance Group spouse salary $75,000.00 $69,145.00"
+      },
+      {
+       "source": "PA Professional firefighters association",
+       "type": "Salary",
+       "amounts": [
+        50000,
+        53202.67
+       ],
+       "text": "PA Professional firefighters association Salary $50,000.00 $53,202.67"
+      }
+     ],
+     "positions": [
+      {
+       "position": "President",
+       "org": "Pennsylvania Professional Firefighters Association",
+       "text": "President Pennsylvania Professional Firefighters Association"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "March 2025",
+       "terms": "Robert Brooks and City of Bethlehem Continuing participation in the City of Bethlehem Firemen's Pension Plan, a defined benefit plan maintained by a former employer. Filer retired from the City of Bethlehem Fire Department in March 2025 and receives monthly retirement benefits under the plan.",
+       "text": "March 2025 Robert Brooks and City of Bethlehem Continuing participation in the City of Bethlehem Firemen's Pension Plan, a defined benefit plan maintained by a former employer. Filer retired from the City of Bethlehem Fire Department in March 2025 and receives monthly retirement benefits under the plan."
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "cognetti": {
+   "name": "Paige Cognetti",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10078325.pdf",
+     "income": [
+      {
+       "source": "City of Scranton",
+       "type": "salary",
+       "amounts": [
+        40625,
+        75000
+       ],
+       "text": "City of Scranton salary $40,625.00 $75,000.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Board Member",
+       "org": "Pennsylvania Municipal League",
+       "text": "Board Member Pennsylvania Municipal League"
+      },
+      {
+       "position": "Member",
+       "org": "Advisory Committee for Trade Policy and Negotiations",
+       "text": "Member Advisory Committee for Trade Policy and Negotiations",
+       "comment": "P r esid ent ia l A ppo int m ent"
+      },
+      {
+       "position": "Member",
+       "org": "Pennsylvania Mayor's Alliance",
+       "text": "Member Pennsylvania Mayor's Alliance"
+      },
+      {
+       "position": "Board Member",
+       "org": "Mayors Innovation Project Advisory Committee Member Accelerator for America",
+       "text": "Board Member Mayors Innovation Project Advisory Committee Member Accelerator for America"
+      },
+      {
+       "position": "Trustee",
+       "org": "U.S. Conference of Mayors",
+       "text": "Trustee U.S. Conference of Mayors"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "July 2014",
+       "terms": "Self, Goldman Sachs 401K",
+       "text": "July 2014 Self, Goldman Sachs 401K"
+      },
+      {
+       "date": "July 2025",
+       "terms": "Self, City of Scranton 457 Plan",
+       "text": "July 2025 Self, City of Scranton 457 Plan"
+      },
+      {
+       "date": "January 2019",
+       "terms": "Self, Commonwealth of Pennsylvania PA State Employees Defined Contribution Plan",
+       "text": "January 2019 Self, Commonwealth of Pennsylvania PA State Employees Defined Contribution Plan"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-12-31",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10073003.pdf",
+     "income": [
+      {
+       "source": "City of Scranton",
+       "type": "salary",
+       "amounts": [
+        75000,
+        75000
+       ],
+       "text": "City of Scranton salary $75,000.00 $75,000.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "U.S. Conference of Mayors",
+       "text": "Trustee U.S. Conference of Mayors"
+      },
+      {
+       "position": "Board Member",
+       "org": "Pennsylvania Municipal League",
+       "text": "Board Member Pennsylvania Municipal League"
+      },
+      {
+       "position": "Member",
+       "org": "Advisory Committee for Trade Policy and Negotiations",
+       "text": "Member Advisory Committee for Trade Policy and Negotiations",
+       "comment": "P r esid ent ia l A ppo int m ent"
+      },
+      {
+       "position": "Board Member",
+       "org": "Mayors Innovation Project Advisory Committee Member Accelerator for America",
+       "text": "Board Member Mayors Innovation Project Advisory Committee Member Accelerator for America"
+      },
+      {
+       "position": "Vice Chair",
+       "org": "Mayors Alliance to End Childhood Hunger",
+       "text": "Vice Chair Mayors Alliance to End Childhood Hunger"
+      },
+      {
+       "position": "Member",
+       "org": "Pennsylvania Mayor's Alliance",
+       "text": "Member Pennsylvania Mayor's Alliance"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "July 2014",
+       "terms": "Self, Goldman Sachs 401K",
+       "text": "July 2014 Self, Goldman Sachs 401K"
+      },
+      {
+       "date": "July 2025",
+       "terms": "Self, City of Scranton 457 Plan",
+       "text": "July 2025 Self, City of Scranton 457 Plan"
+      },
+      {
+       "date": "January 2019",
+       "terms": "Self, Commonwealth of Pennsylvania PA State Employees Defined Contribution Plan",
+       "text": "January 2019 Self, Commonwealth of Pennsylvania PA State Employees Defined Contribution Plan"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "luria": {
+   "name": "Elaine Luria",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-05-15",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076971.pdf",
+     "income": [],
+     "positions": [
+      {
+       "position": "OWNER",
+       "org": "MERMAID FACTORY, LLC",
+       "text": "OWNER MERMAID FACTORY, LLC",
+       "comment": "L L C D I S S O L V E D N O V E M B E R 2 0 2 5"
+      },
+      {
+       "position": "OWNER",
+       "org": "THE LURIA COMPANY, LLC",
+       "text": "OWNER THE LURIA COMPANY, LLC",
+       "comment": "L L C D I S S O L V E D N O V E M B E R 2 0 2 5"
+      },
+      {
+       "position": "BOARD MEMBER",
+       "org": "BAE SYSTEMS, LLC",
+       "text": "BOARD MEMBER BAE SYSTEMS, LLC",
+       "comment": "R E S I GN E D N O V E M B E R 2 0 2 5"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-02-10",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10072870.pdf",
+     "income": [],
+     "positions": [
+      {
+       "position": "OWNER",
+       "org": "MERMAID FACTORY, LLC",
+       "text": "OWNER MERMAID FACTORY, LLC",
+       "comment": "L L C D I S S O L V E D N O V E M B E R 2 0 2 5"
+      },
+      {
+       "position": "OWNER",
+       "org": "THE LURIA COMPANY, LLC",
+       "text": "OWNER THE LURIA COMPANY, LLC",
+       "comment": "L L C D I S S O L V E D N O V E M B E R 2 0 2 5"
+      },
+      {
+       "position": "BOARD MEMBER",
+       "org": "BAE SYSTEMS, LLC",
+       "text": "BOARD MEMBER BAE SYSTEMS, LLC",
+       "comment": "R E S I GN E D N O V E M B E R 2 0 2 5"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "cooke": {
+   "name": "Rebecca Cooke",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076143.pdf",
+     "income": [
+      {
+       "source": "Small Business Advisors LLC Employment",
+       "amounts": [
+        60000
+       ],
+       "text": "Small Business Advisors LLC Employment $60,000.00"
+      },
+      {
+       "source": "Kingfisher Waitresing",
+       "amounts": [
+        1618.79,
+        null
+       ],
+       "text": "Kingfisher Waitresing $1,618.79 N/A"
+      },
+      {
+       "source": "The Good Wives Waitressing",
+       "amounts": [
+        10708,
+        18900
+       ],
+       "text": "The Good Wives Waitressing $10,708.00 $18,900.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Owner",
+       "org": "Hytte Properties LLC",
+       "text": "Owner Hytte Properties LLC"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-01-15",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10073211.pdf",
+     "income": [
+      {
+       "source": "The Good Wives Waitressing",
+       "amounts": [
+        7085,
+        21662
+       ],
+       "text": "The Good Wives Waitressing $7,085.00 $21,662.00"
+      },
+      {
+       "source": "Red Letter Grant Employment",
+       "amounts": [
+        null,
+        12000
+       ],
+       "text": "Red Letter Grant Employment N/A $12,000.00",
+       "comment": "R esig ned f r o m po sit io n, no w ser v ing a n u npa id b o a r d r o l e."
+      },
+      {
+       "source": "Small Business Advisors LLC Employment",
+       "amounts": [
+        2000,
+        null
+       ],
+       "text": "Small Business Advisors LLC Employment $2,000.00 N/A"
+      },
+      {
+       "source": "Third Way Fellowship",
+       "amounts": [
+        2000,
+        null
+       ],
+       "text": "Third Way Fellowship $2,000.00 N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Owner",
+       "org": "Cooke Strategy LLC",
+       "text": "Owner Cooke Strategy LLC",
+       "comment": "B u siness t er m ina t ed Ja nu a r y 10 , 2 0 2 5"
+      },
+      {
+       "position": "Board Member",
+       "org": "Wisconsin Technology Council",
+       "text": "Board Member Wisconsin Technology Council",
+       "comment": "R esig ned D ecem b er 2 0 2 4"
+      },
+      {
+       "position": "Owner",
+       "org": "Small Business Advisors LLC",
+       "text": "Owner Small Business Advisors LLC"
+      },
+      {
+       "position": "Owner",
+       "org": "Hytte Properties LLC",
+       "text": "Owner Hytte Properties LLC"
+      },
+      {
+       "position": "Owner",
+       "org": "Prairie Midwest LLC",
+       "text": "Owner Prairie Midwest LLC"
+      },
+      {
+       "position": "Board Member",
+       "org": "Red Letter Grant",
+       "text": "Board Member Red Letter Grant"
+      },
+      {
+       "position": "Fellow",
+       "org": "Third Way",
+       "text": "Fellow Third Way"
       }
      ],
      "agreements": [],
