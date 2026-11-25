@@ -330,6 +330,110 @@
     }
    ]
   },
+  "mgp": {
+   "name": "Marie Gluesenkamp Perez",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-09-16",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10082762.pdf",
+     "income": [
+      {
+       "source": "Dean's Car Care Spouse S-Corp",
+       "amounts": [
+        null
+       ],
+       "text": "Dean's Car Care Spouse S-Corp N/A"
+      },
+      {
+       "source": "US House of Representatives",
+       "type": "Salary",
+       "amounts": [
+        187896
+       ],
+       "text": "US House of Representatives Salary $187,896.00"
+      },
+      {
+       "source": "Dean's Car Care",
+       "type": "Salary",
+       "amounts": [
+        28478
+       ],
+       "text": "Dean's Car Care Salary $28,478.00"
+      },
+      {
+       "source": "Dean's Car Care",
+       "type": "Spouse Salary",
+       "amounts": [
+        null
+       ],
+       "text": "Dean's Car Care Spouse Salary N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Secretary",
+       "org": "Dean's Car Care Inc",
+       "text": "Secretary Dean's Car Care Inc"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2026-09-16",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10082761.pdf",
+     "income": [
+      {
+       "source": "Dean's Car Care",
+       "type": "Salary",
+       "amounts": [
+        28478
+       ],
+       "text": "Dean's Car Care Salary $28,478.00"
+      },
+      {
+       "source": "US House of Representatives",
+       "type": "Salary",
+       "amounts": [
+        185813
+       ],
+       "text": "US House of Representatives Salary $185,813.00"
+      },
+      {
+       "source": "Dean's Car Care Spouse S-Corp",
+       "amounts": [
+        null
+       ],
+       "text": "Dean's Car Care Spouse S-Corp N/A"
+      },
+      {
+       "source": "Dean's Car Care",
+       "type": "Spouse Salary",
+       "amounts": [
+        null
+       ],
+       "text": "Dean's Car Care Spouse Salary N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Secretary",
+       "org": "Dean's Car Care Inc",
+       "text": "Secretary Dean's Car Care Inc"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "castor": {
    "name": "Kathy Castor",
    "chamber": "H",
@@ -1200,6 +1304,80 @@
     }
    ]
   },
+  "pappas": {
+   "name": "Chris Pappas",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10077615.pdf",
+     "income": [
+      {
+       "source": "Uber Technologies",
+       "type": "Spouse Salary",
+       "amounts": [
+        null
+       ],
+       "text": "Uber Technologies Spouse Salary N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Member",
+       "org": "Pilgrim Realty",
+       "text": "Member Pilgrim Realty"
+      },
+      {
+       "position": "Member",
+       "org": "Puritan Confectionery Co.",
+       "text": "Member Puritan Confectionery Co."
+      }
+     ],
+     "agreements": [],
+     "gifts": [
+      {
+       "source": "NH Lottery Commission (Concord, NH, US) Lottery Winnings",
+       "value": 7609.61,
+       "text": "NH Lottery Commission (Concord, NH, US) Lottery Winnings $7,609.61"
+      }
+     ],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-08-02",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10068162.pdf",
+     "income": [
+      {
+       "source": "Uber Technologies",
+       "type": "Spouse Salary",
+       "amounts": [
+        null
+       ],
+       "text": "Uber Technologies Spouse Salary N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Member",
+       "org": "Puritan Confectionery Co.",
+       "text": "Member Puritan Confectionery Co."
+      },
+      {
+       "position": "Member",
+       "org": "Pilgrim Realty",
+       "text": "Member Pilgrim Realty"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "flanagan": {
    "name": "Peggy Flanagan",
    "chamber": "S",
@@ -1664,6 +1842,50 @@
        "text": "Ripon Society 11/07/2024 11/12/2024 Lexington, KY - Vienna, Austria - Washington, DC 0"
       }
      ]
+    }
+   ]
+  },
+  "moore": {
+   "name": "Barry Moore",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-04-29",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10076378.pdf",
+     "income": [
+      {
+       "source": "Chicken and biscuits spouse",
+       "amounts": [
+        60000
+       ],
+       "text": "Chicken and biscuits spouse $60,000.00"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-01",
+     "type": "O",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2024/10067082.pdf",
+     "income": [
+      {
+       "source": "Chicken and biscuits spouse",
+       "amounts": [
+        60000
+       ],
+       "text": "Chicken and biscuits spouse $60,000.00"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
     }
    ]
   },
@@ -2616,6 +2838,111 @@
     }
    ]
   },
+  "stelson": {
+   "name": "Janelle Stelson",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10077149.pdf",
+     "income": [
+      {
+       "source": "Friends of Janelle Stelson",
+       "type": "Salary",
+       "amounts": [
+        38872.56,
+        38872.56
+       ],
+       "text": "Friends of Janelle Stelson Salary $38,872.56 $38,872.56"
+      },
+      {
+       "source": "Prometheus",
+       "type": "Consulting Fees",
+       "amounts": [
+        null,
+        15000
+       ],
+       "text": "Prometheus Consulting Fees N/A $15,000.00"
+      },
+      {
+       "source": "Hearst Corp Retirement Plan",
+       "type": "Retirement",
+       "amounts": [
+        24705.72,
+        49411.44
+       ],
+       "text": "Hearst Corp Retirement Plan Retirement $24,705.72 $49,411.44"
+      },
+      {
+       "source": "Voting for America Podcast producer",
+       "amounts": [
+        null,
+        45000
+       ],
+       "text": "Voting for America Podcast producer N/A $45,000.00"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10081672.pdf",
+     "income": [
+      {
+       "source": "Friends of Janelle Stelson",
+       "type": "Salary",
+       "amounts": [
+        19436.27,
+        null
+       ],
+       "text": "Friends of Janelle Stelson Salary $19,436.27 N/A"
+      },
+      {
+       "source": "Voting for America Podcast producer",
+       "amounts": [
+        45000,
+        null
+       ],
+       "text": "Voting for America Podcast producer $45,000.00 N/A"
+      },
+      {
+       "source": "Hearst Corp Retirement Plan",
+       "type": "Retirement",
+       "amounts": [
+        37058.58,
+        null
+       ],
+       "text": "Hearst Corp Retirement Plan Retirement $37,058.58 N/A"
+      },
+      {
+       "source": "Prometheus",
+       "type": "Consulting Fees",
+       "amounts": [
+        15000,
+        null
+       ],
+       "text": "Prometheus Consulting Fees $15,000.00 N/A"
+      }
+     ],
+     "positions": [
+      {
+       "org": "TV News Anchor or Broadcast Journalist WGAL-TV (Hearst)",
+       "text": "TV News Anchor or Broadcast Journalist WGAL-TV (Hearst)"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "conley": {
    "name": "Cait Conley",
    "chamber": "H",
@@ -2686,6 +3013,70 @@
       }
      ],
      "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "rutinel": {
+   "name": "Manny Rutinel",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-05-15",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10077663.pdf",
+     "income": [
+      {
+       "source": "State of Colorado State Representative",
+       "amounts": [
+        16895.26,
+        52013.8
+       ],
+       "text": "State of Colorado State Representative $16,895.26 $52,013.80"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-05-14",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10068126.pdf",
+     "income": [
+      {
+       "source": "University of Denver Research and Teaching Fellow",
+       "amounts": [],
+       "text": "University of Denver Research and Teaching Fellow"
+      },
+      {
+       "amounts": [
+        null,
+        15262
+       ],
+       "text": "N/A $15,262.00"
+      },
+      {
+       "source": "State of Colorado State Representative",
+       "amounts": [
+        20443.68,
+        49296.3
+       ],
+       "text": "State of Colorado State Representative $20,443.68 $49,296.30"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Director",
+       "org": "Climate Refarm, PBC",
+       "text": "Director Climate Refarm, PBC"
+      }
+     ],
      "agreements": [],
      "gifts": [],
      "travel": []
@@ -3186,6 +3577,136 @@
     }
    ]
   },
+  "villegas": {
+   "name": "Randy Villegas",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-07",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10081438.pdf",
+     "income": [
+      {
+       "source": "College of Sequoias",
+       "type": "Salary",
+       "amounts": [
+        125500.17,
+        114666
+       ],
+       "text": "College of Sequoias Salary $125,500.17 $114,666.00"
+      },
+      {
+       "source": "University of California",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "University of California Spouse salary N/A N/A"
+      },
+      {
+       "source": "Visalia Unified School District Trustee",
+       "amounts": [
+        8472,
+        8472
+       ],
+       "text": "Visalia Unified School District Trustee $8,472.00 $8,472.00"
+      },
+      {
+       "source": "TULARE JOINT UNION HIGH SCHOOL DISTRICT Drumline Coach",
+       "amounts": [
+        null,
+        2206
+       ],
+       "text": "TULARE JOINT UNION HIGH SCHOOL DISTRICT Drumline Coach N/A $2,206.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "Area 6 Visalia Unified School Board",
+       "text": "Trustee Area 6 Visalia Unified School Board"
+      },
+      {
+       "position": "Board Member",
+       "org": "Central Valley Partnership",
+       "text": "Board Member Central Valley Partnership"
+      },
+      {
+       "position": "Board Member",
+       "org": "Power California",
+       "text": "Board Member Power California"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-05-09",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10067219.pdf",
+     "income": [
+      {
+       "source": "College of Sequoias",
+       "type": "Salary",
+       "amounts": [
+        114666,
+        113424
+       ],
+       "text": "College of Sequoias Salary $114,666.00 $113,424.00"
+      },
+      {
+       "source": "University of California",
+       "type": "Spouse salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "University of California Spouse salary N/A N/A"
+      },
+      {
+       "source": "Visalia Unified School District Trustee",
+       "amounts": [
+        8472,
+        null
+       ],
+       "text": "Visalia Unified School District Trustee $8,472.00 N/A"
+      },
+      {
+       "source": "TULARE JOINT UNION HIGH SCHOOL DISTRICT Drumline coach",
+       "amounts": [
+        1470,
+        null
+       ],
+       "text": "TULARE JOINT UNION HIGH SCHOOL DISTRICT Drumline coach $1,470.00 N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "Area 6 Visalia Unified School Board",
+       "text": "Trustee Area 6 Visalia Unified School Board"
+      },
+      {
+       "position": "Board Member",
+       "org": "Central Valley Partnership",
+       "text": "Board Member Central Valley Partnership"
+      },
+      {
+       "position": "Board Member",
+       "org": "Power California",
+       "text": "Board Member Power California"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "dandiya": {
    "name": "Pia Dandiya",
    "chamber": "H",
@@ -3283,6 +3804,133 @@
        "text": "January 2022 Apple, Inc.; Filer Continued participation in Apple, Inc.'s 401(k) plan."
       }
      ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "tronegarriott": {
+   "name": "Sarah Trone Garriott",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10076677.pdf",
+     "income": [
+      {
+       "source": "Des Moines Area Religious Council",
+       "type": "Salary",
+       "amounts": [],
+       "text": "Des Moines Area Religious Council Salary & Clergy Housing"
+      },
+      {
+       "type": "Stipend",
+       "amounts": [],
+       "text": "Stipend"
+      },
+      {
+       "amounts": [
+        null,
+        39079.59
+       ],
+       "text": "N/A $39,079.59"
+      },
+      {
+       "source": "State of Iowa",
+       "type": "Salary",
+       "amounts": [
+        37106.1,
+        43845
+       ],
+       "text": "State of Iowa Salary & Per Diem $37,106.10 $43,845.00"
+      },
+      {
+       "source": "Sarah for Iowa Candidate",
+       "type": "Salary",
+       "amounts": [
+        16692.44,
+        null
+       ],
+       "text": "Sarah for Iowa Candidate Salary $16,692.44 N/A"
+      },
+      {
+       "source": "Drake Uiversity",
+       "type": "Spouse Salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Drake Uiversity Spouse Salary N/A N/A"
+      }
+     ],
+     "positions": [
+      {
+       "org": "State Senator State of Iowa Ordained Minister ELCA",
+       "text": "State Senator State of Iowa Ordained Minister ELCA"
+      },
+      {
+       "position": "Board Member",
+       "org": "Des Moines Children's Museum Campaign Board",
+       "text": "Board Member Des Moines Children's Museum Campaign Board"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-09-01",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10070385.pdf",
+     "income": [
+      {
+       "source": "State of Iowa",
+       "type": "Salary",
+       "amounts": [
+        32697.9,
+        38928.53
+       ],
+       "text": "State of Iowa Salary & Per Diem $32,697.90 $38,928.53"
+      },
+      {
+       "source": "Des Moines Area Religious Council",
+       "type": "Salary",
+       "amounts": [],
+       "text": "Des Moines Area Religious Council Salary & Clergy Housing"
+      },
+      {
+       "type": "Stipend",
+       "amounts": [],
+       "text": "Stipend"
+      },
+      {
+       "amounts": [
+        6833.46,
+        38360.51
+       ],
+       "text": "$6,833.46 $38,360.51"
+      },
+      {
+       "source": "Drake University",
+       "type": "Spouse Salary",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Drake University Spouse Salary N/A N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Board Member",
+       "org": "Des Moines Children's Museum Campaign Board State Senator State of Iowa Ordained Minister ELCA",
+       "text": "Board Member Des Moines Children's Museum Campaign Board State Senator State of Iowa Ordained Minister ELCA"
+      }
+     ],
+     "agreements": [],
      "gifts": [],
      "travel": []
     }
@@ -3608,6 +4256,47 @@
     }
    ]
   },
+  "poindexter": {
+   "name": "Brian Poindexter",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-03-30",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10073334.pdf",
+     "income": [
+      {
+       "source": "Iron Workers Local 17 JATC",
+       "type": "Salary",
+       "amounts": [
+        21000,
+        95000
+       ],
+       "text": "Iron Workers Local 17 JATC Salary $21,000.00 $95,000.00"
+      },
+      {
+       "source": "City Of Brook Park",
+       "type": "Salary",
+       "amounts": [
+        3831,
+        15350
+       ],
+       "text": "City Of Brook Park Salary $3,831.00 $15,350.00"
+      }
+     ],
+     "positions": [
+      {
+       "org": "Apprenticeship Instructor Iron Workers Local 17 JATC Councilor At Large Brook Park City Council",
+       "text": "Apprenticeship Instructor Iron Workers Local 17 JATC Councilor At Large Brook Park City Council"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
   "brooks": {
    "name": "Bob Brooks",
    "chamber": "H",
@@ -3890,6 +4579,101 @@
        "text": "January 2019 Self, Commonwealth of Pennsylvania PA State Employees Defined Contribution Plan"
       }
      ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "pulido": {
+   "name": "Bobby Pulido",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-06-04",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10075555.pdf",
+     "income": [
+      {
+       "source": "Bobby Pulido Inc.",
+       "type": "Salary",
+       "amounts": [
+        15000,
+        144683.94
+       ],
+       "text": "Bobby Pulido Inc. Salary $15,000.00 $144,683.94"
+      },
+      {
+       "source": "Bobby Pulido Inc. Music artist revenue",
+       "amounts": [
+        null,
+        null
+       ],
+       "text": "Bobby Pulido Inc. Music artist revenue N/A N/A"
+      }
+     ],
+     "positions": [
+      {
+       "position": "President",
+       "org": "Bobby Pulido Inc.",
+       "text": "President Bobby Pulido Inc."
+      },
+      {
+       "position": "Member",
+       "org": "El Cazzador Outfitting LLC",
+       "text": "Member El Cazzador Outfitting LLC"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-06-04",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10079843.pdf",
+     "income": [
+      {
+       "source": "Bobby Pulido Inc.",
+       "type": "Salary",
+       "amounts": [
+        144683.94,
+        34554.25
+       ],
+       "text": "Bobby Pulido Inc. Salary $144,683.94 $34,554.25"
+      },
+      {
+       "source": "Bobby Pulido Inc. Music artist revenue",
+       "amounts": [
+        null,
+        209250
+       ],
+       "text": "Bobby Pulido Inc. Music artist revenue N/A $209,250.00"
+      },
+      {
+       "source": "Merrill Lynch 401(k) distribution",
+       "amounts": [
+        null,
+        10455.48
+       ],
+       "text": "Merrill Lynch 401(k) distribution N/A $10,455.48",
+       "comment": "A cco u nt no l o ng er h el d"
+      }
+     ],
+     "positions": [
+      {
+       "position": "President",
+       "org": "Bobby Pulido Inc.",
+       "text": "President Bobby Pulido Inc."
+      },
+      {
+       "position": "Member",
+       "org": "El Cazzador Outfitting LLC",
+       "text": "Member El Cazzador Outfitting LLC"
+      }
+     ],
+     "agreements": [],
      "gifts": [],
      "travel": []
     }
