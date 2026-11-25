@@ -1,19 +1,25 @@
 // The emoji for each issue category (the alignment questions' categories, public/questions.json), shown at the start of
 // a sentence about that issue: each question, each promise and each reviewed check (approved 2026-11-13). Shown only.
 export const ISSUE_ICON={technology:'💻','national-security':'🛡️',social:'👥',governance:'🏛️',environmental:'🌱',
-  economic:'📈',domestic:'🇺🇸',healthcare:'🏥',infrastructure:'🏗️',education:'🎓',electoral:'🗳️',criminal:'⚖️',
+  economic:'📈',guns:'🔫',healthcare:'🏥',infrastructure:'🏗️',education:'🎓',electoral:'🗳️',criminal:'⚖️',
   foreign:'🌎',immigration:'🛂',transportation:'🚆',science:'🔬',housing:'🏠'};
 
 // A reviewed check has a free-text topic ("Medical debt relief"), not a category, so its category comes from the first
-// rule its topic matches. The rules follow where the alignment questions put the same subject: guns, Social Security and
-// congressional stock trading are Domestic Policy, right to repair is Technology, property taxes and homelessness are
-// Housing. A topic no rule matches gets no emoji.
+// rule its topic matches. The rules follow where the alignment questions put the same subject: guns are Gun Policy,
+// Social Security is Economic, congressional stock trading is Governance, right to repair is Technology, property taxes
+// and homelessness are Housing. A topic no rule matches gets no emoji.
 const TOPIC_RULES=[
   ['immigration',/immigra|border|deport|laken riley|driver'?s licen/i],
   ['healthcare',/medicaid|medicare|health|\baca\b|medical|prescription|\bhhs\b|kennedy jr/i],
   ['education',/school|educat|universit|classroom|k-12|voucher/i],
   ['electoral',/election|\bvot(e|er|ing)\b|redistrict|quorum|campaign|\bpacs?\b|citizens united|dark money|debates|outspent|withdraw|running for|party affiliation|party independence|candidacy|political outsider|fundrais/i],
-  ['domestic',/stock|social security|\bguns?\b|firearm|open carry|term limit|supreme court|flag|cannabis|marijuana|decriminal/i],
+  // (Domestic Policy was split up on Nov. 25, 2026: its subjects went where the questions now file them, and these come
+  // early, so "stock trading" isn't taken for trade, nor a gun bill for a crime one)
+  ['guns',/\bguns?\b|firearm|open carry|assault weapon/i],
+  ['governance',/stock|term limit|supreme court/i],
+  ['economic',/social security/i],
+  ['social',/flag/i],
+  ['criminal',/cannabis|marijuana|decriminal/i],
   ['criminal',/police|policing|criminal|death penalty|crime|prosecut|fraud case|securities-fraud|methamphetamine|murdered|back the blue|justice department/i],
   ['foreign',/iran|ukraine|israel|gaza|china|chinese|foreign|nato/i],
   ['national-security',/defense|military|surveillance|\bnsa\b|\bwar\b/i],
@@ -27,7 +33,7 @@ const TOPIC_RULES=[
   ['governance',/ethic|scandal|gift|gaming board|shutdown|impeach|disclosure|leadership|infighting|bipartisan|working across|power of the purse|fraud|congress/i],
   ['social',/abortion|dobbs|lgbtq|transgender|church|religio|indigenous/i]];
 // The reform pledges' categories, for their emoji on the report card.
-export const PLEDGE_CATEGORY={lobbying:'governance','stock-trading':'domestic','citizens-united':'electoral'};
+export const PLEDGE_CATEGORY={lobbying:'governance','stock-trading':'governance','citizens-united':'electoral'};
 export function topicCategory(topic){
   const t=String(topic||'');
   for(const [cat,re] of TOPIC_RULES)if(re.test(t))return cat;

@@ -3280,7 +3280,7 @@ const ALNOTE=`<div class="note small" style="margin:10px 0">${points([['What thi
 // ---------- My alignment: a five-point quiz over the issue list. Each answer is saved as a side and an importance:
 // strongly agree/disagree = importance 3, agree/disagree = 2, neutral = answered but not counted. ----------
 // The categories (public/questions.json), with a color from the earlier groups and an icon.
-const AL_CLASS={economic:'econ',healthcare:'econ',housing:'econ',infrastructure:'econ',transportation:'econ',social:'rights',criminal:'rights',education:'rights',domestic:'rights',immigration:'imm',electoral:'imm',foreign:'foreign','national-security':'foreign',environmental:'env',science:'env',technology:'gov',governance:'gov'};
+const AL_CLASS={economic:'econ',healthcare:'econ',housing:'econ',infrastructure:'econ',transportation:'econ',social:'rights',criminal:'rights',education:'rights',guns:'rights',immigration:'imm',electoral:'imm',foreign:'foreign','national-security':'foreign',environmental:'env',science:'env',technology:'gov',governance:'gov'};
 const AL_ICON=ISSUE_ICON;
 const AL_GROUPS=QUESTIONS.categories.map(c=>[c.id,c.name,AL_ICON[c.id]||'•']);
 const AL_GBY=Object.fromEntries(AL_GROUPS.map(g=>[g[0],g]));
