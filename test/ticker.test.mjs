@@ -165,7 +165,8 @@ test('the cards: races still counting first, then each kind in turn, at most 16;
   const live={items:[{kind:'filing',subject:'begich',filed:'2026-11-09',year:2025,worth:[1100000,3600000],was:[900000,2400000],wasYear:2024},{kind:'trade',subject:'ossoff',disclosed:'2026-11-12',type:'sale',ticker:'AAPL'}]};
   const all=allItems({research,log:log.entries,ratings:null,people,live,news},{now:NOV14}),cards=cardItems(all);
   assert.equal(cards[0].kind,'warn','the race still counting first');assert.ok(cards.length<=TICKER.cards);
-  assert.ok(!cards.some(x=>['trade','site','new'].includes(x.kind)),'trades stay on the strip; site updates on the page');
+  assert.ok(!cards.some(x=>['trade','new'].includes(x.kind)),'trades stay on the strip; the ratings read on the page');
+  assert.ok(cards.some(x=>x.kind==='site'),'site updates are cards too (since Nov. 25, 2026)');
   const kinds=cards.slice(1,8).map(x=>x.kind==='call'?'race':x.kind);assert.equal(new Set(kinds).size,kinds.length,'each kind in turn');
   const portraits={booker:{file:'portraits/booker.webp'}};
   const html=k=>cardHTML(cards.find(x=>x.kind===k),{people,portraits});
@@ -266,4 +267,18 @@ test('Eulerpool\'s daily list adds the trades it matched to members; one their o
   const own=tickerRecent('trades-house','begich',{rows:[{id:'h1',traded:'2026-10-20',disclosed:'2026-11-05',type:'purchase',ticker:'NVDA'}]},{now});
   const merged=tickerMerge([own,eu],{now});
   assert.deepEqual(merged.map(x=>[x.subject,x.ticker,x.src||'own']),[['begich','AAPL','eulerpool'],['begich','NVDA','own'],['ossoff','NVDA','eulerpool']],'the copy of their own report\'s trade is dropped');
+});
+
+test('Conflicts of Interest scores and README site updates from news.json become cards',()=>{
+  const now=Date.parse('2026-11-25T18:00:00Z'),people=new Map([['hickenlooper',{id:'hickenlooper',name:'John W. Hickenlooper',short:'Hickenlooper',party:'D',state:'CO',chamber:'S'}],['barr',{id:'barr',name:'Andy Barr',party:'R',state:'KY'}]]);
+  const news={items:[{key:'conflict:hickenlooper:76',kind:'conflict',id:'hickenlooper',from:null,to:76,why:'2 interested organizations: Liberty Media, Chipotle Mexican Grill',date:'2026-11-25',seen:'2026-11-25T12:00:00Z'},
+    {key:'conflict:barr:100',kind:'conflict',id:'barr',from:null,to:100,why:'nothing on their report',date:'2026-11-25',seen:'2026-11-25T12:00:00Z'},
+    {key:'site:2026-11-19:x',kind:'site',date:'2026-11-19',headline:'Alaska is called',seen:'2026-11-25T12:00:00Z'}]};
+  const items=newsItems(news,{now,people});
+  const c=items.find(x=>x.kind==='conflict'&&x.id==='hickenlooper');
+  assert.equal(c.href,'#hickenlooper-aboveboard');assert.equal(c.order,1,'a score with interested organizations before a clean 100');
+  assert.match(cardHTML(c,{people}),/Conflicts of Interest · Nov 25.*Newly scored.*76 <small>of 100<\/small>.*Liberty Media/s);
+  const s=items.find(x=>x.kind==='site');assert.equal(s.at,null,'a site update goes by its own date');
+  assert.match(cardHTML(s,{people}),/Site update · Nov 19.*Alaska is called/s);
+  assert.ok(cardItems(items).some(x=>x.kind==='site')&&cardItems(items).some(x=>x.kind==='conflict'));
 });

@@ -144,14 +144,16 @@ export function itemAmount(kind,x){
 }
 // One member's record for public/conflicts.json, from their items and the reviewed decisions (keyed by organization).
 // Null when an organization on the report has no decision yet: a half-reviewed report isn't scored.
-export function buildRecord(m,decisions,reviewedAt,person){
+// The name an organization goes by in the news: the name its lobbying filings matched, without "Inc." and the like.
+export const shortName=(org,lookup)=>String(lookup?.lobbying?.as||org).replace(/,?\s+(Inc|LLC|LLP|Corp|Corporation|Co|Ltd)\.?$/i,'').trim();
+export function buildRecord(m,decisions,reviewedAt,person,lookups={}){
   const rec={report:m.report,reviewed:{at:reviewedAt,src:{t:'Matches reviewed against lda.gov lobbying filings and USAspending.gov contracts',u:'https://lda.gov/'}},income:[],positions:[],agreements:[],gifts:[],travel:[]};
   const missing=[];
   for(const it of m.items){
     const org=orgOf(it.x),skip=notAnInterest(org,person||m),d=decisions?.[org];
     if(!skip&&!d)missing.push(org);
     const interested=!skip&&d?.interested===true,why=skip||d?.why||null;
-    const src={t:`${it.year} report`,u:m.report.url},base={year:it.year,interested,why,src};
+    const src={t:`${it.year} report`,u:m.report.url},base={year:it.year,interested,why,src,...(interested?{name:shortName(org,lookups[org])}:{})};
     if(it.kind==='income')rec.income.push({source:org,type:it.x.type||null,amount:itemAmount('income',it.x),paidTo:it.x.paidTo||null,...base});
     else if(it.kind==='positions')rec.positions.push({position:it.x.position||null,org,...base});
     else if(it.kind==='agreements')rec.agreements.push({kind:String(it.x.terms||'').split(' · ')[1]||'agreement',org,date:it.x.date||null,...base});
@@ -188,7 +190,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     const reviews=read(REVIEWS),out={about:'Each sitting member\'s outside income, board seats, agreements, gifts and paid travel from their latest annual reports, with the reviewed matches of the organizations on them: an organization is interested when it lobbies on an issue one of their committees handles, works in an industry their committees oversee, or holds contracts from an agency their committees oversee. Written by npm run conflicts:build from data/conflict-reviews.json.',built:new Date().toISOString().slice(0,10),people:{}};
     for(const m of members){
       const r=reviews.people?.[m.id];if(!r){console.log(`  ${m.name}: not reviewed yet`);continue;}
-      const rec=buildRecord(m,r.orgs,r.reviewedAt||reviews.reviewedAt,nameOf[m.id]||m);
+      const rec=buildRecord(m,r.orgs,r.reviewedAt||reviews.reviewedAt,nameOf[m.id]||m,(fs.existsSync(path.join(root,LOOKUPS))?read(LOOKUPS):{}).orgs||{});
       if(rec.missing){console.log(`  ${m.name}: no decision yet for ${rec.missing.join('; ')}`);continue;}
       out.people[m.id]=rec;
       const n=['income','positions','agreements','gifts','travel'].reduce((k,x)=>k+rec[x].filter(i=>i.interested).length,0);
