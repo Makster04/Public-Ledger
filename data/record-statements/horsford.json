@@ -1,0 +1,212 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "horsford",
+ "name": "Steven Horsford",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 16,
+  "sentences": 56
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEMANDING LEADERSHIP WORTHY OF VETERANS' SACRIFICE",
+   "title": "DEMANDING LEADERSHIP WORTHY OF VETERANS' SACRIFICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6150-6.htm",
+   "sentences": [
+    "No Secretary of Defense is above the law.",
+    "They deserve action, and I intend to deliver."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4151-3.htm",
+   "sentences": [
+    "Across the United States and in my home State of Nevada, the dream of homeownership has been slipping further out of reach for working families.",
+    "Thirty percent of the residents in Nevada have been impacted by institutional investors.",
+    "This bill creates greater accountability in the housing market, increases housing supply, and places new restrictions on large, institutional investors from buying up single-family homes.",
+    "I am proud that we are putting homeowners over hedge funds, Mr. Speaker, and I urge my colleagues to vote ``yes'' on this bill.",
+    "Mr. Speaker, I rise today in strong support of the 21st Century ROAD to Housing Act, and I am casting my vote for people, not for corporations."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4029.htm",
+   "sentences": [
+    "Mr. Speaker, I rise as a son of the labor movement and co-chair of the Congressional Labor Caucus in strong support of the Faster Labor Contracts Act.",
+    "When workers come together to form a union, they are not asking for a handout.",
+    "Collective bargaining is a fundamental right, guaranteed under Federal law, and it is one of the most powerful tools working people have.",
+    "Mr. Speaker, winning the union election is supposed to be the end of the fight.",
+    "The Faster Labor Contracts Act, introduced by my friend and fellow co-chair of the Labor Caucus, Representative Norcross, closes that loophole.",
+    "Mr. Speaker, I urge my colleagues to support the Faster Labor Contracts Act and to bring this PRO Act to the floor for its full approval."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "Now they are calling it tax cuts for working families.",
+    "Instead of voting on a self-glorifying resolution, let's bring forward real solutions, bills that actually deliver for working families and fix what this bill gets wrong."
+   ]
+  },
+  {
+   "date": "2026-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4626, DON'T MESS WITH MY HOME APPLIANCES ACT, AND PROVIDING FOR CONSIDERATION OF H.R. 4758, HOMEOWNER ENERGY FREEDOM ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4626, DON'T MESS WITH MY HOME APPLIANCES ACT, AND PROVIDING FOR CONSIDERATION OF H.R. 4758, HOMEOWNER ENERGY FREEDOM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-24/html/CREC-2026-02-24-pt1-PgH2269-4.htm",
+   "sentences": [
+    "Mr. Speaker, for more than a year now, working Members and families have been forced to pay the price for Donald Trump's illegal tariffs.",
+    "Blanket tariffs are blanket taxes.",
+    "What did Donald Trump tax when he imposed these sweeping, unlawful tariffs?",
+    "That is a rent payment, childcare, a car repair, and it is groceries for families that are already struggling to get by.",
+    "Now the Supreme Court has spoken.",
+    "The emergency authority used to justify these tariffs--taxes that Americans have paid--did not authorize this mess.",
+    "It requires automatic refunds of all tariff payments from the last year within 90 days--no application, no protest process, no lawyer required.",
+    "Working families don't need a sales pitch; they need relief.",
+    "Let us stand with the working families.",
+    "Mr. Speaker, the President has disregard and disrespect for the American people when the Supreme Court told him that his actions were illegal, they were unconstitutional, and it is time to give the American people their money back, to give them relief--not disrespect, not disregard, but their money back.",
+    "Mr. Speaker, I urge my colleagues to defeat the previous question and to support the RELIEF Act.",
+    "Mr. Speaker, I urge my colleagues to defeat the previous question and to support my bill, the RELIEF Act."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "title": "RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+   "sentences": [
+    "Mr. Speaker, President Trump loves tariffs.",
+    "Just today, the nonpartisan Congressional Budget Office confirmed what families already feel--American consumers are paying 95 percent of these tariffs.",
+    "These blanket tariffs on Canada are a slap in the face to one of our closest trading allies.",
+    "The families sitting around their kitchen tables tonight deserve a government that will lower their costs and that will end these Trump tariff taxes.",
+    "Mr. Speaker, I urge this body to vote ``yes'' on this resolution."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BUILDING A BELOVED COMMUNITY",
+   "title": "BUILDING A BELOVED COMMUNITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH942-7.htm",
+   "sentences": [
+    "Right now, working families in my home State of Nevada and all across this country are feeling the consequences of those choices: Prices are rising."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TIPPED EMPLOYEE PROTECTION ACT",
+   "title": "TIPPED EMPLOYEE PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH685.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to stand with working people, stand with tipped workers, and vote ``no'' on H.R. 2312."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "It is life and death for the 15 million Americans who are at risk of losing healthcare, while Republicans found the time and the money to give tax cuts to billionaires but no time to give relief to middle-class families."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, after 15 years of talk, House Republicans have finally brought their healthcare bill to the floor, yet it fails working families.",
+    "Republicans found time to lock in tax breaks for big corporations and billionaires but not the urgency or respect to help Americans afford their healthcare.",
+    "House Democrats are 100 percent united, and now four Republicans, after months of delay, have finally chosen to join us to extend the advanced premium tax credits."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "Mr. Speaker, despite repeatedly claiming to be the most pro-worker President and administration in history, since taking office, President Trump took action earlier this year that stripped collective bargaining rights from nearly 1 million Federal employees.",
+    "These workers are the backbone of our Nation, from nurses caring for veterans, law enforcement officers keeping our communities safe, teachers educating the next generation, and countless others who ensure America runs every day.",
+    "That is why I was proud to cosponsor the Protect America's Workforce Act alongside my Congressional Labor Caucus co-chairs and our over 120 members to counter what is arguably the largest act of union busting in American history.",
+    "Let's stand with Federal workers in restoring their union rights against these unprecedented attacks on their livelihoods.",
+    "I urge every Member of this Chamber to join the Congressional Labor Caucus in supporting this crucial legislation."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "In the dead of the night, congressional Republicans are passing this partisan, big, ugly bill for billionaires.",
+    "Are they here to serve billionaires or the constituents who elected them to bring down costs and to make life more affordable?",
+    "Their constituents, like mine, rely on Medicaid and public education, veterans' programs, SNAP, childcare, Head Start, and Medicare.",
+    "The tax cuts for billionaires and big corporations are permanent.",
+    "The GOP budget cuts from the masses to give to the few, to billionaires who barely pay taxes to begin with.",
+    "Mr. Speaker, I urge my colleagues to stand with their constituents and against the billionaires.",
+    "I will continue to fight for them to make their lives better and not worse."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APEX AREA TECHNICAL CORRECTIONS ACT",
+   "title": "APEX AREA TECHNICAL CORRECTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1980.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, H.R. 618."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BLACK HISTORY MONTH",
+   "title": "BLACK HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgE157-2.htm",
+   "sentences": [
+    "People like Hattie Canty--who led the Culinary Workers Union Local 226 to fight for better wages and job security, including the longest strike in American history against unfair labor conditions--six and a half years."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Madam Chair, Nevada Democrats and Republicans worked together to implement the Affordable Care Act, including the expansion of Medicaid.",
+    "Our State would be the third hardest hit, including in rural communities.",
+    "That is why I am calling on every Member of this body to vote ``no.'' I will, in defense of my constituents."
+   ]
+  }
+ ]
+}

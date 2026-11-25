@@ -1,0 +1,59 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "hamadeh",
+ "name": "Abraham J. Hamadeh",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 11
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6105.htm",
+   "sentences": [
+    "Each year, Congress passes the Veterans' Compensation Cost-of-Living Adjustment Act.",
+    "This bill would help them meet that need by increasing certain VA compensation at the same rate as the annual Social Security cost-of- living adjustment.",
+    "Mr. Speaker, I rise today in support of H.R. 8552."
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KAYLEIGH'S LAW ACT OF 2026",
+   "title": "KAYLEIGH'S LAW ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-31/html/CREC-2026-08-31-pt1-PgH5270.htm",
+   "sentences": [
+    "I urge my colleagues to vote ``yes'' on H.R. 8481."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OFFICER ZANE T. COOLIDGE POST OFFICE",
+   "title": "OFFICER ZANE T. COOLIDGE POST OFFICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2849.htm",
+   "sentences": [
+    "Madam Speaker, I rise today to honor the life and heroic sacrifice of Phoenix Police Officer Zane T. Coolidge and to urge support for my legislation, H.R. 3393, which designates the United States Postal Service facility located in Phoenix, Arizona, as the Officer Zane T. Coolidge Post Office.",
+    "Madam Speaker, I urge my colleagues to support H.R. 3393."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTH PROFESSIONALS SCHOLARSHIP PROGRAM IMPROVEMENT ACT OF 2025",
+   "title": "HEALTH PROFESSIONALS SCHOLARSHIP PROGRAM IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4285.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 3767, the Health Professionals Scholarship Program Improvement Act of 2025.",
+    "That is why I introduced this bipartisan legislation with my colleague, Congresswoman Nikki Budzinski, because we saw a program that required action.",
+    "We are going to drain the VA swamp one regulation at a time.",
+    "We cannot allow failure at home.",
+    "Mr. Speaker, I urge all of my colleagues to support the HPSP Improvement Act."
+   ]
+  }
+ ]
+}

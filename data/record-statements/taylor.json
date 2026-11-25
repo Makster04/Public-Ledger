@@ -1,0 +1,246 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "taylor",
+ "name": "David J. Taylor",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 19,
+  "sentences": 63
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 9497, the Water Resources Development Act of 2026, otherwise known as WRDA.",
+    "I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE CARE OF AMERICA'S VETERANS ACT",
+   "title": "TAKE CARE OF AMERICA'S VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4548-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Take Care of America's Veterans Act.",
+    "Mr. Speaker, I urge all my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ULYSSES S. GRANT POST OFFICE BUILDING",
+   "title": "ULYSSES S. GRANT POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4387.htm",
+   "sentences": [
+    "His accomplishments in the Civil War are too numerous to list, but after winning the battles at Fort Donelson, Shiloh, Vicksburg, Chattanooga, and Petersburg, he eventually accepted Robert E. Lee's surrender at Appomattox Court House, ending the Civil War and keeping the Union intact.",
+    "Throughout his two terms as President, Grant worked on civil rights issues, including the establishment of the Department of Justice, the adoption of the 15th Amendment, and other Reconstruction efforts.",
+    "Mr. Speaker, I rise today in support of my bill to rename the Georgetown, Ohio, post office the Ulysses S. Grant Post Office Building.",
+    "Mr. Speaker, I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8646, AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027; PROVIDING FOR C",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8646, AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027; PROVIDING FOR CONSIDERATION OF H.R. 7726, NO...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3783-3.htm",
+   "sentences": [
+    "This bill also cracks down on foreign ownership of American farmland by making the Secretary of Agriculture a member of the Committee on Foreign Investment in the United States and transferring responsibility of tracking foreign land ownership from the Farm Service Agency to the USDA Office of Homeland Security.",
+    "Republicans are actively tracking, monitoring, and taking action against adversaries buying farmland.",
+    "Mr. Speaker, I am proud to stand with my Republican colleagues and urge passage of this bill to protect critical Federal resources for taxpayers who depend on them, ensure our food supply chain and farmland are able to keep food on our families' tables for generations to come, and make sure every rural family can connect to the modern economy.",
+    "Mr. Speaker, I rise today in support of the rule, which includes H.R. 8646, the Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act of 2027."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMART SPACE ACT OF 2026",
+   "title": "SMART SPACE ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2650.htm",
+   "sentences": [
+    "We need to identify new funding solutions to these problems that don't rely on increasing taxpayer dollars for the space consolidation efforts."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTHORIZING THE USE OF THE CAPITOL GROUNDS FOR THE NATIONAL PEACE OFFICERS' MEMORIAL SERVICE AND THE NATIONAL HONOR GUARD AND PIPE BAND EXHIBITION",
+   "title": "AUTHORIZING THE USE OF THE CAPITOL GROUNDS FOR THE NATIONAL PEACE OFFICERS' MEMORIAL SERVICE AND THE NATIONAL HONOR GUARD AND PIPE BAND EXHIBITION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2651.htm",
+   "sentences": [
+    "I am proud to continue the long tradition of supporting the Fraternal Order of Police in honoring the law enforcement officers who died in the line of duty in 2025.",
+    "Law enforcement officers across the country put their lives on the line every day to help keep us safe.",
+    "Last year, I paid my respects to Deputy Larry Ray Henderson from Union Township, Ohio, who tragically lost his life in the line of duty.",
+    "We all owe a debt of gratitude to the police officers who continue to serve despite the risk they face every day."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WILDFIRE AERIAL RESPONSE SAFETY ACT",
+   "title": "WILDFIRE AERIAL RESPONSE SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2654.htm",
+   "sentences": [
+    "We owe all aerial firefighters a great debt of gratitude.",
+    "Mr. Speaker, I am proud to support this bipartisan, commonsense legislation that requires the Federal Aviation Administration, in coordination with its Federal partners, to conduct a study and produce a report on the effects of unmanned aircraft system incursions on wildfire suppression efforts."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECREATIONAL DRONE EMPOWERMENT ACT",
+   "title": "RECREATIONAL DRONE EMPOWERMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2659.htm",
+   "sentences": [
+    "Madam Speaker, I urge support of this legislation and reserve the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AIRMEN CERTIFICATE ACCESSIBILITY ACT",
+   "title": "AIRMEN CERTIFICATE ACCESSIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2660.htm",
+   "sentences": [
+    "Madam Speaker, I urge support of this legislation and reserve the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPORTING FRAUDSTERS ACT OF 2026",
+   "title": "DEPORTING FRAUDSTERS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2568.htm",
+   "sentences": [
+    "The story that inspired this bill originally came from California where five foreign nationals were apprehended with over 160 fraudulent SNAP cards on them.",
+    "Do they support the American people, or do they support illegal immigrants who steal American tax dollars?",
+    "It is something that is, honestly, apparently commonly occurring at the border as people come in.",
+    "Mr. Speaker, I rise today in support of my bill, the Deporting Fraudsters Act.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-03-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 556, PROTECTING ACCESS FOR HUNTERS AND ANGLERS ACT; PROVIDING FOR CONSIDERATION OF H.R. 1958, DEPORTING FRAUDSTERS ACT OF 2026; ",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 556, PROTECTING ACCESS FOR HUNTERS AND ANGLERS ACT; PROVIDING FOR CONSIDERATION OF H.R. 1958, DEPORTING FRAUDSTERS ACT OF 2026; PROVIDING FOR CONSIDERATION OF H...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-17/html/CREC-2026-03-17-pt1-PgH2538-4.htm",
+   "sentences": [
+    "A few weeks ago during the State of the Union Address, Democrats confirmed to the American people who they really are and whom they really work for.",
+    "When President Trump asked Congress to stand and reaffirm the fundamental principle that the first duty of the American Government is to protect American citizens and not illegal aliens, every single Democrat remained seated, every single one.",
+    "Now, Madam Speaker, with this bill, we have the chance to see who will stand with criminal illegal aliens and against the American people.",
+    "This seeks to fix the numerous examples of criminal aliens stealing Social Security benefits or cloning SNAP cards and not facing any immigration consequences.",
+    "To the elderly couple who has paid into Social Security their entire life, or to the working mother who is just trying to get by for her children but needs some assistance, this should be an eye-opening vote.",
+    "Madam Speaker, I rise today in support of this rule which provides consideration of my bill, the Deporting Fraudsters Act.",
+    "Madam Speaker, I urge all my colleagues to vote ``yes'' to support this bill."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4593, SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT; PROVIDING FOR CONSIDERATION OF H.R. 5184, AFFORDABLE H",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4593, SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT; PROVIDING FOR CONSIDERATION OF H.R. 5184, AFFORDABLE HOUSING OVER MANDATING EFFICIENCY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH112-7.htm",
+   "sentences": [
+    "In my district, several water and police projects will be funded, which will benefit some of the poorest and most rural areas in this country.",
+    "I urge Congress to pass these commonsense bills to lower the cost of living not only for Buckeye families but for families across America."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "I rise today in support of H.R. 3898, the PERMIT Act, which would cut red tape within the Clean Water Act's permitting processes.",
+    "Among these provisions, the PERMIT Act makes commonsense reforms to the Clean Water Act permitting process that will continue to protect our Nation's water resources.",
+    "In particular, I am proud that my bill, the Confidence in Clean Water Permits Act, is included in the underlying legislation.",
+    "I encourage my colleagues to vote in favor of the PERMIT Act to provide regulatory relief and certainty under the Clean Water Act for businesses in Ohio and across the Nation."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES TECHNICAL ASSISTANCE REVIEW ACT",
+   "title": "WATER RESOURCES TECHNICAL ASSISTANCE REVIEW ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4277.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3427) to require the Comptroller General of the United States to review all clean water-related technical assistance authorities of the Environmental Protection Agency, and for other purposes, as amended.",
+    "I thank my friend and colleague, Representative Figures, for joining me in this effort, and I urge my colleagues to vote in favor of this legislation to help communities across the United States receive the assistance they need to obtain water infrastructure."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Mr. Chair, I rise today in support of my amendment, which would require the Appalachian Regional Commission to conduct the study on the inclusion of low Earth orbit satellites to be used for economic development.",
+    "As a co-chair of the Rural Broadband Caucus, I am committed to connecting folks as quickly as possible whether that be through fiber, wireless service, or satellites."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMISES MADE, PROMISES KEPT",
+   "title": "PROMISES MADE, PROMISES KEPT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3745-7.htm",
+   "sentences": [
+    "For Will Minshall, a young farmer in Pickaway County, Ohio, whose family farm is hitting 200 years in operation next year, the increased death tax exemption means it will be easier for his family to pass the farm on to him and future generations."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "With this bill, President Trump and Republicans in Congress are defending Medicaid, protecting SNAP, and eliminating fraud so taxpayers' dollars are spent on Americans in need, not stolen by illegal immigrants or other fraudsters.",
+    "Mr. Speaker, I rise today in strong support of the big, beautiful bill which will cut rampant waste, fraud, and abuse in critical government programs so they are protected for vulnerable Americans who need them most for generations to come."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INCREASING MENTAL HEALTH SERVICES",
+   "title": "INCREASING MENTAL HEALTH SERVICES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2152-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to shine light on a critical subject that impacts each one of us, as well as the ones we love: mental health.",
+    "Established by Congress in 1949, May was designated as Mental Health Awareness Month to increase awareness of the importance of mental health and wellness.",
+    "Mental health is about more than just illness.",
+    "Mental Health Awareness Month is part of that change and a reminder to prioritize rest, connection, and the things that contribute to our overall wellness.",
+    "The Ohio Department of Mental Health and Addiction provides resources and readily available services with their Ohio CareLine available 24 hours a day and 7 days a week to offer emotional support.",
+    "By simply dialing 988, anyone in our Nation can access the national mental health hotline, which offers free and confidential support from trained counselors around the clock.",
+    "I thank our local mental health providers, support workers, and first responders for the critical work they do to intervene in times of need.",
+    "I recognize our local police officers, who are often the first ones on the scene of an emergency and the first wave of assistance for someone experiencing a mental health emergency.",
+    "Being isolated from the resources that are available in more urban areas, farmers and farming families are facing a significant mental health challenge.",
+    "With the devastatingly high rate of mental health challenges and substance abuse issues across our country, where a person lives shouldn't dictate their ability to access critical healthcare services.",
+    "Tragically, Ohio's Second Congressional District has the highest rate of unintentional drug overdoses in our entire State, which is often linked to mental health challenges.",
+    "That is why I was proud to introduce the Rural Wellness Act in March of this year, which will reauthorize the prioritization of grants for telemedicine projects addressing behavioral and mental health, including substance abuse.",
+    "It will make mental health care services more accessible to those who need them.",
+    "All in all, expanded broadband access would lead to significant mental health benefits in our rural communities.",
+    "As we recognize Mental Health Awareness Month, may each of us take a moment to prioritize wellness and reach out to those around us who might need a helping hand.",
+    "I thank each friend, family member, teacher, community leader, or public servant who has lent their support to someone experiencing mental health challenges for their service."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACTS OF SERVICE BY DIANA LAWRENCE AND TROOP BOX MINISTRY",
+   "title": "ACTS OF SERVICE BY DIANA LAWRENCE AND TROOP BOX MINISTRY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2079-4.htm",
+   "sentences": [
+    "Her operation expanded to two sheds in her backyard, where volunteers collected the names and addresses of troops, assembled donated items in the care packages, and sent them on their way overseas."
+   ]
+  }
+ ]
+}

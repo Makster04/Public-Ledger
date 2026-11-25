@@ -1,0 +1,163 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "soto",
+ "name": "Darren Soto",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 11,
+  "sentences": 52
+ },
+ "statements": [
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "I thought it was a pretty good name, the Sunshine Protection Act, back in the day.",
+    "Up until that point, every idea on trying to stop the clock change was going to standard time.",
+    "It made far more sense to keep daylight saving time, which is the 8 months out of the year that we have light in the afternoons and evenings.",
+    "It is finally time to bring sunshine across the Nation, and I urge my colleagues to support this amazing Sunshine Protection Act."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE FOR PULSE NIGHTCLUB VICTIMS",
+   "title": "MOMENT OF SILENCE FOR PULSE NIGHTCLUB VICTIMS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4037-3.htm",
+   "sentences": [
+    "It happened at the Pulse nightclub, an LGBTQ+ nightclub, during Latin night."
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN SPACE LEADERSHIP",
+   "title": "AMERICAN SPACE LEADERSHIP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-15/html/CREC-2026-05-15-pt1-PgH3545-6.htm",
+   "sentences": [
+    "Mr. Speaker, it is America's 250th anniversary, and we are proud in central Florida to have this historic accomplishment of Artemis II's successful Moon mission.",
+    "As the only Member of Congress to witness both Artemis launches firsthand, I couldn't be more proud of them.",
+    "Congress needs to be committed to us going back to the Moon to land and to go to Mars and beyond."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition today to H.R. 498, the so-called Do No Harm in Medicaid Act, and I urge my colleagues to support my motion to recommit.",
+    "H.R. 498 is an unnecessary ban on Medicaid funding.",
+    "Instead, we see what Republicans are doing: a $1-trillion cut to Medicaid in the big, ugly law that is going to mean a 15 percent cut next year in Florida that they are going to have to work on and trying to insert themselves into deeply personal medical decisions.",
+    "They want us to vote on extending the enhanced premium tax credits for the ACA to stop a huge healthcare hike for 20 million Americans.",
+    "They don't want us to be delving into these culture war issues when we have real work to do to fund Medicaid and to extend the ACA tax credits.",
+    "My district has the second most ObamaCare of any district.",
+    "Mr. Speaker, all America wants for Christmas is a 3-year ACA tax credit extension, and I am hoping we can get it together.",
+    "My amendment would include a clean 3-year extension of the enhanced premium tax credits, just in time for Christmas."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgE686-5.htm",
+   "sentences": [
+    "Semiconductors support nearly all Department of Defense (DoD) activities.",
+    "Ensuring secure access to leading-edge semiconductors, however, is a challenge.",
+    "The pandemic exposed the challenges associated with the global supply chain, the changing global semiconductor industry, and the sophistication of U.S. adversaries, who might target military electronic components.",
+    "This includes strengthening and protecting the domestic semiconductor supply chain to provide access to leading- edge capabilities to accelerate innovation.",
+    "One of the next generation semiconductor technologies that IBAS is focusing on is called Advanced Packing.",
+    "IBAS is working to provide secure, credible, and reliable domestic advanced packaged semiconductor manufacturing capability.",
+    "My amendment will allow the DoD to leverage existing public- private-partnerships to quickly expand domestic U.S. based semiconductor manufacturing development platforms for critical advanced semiconductor system integration, including fan-out wafer level packaging technology.",
+    "U.S. global leadership in semiconductors depends on U.S. owned firms operating at the leading-edge of advanced packaging technologies.",
+    "The next generation of electronic devices will require significantly greater functional density, in other words, packing chips together even more tightly than current technology allows.",
+    "This requires technical leadership in semiconductor advanced packaging processes, including fanout wafer level packaging.",
+    "I am proud of the work being undertaken in my district's semiconductor technology district, known as NeoCity, to support domestic semiconductor manufacturing technology development as we work to address this critical supply chain."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSUMER SAFETY TECHNOLOGY ACT",
+   "title": "CONSUMER SAFETY TECHNOLOGY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3212.htm",
+   "sentences": [
+    "The bill directs the Consumer Product Safety Commission to launch a pilot program exploring the use of artificial intelligence so that we can track injury trends, identify hazards, monitor recalls, and identify products not meeting importation requirements.",
+    "The bill also requires the Department of Commerce and other agencies to study blockchain technology in the context of consumer products and safety.",
+    "Right now, blockchain is an exciting technology.",
+    "In addition, it could be in the digital currency form.",
+    "The next section also instructs that the FTC shall report to Congress on its efforts to address unfair and deceptive trade practices related to tokens, also known as digital currency, and make any recommendations to improve our Federal agency's ability to protect consumers and promote innovation.",
+    "Mr. Speaker, I rise in strong support of H.R. 1770, the Consumer Safety Technology Act.",
+    "I urge Members to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SINKHOLE MAPPING ACT OF 2025",
+   "title": "SINKHOLE MAPPING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3223.htm",
+   "sentences": [
+    "I rise in strong support of H.R. 900, the Sinkhole Mapping Act, a bipartisan piece of legislation which I introduced with my fellow Floridian, Gus Bilirakis.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE IN MEMORY OF PULSE NIGHTCLUB VICTIMS",
+   "title": "MOMENT OF SILENCE IN MEMORY OF PULSE NIGHTCLUB VICTIMS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2810-2.htm",
+   "sentences": [
+    "Mr. Speaker, 9 years ago today, on June 12, 2016, at 2:02 a.m., our little happy town of Orlando, Florida, was changed forever as we saw 49 angels killed and 53 others who were injured in a mass shooting during Latin Night at the Pulse nightclub, a safe place for the LGBTQ community located just south of downtown Orlando."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHAOS, CONFUSION, AND MANUFACTURED CRISES",
+   "title": "CHAOS, CONFUSION, AND MANUFACTURED CRISES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH497.htm",
+   "sentences": [
+    "First, the tariffs caused chaos against our own allies.",
+    "Maybe that was just a joke to get elected, because now suddenly we are going to have to accept some pain because of tariffs that he is trying to impose on the American people.",
+    "Tariffs equal taxes on American consumers.",
+    "Regarding immigration, we had a workforce shortage for many years, and then over time through legal programs like temporary protected status and parole in other areas, booming States like Florida, and particularly central Florida, south Florida, and Tampa Bay, benefited by these legal programs.",
+    "The Inflation Reduction Act allowed for a cap of $2,000 a year for prescription drug savings for all seniors under Medicare.",
+    "Now seniors won't pay more than $2,000 a year for their prescription drugs.",
+    "Regarding the ObamaCare subsidies, oh, my gosh, have we not seen the majority learn, have Republicans not learned from now?",
+    "By the way, since then, we have seen States like Florida have the largest ObamaCare exchange in the Nation.",
+    "Mr. Speaker, 4.6 million Floridians from President Trump's home State, more than any other State in the Union, get their healthcare through the ACA exchange.",
+    "Do you know what happens if the ObamaCare subsidies go away, Mr. Speaker?",
+    "Mr. Speaker, can you believe it is to cut taxes for billionaires?",
+    "Seniors across the Nation who have a $2,000 cap on prescription drugs--little old ladies who are trying to pay out of their pockets for prescription drugs, our seniors, our men and our women--are going to have to forgo those savings because the top 1 percent and the top 0.1 percent need more tax cuts.",
+    "So we can easily work together to resolve these things or my friends will go it alone in some big reconciliation package for billionaires and then we will see what happens in these very easily tracked measures."
+   ]
+  },
+  {
+   "date": "2025-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: General Leave",
+   "title": "General Leave",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-21/html/CREC-2025-01-21-pt1-PgH253-2.htm",
+   "sentences": [
+    "Disaster relief, protecting reproductive rights, advocating for immigrant rights, a strong U.S.-Israel relationship, navigating the COVID crisis--but for me, the biggest legacy is all the funding brought back for the Everglades."
+   ]
+  }
+ ]
+}

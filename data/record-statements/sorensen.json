@@ -1,0 +1,97 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "sorensen",
+ "name": "Eric Sorensen",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5029-6.htm",
+   "sentences": [
+    "Mr. Chair, I rise today in strong opposition to the Grothman amendment.",
+    "Mr. Chair, I will not remain silent when this amendment is dropped at the eleventh hour to decimate our institution.",
+    "I urge Republicans and Democrats to please honor them with a ``no'' vote on amendment No. 316."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5001.htm",
+   "sentences": [
+    "I am proud to live in an Army town, and I am the only LGBTQ person to serve on the House Committee on Armed Services.",
+    "LGBTQ servicemembers are critical and essential to our Armed Forces.",
+    "Madam Chair, I rise today in strong opposition to Representative Boebert's amendment.",
+    "I urge my colleagues to reject this amendment because all Americans who serve should be able to serve with dignity, respect, and our Nation's thanks."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JAY P. LARSON POST OFFICE BUILDING",
+   "title": "JAY P. LARSON POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5097.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my legislation, H.R. 2466, which will redesignate the Rockford post office on Harrison Avenue in honor of Jay Larson.",
+    "I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2182-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise with my colleagues today to call out the House GOP's big billionaire bailout at the expense of my neighbors back home in Illinois-17.",
+    "The other side claims to be fiscally responsible, but they are blowing a $5 trillion hole in our national debt to do it."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING OUR LAW ENFORCEMENT OFFICERS AND THEIR FAMILIES",
+   "title": "THANKING OUR LAW ENFORCEMENT OFFICERS AND THEIR FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2083-2.htm",
+   "sentences": [
+    "Mr. Speaker, this is National Police Week when we honor the brave men and women who serve and protect us every day, but it is also a good reminder that they deserve our thanks every day.",
+    "We also need to thank the spouses and the children of our law enforcement who deal with the risk of their loved ones who may not come home.",
+    "Serving in the people's House means we support law enforcement.",
+    "I am proud to have secured funding for police training and safety.",
+    "That is why I am so proud of the Invest to Protect Act, my bipartisan legislation that gives small and midsized police departments the funding that they need for training, recruitment, and mental health resources.",
+    "Mr. Speaker, happy National Police Week."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH781-3.htm",
+   "sentences": [
+    "However, what is being presented by my Republican colleagues today is a plan that would gut healthcare for 152,483 of my neighbors at home who depend on Medicaid, more than 66,000 kids under the age of 19.",
+    "Ten thousand seniors back home rely on Medicaid in Illinois' 17th District for their nursing home coverage.",
+    "Also, billionaire donors and big corporations get tax breaks to make them more wealthy."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INCREASING PENALTIES FOR SCAMMERS",
+   "title": "INCREASING PENALTIES FOR SCAMMERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH519-2.htm",
+   "sentences": [
+    "Mr. Speaker, across America, working families and seniors are feeling the high costs of goods.",
+    "My bipartisan legislation would increase the penalties for any scammer who thinks that they can use AI to make an easy buck off of a senior citizen by stealing their Social Security check."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "webster",
+ "name": "Daniel Webster",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 7
+ },
+ "statements": [
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; AND PROVIDING FOR CONSIDERATION OF H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPRO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; AND PROVIDING FOR CONSIDERATION OF H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026; AND FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1177-2.htm",
+   "sentences": [
+    "I ran for office pledging to restore fiscal responsibility and Congress is embracing it."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COAST GUARD AUTHORIZATION ACT OF 2025",
+   "title": "COAST GUARD AUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3572-4.htm",
+   "sentences": [
+    "The One Big Beautiful Bill Act provides the Coast Guard a much-needed and historic downpayment of $24 billion for new operational assets and systems.",
+    "I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025",
+   "title": "RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+   "sentences": [
+    "Together with President Trump, we are eliminating billions of dollars of spending, this wasteful spending on leftwing organizations that mock millions of Americans.",
+    "We will also eliminate wasteful spending on radical programs in lands far, far away that do not put America first.",
+    "I have consistently voted to cut the spigot of spending, and I will continue that record by voting to pass this bill today.",
+    "I urge my colleagues to do the same."
+   ]
+  }
+ ]
+}

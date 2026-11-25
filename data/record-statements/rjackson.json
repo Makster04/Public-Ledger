@@ -1,0 +1,71 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rjackson",
+ "name": "Ronny Jackson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 14
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "I was proud to lead efforts to support test and training space for unmanned aerial systems, incorporate foreign military sales demand into domestic industrial base assessments, and to officially restore the name of the Department of War.",
+    "Mr. Chairman, I rise today in support of H.R. 8800, the National Defense Authorization Act for Fiscal Year 2027.",
+    "Mr. Chair, I urge my colleagues to support H.R. 8800."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FALLEN SERVICEMEMBERS RELIGIOUS HERITAGE RESTORATION ACT",
+   "title": "FALLEN SERVICEMEMBERS RELIGIOUS HERITAGE RESTORATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3160.htm",
+   "sentences": [
+    "If this authority expires, we will substantially degrade U.S. national security and our intelligence officers' ability to identify foreign threats in real time.",
+    "If we do not, we will get something from our colleagues in the Senate that will be far, far inferior, and those who truly care about national security in this body on both sides of the aisle who may be contemplating a ``no'' vote will regret such a vote.",
+    "Mr. Speaker, I urge my colleagues on both sides to vote for this bill."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "Madam Chair, I rise in support of H.R. 3838, the National Defense Authorization Act for Fiscal Year 2026, also known as the SPEED Act.",
+    "We will enable leaders to make informed decisions in an increasingly complex world, enhancing the U.S. military's lethality across the board."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAINTAINING AMERICAN SUPERIORITY BY IMPROVING EXPORT CONTROL TRANSPARENCY ACT",
+   "title": "MAINTAINING AMERICAN SUPERIORITY BY IMPROVING EXPORT CONTROL TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1834.htm",
+   "sentences": [
+    "Malign actors like China, Russia, North Korea, and Iran would gladly seek to use our very own goods and technologies against us, whether in military engagements or on the economic battlefield.",
+    "I urge all of my colleagues to support this critical piece of legislation that will enhance our national security and economic competitiveness while protecting American innovation."
+   ]
+  },
+  {
+   "date": "2025-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGITIMATE COURT COUNTERACTION ACT",
+   "title": "ILLEGITIMATE COURT COUNTERACTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-09/html/CREC-2025-01-09-pt1-PgH67-6.htm",
+   "sentences": [
+    "In response to these truly horrific attacks, Israel has defended itself from Hamas and other Iranian terrorist proxies.",
+    "I would have expected the international community to unequivocally condemn these barbaric terrorist attacks by Hamas and support Israel's fight for survival.",
+    "However, corrupt international organizations like the International Criminal Court have issued arrest warrants against Israeli officials for simply trying to defend themselves and defend their country.",
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to stand with Israel and to vote for H.R. 23."
+   ]
+  }
+ ]
+}

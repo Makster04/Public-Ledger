@@ -1,0 +1,60 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "crockett",
+ "name": "Jasmine Crockett",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 12
+ },
+ "statements": [
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "title": "DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4333.htm",
+   "sentences": [
+    "As a young man, he went through pretrial diversion for misdemeanor marijuana possession.",
+    "I will not sit quiet while a man who was saved by grace turns around and tries to snatch grace away from others.",
+    "If we are going to be real about crime, about communities, about second chances and even third chances, then it needs to start with us looking in the mirror and remembering that even the author of this bill has a story, too, before he tries to lecture D.C. on safety."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SNAP AND MEDICAID CUTS",
+   "title": "SNAP AND MEDICAID CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2185-3.htm",
+   "sentences": [
+    "That is because when we think about their lies and their lying, it relates to those who are going to be subjected to the work requirements.",
+    "Yet still, they are going to drive us into further debt.",
+    "When we talk about cutting SNAP, she was only going to get $15 a day or $2.50 per person."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP'S FIRST 100 DAYS",
+   "title": "TRUMP'S FIRST 100 DAYS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1843-3.htm",
+   "sentences": [
+    "Yeah, those same rules that were supposed to fight discrimination in lending and zoning.",
+    "While they are cutting afterschool programs and community violence prevention, they are pouring millions of dollars into militarizing police departments.",
+    "To roll back civil rights enforcement across Federal agencies, this is the so-called DEI attacks that we continue to endure in this country.",
+    "I stand here a proud Black woman and a proud member of the Congressional Black Caucus, and I refuse to stand by while this administration tries to turn back the hands of time.",
+    "We will continue speaking truth to power, and we will keep organizing until everybody is free because, in the words of Fannie Lou Hamer, nobody is free until everybody is free."
+   ]
+  }
+ ]
+}

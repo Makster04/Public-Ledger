@@ -1,0 +1,502 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "abiggs",
+ "name": "Andy Biggs",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 26,
+  "sentences": 256
+ },
+ "statements": [
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES TO REQUIRE THAT THE SUPREME COURT OF THE UNITED STATES BE COMPOSED OF NINE JUSTICES",
+   "title": "PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES TO REQUIRE THAT THE SUPREME COURT OF THE UNITED STATES BE COMPOSED OF NINE JUSTICES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5443-2.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the joint resolution (H.J. Res. 1) proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+    "Mr. Speaker, the Supreme Court's job is to tell the American people the truth about the law, even when that truth is unpopular, even when a President doesn't like it, and even when Congress doesn't like it.",
+    "Disagreeing with the Supreme Court is not just legitimate.",
+    "Here is the question every American should ask: If a sitting majority can change the size of the Supreme Court the moment it dislikes rulings, what happens the next time the other side is in power?",
+    "In 2020, Senator Schumer stood outside the Supreme Court and told Justices Gorsuch and Kavanaugh: `` . . . you have unleashed a whirlwind, and you will pay the price.'' That was a threat, a threat that goes well beyond any normal policy disagreement.",
+    "Thankfully, law enforcement intervened before anyone was hurt.",
+    "Words have consequences, and when political leaders convince people that the Supreme Court is illegitimate, some people take that rhetoric seriously.",
+    "The Democratic Socialists of America now openly call for abolishing the Senate and replacing the Presidency and the Supreme Court.",
+    "It fixes the number of Justices at nine permanently.",
+    "To my friends on the other side of the aisle: We don't have to like every decision the Supreme Court makes.",
+    "If we want to change the law, we can change the law, but we should not change the Supreme Court simply because we don't like the people sitting on it.",
+    "Let's keep the Supreme Court independent.",
+    "Let's keep it at nine Justices, and let's keep the Constitution bigger than whoever happens to be in power.",
+    "I get it, that the gentleman does not like Donald J. Trump and that this is an ideological position he is taking, which is kind of what the scholars have said is the definition of Court packing.",
+    "When you want to increase the number of people on the Supreme Court so you can effectuate your ideological bent, yes, that is Court packing.",
+    "By the way, it was Joe Biden's own special commission that said it would be wrong to actually increase the number of people on the Supreme Court.",
+    "I do appreciate the gentleman talking about Arizona needs representation on the Supreme Court.",
+    "You can't even get an en banc there because they have 29 justices, appellate judges.",
+    "Anyway, back to the point here, my colleagues on the other side tell us that the Supreme Court has changed before.",
+    "For much of the 19th century, the size of the Supreme Court was tied to the size of the Federal judiciary.",
+    "As the country expanded and Congress created new judicial circuits, Congress added Justices to help carry those responsibilities, but that changed in 1869.",
+    "Congress fixed the Court at nine Justices, and for more than half of the length of this country, it has been nine Justices, regardless of the number of circuits.",
+    "There is one historical example that matters most to the question before us today, and that is Franklin Roosevelt who, in 1937, after winning reelection, was furious that the Supreme Court had repeatedly struck down parts of his New Deal as unconstitutional.",
+    "His plans would have allowed him to add up to six new Justices, and who would appoint those Justices?",
+    "It was an attempt to pack the Court.",
+    "The three liberal Justices voted together in fewer than one-quarter of the nine unanimous cases.",
+    "That sounds like a lot of thoughtful folks on the United States Supreme Court rendering decisions they believe in and they believe comprise constitutional opinion.",
+    "Let me tell you something: He would never find any of these arguments persuasive because he wants to pack the Court.",
+    "They sit right now upset over a few decisions that this Supreme Court has made.",
+    "Justice Breyer said that if you do that and it is 13 next time, does it become 21 after that, or 50, or where does it end, because it becomes a political arms race at the Supreme Court.",
+    "What it meant was let's make sure the Supreme Court is protected from those who want to change it ideologically.",
+    "Now, we have introduced this in the 119th.",
+    "Next time, I will probably start reading all the folks on the other side who want to do that very thing.",
+    "We are going to give it to you."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER RESOURCES USED IN EMERGENCIES ACCOUNTABILITY ACT",
+   "title": "TAXPAYER RESOURCES USED IN EMERGENCIES ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3928.htm",
+   "sentences": [
+    "It was one of the largest COVID-era fraud schemes in the country, and it happened right under the nose of Minnesota's top law enforcement officer.",
+    "That is why I joined my Democratic colleague (Mr. Subramanyam), and we introduced the TRUE Accountability Act together."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAFFIRM THE PRINCIPLES OF LIBERTY BY DISMANTLING THE SURVEILLANCE STATE",
+   "title": "REAFFIRM THE PRINCIPLES OF LIBERTY BY DISMANTLING THE SURVEILLANCE STATE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3823-2.htm",
+   "sentences": [
+    "He won the popular vote in a landslide.",
+    "Reports indicate the opinion will show persistent, systemic violations of the law, including U.S. person queries that directly violate the oversight requirements Congress established in the Reforming Intelligence and Securing America Act, just from a couple of years ago.",
+    "I will just leave it there on those headlines and get back to this."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MONITOR ACCOUNTABILITY ACT",
+   "title": "MONITOR ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3480.htm",
+   "sentences": [
+    "While that hearing focused on the special monitor in Maricopa County, it has implications for residents across the Nation who also find their law enforcement agencies held hostage by a special monitor or consent decree.",
+    "Warshaw has been accused of taking exorbitant payments without producing results in monitoring law enforcement agencies in New York, California, Michigan, and Louisiana.",
+    "A notable reform included in the memorandum was imposing term limits for Federal monitors.",
+    "Let's see who supports this: The National Association of Police, Arizona Sheriffs' Association, Major County Sheriffs of America, Phoenix Law Enforcement Association, and also the California police associations.",
+    "The gentleman was just arguing essentially for monitors, which continues to hamstring police agencies around the country.",
+    "This is interesting: Consent decrees should include term limits for monitors that could be renewed, but they should have term limits.",
+    "Those term limits need to be reviewed after 2 to 3 years to determine whether they are performing properly, are cost-effective, and are providing technical assistance.",
+    "You also cannot basically have someone without a term limit because that puts somebody there with a financial incentive to keep the monitorship going, regardless of compliance.",
+    "So the Democrats said, oh, well, okay, we are not going to do that.",
+    "I will just go back to my colleague saying, hey, we didn't--nobody came.",
+    "Because former Attorney General Merrick Garland said: Hey, I am so concerned about it, I am going to commission somebody to spend several months to research this and give us some recommendations."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR LAW ENFORCEMENT OFFICERS",
+   "title": "EXPRESSING SUPPORT FOR LAW ENFORCEMENT OFFICERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3428.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1275, I call up the concurrent resolution (H. Con. Res. 96) expressing support for law enforcement officers, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, we owe a great deal of gratitude to the men and women in law enforcement who make sacrifices every day.",
+    "For years, radical Democrats championed the defund the police movement, slashed police budgets, and demonized entire police departments while crimes skyrocketed.",
+    "We have seen Democrats support sanctuary city policies and openly side with illegal immigrants over American citizens.",
+    "Sanctuary jurisdictions proudly shield criminal aliens from Federal immigration authorities, regardless of the cost to the residents.",
+    "Officials from these jurisdictions tie the hands of their very own police departments.",
+    "We have seen time and again how these jurisdictions refuse to honor an ICE detainer, release a criminal alien back onto the streets, and then that alien commits another heinous crime.",
+    "Almost one-third of the country lives in a sanctuary jurisdiction.",
+    "Because of President Trump, the border is secure.",
+    "When law enforcement officers are empowered to do their jobs, American communities become safer for everyone.",
+    "When politicians support the police instead of siding with radical activists, American communities become safer for everyone.",
+    "To every police officer watching today, America sees you.",
+    "I urge my colleagues to support our brave men and women in law enforcement, reject policies that make Americans less safe, and support this resolution.",
+    "Madam Speaker, you know, when I hear the term ``national consensus,'' what seems to be national consensus is that the Democrats were the ones that promoted defund the police.",
+    "I have here a list of cities who cut a total of $1.71 billion to promote police.",
+    "They did that because they wanted to defund the police.",
+    "Well, the national consensus is that Democrats are well-known to have supported the defund the police movement.",
+    "That is the year of CHAZ, CHOP, and rioting, wholesale violence, the Portland courthouse under siege, and the defund police movement, even by some across the aisle in Congress.",
+    "Democrats spent years telling us that backing the police, enforcing laws, and rejecting soft-on-crime nonsense wouldn't work, that it was racist, outdated, or somehow made things worse.",
+    "I am going to go over the 11 clauses in this resolution that honor police officers.",
+    "They don't want to honor police.",
+    "They were the party of defund the police.",
+    "Number one: ``Whereas the brave men and women in law enforcement work tirelessly and relentlessly to safeguard the communities they are sworn to protect, serving as the backbone of public safety across our Nation.'' What do my colleagues on the other side find controversial here?",
+    "Number two: ``Whereas law enforcement officers bear the critical responsibility of upholding the rule of law and maintaining the safety, stability, and public order upon which our communities depend.'' What offends them, the rule of law part or the idea that safety and stability actually matter?",
+    "Number three: ``Whereas law enforcement officers routinely and selflessly risk their own lives and safety to combat crime, remove dangerous and lethal drugs from our streets, and stand in defense of the most vulnerable among us.'' What is their objection?",
+    "Do they think law enforcement don't risk their lives, that drugs aren't lethal or that the vulnerable don't deserve that shield?",
+    "Number four: ``Whereas law enforcement officers strengthen our communities through outreach, mentorship, crisis response, and countless daily acts of service that frequently go unrecognized.'' Which of these acts of service do they reject?",
+    "Number five: ``Whereas from resolving neighborhood disputes to checking in on elderly residents and guiding youth programs, officers provide a quiet and steady presence that extends far beyond traditional law enforcement duties.'' Is it the neighborhood dispute resolution that you oppose or the very idea of a steady, positive police presence?",
+    "Number six: ``Whereas rhetoric and policies from leftist activists and progressive politicians seek to defund or dismantle local police departments, undermine public safety, and place both officers and the communities they serve at greater risk.'' I thought this was your goal.",
+    "You introduced legislation and redirected budgets away from law enforcement.",
+    "The defund the police movement wasn't some fever dream.",
+    "You can't spend years trying to kneecap, starve, and demonize the police and then act outraged when a resolution dares to call it what it was: a dangerous failure that hurt people.",
+    "Number seven: ``Whereas sanctuary city policies that restrict cooperation with Federal immigration authorities can compel local law enforcement agencies to divert already limited resources and actively encourage resentment toward local law enforcement.'' Again, I thought this was your goal.",
+    "They will shield the illegal aliens, even the worst of the worst: murderers, rapists, and gang members.",
+    "Do they deny these sanctuary policies exist and deliberately restrict cooperation with Federal authorities?",
+    "Almost one-third of Americans live in sanctuary jurisdictions.",
+    "You can't champion policies that protect criminals over cops and then act shocked when the resolution says sanctuary policies sabotage law enforcement at every level. ``Whereas the Trump administration's focus on restoring law and order has contributed to a notable decline in homicide rates, with levels reaching among the lowest recorded in over a century.'' Data is data, and facts are facts.",
+    "Number nine: ``Whereas drug overdose deaths in the United States have declined significantly, reaching their lowest levels since 2019.'' Which part of that is fake news to you?",
+    "Or is it the timing as enforcement and border focus tighten?",
+    "Under Biden administration's catastrophic open-border policies, fentanyl poured across the southern border like never before, over 100,000 deaths, killing tens of thousands.",
+    "It was a predictable deadly result in prioritizing illegal immigration over American lives.",
+    "Now with the Trump administration's renewed focus on securing the border, cracking down on traffickers and backing law enforcement, the body count is falling.",
+    "Number 11: ``Whereas law enforcement officers deserve our deepest respect, unwavering support, and profound gratitude.'' Let me ask my friends on the other side of the aisle: If you vote against this resolution, are you voting against gratitude for these men and women who deserve our grateful attitudes and thankfulness?",
+    "Mr. Speaker, that is a perfect example of what happens when the Democrats cannot answer for their policies that have wrecked cities and demeaned police officers.",
+    "After everything, after your defund movement, you cheered.",
+    "After the sanctuary policies you defended and you continue to defend, after the crime waves your ideology unleashed, and after watching this country bleed for years under your failed experiments of policies, you can't bring yourself to say a simple thank you.",
+    "We will back the blue, and we will pass this resolution to send one unmistakable message: In America, law enforcement officers have friends, they have allies, and they have the unwavering gratitude of a grateful nation.",
+    "But I am going to do a favor for everybody."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "title": "FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+   "sentences": [
+    "Wildfire smoke from California, Canada, and Mexico, dust storms across the desert, and emissions drifting in from China and Mexico are all outside our control.",
+    "From semiconductor manufacturing to aerospace and national defense facilities, Arizona is building the industries that keep America competitive.",
+    "Arizona's leaders have invested in real outreach and compliance tools that have cut controllable emissions by 50 percent since 2000, but no State should be forced to impose more regulations on families and small businesses for pollution that they did not cause nor can they remedy.",
+    "The FENCES Act restores the original intent of the Clean Air Act by making clear that all foreign emissions, natural or man-made, are excluded when EPA conducts air quality reviews.",
+    "Congress must act so that no future EPA can arbitrarily punish Arizona or any State for emissions beyond our borders.",
+    "Mr. Speaker, I rise in strong support of H.R. 6409, the FENCES Act."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES REQUIRING A BALANCED BUDGET FOR THE FEDERAL GOVERNMENT",
+   "title": "PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES REQUIRING A BALANCED BUDGET FOR THE FEDERAL GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2560-8.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the joint resolution (H.J. Res. 139) proposing an amendment to the Constitution of the United States requiring a balanced budget for the Federal Government.",
+    "Mr. Speaker, today our national debt exceeds $38 trillion and grows second by second.",
+    "On a per-person basis, the national debt amounts to $113,000 for every person living in the United States.",
+    "Americans know that debt comes with strings attached.",
+    "Indeed, annual Federal spending on interest is now one of the largest line items we have.",
+    "Higher-than- expected interest rates or other challenges could trigger a debt spiral.",
+    "That is why I support the balanced budget amendment.",
+    "The balanced budget amendment will restore fiscal sanity and take us off the path to an economic calamity.",
+    "But the balanced budget amendment will not merely beat back a future fiscal crisis.",
+    "The enormous Federal debt is currently driving up borrowing costs for all Americans.",
+    "With the eager support of Democrats in Congress, the Biden-Harris administration approved $4.7 trillion in new deficit spending, ultimately racking up $8.5 trillion in new debt.",
+    "Mr. Speaker, histrionics and misdirection won't cover the historical hypocrisy of the reckless spending of Democrats who now even choose to keep parts of the government shut down.",
+    "Under the Biden administration, the national debt grew by an unprecedented--unprecedented--$8.5 trillion.",
+    "When the gentleman mentioned Bill Clinton, I think: Yeah, that is the last time everybody came together from both parties that actually produced a balanced budget.",
+    "The One Big Beautiful Bill Act will reduce debt to GDP, flip primary deficits into surpluses by 2034, and reduce the deficit by about $4.5 trillion relative to the policy baseline prior to enactment, all of this while averting the largest tax hike in American history that my colleague across the aisle basically just announced they are going to enact upon the American people if they become the majority.",
+    "The Green New Deal will cost $93 trillion over 10 years.",
+    "Their Medicare for All proposal will cost $32 trillion over 10 years.",
+    "The simple truth is a balanced budget amendment would hold both parties accountable.",
+    "What is delusional is for the Democrats to have the audacity to say that they are the party of fiscal responsibility when they are trying to impose the Green New Deal, $93 trillion over 10 years.",
+    "Mr. Speaker, during the gentleman from Texas' recent comments, so recently given, the national debt rose by $125,000.",
+    "Are we going to wait 30 years again until the structural deficit exceeds $5 trillion a year when we actually have a national debt that is somewhere north of $100 trillion?",
+    "Both parties can share in the blame of this massive, structural national debt we have, but I will point out that in 2001 when taxes were cut, something happened in 2001 which changed the trajectory of the entire Nation, and we are still dealing with the fallout.",
+    "Do you know what the national debt was when Barack Obama became President?",
+    "Quite frankly, I have a major problem with that because that is a supermajoritarian body under the cloture rule.",
+    "The gentleman said that we have never needed a balanced budget amendment before.",
+    "It is the American people who are taking the burden of feckless, blind spending and reckless spending.",
+    "Only if we have a balanced budget amendment, which, by the way, used to be a bipartisan issue.",
+    "It used to be a bipartisan issue on the national debt and deficit.",
+    "How about my Democratic colleagues saying that we are going to put in the Green New Deal program.",
+    "Medicare for all, $33 trillion over a 10-year period, no pay-for.",
+    "By the way, the valuation of currency is the classic definition of ``inflation'' because you can't buy as much with the same dollar.",
+    "Let the people actually impose upon us what 49 States have, and that is a requirement for a balanced budget.",
+    "Mr. Speaker, I will set the record straight on that history.",
+    "We are not going to last that long.",
+    "We are going to print more money.",
+    "We are going to print more money, and do you know what that does?",
+    "Do you know when we are going to see hyperinflation?",
+    "We are going to see hyperinflation when the bond markets start saying: Guess what."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPORTING FRAUDSTERS ACT OF 2026",
+   "title": "DEPORTING FRAUDSTERS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2568.htm",
+   "sentences": [
+    "They are organized, deliberate fraud schemes that target the most vulnerable among us: a single mother relying on food assistance or an elderly couple who spent a lifetime paying into Social Security, or a child whose identity is stolen before they can even speak.",
+    "Under current law, defrauding the U.S. or stealing taxpayer dollars is not explicitly a deportable offense.",
+    "In Minnesota, Somali fraud networks stole millions, and Federal prosecutors now estimate Medicaid fraud in that State alone could hit $9 billion.",
+    "A GAO report found nearly 3 million Social Security numbers with evidence of misuse.",
+    "A 3-year-old child had her Social Security number used to take out credit cards and auto loans.",
+    "Fraudsters can exploit SNAP, Social Security, Medicare, and other programs because the law does not clearly state that these crimes make an alien removable from the U.S. Litigation delays and loopholes let these offenders stay here and continue to harm Americans while their victims struggle to recover.",
+    "It makes clear that any alien who defrauds the U.S. or steals government funds intended for American citizens is inadmissible and deportable.",
+    "It ensures that an alien's own admission to committing fraud can trigger consequences because courts in multiple circuits have ruled that certain Social Security fraud offenses do not automatically carry immigration penalties.",
+    "It bars these offenders from receiving immigration benefits, including asylum, so they cannot exploit our generosity twice.",
+    "This bill will help make them inadmissible and deportable.",
+    "I am going to first include in the Record: ``Biden clemency for committed fraudsters met with outrage: `Slap in the face.' '' Mr. Speaker, what the gentleman would have us believe is that Rita Crundwell, who stole $54 million from Dixon, Illinois, repaid that $54 million before she received her pardon.",
+    "We would have to believe that Toyosi Alatishe, who abused his position as a caretaker for patients by filing fraudulent tax returns on behalf of these poor folks, paid everything back.",
+    "Now I will just touch on the Biden pardons."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE T",
+   "title": "PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2121-6.htm",
+   "sentences": [
+    "Let me just say that I come from a State that is the most unique State in the country because we have been, for years, requiring proof of citizenship when a person registers for a State ballot.",
+    "We are the only State that does it because the Supreme Court ruled that way.",
+    "For an alderman or legislator in Arizona, we have to show proof of citizenship to register to vote.",
+    "We need to show our citizenship when we register to vote.",
+    "There is not a doubt in my mind, and I urge passage of this bill."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROE V. WADE ANNIVERSARY",
+   "title": "ROE V. WADE ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1335-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today on the 43rd anniversary of the devastating Roe v. Wade decision.",
+    "For nearly 50 years, Roe distorted our Constitution and did great harm to our Nation.",
+    "Roe silenced voters, sidelined legislatures, and eroded respect for the judiciary by turning judges into policymakers.",
+    "In overturning Roe, the Supreme Court rightly corrected a grave legal error and returned authority to the States where it belongs."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "Mr. Chairman, I rise in strong support of my friend, Representative Crane's, amendment."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING ONLINE PREDATORS ACT",
+   "title": "COMBATING ONLINE PREDATORS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH628.htm",
+   "sentences": [
+    "Offenders, often overseas or even juveniles, groom victims and then weaponize images or AI-generated deepfakes pulled from public photos to demand payment or further abuse.",
+    "Mr. Speaker, I urge support for this bill."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHILD PREDATORS ACCOUNTABILITY ACT",
+   "title": "CHILD PREDATORS ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH630.htm",
+   "sentences": [
+    "Mr. Speaker, I commend law enforcement for their tireless work of protecting children, and I commend the work of this committee and the lead sponsor of this bill, Mr. Harris.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 6715 so that every child predator is fully held to account."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COERCION AND SEXUAL ABUSE FREE ENVIRONMENT ACT",
+   "title": "COERCION AND SEXUAL ABUSE FREE ENVIRONMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH632.htm",
+   "sentences": [
+    "A law enforcement officer stated of these groups: ``If you can get someone to self-harm, you are doing quite well in that group.",
+    "Mr. Speaker, I urge my colleagues to support this legislation, and I commend both sides of the aisle for working on this legislation."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "A few years ago, he took time out of his busy schedule to travel with me to Arizona to better understand the border crisis and the serious impact it was having on my State as well as his own."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "It streamlines permitting under section 404 of the Clean Water Act, and it minimizes red tape through categorical exclusions in collaboration with State agencies.",
+    "When we do not allow grazing, what happens is there is time for wildfires.",
+    "We are saying we are going to import it from Argentina.",
+    "We cannot allow water shortages to slow growth or drive up food costs nationwide."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "This bill would nullify President Trump's Executive Order No. 14251, which rightly excluded 40 national security agencies from collective bargaining.",
+    "Agencies like FEMA, the Coast Guard, the CDC, and the VA cannot afford to be paralyzed by union red tape when lives are on the line.",
+    "These unions are not neutral actors.",
+    "The word ``billionaires'' was mentioned by my colleague from California.",
+    "I am glad he mentioned the term ``billion,'' because that is what the partisan machine government union spent in the last election, just under $1 billion, $980 million of it going to Democrats, which explains in no small measure the rationale for the movement of this bill to negate President Trump's executive order.",
+    "In its final days, the Biden administration rushed to lock in long- term union contracts designed to tie President Trump's hands for a second term.",
+    "It is legislative sabotage, and we shouldn't give in to that.",
+    "The Civil Service Reform Act of 1978 explicitly gives the President authority to exclude agencies from collective bargaining when national security is at stake.",
+    "We must not allow unions to dictate policy if it is going to impact national security, if it is going to affect our borders, if it is going to affect our energy, and if it is going to affect protecting Americans during pandemics.",
+    "In a State where public safety and national defense are daily realities, my State, this bill would put union bosses ahead of the American people and in front of Arizonans.",
+    "In 2024 alone, the political arm of the Democratic Party, the four largest public-sector unions, spent $900 million-plus on progressive politics, and 86 percent of it came from their member dues.",
+    "Mr. Speaker, I urge my colleagues to stand with the President, put America's security ahead of union politics, and vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COUNT THE CRIMES TO CUT ACT",
+   "title": "COUNT THE CRIMES TO CUT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4923.htm",
+   "sentences": [
+    "That is why I rise in strong support of H.R. 2159, the Count the Crimes to Cut Act, led by my friend, Chip Roy from Texas, Representative McBath, who is the ranking member on our Subcommittee of Crime and Federal Government Surveillance, and supported by Members of both parties who understand that freedom collapses when the law becomes unknowable.",
+    "Mr. Speaker, I strongly urge my colleagues to support the Count the Crimes to Cut Act."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "The Endangered Species Act, once intended as a shield for vulnerable wildlife, has morphed into a weapon wielded by radical activists and unelected bureaucrats that cripple our military's readiness and drain billions from our defense budget.",
+    "That means environmental reviews and limits on land use, construction, and water management.",
+    "On Guam, the military must deploy snake-proof fencing, trap-and-bait programs, and train detection dogs to prevent brown tree snake incursions on military equipment and cargo, significantly complicating logistics, readiness, and training activities.",
+    "Activist groups exploit the ESA through relentless litigation and red tape, imposing critical habitat designations that do precious little to recover species but everything to block land use and weaken our defenses.",
+    "Fewer than 2 percent of listed species have been delisted.",
+    "I want to take the same argument that was used on the last bill when Mr. Cisneros of California said, good grief, our adversaries don't care about this question of censorship.",
+    "The ESA has only delisted 2 percent of the hundreds and thousands of species that it has listed."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+   "sentences": [
+    "Congress should not fund anything that supports the CCP's disinformation efforts, and now is the time for strategic clarity, with rising bellicosity coming from the CCP.",
+    "We cannot allow authoritarian regimes to dictate how our government communicates facts."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INCREASING MEDICAID FUNDING",
+   "title": "INCREASING MEDICAID FUNDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1898-2.htm",
+   "sentences": [
+    "Mr. Speaker, the original Medicaid program was designed to help the disabled, pregnant women, seniors, and children.",
+    "Then there was this expansion that came along, and it is filled with able-bodied adults of working age who could be working."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING AMERICA FIRST BORDER SECURITY POLICIES BACK IN PLACE",
+   "title": "PUTTING AMERICA FIRST BORDER SECURITY POLICIES BACK IN PLACE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1136.htm",
+   "sentences": [
+    "Mr. Speaker, it is my pleasure to be here tonight with my colleagues who are also members of the Border Security Caucus.",
+    "For 4 years, we have stood here and exposed the open-border policies of the Biden-Harris administration.",
+    "For 4 years, we have seen what happens when the America First border security policies that President Trump had put in place were thrown out.",
+    "Since President Trump took office, ICE agents have arrested more than 20,000 illegal aliens.",
+    "When Joe Biden was in charge, over 300,000 illegal aliens crossed the border in just 1 month.",
+    "Whereas Biden let all those people into the country without proper vetting, some of which were known criminals and terrorists that we are now trying to find, under President Trump, people who illegally crossed the border are stopped and immediately detained or removed.",
+    "Due to President Biden's catch and release policies, every State had the pathologies of a border State.",
+    "Immediately after taking office, President Trump charged ICE officers with cleaning up streets across the country by detaining the illegal aliens that Joe Biden had released into the country.",
+    "Tonight, we are going to be exposing the Biden-Harris administration's open-border policies and President Trump's work to remove them.",
+    "In just 1 month, President Trump has put an end to the endless invasion of our communities by illegal aliens.",
+    "Mr. Speaker, I yield to the gentleman from Texas (Mr. Babin), my co- chairman of the Border Security Caucus.",
+    "Mr. Speaker, I thank the gentleman who has seen in his own district time and time again the abuse caused by these out- of-control illegal aliens.",
+    "Mr. Speaker, I yield to the gentleman from Wisconsin (Mr. Tiffany), my friend who is also on the Border Security Caucus.",
+    "We have been to the border together.",
+    "Mr. Speaker, I will always remember him going off with Art Del Cueto and leaving the rest of us in a car, stuck in the dirt and with a bad tire, as we were down on the border.",
+    "Mr. Speaker, I thank the gentleman, who is also a member of the Border Security Caucus, for being with us tonight.",
+    "Texas is another border State, and Mr. Gill is a newcomer who is setting the world on fire.",
+    "The mere fact that Donald Trump was elected almost immediately terminated the onslaught of people crossing our border.",
+    "When I was meeting with the new border patrol chief, Chief Banks, I asked him what is going on.",
+    "When I was down at the border just a few weeks back, I wanted to compare.",
+    "I went to a place where I knew we had a regular flow of illegal aliens crossing the border.",
+    "The only thing that we saw and noticed on the southern side of the border were the watchers and the scouts.",
+    "In the sanctuary city of Los Angeles, Federal agents arrested Eduardo Domingo Renoj-Matul, also known as Turko, who is charged with running one of the largest human smuggling organizations in the country.",
+    "It spanned 5 years, and he smuggled in around 20,000 illegal aliens, largely between Los Angeles and Phoenix.",
+    "Illegal aliens were charged in some instances more than $15,000 for transportation.",
+    "This time he was also arrested for resisting arrest and battery of a police officer.",
+    "These are the people that my friends across the aisle say should be allowed to remain here in these sanctuary cities.",
+    "On January 27, ICE agents in San Diego arrested an Afghani who had an existing removal order and was a known or suspected terrorist.",
+    "Despite having a removal order, the Biden- Harris administration and Secretary Alejandro Mayorkas could not be bothered to deport this suspected terrorist.",
+    "These are the types of individuals that are being protected by sanctuary cities.",
+    "When we recently had a hearing, we had the mayors of four of these sanctuary cities come in.",
+    "The sanctuary cities are preventing ICE and the immigration officials from getting this information.",
+    "It states: ``In conducting investigations and hearings . . . immigration officers and administrative law judges shall have reasonable access to examine evidence of any person or entity being investigated . . .'' When the sanctuary city mayors say you can't cooperate with ICE, they are violating this statute.",
+    "The sanctuary cities also have culpability on this. ``Any person who knowing''--now you have a culpable mental state--that a ``Any person who knowing or in reckless disregard of the fact that an alien has come to, entered, or remains in the United States in violation of law, conceals, harbors, or shields from detection, or attempts to conceal, harbor, or shield from detection such alien in any place. . . . shall for each alien in respect to whom such a violation occurs, be fined, imprisoned not more than 10 years, or both.'' You have to understand something.",
+    "What you have here is you have mayors telling their police chiefs and their officers don't hand these people over.",
+    "What he has done just by enforcing the law has actually secured most of our border.",
+    "We will highlight the tireless work of ICE agents tasked with arresting some of the worst individuals who have invaded our country."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MIDNIGHT RULES RELIEF ACT",
+   "title": "MIDNIGHT RULES RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH654-5.htm",
+   "sentences": [
+    "He mentioned ``billionaire'' three times and ``unelected billionaire'' one time.",
+    "Mr. Speaker, I rise in support of H.R. 77, the Midnight Rules Relief Act.",
+    "What I will tell you is that the Midnight Rules Relief Act would allow Congress to consider and disapprove or accept all three of these burdensome regulations at one time."
+   ]
+  },
+  {
+   "date": "2025-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 77, MIDNIGHT RULES RELIEF ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 77, MIDNIGHT RULES RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgH623.htm",
+   "sentences": [
+    "Mr. Speaker, the bottom line is this: Democrats don't want us to consider the rules of the outgoing administration because we are going to see some absurdities when we do."
+   ]
+  },
+  {
+   "date": "2025-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGITIMATE COURT COUNTERACTION ACT",
+   "title": "ILLEGITIMATE COURT COUNTERACTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-09/html/CREC-2025-01-09-pt1-PgH67-6.htm",
+   "sentences": [
+    "Mr. Speaker, neither the United States nor Israel recognize the legitimacy of the ICC.",
+    "This bill is essential for protecting American citizens, servicemembers, our allies, especially Israel, from these politically motivated, punitive prosecutions by the ICC.",
+    "Israel and its leaders have an inherent right to defend themselves against these terrorist attacks that occurred from Hamas, and they get to also attempt to rescue these hostages, but the ICC's attempts to interfere with Israel's self-defense and issue arrest warrants for the Prime Minister of Israel, Benjamin Netanyahu, and their minister of defense, undermines justice.",
+    "It attempts to claim jurisdiction and issue sanctions against Israel as we could have predicted, and many of us did who were at that conference watching this ICC form."
+   ]
+  },
+  {
+   "date": "2025-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT",
+   "title": "LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-07/html/CREC-2025-01-07-pt1-PgH53-4.htm",
+   "sentences": [
+    "Mr. Speaker, again, our hearts go out to the Laken Riley family.",
+    "This bill is named for Laken Riley, but it has an impact far greater.",
+    "Once again, we must acknowledge that we can no longer take the famed empty words of sympathy from those across the aisle in the Biden-Harris administration because they refuse to do anything meaningful to stop the carnage or even slow down the border surge that has been going on.",
+    "Illegal aliens who commit crimes must not be released into our communities.",
+    "They call them undocumented immigrants.",
+    "Instead of taking the mandate of an overwhelming popular vote victory and electoral college victory by this incoming President Donald Trump on the issue of border security, they let it go.",
+    "They declared themselves a super sanctuary city.",
+    "In New York City, there is more than 58,000 illegal aliens with a criminal record who have been charged with a crime on their streets.",
+    "You can stand up and say that you feel real bad for Laken Riley and her family.",
+    "How about all the other victims of illegal aliens who have committed crimes?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "sanchez",
+ "name": "Linda T. Sánchez",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 29
+ },
+ "statements": [
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "title": "RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of this resolution rejecting President Trump's illegal tariffs on Canada--our friend, our neighbor, and our ally.",
+    "They want to distract to take away from the real issue, which is that the Constitution is very clear that the power to levy tariffs and regulate trade belongs to the Congress, not to the President.",
+    "Trump's tariff tantrums have cost households more than $1,600 a year in higher prices.",
+    "Last month, Canada announced it was lowering its 100 percent tariffs on Chinese electric vehicles.",
+    "Those tariffs were imposed in coordination with the United States during the leadership of the Biden administration.",
+    "I urge my colleagues to support this resolution."
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 202",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2107-7.htm",
+   "sentences": [
+    "Republicans continue to give President Trump a free pass to damage our economy and punish our American families with his illegal tariffs.",
+    "The Constitution could not be clearer: Congress, not the White House, has the authority to impose tariffs.",
+    "Yet Republicans continue to fold like cheap lawn chairs by refusing to allow a vote on Trump's tariffs.",
+    "According to the Joint Economic Committee, Trump's tariffs cost American households more than $1,600 last year--that is $1,600--and that will continue to rise if Congress doesn't take the keys away from Trump.",
+    "Maybe that is pocket change for Trump and his billionaire buddies.",
+    "However, working families, small businesses, and farmers are certainly feeling the pain of these trade wars.",
+    "Trump's tariffs are increasing prices on everything for them, and Republicans are letting it happen on their watch.",
+    "Let's reclaim our constitutional authority and put an end to his abuse of tariffs once and for all.",
+    "Mr. Speaker, I rise today in opposition to this Republican rule."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the many working families who rely on the ACA tax credits.",
+    "I will remind everyone: Republicans already kicked 15 million people off their healthcare to pay for tax cuts for billionaires.",
+    "Vote to extend the ACA tax credits and lower costs for America's families.",
+    "I urge my Republican colleagues now to do the right thing and to vote on behalf of their constituents' interests."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Prices for everyday necessities, such as food, clothing, diapers, and formula, keep rising because of Trump's tariffs.",
+    "It is so billionaires can get even richer while the rest of us drown in debt.",
+    "Republicans are doling out tax cuts for the wealthiest while destroying the means of survival for hardworking families."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "As a member of the Labor Caucus, I stand with the essential workers who provide critical services to the American public.",
+    "No one, not the President, not an unelected billionaire, has the right to singlehandedly dismantle Federal agencies created and funded by the Congress, yet that is exactly what is happening.",
+    "They are even rejecting union contracts that were lawfully negotiated between the government and workers.",
+    "This is union-busting, plain and simple.",
+    "As a former union member, I won't stand for that.",
+    "Why should they have their hands on our Social Security or Medicare payment or see whether we or a loved one has a disability or whether or not we received a tax refund?",
+    "Mr. Speaker, I rise today in support of our Nation's Federal workers."
+   ]
+  }
+ ]
+}

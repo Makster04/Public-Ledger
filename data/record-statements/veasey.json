@@ -1,0 +1,57 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "veasey",
+ "name": "Marc A. Veasey",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 18
+ },
+ "statements": [
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INVIDIOUS DISCRIMINATION",
+   "title": "INVIDIOUS DISCRIMINATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4105-5.htm",
+   "sentences": [
+    "He was the deaf ministry bus driver, a deacon at his church, a trustee at his church, a leader in his church.",
+    "I will miss seeing that couple at different events together.",
+    "I urge you to keep Ms. Dorothy Lampkin in prayer, and keep the kids, grandkids, and great-grandkids in prayer."
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4016, DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R. 3633, DIGITAL ASSET MARKET CLARITY ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4016, DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R. 3633, DIGITAL ASSET MARKET CLARITY ACT OF 2025; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgH3257-5.htm",
+   "sentences": [
+    "In their America, billionaires can buy silence, sweep crimes under the rug, and count on friends in high places to protect them.",
+    "In their America, underage girls are treated like disposable property by predators who believe they will never face consequences.",
+    "Time and time again, this administration has chosen them--the billionaires, the elite, the people who think children are theirs to exploit--over us, the American people.",
+    "Time and time again, they have looked into the cameras and promised the American people: We will release the Epstein files.",
+    "It is about protecting the rich, the famous, and the powerful, no matter how monstrous their crimes are.",
+    "That is because they think there is one set of rules for billionaires and another for the rest of us.",
+    "No one, no matter how rich, famous, or well-connected, is above the law.",
+    "We demand the immediate release of the Epstein files--no more games, no more lies, and no more protection for predators hiding behind the rich and powerful.",
+    "We heard it over and over again: We will tell you the truth.",
+    "They think the American people will forget, that we will stop asking questions, and that we will let them keep secrets.",
+    "We will not stop demanding the truth."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISENFRANCHISING VOTERS",
+   "title": "DISENFRANCHISING VOTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1400.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in opposition to the so-called SAVE Act.",
+    "It claims to make it illegal for noncitizens to vote, which we already know is not a problem, but this bill would also disenfranchise millions of Americans who don't even have a passport.",
+    "It would end automatic voter registration, voter registration by mail, and other reforms many States have adopted, overriding federalism and State control over elections.",
+    "Mr. Speaker, I urge my colleagues, when this bill comes up, to vote ``no'' because it will be a disaster for America and a disaster for democracy. ____________________"
+   ]
+  }
+ ]
+}

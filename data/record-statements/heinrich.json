@@ -1,0 +1,452 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "heinrich",
+ "name": "Martin Heinrich",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 23,
+  "sentences": 233
+ },
+ "statements": [
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BIPARTISAN AMERICAN AFFORDABILITY AND JOBS ACT OF 2026",
+   "title": "BIPARTISAN AMERICAN AFFORDABILITY AND JOBS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgS5807-4.htm",
+   "sentences": [
+    "This would mean that the Environmental Protection Agency, for example, could require powerplants to meet updated clean air standards or for mines to meet updated mining standards.",
+    "And I am proud of the work we did both before we introduced it and after."
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RATEPAYER PROTECTION ACT",
+   "title": "RATEPAYER PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5198.htm",
+   "sentences": [
+    "Electricity demand, as we all know, is growing, driven in large part by hyperscalers and data centers.",
+    "Tech companies have promised to pay their fair share and not make American households pay the extra costs, but it is not enough to take their word for it, and it is not enough to merely tell States to consider--consider--making utilities charge data centers for all of the costs associated with the generation, additional transmission, and distribution upgrades necessary to serve them.",
+    "According to the Smart Electric Power Alliance, more than 30 States have adopted specific retail rate structures for large loads like data centers.",
+    "This bill has no--zero--requirement that data centers actually pay for their own grid upgrades.",
+    "H.R. 9340 might make some Members of the Senate feel good about voting on a bill that sounds like it does something about data centers.",
+    "So let's require data centers to pay for their incremental costs and prohibit by law passing those costs on to consumers.",
+    "Mr. President, I rise in opposition to the motion to proceed to H.R. 9340."
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: END TAX PENALTIES ON AMERICAN HOSTAGES ACT",
+   "title": "END TAX PENALTIES ON AMERICAN HOSTAGES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5238.htm",
+   "sentences": [
+    "I am willing to work with my colleague from North Dakota to find a solution to the State lands within Indian reservations in his State, but the solution can't be simply giving away our public land, especially when we don't know even which lands would be transferred away.",
+    "Mr. President, reserving the right to object, I am actually pretty sympathetic to the land management challenges in the West that have come from a history of public land disposal and development, but I cannot support the approach this bill takes transferring public land to a State without a fair exchange for the public.",
+    "I support cleaning up the parcels inside of the Tribal reservations that currently do not belong to them.",
+    "Whether transferring public land to counties, transferring public lands to States, or transferring public lands to private entities, without an equal value for the public, is simply something I cannot support."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgS4124-3.htm",
+   "sentences": [
+    "The current program requires any visitors who come to the Northern Mariana Islands through this program to undergo a two-step vetting process by the Department of Homeland Security, including having an in-person interview.",
+    "While I oppose the passage of this bill, I do stand ready to work with Senator Scott and others to support the security of our Nation in a way that does not harm the people and government of the Northern Mariana Islands."
+   ]
+  },
+  {
+   "date": "2026-04-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-16/html/CREC-2026-04-16-pt1-PgS1807-5.htm",
+   "sentences": [
+    "To pad the pockets of the President's buddy from Chile so that he can take our minerals--our minerals, the American people's minerals--send them to China, process them in China, and then maybe sell them back to the American people with a tariff.",
+    "We are going to do that to Minnesota?",
+    "We are going to do that to the delegation from Minnesota?",
+    "We are going to do that to the American people who cherish this place?",
+    "Twenty percent of the National Forest Service System's freshwater is in these Boundary Waters, and we are going to pollute that with sulfuric acid?",
+    "So we are guaranteeing that we are going to pollute the Boundary Waters."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.J. RES. 140",
+   "title": "H.J. RES. 140",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgS1790-3.htm",
+   "sentences": [
+    "We are going to allow a foreign mining company to take our minerals, to ship those minerals to China for processing, and then to sell those back to us with a tariff on top.",
+    "And I will do you one better: It has a perfect track record of polluting water.",
+    "So since my Republican colleagues are refusing to include constituents' voices in this process, I will bring a few of those from New Mexico to the floor here today.",
+    "You know, I am going to summarize this one more time."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgS1162.htm",
+   "sentences": [
+    "Mr. President, nearly 5 years ago, I stood on the Senate floor, and I said that we were ``facing the most dangerous and overt threat to our democratic system in generations.'' I was speaking then in support of the John Lewis For the People Act.",
+    "Along with my Democratic colleagues, I was pushing to expand Americans' right to vote and push back against the influence of dark money in our elections.",
+    "But the threat facing us then pales in comparison to the one that we face today in the form of the Republicans' so-called SAVE Act because their SAVE Act does nothing to save anyone from anything.",
+    "Republicans' SAVE Act would strip the right to vote from those who don't already have a passport or a birth certificate or the time and money to expedite getting one.",
+    "It would effectively strip voters of the ability to register to vote by mail.",
+    "This SAVE Act is today's poll tax, today's exclusion of everyday Americans.",
+    "Senate Republicans claim that this is necessary to confront the threat of foreign citizens voting in our elections, but the requirements their SAVE Act imposes are neither necessary nor justified.",
+    "This is not a voter ID bill; this is a voter suppression bill.",
+    "And, last July, I helped introduce the John R. Lewis Voting Rights Advancement Act to fully restore that landmark legislation and to override the Supreme Court's 2013 decision that took an ax to the heart of it.",
+    "They are coming from folks who would rather sabotage and strip away Americans' right to vote than face the American people's dissatisfaction or, for that matter, be willing to tackle affordability.",
+    "The legislation they are using to do that is their so-called SAVE Act, one of the most extreme voter suppression bills in recent history.",
+    "Vote no on the SAVE Act because it would require every American to prove their citizenship with a passport or a document like a birth certificate every time they register or reregister to vote, because about 140 million Americans don't have passports and about 21 million Americans don't have ready access to documents proving their citizenship either.",
+    "We already have ways to do this, like the motor voter program, which the SAVE Act would effectively eliminate.",
+    "Vote no on the SAVE Act because it would require people whose names don't match their birth certificates, like women who have taken their husband's last name, to provide notarized affidavits, documentation that will undoubtedly take more time and more money to produce.",
+    "Vote no on the SAVE Act because it affects our veterans too.",
+    "With the SAVE Act, many servicemembers and veterans won't be able to register to vote or to vote with their military IDs, even people who fought for this country.",
+    "Vote no on the SAVE Act because even if you happen to have the right documents, you will find that the bill all but eliminates voter registration drives, online registration, and automatic registration.",
+    "Vote no on the SAVE Act because even when it is done eviscerating your rights to vote, the SAVE Act would turn its sights on election officials.",
+    "In the end, the conclusion is clear: The SAVE Act is straight-up voter suppression, and it is fundamentally undemocratic, un-American, and wrong.",
+    "These are the voices of my constituents from New Mexico, and they are not alone because right now most Americans know that the SAVE Act is not the answer; they see through Republicans' voter suppression scheme; and they are asking us here in the Senate to fight back.",
+    "The SAVE Act won't stop me from voting, but it will stop thousands upon thousands of my constituents.",
+    "I will repeat: This is not a voter ID bill; this is a voter suppression bill.",
+    "I call upon my colleagues in the Senate: Choose freedom, choose democracy, and say no to this so-called SAVE Act.",
+    "And while I support verifying citizenship, that process should not be limited to just passports and birth certificates."
+   ]
+  },
+  {
+   "date": "2026-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-11/html/CREC-2026-03-11-pt1-PgS969-8.htm",
+   "sentences": [
+    "But that is just what the Trump administration is trying to do--to censor our history.",
+    "At Glacier National Park in Montana, mentions of climate change--of course, which is literally melting the very glaciers the park was named after--were erased.",
+    "Today, the daily work of the Senate's Energy and Natural Resources and Indian Affairs Committees is to protect the rights and advance the well-being of some of those same Tribes because we demand better of our Nation and of ourselves.",
+    "It is true that this country did not apply the American values of democracy and justice equally in the beginning and that women, Black people, Hispanics, Asians, Native Americans, LGBTQ, and persons with disabilities--just to name a few--all had to struggle to gain the same rights as other groups of people because they demanded better of our Nation and for all of us.",
+    "They made us stronger, and they don't negate the progress we have made or the pride we take in our country as we continue to strive for a more perfect Union.",
+    "Like the stories of families that traveled over oceans, like mine did, and traveled over mountains to be a part of the American dream, the stories of those fights are the stories of how America became the country that it is and how we will continue to lead.",
+    "We will tell these stories again and again and again as long as it takes and long after he is relegated to the history books."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PERMITTING REFORM",
+   "title": "PERMITTING REFORM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgS92.htm",
+   "sentences": [
+    "For context, 3.5 gigawatts is roughly the equivalent of 3\\1/2\\ nuclear reactors.",
+    "This project is literally the largest clean energy project in North American history, bigger than the Hoover Dam.",
+    "It is about building big things again in the United States, providing hard-working Americans, skilled trades union people with affordable energy, growing our economy, and a good job."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. Res. 91 (Executive Session)",
+   "title": "S.J. Res. 91 (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgS8467.htm",
+   "sentences": [
+    "Mr. President, nestled in the far northeast corner of Alaska is one of the wildest and most untouched places left in North America: The Arctic National Wildlife Refuge.",
+    "I have seen its towering peaks; I have seen the critical habitat on the Coastal Plain where caribou drop their calves; and I have seen its polar bears.",
+    "Over the course of a year in the Arctic Refuge, you might also see one of the last great spectacles of migrating caribou, dueling musk ox straight out of the Pleistocene, or rare spectacled eiders nesting on the Coastal Plain.",
+    "In fact, the Arctic Refuge is home to hundreds of iconic wildlife species, including 200 species of birds that have called this landscape home since long before humans stepped on this continent.",
+    "Simply put, the Arctic Refuge is the crown jewel of the American National Wildlife Refuge System, and it has been ever since it was set aside in 1960 by President Eisenhower to protect its wildlife and habitat values.",
+    "The Arctic Refuge is also deeply connected to the traditions and daily life of the people who have lived there for thousands of years-- longer than this building, this city, this country have existed-- because the refuge is not just land.",
+    "The Arctic Refuge is under threat from the Trump administration's relentless attacks on public lands, attacks that put so-called energy dominance above every other use, every other value.",
+    "Today, the Senate will vote on a congressional resolution of disapproval to overturn the management plan for the Arctic Refuge.",
+    "And instead of a targeted approached that emphasizes things like subsistence hunting, wildlife conservation, and a focus on Tribal consultation, a vote for this resolution will--redundantly--open up the entire Coastal Plain of the refuge to be leased for oil drilling without local input.",
+    "But instead, we are talking about industrial oil and gas development in the beating heart of our greatest wildlife refuge, literally developing the place where the porcupine caribou herd drops their calves every year.",
+    "Yet, even in that context, in those challenging years, for decades and across both political parties, Congress recognized the irreplaceable, ecological, and cultural importance of the Arctic Refuge.",
+    "Now, they told us that development of the Arctic Refuge would bring in a billion--billion with a ``b''--a billion dollars to the Treasury to pay off the tax cuts that were in the 2017 bill for billionaires.",
+    "There are no roads, no infrastructure even remotely close to this part of the Coastal Plain.",
+    "In 2023, the six largest banks in the United States, the five largest banks in Canada, and 29 other international banks all issued policies against financing drilling in the Arctic Refuge.",
+    "It is the skyrocketing utility bills that Americans are facing because of the Republicans' relentless attacks on affordable American- made clean energy.",
+    "Drilling in the Arctic Refuge is not going to make energy more affordable, and it seems to me, as I stand up here to speak about yet another attack on our public lands, that no place is sacred from this extract-at-all-costs playbook--not even wildlife refuges.",
+    "The bottom line is that the Arctic Refuge is too unique, too globally important to develop.",
+    "They call it all kinds of things so that they don't have to use the phrase ``wildlife refuge.'' They will call it the 1002 area.",
+    "The Arctic Refuge provides subsistence fish and game for people who live in the region.",
+    "The Arctic Refuge is the crown jewel of our National Wildlife Refuge System, and it belongs to every single American and deserves our protection."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO \"BUFFALO ",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO \"BUFFALO FIELD OFFICE RECORD OF DECISION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgS8217.htm",
+   "sentences": [
+    "Until this year, Congress had never used a congressional resolution of disapproval to change or overturn a land use plan.",
+    "That is because no administration ever considered land use plans to be ``rules'' under the law.",
+    "No administration, Republican or Democratic, since the Congressional Review Act became law in 1996, has ever treated these land use plans as ``rules.'' Here is what that means: No land use plan has been submitted to Congress, as is required for rules.",
+    "Because the Congressional Review Act prohibits rules from going into effect until 60 days after they are submitted to Congress and no administration has ever submitted a land use plan to Congress, ever, then if these plans are rules, every land use plan after 1996 never actually went into effect.",
+    "Secondly, we know that CRAs cut the public out of land use planning.",
+    "That rings true in Wyoming, where the plan we are voting on today is located.",
+    "So I stand here today, and I urge all of you to vote against this CRA.",
+    "I urge my colleagues to cast a ``no'' vote on this resolution of disapproval."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO \"MILES CI",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO \"MILES CITY FIELD OFFICE RECORD OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-08/html/CREC-2025-10-08-pt1-PgS6998-2.htm",
+   "sentences": [
+    "In the end, land use plans like this one take time and are the result of hundreds, even thousands, of people's work--work that deserves respect.",
+    "They also determine which land use requirements can be eased for things like pipelines or transmission lines.",
+    "But I am here now because Republicans want to rescind these land use plans through the Congressional Review Act.",
+    "Until today, Congress had never ever used a congressional resolution of disapproval to change or overturn a land use plan.",
+    "That is because no administration has ever considered these land use plans to be ``rules'' under Federal statute.",
+    "No administration--none--since the Congressional Review Act was passed in 1996 has ever treated land use plans as rules.",
+    "So here is what that means legally: No land use plan has been submitted to Congress, a legal requirement for rules.",
+    "Because the Congressional Review Act prohibits rules from going into effect until 60 days after they are submitted to Congress-- and no administration has ever submitted one--then every land use plan after 1996 never legally went into effect.",
+    "One of the resolutions under consideration this week is for a land use plan in Alaska.",
+    "As someone from American Hunters and Anglers said, in using slightly more colorful language that I will leave out, this move obliterates ``years of public input from hunters and anglers,'' and uses taxpayer dollars to prop up--I will say it again--a foreign-owned mining company."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING THE NATIONAL EMERGENCY DECLARED WITH RESPECT TO ENERGY",
+   "title": "TERMINATING THE NATIONAL EMERGENCY DECLARED WITH RESPECT TO ENERGY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-08/html/CREC-2025-10-08-pt1-PgS7016.htm",
+   "sentences": [
+    "They imposed steep tariffs on steel and aluminum, driving up energy costs, infrastructure costs, and they are blocking energy from coming onto the grid.",
+    "Household energy costs are expected to increase by another $170 annually by 2035 thanks to tax credit repeals and tariffs.",
+    "It will make it even harder for folks who are already struggling to make ends meet because of the affordability crisis instigated by this administration's tariffs and economic policies.",
+    "It will mean less domestic manufacturing and innovation, all while diminishing America's competitive leadership globally, and it will make it harder for impacted developers and utilities to secure their financing.",
+    "In January, on his first day in office, President Trump paused all new leasing and permitting of wind energy projects on public lands.",
+    "In March, the Environmental Protection Agency withdrew the permit for Atlantic Shores Offshore Wind.",
+    "In August, the Department of the Interior issued an illegal stop-work order on Revolution Wind's offshore wind project--a project that was already 80 percent done.",
+    "If you order a gas turbine today, it would take you 5 to 7 years just to receive it, and its price is going through the roof because of the tariffs that the President has put on things like aluminum and steel.",
+    "Senator Kaine and I introduced S.J. Res. 71 to put an end to Trump's war on American-made, affordable energy, to bring down costs for American families, to save jobs that American families rely on, and to call out this administration for its chaos and its incompetence and the fact that it doesn't seem to care about the impacts on everyday Americans."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLOTURE MOTION",
+   "title": "CLOTURE MOTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgS6670.htm",
+   "sentences": [
+    "When they rescind the roadless rule, it threatens access to clean water for millions of Americans.",
+    "In fighting for the roadless rule, we are fighting for protections for our roadless areas and against putting special interests first.",
+    "We are fighting for stronger local economies for all and against industrial development for a wealthy few.",
+    "I am fighting for the roadless rule, and I urge you to join me.",
+    "To the American people and my constituents in New Mexico, I urge you to engage in the public commenting process and make sure that your voices are heard."
+   ]
+  },
+  {
+   "date": "2025-08-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-08-01/html/CREC-2025-08-01-pt1-PgS5189.htm",
+   "sentences": [
+    "It also includes placeholders for several important, security-related activities that Chair Mullin and I have collectively agreed to further develop and appropriately fund in conference based on additional information that we expect to receive from the Sergeant at Arms and the Capitol Police."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgS1367-3.htm",
+   "sentences": [
+    "And when it comes online, it is going to generate more clean power with its wind turbines than the Hoover Dam.",
+    "It is the largest ever built clean energy project in the Western Hemisphere.",
+    "I also want to be clear to my colleagues across the aisle that this clean energy phenomenon has created 400,000 jobs around the country.",
+    "We are going to have more and more demands on this grid in coming years, especially with the growth of data centers and AI--a billion dollars sidelined to upgrade that power grid in Georgia.",
+    "Do we really want all these jobs to disappear because President Trump wants to create a war on affordable, American-made, clean energy?",
+    "And among other things, Trump's so-called national energy emergency declaration would allow his administration to use eminent domain, one of the most controversial powers that a government can have, to take private land for oil and gas infrastructure at the expense of our American jobs and livelihoods.",
+    "This is blatant hypocrisy, as Trump's favorite billionaire ``bro'' Elon Musk actually took a $465 million Federal loan guarantee from that same Department that literally saved Tesla from bankruptcy in 2010.",
+    "And when these massive, multibillion-dollar construction projects stall, it is not Trump's billionaire friends who will suffer; it is everyday Americans who work in these factories.",
+    "More than 90 percent of the electricity generation projects currently in line to connect to the grid all across this Nation--in red States and in blue States--waiting interconnection are clean energy projects.",
+    "Just last year, 93 percent--93 percent--of new electricity generation was carbon-free.",
+    "We added 52 gigawatts--50 nuclear power generating station quantities' worth--of solar, wind, and storage to the grid in the last year alone.",
+    "In addition to being clean and carbon-free--and many of the big companies that procure energy care about that--these power sources are cheaper, they are faster, they are less capital-intensive than older technologies, like coal-fired plants or gas turbines.",
+    "Put simply, clean energy is the cheapest electricity on the grid.",
+    "Onshore wind and solar are by far the cheapest.",
+    "If Trump has his way and he keeps blocking American-made clean energy projects, we know that significantly higher energy and electricity costs are on the way.",
+    "We want to impose on working families that are already struggling to pay for eggs--if they haven't crossed that off their grocery list already--the rising cost of milk, groceries going through the roof, rent payments going up--we are going increase their electric rates because that is what this fake emergency is going to do.",
+    "Advanced groups who do the analysis, folks like the Rhodium Group, have looked at what his crusade will mean regarding American clean energy investments and electricity costs.",
+    "Trump's war on American-made clean energy is going to kill thousands of jobs in the skilled trades."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF OCEAN ENERGY MANAGEMENT RELATING TO \"",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE BUREAU OF OCEAN ENERGY MANAGEMENT RELATING TO \"PROTECTION OF MARINE...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgS1322-4.htm",
+   "sentences": [
+    "The Outer Continental Shelf, where these wells are typically drilled, is home to one-of-a-kind cultural resources, from incredible historic shipwrecks to old maritime infrastructure, even evidence of human settlements on land that used to be on dry ground but is now on the sea floor.",
+    "This policy is a small change, and it simply brings offshore oil and gas up to the exact same standard that we already apply to offshore wind projects.",
+    "It is reasonable for us to expect the same of offshore energy developers.",
+    "Madam President, I rise today in opposition to S.J. Res. 11, which would repeal a policy that helps protect archeological sites in the ocean when oil and gas development is planned in the area."
+   ]
+  },
+  {
+   "date": "2025-02-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-20/html/CREC-2025-02-20-pt1-PgS1075-2.htm",
+   "sentences": [
+    "These grants do two things: They support survivors of rape and sexual assault, sexual abuse, and domestic violence; and they help law enforcement hold predators and abusers accountable.",
+    "If you support survivors of sexual assault and domestic violence, if you support law enforcement holding abusers and predators accountable, I hope you will support this amendment."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security (Executive Calendar)",
+   "title": "Border Security (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS881.htm",
+   "sentences": [
+    "When he was pressed about this during his confirmation hearings, Mr. Kennedy continued to promote junk science studies rather than walk back his misinformation.",
+    "During his confirmation process, Mr. Kennedy also reportedly made commitments to my Republican colleagues to support restrictions on mifepristone, a medication abortion and miscarriage management drug.",
+    "It is true that Mr. Kennedy has made a number of conflicting statements in the past about his personal views on women's reproductive healthcare, but during his confirmation process, Mr. Kennedy signaled to Republican Senators that he will go along with whatever President Trump wants to further roll back women's reproductive rights.",
+    "HHS plays a critical role in overseeing Medicare, overseeing Medicaid, and the Affordable Care Act.",
+    "Melissa from Albuquerque is concerned that Mr. Kennedy's past of promoting misinformation about vaccines and his lack of experience will endanger Americans.",
+    "William said: My research team and I have had to continually battle anti- vax misinformation.",
+    "Robert F. Kennedy Jr. is often at the center of that misinformation.",
+    "Lori from Las Cruces is also worried that Mr. Kennedy's history of spreading misinformation could harm Americans.",
+    "I agree with these New Mexicans that Mr. Kennedy is unprepared, he is unqualified, and he is dangerously unfit to be confirmed as our next Health Secretary--unfit to protect our kids' health from debunked conspiracy theories, unfit to defend women's reproductive rights, unfit to safeguard the future of Medicare and Medicaid, and unfit to continue lifesaving medical research and medical care in my State and across the country.",
+    "In fact, New Mexicans have raised their concerns in letters and emails and phone calls day in and day out, and I am going to take a few minutes to read to you from some of these New Mexicans who are terrified about the danger that Mr. Kennedy would pose as our Nation's healthcare Agency leader.",
+    "I urge you in the strongest possible terms to oppose his nomination as Secretary of HHS."
+   ]
+  },
+  {
+   "date": "2025-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Tulsi Gabbard (Executive Calendar)",
+   "title": "Nomination of Tulsi Gabbard (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgS847-2.htm",
+   "sentences": [
+    "Both before and after this trip, Ms. Gabbard undermined U.S. intelligence and echoed Russian and Syrian disinformation regarding Assad's use of chemical weapons on his own people.",
+    "Her website wrongly stated that: Both attacks occurred in towns under the control of al- Qaeda-linked opposition forces.",
+    "Both attacks resulted in multiple civilian casualties, and both were immediately blamed on the Assad government.",
+    "On top of this, Ms. Gabbard has repeatedly made public statements that echo Russian justification for Putin's unjustified, unprovoked invasion of Ukraine.",
+    "She has blamed our NATO allies for failing to recognize Russia's ``legitimate security concerns.'' Those are literally her words.",
+    "And she has amplified Russia and Putin's disinformation campaigns alleging Ukraine's development of bioweapons.",
+    "On February 23, 2022, Ms. Gabbard echoed Russian talking points blaming Putin's invasion of Ukraine on the Biden administration.",
+    "Specifically, she tweeted: This war and suffering could have easily been avoided if Biden Admin/NATO had simply acknowledged Russia's legitimate security concerns regarding Ukraine's becoming a member of NATO, which would mean U.S./NATO forces right on Russia's border.",
+    "As my colleague Senator Bennet said so powerfully as he pointed out at Ms. Gabbard's confirmation hearing, she sent this tweet at the very moment that Russian tanks were rolling over Ukraine's border, essentially saying that Vladimir Putin was justified invading the free nation of Ukraine.",
+    "Then-Senate Intelligence Committee Vice Chair and now Secretary of State Marco Rubio tweeted in response saying, this is ``simply not true,'' noting that the week before the invasion, Putin once again demanded NATO leave every country that joined after 1997, including Bulgaria, Romania, and 12 others.",
+    "Ms. Gabbard decided, instead, to give the benefit of the doubt to Vladimir Putin.",
+    "Ms. Gabbard has also repeatedly praised Edward Snowden, a former National Security Agency contractor who fled to China and then to Russia after he was charged in 2013 with illegally exposing government surveillance methods and classified information.",
+    "Ms. Gabbard has called him a ``brave whistleblower'' and even went so far as to introduce legislation in the House of Representatives to pardon Edward Snowden.",
+    "In 2016, the House Intelligence Committee issued a declassified, scathing report that found Snowden leaked secrets that caused tremendous damage to U.S. national security.",
+    "As that report made clear, Snowden was not a whistleblower; he was and is a traitor to this Nation.",
+    "Ms. Gabbard and anyone who is interested in understanding the impact of the leaked secrets has access to the declassified House Intelligence Committee report and many other public sources of information explaining the damage that Snowden caused to our national security.",
+    "Yet she continues to believe her own sources of information instead and to this day will not say that Snowden betrayed this country.",
+    "Edward Snowden is not a whistleblower; he is a traitor.",
+    "If we confirm her as our next Director of National Intelligence, Ms. Gabbard will be responsible for transmitting lawful whistleblower complaints to Congress.",
+    "Her past statements on Snowden reveal a deficient understanding of our Nation's whistleblower laws that should be patently disqualifying for any Director of National Intelligence, much less any national security appointee.",
+    "When my colleagues on the Intelligence Committee pressed Ms. Gabbard during her confirmation hearing about whether her views had changed and if she would acknowledge that Mr. Snowden were a traitor, she refused.",
+    "Our allies will be reluctant to share intelligence with her, as will our own intelligence professionals, given her past support for Putin and for other dictators.",
+    "And he said in his speech: I say to all of Europe, I say to America, we will set up suicide bombers who are now in your countries.",
+    "I will be the first to say that there are reforms to section 702 that we should make to ensure that this law always focuses on the communications of foreign targets abroad and is never inadvertently used in a way that threatens the privacy of innocent Americans.",
+    "This individual told me: As a retired intelligence officer, I urge you to do everything you can to keep Tulsi Gabbard from becoming the next [DNI].",
+    "Gary wrote: As a retired U.S. Air Force intelligence officer, I urge you to use all [of] your influence to block Tulsi Gabbard as the next Director of National Intelligence.",
+    "For all of these reasons, I will not be supporting Ms. Gabbard's confirmation."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)",
+   "title": "Nomination of Russell Vought (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt2-PgS767-2.htm",
+   "sentences": [
+    "They are the FBI agents who are working to get drug cartels out of our communities.",
+    "They are the Federal customs officers and border agents who enable trade at our southern border and stop fentanyl before it enters our country.",
+    "They are the inspectors and scientists who ensure the safety of our food and our medicine, and they are the countless workers who ensure our elders receive their Social Security checks on time.",
+    "This breach by Elon Musk's DOGE minions may expose the system to irreversible damage, undermining our individual privacy rights and our country's economic and national security.",
+    "As the OMB Director at the end of the last Trump administration, Mr. Vought was the lead architect of the President's fiscal year 2021 budget proposal that called for $500 billion cut from Medicare, $900 billion cut from Medicaid, $71 billion cut from Social Security--yes, Social Security--$76 billion cut from disability programs, zeroing out entire Federal programs, including the Corporation for Public Broadcasting, the Legal Services Corporation, community development block grants, and community services block grants--all to pave the way for Trump to double down on his tax breaks for billionaires.",
+    "That plan called for extending Trump's tax cuts for the wealthy by slashing Medicaid by $2.1 trillion, SNAP by $400 billion, and eliminating the Affordable Care tax credits that help folks afford healthcare coverage.",
+    "Last time I checked, that was up to the Supreme Court and our court systems.",
+    "Do we really trust a man hell-bent on slashing Medicare, Medicaid, and Social Security, defying Congress, and destroying independent Federal Agencies to be an air traffic controller?",
+    "Dismantling the Department of Education will not only impact him, but it will devastate all public schools and hurt students like my son who have disabilities.",
+    "A constituent from Albuquerque who requested anonymity is worried about his job as a Federal civil servant because of Vought's agenda.",
+    "The court continued by dismissing Trump's arguments justifying the funding freeze, declaring: The Executive Branch has a duty to align federal spending and action with the will of the people as expressed through congressional appropriations, not . . . ``Presidential priorities.'' These court rulings represent battles won, but this war to defend the Constitution and stability in this Nation is far from over.",
+    "We cannot stand by and allow Mr. Vought, Elon Musk, or even this President to disregard the safety and security of the American people, and the law is on our side.",
+    "We won't stop until Trump, Musk, and Vought follow the law and abide by the Constitution.",
+    "I will continue to stand up to this chaos, to this lawlessness, and as part of that work, I will vote no on Russell Vought."
+   ]
+  },
+  {
+   "date": "2025-01-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP EXECUTIVE ORDERS",
+   "title": "TRUMP EXECUTIVE ORDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-29/html/CREC-2025-01-29-pt1-PgS490.htm",
+   "sentences": [
+    "Hitting ``send'' on a two-page memo, the Trump administration triggered a chaotic 24 hours that has thrown every town, county, Tribe, nonprofit, doctor's office, hospital, nursing home, school, and preschool in my State into disarray.",
+    "If you heard that President Trump blocked all Federal Medicaid reimbursements, you heard correctly.",
+    "If you heard that the White House claimed Federal Medicaid reimbursements were exempt from the blockade, you also heard correctly.",
+    "If you heard that despite being allegedly exempt, Medicaid reimbursement was still blocked, you heard correctly.",
+    "Let's just take Medicaid just for a start.",
+    "Almost a quarter of my State's budget moves through the Medicaid portal--the one that was shut down yesterday.",
+    "Eight billion dollars in Federal Medicaid funding comes to New Mexico every single year.",
+    "Millions and millions of dollars' worth of Medicaid reimbursement happen on that portal in any given day.",
+    "Seven out of ten nursing home residents, 55 percent of newborn births, more than 700,000 people in total in my State depend on Medicaid for their healthcare.",
+    "Because a Medicaid blockade would impact over a third of New Mexico's population, it really impacts all of our healthcare providers, from small, rural clinics to our largest hospitals.",
+    "I heard from childcare and Head Start providers, rental assistance programs, Tribal governments, local law enforcement, fire departments, and nonprofit organizations that provide everything from support to our veterans to healthy meals for seniors and families.",
+    "This has been upheld time and again by the Supreme Court, by the Justice Department, the Government Accountability Office, and it was codified into law in the Impoundment Control Act of 1974.",
+    "Now, let me read just a few letters that I received from New Mexicans over these last 2 days: Tamborah from Deming, who depends on Social Security disability benefits and Medicaid, was scared she would not be able to keep up with rent or basic necessities during the pause.",
+    "Shelley from Albuquerque, a dietitian, nutritionist, is scared for the very lives of her patients who depend on Medicaid to survive.",
+    "She wrote to me: Those I serve on the Developmental Disabilities Waiver are Medicaid recipients, and some rely 100 percent on the specialized formula for tube feeding.",
+    "Louis from Las Cruces is concerned that his grandson won't be able to support his family if President Trump's border eliminates NIH funding and consequently his grandson's job.",
+    "Melissa from Albuquerque is a Head Start childcare provider and has a son at Head Start.",
+    "These are the folks coordinating to go after the cartels, who are going after the fentanyl trafficking.",
+    "The New Mexico crisis intervention program was created through our Bipartisan Safer Communities Act, a bill that I helped to negotiate.",
+    "This program funds the enforcement of red flag mandates to combat and prevent gun violence.",
+    "Justice assistance grants for police departments.",
+    "Last year, New Mexico local law enforcement entities received about $1 million in Federal justice assistance grant funding, and that funding is used for personnel, equipment, training, and technical assistance for New Mexico's police departments.",
+    "New Mexico homeless support services.",
+    "Last year New Mexico nonprofits received $17 million to the Housing and Urban Development Department's Continuum of Care Program to help put a roof over the heads of people who have been living on the streets.",
+    "Each year, 16 federally funded community health center organizations in our State leverage, on average, $76 million to serve over 300,000 patients, to provide them with healthcare--17 percent of those patients are completely uninsured; 40 percent are covered by Medicaid.",
+    "These three rural airports receive $15 million a year, more or less, through this program.",
+    "New Mexico's housing trust fund.",
+    "The housing trust fund money is used for affordable housing for extremely low- and very low-income households.",
+    "They planned to open a seventh Women's Business Center in Hobbs, NM, to focus on growing childcare businesses.",
+    "Silver Consolidated Schools, which serves over 2,500 students and their families in Southwest New Mexico, they told me the Silver Consolidated School District is 2 years into their 5-year, nearly $6- million school-based mental health services grant.",
+    "And this grant created, once again, in the Bipartisan Safer Communities Act, has allowed the school district to put mental health services in each school in the district.",
+    "These are services that the students, especially those in crisis, have come to rely on in a four-county region that lacks basic mental health services.",
+    "I am here now talking on the Senate floor because I will fight like hell to stop this or any of Trump's brazen, illegal funding blockades, and I am not alone.",
+    "Tamborah wrote to me: I will not be able to pay full price rent.",
+    "I won't be able to pay my bills.",
+    "I will fight like hell to keep it."
+   ]
+  },
+  {
+   "date": "2025-01-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP EXECUTIVE ORDERS",
+   "title": "TRUMP EXECUTIVE ORDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-28/html/CREC-2025-01-28-pt1-PgS442.htm",
+   "sentences": [
+    "Mr. President, our economy, our hospitals, your mother's nursing home, your son's school lunch, your niece's afterschool program, our police, fire departments, our newborns, our elders, our veterans, pretty much everyone in my home State of New Mexico--President Trump threw them all into chaos with an unconstitutional and patently illegal power grab.",
+    "He literally shut down the Medicaid reimbursement portals across the country.",
+    "Although after a day of raising hell over it, I think that Medicaid--at least the Medicaid portal in my State--may well be up and running again, at least for now.",
+    "And for context, almost a quarter of my State's budget actually moves through that portal--about $8 billion in Medicaid funding every single year in one small State alone.",
+    "He threw every town and county, Tribe, nonprofit, healthcare provider, school, and preschool into total disarray.",
+    "Did Donald Trump just effectively close my child's preschool program?",
+    "This has been upheld time and again by the Supreme Court, by the Department of Justice, by the Government Accountability Office, and by the law--specifically, the Impoundment Control Act of 1974.",
+    "There have been times when I have been able to work with my Republican colleagues to pass appropriations bills out of committee unanimously, and I am not going to cede that to any administration to be abused.",
+    "And I just want to say to my own constituents how sorry I am that they are going through this right now because the amount of anguish and uncertainty--and, you know, I had heard from a Tribal housing program today that said: You know, we won't be able to make payroll in a few days if this is how this is going to be."
+   ]
+  }
+ ]
+}

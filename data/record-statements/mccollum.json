@@ -1,0 +1,954 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mccollum",
+ "name": "Betty McCollum",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 59,
+  "sentences": 411
+ },
+ "statements": [
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPUBLICAN VOTE TO BLOCK SEC. HEGSETH'S IMPEACHMENT",
+   "title": "REPUBLICAN VOTE TO BLOCK SEC. HEGSETH'S IMPEACHMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgE1192-4.htm",
+   "sentences": [
+    "Secretary Hegseth's prosecution of the War in Iran is clearly in contravention of the War Powers Resolution of 1973.",
+    "Congress has neither declared war, nor passed statutory authorization, and the United States was not attacked by Iran.",
+    "His reckless actions have contributed to the horrific killing of civilians in Iran, including at least 120 children."
+   ]
+  },
+  {
+   "date": "2026-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT ECONOMIC AND ACADEMIC FREEDOM ACT OF 2026",
+   "title": "PROTECT ECONOMIC AND ACADEMIC FREEDOM ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-04/html/CREC-2026-09-04-pt1-PgE868-5.htm",
+   "sentences": [
+    "This bill would condition federal funding based on a university's choices regarding investments, procurement, partnerships, and other institutional activities in Israel and the West Bank.",
+    "My Republican colleagues are advancing this bill to punish academic institutions that divest from Israeli companies or end partnerships with Israeli universities.",
+    "Instead, it does real harm to Jewish students by conflating antisemitism with criticism of the state of Israel.",
+    "Mr. Speaker, I rise today in opposition to H.R. 4795, the Protect Economic and Academic Freedom Act of 2025.",
+    "Mr. Speaker, I urge my colleagues to oppose the bill. ____________________"
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGOA EXTENSION ACT",
+   "title": "AGOA EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5377-2.htm",
+   "sentences": [
+    "I also wish to state that I am very proud that this bill for the CR does not have any funding that the President requested in his supplemental for the war in Iran, which was his war of choice.",
+    "President Trump's disastrous tariffs on allies like Canada, his unlawful war in Iran, they are all driving up the costs for Americans, and the President fails to address the rising cost of living.",
+    "Mr. Speaker, I rise in support of this continuing resolution, and I thank the chair and the ranking member for bringing it to the floor for us to have a vote on.",
+    "As I urge my Senate colleagues to complete their work, to get it done."
+   ]
+  },
+  {
+   "date": "2026-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAIN STREET CAPITAL ACCESS ACT",
+   "title": "MAIN STREET CAPITAL ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-27/html/CREC-2026-07-27-pt1-PgE739-6.htm",
+   "sentences": [
+    "The bill would further weaken the Consumer Financial Protection Bureau, the agency Congress built to protect consumers from junk fees, medical debt abuses, and unfair debt collection, at the very moment financial scams are costing Americans tens of billions of dollars.",
+    "We can and must do better to protect our constituents, and the small banks that work to reinvest in our communities.",
+    "Mr. Speaker, I rise in opposition to H.R. 6955, the Main Street Capital Access Act.",
+    "Let me be clear, while I oppose this bill, I remain a strong supporter of our community banks and Community Development Financial Institutions (CDFI) and their ability to compete fairly with the Wall Street megabanks.",
+    "I urge my colleagues to vote no on H.R. 6955. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP INSIDER TRADING ACT",
+   "title": "STOP INSIDER TRADING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-27/html/CREC-2026-07-27-pt1-PgE743-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to H.R. 7008, the so- called Stop Insider Trading Act.",
+    "Let me be clear, this bill is not a stock trading ban.",
+    "That is why I do not own or trade individual stocks, securities, commodities, or futures.",
+    "Unfortunately, not all of my colleagues share that view, which is why Congress must act now to ban stock trading for Members of Congress.",
+    "In 2012, I voted for the STOCK Act, which brought transparency to Members' stock trades.",
+    "The penalty for violating the STOCK Act is just $200.",
+    "This bill would prohibit Presidents, Vice Presidents, Members of Congress, and their dependent children, spouses, and trustees from owning and trading individual stocks.",
+    "H.R. 7008 makes it harder for Americans to vote due to Republican maneuvering that inserts the SAVE America Act in this bill.",
+    "This provision will pile new burdens on voters and election officials, override even the strictest state voter ID laws by tossing out documents like student IDs and hunting licenses, and effectively ends voting by mail.",
+    "Trust in Congress is at an all-time low.",
+    "We will not rebuild it with a bill that dodges real stock trading reform while making it harder for Americans to vote.",
+    "I am a cosponsor of H.R. 6731, the Restore Trust in Government Act.",
+    "I urge my colleagues to oppose this bill and instead work to institute real accountability. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgE699-3.htm",
+   "sentences": [
+    "I have long been a vocal opponent of the way the United States provides a blank check to Israel.",
+    "For the last nine years, I have carried a bill, the Defending the Human Rights of Palestinian Children and Families Living Under Israeli Military Occupation, which would put limits on how all US assistance to Israel may be used.",
+    "Further, I am a proud cosponsor of other legislation, like the Block the Bombs Act, that would place additional limits on U.S. assistance to Israel.",
+    "These are the legislative proposals that the House should be taking up to condition assistance to Israel.",
+    "Instead, the House is considering Mr. Massie's Amendment which would strike all $3.3 billion in Foreign Military Financing to Israel.",
+    "I support the goal of Mr. Massie's Amendment to cut the same funding that has helped Israel commit human rights violations in Gaza, the West Bank, and Lebanon.",
+    "However, this amendment does nothing to limit the assistance we provide to Israel under the defense appropriations bill, nor does it condition future assistance that the U.S. is due to provide Israel under the existing Memorandum of Understanding between our two countries that is not set to expire until FY2028.",
+    "As drafted, other foreign assistance--including vital assistance to Palestinians--could be cut off as well.",
+    "For Mr. Massie, this amendment is just another way to carry out President Trump's isolationist agenda to limit and, in some cases completely cease, U.S. foreign assistance.",
+    "Fewer children will be vaccinated against highly contagious, dangerous diseases like tuberculosis--and we know that disease does not stop at any border.",
+    "Mr. Chair, I rise today in opposition to H.R. 8595, the Fiscal Year 2027 State and Foreign Operations appropriations bill.",
+    "I will vote present on Mr. Massie's Amendment as I have serious concerns with the way it is so broadly written.",
+    "I urge my colleagues to join me in opposing this bill. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING H.R. 7757, THE KIDS INTERNET AND DIGITAL SAFETY (KIDS) ACT",
+   "title": "SUPPORTING H.R. 7757, THE KIDS INTERNET AND DIGITAL SAFETY (KIDS) ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgE672-2.htm",
+   "sentences": [
+    "Social media companies use mass data collection and algorithms to drive adults, teens, and children towards harmful content, misinformation, and targeted ads that line the profits of Big Tech companies.",
+    "The KIDS Act is a package of 14 online safety bills, including revised provisions from the Kids Online Safety Act and the Children and Teens' Online Privacy Protection Act, that would require social media companies to protect the personal data of our children and teens and prevent the promotion of harmful content like eating disorders and suicide.",
+    "Specifically, the KIDS Act will mandate safeguards, parental tools, and policies to keep kids safe when using social media, video games, chatbots, and more.",
+    "This provision could have been weaponized by President Trump's politically motivated Federal Trade Commission (FTC), which has already made it its mission to attack gender-affirming care every chance it gets.",
+    "Removing that provision from the final bill will safeguard against politically motivated censorship online.",
+    "Additionally, I have heard from constituents expressing their concerns with online age verification that could be required by the KIDS Act.",
+    "I agree with those I have heard from; if age verification is required across all online platforms, it could create additional privacy concerns for our children and teens.",
+    "However, the only age verification requirement that is mandated by the KIDS Act is for pornographic websites.",
+    "The bill also contains provisions to ensure data collected or used for age verification on pornographic websites complies with strict data minimization and security measures. ____________________",
+    "Mr. Speaker, I rise today in support of H.R. 7757, the Kids Internet and Digital Safety (KIDS) Act, the first step towards delivering long-overdue privacy protections for children and teens online."
+   ]
+  },
+  {
+   "date": "2026-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP ADMINISTRATION'S MEMORANDUM OF UNDERSTANDING WITH IRAN",
+   "title": "TRUMP ADMINISTRATION'S MEMORANDUM OF UNDERSTANDING WITH IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-18/html/CREC-2026-06-18-pt1-PgE586-4.htm",
+   "sentences": [
+    "Mr. Speaker, President Trump's reckless decision to take the United States to war with Iran without Congressional authorization has been a disastrous failure.",
+    "In the first hours of the war, President Trump spoke of eliminating the Iranian regime through U.S. military strikes and a popular uprising of the Iranian people.",
+    "Not only did no popular uprising against the regime materialize, but President Trump's war has had the opposite effect on Iran.",
+    "The Iranian regime is emboldened, and it is more tightly controlled by hardliners and the Islamic Revolutionary Guard Corps than it was prior to the war.",
+    "This will make the prospects for long-term peace with Iran more difficult.",
+    "First and foremost is the failure to eliminate or secure the Iranian nuclear program's strategic materials.",
+    "Iran's nuclear program has not been destroyed, and the United States and our allies now have far less visibility into the program than we did while President Obama's Joint Comprehensive Plan of Action with Iran was in effect.",
+    "The war has also depleted U.S. stocks of critical munitions, creating a vulnerability for the U.S. military in other theaters.",
+    "Now, President Trump is attempting to negotiate with Iran to reopen the Strait of Hormuz, which was not closed prior to the start of the war.",
+    "I also support the ongoing ceasefire with Iran.",
+    "That includes insisting that Israel honor its ceasefire with Lebanon and cease and desist its use of U.S. munitions in that conflict.",
+    "The President's new agreement with Iran is just a tenuous sixty-day extension of the existing ceasefire.",
+    "It may result in an end to the U.S. naval blockade of Iran and a reopening of the Strait of Hormuz, but that remains to be seen.",
+    "Furthermore, the ceasefire extension announced by President Trump does nothing to resolve the most critical issues in this conflict, such as the status of the Iranian nuclear program, ballistic missile programs, frozen Iranian financial assets, or imposed U.S. sanctions.",
+    "Prior to the President's war of choice, Iran was an international pariah state.",
+    "The Iranian regime was guilty of heinous crimes and human rights atrocities against its own people.",
+    "But President Trump's war has allowed Iran to recast itself as a victim in the eyes of many around the world."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgE555-3.htm",
+   "sentences": [
+    "Mr. Chair, I rise in opposition to the Fiscal Year 2027 Agriculture, Rural Development, FDA, and Related Agencies bill."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING H.R. 1346, ACCESS TO YEARLONG E15",
+   "title": "SUPPORTING H.R. 1346, ACCESS TO YEARLONG E15",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgE526-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1346, the Nationwide Consumer and Fuel Retailer Choice Act, which would ensure that Americans across the country have access to year-round E15."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4690, RELIABLE FEDERAL INFRASTRUCTURE ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1182, EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3050-5.htm",
+   "sentences": [
+    "Mr. Speaker, I was in committee voting on DACA."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSITION TO IRAN WAR",
+   "title": "OPPOSITION TO IRAN WAR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgE258.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to restate my strong opposition to President Trump's unlawful and unconstitutional decision to order U.S. military strikes on Iran on February 28, 2026.",
+    "His actions have entered our Nation into war without any imminent threat posed by Iran to the United States and lacking necessary Congressional authorization.",
+    "With each day, it becomes more apparent that President Trump's decision to go to war with Iran was a political choice, not a strategic necessity.",
+    "Additionally, Congress is still waiting for the administration to fully explain where it is spending the additional $150 billion in funding that the Pentagon received through the Republicans reconciliation package that cut taxes for billionaires at the expense of health care and food assistance programs.",
+    "If the American people are being asked to pay for this war, then they deserve clear answers from President Trump on why he chose to attack Iran, what objectives justify continued military engagement, and what guardrails are in place to prevent a broader or protracted regional war.",
+    "First, it was about destroying Iran's nuclear program, despite declaring last June that Iran's nuclear facilities had been ``totally obliterated''--a claim Trump repeated in February.",
+    "Then it was about regime change.",
+    "Then we heard from Secretary of State Marco Rubio that the reason to launch the war was because Israel was going to attack Iran first.",
+    "When that rationale was retracted, Americans were told it was about destroying Iran's ballistic missiles and military industrial base.",
+    "In 2002, I was one of 133 members of the House of Representatives to vote against the Authorization for Use of Military Force Against Iraq Resolution.",
+    "With respect to Iran, President Trump has denied the American public and the Congress this same process that the Constitution requires.",
+    "As President Trump commits our Nation to another serious conflict in the Middle East, this time with Iran, the American people must not be fooled, not be driven by fear, and not yield to another expensive and painful war of choice.",
+    "While I have clearly stated my disagreement with this war in Iran, I strongly believe that we must stand united in supporting U.S. servicemembers and their families.",
+    "Let me be clear--I will not write blank checks to the Department of Defense."
+   ]
+  },
+  {
+   "date": "2026-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-13/html/CREC-2026-02-13-pt1-PgE138-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to S. 1383, the so- called SAVE America Act.",
+    "This is yet another attempt from Republicans to nationalize elections and take power away from local communities.",
+    "This new version of the SAVE America Act is even more extreme.",
+    "It would force every state to hand over their voter rolls to the Department of Homeland Security, so that Kristi Noem can purge voters at will.",
+    "Regardless, millions of women would face additional burdensome steps to register to vote.",
+    "I want to be clear; this bill is not simply a voter ID bill and labelling it as such is a trick to convince Americans of its intent.",
+    "It is already illegal for noncitizens to vote in federal elections.",
+    "Now, Republicans want to force every American to provide burdensome and expensive ``documentary proof of citizenship''--similar to what Minnesotans already rejected--in order to exercise their right to vote.",
+    "Congress should pass the John Lewis Voting Rights Advancement Act that would reinstate many of the protections in the Civil Rights Act of 1965 that were undercut by the Supreme Court in their Shelby County v. Holder decision in 2013.",
+    "The bill would expand automatic voter registration and allows for same day voter registration and protects against race- based discrimination at the ballot box.",
+    "I already voted against an earlier version of this bill and I will continue to oppose it whenever it comes to the floor."
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgE121-2.htm",
+   "sentences": [
+    "I will vote no on H.R. 7148 because it does nothing to stop the dangerous and illegal activity of ICE and Border Patrol agents.",
+    "If it were, the Trump Administration would focus their efforts on states like Texas, which has 20 times as many undocumented immigrants as Minnesota, or Florida which has 12 times as many.",
+    "The right of protestors under the 2nd amendment to lawfully be armed in a public space is being questioned by President Trump.",
+    "However, I cannot in good conscience support any bill with funding for DHS while this dangerous surge in Minnesota continues and without real oversight and constraints on ICE and Border Patrol.",
+    "Last Thursday, White House border Czar Tom Homan announced that there would be a drawdown of federal immigration agents in Minnesota.",
+    "When asked by a reporter that same day whether a drawdown would occur, President Trump stated: ``No, no, not at all.'' Considering that President Trump has rejected his own Border Czar's intentions to reduce the presence of federal agents in Minnesota, I have no reason to believe that the Trump Administration will implement the reforms necessary to protect the safety of the people of Minnesota.",
+    "In the coming weeks, my vote will depend on what controls we can put in place for ICE and Border Patrol.",
+    "We must improve the transparency and accountability of DHS operations by requiring that ICE and CBP agents wear functioning body cameras capturing archival footage.",
+    "Mr. Speaker, I do not support continued funding for the Department of Homeland Security (DHS).",
+    "I strongly oppose combining Homeland Security funding with the other important Appropriations bills in this package.",
+    "I understand that some of my colleagues will be voting for this package with the hope that we will make those changes.",
+    "I will vote no today on H.R. 7148."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025",
+   "title": "DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgE113-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to H.J. Res. 142, which would override a tax reform made by D.C.'s elected City Council.",
+    "That is why I urge my colleagues to reject H.J. Res. 142, which would overturn local tax credits designed to reduce child poverty and support families facing economic hardship.",
+    "Today, I will vote to defend the rights of the residents of D.C.--as I would my own constituents--to ensure Republicans do not override these important budgetary decisions enacted by the D.C. City Council.",
+    "I will not vote for these attempts to decide those issues for a single district at the local level, whether in the District of Columbia or in the districts of any Member of Congress.",
+    "Mr. Speaker, I respect the will of D.C. residents to shape their local government through their local elections, and that is why I will not support H.J. Res. 142.",
+    "I urge my colleagues in the majority to focus on issues of national importance, like negotiating a bipartisan deal to rein in the Department of Homeland Security, and leave the governing of D.C. to their city council. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO FUNDING FOR DHS",
+   "title": "NO FUNDING FOR DHS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1969.htm",
+   "sentences": [
+    "Mr. Speaker, I voted today not to continue funding for the Department of Homeland Security without real oversight and constraints on ICE and Border Patrol.",
+    "We will continue to care for our neighbors and to stand up for our rights because they are your rights, too. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING H.R. 7006",
+   "title": "SUPPORTING H.R. 7006",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-27/html/CREC-2026-01-27-pt1-PgE76-5.htm",
+   "sentences": [
+    "This bill, while imperfect, rebukes President Trump's attacks on foreign aid by allocating $5.5 billion for humanitarian assistance, $9.4 billion to support the State Department's Diplomatic Programs, and $3.5 billion for global health programs that support maternal and child health and fighting infectious diseases.",
+    "The conferenced agreement removes Republican policy riders that would have prohibited any funding to the Green Climate Fund, the Clean Technology Fund, and implementation of the Paris Climate Agreement, and saved the Global Environment Facility from elimination.",
+    "Mr. Speaker, I rise in support of the FY2026 Financial Services and General Government and National Security, Department of State, and Related Programs Appropriations Act.",
+    "While these bills were not ideal, I urge my colleagues to support this bipartisan agreement. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "This bill makes $400 million in funding available to Ukraine, and I strongly believe that we should continue to support our Ukrainian allies.",
+    "I am also pleased that this bill does not include additional funding to cover operations in the Caribbean and Venezuela.",
+    "We should pass a Venezuelan War Powers Resolution to do just that.",
+    "The bill also contains language to reaffirm our ironclad support in Congress for our NATO allies and all 32 members."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to this bill."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO PUBLIC LAND ORDER NO. 7917 FOR WITHDRAWAL OF FEDERAL LAND",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO PUBLIC LAND ORDER NO. 7917 FOR WITHDRAWAL OF FEDERAL LANDS; COOK, LAKE, AND SAINT LOUIS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1147.htm",
+   "sentences": [
+    "Alaska Wilderness League; Allegheny-Blue Ridge Alliance (ABRA); American Bird Conservancy; American Hunters & Anglers; Big Mountain Dreams; BlueGreen Generation; Bolder Options; Californians for Western Wilderness; Cascade Forest Conservancy; Center for Biological Diversity; Change the Chamber; Clean Water Action Minnesota; Colorado Mountain Club; Colorado Wild Public Lands; Conservation Colorado; Conservation Lands Foundation; Conservation Minnesota; Conservation Northwest; Conservatives for Responsible Stewardship; Crow River Trail Guards.",
+    "The Boundary Waters offers unparalleled opportunities for fishing, hunting, camping, and paddling.",
+    "Neither does the withdrawal affect other mineral deposits in the region, such as the Tamarack Intrusion, where the electric vehicle manufacturer Tesla committed to purchasing 75,000 metric tonnes of nickel from Talon Metals's Tamarack Nickel Project.",
+    "We respectfully request that you uphold protections for the Boundary Waters that ensure generations of incredible hunting, fishing, and paddling opportunities.",
+    "Mr. Speaker, I rise in opposition to this legislation, which risks polluting the Boundary Waters Canoe Area, as has been stated, our Nation's most visited wilderness.",
+    "I urge my colleagues to oppose the resolution."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgE20.htm",
+   "sentences": [
+    "Due to the perseverance of my colleagues, Ranking Members DeLauro and Kaptur, the legislation before us today provides a critical $2.4 billion increase over FY2025 to address rising energy costs for American families, strengthen our water infrastructure, and improve climate resilience.",
+    "House Republicans previously advanced H.R. 4553, a fiscal year 2026 Energy and Water bill that would have devastated Minnesota families, Minnesota's clean energy economy, and advanced President Trump's attacks on clean energy.",
+    "Our global competitors like China are investing hundreds of billions of dollars in clean-energy development.",
+    "The bill before us today makes the United States competitive by investing $3 billion in energy efficiency and renewable energy programs at the Department of Energy, rejecting President Trump and Congressional Republicans' crusade on clean energy.",
+    "As more than 62,000 Minnesotans work in clean energy, I am glad to see that this bill protects Minnesota's clean energy economy.",
+    "The clean energy sector in Minnesota has been growing five times faster than Minnesota's overall job growth and Federal investments in clean energy and energy efficiency will directly support these good-paying jobs.",
+    "Since taking office, Trump has been jeopardizing clean-energy jobs in Minnesota by terminating clean-energy incentives in his so-called ``One Big Beautiful Bill,'' canceling grants, and illegally withholding funds from state, local and tribal governments.",
+    "These actions are stalling clean-energy projects and eliminating high-wage jobs.",
+    "We cannot afford to abandon these investments during a worsening climate crisis.",
+    "The Department of Defense considers climate change to be a top national security concern.",
+    "Climate change is making nations around the world more unstable and less safe.",
+    "We don't have the luxury of ignoring the very real effects of climate change happening around us--especially when they're affecting our lives and livelihoods and our national security.",
+    "Mr. Speaker, I rise in support of the FY2026 Energy and Water Development Appropriations bill, division B of H.R. 6938.",
+    "I thank my colleagues for their overwhelming bipartisan support for this bill, and I urge the Senate to move with haste to get this legislation to the President's desk to be signed into law.",
+    "As your representative, I will continue to fight for these critical investments because Minnesotans deserve better.",
+    "I urge my colleagues to support this bipartisan agreement. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "I want to highlight how this bill maintains funding to our trust and treaty responsibilities to Indian Country.",
+    "This bill maintains Indian Health Service advanced appropriations, which is targeted for elimination by President Trump's budget.",
+    "Mr. Speaker, I rise in strong support of this legislation that secures funding for public safety, public infrastructure, public lands and, yes, public health.",
+    "Mr. Speaker, I urge my colleagues to support this appropriations bill."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgE1229-2.htm",
+   "sentences": [
+    "This bill does nothing to address the health care affordability crisis and is full of tired, failed ideas from previous GOP efforts to repeal the Affordable Care Act (ACA).",
+    "Despite having fifteen years to plan and come up with ways to improve or replace the ACA, they've only tried to repeal it--over 50 times.",
+    "Republicans' failure to extend the ACA tax credits means that more than 20 million Americans will be paying twice as much on average to buy the same health care plan they have today.",
+    "President Trump had no problem extending tax cuts for millionaires, billionaires, and large corporations in his Big Ugly Bill--yet he and his GOP cronies won't even extend temporary tax credits to help Americans afford their health care.",
+    "Mr. Speaker, Democrats have been sounding the alarm about the ACA tax credits for months, yet Republicans spent their time cutting a trillion dollars from the health care system instead.",
+    "I oppose this legislation and urge my colleagues to do the same. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 'TIS THE WEEK BEFORE CHRISTMAS ON THE HILL",
+   "title": "'TIS THE WEEK BEFORE CHRISTMAS ON THE HILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6098.htm",
+   "sentences": [
+    "ACA enhanced premium tax credits expire at the end of the year.",
+    "We will vote in January, so don't give up the fight."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING OF H. CON. RES. 61 AND H. CON. RES. 64",
+   "title": "SUPPORTING OF H. CON. RES. 61 AND H. CON. RES. 64",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgE1218-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H. Con. Res. 61 and H. Con. Res. 64, War Powers resolutions that direct President Trump to remove the U.S. military from hostilities in the Caribbean and against Venezuela unless explicitly authorized by Congress.",
+    "President Trump has also made several public comments about the potential for U.S. military forces to be used to remove Nicolas Maduro from power in Venezuela.",
+    "President Trump has even directed the seizure of oil tankers in the region to apply pressure in Venezuela.",
+    "As a Member of Congress who voted against authorizing the disastrous Iraq War, I believe that a war to enact regime change in Venezuela would be a catastrophic decision.",
+    "That is why these two war powers resolutions are so critically important, President Trump and his administration are out of control.",
+    "Congress must prevent President Trump from dragging the United States into another disastrous regime change war that the American people do not support.",
+    "I urge my colleagues to vote in favor of these two war power resolutions. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCERNS WITH H. RES. 939",
+   "title": "CONCERNS WITH H. RES. 939",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgE1191-4.htm",
+   "sentences": [
+    "When President Trump was impeached a second time for inciting an insurrection, the House Judiciary Committee completed an investigative report that documented what Members of Congress and our entire Nation witnessed on January 6, 2021.",
+    "In the face of this obstruction, I will continue to work with my Democratic colleagues to document violations of the law by this administration, submit briefings to the court to rein in their abuses, and collect evidence to hold the President of the United States and his officials accountable. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSITION TO PERMITTING BILLS",
+   "title": "OPPOSITION TO PERMITTING BILLS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgE1193-3.htm",
+   "sentences": [
+    "These bills roll back vital protections that ensure our constituents have access to clean air and water, and can weigh in on projects that will affect the health of their selves, their families, and their community.",
+    "In reality, the PERMIT Act is a partisan package of over a dozen bills that roll back the Clean Water Act, further weakening protections on our rivers, lakes, streams, and wetlands.",
+    "Let me tell you just how bad these bills are: H.R. 3668 would strip states of their ability to enforce their own clean water laws concerning natural gas pipelines.",
+    "We are considering these bills in the wake of Trump Administration actions to cancel and stall clean energy projects.",
+    "In October, President Trump canceled over $7.5 billion in grants for 223 clean energy projects.",
+    "Let's talk about how President Trump is weaponizing the existing permitting process to freeze the approval of permits for onshore wind and solar projects, leaving thousands of megawatts of clean power in limbo at a time when demand for electricity is sky rocking.",
+    "I once again urge the Republican House Majority to stop bringing these harmful bills that fast-track fossil fuel projects, restrict communities' ability to challenge harmful development, and work to undermine clean energy development.",
+    "Mr. Speaker, I rise in opposition to the slate of permitting bills that the Republican majority has brought to the House Floor this week.",
+    "Mr. Speaker, I urge my colleagues to oppose all six of these bills."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISINTERMENT OF REMAINS OF FERNANDO V. COTA FROM FORT SAM HOUSTON NATIONAL CEMETERY, TEXAS",
+   "title": "DISINTERMENT OF REMAINS OF FERNANDO V. COTA FROM FORT SAM HOUSTON NATIONAL CEMETERY, TEXAS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgE1184.htm",
+   "sentences": [
+    "Second, the President has circumvented the authority of several state governors and federalized the National Guard for the purposes of deploying them in support of domestic law enforcement activities.",
+    "Domestic policing is not among the National Guard's core missions, and the Posse Comitatus Act of 1878 prohibits the President from deploying the U.S. military for domestic law enforcement missions unless the Insurrection Act of 1807 has been invoked, which President Trump has not done.",
+    "Second, I am concerned that this NDAA will enable the Trump administration's continued misuse of the National Guard and active-duty military for domestic law enforcement purposes.",
+    "The bill codifies portions of several of President Trump's executive orders regarding U.S. military activity on the Southern Border, including the administration's establishment of new National Defense Areas.",
+    "This NDAA needed to provide clear limits on the President's border operations including sunset provisions and reauthorization requirements.",
+    "Third, while this NDAA repeals the 1991 and 2002 Authorizations for Use of Military Force (AUMF) related to U.S. military actions in Iraq, the bill does not repeal the 2001 AUMF that was passed following the terrorist attacks September 11, 2001.",
+    "I have long supported a repeal of the 2001 AUMF because it was intended to authorize military action against Al-Qaeda in Afghanistan, a mission that has long since ended.",
+    "The legal authorities provided in the 2001 AUMF are now being twisted by the Trump administration to justify military strikes in the Western Hemisphere on drug traffickers, who are international criminals, but that the Administration has defined as ``terrorists.'' As I stated previously, I believe this to be unlawful.",
+    "These actions are dangerous mission creep that I fear may lead to another catastrophic war of regime change in Venezuela.",
+    "That includes a provision prohibiting transgender Americans from participating in sports at the U.S. service academies, which is an unnecessary attack on transgender Americans who are already prevented from serving in the military by President Trump.",
+    "Fifth, this NDAA authorizes expanded military cooperation between the United States and Israel that, considering the Israeli military campaign in Gaza that has killed approximately 70,000 Palestinians, I do not support.",
+    "To be clear, I have always supported and continue to support cooperative missile defense programs like Iron Dome because I believe that no child--Israeli or Palestinian--deserves to have missiles fall on their heads.",
+    "However, this NDAA goes beyond support for missile defense and includes provisions that strengthen the defense production relationship and technology sharing, including unmanned systems, between the United States and Israel.",
+    "As a strong critic of Prime Minister Netanyahu, I am appalled at the way he has prosecuted the Israeli military campaign against Hamas terrorists that has led to catastrophic death and destruct in Gaza.",
+    "My colleagues have given their best efforts and put forward a product that attempts major reforms to a clearly broken defense acquisition process, many of which I support.",
+    "Mr. Speaker, I rise in opposition to the National Defense Authorization Act for Fiscal Year 2026 (NDAA).",
+    "I support paying our troops in the event of a shutdown, but the way OMB and the Department moved this funding was not legal.",
+    "I oppose this legislation and I urge my colleagues to do the same. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE HORRORS OF SOCIALISM",
+   "title": "DENOUNCING THE HORRORS OF SOCIALISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-28/html/CREC-2025-11-28-pt1-PgE1127-2.htm",
+   "sentences": [
+    "With this resolution, House Republicans are sending a message to many proud democracies, including multiple members of the North Atlantic Treaty Organization (NATO), that we condemn the domestic political process within their nations.",
+    "As Ranking Member of the House Appropriations Subcommittee on Defense, I know just how crucial it is to maintain relationships with our NATO allies who have come to our aid.",
+    "I voted against it then, as I will do again today."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ISSUES WITH H. RES. 713, CENSURE OF REP. OMAR",
+   "title": "ISSUES WITH H. RES. 713, CENSURE OF REP. OMAR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgE876-3.htm",
+   "sentences": [
+    "After the unconscionable act of gun violence that took the life of Charlie Kirk, Representative Omar clearly and immediately condemned this assassination.",
+    "Censure is a serious tool that should be reserved for holding Members of Congress accountable for unethical or criminal behavior, like committing assault or accepting bribes, or for specific categories of speech that are not protected by the First Amendment, including direct threats against individuals, inciting treason or insurrection, or the use of aggressively insulting ``fighting words'' against another Member on the House Floor."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING FUNDING FOR COMMUNITIES",
+   "title": "ENSURING FUNDING FOR COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4420.htm",
+   "sentences": [
+    "Republicans made devastating healthcare cuts to Medicaid and the Children's Health Insurance Program.",
+    "That is because the Affordable Care Act subsidies are about to expire.",
+    "We all know what happened to the State Department and USAID."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgE823.htm",
+   "sentences": [
+    "It's a sign of a worsening climate crisis that threatens our life, health, safety and economic security.",
+    "Our global competitors like China are investing hundreds of billions of dollars in clean-energy development, but Republicans are choosing to cut U.S. investments that create high-wage jobs, drive innovation and lower energy bills for Americans.",
+    "As House Republicans' Energy and Water bill increases Minnesotans' energy costs, their funding cuts will have a chilling effect on clean- energy jobs--a sector that has been growing five times faster than Minnesota's overall job growth.",
+    "More than 62,000 Minnesotans work in clean energy, and more than 44,000 of them work in energy efficiency.",
+    "Since taking office, Trump has been jeopardizing clean-energy jobs in Minnesota by terminating clean-energy incentives in his so-called ``One Big Beautiful Bill,'' canceling grants and illegally withholding funds from state, local and tribal governments.",
+    "These actions are stalling clean-energy projects and eliminating high-wage jobs.",
+    "The Trump administration is also attacking workforce development for clean energy.",
+    "We cannot afford to abandon these investments during a worsening climate crisis.",
+    "The Department of Defense considers climate change to be a top national security concern.",
+    "Climate change is making nations around the world more unstable and less safe.",
+    "Mr. Chair, we don't have the luxury of ignoring the very real effects of climate change happening around us--especially when they're affecting our lives and livelihoods and our national security.",
+    "As the only Minnesotan on the Appropriations Committee, I will vote against advancing this bill.",
+    "As a Minnesota representative, I will fight to defend these critical investments because Minnesotans deserve better."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING THE RESOLUTION HONORING THE VICTIMS OF THE ANNUNCIATION CATHOLIC CHURCH SHOOTING",
+   "title": "SUPPORTING THE RESOLUTION HONORING THE VICTIMS OF THE ANNUNCIATION CATHOLIC CHURCH SHOOTING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgE795-3.htm",
+   "sentences": [
+    "It is heartbreaking that only two months after my friends Speaker Emerita Melissa Hoffman and her husband Mark were murdered, and Senator John Hoffman and his wife Yvette were shot, Minnesotans are once again grieving for victims of gun violence.",
+    "I am grateful for the immediate actions of the older students, adults, law enforcement, EMTs, and medical personnel whose actions prevented a horrible situation from becoming even worse.",
+    "Under President Biden, Democrats and Republicans joined together to pass the Bipartisan Safer Communities Act, the first bill addressing the gun violence epidemic since Republicans allowed the assault weapons ban to expire in 2004.",
+    "We have a duty to protect Americans from gun violence."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOURNING THE TRAGIC SHOOTING AT ANNUNCIATION CATHOLIC CHURCH IN MINNEAPOLIS, MINNESOTA",
+   "title": "MOURNING THE TRAGIC SHOOTING AT ANNUNCIATION CATHOLIC CHURCH IN MINNEAPOLIS, MINNESOTA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgE803-3.htm",
+   "sentences": [
+    "They deserve and have the full support of our community, our state, and our nation. ``The immediate actions of adults, older children, law enforcement, EMTs, and medical personnel saved lives.",
+    "I commend Governor Walz for acting swiftly and sending the State Patrol and Bureau of Criminal Apprehension to respond to this horrific crime. ``President Trump and Congress have a duty to take action to end this epidemic of gun violence.",
+    "We cannot once again wait for another tragedy before we enact common sense gun safety laws.'' ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSING H.R. 3633, S. 1582, and H.R. 1919",
+   "title": "OPPOSING H.R. 3633, S. 1582, and H.R. 1919",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-25/html/CREC-2025-07-25-pt1-PgE728-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to H.R. 3633, the Digital Asset Market Clarity Act.",
+    "S. 1582, the Guiding and Establishing National Innovation in U.S. Stablecoins Act, and H.R. 1919, the Anti- CBDC Surveillance State Act.",
+    "H.R. 3633, which Republicans are calling the CLARITY Act, would carve the crypto industry out from current securities laws and regulations.",
+    "Additionally, the CLARITY Act would not only enable conflicts of interest from Trump and his family through meme coins like $TRUMP, but it would also send the message that Congress approves of the way President Trump is selling access to the White House.",
+    "S. 1582, the GENIUS Act, is a bipartisan attempt at establishing a framework for stablecoins--a type of cryptocurrency primarily used for trading crypto assets, transacting in goods and services, insulating against local currency instability, and sending payments across borders.",
+    "While S. 1582 is a step in the right direction, it fails to establish an effective federal framework to regulate stablecoins.",
+    "Each of these corporations are exploring starting their own stablecoins.",
+    "Finally, H.R. 1919, the Anti-CBDC Surveillance State Act, would immediately halt and prohibit the United States from exploring the potential benefits of a central bank digital currency (CBDC).",
+    "As much of our transactions have moved away from using the physical dollar through the increased use of credit cards, mobile wallets, and cryptocurrencies, the Federal Reserve has been researching ways to innovate the U.S. dollar.",
+    "Mr. Speaker, rather than putting forward three bills that fail to make consumers safer and stifle innovation, Congress should instead consider a comprehensive regulatory framework for crypto that will promote the responsible development of these digital assets while protecting American consumers and investors.",
+    "I urge my colleagues to reject H.R. 3633, S. 1582, and H.R. 1919. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+   "sentences": [
+    "BioMADE has never funded any efforts to develop or produce lab-grown meat for any purpose.",
+    "NATO, the world, came to our aid.",
+    "Mr. Chairman, I am very, very proud of my vote to vote against the President's big tax package, which added $3.4 trillion of debt to our national debt over the next 10 years.",
+    "That is exactly what we are doing in Ukraine: helping a sovereign nation defend its democracy from Russian aggression.",
+    "DOD's HIV-AIDS prevention program pairs health and security assistance to provide care and treatment in concert with military training, exercises, and humanitarian activities.",
+    "Israel totally had the right to defend itself after the heinous attacks on October 7, and all the hostages should come home.",
+    "The Israeli military campaign has been an absolute tragedy for the people of Palestine.",
+    "The funding in this bill does not support offensive weapons for Israel.",
+    "This bill provides for defensive measures only, like Iron Dome, which I support.",
+    "Israeli children deserve to go to bed at night knowing that missiles from Yemen, Iran, the Houthis, or anywhere else in the region will not rain down on them.",
+    "The United States and Jordan have, since 1996, a status of forces agreement, a 2006 acquisition and cross-service training agreement, and a 2021 defense cooperation agreement.",
+    "Jordan air bases have been particularly important for the U.S. to conduct intelligence, surveillance, and target acquisition and reconnaissance missions in Syria and Iraq.",
+    "Madam Chair, first, the majority has already eliminated funding for the Ukraine Security Assistance Initiative in this bill.",
+    "I personally believe that to be a huge mistake, and that that only emboldens Putin.",
+    "President Trump seems to be agreeing now because just the other day he announced the decision to provide billions of dollars of equipment to Ukraine through our NATO partners.",
+    "Now we have an amendment to further prohibit any support of Ukraine as they fight to defend their country from an illegal Russian invasion.",
+    "Putin is attempting to rewrite the map of Europe through use of force.",
+    "He is deliberately killing civilians, targeting hospitals and schools, destroying the economy and the livelihood of Ukraine in the process.",
+    "Putin and his thugs are committing war crimes on a mass scale.",
+    "If we do not, then he or other authoritarian leaders will likely try something like this again, either in Ukraine or elsewhere in the world.",
+    "Madam Chair, America is not alone in our military support of Ukraine.",
+    "Our NATO and European allies are continuing to provide billions of dollars for support themselves.",
+    "Let's not abandon the EU or our NATO allies now, and let's not abandon Ukraine.",
+    "The Ukrainian people did not ask for this war.",
+    "Madam Chair, I would stress to the body that the majority has already eliminated any funding for the Ukraine Security Assistance Initiative in this bill.",
+    "I would point out again, Madam Chair, when I talked about international war crimes and when the previous speaker was talking about the loss of life in Ukraine, there are 20,000 Ukrainian children who have been kidnapped by Russia.",
+    "Madam Chair, I thank President Trump for now realizing it is important we come to Ukraine's aid through our NATO partners.",
+    "This amendment would prevent the Department of Defense from buying or displaying a map that shows how China views itself in the world, how China is putting out mis- and disinformation on what they think the world should look like according to them.",
+    "Mr. Chair, I rise in strong opposition to this amendment.",
+    "Mr. Chair, I rise in opposition to this amendment.",
+    "For these reasons, I oppose this amendment, and I ask my colleagues to do the same.",
+    "Our allies support us, and we support them.",
+    "We cannot allow that to happen.",
+    "Mr. Chair, I support the inclusion of the funds in this bill, and I strongly oppose this amendment.",
+    "Mr. Speaker, I rise in opposition to the amendment.",
+    "For these reasons, I will urge defeat of this amendment.",
+    "It keeps their militaries healthy, and I continue to oppose this amendment.",
+    "The people of Gaza are in desperate need of more humanitarian relief, which I strongly support.",
+    "Mr. Chair, I urge the defeat of this amendment.",
+    "Mr. Chair, I rise in opposition to the amendment.",
+    "For this reason I oppose this amendment.",
+    "Madam Chair, I rise in strong opposition to this amendment.",
+    "I urge my colleagues to oppose this amendment.",
+    "Madam Chair, I rise in opposition to this amendment."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3333.htm",
+   "sentences": [
+    "Is it to turn the National Guard into the national police?",
+    "Mr. Chair, that is the status of Afghan nationals living in the United States under temporary protected status.",
+    "The temporary protected status designation that they received was essential to keeping them safe.",
+    "This is a process that involves rigorous background checks and requires verification of their work assisting the United States, but it can take up to 7 years for an applicant to receive their visa.",
+    "That is why it is deeply unfortunate that the administration has allowed the temporary protected status for Afghanistan to expire last night.",
+    "Mr. Chair, I support this package of en bloc amendments to the Defense bill that are in the interest of Members on both sides of the aisle, and I urge its adoption.",
+    "Mr. Chair, I support this package of en bloc amendments to the Defense bill that are of interest to Members on both sides of the aisle, and I urge its adoption.",
+    "I urge adoption, and I yield back the balance of my time.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time.",
+    "I urge its adoption, and I yield back the balance of my time.",
+    "Mr. Chairman, I rise today in opposition to H.R. 4016, the Department of Defense Appropriations Act, 2026.",
+    "We are friends, and we will get through this.",
+    "Mr. Chair, may I ask the chairman if he is prepared to close, and I will give my closing statement.",
+    "Mr. Chair, I support this package of amendments en bloc No. 4 to the Defense bill that are of interest to Members of both sides of the aisle.",
+    "Mr. Chair, I also support this package of amendments en bloc to the Defense bill that are of interest to Members of both sides.",
+    "Mr. Chair, I also support this package of amendments en bloc to the Defense appropriations bill that are of interest to Members of both sides of the aisle.",
+    "Mr. Chair, I also support this package of amendments en bloc to the Defense bill that are of interest to Members on both sides of the aisle."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "title": "CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgE643-2.htm",
+   "sentences": [
+    "Mayor Karen Bass of Los Angeles implemented a multi-day curfew and surged law enforcement resources to downtown Los Angeles to maintain control of the situation.",
+    "But even when the Los Angeles Chief of Police stated that the demonstrations ``were nowhere near a level'' where the National Guard was needed, President Trump disregarded his opinion and took the escalatory action of deploying 2,000 members of the California National Guard to Los Angeles.",
+    "Our active-duty military has absolutely no legal role in domestic law enforcement.",
+    "Los Angeles County has 17,000 law enforcement personnel who are well trained in crowd control.",
+    "Republicans had the opportunity to bring a resolution introduced by my colleague, Representative Barragan, condemning violence and bad actors, and thanking local law enforcement for their work.",
+    "Mr. Speaker, I rise in strong opposition to H. Res. 516, the Condemning the violent June 2025 riots in Los Angeles, California.",
+    "I cannot support it. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "This bill will make devastating cuts to our communities in exchange for massive tax breaks for President Trump, Elon Musk, and their billionaire buddies.",
+    "Republicans are voting to deliver bigger medical bills to their constituents while President Trump continues to ignore his promise to cut costs for everyday Americans.",
+    "It attacks our federal investments in clean energy, which will cost over 790,000 jobs over the next decade and raise household energy bills, all while adding to air pollution and worsening our climate crisis.",
+    "And even after all that, it will add $4 trillion dollars to the national debt with interest costs over the next decade, saddling future generations with the cost of tax breaks for the wealthy.",
+    "They certainly haven't held the townhalls where they would hear that no one wants them to give $1.3 trillion in tax breaks to the wealthy elite--the top 1 percent--and pay for it by cutting roughly $1.3 trillion from our healthcare and food assistance.",
+    "I will be joining every Democrat in the House and Senate in voting against this travesty.",
+    "Mr. Speaker, I will be voting no on this betrayal of our values and our constituents, and I will continue to oppose all Republican efforts to take away food, healthcare, and basic government services that Minnesotans rely on."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: McCOLLUM VOTE TO TABLE H. RES. 537 IMPEACHMENT RESOLUTION",
+   "title": "McCOLLUM VOTE TO TABLE H. RES. 537 IMPEACHMENT RESOLUTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgE635-2.htm",
+   "sentences": [
+    "When President Trump was impeached a second time for inciting an insurrection, the Democratic conference worked together to draft a factual and thoughtful impeachment resolution to reflect what Members of Congress and our entire nation witnessed on January 6, 2021.",
+    "By contrast, the impeachment resolution that I will vote to table on June 25th was drafted in isolation by one member, and Representative Green introduced it a mere two hours before he came to the floor to push it to a vote."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA A",
+   "title": "CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA AND ACROSS THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgE629-3.htm",
+   "sentences": [
+    "The additional attempt that night to target Senator Ann Rest and Representative Kristin Bahner demonstrate that this tragedy could have been much worse without the swift actions of Minnesota law enforcement personnel.",
+    "Families have access to paid family leave.",
+    "Women's reproductive rights are protected."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA A",
+   "title": "CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA AND ACROSS THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2909-4.htm",
+   "sentences": [
+    "Mr. Speaker, I urge every Member of this House to stand with Minnesotans, to stand with our Nation, and to stand with our democracy by voting for the adoption of this resolution."
+   ]
+  },
+  {
+   "date": "2025-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025",
+   "title": "RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-17/html/CREC-2025-06-17-pt1-PgE580-5.htm",
+   "sentences": [
+    "These airwaves belong to every American--and they're a bargain: public media receives less than 0.01 percent of federal spending, and yet it provides essential services to every citizen in every part of this country.",
+    "If enacted, H.R. 4 will rescind over $8.3 billion in foreign assistance funding already appropriated by Congress on a bipartisan basis.",
+    "Mr. Speaker, I rise in strong opposition to H.R. 4, the Recissions Act of 2025, because this bill undermines and outright destroys long-held, bipartisan American values at home and abroad.",
+    "Mr. Speaker, for these reasons and many more, I strongly oppose this legislation and encourage my colleagues to do the same. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-17/html/CREC-2025-06-17-pt1-PgE582.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to S. 331, the HALT Fentanyl Act.",
+    "The HALT Fentanyl Act also imposes harmful mandatory minimum sentences.",
+    "Decades of research shows that mandatory minimum laws that focus solely on supply reduction and incarceration are not effective in slowing the flow of illicit drugs into our country or the rates of overdoses in our communities.",
+    "Congress should bring forward a comprehensive bill that reflects the input of medical professionals, addiction specialists, researchers, and law enforcement."
+   ]
+  },
+  {
+   "date": "2025-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSITION TO H.R. 884, H.R. 2056, AND H.R. 2096",
+   "title": "OPPOSITION TO H.R. 884, H.R. 2056, AND H.R. 2096",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-17/html/CREC-2025-06-17-pt1-PgE584-5.htm",
+   "sentences": [
+    "One of the bills before us last week, H.R. 884, would repeal D.C.'s local law that allows noncitizens to vote in local elections.",
+    "I have serious concerns with allowing noncitizens who do not hold a green card to vote in local elections, but this is the wrong way to go about addressing that.",
+    "I voted No on H.R. 2096, the Protecting Our Nation's Capital Emergency Act, because it would repeal part of a local D.C. law to give the police department increased authority to address incidents of serious misconduct and discipline officers.",
+    "I voted No on H.R. 2056 because we shouldn't be nullifying a local law to tell an individual police department where they must divert their resources and how they can best serve their community, including residents who are immigrants.",
+    "I will not vote for these attempts to decide those issues for a single district at the local level, whether in the District of Columbia or in the districts of any Member here.",
+    "I voted present because I can't support repealing a local D.C. law, but I do support having a conversation about how we define voter eligibility nationwide.",
+    "Mr. Speaker, I respect the will of D.C. residents to shape their local government through their local elections, and that is why I do not support H.R. 2096, H.R. 2056 or H.R. 884. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-06/html/CREC-2025-06-06-pt1-PgE538-3.htm",
+   "sentences": [
+    "However, we must acknowledge that this legislation came to the House Floor at a time when the Trump administration is systematically dismantling our Nation's mental health and substance use treatment programs.",
+    "In the last several months, the administration has announced plans to eliminate the Substance Abuse and Mental Health Services Administration (SAMHSA) as an independent division of the Department of Health and Human Services (HHS), fired hundreds of SAMHSA employees, rescinded over $1 billion in state funding to treat mental health and substance use disorders, and proposed eliminating some of the very programs that are authorized in the SUPPORT Act.",
+    "House Republicans have also just voted to make the largest health care cut in history in their so-called ``Big Beautiful Bill'', taking away Medicaid from millions of Americans.",
+    "Mr. Chair, I will vote in support of H.R. 2483, the Substance Use-Disorder Prevention that Promotes Opioid Recovery and Treatment (SUPPORT) Reauthorization Act of 2025.",
+    "While I will vote in favor of the SUPPORT Act, my concern is that this Republican led Congress has authorized these programs with no one left at the agencies to see them through. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE 50TH ANNIVERSARY OF THE END OF THE VIETNAM WAR AND THE RESETTLEMENT OF SOUTHEAST ASIAN REFUGEES TO AMERICA",
+   "title": "COMMEMORATING THE 50TH ANNIVERSARY OF THE END OF THE VIETNAM WAR AND THE RESETTLEMENT OF SOUTHEAST ASIAN REFUGEES TO AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-23/html/CREC-2025-05-23-pt1-PgE477.htm",
+   "sentences": [
+    "Southeast Asian Minnesotans are thriving throughout our state as entrepreneurs, professionals, engineers, and in the skilled tradesmen and women; serving our community as teachers, law enforcement officers, nurses, and medical doctors; and serving our nation and state in the Armed Forces and the Minnesota National Guard.",
+    "Many have overcome tremendous difficulties and challenges in pursuing the American dream, especially Hmong and Laotian war veterans who fought alongside American forces during the secret war in Laos, and who continue to cope with the trauma of war, mental health challenges and other legacies of war.",
+    "I am grateful for the rich cultural diversity our Southeast Asian Diaspora communities have brought to our nation and to Minnesota's Fourth Congressional District over the last fifty years."
+   ]
+  },
+  {
+   "date": "2025-05-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "title": "DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-09/html/CREC-2025-05-09-pt1-PgE409-5.htm",
+   "sentences": [
+    "Mr. Speaker, instead of addressing the harms of the President's on- again-off-again tariffs, or working to address rising costs for American consumers, Republicans used this week to negotiate their Reckless Budget Scheme and rename a body of water.",
+    "My constituents do not want Congress to give trillions of dollars of tax cuts to billionaires.",
+    "They do not want cuts to SNAP or Medicaid, vital lifelines in my home state of Minnesota.",
+    "Mr. Speaker, I rise in opposition to H.R. 881, the DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSE REPUBLICANS SENSELESS ATTACKS ON PUBLIC HEALTH AND OUR ENVIRONMENT",
+   "title": "HOUSE REPUBLICANS SENSELESS ATTACKS ON PUBLIC HEALTH AND OUR ENVIRONMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgE380-3.htm",
+   "sentences": [
+    "Under the Clean Air Act (CAA), California can apply for waivers to set its own vehicle emissions standards, and other states can adopt California's exact regulations under certain circumstances.",
+    "The law explicitly grants these states the ability to protect their citizens from air pollution and address climate change with stronger standards, and in doing so they are saving Americans $89 billion in fuel costs through 2040.",
+    "Delisting a fish won't solve the water shortage problems of the West; it is a distraction from the real issues of climate change, outdated infrastructure, and competing water allocations.",
+    "I voted against all five of the Congressional Review Act resolutions that were brought to the floor this week, and I urge the Republican House Majority to stop bringing these harmful and nonsensical attacks on our public health and the environment to the House floor."
+   ]
+  },
+  {
+   "date": "2025-04-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-17/html/CREC-2025-04-17-pt1-PgE319-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to H.R. 22, the Safeguard American Voter Eligibility Act, or the SAVE Act, which does nothing to protect voting rights.",
+    "Sixty-nine million American women--one out of four Americans would face an additional burden to register to vote simply because they changed their last name after marriage.",
+    "In 2012, Minnesotans rightly rejected a state constitutional amendment that would have imposed voter ID requirements.",
+    "Under the guise of election integrity, the Republicans' H.R. 22 would require Minnesotans and every American to provide burdensome ``documentary proof of citizenship''--similar to what Minnesotans already rejected--in order to participate in federal elections.",
+    "Congress should pass the John Lewis Voting Rights Advancement Act that would reinstate many of the protections in the Civil Rights Act of 1965 that were undercut by the Supreme Court in their Shelby County v. Holder decision in 2013.",
+    "The bill would expand automatic voter registration and allows for same day voter registration and protects against race- based discrimination at the ballot box.",
+    "Again, I oppose H.R. 22, the Republican SAVE Act, and I urge my colleagues to join me in voting NO. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO ROGUE RULINGS ACT OF 2025",
+   "title": "NO ROGUE RULINGS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-17/html/CREC-2025-04-17-pt1-PgE325-2.htm",
+   "sentences": [
+    "If a federal judge can no longer issue a national injunction, the Administration could continue to violate the rights of the American people until the case reaches the Supreme Court.",
+    "Mr. Speaker, I rise in opposition to H.R. 1526, the No Rogue Rulings Act of 2025.",
+    "I urge my colleagues to reject this bill. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-14/html/CREC-2025-04-14-pt1-PgE317-2.htm",
+   "sentences": [
+    "Mr. Speaker, the Republican's Reckless Budget Scheme is back on the House floor today, proposing the same devastating cuts to our families and communities in exchange for massive tax breaks for Elon Musk, President Trump, and their billionaire buddies.",
+    "But despite that, House Republicans are using their majority to advance an agenda that serves the wealthiest Americans at the expense of our Nation's working families.",
+    "That level of cut is impossible without decimating Medicaid.",
+    "Let's be clear: Republicans are using these cuts to our neighbors to offset their tax breaks for giant corporations and billionaires like Elon Musk.",
+    "And even after all these cruel cuts, their budget will still burden Americans with trillions of dollars in new debt.",
+    "President Trump's `Big Beautiful Bill' doesn't do anything to address the high cost of living or fix the economic mess created by the President's trade war.",
+    "Nearly 1.3 million Minnesotans--about one quarter of our state--are covered by Medicaid.",
+    "Mr. Speaker, I am voting no on this betrayal of our values and our constituents, and I will continue to oppose all Republican efforts to take away food, healthcare, and basic government services that Minnesotans rely on. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPACT OF PRESIDENT TRUMP'S DISASTEROUS TARIFFS ON CANADA",
+   "title": "IMPACT OF PRESIDENT TRUMP'S DISASTEROUS TARIFFS ON CANADA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-18/html/CREC-2025-03-18-pt1-PgE220-3.htm",
+   "sentences": [
+    "I had hoped that he would follow through on his promise to ``lower costs on day one.'' But instead of working to lower costs, the President has waged an unprompted trade war with Canada that will cost Americans when they heat their homes, feed their families, run their small businesses, or tend to their farm.",
+    "It's been one week since President Trump imposed twenty-five percent tariffs on Canada.",
+    "Minnesotans and consumers across this country will feel the impact of Trump's tariffs at the grocery stores when they buy products like pork, produce, or eggs.",
+    "With the uncertainty of Trump's tariffs, small business owners aren't able to plan ahead for their businesses.",
+    "Trump has small business owners on a rollercoaster, trying to predict the extra costs they will pay in this escalating trade war.",
+    "The past few weeks have been filled with uncertainty for their business, not knowing if Trump would roll back or increase the tariffs.",
+    "And just today, Trump imposed additional tariffs imported aluminum, bringing the total tariffs on Canadian aluminum up to fifty percent.",
+    "Trump isn't hurting Canada or Ontario with this trade war He is hurting small business owners.",
+    "Trump's tariffs are also hurting farmers across this country who will incur greater costs when purchasing potash, a soil fertilizer often imported from Canada.",
+    "Americans know these tariffs are going to hit us hard.",
+    "Our financial markets are in free fall because Americans fear this trade war will push us into a recession.",
+    "Dr. John Spry, an economist at the University of St Thomas, has estimated that as long as the Trump tariffs are in place, Americans will spend one-hundred dollars more on everyday goods each month.",
+    "In my district, I'm hearing that working families and seniors on fixed incomes need relief from the high cost of living.",
+    "They can't afford to add money for tariffs to their already tight monthly budgets.",
+    "Not only are the President's tariffs hurting my constituents, but he is also damaging our relationship with Canada: an ally, a partner, and for many--a good neighbor.",
+    "I know that tariffs can be a useful tool.",
+    "But these tariffs on Canada are unprompted, unnecessary, and make no sense at all."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 25, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEE",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 25, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1083-3.htm",
+   "sentences": [
+    "This CR includes a $17 million reduction to Indian Health Service facilities, which are already falling apart.",
+    "This is before we know what Elon Musk has in store for Social Security disability, Medicaid, and Medicare.",
+    "Mr. Speaker, I rise in opposition to this full-year CR."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "Rent assistance for low-income working families is cut.",
+    "Community projects submitted by our constituents for police and first responders have also been eliminated by this bill.",
+    "Mr. Speaker, I rise in strong opposition to this full- year continuing resolution.",
+    "I will mention a few, like lifesaving medical research at the NIH.",
+    "The American people deserve better, and I urge my colleagues to vote ``no'' on this Republican failure."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGENT RAUL GONZALEZ OFFICER SAFETY ACT",
+   "title": "AGENT RAUL GONZALEZ OFFICER SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-7.htm",
+   "sentences": [
+    "To be clear, fleeing the border patrol already carries criminal and legal penalties under current law, and a conviction for fleeing border patrol already makes a person deportable.",
+    "It does nothing to make our border more secure or fix our broken immigration system.",
+    "Republicans continue to demonstrate they are not willing to work toward real solutions to bring order to the border and fix our immigration system.",
+    "This is another bill in a series of Republican slippery-slope immigration bills that erodes the rights of everyone present in the United States, including green card holders, students, temporary workers, DACA recipients, and even citizens.",
+    "In H.R. 35, there is no requirement that a noncitizen actually be charged by law enforcement, making a person deportable without even being convicted of a crime.",
+    "Mr. Speaker, I rise in opposition H.R. 35."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgE39-2.htm",
+   "sentences": [
+    "In 2022, I was proud to support the CHIPS and Science Act (Pub.",
+    "L. 117-167), a law to bring semiconductor supply chains back to the United States.",
+    "CHIPS investments are already creating jobs and improving our national security, including through a $123 million award to Polar Semiconductor in Minnesota that will double their production capacity for sensor and power chips.",
+    "Taiwan leads the market in semiconductor manufacturing and thanks to the CHIPS and Science Act, the Taiwan Semiconductor Manufacturing Company (TCMC) announced last April that it would make an over $65 billion investment in a semiconductor factory in Arizona, the largest direct foreign investment in a new project in United States history.",
+    "Mr. Speaker, I rise today in support of H.R. 33, the United States-Taiwan Expedited Double-Tax Relief Act."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgE45-2.htm",
+   "sentences": [
+    "Instead, this Republican-led Child Predator Empowerment Act puts the privacy, security, mental health, and physical well-being of young female athletes at risk.",
+    "There is bipartisan recognition of the damaging impact of a complete ban on the participation of transgender children in youth sports, as evidenced by the vetoes issued by Utah Governor Spencer Cox, Indiana Governor Eric Holcomb, and North Dakota Governor Doug Burgum in response to similar legislation introduced and passed by their respective legislatures.",
+    "If we want to take action in this Congress to truly support female athletes and women's sports, then we could address issues like equal pay, ending institutional mistreatment of female athletes, and broadening opportunities for participation for historically excluded communities.",
+    "The enforcement of H.R. 28 would cause lasting damage to student athletes and to school-based athletics, all while isolating and stigmatizing transgender and intersex youth.",
+    "Mr. Speaker, I rise in strong opposition to H.R. 28, which would open the door to invasive surveillance and physical inspections of young women and girls as a condition of their participation in sports.",
+    "I urge my colleagues to vote against this deeply misguided legislation. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "title": "PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+   "sentences": [
+    "Its impact will be felt by many of our neighbors, from green card holders and students to temporary workers and DACA recipients.",
+    "This bill does not secure the border, nor does it work to fix our immigration system.",
+    "Mr. Speaker, I rise in opposition to H.R. 30."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "deluzio",
+ "name": "Christopher R. Deluzio",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 9,
+  "sentences": 45
+ },
+ "statements": [
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE CARE OF AMERICA'S VETERANS ACT",
+   "title": "TAKE CARE OF AMERICA'S VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4548-3.htm",
+   "sentences": [
+    "It continues the privatization push of the Trump administration and so many congressional Republicans.",
+    "I am not going to take a lecture on fiscal responsibility or accept this argument from the Republicans and the Trump administration that you have to fund veterans' programs by cutting care or benefits for other veterans.",
+    "The same people who have funded an Iran war at the tune of billions and billions of dollars, the same people who added nearly $5 trillion to the debt through their One Big Beautiful Bill Act, which, by the way, has a new name now, I guess.",
+    "Mr. Speaker, there is no problem on the Republican side with adding to the debt when it comes time to give tax breaks and tax giveaways to the ultrarich and to corporations, but when it comes time to care of veterans, now they are counting pennies.",
+    "Mr. Speaker, I rise in opposition to this bill.",
+    "I rise in opposition to any effort to cut veterans' benefits."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPU",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPUBLIC OF IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2395.htm",
+   "sentences": [
+    "I support the bipartisan War Powers Resolution.",
+    "We find ourselves, once again, in a foolish regime change war, much like the one that my generation was sent to serve in Iraq that cost thousands of lives and a trillion-plus dollars.",
+    "Congress has not provided a statutory Authorization for Use of Military Force.",
+    "The third condition of the War Powers Resolution that could allow the President to do such a thing is that the United States is under attack.",
+    "That is the War Powers Resolution.",
+    "Those are the three bases that a President can use force under the War Powers Resolution."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "title": "REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1317.htm",
+   "sentences": [
+    "Mr. Speaker, to respond to the notion of hypocrisy, that we should rely on the Secretary of State's notification when required, we were not notified--the Congress did not receive notification--or asked for authorization before Americans were sent to fight and to bleed in Venezuela.",
+    "As others have pointed out here, Mr. Speaker, an aircraft carrier strike group sits nearby, poised to again send Americans into Venezuela should the President order it.",
+    "In the 118th Congress, this body voted on two War Powers Resolutions to remove Americans from hostilities that had not been authorized by the Congress.",
+    "In those two votes, 52 Republicans and 47 Republicans, respectively, thought that Congress ought to have a say about our war powers."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "title": "STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2038.htm",
+   "sentences": [
+    "I will tell you it is clear from conversations with my constituents in western Pennsylvania, and I know from people all over this country, they think our system is rigged: rigged against hardworking people, rigged for giant corporations and the rich and the powerful.",
+    "It is enabled by pliable politicians and by a Supreme Court that opens the floodgates to unlimited super-PAC money that corrupts our elections.",
+    "One way to build that back is to start with banning congressional stock trading.",
+    "Let's ban congressional stock trading."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING SOCIAL SECURITY BENEFITS",
+   "title": "PROTECTING SOCIAL SECURITY BENEFITS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1896-6.htm",
+   "sentences": [
+    "Mr. Speaker, I represent more than 180,000 people in western Pennsylvania who receive Social Security benefits.",
+    "I join my colleagues in sounding the alarm on this administration's attacks on the bedrock national promise of Social Security, which Mr. Musk called a Ponzi scheme.",
+    "We have already seen firings in the Social Security Administration, threatening to close field offices, a website crashing several times in March, a plan to end paper checks as an option, and DOGE accessing sensitive data systems.",
+    "My office has gotten hundreds and hundreds of calls from constituents who are worried about their Social Security benefits.",
+    "My Social Security telephone townhall had nearly 18,000 people.",
+    "People are worried about their earned benefits, Mr. Speaker, I will continue to stand strong against these attacks on Social Security. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC POPULISM",
+   "title": "ECONOMIC POPULISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+   "sentences": [
+    "We see Social Security, and Social Security Administration workers' abilities to deliver the hard-earned benefits that seniors have worked their whole lives for, under attack.",
+    "Let's have tariffs be part of that but let's be smart and strategic.",
+    "I am honored to introduce a colleague from the other side of the country who has been a bulldog in the fight against monopolies and so much else, a former chair of the Progressive Caucus.",
+    "We need to restore competition and break the monopolies.",
+    "My colleague from the Granite State gets this, having worked in the Justice Department to take on monopolies.",
+    "We see it with the unlimited money that runs through our elections, unlimited super-PAC spending that corporations can dump in to buy the favors that they get from politicians.",
+    "It is why you can't even fix your own stuff and why we even have to fight for the right to repair.",
+    "This right to repair goes to the heart of this.",
+    "I am from western Pennsylvania, which is sacred ground in that labor movement, where people bled for the right to organize.",
+    "That means promoting competition and taking on monopolies, giving small businesses a shot to compete, and fighting against these lousy trade deals that stripped communities for parts.",
+    "It means making more stuff in America, cracking down on junk fees and price gouging, and standing up without apology for the union way of life.",
+    "When PBMs are killing pharmacies and jacking up drug costs, you fight them.",
+    "Tonight, we have heard from Members from my side of the party, Democrats from across the country representing a lot of different districts, but we are all speaking out on ways that we are fighting corruption and the excess of corporate power and the ways that the Democratic Party ought to move forward, not for Democrats but for everyone in this country."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STAFFING CUTS AT THE VA",
+   "title": "STAFFING CUTS AT THE VA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH894-3.htm",
+   "sentences": [
+    "They take care of medical research, studying cancer, mental health, you name it, and burn pit exposure.",
+    "Mr. Speaker, do you want to talk about fiscal responsibility?",
+    "Go tax billionaires and offshoring corporations.",
+    "This is unacceptable, and we are going to fight this every way we can. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESCRIPTION DRUG COST CAP",
+   "title": "PRESCRIPTION DRUG COST CAP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH140-3.htm",
+   "sentences": [
+    "For too long, we have seen pharmacy benefit managers and Big Pharma rip us off, padding their pockets while people struggle to afford the medicine they need to stay healthy."
+   ]
+  }
+ ]
+}

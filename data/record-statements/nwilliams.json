@@ -1,0 +1,74 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "nwilliams",
+ "name": "Nikema Williams",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 17
+ },
+ "statements": [
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, the SAVE America Act is back before the House today, and right along with it is yet another attempt at voter suppression.",
+    "The SAVE America Act is just another part of a scheme by House Republicans and the Trump administration to take over our elections.",
+    "The SAVE America Act will make it harder for millions of Americans to get registered to vote by requiring in-person registration at election offices--government offices with government hours."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO NEW BURMA FUNDS ACT",
+   "title": "NO NEW BURMA FUNDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4945.htm",
+   "sentences": [
+    "Mr. Speaker, while I hope we are going to have a robust conversation around making sure that everyone back home in my district is housed with affordable housing and lowering costs in this country, today, this bill is still central to my constituents.",
+    "Mr. Speaker, I rise today in support of H.R. 4423, the bipartisan No New Burma Funds Act.",
+    "This bill, which I introduced with my colleague Young Kim, would mandate that the United States use its voice and vote to continue the World Bank's pause on disbursements and new financing commitments to the Government of Burma.",
+    "I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2185-5.htm",
+   "sentences": [
+    "It is time for House Republicans to stand up and join us in protecting the basic needs of the people instead of prioritizing massive tax breaks for billionaires.",
+    "I stand with Monica. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1569-2.htm",
+   "sentences": [
+    "Mr. Speaker, the SAVE Act is everything our civil rights leaders fought against.",
+    "According to the SAVE Act, you won't be able to vote.",
+    "Right now, under Trump and Musk's disastrous economy, families like so many of those who I represent back home in Georgia are struggling to keep up with the cost of groceries, let alone adding $130 for a passport just to register to vote.",
+    "In Georgia, over half of the population doesn't have a passport, and our driver's licenses, even the REAL ID, don't prove citizenship.",
+    "This resolution could force Georgians to pay more than $700 million just to register to vote.",
+    "This resolution violates the 14th Amendment, 19th Amendment, 24th Amendment, and every tenet of a free and inclusive democracy.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this disgrace of a voter suppression resolution."
+   ]
+  }
+ ]
+}

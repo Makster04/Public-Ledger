@@ -1,0 +1,154 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "jgarcia",
+ "name": "Jesús G. \"Chuy\" García",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 12,
+  "sentences": 34
+ },
+ "statements": [
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPERATION MIDWAY BLITZ ANNIVERSARY",
+   "title": "OPERATION MIDWAY BLITZ ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5430.htm",
+   "sentences": [
+    "Border Patrol Agent Charles Exum shot Marimar Martinez, a Montessori teacher, five times and bragged about it."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING BACK AGAINST DISMANTLING OF VOTING RIGHTS",
+   "title": "FIGHTING BACK AGAINST DISMANTLING OF VOTING RIGHTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3898.htm",
+   "sentences": [
+    "This is not election integrity.",
+    "They fear working people standing together and saying: We will not bow to white supremacy.",
+    "We will continue to work today for voting rights and representation for all."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 2027 PRESIDENTIAL BUDGET REQUEST WILL MAKE LIFE HARDER",
+   "title": "2027 PRESIDENTIAL BUDGET REQUEST WILL MAKE LIFE HARDER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3029-5.htm",
+   "sentences": [
+    "For example, the President's budget request eliminates $4 billion of affordable housing investments, wiping out programs that help families find housing, stay in their homes, and get back on their feet.",
+    "When you combine that with surging prices at the gas pump because of Trump's illegal war with Iran, Trump is making the American people suffer twice.",
+    "Just last week, Trump said: ``It is not possible'' to help Americans afford healthcare or childcare because ``we are fighting wars.'' Through this budget request, Trump isn't just waging illegal wars abroad.",
+    "He is waging war on working families here at home.",
+    "I thank my colleagues for joining me to talk about how Trump's proposed budget request would make a tough situation even worse for working families.",
+    "I urge my colleagues to protect housing, education, and healthcare especially; in other words, to prioritize the needs of all of our constituents."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt1-PgH2782-8.htm",
+   "sentences": [
+    "This is the same President who used military force in Venezuela to force regime change, the same President who is now engaging in an illegal war with Iran without even consulting Congress.",
+    "Mr. Speaker, I urge my colleagues to join with me and to vote ``no'' on this proposal."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: END CRUEL IMMIGRATION ENFORCEMENT AGAINST KIDS",
+   "title": "END CRUEL IMMIGRATION ENFORCEMENT AGAINST KIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2755-3.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Representatives Dexter and Tonko for shining a spotlight on the impact on children from the enforcement efforts of ICE and Customs and Border Protection agents."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTHORITY WITHOUT ACCOUNTABILITY",
+   "title": "AUTHORITY WITHOUT ACCOUNTABILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH722.htm",
+   "sentences": [
+    "What we are witnessing in this country is not law enforcement.",
+    "State law enforcement in Minnesota have been blocked from the vehicle where Renee was killed because the FBI sealed it off, blocking transparency and accountability.",
+    "Republicans now want to give ICE and Border Patrol even more money."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING DHS IMMIGRATION RAIDS",
+   "title": "FIGHTING DHS IMMIGRATION RAIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5014-3.htm",
+   "sentences": [
+    "In our State, police officers, law enforcement, always identify themselves.",
+    "Mr. Speaker, I rise today to oppose the Trump administration's outrageous overreach on immigration that is tearing families apart in my district and around the country.",
+    "We are calling for transparency, tracking every incident, and working on laws to curb unchecked power and to restore our constitutional rights."
+   ]
+  },
+  {
+   "date": "2025-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEW LIFE CENTERS 20th ANNIVERSARY",
+   "title": "NEW LIFE CENTERS 20th ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-02/html/CREC-2025-12-02-pt1-PgH4973-2.htm",
+   "sentences": [
+    "Its community-based, hands-on approach has played a key role in driving down gun violence in our neighborhood of Little Village.",
+    "New Life Centers Community Care programs also serve more than 45,000 individuals in need of housing, food, and other necessities."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "title": "RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4692-2.htm",
+   "sentences": [
+    "The voters want us to be working to help them afford healthcare, rent, and childcare.",
+    "I am going to finish my term with the same love and commitment that I brought to my first day of Congress here."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ICE AND DHS LOST CREDIBILITY",
+   "title": "ICE AND DHS LOST CREDIBILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4414.htm",
+   "sentences": [
+    "Last week, the Department of Homeland Security attacked me on X, insisting they deport only criminals.",
+    "Reports indicate that officers involved were not wearing body cameras.",
+    "William was a lead plaintiff in a lawsuit against Home Depot and local police for abuse.",
+    "DHS insists they target criminal immigrants, yet in Elgin, in the dead of night, ICE staged a reckless raid with helicopters and armored trucks parading detainees for cameras.",
+    "That is why we will not look away.",
+    "Chicago will not be intimidated, and I will not stop demanding truth and dignity for Silverio, William, or the children in Cicero, and for every family who deserves to live free from state terror. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HARMFUL ACTIONS BY ELON MUSK",
+   "title": "HARMFUL ACTIONS BY ELON MUSK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH692-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because a billionaire with unchecked power is calling the shots in our government.",
+    "I am outraged that President Trump is enabling this unelected billionaire donor Musk to wreak havoc on our Federal workers, dismantle critical Federal agencies, and even gain access to the personal data of millions of Americans without any vetting, security clearance, or congressional approval.",
+    "The richest man in the world should not have access to our payment systems for him to decide whether you should or should not receive payments such as Social Security benefits or Medicaid.",
+    "Billionaires like him may think they can buy our democracy, but, we, the people, will fight back. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WE CANNOT NORMALIZE CRUELTY",
+   "title": "WE CANNOT NORMALIZE CRUELTY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH665-6.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of the Protecting Sensitive Locations Act, which I introduced with my colleague, Representative Espaillat of New York, last week."
+   ]
+  }
+ ]
+}

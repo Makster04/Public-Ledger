@@ -1,0 +1,293 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "dgoldman",
+ "name": "Daniel S. Goldman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 21,
+  "sentences": 92
+ },
+ "statements": [
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 25TH ANNIVERSARY OF 9/11 COMMEMORATIVE COIN ACT",
+   "title": "25TH ANNIVERSARY OF 9/11 COMMEMORATIVE COIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3579.htm",
+   "sentences": [
+    "I rise today in support of H.R. 1993, the 25th Anniversary of 9/11 Commemorative Coin Act, as we are fast approaching the 25th anniversary of the worst attack on American soil in our history, a day when we lost almost 3,000 of our loved ones, neighbors, and friends in a coordinated attack by terrorists who wanted to destroy the very values for which our country stands: liberty and justice for all.",
+    "We can never forget those we lost, and I will never forget that day myself, watching from my apartment building less than a mile away as the second plane hurled itself into the towers.",
+    "We must honor our promise to never forget, and I urge my colleagues to join me in passing this critical legislation."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCEALING PRESIDENT'S INVOLVEMENT WITH EPSTEIN",
+   "title": "CONCEALING PRESIDENT'S INVOLVEMENT WITH EPSTEIN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2557.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to discuss this administration's massive coverup of the Epstein files in order to conceal President Trump's involvement.",
+    "In the 3 million or so documents that the DOJ has disclosed to Congress under the Epstein Files Transparency Act, there is credible evidence that Donald Trump committed a crime.",
+    "Donald Trump is mentioned thousands of times in the Epstein files.",
+    "We are just scratching the surface because the Epstein files also reveal that Donald Trump has made false statements over the past quarter century about Jeffrey Epstein.",
+    "We know, in 2002, he called him a terrific guy and said: ``It is even said that he likes beautiful women as much as I do, and many of them are on the younger side.'' In a birthday card in 2003 that Donald Trump gave to Jeffrey Epstein for his 50th birthday, Donald wrote for himself: ``We have certain things in common, Jeffrey.'' ``Enigmas never age, have you noticed that?'' ``A pal is a wonderful thing.",
+    "Happy birthday--and may every day be another wonderful secret.'' In that same year, Palm Beach County opened an investigation into Epstein that eventually was turned over to the FBI.",
+    "The investigation became public in 2006, and the Palm Beach County police chief received a call quickly after from Donald Trump, where Trump told him: ``Thank goodness you're stopping him.",
+    "Everyone has known he's been doing this.'' What innocent person calls the police chief about an investigation upon just learning about it?",
+    "The recent documents also show that Jeffrey Epstein e-mailed Ghislaine Maxwell and said: ``I want you to realize that that dog that hasn't barked is Trump.",
+    "He has never once been mentioned.'' Trump also denied that he ever went on Epstein's plane, but, of course, the Southern District of New York said that he was on his plane eight times, often with young women.",
+    "The reason why this matters is because we don't have half of the Epstein files.",
+    "It was unredacted to Congress, and it completely disputes everything that Donald Trump has said about Jeffrey Epstein, about what he knew about the allegations, about his disgusting behavior, about whether he had ever been to Jeffrey Epstein's house, saying: ``I may have been there with my wife.'' Asked if any young girls were there, ``No. May have been children of guests, but that's it.'' Well, we know that is not the case.",
+    "Because if the Attorney General is covering up this information that she then reveals to Congress, what else is she covering up about Donald Trump's involvement in the Epstein files?",
+    "I will just show that this document here was redacted to the public."
+   ]
+  },
+  {
+   "date": "2026-03-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING WEALTH INEQUALITY",
+   "title": "CONDEMNING WEALTH INEQUALITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-17/html/CREC-2026-03-17-pt1-PgH2537-9.htm",
+   "sentences": [
+    "Over the last couple of decades, the rich have gotten richer while working families have been left behind.",
+    "The very wealthiest of Americans pay an average effective tax rate of 3.4 percent.",
+    "That is why I introduced the ROBINHOOD Act, to make these billionaires pay their fair share so that we can deliver universal childcare and Medicare for all.",
+    "These billionaires avoid paying taxes because their assets and money is in stock.",
+    "This is the right way to tackle our wealth inequality and to make the wealthy pay their fair share. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REINING IN ICE AGENTS",
+   "title": "REINING IN ICE AGENTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1992-5.htm",
+   "sentences": [
+    "That is why we must pass my ICE OUT Act to end the current qualified immunity standard for ICE and CBP agents and ensure victims of this excessive force can seek justice and accountability.",
+    "I will keep pushing Congress to do everything in its power to rein in this authoritarian immigration dragnet and get ICE out of our communities. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "title": "PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH238.htm",
+   "sentences": [
+    "Seven days ago, the Affordable Care Act's enhanced premium tax credits expired.",
+    "They gave working families essential relief amidst an ongoing cost-of-living crisis that Donald Trump has only made worse.",
+    "Today, House Democrats successfully forced this body to vote to extend those tax credits so that those 5 million Americans can hold on to their health insurance with a 3-year extension of these premium tax credits, and it passed this body.",
+    "It is the same party that cut taxes for billionaires and cut Medicaid for working-class Americans.",
+    "Mr. Speaker, you can count on one thing at all times with this Republican Party: They will always choose billionaires over babies."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING EXCESSIVE VIOLENCE OF FEDERAL AGENTS",
+   "title": "CONDEMNING EXCESSIVE VIOLENCE OF FEDERAL AGENTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5040-4.htm",
+   "sentences": [
+    "That is why I introduced the No Secret Police Act to get rid of masks, to require agents to show identification, and to hold ICE accountable.",
+    "Soviet-style secret police have no place in the America I know and love.",
+    "The first and easiest step to correct this problem is to pass my No Secret Police Act.",
+    "Mr. Speaker, I urge my colleagues to do so without delay. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GENERATIVE AI TERRORISM RISK ASSESSMENT ACT",
+   "title": "GENERATIVE AI TERRORISM RISK ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4783.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1736, the Generative AI Terrorism Risk Assessment Act.",
+    "This bill directs the Secretary of Homeland Security, in coordination with the Director of National Intelligence, to conduct assessments on terrorism threats to the United States posed by terrorist organizations' use of generative artificial intelligence applications.",
+    "We have also seen the dark side of AI through biased and discriminatory algorithms and deepfake videos.",
+    "It requires the Department of Homeland Security to analyze incidents where foreign terrorist organizations have used or attempted to use generative AI to spread violent extremist messaging and to recruit, radicalize, or plot attacks."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL STRATEGY FOR SCHOOL SECURITY ACT OF 2025",
+   "title": "NATIONAL STRATEGY FOR SCHOOL SECURITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4785.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2259, a bill directing the Department of Homeland Security to develop a national strategy to help secure our elementary and secondary schools from acts of terrorism."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TREN DE ARAGUA BORDER SECURITY THREAT ASSESSMENT ACT",
+   "title": "TREN DE ARAGUA BORDER SECURITY THREAT ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4786-2.htm",
+   "sentences": [
+    "This bill smartly and correctly requires a homeland security border threat assessment on Tren de Aragua followed by the creation of a strategic plan based on this assessment.",
+    "We have simply not been given enough information about the Trump administration's assessments, justification, and strategy for blowing up numerous boats off the coast of Venezuela.",
+    "Members of Congress must have this information, and that is why I support this bill.",
+    "This bill should not be necessary, but I do thank my friend from North Carolina for introducing it and recognizing that we should have a basic understanding of any organization that we are going to take military action against.",
+    "Mr. Speaker, I support Members of Congress receiving more information about the Trump administration's strategy against Tren de Aragua.",
+    "Therefore, I support this piece of legislation and urge its immediate passage."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING EMOTIONAL ASSISTANCE WITH RELIEF AND LOVE ACT",
+   "title": "PROVIDING EMOTIONAL ASSISTANCE WITH RELIEF AND LOVE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4786.htm",
+   "sentences": [
+    "Mr. Speaker, in my time serving on the Committee on Homeland Security, I have seen the importance of effective mental health services for the Department's workforce, and I thank Representative Gonzales for introducing this bill.",
+    "Individuals within the U.S. Customs and Border Protection work in high-stress environments, protecting our air, land, and sea borders.",
+    "One way to help address the stressors that they face and support their mental health needs is by using therapy dogs.",
+    "Not only will this bill provide additional mental health services to CBP personnel, but it will help the dogs in need of homes in our communities, certainly something everyone can support.",
+    "I know my colleagues and I are committed to improving the mental health services offered to the men and women who work on our front lines every day.",
+    "Mr. Speaker, we should do all that we can to provide the men and women of U.S. Customs and Border Protection with effective mental health services, and this bill is a significant step in the right direction.",
+    "It has done wonders for their mental health.",
+    "I support this legislation, and I ask my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATTING INTERNATIONAL DRUG TRAFFICKING AND HUMAN SMUGGLING PARTNERSHIP ACT OF 2025",
+   "title": "COMBATTING INTERNATIONAL DRUG TRAFFICKING AND HUMAN SMUGGLING PARTNERSHIP ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4788.htm",
+   "sentences": [
+    "Mr. Speaker, every day, Customs and Border Protection's Air and Marine Operations uses its highly trained pilots, mariners, and surveillance operators to detect, interdict, and stop the smuggling of people and illicit drugs.",
+    "They work with partner countries, specifically in the Americas and the Caribbean, to save lives, train foreign law enforcement, and address threats through joint operations before they reach our borders.",
+    "Mr. Speaker, I support this bill as it helps Air and Marine Operations work quickly, effectively, and strategically with our foreign partners to keep our homeland safe and rescue those in need."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING STAKEHOLDER SUPPORT AND OUTREACH FOR PREPAREDNESS GRANTS ACT",
+   "title": "ENHANCING STAKEHOLDER SUPPORT AND OUTREACH FOR PREPAREDNESS GRANTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4789.htm",
+   "sentences": [
+    "I urge my colleagues to support H.R. 4058 and to act quickly so that these critical funds reach the communities that need them most."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIACH BARTHOLOMEW TO NEW YORK AND WASHINGTON, D.C.",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIACH BARTHOLOMEW TO NEW YORK AND WASHINGTON, D.C.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgE847-3.htm",
+   "sentences": [
+    "We are deeply honored to have His All-Holiness visiting our country, our Nation's capital, and New York, home to a vibrant Orthodox community, including the largest Greek, Ukrainian, and Romanian populations in the United States.",
+    "On the eve of the third anniversary of Russia's illegal and immoral war against Ukraine.",
+    "Patriarch Bartholomew declared unequivocally that, ``Ukraine's sovereignty is not up for debate, nor can it be negotiated under the guise of diplomacy.'' He rightly insists that any future peace must include Ukraine as an equal participant."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3451-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong opposition to President Trump's reckless and destructive rescissions bill.",
+    "Mr. Speaker, I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2639.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to speak on my amendment to President Trump's reckless and stunningly shortsighted rescissions package, which would, among other harmful cuts, entirely eliminate Federal funding for the Corporation for Public Broadcasting.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on the previous question and to choose their constituents over Donald Trump."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE RISE IN IDEOLOGICALLY MOTIVATED ATTACKS ON JEWISH INDIVIDUALS IN THE UNITED STATES, INCLUDING THE RECENT VIOLENT ASSAULT IN BOULDER, COLORADO, AND RE",
+   "title": "CONDEMNING THE RISE IN IDEOLOGICALLY MOTIVATED ATTACKS ON JEWISH INDIVIDUALS IN THE UNITED STATES, INCLUDING THE RECENT VIOLENT ASSAULT IN BOULDER, COLORADO, AND REAFFIRMING THE HOUSE OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2539-6.htm",
+   "sentences": [
+    "In the last 2 months, there have been three incidents of outright violence: the arson at Governor Shapiro's home on Passover; the murder in front of the Capital Jewish Museum of two Israeli Embassy workers, young Jews just about to get engaged and begin their lives together, murdered solely because they were Jewish; and, last weekend, a horrific attack with Molotov cocktails on a peacefully marching group bringing attention to the fact that 56 hostages remain in horrific conditions in captivity of a terrorist group in Gaza.",
+    "Mr. Speaker, as an American Jew, as a Member of Congress, if anti- Semitism is used as a partisan weapon, if Israel is used as a partisan weapon, it is bad for Jews and it is bad for Israel.",
+    "I urge my other Republican colleagues to follow in Mr. Van Drew's footsteps here because if they do care about Jews and they do care about Israel, then neither should be used as a partisan weapon in a political game.",
+    "Mr. Speaker, I will just add in response to my friend that this is a majority proposal for the appropriations bill."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE ANTISEMITIC TERRORIST ATTACK IN BOULDER, COLORADO",
+   "title": "DENOUNCING THE ANTISEMITIC TERRORIST ATTACK IN BOULDER, COLORADO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2542.htm",
+   "sentences": [
+    "On top of that, to use this for some bogus immigration argument where he falsely characterizes Colorado as a sanctuary State and falsely represents that there were law enforcement contacts with the perpetrator when the only information we have is that there were some 911 hang-ups that traced back to an address where the perpetrator was living, to argue that somehow this is a reflection of our immigration system uses Jews as a partisan pawn.",
+    "It is because ICE is spending so much time pulling nonviolent, noncriminal immigrants out of court, where they are going through a lawful process to come in here, so that they can be removed in expedited removal; so that they can have their asylum claims, a lawful pathway, voided; and so they can be kicked out of the country with minimal due process just so Republicans and President Trump can meet their quota of mass deportations.",
+    "This resolution says that there is cooperation between State, local, and Federal law enforcement.",
+    "We all have to worry when we go into a synagogue whether we will be the next victim.",
+    "Instead, we are voting on an immigration gotcha resolution that uses anti-Semitism as a political pawn.",
+    "Mr. Speaker, I urge you and my colleagues on the other side to come to your senses."
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ATTACKS AND THREATS ON DEMOCRACY AND RULE OF LAW",
+   "title": "ATTACKS AND THREATS ON DEMOCRACY AND RULE OF LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgH1714-4.htm",
+   "sentences": [
+    "We all must open our eyes before we find ourselves in Vladimir Putin's Russia.",
+    "Rather than debate the facts or the evidence, which he knows he would lose, isn't it just a lot easier to simply shoot the messenger and claim that everything bad about you is just fake news?",
+    "Mr. Speaker, while many, rightly, have been focusing on the arbitrary and devastating cuts to essential Federal programs or the disastrous and reckless tariffs that have increased prices and inflation and have tanked the economy, President Trump's first 100 days have also escalated this relentless assault on the checks and balances that have been the foundation of our great Nation.",
+    "On day one, he pardoned more than 1,500 criminals who stormed this very building on January 6.",
+    "Hundreds of them were convicted of violently assaulting law enforcement officers.",
+    "He is openly and brazenly criticizing and attacking judicial rulings that he doesn't like--including a number issued by Republican-appointed judges, including his own--and is openly defying court orders including Supreme Court orders.",
+    "The Supreme Court and our judiciary decide what the law is.",
+    "When a unanimous Supreme Court rules that he is not a king and that he must abide by our basic principles of due process, he then refuses.",
+    "This is what dictators like Vladimir Putin do.",
+    "I urge my Republican colleagues to please stand up for our Constitution."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO ROGUE RULINGS ACT OF 2025",
+   "title": "NO ROGUE RULINGS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1482.htm",
+   "sentences": [
+    "My colleagues concede that it is the Supreme Court which determines what the law is.",
+    "Well, in today's modern age, how do you get to the Supreme Court?",
+    "You go first to the district court, then through the appeals court, and then up to the Supreme Court.",
+    "I agree, but we are citing rulings on the other side of the aisle of Supreme Court rulings on these very nationwide injunctions within a few weeks.",
+    "Mr. Speaker, I rise today in opposition to this bill, which is simply an attempt by House Republicans to intimidate judges who issue rulings that they simply don't like."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 24, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 24, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1232-3.htm",
+   "sentences": [
+    "Mr. Speaker, it is a shame that we could not work in a bipartisan way to make this bill better and to address the root issue that both sides of the aisle are trying to address, which is the potential nefarious foreign influence on college campuses from a list of countries far greater than the four countries of concern outlined in the DETERRENT Act."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 25, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEE",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 25, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1083-3.htm",
+   "sentences": [
+    "There are too many things that are wrong with this bill to mention in just 2 minutes, including cuts to safety net programs for housing, food, veterans, and law enforcement, as well as essential community projects for every district in the country.",
+    "The President has not only failed to keep his promise to help working Americans, but he has enlisted a corrupt, unelected billionaire to slash essential programs that hundreds of millions of Americans depend on.",
+    "Mr. Speaker, I rise today in strong opposition to the Republicans' partisan sham of a government funding bill which is nothing more than a blank canvas for Donald Trump and Elon Musk to continue their smashing and looting of our Federal Government."
+   ]
+  }
+ ]
+}

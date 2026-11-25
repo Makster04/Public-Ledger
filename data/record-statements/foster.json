@@ -1,0 +1,295 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "foster",
+ "name": "Bill Foster",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 20,
+  "sentences": 103
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOSTERING THE USE OF TECHNOLOGY TO UPHOLD REGULATORY EFFECTIVENESS IN SUPERVISION ACT",
+   "title": "FOSTERING THE USE OF TECHNOLOGY TO UPHOLD REGULATORY EFFECTIVENESS IN SUPERVISION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5605.htm",
+   "sentences": [
+    "Artificial intelligence and agentic commerce have great potential benefits for consumers and businesses, but they also have the potential to supercharge cybersecurity risk, contagion, and fraud, and can destabilize our financial system far more quickly than in years past.",
+    "I support this forward-looking and bipartisan bill, and I encourage my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-08-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE INTERNATIONAL DAY AGAINST NUCLEAR TESTS AND THE CLOSURE OF THE SEMIPALATINSK NUCLEAR TEST SITE",
+   "title": "COMMEMORATING THE INTERNATIONAL DAY AGAINST NUCLEAR TESTS AND THE CLOSURE OF THE SEMIPALATINSK NUCLEAR TEST SITE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-27/html/CREC-2026-08-27-pt1-PgE807-2.htm",
+   "sentences": [
+    "It hosted two rounds of P5+1 negotiations with Iran in 2013, supported implementation of the 2015 nuclear agreement, and now hosts the IAEA Low Enriched Uranium Bank at the Ulba Metallurgical Plant."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5029-6.htm",
+   "sentences": [
+    "Donald Trump's Department of Energy opposes this, and I will just read verbatim their comment on it: ``This amendment effectively imposes an outright prohibition on access to DOE national laboratories for all foreign nationals from countries of concern, regardless of their mode of access.",
+    "Mrs. Hinson's amendment has identified a concern about the impact of foreign nationals from countries like Russia, China, and Iran, but principally China.",
+    "Mr. Chair, this amendment is unnecessary, and I urge everyone to oppose it."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPERVISORY MODIFICATIONS FOR APPROPRIATE RISK-BASED TESTING ACT OF 2025",
+   "title": "SUPERVISORY MODIFICATIONS FOR APPROPRIATE RISK-BASED TESTING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3353.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the bipartisan Supervisory Modifications for Appropriate Risk-based Testing Act, or SMART Act, which provides thoughtful examination relief to qualifying community banks and credit unions, while maintaining appropriate safeguards."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2050.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6644, the Housing for the 21st Century Act, which makes improvements to Federal programs that will support housing development and affordability.",
+    "As ranking member of the Subcommittee on Financial Institutions, I support the inclusion of these reforms, including the SMART Act and the Least Cost Exception Act, which I am proud to co-lead."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL STABILITY OVERSIGHT COUNCIL IMPROVEMENT ACT OF 2025",
+   "title": "FINANCIAL STABILITY OVERSIGHT COUNCIL IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2074.htm",
+   "sentences": [
+    "Following the 2008 financial crisis, Congress enacted the Dodd-Frank Wall Street Reform and Consumer Protection Act to protect working families, taxpayers, and the broader economy from consequences of unchecked financial risk.",
+    "As someone who was present on the Financial Services Committee during the global financial crisis, I recall vividly Fed Chair Bernanke referring to AIG as a giant, well-run insurance company with a hedge fund grafted onto it, where the risk was concentrated.",
+    "Mr. Speaker, I rise in support of the FSOC Improvement Act."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BRINGING THE DISCOUNT WINDOW INTO THE 21ST CENTURY ACT",
+   "title": "BRINGING THE DISCOUNT WINDOW INTO THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2076.htm",
+   "sentences": [
+    "The bank failures of 2023 showed that liquidity pressures can escalate in hours, not days, a speed that will only intensify with the rise of artificial intelligence and autonomous financial agents.",
+    "Mr. Speaker, I rise in support of this legislation, which requires the Federal Reserve to conduct a comprehensive review of discount window operations, including its technological infrastructure, cybersecurity, communications, real-time monitoring, and oversight mechanisms across the Federal Reserve System."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPIRATION OF NEW START",
+   "title": "EXPIRATION OF NEW START",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH804.htm",
+   "sentences": [
+    "Russia continues to engage in irresponsible nuclear saber-rattling during its illegal war in Ukraine, and Iran and North Korea continue to change the global nonproliferation regime.",
+    "At the time of the end of the Soviet empire, Ukraine possessed the world's third-largest nuclear weapon inventory, which they voluntarily gave up in return for a guarantee of territorial integrity--one, unfortunately, which we are not abiding by.",
+    "If we resume nuclear testing, we will, as will all the other nuclear-capable countries on Earth, they will rub their hands with glee, and soon they will have a dataset of performance of their weapons that is as good as ours.",
+    "The choices that we make in the coming months will shape global security for decades to come, so I urge all of my colleagues on both sides of the aisle to recommit to arms control, to verification, and to the hard work of reducing nuclear risk."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "title": "DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4398-5.htm",
+   "sentences": [
+    "I think it is significant also that now, 50 years after we started that company, due to an employee stock ownership plan, it is 100 percent owned by the employees who built the company.",
+    "I think it is best summarized, actually, by paraphrasing the pithy tweet of Elon Musk when he said, You guys, meaning you guys on Trump's tariff team, haven't built squat, though he was a little more rude in his choice of words.",
+    "The ignorant tariffs that he is applying come from the fact that they simply don't get it with manufacturing because none of them--think about it.",
+    "There is no one on the Trump tariff team who has ever built anything in their career.",
+    "Democrats understand that the real job creators in this economy are customers, and we understand that customers come from the middle class."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "This bill leaves wide open opportunities for countries like Iran and other nefarious actors to more easily get their hands on the materials needed to build nuclear weapons."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING APPROPRIATE RECOGNITION AND TREATMENT NEEDED TO ENHANCE RELATIONS ACT",
+   "title": "PROVIDING APPROPRIATE RECOGNITION AND TREATMENT NEEDED TO ENHANCE RELATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3734.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4490, the PARTNER Act."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RISK OF CONFLICT WITH NUCLEAR WEAPONS",
+   "title": "RISK OF CONFLICT WITH NUCLEAR WEAPONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3628.htm",
+   "sentences": [
+    "It is certainly not well-known among Members of Congress, but when the IAEA sends inspectors into Iran and into countries of concern, those have been largely trained by the national labs in the United States.",
+    "The President is very fond of talking about this deal he is going to get on Iran nuclear.",
+    "We listened to him talk about how he was going to get North Korea.",
+    "We have already seen the incredibly hard work that Director General Grossi and his staff are putting in to responding to the Russian invasion of Ukraine with its many nuclear reactors and the myriad of other crises on their doorstep.",
+    "Mr. Speaker, that brings us to Iran.",
+    "He stood by my side, along with Energy Secretary Dr. Ernest Moniz, as I announced my support for the Iran nuclear deal.",
+    "One of the tragedies of the recent past has been this President's abandonment of the Iran nuclear deal, which has gotten us into a heck of a pickle, as predicted by the people who actually understood what our true options were in that negotiation.",
+    "After the U.S. bombing of Iran, there has been an immense amount of debate about whether or not Iran's nuclear program was set back by a certain amount of time, whether it is years or whatever.",
+    "Iran has done it for a long time.",
+    "It can happen anywhere in any city in Iran, and it will be really hard to tell.",
+    "The 60 percent enriched uranium that Iran has a significant inventory of is perfectly usable even for a simple Hiroshima-style gun-type device.",
+    "Pretending like Iran does not have a credible threat and has no leverage is a dangerous and ignorant position for our government to be taking and one of the scariest things about the many threats that we face right now.",
+    "I support efforts to try to do that.",
+    "If we ever succeed in getting one of these deals, for sure we are going to need to have experts we trust that can go in there and make sure nobody is cheating.",
+    "It is a resolution I introduced in the House with 19 other Members.",
+    "It is a time when traditional channels of dialogue on arms control and strategic stability have been closed or quiet, and we are going to rely more than ever on keeping alternative channels open and keeping the expertise in place.",
+    "Mr. Speaker, nongovernmental organizations, scientists, and research institutions have kept this dialogue open even during the worst parts of the Cold War, and we are going to need to rely on them to fulfill these roles again."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to the CLARITY Act, which claims to bring digital assets under a regulatory umbrella but fails in two major areas.",
+    "First, it fails because it has no KYC--know your customer-- requirements for self-hosted wallets.",
+    "Secondly, the CLARITY Act also lacks the basic investor protections present in the securities laws.",
+    "Mr. Speaker, I oppose this bill, and I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-06-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CRYSTAL LAKE MENTAL HEALTH PROGRAM",
+   "title": "CRYSTAL LAKE MENTAL HEALTH PROGRAM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-06/html/CREC-2025-06-06-pt1-PgH2517-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to stand up for the community of Crystal Lake, Illinois, which, along with over 100 communities nationwide, just had a $5.6 million student mental health program abruptly canceled by the Trump administration.",
+    "This funding, which passed with support of both Republicans and Democrats under the Bipartisan Safer Communities Act, was created in response to the Uvalde school shooting to address the growing youth mental health crisis.",
+    "We have a mental health problem.",
+    "With this grant, the Crystal Lake District 47 was able to hire trained mental health professionals and give 7,100 students access to mental health care.",
+    "Canceling this grant will disrupt critical mental health care for students who are already receiving support, weaken the district's ability to identify and intervene in early warning signs of distress, trauma, or potential violence.",
+    "It undermines years of progress made in breaking the stigma around mental health.",
+    "I urge the administration to reverse these harmful cuts. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP TRUMP'S CHAOS--STAND UP FOR SCIENCE",
+   "title": "STOP TRUMP'S CHAOS--STAND UP FOR SCIENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2086.htm",
+   "sentences": [
+    "This includes funding for AI, for cybersecurity, for supercomputers, fusion energy, space, ocean exploration, black holes, semiconductors, and, last but not least, the internet.",
+    "This letter highlighted the importance of NSF funding to our country's leadership in cancer research, energy, artificial intelligence, and quantum computing.",
+    "It is our duty to ensure that, regardless of the political climate, science remains at the forefront of our Nation's progress and innovation.",
+    "Amidst the Republican assault on science, I am going to focus my remarks tonight mainly on the NSF.",
+    "Today, together with my fellow Representatives Don Beyer, Dr. Scott Franklin, and Haley Stevens, we introduced a House resolution to celebrate that anniversary.",
+    "A negative consequence of these actions for our country is that we will not only miss out on scientific breakthroughs that drive our country forward, but lose an entire generation of scientists who cannot complete their NSF-supported training and will abandon research careers altogether, or perhaps, as was mentioned, simply depart for countries abroad.",
+    "So I want to assure NSF-funded researchers and staff that we are on their side, and we are supporting them.",
+    "So, Mr. Speaker, I urge my sensible colleagues on both sides of the aisle to support efforts that increase the resiliency of our Federal science agencies in the face of these growing threats from the administration, and to continue supporting the U.S. research workforce.",
+    "We will continue to fight for the agency's viability and for our Nation's competitiveness by supporting all of our Federal science agencies."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BLOOD TRANSFUSION OVERSIGHT",
+   "title": "BLOOD TRANSFUSION OVERSIGHT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1789-2.htm",
+   "sentences": [
+    "On April 1, 2025, almost the entire Division of Blood Disorders and Public Health Genomics, a department of the CDC established to combat blood infections in the wake of the AIDS epidemic, was placed on administrative leave.",
+    "They will also be left wondering whether critical research to prevent and treat their conditions will be abandoned, and they will have to reckon with the fact that the same government that swore to help them turned its back on them, all so Republicans can find more money to give billionaires new tax breaks."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TARIFFS HURT EVERYONE",
+   "title": "TARIFFS HURT EVERYONE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1133.htm",
+   "sentences": [
+    "Tonight, I rise to bring attention to an issue that really should have all Americans on alert, which are President Trump's tariff policies.",
+    "Since the beginning of this administration, American businesses, manufacturers, and families have been stuck in limbo as the Trump administration has repeatedly threatened, then implemented, then paused, then restarted tariffs, creating uncertainty and instability.",
+    "The most recent policy shift to a 25 percent tariff on goods from Canada and Mexico has been fraught with delays and exemptions, leaving American businesses, manufacturers, and consumers just stuck in limbo, not knowing how to react and how to make their plans.",
+    "In fact, just this morning, Trump doubled planned tariffs on steel and aluminum from Canada to 50 percent.",
+    "Then, a mere couple hours ago, a spokesman from the White House said that the tariffs on Canada were back down to 25 percent.",
+    "Yet, the truth is that these tariffs, no matter if and when they go into full effect, whether it is this week or next month, they will all ultimately have the same result: higher prices for everyday goods and a less competitive U.S. manufacturing sector.",
+    "In fact, a business in my district, which makes precision-form steel tubing components, told me that the price of hot rolled steel is up 33 percent since Trump's inauguration in anticipation of these tariffs, and there is just no way that they are going to be able to avoid passing these inflationary price increases on to their customers.",
+    "According to an analysis from the Yale Budget Lab, if implemented fully, these tariffs would cost the average American family between $1,600 and $2,000 a year, with working-class families, who can least afford it, being hit the hardest.",
+    "Electronics, like computers, phones, and TVs, could rise by 11 percent; clothing, up by 7.5 percent; cars and auto parts, up by 6 percent; groceries, up 2 percent with fresh produce rising nearly 3 percent.",
+    "Mr. Speaker, Trump is trying to spin these tariffs as something that is solely attacks on foreign companies, but history and macroeconomic facts tell us otherwise.",
+    "When Trump first imposed tariffs during his first administration, it was not other countries that paid, but it was American consumers and businesses.",
+    "Beyond hurting hardworking American families, these tariffs threatened the stability of our economy.",
+    "The stocks have dropped, and consumer confidence is cratering.",
+    "China, the largest export market for U.S. food products, has already announced retaliatory tariffs on key American agricultural goods, including wheat, corn, soybeans, pork, and dairy products.",
+    "We are in danger of losing these markets permanently if Trump continues what he did in his last go-around on tariffs.",
+    "According to the USDA, in fact, the last time President Trump engaged in a trade war, it cost U.S. farmers nearly $30 billion in lost sales and market disruptions.",
+    "These new tariffs will undo years of progress in expanding those markets, closing off opportunities and shrinking demand for American- grown goods in a foreign market, something which domestic consumption alone cannot compensate for.",
+    "That is why boosting the U.S. manufacturing and creating manufacturing jobs here has always been a top priority of mine and why I was so horrified at the damage done to U.S. manufacturing by the last set of Trump tariffs.",
+    "I watched with deep concern as the first Trump administration's tariffs and our other trade policies put us in a manufacturing recession a year before COVID even started.",
+    "Many U.S. manufacturers rely on imported raw materials, such as steel, aluminum, and auto parts from Canada and Mexico.",
+    "These tariffs will increase costs across the supply chains, making it harder to produce goods economically and much harder for U.S. manufacturers to export their goods in a competitive world environment.",
+    "Studies have shown that Trump's previous tariffs led to job losses, not gains, in the manufacturing sector.",
+    "Not to mention, manufacturers will likely be hit by retaliatory tariffs when trying to export their goods to the countries that President Trump has targeted.",
+    "The last trade war was a disaster.",
+    "Under Trump's first round of tariffs, manufacturers suffered as input prices soared, supply chains were disrupted, and retaliatory tariffs from other nations crushed U.S. exports.",
+    "As a Representative of the southern border State, New Mexico, she knows all too well, the importance of fair trade with Mexico for our Nation's economy and especially for working families' wallets.",
+    "As I said earlier, there are no winners in a trade war.",
+    "Mr. Speaker, I will first thank my colleagues on the Democratic Rapid Response Task Force and Litigation Working Group for helping us with these various Special Order hours discussing the Trump administration's various reckless actions.",
+    "If the U.S. indeed enters a recession, we will know who to blame."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A STAIN ON OUR NATION'S HONOR",
+   "title": "A STAIN ON OUR NATION'S HONOR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH940-3.htm",
+   "sentences": [
+    "Mr. Speaker, at the time of Ukraine's independence from the Soviet Union in 1991, Ukraine held the third largest nuclear arsenal in the world.",
+    "By 1996, Ukraine had voluntarily given up that nuclear arsenal in exchange for written guarantees of territorial integrity, signed by America, Russia, England, and Europe.",
+    "These were guarantees that were reconfirmed by Russia under Vladimir Putin in 2009.",
+    "When JD Vance and Donald Trump stabbed Ukraine in the back in the Oval Office last Friday by ignorantly repudiating those security agreements and by failing to defend one of only two nations that has ever voluntarily given up its nuclear weapons, it forever raised the risk of an uncontrolled nuclear arms race and a nuclear holocaust."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRED BY PRESIDENT TRUMP",
+   "title": "FIRED BY PRESIDENT TRUMP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH863-4.htm",
+   "sentences": [
+    "Moreover, if Donald Trump thinks that he is going to strike a deal with Ukraine on rare earth minerals, then he is going to need real experts in our government on critical mineral extraction."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SCIENTIFIC INTEGRITY",
+   "title": "SCIENTIFIC INTEGRITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH543.htm",
+   "sentences": [
+    "There were significant losses in key STEM positions at the Department of Energy, the Environmental Protection Agency, NOAA, including a 20 percent reduction in the Department of Energy Office of Nuclear Energy, something that Republicans claim to support.",
+    "It is our duty to ensure that regardless of the political climate, science remains at the forefront of our Nation's progress and innovation.",
+    "In one circumstance that still makes me angry, we lost one of our best and brightest through LGBT intolerance in our immigration policies.",
+    "At the same time, we must also make sure that we support scientists of all different backgrounds, including those who come to the U.S. for their education and want to stay and contribute their skills to our economy.",
+    "Mr. Speaker, I urge my sensible colleagues on the other side of the aisle to support efforts like this and increase the resiliency of our Federal workforce and help defend our Nation's competitive edge in the face of these growing threats."
+   ]
+  }
+ ]
+}

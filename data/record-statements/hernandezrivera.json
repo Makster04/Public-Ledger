@@ -1,0 +1,402 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "hernandezrivera",
+ "name": "Pablo José Hernández",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 34,
+  "sentences": 84
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLDING CONGRESS ACCOUNTABLE",
+   "title": "HOLDING CONGRESS ACCOUNTABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6204-3.htm",
+   "sentences": [
+    "Let's fix the Medicaid funding gap.",
+    "As Puerto Rico's Representative in Congress, I will fight for our island's priorities within this mandate."
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRIORITIZING BASICS IN PUERTO RICO",
+   "title": "PRIORITIZING BASICS IN PUERTO RICO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5434.htm",
+   "sentences": [
+    "Under public pressure, the government referred the matter to law enforcement--again, 2 months late.",
+    "I urge my colleagues to join me in this crusade of good government."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMESA IS A DEMOCRATIC TRAGEDY",
+   "title": "PROMESA IS A DEMOCRATIC TRAGEDY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4321-4.htm",
+   "sentences": [
+    "Let us not forget that we the people must continue to work toward a more perfect Union, a more perfect Union of States, territories, and commonwealths.",
+    "No olvidemos que ``nosotros, el pueblo'' debemos continuar la labor hacia una union mas perfecta: una union mas perfecta de estados, territorios y estados libre asociados. ____________________",
+    "We oppose the vulture funds that want to profit from our misery and energy crisis.",
+    "We oppose unelected oversight boards that can override our democratic will.",
+    "We support responsible bankruptcy relief.",
+    "We support restoring democracy and electing the people who govern us.",
+    "Now, for the benefit of my constituents, I will repeat my remarks in Spanish."
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER CRISIS IN PUERTO RICO",
+   "title": "WATER CRISIS IN PUERTO RICO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-25/html/CREC-2026-06-25-pt1-PgH4253-3.htm",
+   "sentences": [
+    "On behalf of the honest, hardworking majority of Puerto Ricans, I tell this Chamber: We will not be quiet.",
+    "We will fight to restore integrity in public service in the great Commonwealth of Puerto Rico. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING LIFE MORE AFFORDABLE",
+   "title": "MAKING LIFE MORE AFFORDABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2589.htm",
+   "sentences": [
+    "Donald Trump has chosen a war of his own making in Iran.",
+    "We are fighting for the grandfather who shouldn't be turned away at a medical appointment by his doctor because Medicaid ran out of money.",
+    "We are fighting for the mother in Puerto Rico who deserves the same help from SNAP to buy groceries as a mother in Florida or California.",
+    "We are fighting for every family who deserves to know that when they flip the switch, they won't go bankrupt because of higher electricity and utility rates."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this bill because investing in energy infrastructure, education, and public safety is not optional.",
+    "Mr. Speaker, I will focus on what this bill does for the people of Puerto Rico."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNIVERSITY OF UTAH RESEARCH PARK ACT",
+   "title": "UNIVERSITY OF UTAH RESEARCH PARK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5873.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the University of Utah's Research Park Act."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SLOAN CANYON CONSERVATION AND LATERAL PIPELINE ACT",
+   "title": "SLOAN CANYON CONSERVATION AND LATERAL PIPELINE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5875.htm",
+   "sentences": [
+    "Having access to clean water is vital for communities to thrive.",
+    "Those of us here in Congress know all too well how challenging it can be to ensure that happens in the face of changing populations and a changing climate.",
+    "Mr. Speaker, I rise in support of H.R. 972, the Sloan Canyon Conservation and Lateral Pipeline Act, introduced by the gentlewoman from Nevada (Ms. Titus)."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UTAH WILDFIRE RESEARCH INSTITUTE ACT OF 2025",
+   "title": "UTAH WILDFIRE RESEARCH INSTITUTE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5876-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of Representative Kennedy's bill, the Utah Wildfire Research Institute Act of 2025.",
+    "While I support adding another SWERI to the existing network, I must also note that I remain very concerned about the administration's proposed deep cuts to our land management agencies, which partner with SWERI and fund their key research efforts.",
+    "Mr. Speaker, I urge support for this legislation, but I also call upon my colleagues to join us in standing up to this administration's reckless cuts."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GREAT LAKES FISHERY RESEARCH REAUTHORIZATION ACT",
+   "title": "GREAT LAKES FISHERY RESEARCH REAUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5878.htm",
+   "sentences": [
+    "The bill would provide $15 million annually through fiscal year 2030 to continue research that protects native species, monitors invasive species, and assesses the impacts of habitat degradation and climate change on the Great Lakes.",
+    "I urge my colleagues to join me in supporting this bill."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SOUTHCENTRAL FOUNDATION LAND TRANSFER ACT OF 2025",
+   "title": "SOUTHCENTRAL FOUNDATION LAND TRANSFER ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5880.htm",
+   "sentences": [
+    "Mr. Speaker, under this bill, the Southcentral Foundation Land Transfer Act of 2025, title to the land where the Southcentral Foundation operates the Quyana Clubhouse and Intensive Case Management program would be transferred from the Indian Health Service to the foundation.",
+    "Mr. Speaker, I rise today in strong support of this bill to reauthorize the National Volcano Early Warning and Monitoring System.",
+    "I am happy to support the continuity of this program, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONVEYANCE OF SPECIFIED FOREST SERVICE PROPERTY TO PERRY COUNTY, ARKANSAS",
+   "title": "CONVEYANCE OF SPECIFIED FOREST SERVICE PROPERTY TO PERRY COUNTY, ARKANSAS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5883.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3187, a bill to convey a small but meaningful parcel of Forest Service property to Perry County, Arkansas."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: APPLICATION OF MINERAL LEASING ACT FOR ACQUIRED LANDS TO HARDROCK MINERALS",
+   "title": "APPLICATION OF MINERAL LEASING ACT FOR ACQUIRED LANDS TO HARDROCK MINERALS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5884.htm",
+   "sentences": [
+    "It is a technical fix that will help us potentially develop lithium resources which are essential for the clean energy transition.",
+    "Mr. Speaker, I rise in support of H.R. 3872, a bill to amend the Mineral Leasing Act for Acquired Lands, clarifying that all lands acquired by the Federal Government are eligible for potential hardrock mineral leasing.",
+    "I will add that this bill authorizes hardrock leasing, which is a far better and more responsible practice than the claims staking system we have across the rest of our Federal lands."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAUTHORIZATION OF JUNIOR DUCK STAMP CONSERVATION AND DESIGN PROGRAM ACT OF 1994",
+   "title": "REAUTHORIZATION OF JUNIOR DUCK STAMP CONSERVATION AND DESIGN PROGRAM ACT OF 1994",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5885.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to join me in supporting H.R. 1098."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS INTELLIGENCE ROTATIONAL ASSIGNMENT PROGRAM AND LAW ENFORCEMENT SUPPORT ACT",
+   "title": "DHS INTELLIGENCE ROTATIONAL ASSIGNMENT PROGRAM AND LAW ENFORCEMENT SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4680.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this bill which directs the Secretary of Homeland Security, in coordination with the Director of National Intelligence, to require all components of the Department of Homeland Security intelligence enterprise to participate in the intelligence community's Civilian Joint Duty Program."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY VEHICULAR TERRORISM PREVENTION AND MITIGATION ACT OF 2025",
+   "title": "DEPARTMENT OF HOMELAND SECURITY VEHICULAR TERRORISM PREVENTION AND MITIGATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4681.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 1608, the Department of Homeland Security Vehicular Terrorism Prevention and Mitigation Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "title": "STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4682.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 2659, the Strengthening Cyber Resilience Against State-Sponsored Threats Act."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING INFORMATION BY LOCAL LEADERS FOR AGENCY RESILIENCE ACT",
+   "title": "PROTECTING INFORMATION BY LOCAL LEADERS FOR AGENCY RESILIENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4685.htm",
+   "sentences": [
+    "There are no other circumstances under which we would expect a State or local government to defend itself from an attack from a state actor, particularly from China, Russia, or Iran.",
+    "Madam Speaker, I rise in support of H.R. 5078, which reauthorizes the State and Local Cybersecurity Grant Program until 2033."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BOTTLES AND BREASTFEEDING EQUIPMENT SCREENING ENHANCEMENT ACT",
+   "title": "BOTTLES AND BREASTFEEDING EQUIPMENT SCREENING ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4688.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of S. 260, the Bottles and Breastfeeding Equipment Screening Enhancement Act."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING OVERSIGHT OF DHS INTELLIGENCE ACT",
+   "title": "STRENGTHENING OVERSIGHT OF DHS INTELLIGENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4690.htm",
+   "sentences": [
+    "One of the lessons of the terrorist attacks on September 11, 2001, was that the United States Government needed to improve coordination and information sharing between law enforcement and intelligence agencies.",
+    "To this day, DHS' Office of Intelligence and Analysis, or I&A, is the lone member of the intelligence community tasked with delivering homeland security information and intelligence to State, local, Tribal, and territorial law enforcement.",
+    "Every day, our State, local, Tribal, and territorial law enforcement officers work on the front lines to keep America safe.",
+    "Additionally, my bill would require training senior DHS intelligence personnel on privacy rights, civil rights, and civil liberties protections.",
+    "Madam Speaker, I rise in strong support of my bill H.R. 2261, the Strengthening Oversight of DHS Intelligence Act.",
+    "I urge my colleagues to vote ``yes'' on this commonsense, bipartisan bill, and I thank my colleagues for their support."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HURRICANE MARIA'S 8-YEAR ANNIVERSARY",
+   "title": "HURRICANE MARIA'S 8-YEAR ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4316.htm",
+   "sentences": [
+    "Mothers lining up for ice to keep insulin cold."
+   ]
+  },
+  {
+   "date": "2025-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAUNCHING FORO CAMPUS",
+   "title": "LAUNCHING FORO CAMPUS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-04/html/CREC-2025-09-04-pt1-PgH3846-6.htm",
+   "sentences": [
+    "Mr. Speaker, I will continue visiting these universities.",
+    "I will continue collecting these stories and anecdotes so that Congress takes note and eventually takes action."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "Mr. Chair, I rise today in strong support of Congresswoman Kiggans' amendment No. 79, which ensures sufficient VA medical care for veterans in the U.S. territories, Commonwealths, and Freely Associated States.",
+    "I thank the gentlewoman from Virginia (Mrs. Kiggans) for her leadership, and I urge my colleagues to support this amendment."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EVERY 4.5 DAYS A WOMAN IS MURDERED IN PUERTO RICO",
+   "title": "EVERY 4.5 DAYS A WOMAN IS MURDERED IN PUERTO RICO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2893-2.htm",
+   "sentences": [
+    "Republicans have proposed billions in cuts from Pell grants and changes to PLUS loans to help pay for tax breaks for billionaires at the expense of education opportunities.",
+    "Today, I urge my colleagues to protect and expand Federal funding for domestic violence shelters, emergency services, and trauma-informed care.",
+    "Mr. Speaker, I urge this Congress to protect Pell grants."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUERTO RICO'S BETRAYAL OF OUR IMMIGRANT COMMUNITIES",
+   "title": "PUERTO RICO'S BETRAYAL OF OUR IMMIGRANT COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2475-2.htm",
+   "sentences": [
+    "On January 19, the Governor of Puerto Rico said that immigrants on the island had nothing to worry about because ICE wasn't going to conduct raids outside the border with Mexico."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING BLACKOUTS IN PUERTO RICO",
+   "title": "PREVENTING BLACKOUTS IN PUERTO RICO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2387.htm",
+   "sentences": [
+    "Mr. Speaker, in the interest of my constituents, I will repeat my remarks in Spanish."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUERTO RICO'S ENERGY CRISIS",
+   "title": "PUERTO RICO'S ENERGY CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2062-2.htm",
+   "sentences": [
+    "No matter what, I will keep fighting for the people of Puerto Rico and for its energy future.",
+    "Mr. Speaker, I will briefly speak in Spanish, for the benefit of my constituents: (English translation of the statement made in Spanish is as follows:) I sincerely hope that the governments of Puerto Rico and the United States correct the course they are on regarding the energy crisis facing the island.",
+    "But no matter what, I will continue working for the well-being and the future of the people of Puerto Rico and for a solution to their energy crisis."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUERTO RICO'S ENERGY CRISIS",
+   "title": "PUERTO RICO'S ENERGY CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1282-2.htm",
+   "sentences": [
+    "I won't lie, my immediate reaction was not all that negative.",
+    "I will do what I can to support the government's efforts to address this challenge."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING VETERANS IS NOT GOVERNMENT WASTE",
+   "title": "PROTECTING VETERANS IS NOT GOVERNMENT WASTE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH776-2.htm",
+   "sentences": [
+    "Protecting the employees who work hard to ensure that millionaires and billionaires don't cheat on their taxes is not government waste.",
+    "I will be the first one to acknowledge that government waste exists.",
+    "We will share resources for Federal employees so that they know their rights.",
+    "We will host a tele-townhall to hear directly from affected workers.",
+    "We will demand transparency from the agencies responsible for these layoffs.",
+    "I also urge the Government of Puerto Rico to step up to provide these workers the assistance that the government of Puerto Rico usually provides to workers who are laid off in the tourism or manufacturing sectors."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAITIAN IMMIGRANT COMMUNITY",
+   "title": "HAITIAN IMMIGRANT COMMUNITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH735-2.htm",
+   "sentences": [
+    "Beyond the ethical concerns, beyond the moral concerns, and beyond the emotional concerns that these injustices raise, there are practical consequences that I urge the administration to consider.",
+    "Our message to the immigrant communities in Puerto Rico and the United States is simple: You are not alone, and we will keep fighting for you.",
+    "Now for the interests of my constituents, I will repeat my remarks in Spanish."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHEN CONGRESS' OVERSIGHT OF THE FINANCIAL OVERSIGHT AND MANAGEMENT BOARD FOR PUERTO RICO",
+   "title": "STRENGTHEN CONGRESS' OVERSIGHT OF THE FINANCIAL OVERSIGHT AND MANAGEMENT BOARD FOR PUERTO RICO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH695.htm",
+   "sentences": [
+    "Mr. Speaker, yesterday I introduced an amendment during the House Natural Resources Committee markup to strengthen Congress' oversight of the Financial Oversight and Management Board for Puerto Rico, specifically addressing net metering policies and the PREPA bankruptcy.",
+    "I will continue to fight for fairness and transparency for Puerto Rico, and I urge my colleagues to join me. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING NATIONAL INSTITUTES OF HEALTH",
+   "title": "PROTECTING NATIONAL INSTITUTES OF HEALTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgH618-2.htm",
+   "sentences": [
+    "Now, for the benefit of my constituents, I will repeat my remarks in Spanish."
+   ]
+  },
+  {
+   "date": "2025-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUERTO RICO'S OUTDATED ELECTRIC GRID",
+   "title": "PUERTO RICO'S OUTDATED ELECTRIC GRID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-10/html/CREC-2025-02-10-pt1-PgH589-2.htm",
+   "sentences": [
+    "We urge the administration to act.",
+    "We urge the administration to unblock the Federal resources that Puerto Rico needs to address this problem.",
+    "We urge the administration to empower the people of Puerto Rico to be able to overcome this issue.",
+    "Now, for the benefit of my constituents, I will repeat my remarks in Spanish."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING RELATIONSHIP BETWEEN THE UNITED STATES AND PUERTO RICO",
+   "title": "SUPPORTING RELATIONSHIP BETWEEN THE UNITED STATES AND PUERTO RICO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH121-2.htm",
+   "sentences": [
+    "As Puerto Rico's Representative before the United States Government, I want to let Mr. Maduro know an overwhelming majority of Puerto Ricans support a relationship of permanent union or permanent association with the United States, be that as a State or as a U.S. Commonwealth.",
+    "The future of Puerto Rico will be decided by Puerto Ricans in a peaceful and democratic manner, the same way that the future of Venezuela should be decided by the Venezuelan people in a peaceful and democratic manner.",
+    "Una mayoria abrumadora de los puertorriquenos respalda la union o asociacion permanente con los Estados Unidos, a traves del estatus del Estado Libre Asociado o de la aspiracion de convertir a Puerto Rico en un estado de la union.",
+    "Maduro, el futuro de Puerto Rico lo decidiremos pacifica y democraticamente los puertorriquenos, asi como el futuro de Venezuela lo deben decidir pacifica y democraticamente los venezolanos.",
+    "I will address my constituents in Spanish."
+   ]
+  }
+ ]
+}

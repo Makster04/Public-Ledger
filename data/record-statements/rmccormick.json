@@ -1,0 +1,94 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rmccormick",
+ "name": "Richard McCormick",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 28
+ },
+ "statements": [
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDING WITH STUDENTS IN UNDERSERVED COMMUNITIES",
+   "title": "STANDING WITH STUDENTS IN UNDERSERVED COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2424-2.htm",
+   "sentences": [
+    "Madam Speaker, I urge my colleagues to support this bill and stand with students at historically underserved institutions in order to make sure every institution that meets the criteria is included in the growing and vital HBCU network of universities that are working every day to serve America's communities. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH PRESIDENTIALLY DESIGNATED",
+   "title": "DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH PRESIDENTIALLY DESIGNATED TERRORIST ORGANIZATIONS IN THE...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5978.htm",
+   "sentences": [
+    "I am an ER doctor who served many years just before coming to Congress, which was not that long ago, where I saw multiple overdoses every single night during a time where we had over 100,000 deaths per year in the United States, far more civilian casualties than any war we have ever experienced in the history of the United States.",
+    "Mr. Speaker, I rise in strong opposition to this resolution."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "title": "REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5984.htm",
+   "sentences": [
+    "What it does is it telegraphs weakness to a hostile regime like Venezuela and encourages them to test U.S. resolve."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "The Taiwan Semiconductor Manufacturing Company produces 90 percent of the world's AI chips, which are crucial to the American economy.",
+    "My amendment expands on language already in law, in this bill, and in the Senate NDAA to combat the indirect censorship of conservative news outlets in the Department of War.",
+    "Section 1555 of the fiscal year 2024 NDAA required that the DOD, when contracting with organizations that place military recruitment advertisements, must certify that an organization does not place advertisements based on political bias or the determination that a media outlet spreads so-called misinformation.",
+    "The language is necessary because the DOD, or now the Department of War, has contracted with organizations such as NewsGuard and the Global Disinformation Index.",
+    "A Global Disinformation Index report on the online news lists the 10 riskiest online news outlets as the New York Post, The Federalist, The Blaze, The Daily Wire, Newsmax, One America News Network, The American Spectator, The American Conservative, Reason Magazine, and RealClear Politics.",
+    "We are hurting the recruitment efforts by taking out a demographic based on your idea of what is accurate and truthful, rather than doing your job of bringing people into the military to make sure that we are sustaining a lethal force moving forward.",
+    "Therefore, I want to point out that the gentleman literally put misinformation in his argument, which proves my point.",
+    "Should I censor him from being able to present his case right here in front of the American people?",
+    "He is allowed to give us misinformation like he just did.",
+    "It was downright misinformation just to say that COVID didn't allow us to recruit.",
+    "To my point, they interpret their misinformation.",
+    "Mr. Chair, I rise in strong opposition to Ms. Greene's amendment to eliminate funding for the Taiwan Security Cooperation Initiative."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "In today's day and age, where people are hooked on their cell phones and electronics, it is more important than ever to protect our outdoors so that our constituents can touch grass instead of a computer screen.",
+    "Congressman Clyde and I also introduced the Lanier Parks Local Access Act to cut red tape and allow local partners to efficiently allocate budgetary resources properly across all campgrounds.",
+    "Mr. Chair, in order to address my peers' concerns, I will restate in the middle of this where I said specifically $8.7 billion in annual appropriations in 2025, which was $1.5 billion more than they requested."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC ESPIONAGE PREVENTION ACT",
+   "title": "ECONOMIC ESPIONAGE PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1828.htm",
+   "sentences": [
+    "Since illegally invading Ukraine, the Russian Federation has become reliant on the People's Republic of China for its supply of semiconductors and other critical dual-use technologies.",
+    "The State Department notified Congress last year that the PRC exports of semiconductors significantly increased in 2023 compared to pre-invasion levels.",
+    "These semiconductors are critical key aspects to the Russian war effort, including economic and electronic warfare, command and control, and targeting.",
+    "These components allow Russia to terrorize Ukrainian civilians with ballistic missile strikes, as well.",
+    "The prevalence of U.S. manufacturing equipment in global semiconductor production means nearly all are subject to U.S. export controls if destined for Russia or Belarus.",
+    "My bill seeks to reduce Russia's access to these semiconductors by authorizing sanctions on any foreign adversaries that materially support Russia's military and intelligence services, violate U.S. export laws, and steal U.S. intellectual property.",
+    "The PRC may publicly claim that they do not provide material support to the Russian invasion of Ukraine, but their continued supply of dual- use technology clearly shows otherwise.",
+    "Cutting off the supply of semiconductors will seriously hamper the Russian war effort and show the world that we will not allow our adversaries to work together to destroy sovereign nations and undermine the international system.",
+    "Madam Speaker, I urge my colleagues to support H.R. 1486."
+   ]
+  }
+ ]
+}

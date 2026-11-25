@@ -3,7 +3,7 @@
 // The statements come from what they told voters in each campaign (data/campaign-text/<id>.json: their campaign
 // website's pages saved by the Wayback Machine, and their campaign-season Bluesky and Threads posts), from the floor
 // speeches, press releases and posts the local refresh collected (data/collected-statements/<id>.json, exported by npm
-// run statements:export) and from the reviewed statements in public/research.json. Each one is tagged by hand in data/question-statements.json:
+// run statements:export), every sitting member's floor speeches (data/record-statements/<id>.json, npm run record:collect) and from the reviewed statements in public/research.json. Each one is tagged by hand in data/question-statements.json:
 //   {person id: {question id: [[side index, "the quote", "YYYY-MM-DD", "link", "where it was said"], ...]}}
 // A tag is only made when the words clearly take one side of the question; a statement that only explains a vote
 // isn't a separate position, and anything unclear is left out. At most one statement per question per campaign (the
@@ -107,13 +107,13 @@ function main(){
     const dir=path.join(ROOT,'.local','statement-candidates');fs.mkdirSync(dir,{recursive:true});
     const coded=fs.existsSync(path.join(ROOT,'data','question-statements.json'))?read('data/question-statements.json'):{};
     const files=dir=>fs.existsSync(path.join(ROOT,'data',dir))?fs.readdirSync(path.join(ROOT,'data',dir)).filter(f=>f.endsWith('.json')).map(f=>f.replace(/\.json$/,'')):[];
-    const campaign=new Set(files('campaign-text')),collected=new Set(files('collected-statements'));
-    for(const id of [...new Set([...campaign,...collected])].sort()){
+    const campaign=new Set(files('campaign-text')),collected=new Set(files('collected-statements')),record=new Set(files('record-statements').filter(f=>!f.startsWith('_')));
+    for(const id of [...new Set([...campaign,...collected,...record])].sort()){
       if(only.length&&!only.includes(id))continue;
-      const c=campaign.has(id)?read(`data/campaign-text/${id}.json`):null,k=collected.has(id)?read(`data/collected-statements/${id}.json`):null;
-      const cands=statementCandidates([...campaignDocs(c),...collectedDocs(k)],searches);
+      const c=campaign.has(id)?read(`data/campaign-text/${id}.json`):null,k=collected.has(id)?read(`data/collected-statements/${id}.json`):null,r=record.has(id)?read(`data/record-statements/${id}.json`):null;
+      const cands=statementCandidates([...campaignDocs(c),...collectedDocs(k),...collectedDocs(r)],searches);
       if(!cands.length)continue;
-      fs.writeFileSync(path.join(dir,`${id}.json`),JSON.stringify({person:id,name:c?.name||k?.name||id,built:new Date().toISOString().slice(0,10),candidates:cands}));
+      fs.writeFileSync(path.join(dir,`${id}.json`),JSON.stringify({person:id,name:c?.name||k?.name||r?.name||id,built:new Date().toISOString().slice(0,10),candidates:cands}));
       const done=Object.keys(coded[id]||{}).length;
       console.log(`${id}: ${cands.length} sentences on ${new Set(cands.flatMap(x=>x.questions)).size} questions${done?` (${done} questions tagged)`:''}`);
       if(print)for(const [i,x] of cands.entries())console.log(`  ${i} [${x.questions.join(',')}] ${x.seen.map(s=>s.year).filter((v,j,a)=>a.indexOf(v)===j).join('/')} ${x.text.slice(0,300)}`);

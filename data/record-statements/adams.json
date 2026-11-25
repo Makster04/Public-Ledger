@@ -1,0 +1,102 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "adams",
+ "name": "Alma S. Adams",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 18
+ },
+ "statements": [
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "title": "NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4651.htm",
+   "sentences": [
+    "Our country's maternal mortality rate is higher than any other high-income country in the world.",
+    "We will deliver for our moms--because our moms can't wait.",
+    "I urge my colleagues to vote in favor of this bill."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING EDUCATION FOR CHILDREN WITH DISABILITIES",
+   "title": "PROTECTING EDUCATION FOR CHILDREN WITH DISABILITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH698-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise because dismantling the Department of Education is not just bad policy."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Not only does their bill fail to extend the ACA tax credits, something that helps 88,000 folks in my district afford health insurance, it abandons financial assistance for middle-class families when they are already struggling to make ends meet.",
+    "It restricts access to abortion care which, by the way, is healthcare, putting the government, not a woman and her doctor, in charge of her body."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING DHS IMMIGRATION RAIDS",
+   "title": "FIGHTING DHS IMMIGRATION RAIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5014-3.htm",
+   "sentences": [
+    "Border Patrol agents engaged in extreme racial profiling, excessive force, and brutal tactics, spreading fear in our community.",
+    "Instead, citizens packed churches for training to empower themselves to respond to Border Patrol agents.",
+    "I have already reached out to DHS and demanded transparency on exactly what Border Patrol was doing in Charlotte.",
+    "They deserve the answers, and I am going to keep fighting for them."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3451-4.htm",
+   "sentences": [
+    "I rise today in opposition to the rule to consider the rescissions package of 2025 and its reckless cuts to public broadcasting."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN'S HISTORY MONTH",
+   "title": "WOMEN'S HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1359-4.htm",
+   "sentences": [
+    "As an artist of 40 years and as someone who has actually started a small museum gallery in my home State, I am very concerned about museums.",
+    "Since its founding, the museum has played an integral role in uplifting and celebrating the many women in history who have had an impact on our society, women like my mentor, artist, and teacher, the late Eva Hamlin Miller.",
+    "She was an African-American artist who is now recognized as a major American painter of the 20th century.",
+    "Wholeheartedly, I support the work of the Women's History Museum."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "It unjustly targets transgender women and girls under the guise of fairness, but exclusion is not fairness, Mr. Speaker.",
+    "Mr. Speaker, Title IX was originally passed to address the structural imbalances between men's and women's sports, disparities that continue to pose an actual threat to women and girls in sports today."
+   ]
+  }
+ ]
+}

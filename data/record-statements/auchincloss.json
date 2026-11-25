@@ -1,0 +1,105 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "auchincloss",
+ "name": "Jake Auchincloss",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 30
+ },
+ "statements": [
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTS TO U.S. BIOMEDICAL RESEARCH",
+   "title": "CUTS TO U.S. BIOMEDICAL RESEARCH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4103-2.htm",
+   "sentences": [
+    "These proposed cuts would eliminate the National Institute on Minority Health and Health Disparities, which they claim ``is replete with DEI [diversity, equity, and inclusion] expenditures,'' the Fogarty International Center, which is responsible for funding degree programs in foreign countries that benefit the health of all, including Americans, and the National Center for Complementary and Integrative Health, whose charge includes supporting research and offering information about complementary health approaches in the setting of whole- person health.",
+    "Since mid-2025, observations suggest the appointment process, which has included traditional nonpartisan vetting, is taking a worrisome turn and is now transitioning to more direct oversight by HHS leadership.",
+    "In the area of requested applications on specific topics in important areas, a good example is the Restoring Insulin Secretion (RISE) study.",
+    "These findings led Congress to approve an amendment to the Social Security Act to establish the Medicare Diabetes Prevention Program and provide lifestyle intervention services for eligible individuals (17)."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "title": "AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH595-2.htm",
+   "sentences": [
+    "Housing affordability is the number one issue in the United States economy right now, and manufactured housing is part of the solution.",
+    "The Biden-era HUD said they could not enforce because of what they would do to housing affordability with manufactured housing.",
+    "It was projected that at least 25,000 fewer homes would be constructed over the next 10 years, and one Biden-era Office of Management and Budget official said it could add $5,000 to $10,000 of additional costs per key for manufactured housing, all to save what could be a teaspoon of greenhouse gas emissions, about what one Ford F- 150 would emit on one visit to a construction worksite.",
+    "What this bill does is it puts accountability for housing affordability with the Department of Housing and Urban Development.",
+    "This is why the National Housing Conference, which is a continuum of affordable housing stakeholders, has endorsed this legislation."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISINTERMENT OF REMAINS OF FERNANDO V. COTA FROM FORT SAM HOUSTON NATIONAL CEMETERY, TEXAS",
+   "title": "DISINTERMENT OF REMAINS OF FERNANDO V. COTA FROM FORT SAM HOUSTON NATIONAL CEMETERY, TEXAS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgE1182-5.htm",
+   "sentences": [
+    "Referred to as the BIOSECURE Act, Section 851 of the NDAA will only apply to contracts subject to the Federal Acquisition Regulations System--that is the Department of Defense and Department of Veterans Affairs.",
+    "Mr. Speaker, I rise today to outline my concerns with a provision contained within the Fiscal Year 2026 National Defense Authorization Act, which I will vote against."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEADERSHIP OF BLOCKCHAIN TECHNOLOGY",
+   "title": "LEADERSHIP OF BLOCKCHAIN TECHNOLOGY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2959-2.htm",
+   "sentences": [
+    "This bill gives the Department of Commerce broad authority to pursue U.S. leadership of blockchain technology.",
+    "Our Secretary has strong ties to the stablecoin Tether.",
+    "Mr. Speaker, I rise today in opposition to H.R. 1664, the Deploying American Blockchains Act of 2025, which passed under voice vote."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADVOCATING AGAINST MEDICAID CUTS",
+   "title": "ADVOCATING AGAINST MEDICAID CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1887.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to advocate against the funding cuts to the Medicaid program that have been proposed for consideration during the budget reconciliation process.",
+    "Specifically, the Energy and Commerce Committee, of which I am a member, has been tasked with cutting $880 billion of Federal spending across the healthcare programs it oversees, a vast majority of which supports Medicaid.",
+    "She shared this poem with me to highlight the importance of Medicaid with her family and all families who care for their loved ones with disabilities.",
+    "This is how a nation bleeds: Not on battlefields but in group homes, Not from enemy fire but from funding gaps, Where independence becomes too expensive, Where institution beds cost less Than community care.",
+    "In the halls of power, They call this fiscal responsibility As if responsibility means Telling a mother her daughter Can no longer see the therapist Who taught her how to speak, As if America means Pricing dignity like a luxury good.",
+    "As such, I will highlight one Massachusetts family today.",
+    "I will be reading a poem entitled, ``The Mathematics of Mercy.'' It was written by Betsy Johnson."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSING CUTS TO NIH FUNDING FOR INDIRECT COSTS",
+   "title": "OPPOSING CUTS TO NIH FUNDING FOR INDIRECT COSTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH651.htm",
+   "sentences": [
+    "We are not in the era of beakers in somebody's backyard doing chemical experiments.",
+    "We are in an era of cutting-edge genetic engineering, and the equipment costs money.",
+    "What we are ultimately going to do is privatize research infrastructure, so we are going to get less of it.",
+    "One was artificial intelligence, which, by the way, requires a lot of research infrastructure.",
+    "Madam Speaker, I rise today in opposition to the illegal and unwise policy recently announced by the National Institutes of Health to limit their indirect cost recapture rate to 15 percent."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "The scope and severity of the threat from the Chinese Communist Party is crystallized in the Taiwan Strait, which is under constant harassment.",
+    "The United States and Taiwan should help support each other's democracies through collaboration on countering disinformation and propaganda.",
+    "This is especially critical as we look to revive U.S. semiconductor manufacturing.",
+    "Mr. Speaker, I rise today in support of H.R. 33, the United States-Taiwan Expedited Double-Tax Relief Act."
+   ]
+  }
+ ]
+}

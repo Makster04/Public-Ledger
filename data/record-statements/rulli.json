@@ -1,0 +1,73 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rulli",
+ "name": "Michael A. Rulli",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "title": "NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Mr. Speaker, I am proud to stand in support of H.R. 7726, the Stop Child Care Scams Act of 2026.",
+    "Mr. Speaker, I urge my colleagues today to support this bill, strengthen integrity, and safeguard taxpayer dollars in the childcare block grant program."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "title": "SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH127-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of Congressman Fry's SHOWER Act.",
+    "I am not going to pull a Nancy Pelosi, Mr. Speaker.",
+    "I am not going to rip up the speech that I had written, but I am not going to give that speech.",
+    "I will tell you how I came to Congressman Fry's bill and how I got interested in it.",
+    "We are going to fix healthcare.",
+    "We are going to fix affordability.",
+    "Mr. Speaker, I urge support of H.R. 4593 and so should you."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING THE LIES OF AUTHORITARIANS IN SCHOOL SYSTEMS ACT",
+   "title": "COMBATING THE LIES OF AUTHORITARIANS IN SCHOOL SYSTEMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5005-6.htm",
+   "sentences": [
+    "That is why I urge a ``yes'' vote from all my colleagues, especially from the other side of the aisle.",
+    "I urge a ``yes'' vote today on H.R. 1005, otherwise known as the CLASS Act."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL COAL COUNCIL REESTABLISHMENT ACT",
+   "title": "NATIONAL COAL COUNCIL REESTABLISHMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4428.htm",
+   "sentences": [
+    "They look for power from countries like Russia, like China, and like India to use their coal-powered, generated plants to support their grid.",
+    "They want to make sure that the artificial intelligence companies and the data mining companies come to Ohio.",
+    "Mr. Speaker, I thank Chair Latta for his leadership, and I rise in support of H.R. 3015, the National Coal Council Reestablishment Act.",
+    "Mr. Speaker, I urge all my colleagues today to have a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "Mr. Speaker, I stand here today in support of H.R. 28, and I urge the House to pass this bill."
+   ]
+  }
+ ]
+}

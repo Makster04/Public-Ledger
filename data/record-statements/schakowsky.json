@@ -1,0 +1,22 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "schakowsky",
+ "name": "Janice D. Schakowsky",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 1,
+  "sentences": 1
+ },
+ "statements": [
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "I thank them, and I pledge to all of our Federal workers that I will be here to praise them, to protect them, and to say that they have not only every right but every privilege of serving the American people as they have done day in and day out."
+   ]
+  }
+ ]
+}

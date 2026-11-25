@@ -1,0 +1,35 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "zinke",
+ "name": "Ryan K. Zinke",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 2,
+  "sentences": 5
+ },
+ "statements": [
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAFFIRMING IRAN REMAINS THE LARGEST STATE SPONSOR OF TERRORISM",
+   "title": "REAFFIRMING IRAN REMAINS THE LARGEST STATE SPONSOR OF TERRORISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2392-2.htm",
+   "sentences": [
+    "Mr. Speaker, while we all in this body mourn the deaths of our six heroes, we should remember that earlier, as a deputy commander of the Special Forces of Iraq, I lost many friends as a result of Iran sponsoring weapons targeting.",
+    "One of them was Command Sergeant Michael Stack killed by Iranian weapons and targeting in April 2004.",
+    "Iran is an evil empire--not the people--the Khamenei regime, which controls their great Iranian people and does not allow prosperity."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO PUBLIC LAND ORDER NO. 7917 FOR WITHDRAWAL OF FEDERAL LAND",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE BUREAU OF LAND MANAGEMENT RELATING TO PUBLIC LAND ORDER NO. 7917 FOR WITHDRAWAL OF FEDERAL LANDS; COOK, LAKE, AND SAINT LOUIS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1147.htm",
+   "sentences": [
+    "I understand political gerrymandering and fundraising and showing pictures of wonderful canoes going across, and, oh, we are going to mine right in the middle of the wilderness area, but that is not the case.",
+    "Mr. Speaker, I ask and I urge my colleagues to support this."
+   ]
+  }
+ ]
+}

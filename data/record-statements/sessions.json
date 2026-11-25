@@ -1,0 +1,104 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "sessions",
+ "name": "Pete Sessions",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 29
+ },
+ "statements": [
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "Mr. Speaker, I will tell you that what this does is it makes it standard across the country, and it does."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESSMAN GERALD E. CONNOLLY POST OFFICE BUILDING",
+   "title": "CONGRESSMAN GERALD E. CONNOLLY POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4386-4.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise in support of a bill which would rename a post office in Fairfax, Virginia, for one of our former colleagues, Congressman Gerald E. Connolly, a father, a husband, friend of mine and to this body, and a lifelong civil public servant, one that dedicated his life to his constituents, his community, and to his country."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ULYSSES S. GRANT POST OFFICE BUILDING",
+   "title": "ULYSSES S. GRANT POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4387.htm",
+   "sentences": [
+    "Over his time in office, President Grant established the Department of Justice and oversaw the adoption of the 15th Amendment and other Reconstruction efforts that were important to this fledgling young Nation.",
+    "Mr. Speaker, I rise today in support of this bill, which would rename a post office in Georgetown, Ohio, for Ulysses S. Grant.",
+    "We will be hearing from them in just a few minutes."
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER P",
+   "title": "CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER PAYMENT PREVENTION REFORMS WILL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4089.htm",
+   "sentences": [
+    "It has caused, all across this country, people to go look for these types of circumstances to make sure it is not in their backyard.",
+    "These officials possessed the legal and prosecutorial authority to stop fraud payments but repeatedly failed to not only hear the warnings but to act against those who were whistleblowers.",
+    "The self-named Quality Learning Center, was a so-called childcare center with no children being found, yet millions of dollars being sucked down by fraudsters.",
+    "The question is: Will we today, openly, as a body, understand that this is something that happened in their backyard or could be in their backyard, and they need to use this story.",
+    "The committee held a hearing on that Medicaid fraud in Ohio just last week.",
+    "Mr. Speaker, I think we have made our point today, and that point is that there were people who were elected who chose not only to not listen but, when people came forward who were whistleblowers, they took retaliatory action against them.",
+    "They asked questions of how and why and what we are going to do.",
+    "Today is an opportunity where we will lay out that story for the American people and say this is a national disgrace.",
+    "As the father of a disabled young man, a Down syndrome young man, I will tell you that the benefits that my son or others who are disabled count on the Federal Government to be able to properly provide to them, as provided by law, the things that they are entitled to, many other people not only come and make claims that are not true but devise a process by which to take money away from those who it was designed to help.",
+    "We will provide a flashlight, a guiding light, to show people what has happened, how it happened, and what we need to do about it.",
+    "We are not going to go to fight anymore.",
+    "I will tell you, the American people are tired.",
+    "They know that perhaps most of all, I will be very open to listening to them.",
+    "Mr. Speaker, I will answer that question, and the answer is clear: The State of Texas that has that authority and responsibility did that in extensive hearings and extensive reports that led up to action by the State of Texas officially in the legislature to bring him before them, and he has answered every question he could have answered."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FRAUD PREVENTION AND ACCOUNTABILITY ACT",
+   "title": "FRAUD PREVENTION AND ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4065-5.htm",
+   "sentences": [
+    "Since the creation of the PRAC, the PRAC has assisted law enforcement and agency inspectors general and partners across 1,200 pandemic-related investigations, with a potential fraud loss of $2.5 billion.",
+    "They are law enforcement, and they have an eye to fraud.",
+    "We are going to know that just the word alone of fraud is enough not to stop a payment, but to do an investigation, and it will be done by law enforcement professionals who understand not only authority and responsibility, but they understand the taxpayers' needs.",
+    "We will make sure that no matter the problems that face this Nation, we will be prepared.",
+    "Instead of sending the money out and then chasing it, we are going to run every bit of this data and information through the PRAC of existing people who receive benefits today."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA JUDICIAL NOMINATIONS REFORM ACT",
+   "title": "DISTRICT OF COLUMBIA JUDICIAL NOMINATIONS REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4375-5.htm",
+   "sentences": [
+    "A lot of it is political, but what it is to do is to say that if the people of this country have chosen the President of the United States, then that is the direction we will go.",
+    "We will give that President, whether it be Republican or Democrat, whether it be a man or a woman, we will give that President the opportunity for the control of this nomination and the system here in Washington, D.C. We have got a lot at risk.",
+    "Mr. Speaker, we have got a lot at risk which is the same reason why President Trump finally had the guts--yes, I will call them guts--to call in the National Guard to take on the crime presence that exists in Washington, D.C. Members of Congress have had their cars stolen.",
+    "Now, Mr. Speaker, I am not going to go through this, because I really did not do the due diligence to know why there are people here who have not been approved."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING AND REMEMBERING CONGRESSMAN SYLVESTER TURNER",
+   "title": "MOMENT OF SILENCE HONORING AND REMEMBERING CONGRESSMAN SYLVESTER TURNER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH997.htm",
+   "sentences": [
+    "We join with this entire body to say today that we will not only miss him, but we wish his family the very best and Godspeed."
+   ]
+  }
+ ]
+}

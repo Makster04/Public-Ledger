@@ -1,0 +1,215 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "sgarcia",
+ "name": "Sylvia R. Garcia",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 17,
+  "sentences": 50
+ },
+ "statements": [
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WE NEED JUST ONE MORE REPUBLICAN",
+   "title": "WE NEED JUST ONE MORE REPUBLICAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6122-5.htm",
+   "sentences": [
+    "Mr. Speaker, we need just one Republican to sign my discharge petition to force a vote on the American Dream and Promise Act, just one more.",
+    "Dreamers, temporary protected status holders, and deferred enforced departure holders are having their lives turned upside-down by Trump's mass deportation machine.",
+    "The majority of Americans support the Dream Act."
+   ]
+  },
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1013, RETIREMENT FAIRNESS FOR CHARITIES AND EDUCATIONAL INSTITUTIONS ACT OF 2025",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1013, RETIREMENT FAIRNESS FOR CHARITIES AND EDUCATIONAL INSTITUTIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6122-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to urge my colleagues to vote ``no'' on the previous question so we can offer an amendment to bring my bipartisan American Dream and Promise Act to the House floor.",
+    "Dreamers were brought to this country as children.",
+    "Most DACA recipients arrived here at the age of 7 years old.",
+    "Temporary protected status and deferred enforced departure holders have also spent years, even decades, building their lives here.",
+    "He told Homeland Security Secretary Markwayne Mullin to work with Democrats on immigration reform, and Mullin himself suggested Congress could consider a pathway to permanent legal status for DACA recipients.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on the previous question so we can move together on this piece of legislation, which could be the foundation of the immigration reform that we need in this country."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY AND JUSTICE FOR ALL",
+   "title": "LIBERTY AND JUSTICE FOR ALL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5413-2.htm",
+   "sentences": [
+    "On July 7, an ICE agent shot and killed Lorenzo Salgado Araujo, an unarmed man with no criminal record, who was not even the target of their investigation.",
+    "No sirens, no body cameras, no dash cameras, just two unmarked cars following him.",
+    "ICE pursued the wrong van and killed an unarmed man who wasn't their target and had no criminal record, and now we are expected to trust DHS to investigate itself."
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PERMANENT PROTECTIONS FOR DREAMERS",
+   "title": "PERMANENT PROTECTIONS FOR DREAMERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4088-2.htm",
+   "sentences": [
+    "Mr. Speaker, this coming Monday, June 15, we mark 14 years since DACA, Deferred Action for Childhood Arrivals.",
+    "It gave Dreamers a chance to breathe.",
+    "Yet, President Trump is trying to suffocate DACA one delayed renewal at a time.",
+    "He is detaining and deporting Dreamers, slow-walking renewals, and creating gaps that are costing them their livelihoods.",
+    "Dreamers were brought here as children.",
+    "This is why I am leading the American Dream and Promise Act, to give Dreamers permanent protections and a pathway to citizenship."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLERGY ACT",
+   "title": "CLERGY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3118.htm",
+   "sentences": [
+    "Had I been able to vote, I would have voted YEA on Roll Call No. 138, Passage of H.R. 7959, IRS Whistleblower Program Improvement Act, and YEA on Roll Call No. 139, Passage of H.R. 227, Clergy Act."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT",
+   "title": "FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3064.htm",
+   "sentences": [
+    "Had I been able to vote, I would have voted: NAY on Roll Call No. 132, Adoption of H. Res. 1182; YEA on Roll Call No. 133, the Motion to Recommit on H.R. 4690; NAY on Roll Call No. 134, passage of H.R. 4690; YEA on Roll Call No. 135, the Motion to Recommit on H.R. 6387; and NAY on Roll Call No. 136, passage of H.R. 6387. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN VETERANS CANCER CARE COORDINATION ACT",
+   "title": "WOMEN VETERANS CANCER CARE COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4282.htm",
+   "sentences": [
+    "Many VA centers are still building out their services, so often women are connected with community care.",
+    "Mr. Speaker, today I rise in support of my bill, the Women Veterans Cancer Care Coordinator Act of 2025.",
+    "I urge my colleagues to support its passage."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHILDREN IN TEXAS ARE GOING HUNGRY",
+   "title": "CHILDREN IN TEXAS ARE GOING HUNGRY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2982-8.htm",
+   "sentences": [
+    "Let's be clear: How can you claim to be pro-life and then just let children starve?",
+    "I will never stop fighting for them, and I will always put people over politics. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAPPY PRIDE MONTH",
+   "title": "HAPPY PRIDE MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-06/html/CREC-2025-06-06-pt1-PgH2516-4.htm",
+   "sentences": [
+    "Every young person watching should know I see them, I hear them, and I will fight for them today and every day because in Texas when we say ``all,'' that means all. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SNAP AND MEDICAID",
+   "title": "SNAP AND MEDICAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2184-5.htm",
+   "sentences": [
+    "It is always about tax cuts, the rich, and the billionaires.",
+    "They are terrified of losing Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BEING A MOM IN TRUMP'S AMERICA",
+   "title": "BEING A MOM IN TRUMP'S AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-08/html/CREC-2025-05-08-pt1-PgH1913-8.htm",
+   "sentences": [
+    "Yet, what good is that when he is cutting maternal healthcare; trashing Medicaid, which pays for 4 in 10 births in our country; and letting childcare costs force moms out of work?",
+    "Women want to be moms but don't want to go broke having to raise this child, risk their life with a pregnancy, or lose their child to gun violence.",
+    "He said: ``Oh, I won't do anything to take care of them.",
+    "I will supply funds, and she'll take care of the kids.'' That is what he thinks of motherhood."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT WORK PERIOD REGARDING SOCIAL SECURITY",
+   "title": "DISTRICT WORK PERIOD REGARDING SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1780-2.htm",
+   "sentences": [
+    "Mr. Speaker, during this past district work period, I met with seniors across my district who are worried about losing the lifelines they depend on: Social Security, Medicaid, and Medicare.",
+    "At one event with our seniors, a Social Security worker told us that wait times are exploding.",
+    "The Social Security worker told us he felt that he had failed the American people.",
+    "We put seniors over billionaires. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"DEFINING LARGER PARTICIPANTS OF A MARKET FOR GENERAL-USE DIGITAL CONSUME",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"DEFINING LARGER PARTICIPANTS OF A MARKET FOR GENERAL-USE DIGITAL CONSUMER PAYMENT APPLICATIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1514-2.htm",
+   "sentences": [
+    "The people who will get hurt are those people like in my district who I represent: young people, working families, and folks just starting to save for the future.",
+    "We are not going to stand by while Donald Trump, Elon Musk, and their billionaire buddies try to kill it.",
+    "We are fighting to protect them because the CFPB isn't just a watchdog."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "I urge my colleagues to vote ``no.'' Vote for people, not for banks."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING SECURITY AND PATH TO CITIZENSHIP FOR DREAMERS",
+   "title": "PROVIDING SECURITY AND PATH TO CITIZENSHIP FOR DREAMERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH884-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today for Dreamers, young people brought to this country as children through no fault of their own.",
+    "Dreamers grew up in our schools, played with our children, pledged allegiance to our flag, and made our country, every single day, strengthened in every way.",
+    "They are doctors, teachers, lawyers, essential workers, and businessowners.",
+    "More than 70 percent of Americans agree Dreamers deserve citizenship.",
+    "That is why, yesterday, I reintroduced the bipartisan American Dream and Promise Act to give Dreamers the security they deserve and a real path to citizenship.",
+    "Our message is clear to Dreamers: Their home is here.",
+    "We will fight for them. ``Si, se puede''; ``Yes, we can.'' ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING THE CONSUMER FINANCIAL PROTECTION BUREAU",
+   "title": "PROTECTING THE CONSUMER FINANCIAL PROTECTION BUREAU",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-3.htm",
+   "sentences": [
+    "For their billionaire buddies?",
+    "We must put people's pocketbooks over billionaires and their buddies. ____________________"
+   ]
+  }
+ ]
+}

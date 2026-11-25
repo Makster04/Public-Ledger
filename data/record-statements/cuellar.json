@@ -1,0 +1,24 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cuellar",
+ "name": "Henry Cuellar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 1,
+  "sentences": 3
+ },
+ "statements": [
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "I represent 280 miles of the U.S.-Mexico border.",
+    "It also provides, as the gentleman said a few minutes ago, $20 million for body-worn cameras, specifically for CBP and ICE, which are conducting immigration enforcement.",
+    "Mr. Speaker, I rise in support of this bill, but first, I want to thank the chairmen of the subcommittees and the full committee and my ranking member for their leadership."
+   ]
+  }
+ ]
+}

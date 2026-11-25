@@ -1,0 +1,92 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "fulcher",
+ "name": "Russ Fulcher",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 17
+ },
+ "statements": [
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "title": "FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+   "sentences": [
+    "You may not think of my home State of Idaho as a border State when you start thinking about border States, but Idaho is a border State.",
+    "We share an international border with Canada in the northern panhandle of the State of Idaho.",
+    "Oftentimes, that smoke, those pollutants, blow right over the border, and there is absolutely nothing that the State of Idaho can do with that.",
+    "It is true that the Clean Air Act has a provision to address that.",
+    "The EPA guidance, largely enforced with the previous administration, conflicts with the Clean Air Act provision allowing States to adjust their emission plans.",
+    "Every time one of those fires breaks out, we become at risk of falling out of our emissions standards.",
+    "Mr. Speaker, I rise in support of H.R. 6409, the FENCES Act.",
+    "Mr. Speaker, I stand in strong support of H.R. 6409, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REDUCING AND ELIMINATING DUPLICATIVE ENVIRONMENTAL REGULATIONS ACT",
+   "title": "REDUCING AND ELIMINATING DUPLICATIVE ENVIRONMENTAL REGULATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2909.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6398, the RED Tape Act.",
+    "Again, I rise in support of H.R. 6398, and I encourage my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHARIA-FREE AMERICA",
+   "title": "SHARIA-FREE AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2761.htm",
+   "sentences": [
+    "Mr. Speaker, I am proud to stand beside my colleagues here today."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "title": "SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5066-5.htm",
+   "sentences": [
+    "Rural counties in Idaho are impacted even more so by extensive federal ownership, as they are unable to tax large portions of land in their jurisdiction.",
+    "However, a long-term solution is necessary, and I will continue to advocate for one in Congress that ensures Idahoans dictate Idaho affairs--not the federal government."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WORLD WAR II WOMEN'S MEMORIAL LOCATION ACT",
+   "title": "WORLD WAR II WOMEN'S MEMORIAL LOCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5082.htm",
+   "sentences": [
+    "I urge the passage of the World War II Women's Memorial Location Act."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INFORMING CONSUMERS ABOUT SMART DEVICES ACT",
+   "title": "INFORMING CONSUMERS ABOUT SMART DEVICES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1666.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 859, Informing Consumers About Smart Devices Act.",
+    "I urge support for this legislation."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN'S SPORTS FOR WOMEN ONLY",
+   "title": "WOMEN'S SPORTS FOR WOMEN ONLY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-2.htm",
+   "sentences": [
+    "That is why, this week, my House colleagues and I passed the Protection of Women and Girls in Sports Act of 2025."
+   ]
+  }
+ ]
+}

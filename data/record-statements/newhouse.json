@@ -1,0 +1,91 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "newhouse",
+ "name": "Dan Newhouse",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3840-4.htm",
+   "sentences": [
+    "This legislation also ensures that the Secretary of Agriculture remain a member of the Committee on Foreign Investment in the United States to prevent the Chinese Communist Party from purchasing our farmland, which is a matter of national security.",
+    "As we find ourselves nearly $40 trillion in debt, we must rein in spending.",
+    "Madam Chair, I rise today in support of the fiscal year 2027 agricultural appropriations legislation as well as in support of farmers, ranchers, and producers across this Nation.",
+    "Madam Chair, I urge all of my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTENSION OF TIME TO COMMENCE CONSTRUCTION OF CERTAIN HYDROPOWER PROJECTS",
+   "title": "EXTENSION OF TIME TO COMMENCE CONSTRUCTION OF CERTAIN HYDROPOWER PROJECTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3024.htm",
+   "sentences": [
+    "The Pacific Northwest boasts some of the most abundant form of low-cost, carbon-free renewable baseload power in the country, and I want to see other parts of the country be able to enjoy the same kind of benefits that we do in the Pacific Northwest from hydropower.",
+    "Madam Speaker, I urge all of my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "With border encounters at a historic low, this legislation fully funds DHS and the effort to detain and remove violent, illegal immigrants from our communities.",
+    "The U.S. Coast Guard is fundamental in protecting our border and domestic security.",
+    "Lastly, as a member of the Select Committee on the CCP, the Chinese Communist Party, I am pleased to see this bill refocuses the Cybersecurity and Infrastructure Agency, or CISA, on its core cybersecurity mission and rightsizes the agency to preserve critical functions."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "I am going to miss Doug's big grin, as he always greeted me as Lieutenant Dan.",
+    "Joan and I are going to truly miss Doug."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "Mr. Speaker, as a member of the House Committee on Appropriations, the responsibility of funding the Federal Government is one that I take very seriously, especially in light of our Nation's debt surpassing $38 trillion.",
+    "The most important thing right now is that we get back to work, making sure that the Federal Government can provide the essential services that people depend on and that Congress can continue working to pass full-year funding legislation, providing responsible Federal spending and funding those essential services."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING PAITYN, EVELYN, AND OLIVIA DECKER",
+   "title": "MOMENT OF SILENCE HONORING PAITYN, EVELYN, AND OLIVIA DECKER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2494.htm",
+   "sentences": [
+    "We support law enforcement who have committed to employing any resource necessary to bring those responsible to justice for this tragedy."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "title": "RAISING A QUESTION OF THE PRIVILEGES OF THE HOUSE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH998.htm",
+   "sentences": [
+    "I will concede that all of us need a reminder that we all need to raise our level of accountability due to the actions that we take.",
+    "Mr. Speaker, I urge all of my colleagues, Republicans and Democrats, to join with me to attain that better level of conduct."
+   ]
+  }
+ ]
+}

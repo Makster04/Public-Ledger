@@ -1,0 +1,95 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "hern",
+ "name": "Kevin Hern",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 20
+ },
+ "statements": [
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "We should be focused on making healthcare affordable for all Americans and include those on the exchange, employer-sponsored plans, Medicare, and Medicaid.",
+    "Mr. Speaker, I strongly urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING RESPONSIBLE OVERSIGHT TO ELIMINATE COMMUNIST TEACHINGS FOR OUR KIDS ACT",
+   "title": "PROMOTING RESPONSIBLE OVERSIGHT TO ELIMINATE COMMUNIST TEACHINGS FOR OUR KIDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5032-2.htm",
+   "sentences": [
+    "Through the Belt and Road Initiative, the Chinese Communist Party has been spreading its malign influence for over a decade.",
+    "Mr. Chairman, I rise in support of my bill, H.R. 1069, the PROTECT Our Kids Act, and I urge my colleagues, both Republican and Democrat, to support this bill.",
+    "I urge a ``yes'' vote on this legislation."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of this one big, beautiful bill."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLY TRINITY GREEK ORTHODOX CHURCH CENTENNIAL CELEBRATION",
+   "title": "HOLY TRINITY GREEK ORTHODOX CHURCH CENTENNIAL CELEBRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgE373-4.htm",
+   "sentences": [
+    "The rich traditions of the Orthodox Church extend back to the earliest days of Christianity, established in the lands surrounding the Mediterranean, where the first Christian communities lived and worshipped."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "In passing this budget framework, we are unlocking the process to deliver on unleashing American energy production, permanently securing our southern and northern borders, and making tax cuts permanent for small businesses and working families.",
+    "President Trump has fully secured our border and eliminated over $100 billion in government spending on waste, fraud, and abuse.",
+    "President Trump's new proposal on tax cuts is for those making tips, not the wealthy; those on overtime, not the wealthy; and reducing the tax burden on those receiving Social Security, our seniors, not the wealthy.",
+    "The President has talked about giving tax credits or deductibility for interest on automobiles made in America so our great union workers in America can have better jobs and continue to see jobs grow in America, not the wealthy.",
+    "Mr. Speaker, I rise in support of this legislation that will unlock the critical work the American people elected us to do.",
+    "Mr. Speaker, I am proud to support this budget, and I am proud to fight for President Trump's legislative agenda.",
+    "I urge every one of my colleagues here to vote so we can get on to the debate that the leader on the other side of the aisle talked about."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "This budget resolution commits us to investing in strong border security and strengthening our national defense.",
+    "The budget resolution calls for historic spending cuts as Congress works with the President to eliminate waste, fraud, and abuse, something that every single one of us, regardless of party, should applaud, all in one, big, beautiful bill.",
+    "Failure to unite on this vote may very well result in breaking up the President's agenda.",
+    "I urge my colleagues to vote ``yes.'' Together we can build a stronger, more prosperous America before it is too late."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "They have increased investment in domestic research and development to improve their own deterrence capabilities and are invested heavily in the semiconductor industry here in the United States of America.",
+    "Mr. Speaker, I am proud to support H.R. 33 today, and I urge all of my colleagues to vote ``yes.''"
+   ]
+  }
+ ]
+}

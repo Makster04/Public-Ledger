@@ -1,0 +1,45 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "keating",
+ "name": "William R. Keating",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 2,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UKRAINE SUPPORT ACT",
+   "title": "UKRAINE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3879.htm",
+   "sentences": [
+    "Mr. Speaker, it is important to recognize as we stand here today in the midst of a war with Iran, as the President is trying to secure an agreement that would require them not to pursue nuclear weapons, that the United States already has a commitment in an agreement with the then-third largest nuclear power, Ukraine.",
+    "In the 1994 Budapest Memorandum, Ukraine agreed to relinquish all of their nuclear assets and move away from their nuclear ambition in exchange for an agreement with the United States that we would be there, be there to defend them in the case of aggression and actions by another country.",
+    "Russia's illegal aggression has been accompanied by mass killings, kidnapping and displacement of thousands of Ukrainian children, serial rapes by Russian soldiers, and the targeting of innocent civilians.",
+    "These are war crimes, and the war crimes alone command our full support for Ukraine's defense.",
+    "At the same time, Russia's illegal aggression represents a direct threat to our NATO allies, particularly the Baltic States.",
+    "Before the full-scale invasion, Russia made their ambitions crystal clear that the Baltic States were a target and that NATO sovereignty was at stake, as well.",
+    "It is important to realize that, in Ukraine, we don't share that commitment alone.",
+    "However, we know that the future cost of NATO conflicts is far greater in dollars and in lives, and we know we have to support Ukraine to make sure that we are not falling into that greater cost.",
+    "Our commitment to Ukraine remains our best defense economically and in terms of our national security as well as for our shared democratic values.",
+    "That day has come, and we are going to honor our future agreements.",
+    "Mr. Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELEASE OF EPSTEIN FILES",
+   "title": "RELEASE OF EPSTEIN FILES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4778-2.htm",
+   "sentences": [
+    "Mr. Speaker, the House and now our Senate have finally acted to release the files and all the information regarding the criminal activities of Jeffrey Epstein and all who enabled, all who knew and did nothing, and all who participated in some of the worst sexual abuse and trafficking crimes our country has experienced.",
+    "This will expose the rich, the powerful, and the self-entitled who were involved in these crimes and who did it for the worst possible reason, because they thought they could.",
+    "As a Massachusetts district attorney, I oversaw specialized sexual assault police units, specialized sexual assault prosecutors, and specialized sexual assault victim-witness assistance units.",
+    "Never call them a hoax, and don't attempt to abuse and pervert what this legislation does by invoking a sham active investigation as a disingenuous excuse to withhold a complete release of the Epstein files."
+   ]
+  }
+ ]
+}

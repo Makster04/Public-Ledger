@@ -1,0 +1,115 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "thanedar",
+ "name": "Shri Thanedar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 9,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ABOLISHING ICE",
+   "title": "ABOLISHING ICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1336-4.htm",
+   "sentences": [
+    "We must abolish ICE. ____________________",
+    "Mr. Speaker, I rise today in support of abolishing ICE."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING FOR DETROIT",
+   "title": "FIGHTING FOR DETROIT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH650-4.htm",
+   "sentences": [
+    "His tariffs have hurt Detroit's auto industry.",
+    "Detroit needs affordable housing, not Trump's insults.",
+    "Mr. Speaker, I am fighting for Detroit, fighting to bring costs down, and make life more affordable for all."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPEACHING SECRETARY PETE HEGSETH",
+   "title": "IMPEACHING SECRETARY PETE HEGSETH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5824-3.htm",
+   "sentences": [
+    "Mr. Speaker, this week, I introduced articles to impeach Secretary Pete Hegseth for murder and conspiracy to murder and reckless and unlawful mishandling of classified information."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAL SOLUTIONS FOR MANUFACTURING IN MICHIGAN",
+   "title": "REAL SOLUTIONS FOR MANUFACTURING IN MICHIGAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4447.htm",
+   "sentences": [
+    "Mr. Trump promised that tariffs would protect our jobs.",
+    "We need real solutions, like job training, stronger unions, and building the future of mobility right here in Detroit. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CENSURING ANTI-IMMIGRANT SENTIMENT",
+   "title": "CENSURING ANTI-IMMIGRANT SENTIMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3027.htm",
+   "sentences": [
+    "I have introduced a censure resolution, H. Res. 553, against Andy Ogles for his horrific anti-immigrant sentiment."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE TRUTH STILL MATTERS",
+   "title": "THE TRUTH STILL MATTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1953.htm",
+   "sentences": [
+    "President Donald J. Trump has been committing crimes since day one: bribery, corruption, taking power from Congress, creating an unlawful office in DOGE, violating First Amendment rights, ignoring due process, and, finally, refusing to abide by a unanimous Supreme Court ruling.",
+    "His reckless tariffs hurt American families, and he even threatened military actions against our allies. 4.",
+    "He gave Elon Musk unconstitutional control over government agencies and American people's personal data. 6.",
+    "If we allow this to continue, we are telling the American people that the Presidency is above the law and that the Constitution is optional.",
+    "I love America, and I will do anything to protect our Constitution and our democratic values.",
+    "That is why I introduced H. Res. 353 to impeach Donald J. Trump, outlining seven Articles of Impeachment because when a President violates the Constitution, Congress must act.",
+    "Now we are fighting--in the courts, in Congress, and in the court of public opinion--because the truth still matters."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING OUR CONSTITUTION",
+   "title": "PROTECTING OUR CONSTITUTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1955-3.htm",
+   "sentences": [
+    "Donald J. Trump has been committing crimes since day one: bribery, corruption, taking power from Congress, creating an unlawful office in DOGE, violating First Amendment rights, ignoring due process, and finally refusing to abide by a unanimous Supreme Court ruling.",
+    "I love America, and I will do anything to protect our Constitution and our democratic values."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND SBA RESEARCH ACT",
+   "title": "DOE AND SBA RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH742.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 788."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: U.S. GOVERNMENT SERVES AMERICAN PEOPLE, NOT WEALTHY SHAREHOLDERS",
+   "title": "U.S. GOVERNMENT SERVES AMERICAN PEOPLE, NOT WEALTHY SHAREHOLDERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH484-6.htm",
+   "sentences": [
+    "Thousands will die around the world because USAID won't deliver lifesaving food and medicine.",
+    "Millions will lose control of their personal information, such as Social Security numbers, banking information, Social Security checks, and Medicare benefits.",
+    "Rest assured, Democrats care, I care, and we will use every tool at our disposal to get rid of this unelected, power-hungry, egocentric billionaire. ____________________"
+   ]
+  }
+ ]
+}

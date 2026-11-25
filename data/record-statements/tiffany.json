@@ -1,0 +1,80 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "tiffany",
+ "name": "Thomas P. Tiffany",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 23
+ },
+ "statements": [
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "I urge her to watch CNN this morning with the inflation numbers that have come out that are the lowest since 2021.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes.'' I urge the United States Senate to pass this bill when it comes over to them."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WABENO ECONOMIC DEVELOPMENT ACT",
+   "title": "WABENO ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3541-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, the Wabeno Economic Development Act.",
+    "It has strong local support, and I urge my colleagues to vote ``yes'' to make sure Tony's Wabeno Redi-Mix stays in business for years to come.",
+    "I urge my colleagues to support H.R. 3937 today."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GREAT LAKES MASS MARKING PROGRAM ACT OF 2025",
+   "title": "GREAT LAKES MASS MARKING PROGRAM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3543.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1917, the Great Lakes Mass Marking Program Act of 2025, sponsored by my colleague from Michigan (Mrs. Dingell)."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUTTING AMERICA FIRST BORDER SECURITY POLICIES BACK IN PLACE",
+   "title": "PUTTING AMERICA FIRST BORDER SECURITY POLICIES BACK IN PLACE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1136.htm",
+   "sentences": [
+    "Mr. Speaker, first of all, I thank the gentlemen who have led the Border Security Caucus, Mr. Babin and Mr. Biggs.",
+    "It is as a result of their efforts that they continue to deliver this message to the American people of what a disaster this was going on at our southern border that caused this to be the number one issue in the past election before the American people.",
+    "The first trip I did after being sworn in, in May 2020, was to go down to the southern border on a trip that he led with many of us, as he did so many times with so many Members.",
+    "I don't know if there are hardly any Members on the Republican side that he didn't lead to the southern border to deliver the message.",
+    "It is there that I got to meet people like Sheriff Mark Lamb from Pinal County in Arizona and Sheriff Mark Dannels down in Cochise County, who back in 2020 talked about how the border was becoming secure, that at the end of the Trump administration's first term, the border was becoming more secure.",
+    "We just had a hearing this morning with a sheriff from one of the counties in Texas, a border county there, as well as one of the leaders of the Border Patrol union.",
+    "Thank God we have new leadership in the White House because the border is once again secured.",
+    "I would just say, remember when the media and Democrats told us that President Biden needed a bill to fix the border?",
+    "If there is one thing that has been proven over the last month, it is that the Democrats' border invasion was intentional.",
+    "Mr. Speaker, President Trump announced illegal border crossings in February were the lowest in decades: February 2024, under Biden, nearly 190,000; 2025, under Trump, a little over 8,000.",
+    "It is truly a shame that Democrats willingly let the killers of Laken Riley, Jocelyn Nungaray and Rachel Morin into this country.",
+    "It is also a shame that they did not deport criminals like the one in my congressional district who killed Steven Nasholm, a father of three daughters.",
+    "He took action by putting remain in Mexico back in place.",
+    "He declared an emergency at our southern border, sent troops to help the border patrol, put a stop to illegal crossings, and signed the Laken Riley Act into law to deport dangerous criminals.",
+    "President Biden had turned it into an illegal alien term where illegals who were caught at our southern border were released into the U.S. To be clear, the last administration chose to let America be invaded.",
+    "We must codify things like stopping birthright citizenship, ending catch and release, ensuring that ICE has the tools needed to carry out mass deportations, and preventing parole abuse permanently."
+   ]
+  },
+  {
+   "date": "2025-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCURATELY COUNTING RISK ELIMINATION SOLUTIONS ACT",
+   "title": "ACCURATELY COUNTING RISK ELIMINATION SOLUTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-21/html/CREC-2025-01-21-pt1-PgH244.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to vote ``yes.''"
+   ]
+  }
+ ]
+}

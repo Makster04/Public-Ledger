@@ -1,0 +1,339 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "landsman",
+ "name": "Greg Landsman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 26,
+  "sentences": 93
+ },
+ "statements": [
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RE",
+   "title": "PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4425-2.htm",
+   "sentences": [
+    "I want to talk about the bill because it is going to make it harder for us to fight gun violence in America.",
+    "It makes it even harder for us to fight gun violence in America.",
+    "Some headlines from home: ``18-year-old dies after shooting near Westwood store.'' ``Cincinnati Police Department investigating after shooting in Avondale.'' ``1 shot in East Price Hill, search underway for suspect.'' ``No arrests made after 3 weekend shootings in Greater Cincinnati.'' These are all headlines from this weekend.",
+    "Mr. Speaker, the question then becomes: Why are they siding with gun manufacturers and not law enforcement?",
+    "Mr. Speaker, I rise today in opposition to H.R. 1181, which is in this Rules package.",
+    "We code everything, but we are not going to code this."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1041, VETERANS 2ND AMENDMENT PROTECTION ACT; PROVIDING FOR CONSIDERATION OF H.R. 6047, SHARRI BRILEY AND ERIC EDMUNDSON VETERANS",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1041, VETERANS 2ND AMENDMENT PROTECTION ACT; PROVIDING FOR CONSIDERATION OF H.R. 6047, SHARRI BRILEY AND ERIC EDMUNDSON VETERANS BENEFITS EXPANSION ACT OF 2026...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3632-4.htm",
+   "sentences": [
+    "They are worried about bathrooms and pronouns.",
+    "Mr. Speaker, this bill is focused on bathrooms and pronouns, and it is a crazy turn of events for the party to be telling local communities what they can and can't do, and it is one of 126 trans-obsessed bills introduced in this Congress.",
+    "Imagine, Mr. Speaker, if the majority put a few bills on the floor to expand childcare, to expand preschool, to improve reading and math scores, to improve graduation rates, to improve enrollment in college and career training.",
+    "Stop going after schools because of their bathroom and pronoun policies."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MONITOR ACCOUNTABILITY ACT",
+   "title": "MONITOR ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3480.htm",
+   "sentences": [
+    "This morning, in our newspaper in Cincinnati, there was a story about how we are spending $25 million on police overtime because we don't have enough cops.",
+    "Our community, like communities across the country, is struggling to hire police officers.",
+    "All of these issues that communities across the country are facing with public safety, crime, gun violence--cities, towns, counties, they all have this one thing in common: What they need is more cops.",
+    "In the middle of Police Week, we have got four bills, including this one.",
+    "I don't know what we are doing during Police Week except we are not funding cops.",
+    "I have tried to get my bill on the floor, which would just allow folks who have the COPS grant to use that money to retain and recruit police officers, just the flexibility, but I can't get a hearing and can't get a vote.",
+    "Mr. Speaker, if y'all want to help police officers and communities, especially during Police Week, hire more cops, help communities pay for police officers."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "title": "NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3421.htm",
+   "sentences": [
+    "That will make a huge difference for our farmers who are struggling with higher costs associated with these tariffs."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "title": "FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+   "sentences": [
+    "To pay for it, they kicked about 15 million Americans off of their health insurance, a cut of approximately $1 trillion to healthcare for tax cuts for the wealthy."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RUSSIA'S ABDUCTION AND INDOCTRINATION OF UKRAINIAN CHILDREN",
+   "title": "RUSSIA'S ABDUCTION AND INDOCTRINATION OF UKRAINIAN CHILDREN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2753-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today on behalf of the 35,000 children in Ukraine that Putin and others have stolen during this unprovoked and brutal war.",
+    "Last week, Trump waived sanctions on Russian oil companies, including two Russian oil companies that, based on recent reporting, have directly funded and facilitated the abduction and indoctrination of Ukrainian children.",
+    "Every single person responsible for stealing Ukrainian children must be held accountable. ____________________",
+    "In the coming days, we will work to rally Congress to compel Trump to reverse these sanctions."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT",
+   "title": "SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2150.htm",
+   "sentences": [
+    "The bill would not take effect until at least the Secretary of Energy certifies that the tariffs imposed after January 20 are not increasing costs and not disrupting the supply chain for critical minerals while, unfortunately, they, of course, are doing both those things.",
+    "Mr. Speaker, I urge my colleagues to support the motion to recommit."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING IT HARDER FOR U.S. CITIZENS TO VOTE",
+   "title": "MAKING IT HARDER FOR U.S. CITIZENS TO VOTE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2173.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today because the House just voted on the SAVE America Act, which will make it harder for tens of millions of Americans to vote, not noncitizens.",
+    "It will be harder for them to register to vote.",
+    "Seniors, especially those who have been voting by mail, it will be harder for them to vote.",
+    "College students and those who serve our country abroad would have to come home in order to register to vote."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESTORING ELECTION INTEGRITY",
+   "title": "RESTORING ELECTION INTEGRITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1162.htm",
+   "sentences": [
+    "The 905 billionaires at the end of 2024 had nearly $8 trillion in wealth.",
+    "And $8 trillion is double, double what every American owes in student loans, car loans, credit cards, and nearly every other type of debt combined, meaning that these 905 billionaires could pay for everyone's debt in the United States and still be superrich.",
+    "During my lifetime, since I was born, CEO pay has increased by over 1,000 percent, while worker pay has increased by 25 percent.",
+    "This obviously got infinitely worse with Citizens United.",
+    "This was a multidecade campaign that big corporations and the superwealthy paid for to get a Supreme Court that would change the law so that they could spend whatever they wanted on their politicians.",
+    "Every major issue in this country, whether it is the attacks on our democracy, the issues with our economy, or healthcare, it all can be traced back to the concentration of wealth and power and Citizens United.",
+    "This includes banning dark money, reversing Citizens United, and ending voter suppression and eliminating partisan gerrymandering once and for all.",
+    "One, it will ensure that the superwealthy and big corporations pay all their taxes just like the rest of us, and two, it will generate trillions of dollars that will be invested back in the American people.",
+    "It will help us pay down the debt.",
+    "Fixing and reversing Citizens United will allow us to fundamentally improve the lives of every American and fundamentally improve our economy.",
+    "Once power is back with people, we will be able to address all of the other major issues in our country."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY VERSUS TYRANNY",
+   "title": "LIBERTY VERSUS TYRANNY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6099-7.htm",
+   "sentences": [
+    "I rise today on behalf of the children of Ukraine.",
+    "More than 35,000 children from Ukraine have been stolen by Vladimir Putin.",
+    "These children are being hidden in Russia and being sent to indoctrination camps.",
+    "They are not bargaining chips, and Putin must release them now.",
+    "Our bill, the Abducted Ukrainian Kids Recovery and Accountability Act, will restart this program so that we can keep tracking every single child."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, of the 22 million Americans who rely on the Affordable Care Act subsidies, 32,000 live in my district.",
+    "They want us to extend the Affordable Care Act subsidies."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "title": "IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5814-6.htm",
+   "sentences": [
+    "The bill weakens States' rights and their ability to manage clean water.",
+    "If the House rules had permitted, I would have offered an amendment to this bill, requiring the Department of Energy to tell the American people in a report how this administration's illegal tariffs, these trade wars, have raised prices on electricity and gas.",
+    "The Joint Economic Committee estimates that families have already paid $1,200 more this year because of the tariffs.",
+    "The tariffs and the trade wars have jacked up prices, and that includes energy prices.",
+    "It essentially says: Look, we will send these pipelines through our communities and through our States."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESS MUST ACT ON HEALTHCARE",
+   "title": "CONGRESS MUST ACT ON HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4852.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to call for a vote on the extension of the Affordable Care Act subsidies that help 22 million Americans afford their healthcare.",
+    "There is a bipartisan effort and bipartisan support to extend these credits, and I urge my colleagues to join these efforts in getting this done and getting it done now. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PLANNED PARENTHOOD",
+   "title": "PLANNED PARENTHOOD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3549-4.htm",
+   "sentences": [
+    "Just weeks after this bill passed, two Planned Parenthood clinics in southwest Ohio are closing.",
+    "These are clinics thousands of girls and women rely on for things like cancer screenings and contraceptive care, their basic healthcare.",
+    "In the end, more than 15 million people could be left without care, all to pay for tax cuts for millionaires, billionaires, and big corporations.",
+    "All it takes is a Congress that it is willing to make the wealthiest in America pay their taxes like the rest of us and give those 15 million Americans their healthcare back."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNDERSTANDING CYBERSECURITY OF MOBILE NETWORKS ACT",
+   "title": "UNDERSTANDING CYBERSECURITY OF MOBILE NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3209-7.htm",
+   "sentences": [
+    "There have been breaches, including our own personal data and personal devices, and so the goal of this bill is to require an interagency group to build out all the information we need to ensure that we understand where all of our vulnerabilities are and that we are dealing with those vulnerabilities--where are the gaps, how our foreign adversaries are accessing data, how could they be accessing our data, and how to further our ability to stop our enemies from attacking our individual devices.",
+    "Mr. Speaker, I urge all of my colleagues to support it today."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTS TO HEALTHCARE AND FOOD ASSISTANCE",
+   "title": "CUTS TO HEALTHCARE AND FOOD ASSISTANCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2458-7.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today on behalf of my constituents and the thousands of folks that have called our office begging Congress not to cut their healthcare or their food assistance all to pay for tax cuts for the wealthy.",
+    "She is raising a daughter with disabilities and relies on Medicaid and food assistance."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHANE'S STORY",
+   "title": "SHANE'S STORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1789.htm",
+   "sentences": [
+    "Thanks to breakthrough gene therapy, one Shane helped to test, he and others finally have hope, but that hope is diminishing.",
+    "They are blocking a policy that would allow Medicaid to cover out-of-State care essential for families with children or loved ones with this rare condition, especially since so few hospitals specialize in rare diseases.",
+    "We are fighting for him and we are fighting with him and every family facing these terrible decisions with these healthcare cuts. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING SEMICONDUCTOR SUPPLY CHAINS ACT OF 2025",
+   "title": "SECURING SEMICONDUCTOR SUPPLY CHAINS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1650.htm",
+   "sentences": [
+    "Mr. Speaker, the Securing Semiconductor Supply Chains Act, as has been said, is a very straightforward, commonsense bill.",
+    "It will help strengthen our domestic semiconductor industry and grow U.S. manufacturing.",
+    "Semiconductors are the foundation of modern technology and core to our national security.",
+    "They power everything from our cell phones, laptops, cars, medical devices, and critical infrastructure.",
+    "The more we can build these semiconductors here the better.",
+    "What this bill does is it directs the Department of Commerce to work with State economic development agencies to better understand how to attract not just American investment but foreign investment into America's semiconductor industry.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TARIFFS LEAD TO HIGHEST SALES TAX ON AMERICANS IN HISTORY",
+   "title": "TARIFFS LEAD TO HIGHEST SALES TAX ON AMERICANS IN HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1493.htm",
+   "sentences": [
+    "Now, nearly every country in the entire world is dealing with these tariffs because of a trade war that no one but one man wanted."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FAIRNESS IN SOCIAL SECURITY",
+   "title": "PROVIDING FAIRNESS IN SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH891.htm",
+   "sentences": [
+    "Mr. Speaker, the Social Security Fairness Act, which we passed a few months ago, is now in effect, and 3.2 million Americans will see a big increase in their monthly Social Security checks.",
+    "We are talking about retired public schoolteachers, retired police officers, retired firefighters, and retired letter carriers.",
+    "They paid into Social Security for years but weren't getting their full benefits."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEBBIE, VA EMPLOYEE",
+   "title": "DEBBIE, VA EMPLOYEE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH751.htm",
+   "sentences": [
+    "Donald Trump and his unelected tech billionaire, Elon Musk, fired Debbie and slashed services at VA facilities nationwide making it harder for millions of veterans to get the services they need."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP ADMINISTRATION'S DISMANTLING OF THE FEDERAL GOVERNMENT",
+   "title": "TRUMP ADMINISTRATION'S DISMANTLING OF THE FEDERAL GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH695-6.htm",
+   "sentences": [
+    "To expedite these efforts, Trump empowers Musk, moments after he is inaugurated--Musk, an unelected tech billionaire.",
+    "He empowers him to take access of our personal data, all of it.",
+    "In comparison, seniors on Social Security get $65 a day.",
+    "Article I does not lay out the powers of the Presidency or the Supreme Court, the Judiciary, Article I lays out the powers of the Congress of the United States.",
+    "They didn't know that it would come with a billionaire tech donor, but they envisioned this moment."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING FEDERAL WORKERS",
+   "title": "SUPPORTING FEDERAL WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH485-2.htm",
+   "sentences": [
+    "They have launched this reckless trade war with China.",
+    "Trump gave an unelected tech billionaire access to our Social Security data, to all of our data, to our Federal payment system, and empowered him to purge as many public servants from our Federal agencies as he possibly could.",
+    "For 20 years, she worked at USAID leading the agency's famine early detection efforts.",
+    "Mr. Speaker, I rise today to support our Federal workers."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: General Leave",
+   "title": "General Leave",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH356-2.htm",
+   "sentences": [
+    "They attacked police officers.",
+    "On day one, a day that was supposed to be about fixing the economy, lowering prices, actual border security, and real immigration reform, the focus was on releasing these violent criminals.",
+    "Mr. Speaker, it is a betrayal to the American people, to law enforcement, and it has made us all less safe."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "You are in our doctors' offices banning reproductive freedom.",
+    "Now you are in my daughter's locker room requiring physical exams of children.",
+    "We have an economy to fix, a border crisis to address, a budget to balance."
+   ]
+  }
+ ]
+}

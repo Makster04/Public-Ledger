@@ -1,0 +1,326 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "baumgartner",
+ "name": "Michael Baumgartner",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 24,
+  "sentences": 98
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETIREMENT OF SPOKANE COUNTY CLERK TIM FITZGERALD",
+   "title": "RETIREMENT OF SPOKANE COUNTY CLERK TIM FITZGERALD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5631-2.htm",
+   "sentences": [
+    "Charlie served in the Washington State House of Representatives, was a delegate to the Republican National Convention that nominated Ronald Reagan, and devoted years to causes including the Union Gospel Mission and Christian education."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLARKSTON VFW POST 1443 CELEBRATES 100 YEARS",
+   "title": "CLARKSTON VFW POST 1443 CELEBRATES 100 YEARS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3779.htm",
+   "sentences": [
+    "For one full century, the venerable post in downtown Clarkston has stood as a sanctuary of service, transforming the heavy, unspoken burdens of global conflict into a legacy of enduring local fellowship.",
+    "Chief Moon made notable contributions as a developmental flight test boom operator in the development of air refueling operational procedures for the F-35 Lightning and the KC-46 Pegasus."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TWELVE COUNTIES IN TWELVE DAYS",
+   "title": "TWELVE COUNTIES IN TWELVE DAYS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3464-2.htm",
+   "sentences": [
+    "I am so proud to serve as the voice of my constituents here in Washington, and I will continue working to advance legislation that strengthens the communities of eastern Washington."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, I urge adoption, and I reserve the balance of my time.",
+    "I think with the adoption of this amendment to include this portion in our water conservation efforts we are doing something that will benefit future generations."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ISLAMIC REPUBLIC OF IRAN IS THE WORLD'S LEADING STATE SPONSOR OF TERRORISM.",
+   "title": "ISLAMIC REPUBLIC OF IRAN IS THE WORLD'S LEADING STATE SPONSOR OF TERRORISM.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2374.htm",
+   "sentences": [
+    "Mr. Speaker, for nearly half a century, the Islamic Republic of Iran, the world's leading state sponsor of terrorism, has brutally targeted and killed Americans.",
+    "Through its own forces and its network of proxy militias, Iran has killed and injured thousands of Americans: diplomats, servicemembers, and civilians alike.",
+    "When the Ayatollahs of Iran chant ``death to America,'' they mean it.",
+    "Mr. Speaker, I rise today to remind this body of the Iranian regime's ongoing and bloody campaign against the American people.",
+    "November 1979: Iranian students, backed by the regime, seized our embassy in Tehran and took 66 Americans for 444 days.",
+    "April 1983: an Iran-backed terrorist group bombed the U.S. Embassy in Beirut, killing 77 Americans.",
+    "October 1983: Iran-backed Hezbollah terrorists bombed the marine barracks in Beirut, killing 241 U.S. military personnel, including 220 Marines.",
+    "March 1984: Iran-backed terrorists kidnapped CIA Station Chief William Buckley in Beirut.",
+    "July 1989: Iran-backed Hezbollah terrorists murdered U.S. Marine Colonel William Higgins after kidnapping him while he was serving on a U.N. peacekeeping mission.",
+    "Throughout the 1990s, Iran-backed terrorists repeatedly targeted Americans in Israel and the Palestinian territories.",
+    "April 1995: a car bomb in the Gaza strip killed eight people, including one American citizen. 1995 through 1997: a series of suicide bombings on buses and shopping districts and public places in Jerusalem and Tel Aviv killed and wounded American citizens and dual nationals.",
+    "June 1996: Hezbollah terrorists directed by Iran bombed the Khobar Towers housing complex in Saudi Arabia, killing 19 U.S. airmen and wounding hundreds more.",
+    "August 1998: al-Qaida suicide bombers, facilitated by Iran-backed Hezbollah, bombed our embassies in Kenya and Tanzania, killing 224 people, including dozens of Americans.",
+    "In the 2000s, Iran and its proxies continued targeting Americans, including multiple bombings in Jerusalem and at Hebrew University that killed and wounded American citizens.",
+    "October 2003: Iran-backed terrorists killed three U.S. diplomatic personnel in a bombing in Gaza.",
+    "Between 2003 and 2011, Iran-backed militias killed at least 603 U.S. troops in Iraq, roughly one in six of every Americans killed in combat and fatalities in that war, including some of my friends.",
+    "March 2007: former FBI agent Robert Levinson disappeared in Iran and is believed to have died in an Iranian prison, becoming one of the longest held American captives in history.",
+    "December 2019: Iran-backed Kataib Hezbollah terrorists killed an American contractor and wounded U.S. servicemembers in a rocket attack in Iraq.",
+    "January 2020: Iranian ballistic missile attack on Ain al-Asad airbase in Iraq left 109 U.S. troops with traumatic brain injuries.",
+    "February 2021 and July 2021: Iran-backed militias launched rocket and drone attacks that wounded U.S. servicemembers and American contractors in Iraq and Syria.",
+    "September 2022 and November 2022: Iran and IRGC-linked operatives killed American citizens in Iraqi Kurdistan and Baghdad.",
+    "March 2023: an Iranian drone strike on a coalition base in Syria killed an American contractor and wounded five U.S. servicemembers and another contractor.",
+    "October 7, 2023: Iran-backed Hamas terrorists murdered 46 Americans and kidnapped at least a dozen more in the October 7 massacre.",
+    "Between 2023 and November 2024: Iran and its proxies conducted more than 180 attacks on U.S. Forces in the Middle East, wounding over 180 American servicemembers and killing three.",
+    "January 2024: Iran-backed Kataib Hezbollah terrorists killed three U.S. servicemembers and wounded more than 40 in a drone attack on a U.S. base in Jordan.",
+    "November 2024: an Iranian national and IRGC asset was charged in a plot to assassinate President Trump on behalf of the Iranian regime.",
+    "June 2025: Iran-backed militias attacked multiple U.S. bases in Syria and Iraq, again targeting American troops.",
+    "Mr. Speaker, this is only a partial list of Iran's bloody war on American citizens.",
+    "I spent a lot of time in the Middle East in a lot of places, and there has been one constant: Iranian-backed terrorist groups have always been trying to kill Americans."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPU",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPUBLIC OF IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2395.htm",
+   "sentences": [
+    "Mr. Speaker, the Iranian terrorist regime has been at war with the American people for nearly 50 years through countless terrorist attacks, countless American servicemen and -women injured, and a persistent danger to the United States of America.",
+    "I had the opportunity and the privilege to serve with the United States State Department during the Iraq surge, where I participated in putting together a joint U.S.-Iraqi interagency team to suppress Iranian-backed militia groups in Baghdad.",
+    "One day, on a trip to Sadr City, I watched a massive what is called an MRAP, armored personnel carrier, explode in front of me from an Iranian bomb and watched as that hulking metal burned to a crisp as American servicemen and -women sought to deal with the aftermath."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TIPPED EMPLOYEE PROTECTION ACT",
+   "title": "TIPPED EMPLOYEE PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH685.htm",
+   "sentences": [
+    "The bill defines a tipped worker as anyone who receives tips and other cash wages that together add up to the Federal minimum wage, without worrying about how much time they spend on this or that.",
+    "As such, I am proud to support the Tipped Employee Protection Act.",
+    "That is why Representative Steve Womack and I introduced the Tipped Employee Protection Act.",
+    "Mr. Speaker, I urge everyone to vote ``yes'' on H.R. 2312 because businesses don't need Federal bureaucrats micromanaging their timekeeping."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOTE ACCESS SECURITY ACT",
+   "title": "REMOTE ACCESS SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH621-5.htm",
+   "sentences": [
+    "Remote access is defined as access by foreign persons of concern, specifically those from Russia, Iran, North Korea, and China, to also include Hong Kong and Macau.",
+    "We don't want the Chinese and our countries of concern to be using the best American technology remotely to do that.",
+    "Nor do we want them to train AI models to enable weapons of mass destruction, automated cyber attacks, or systems that evade human oversight.",
+    "Under this bill, if a Chinese firm would like to rent access to a cluster of advanced chips already subject to U.S. control in an overseas data center, the Department of Commerce can require a license if determined that remote access is a risk to U.S. national security.",
+    "We have heard about the loophole that exists, and I will provide a few more details."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAX RELIEF FOR WORKING FAMILIES",
+   "title": "TAX RELIEF FOR WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH105-3.htm",
+   "sentences": [
+    "Not long ago, right here in this Chamber, I joined my House Republican colleagues to pass the Working Families Tax Cut Act, the largest tax cut in American history.",
+    "Mr. Speaker, I am proud to support this historic tax relief and this transformational funding.",
+    "If you are wondering why I have an oil painting of a baby chick next to me right now, I will tell you that it is about one of the most charming traditions of our Washington delegation. ``The Chick'' was bought at a charity fundraiser and presented to then-Congressman Joel Pritchard as a gift to his office in the early 1970s."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR RURAL SCHOOLS",
+   "title": "SUPPORT FOR RURAL SCHOOLS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5064-2.htm",
+   "sentences": [
+    "When last reauthorized in 2023, this program delivered more than $281 million nationwide to help keep teachers in classrooms and students on the bus.",
+    "Mr. Speaker, I rise today in strong support of S. 356, the Secure Rural Schools Reauthorization Act of 2025, which will be considered under suspension of the rules this week.",
+    "I urge its swift passage so it can be sent to the President's desk without delay.",
+    "Recognizing Environmental Stewardship in Our Forests Mr. Speaker, I rise today to support the timber industry and the harvest of trees in our forests."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPERATION ROLLING THUNDER",
+   "title": "OPERATION ROLLING THUNDER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3900-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in recognition of the extraordinary success of Operation Rolling Thunder, a multiagency task force led by the U.S. Marshals Service in partnership with local, State, and Federal law enforcement.",
+    "By uniting Federal, State, and local resources, law enforcement was able to focus on our region's most violent and repeat offenders; strengthening public safety, national security, and our ability to respond to emerging threats.",
+    "I commend the U.S. Marshals, Spokane County Sheriff's Office, Spokane Valley Police, Washington State Patrol, the FBI, ATF, Homeland Security, Department of Corrections, the U.S. Attorney's Office, Spokane County Prosecuting Attorney's Office, and many other local, State, and Federal law enforcement agencies that stood shoulder to shoulder in this effort."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTERNATIONAL TRAFFIC IN ARMS REGULATIONS LICENSING REFORM ACT",
+   "title": "INTERNATIONAL TRAFFIC IN ARMS REGULATIONS LICENSING REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3726-3.htm",
+   "sentences": [
+    "Mr. Speaker, I introduced the International Traffic in Arms Regulations Licensing Reform Act to improve licensing timelines and processes for direct commercial defense sales.",
+    "The U.S. is currently the partner of choice for foreign arms sales, but that status is in jeopardy due to internal delays and unnecessary bureaucratic red tape.",
+    "Mr. Speaker, I urge my colleagues to support our defense industrial base and support this commonsense bill.",
+    "I am proud to sponsor this legislation to streamline the direct commercial sales process, and I urge my colleagues to join me in support of it."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MADE-IN-AMERICA DEFENSE ACT",
+   "title": "MADE-IN-AMERICA DEFENSE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3727.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 4216) to direct the Secretary of State, in coordination with the Secretary of Defense, to carry out a review of the list of defense articles and services required to be transferred under the foreign military sales program as opposed to direct commercial sale (FMS-Only List), as amended.",
+    "Mr. Speaker, I rise in support of this legislation to improve the foreign military sales process.",
+    "When our partners and allies choose to procure U.S.-origin defense articles or services, they have a choice to purchase items via either the foreign military sales process or the direct commercial sales process.",
+    "While foreign military sales are often the path of choice due to the robust, total-package approach, direct commercial sales are preferable in many cases, as it is faster and a more nimble process than foreign military sales.",
+    "However, the State Department maintains an out-of-date list of defense articles that may only be purchased via foreign military sales.",
+    "U.S. competitiveness is limited, as our partners choose to turn to other sources for technologies that are too slow to procure from the U.S. President Trump's April 9 executive order mandated that the State Department review and update the foreign military sales-only list.",
+    "Mr. Speaker, as a member of the Foreign Arms Sales Task Force, I urge my colleagues to support this bill, and I reserve the balance of my time.",
+    "I am proud to support this legislation to improve the foreign defense system, and I urge my colleagues to join me in supporting this bill."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP CHINESE FENTANYL ACT OF 2025",
+   "title": "STOP CHINESE FENTANYL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3728.htm",
+   "sentences": [
+    "Chinese traffickers supply the cartels, and American families pay the price in lives lost.",
+    "This bill holds the Chinese Communist Party accountable.",
+    "Mr. Speaker, I rise in strong support of Representative Barr's Stop Chinese Fentanyl Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAITI CRIMINAL COLLUSION TRANSPARENCY ACT OF 2025",
+   "title": "HAITI CRIMINAL COLLUSION TRANSPARENCY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3731.htm",
+   "sentences": [
+    "Haitians are fleeing the island, using criminal networks to traffic them and others to our southern border.",
+    "Within days of taking office, it approved nearly $41 million to support the Haitian National Police and the Kenyan-led Multinational Security Support Mission.",
+    "Meanwhile, the administration is prioritizing stronger oversight of U.S. foreign assistance to Haiti, an essential effort to ensure taxpayer funds are not misused.",
+    "I support H.R. 2643, the Haiti Criminal Collusion Transparency Act, introduced by Ranking Member Meeks, because it advances a clear bipartisan goal: exposing and sanctioning the corrupt political and economic elites in Haiti who have fueled the country's ongoing gang crisis.",
+    "I urge my colleagues to pass the Haiti Criminal Collusion Transparency Act and make clear that the United States will expose and hold accountable those who fund, enable, and profit from gang violence in Haiti."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNDERSEA CABLE CONTROL ACT",
+   "title": "UNDERSEA CABLE CONTROL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3733.htm",
+   "sentences": [
+    "Mr. Speaker, it is important that we identify what the Chinese Communist Party needs to deploy undersea cables so that we can ensure only America and its allies lead in the development and maintenance of this technology.",
+    "Mr. Speaker, the Undersea Cable Control Act will ensure America, not the Chinese Communist Party, is connecting the globe with critical undersea cable infrastructure.",
+    "Mr. Speaker, I rise today in support of Representative Kean's Undersea Cable Control Act.",
+    "I urge my colleagues to support Representative Kean's fine bill to begin this process of protecting this critical and vulnerable infrastructure."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING APPROPRIATE RECOGNITION AND TREATMENT NEEDED TO ENHANCE RELATIONS ACT",
+   "title": "PROVIDING APPROPRIATE RECOGNITION AND TREATMENT NEEDED TO ENHANCE RELATIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3734.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the PARTNER Act, a forward-looking measure that strengthens America's ties with the international organizations shaping the global order at a moment when international competition is sharper than ever."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUKUS REFORM FOR MILITARY OPTIMIZATION AND REVIEW ACT",
+   "title": "AUKUS REFORM FOR MILITARY OPTIMIZATION AND REVIEW ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3736.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this legislation to improve implementation of the AUKUS partnership.",
+    "I am proud to support this legislation to improve existing AUKUS law, and I urge my colleagues to join me."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UYGHUR POLICY ACT OF 2025",
+   "title": "UYGHUR POLICY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3738.htm",
+   "sentences": [
+    "The Chinese Communist Party continues to commit genocide against the Uyghur people in Xinjiang.",
+    "Over 1 million Uyghurs are held in mass detention camps, where they face torture, forced labor, constant surveillance, and forced sterilization.",
+    "I rise today in strong support of Representative Young Kim's Uyghur Policy Act of 2025.",
+    "Mr. Speaker, I urge my colleagues to join me in passing the Uyghur Policy Act of 2025 to increase awareness and advocacy for Uyghurs."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the big, beautiful bill."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKING AN IMPORTANT STEP FOR RURAL AMERICA",
+   "title": "TAKING AN IMPORTANT STEP FOR RURAL AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2577-2.htm",
+   "sentences": [
+    "On June 14, we will celebrate a remarkable milestone: the 250th birthday of the United States Army."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING IRAN FROM OBTAINING NUCLEAR WEAPONS",
+   "title": "PREVENTING IRAN FROM OBTAINING NUCLEAR WEAPONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2005-4.htm",
+   "sentences": [
+    "Most importantly, Iran lurks in the background of every conversation.",
+    "Iran's economy is in shambles.",
+    "That is why I introduced a resolution reaffirming that preventing Iran from obtaining nuclear weapons is a nonnegotiable American priority.",
+    "Iran continues to be a serious threat and the main detriment to peace in the Middle East.",
+    "That is why I introduced the Restore College Sports Act to put commonsense guardrails back into place."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT COLLEGE SPORTS",
+   "title": "PROTECT COLLEGE SPORTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1444-4.htm",
+   "sentences": [
+    "That is why tonight I am introducing the Restore College Sports Act."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "title": "DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1241.htm",
+   "sentences": [
+    "In just two universities alone, congressional investigators have uncovered nearly $40 million in unreported research contracts tied to the Chinese Communist Party.",
+    "Sixty percent of all foreign money in U.S. universities comes from just four sources, including China and Qatar, nations that oftentimes have strategic and ideological conflicts with U.S. interests."
+   ]
+  }
+ ]
+}

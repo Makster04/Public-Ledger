@@ -1,0 +1,465 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cruz",
+ "name": "Ted Cruz",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 31,
+  "sentences": 174
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgS5337-7.htm",
+   "sentences": [
+    "Therefore, as if in executive session and notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of PN846, Jesse M. Millard; that the nomination be confirmed; that the motion to reconsider be considered made and laid upon the table with no intervening action or debate; that no further motions be in order to the nomination; and that the President be immediately notified of the Senate's action and the Senate then resume legislative session."
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL PARK SYSTEM LONG-TERM LEASE INVESTMENT ACT",
+   "title": "NATIONAL PARK SYSTEM LONG-TERM LEASE INVESTMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5201.htm",
+   "sentences": [
+    "They worked a long time to protect artists and to protect creators, and I support that endeavor wholeheartedly.",
+    "And the use of a deepfake law to silence and punish political speech is not idle speculation.",
+    "In fact, California lawmakers have already suggested that Pratt's viral campaign ads could violate State deepfake rules.",
+    "So I will reiterate, and I will say also that I have no hesitation against strong legislation that stops deepfakes.",
+    "Indeed, I am the author, along with Senator Klobuchar, of the only legislation Congress has passed regulating AI and prohibiting deepfakes, the TAKE IT DOWN law.",
+    "I think that illustrates the sort of approach we should have in targeting a specific problem--in that instance, publishing explicit, nonconsensual, intimate images, either real or deepfakes.",
+    "So I will repeat to my friends the commitment I made at markup: I am happy to work with you.",
+    "I want this bill to pass, and I will suggest: Let's take the next few weeks to have our staff work together to strengthen the free speech protections."
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFE ACCESS TO CASH ACT OF 2026",
+   "title": "SAFE ACCESS TO CASH ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5207.htm",
+   "sentences": [
+    "Now, as we are seeing robberies happening at ATMs found at grocery stores, outside of banks, and on back-country roads, it is clear that action is needed to protect millions of Americans who rely on ATMs for cash--cash that buys groceries, that pays for public transportation, and that makes rent.",
+    "In some cases, robbers can walk away with $15,000 in 5 minutes.",
+    "That is why, together with Senator Ruben Gallego, ranking member on the Digital Assets Subcommittee in the Banking Committee, I introduced the Safe Access to Cash Act bringing the Federal Bank Robbery Act into the 21st century.",
+    "The Safe Access to Cash Act closes that gap in the law allowing Federal law enforcement to investigate and bring justice for crimes like this.",
+    "This legislation has support from our Nation's leading law enforcement organizations, from organizations that represent stores and retailers, and from groups that bear the financial cost of repeat ATM robberies.",
+    "Mr. President, as if in legislative session and notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of Calendar No. 350, S. 3798."
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5132.htm",
+   "sentences": [
+    "So Congress must not legislate on the issue of artificial intelligence hastily or in a closed manner.",
+    "Now, I agree with Senators Warner, Schatz, and Kim that our artificial intelligence presents new challenges."
+   ]
+  },
+  {
+   "date": "2026-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-28/html/CREC-2026-09-28-pt1-PgS5021-7.htm",
+   "sentences": [
+    "Section 118 of the PCSA provides specific, targeted, and narrow antitrust protection for intercollegiate athletic associations, such as the NCAA, conferences, institutions, and the designated enforcement entity within the House settlement--the College Sports Commission.",
+    "Although these entities are composed of schools--or conferences--who have chosen voluntarily to adhere to certain rules as a condition of membership, these rules cannot be enforced due to constant litigation and rules set by ``court order.'' Section 118 intends to end this by providing antitrust liability when entities act, including through use of their own rules or bylaws, to enforce or comply with specified sections of the PCSA.",
+    "The intended antitrust protection is comprehensive for all antitrust suits, including State statutory or common laws governing antitrust, trade regulation, trade restraints, and unfair methods of competition.",
+    "The PCSA intends to stop the current instability and close any further avenues for litigants to use antitrust claims to undermine the requirements and standards specified in the PCSA.",
+    "Thus, the PCSA assumes the continuation of the settlement--even providing antitrust protections for its ongoing implementation--while providing Federal requirements that governs when there are conflicting provisions within the settlement.",
+    "Section 118(d) of the PCSA allows an intercollegiate athletic association or conference to designate an entity under its control within the House settlement, for which it won't be unlawful under the antitrust laws, to enforce or comply with section 114.",
+    "The College Sports Commission has been designated as the enforcement entity under the settlement and any rulemaking, guidance, investigative or enforcement action, or penalty issued by the College Sports Commission for purposes of section 114 is intended to be protected from liability under the antitrust laws.",
+    "Per section 118, if the NCAA, conferences, or institutions enforce or comply with these provisions, they will receive antitrust immunity.",
+    "The NCAA, conferences, and institutions are free to place additional eligibility restrictions not specified in the PCSA, but those restrictions will not receive Federal antitrust protections unless otherwise permitted.",
+    "Title II amends the Sports Broadcasting Act to allow for a ``covered'' entity to pool media rights and not be subject to antitrust liability.",
+    "It protects NIL opportunities because student-athletes deserve the opportunity to benefit from their talent without being taken advantage of by unscrupulous agents and backdoor deals.",
+    "The question before this body is whether we will act or stand by while the institution that Americans have known and loved for generations--college sports--is fundamentally changed.",
+    "Mr. President, I oppose this amendment.",
+    "Therefore, I urge a ``no'' vote.",
+    "I want to thank the Presiding Officer Senator Schiff--Senator Schmitt rather, and I want to thank--I will thank Senator Schiff, too, with a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-09-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect College Sports Act (Executive Session)",
+   "title": "Protect College Sports Act (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-22/html/CREC-2026-09-22-pt1-PgS4849.htm",
+   "sentences": [
+    "Our Nation's antitrust laws were written over a century ago and were never designed to regulate NIL, transfer portals, billion-dollar media contracts, and the realities of modern college athletics.",
+    "There is nothing sacrosanct about antitrust law that makes it unassailable.",
+    "And when the Supreme Court applied it to college sports, it drew a legal conclusion.",
+    "Justices said that perhaps Congress might want to revisit whether this is an appropriate fit, noting that Congress has amended the antitrust laws for certain situations and entities in the past and that it may choose to do so again in the future to address college sports.",
+    "So if we are going to be having national competition, then it is only Congress that can establish a clear and enforceable legal rule book."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect College Sports Act (Executive Calendar)",
+   "title": "Protect College Sports Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgS4714.htm",
+   "sentences": [
+    "I urge my colleagues--Republicans and Democrats--to vote yes on the Protect College Sports Act."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Dobbs v. Jackson Women's Health Organization (Executive Calendar)",
+   "title": "Dobbs v. Jackson Women's Health Organization (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgS3177.htm",
+   "sentences": [
+    "Mr. President, I rise today to address one of the most consequential decisions the Supreme Court of the United States has ever made.",
+    "Four years ago, on this day, our country waited with bated breath-- from the streets of Washington, DC, to homes all across America-- waiting to hear news from the Supreme Court on a case that sought to determine the value of human life.",
+    "At approximately 10:10 that morning, on June 24, 2022, the Supreme Court announced that, for the first time since 1973, abortion was no longer mandated by Federal law across the Nation.",
+    "Overturning Roe v. Wade was an incredible milestone.",
+    "And in Dobbs v. Jackson, the Court made clear that the issue of abortion--an issue on which people of good faith can disagree--would be returned to the people and their elected representatives.",
+    "Abortion remains legal in many States across the country, and, as a result, thousands upon thousands of unborn children are lost to abortion every year.",
+    "The expansion of mail-order abortion pills, individuals traveling across State lines for abortions, and significant funding--taxpayer funding--for organizations like Planned Parenthood are among the most significant issues.",
+    "Protecting life means more than just defending the unborn.",
+    "People from all across the Nation come together and walk miles and miles, marching for the unborn and the protection of human life.",
+    "That is why, a year ago, I introduced a resolution to designate June as ``Life Month,'' so that each year we can recommit to celebrating and defending the preciousness of life."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOGNITION OF THE MAJORITY LEADER",
+   "title": "RECOGNITION OF THE MAJORITY LEADER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgS2545-8.htm",
+   "sentences": [
+    "Mr. President, once again, Democrats have an amendment that does not mention the words ``border security,'' that has nothing to do with the topic on the floor today, but there is also an old adage that hypocrisy is the tribute that vice pays to virtue.",
+    "The largest super PAC in America in 2024 was Future Forward.",
+    "That was Kamala Harris' super PAC.",
+    "We don't know how much because it is dark money and not disclosed.",
+    "I will also note, at every Congress, I have introduced a bill called the SuperPAC Elimination Act that allows unlimited individual contributions directly to campaigns and requires immediate 24-hour disclosure."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING RESTRICTIVE ENFORCEMENT OF YOUTH SETTLEMENTS LAW",
+   "title": "TERMINATING RESTRICTIVE ENFORCEMENT OF YOUTH SETTLEMENTS LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgS2398.htm",
+   "sentences": [
+    "That is why I have introduced TREY'S Law.",
+    "In just a moment, I will propound a unanimous consent request to take up and pass TREY'S Law to make sure that no other children feel controlled or defeated by the system that is supposed to deliver them justice."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NOMINATION OF ANDREW B. DAVIS",
+   "title": "NOMINATION OF ANDREW B. DAVIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgS1837-2.htm",
+   "sentences": [
+    "As an assistant solicitor general of Texas, Andrew represented the State of Texas before the Texas Supreme Court, the Fifth Circuit, and the U.S. Supreme Court, handling some of the most consequential legal questions facing the State.",
+    "He will be faithful to the Constitution and Bill of Rights, and I strongly support his nomination."
+   ]
+  },
+  {
+   "date": "2026-03-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-17/html/CREC-2026-03-17-pt1-PgS1066-5.htm",
+   "sentences": [
+    "The 26th Amendment lowered the voting age to 18.",
+    "That is why I am here today on this very floor urging the Members of this body to pass the SAVE America Act.",
+    "It says that when you register to vote in a Federal election, you must provide proof that you are a citizen of the United States and you must provide photo ID to vote.",
+    "Well, for the last several months, we have heard claim after claim about how this legislation would somehow inhibit people from voting, that requiring identification is discriminatory, and that the American people do not support voter ID.",
+    "Our Democrat colleagues are fond of bellowing into the TV cameras that photo ID to vote is Jim Crow--they tell us with mock earnestness.",
+    "But do you know who has rejected their disingenuous claim that a photo ID to vote is Jim Crow?",
+    "The Supreme Court of the United States-- the Supreme Court of the United States.",
+    "The State of Indiana passed a photo ID law requiring that you show a photo ID to vote, and a group of leftwing plaintiffs filed litigation challenging that.",
+    "The case went all the way to the U.S. Supreme Court.",
+    "I led a coalition of States before the Supreme Court defending photo ID to vote, and the leftwing plaintiffs made the same argument that our Democrat colleagues make today--that requiring a photo ID to vote would somehow disenfranchise minorities.",
+    "The Supreme Court, by a vote of 6 to 3, rejected their argument.",
+    "He was the leading liberal for years on the U.S. Supreme Court.",
+    "The Supreme Court explained that when photo ID laws have been implemented, minority participation in the election goes up, not down, and the Supreme Court explained that requiring photo ID enhances the integrity of an election and the integrity of democracy.",
+    "Eighty-one percent of Americans support requiring a photo ID to vote.",
+    "Well, about three-quarters of African Americans in the United States support requiring a photo ID to vote.",
+    "More than 80 percent of Hispanics in America support requiring a photo ID to vote.",
+    "Here is an astonishing statistic: If you get out of elective office and you ask a Democrat on the street, 70 percent of Democrats in America support requiring a photo ID to vote.",
+    "By the way, the premise of their argument that minorities, if you require a photo ID to vote, are not going to be able to vote is, frankly, insulting.",
+    "Do you know what I have in my wallet?",
+    "When you claim minorities can't figure out how to get a driver's license--well, gosh, what do you need a photo ID to do right now in America?",
+    "You need a photo ID to purchase alcohol or to purchase tobacco.",
+    "You need a photo ID to gamble or to purchase lottery tickets.",
+    "You need a photo ID to go into a bar.",
+    "You need a photo ID to get on a plane.",
+    "You need a photo ID to rent a car.",
+    "You need a photo ID just to drive a car--not even to rent a car but to drive a car.",
+    "You need a photo ID to apply for government benefits.",
+    "You need a photo ID to enroll in college.",
+    "You need a photo ID to open a bank account.",
+    "You need a photo ID to check into a hotel.",
+    "And--I have to admit this is my personal favorite--you need a photo ID--actually two photo IDs--to shovel snow in New York City.",
+    "Now, I will admit our Democrat colleagues should be experts in Jim Crow because it was Democrat politicians who passed the Jim Crow laws."
+   ]
+  },
+  {
+   "date": "2026-03-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TEXAS INDEPENDENCE DAY",
+   "title": "TEXAS INDEPENDENCE DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-02/html/CREC-2026-03-02-pt1-PgS736-2.htm",
+   "sentences": [
+    "I shall never surrender or retreat.",
+    "If this call is neglected, I am determined to sustain myself as long as possible & die like a soldier who never forgets what is due to his own honor & that of his country."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Nicholas Jon Ganjei (Executive Session)",
+   "title": "Nomination of Nicholas Jon Ganjei (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgS450-2.htm",
+   "sentences": [
+    "Nick's father emigrated from Iran in 1961 as a student with $100 to his name and found his way from New York to El Paso and then to California.",
+    "As U.S. attorney for the Southern District of Texas, Nick has been on the frontlines of Federal law enforcement--leading one of the busiest districts in the country, prosecuting violent crime, cartel activity, and transnational threats while enforcing the law fairly.",
+    "Nick served as my chief counsel for 3 years, during which he oversaw vital initiatives on criminal justice, border security, judicial nominations, antitrust issues, intellectual property, and religious liberty.",
+    "I strongly urge my colleagues to vote in support of his nomination as U.S. district judge for the Southern District of Texas."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "title": "ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgS8811.htm",
+   "sentences": [
+    "Mr. President, as if in legislative session and notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of Calendar No. 269, S. 2503.",
+    "We still have a few small outstanding issues, but I am optimistic that we are going to get this done and signed into law as soon as next month."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING CONDEMNATION OF THE CHINESE COMMUNIST PARTY'S PERSECUTION OF RELIGIOUS MINORITY GROUPS",
+   "title": "EXPRESSING CONDEMNATION OF THE CHINESE COMMUNIST PARTY'S PERSECUTION OF RELIGIOUS MINORITY GROUPS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-07/html/CREC-2025-11-07-pt1-PgS7974.htm",
+   "sentences": [
+    "In China, Christians are fighting daily for their religious freedom against the Chinese Communist Party.",
+    "And on October 10, 2025, the Chinese Communist Party launched the largest coordinated nationwide crackdown in more than four decades against a Christian urban house church in China.",
+    "Last week, I introduced a bipartisan, bicameral resolution to condemn the abduction of Pastor Jin and the Zion Church leaders and to demand their immediate release.",
+    "I urge my colleagues to join me in passing this resolution unanimously to show our support for Pastor Jin, his family, and his fellow believers, and to show the world that the United States stands on the side of freedom, on the side of faith, and we stand with the persecuted Christians in China."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDAL OF HONOR ACT",
+   "title": "MEDAL OF HONOR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-07/html/CREC-2025-11-07-pt1-PgS7976.htm",
+   "sentences": [
+    "In January of this year, I introduced the Medals Act, my legislation to raise the monthly pension for Medal of Honor recipients.",
+    "This legislation is a way for this Nation to say: We see you, we remember you, and we will not forget what you have done.",
+    "In just a moment, I will propound a unanimous consent request to take up and pass H.R. 695, the House-passed version of the Medal Act that passed the House 424 to 0.",
+    "I urge my colleagues to join me, as our companions in the House have already done, in supporting this measure, in passing it into law, in sending it directly to the President's desk to be signed into law, and showing that, when it comes to honoring our Nation's very greatest heroes, we are united, and we speak with one voice."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-07/html/CREC-2025-11-07-pt1-PgS7977.htm",
+   "sentences": [
+    "How do I take care of medical bills?",
+    "Then the next threshold was the No Kings rallies.",
+    "If you are a Border Patrol agent, if you are an FBI agent, if you are a TSA agent, and you have to work, you will be paid.",
+    "I will tell you who the ``us'' is.",
+    "There are 53 Republicans, which means the government cannot be funded until at least 7 Democrats decide we are going to fund the government.",
+    "So every Democrat who votes no is saying: We will not pay the air traffic controllers.",
+    "So I am going to make the math simple.",
+    "I will tell you who ``us'' ain't."
+   ]
+  },
+  {
+   "date": "2025-10-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed-- Continued",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed-- Continued",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-15/html/CREC-2025-10-15-pt1-PgS7129-2.htm",
+   "sentences": [
+    "Throughout, he fought for democratic governance, religious liberty, freedom of suppression, and the freedom to start businesses.",
+    "This weekend, there will be a rally in DC of leftwing radicals, the so-called No Kings rally.",
+    "Since 2015, in every Congress, I have introduced legislation to rename the street outside the Cuban Embassy the ``Oswaldo Paya Way.'' This body has passed it before, rightly and unanimously.",
+    "Right now, we will find out if that is the case."
+   ]
+  },
+  {
+   "date": "2025-07-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADS FOR MENTAL HEALTH SERVICES ACT",
+   "title": "ADS FOR MENTAL HEALTH SERVICES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-29/html/CREC-2025-07-29-pt1-PgS4810.htm",
+   "sentences": [
+    "Madam President, the Committee on Commerce, Science, and Transportation filed a report for S. 414, ADS for Mental Health Services Act, on June 24, 2025, before receiving the formal CBO score on the bill.",
+    "S. 289 would ban the sale of certain products covered by the Consumer Product Safety Act and S. 389 would require the Consumer Product Safety Commission (CPSC) to adopt voluntary safety standards for lithium-ion batteries.",
+    "S. 289, the Youth Poisoning Protection Act, would ban the sale of products containing 10 percent or more by weight of sodium nitrite that are covered under the Consumer Product Safety Act.",
+    "S. 414, the ADS for Mental Health Services Act, would require certain digital advertising platforms to report annually to the Federal Trade Commission about advertising on their platforms for certain mental health services, including information on the number, percent, and dollar value of such advertisements.",
+    "S. 414, the ADS for Mental Health Services Act, would require certain digital advertising platforms to report to the FTC on their public service advertisements for mental and behavioral health.",
+    "Estimate Reviewed By: Sean Dunbar, Chief, Low-Income Health Programs and Prescription Drugs Cost Estimates Unit; Justin Humphrey, Chief, Finance, Housing, and Education Cost Estimates Unit; Kathleen FitzGerald, Chief, Public and Private Mandates Unit; H. Samuel Papenfuss, Deputy Director of Budget Analysis."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Arielle Roth (Executive Session)",
+   "title": "Nomination of Arielle Roth (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgS4441.htm",
+   "sentences": [
+    "Mr. President, I rise in support of the nomination of Arielle Roth to serve as Administrator of the National Telecommunications and Information Administration, or NTIA.",
+    "I strongly urge my colleagues to support Arielle Roth's nomination to be NTIA Administrator."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgS4381-6.htm",
+   "sentences": [
+    "I urge a ``no'' vote on this amendment."
+   ]
+  },
+  {
+   "date": "2025-07-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Central Texas Floods (Executive Calendar)",
+   "title": "Central Texas Floods (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-08/html/CREC-2025-07-08-pt1-PgS4250.htm",
+   "sentences": [
+    "And I will tell you, it is an incredible thing to see Texas women coming back to these girls' camps, because you will regularly see a grandmother and a mother and a little girl, all of whom attended the same camp.",
+    "I will tell you, for me, this is not abstract and theoretical.",
+    "I will tell you what President Trump told me, he said: Ted, whatever Texas needs the answer is yes.",
+    "I will tell you, I stood in front of those crosses and just wept.",
+    "When you pass through deep waters, I will be with you.",
+    "I will tell the Presiding Officer, there are many Texans right now who just need love; they need prayers.",
+    "Our State is hurting, but we will come through it.",
+    "And we will come through with a spirit of what is on the sign above the Hunt Store, ``Hunt Strong,'' ``Texas Strong.'' We will come through this together."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+   "sentences": [
+    "School choice is the civil rights issue of the 21st century.",
+    "Sadly, every Democrat in this body will oppose these scholarships because they are more beholden to teacher union bosses than they are dedicated to fighting for kids.",
+    "It was a compromise that would have imposed a 5-year moratorium on State regulation of artificial intelligence.",
+    "So did transgender groups and radical leftwing groups that want to use blue State regulations to mandate woke AI.",
+    "In this body, your word is your currency.",
+    "This bill increases that to $15 million, still dramatically below market rates.",
+    "This amendment is nothing more than an earmark for Northern Virginia, and I urge my colleagues to vote no on this amendment."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Life Month (Executive Calendar)",
+   "title": "Life Month (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgS3243-6.htm",
+   "sentences": [
+    "It is also a time to renew our national commitment to defending the unborn.",
+    "Three years ago, the Supreme Court made a historic advance in the cause of life.",
+    "In Dobbs v. Jackson Women's Health Organization, the Court overturned Roe v. Wade--a flawed decision that for nearly 50 years enshrined one of the most disturbing notions in our constitutional history; that the Constitution somehow protects the right to end the life of an unborn child.",
+    "The fact is Roe had nothing to do with the Constitution.",
+    "It was the product of judicial activism--nine Justices legislating from the Bench--and that dangerous path took decades to correct.",
+    "Thankfully, in 2022, Roe was overturned.",
+    "Dobbs did not impose any new policies from the Bench.",
+    "People from across the Nation come together and walk miles and miles and meet with endless offices and organizations on Capitol Hill to march for the unborn and the protection of life.",
+    "You will find pastors and priests comforting families, foster parents opening their homes, and women who have walked through the pain of abortion using their voices to offer hope and healing."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO TAX ON TIPS ACT",
+   "title": "NO TAX ON TIPS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgS2993.htm",
+   "sentences": [
+    "Madam President, I remember, as a kid in Sunday school, thinking what it would have been like to live in Israel in the age of the apostles, in the time of miracles.",
+    "The next week, I drafted legislation to implement no taxes on tips, and I introduced it in the Senate the very next week.",
+    "With what we just saw now, the certainty that we will see No Tax on Tips become the law of the land, I think, is very close to 100 percent."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.J. Res. 20 (Executive Calendar)",
+   "title": "H.J. Res. 20 (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgS2505.htm",
+   "sentences": [
+    "Indeed, on January 20, in his Executive order on American energy, President Trump made it the policy of the United States ``to safeguard the American people's freedom to choose from a variety of goods and appliances, including, but not limited to, lightbulbs, dishwashers, washing machines, gas stoves, water heaters, toilets, and shower heads, and to promote market competition and innovation within the manufacturing and appliance industries.'' What refreshing common sense that was missing from the previous administration.",
+    "The American people saw that hypocrisy play out again and again, including with appliance regulations such as gas stoves, and, indeed, the hypocrisy played out again with the water heater regulation that my resolution will overturn.",
+    "The administration used regulations, mandates, and grants to enrich their allies, including especially radical climate activists.",
+    "I strongly urge my colleagues on both sides of the aisle to vote yes, especially if you care about blue- collar workers, if you care about families struggling to make ends meet."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COAST GUARD AUTHORIZATION ACT OF 2025",
+   "title": "COAST GUARD AUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgS1521-4.htm",
+   "sentences": [
+    "Mr. President, the U.S. Coast Guard is essential to protecting our Nation's maritime borders from threats like illegal drugs, illegal immigration, and transnational crime.",
+    "It authorizes funding to bolster the Coast Guard's critical missions for border security, facilitating maritime commerce, and enforcing the rule of law in domestic and international waters.",
+    "Unfortunately, cartels are now using technology like miniature remote control drone ships to smuggle drugs across our maritime border.",
+    "The Coast Guard Authorization Act of 2025 also expands the Coast Guard's and Customs and Border Protection's use of cutting-edge tools, like tactical maritime surveillance systems, which are blimp-based radar systems to find and interdict drug runners, poachers, and human traffickers at the Texas-Mexico border in the Gulf of America, in San Diego, in Key West, and San Juan, Puerto Rico.",
+    "I ask my colleagues to stand with me and support President Trump's vision of protecting our borders from drugs and illegal immigrants and of building ships to revitalize the Coast Guard's fleet.",
+    "And I urge my colleagues to support the Coast Guard Authorization Act of 2025."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PRO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgS1477-2.htm",
+   "sentences": [
+    "It is a new technology in the digital asset space which enables two individuals to exchange cryptocurrencies without a third party sitting in between them.",
+    "I think of my home State of Texas when it comes to cryptocurrencies.",
+    "Texas is becoming an oasis for Bitcoin and for cryptocurrency worldwide.",
+    "At its core, DeFi was designed to allow individuals to freely buy, sell, and exchange digital assets without reliance on third-party intermediaries.",
+    "It is ironic, therefore, that in the final hours of the Biden administration, the IRS finalized a new rule attacking America's cryptocurrency industry and more specifically DeFi.",
+    "Under the gross proceeds reporting by brokers that regularly provide services effectuating digital asset sales--that is a mouthful--the Biden administration expanded the definition of ``broker'' to include the software developers who create DeFi software, protocols, technology, and so on."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Howard Lutnick (Executive Calendar)",
+   "title": "Nomination of Howard Lutnick (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgS965.htm",
+   "sentences": [
+    "Mr. Lutnick will ensure that American taxpayer dollars are spent efficiently and that Congress gets ``the benefit of the bargain'' on legislation like the Chips and Science Act.",
+    "Mr. President, I rise in support of the nomination of Howard Lutnick to be Secretary of Commerce.",
+    "I urge my colleagues to support Howard Lutnick's nomination for Secretary of Commerce."
+   ]
+  },
+  {
+   "date": "2025-01-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Sean Duffy (Executive Calendar)",
+   "title": "Nomination of Sean Duffy (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-27/html/CREC-2025-01-27-pt1-PgS391.htm",
+   "sentences": [
+    "Madam President, I rise in support of the nomination of Sean Duffy to be Secretary of Transportation.",
+    "Therefore, I urge all of our colleagues, Republicans and Democrats, to come together and vote in support of the confirmation of Sean Duffy to be the next Secretary of Transportation."
+   ]
+  }
+ ]
+}

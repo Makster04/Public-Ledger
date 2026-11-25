@@ -1,0 +1,119 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "trahan",
+ "name": "Lori Trahan",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 35
+ },
+ "statements": [
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "title": "KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+   "sentences": [
+    "Tomorrow, we keep fighting for safer digital spaces for every child, especially with the rise of artificial intelligence.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, I oppose this bill because it is a targeted attack on Planned Parenthood, one of the most trusted providers of reproductive healthcare in our country.",
+    "The bill bans Federal Medicaid and CHIP dollars from going to Planned Parenthood for 10 years, without even naming the organization, by using vague criteria clearly designed to single them out.",
+    "This provision threatens access to cancer screenings, birth control, and other essential care for millions of Americans, particularly low- income women.",
+    "My amendment would strike the provision that blocks Medicaid reimbursements to Planned Parenthood."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2186-3.htm",
+   "sentences": [
+    "They claim it won't cut Medicaid, but it slashes $715 billion, gutting care for seniors and children with disabilities.",
+    "New GOP paperwork hurdles will cause millions of eligible Americans to lose Medicaid and SNAP, not because they don't qualify, but because they missed a form or got stuck in the system.",
+    "They are doing it to fund tax breaks for billionaire donors--who won't have to fill out a single form, by the way.",
+    "Are these your priorities, tax cuts for the rich paid for by taking healthcare and food assistance away from everyone else?",
+    "Reject this bill, and stand up for working families. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: YOUTH POISONING PROTECTION ACT",
+   "title": "YOUTH POISONING PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1642.htm",
+   "sentences": [
+    "Mr. Speaker, I introduced the Youth Poisoning Protection Act alongside Representative Mike Carey because we are facing an urgent and deeply troubling trend, the promotion of sodium nitrite, a toxic chemical, as a method to die by suicide.",
+    "Mr. Speaker, I urge my colleagues to support the Youth Poisoning Protection Act."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP CREATING CHAOS IN ELECTORAL SYSTEM",
+   "title": "GOP CREATING CHAOS IN ELECTORAL SYSTEM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1380-3.htm",
+   "sentences": [
+    "House Republicans are forcing a vote this week on the so-called SAVE Act, a bill that does nothing to stop inflation from driving up grocery prices, nothing to end Donald Trump's trade war that is pummeling the stock market, and nothing to protect Americans' retirements.",
+    "The SAVE Act claims to prevent noncitizens from voting in Federal elections.",
+    "Noncitizens caught voting in Federal elections already face deportation and even jail time.",
+    "Time and again, when pressed for evidence of widespread noncitizen voting, Republicans have failed to produce a single credible example.",
+    "Under this bill, if they don't have a passport--and half of Americans don't--they wouldn't be able to register to vote.",
+    "One day, she learns that because her name changed when she got married, she is suddenly unable to register to vote in her State.",
+    "No amount of documentation, no Social Security card, no marriage license, no previous voter registration will satisfy the requirements of this bill unless she possesses an updated passport or a birth certificate that matches her current name.",
+    "Madam Speaker, I urge my colleagues to reject this dangerous legislation and protect the rights of every eligible voter in the country because our democracy is strongest when every voice is heard and every vote is counted. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH520-3.htm",
+   "sentences": [
+    "It is because of evidence-based strategies, including many championed by the Bipartisan Mental Health and Substance Use Disorder Task Force.",
+    "I am proud to stand here today to advance the critical amendment that she authored, one that ensures the legislation before us does what it is intended to do: Save lives.",
+    "That is why I urge my colleagues to support this amendment because it guarantees that this bill will save lives."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING NEEDS OF WORKING FAMILIES",
+   "title": "ADDRESSING NEEDS OF WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH261-4.htm",
+   "sentences": [
+    "There has been nothing to ease the burden of grocery prices, nothing to lower the cost of prescription drugs, and nothing to make it easier for an American to buy a home.",
+    "A vote on H.R. 21, the so-called Born-Alive Abortion Survivors Protection Act, a bill that will give politicians here in Washington the power to monitor women's pregnancies and criminalize doctors and nurses who provide lifesaving care to women in need.",
+    "At first glance, its stated goal might sound reasonable: ``to prohibit a health care practitioner from failing to exercise the proper degree of care in the case of a child who survives an abortion or attempted abortion.'' That sounds logical on paper, but here is the reality: This situation almost never happens.",
+    "When Texas passed a law requiring reporting on abortions resulting in live births, they reported zero live births over 3 years--zero.",
+    "As we dig into H.R. 21, it becomes clear that this legislation purposely distorts what abortion care really is.",
+    "Over the next couple of days, we are going to hear Republicans get up here and use scare tactic after scare tactic in attempting to justify this vote, so let's set the record straight about what this legislation does.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on the GOP's reproductive healthcare surveillance act. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL TAKEOVER OF SPORTS",
+   "title": "FEDERAL TAKEOVER OF SPORTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH118.htm",
+   "sentences": [
+    "To justify this power grab, my colleagues across the aisle are preying on the legitimate concerns that some people have about transgender athletes in women's sports.",
+    "In fact, if you listen to them, they would have you think that a transgender woman in college, who may have transitioned after puberty and may present physical advantages over her opponent, is the same as a 10-year-old girl who just wants to play soccer on the weekends with her friends.",
+    "Madam Speaker, we won't be able to find common ground on this issue today, but this debate has made one thing abundantly clear: Members of Congress are the last people who should decide who gets to play sports in America.",
+    "I urge my colleagues to vote ``no'' on the GOP's child predator empowerment act. ____________________"
+   ]
+  }
+ ]
+}

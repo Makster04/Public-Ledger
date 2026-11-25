@@ -1,0 +1,199 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "quigley",
+ "name": "Mike Quigley",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 61
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PETE HEGSETH IMPEACHMENT",
+   "title": "PETE HEGSETH IMPEACHMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6149-8.htm",
+   "sentences": [
+    "Mr. Speaker, 21 American servicemembers have lost their lives in Trump's war with Iran, a war not authorized by Congress.",
+    "He dismantled safeguards designed to prevent civilian casualties, leading to the deaths of 120 Iranian schoolchildren."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS REAUTHORIZATION ACT OF 2026",
+   "title": "ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4652.htm",
+   "sentences": [
+    "Today, we are voting on a bill to extend these programs for 5 more years.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UKRAINE SUPPORT ACT",
+   "title": "UKRAINE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3879.htm",
+   "sentences": [
+    "Does that mean we are going to give Putin a reward for raping and pillaging the Ukrainian people and that we are going to reward them with the land that they took in this aggressive nature?",
+    "Ukraine is fighting that same fight today, and this fight is the same reason we fought the Second World War.",
+    "Putin's goal stretches well beyond Ukraine.",
+    "We cannot allow that to stand."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO NEW WARS",
+   "title": "NO NEW WARS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2379-2.htm",
+   "sentences": [
+    "Yet, just 6 months ago, he insisted that Iran's nuclear program had been completely and totally obliterated.",
+    "Our men and women in uniform are not disposable."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GREAT LAKES FISHERY RESEARCH REAUTHORIZATION ACT",
+   "title": "GREAT LAKES FISHERY RESEARCH REAUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5878.htm",
+   "sentences": [
+    "This bill would reauthorize critical Great Lakes research programs at $15 million per year for 5 years."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SNAP CUTS",
+   "title": "SNAP CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4833-8.htm",
+   "sentences": [
+    "Veterans, older Americans, and kids aging out of foster care will lose benefits."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE STORY OF BRAD AND DONALD LANG, SR.",
+   "title": "THE STORY OF BRAD AND DONALD LANG, SR.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3319-5.htm",
+   "sentences": [
+    "They all had that common core experience.'' Brad and his father, Donald's, story is an American story."
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY VERSUS DICTATORSHIP",
+   "title": "LIBERTY VERSUS DICTATORSHIP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1996.htm",
+   "sentences": [
+    "Mr. Speaker, for 1,176 days, people of Ukraine have lived under constant threat of attack and attack.",
+    "As the war has dragged on for over 3 years, Ukrainians have refused to submit to Putin's violence.",
+    "At every turn, the Ukrainian people have been willing to do what is necessary for protection and for peace.",
+    "When their sovereignty was threatened by Putin, they defended their country courageously.",
+    "Peace between Ukraine and Russia must not come at Ukraine's expense.",
+    "In order to have a just and lasting peace, we must return Ukraine to its 1991 borders.",
+    "Ukraine must also have serious security assurances from the U.S. and NATO so that Putin is deterred from ever threatening the country again.",
+    "We must also hold Putin accountable for his army's war crimes, like those in Bucha, which I witnessed, and for the kidnapping of thousands of Ukrainian children.",
+    "As the Trump administration continues to push for negotiations between Ukraine and Russia, we must all keep in mind exactly who we are dealing with.",
+    "Putin has refused to negotiate in good faith, reportedly violating the very same cease-fire he unilaterally declared last week.",
+    "This is the same man who has welcomed China's, Iran's, and North Korea's support for his war effort.",
+    "This is why the only way to deal with Putin is by sending a clear message--a message of strength and of unity.",
+    "As President Trump and his administration continue to push for negotiations between Ukraine and Russia, I encourage them to remember history.",
+    "Remember the reasons we fought the Second World War and the reasons we founded NATO.",
+    "Now is the time to pressure Putin to end this brutal war for good.",
+    "The future of the Ukrainian people, the future of Europe, and the future of democracy are dependent on how we meet this moment."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING UKRAINE'S INDEPENDENCE",
+   "title": "SUPPORTING UKRAINE'S INDEPENDENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1677.htm",
+   "sentences": [
+    "Ukraine desperately wants peace but not as a result of what would be in effect a Putin-Russia victory.",
+    "In time, then Putin would recognize his ability to come back and finish the job.",
+    "These Ukrainian children were taken into Russia, never to see their families again.",
+    "Recognizing that Putin's ambitions go well beyond Ukraine to Moldova, Georgia, the Baltics, and Poland, coupled with this administration's proclamation that, in effect, NATO is on its own.",
+    "I paraphrase the concerns raised by Secretary Austin and General Milley that if we don't stop Putin's aggression now, then we will pay later with more blood and dollars.",
+    "We must recognize at the same time that we simply can't trust Putin to keep a deal, which is why the security guarantees are so important.",
+    "It has blamed Ukraine for starting the war.",
+    "It has put absolutely no pressure on Putin to negotiate in good faith while it paused aid to Ukraine.",
+    "The President has finally recognized what is obvious to the rest of the world: Putin is in no hurry to be engaged in peace talks.",
+    "It is for the same reasons we fought the Second World War, to prevent a sovereign democratic nation from being wiped off the face of the Earth, for the same reason we formed NATO, and for the same reasons we formed the United Nations.",
+    "Finally, ironically, is the Reagan doctrine, which we have supported ever since, that we will support our allies against Soviet aggression at any cost.",
+    "Mr. Speaker, I will finish with Slava Ukraini."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "Mr. Speaker, there is a national shortage of more than 7 million units of affordable housing across America and more than 771,000 people experiencing homelessness."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING USAID",
+   "title": "SUPPORTING USAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH681-8.htm",
+   "sentences": [
+    "Musk's decision to shutter USAID, supported by the current administration, will make us less safe.",
+    "USAID tracks and prevents global diseases such as Ebola and malaria from reaching the U.S. No more.",
+    "USAID programs lift people out of poverty and promote access to justice, which alleviates the root causes of terrorism.",
+    "USAID counters Chinese and Russian influence by fighting against misinformation and offering funds to build.",
+    "Not long ago, Secretary of State Rubio said: ``Foreign aid is not charity. . . . it is critical to our national security.'' Mr. Speaker, he should take his own advice. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTREMISTS WHO ATTACKED POLICE OFFICERS",
+   "title": "EXTREMISTS WHO ATTACKED POLICE OFFICERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH351-3.htm",
+   "sentences": [
+    "These are the names of the U.S. Capitol Police and D.C. Metropolitan Police who died in the wake of the January 6 Capitol attack.",
+    "Mr. Speaker, 140 police officers were assaulted on January 6, but this week Donald Trump pardoned or commuted the sentences of over 1,500 individuals responsible for this attack.",
+    "They were extremists who showed up armed, wore Nazi symbols, and attacked police officers.",
+    "Today, I echo the National Association of Police Organizations in their condemnation of this act. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRIORITIZING PEACE AND SECURITY IN ISRAEL AND PALESTINE",
+   "title": "PRIORITIZING PEACE AND SECURITY IN ISRAEL AND PALESTINE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH115-4.htm",
+   "sentences": [
+    "Madam Speaker, on October 7, 2023, the people of Israel experienced the greatest terror attack in their nation's history.",
+    "I was horrified by the atrocities committed by Hamas on October 7, but I am encouraged by the reports that indicate that Israel and Hamas are closer than ever to reaching a cease-fire agreement that would return all remaining hostages held in Gaza to their families.",
+    "I firmly believe in Israel's right to defend itself.",
+    "It has been a critical ally in the region and has earned our support as it defends against threats from Iran and its proxies, including Hezbollah in Lebanon, the Houthis in Yemen, and Hamas in Gaza.",
+    "Still, the manner in which Israel defends itself matters.",
+    "As Israel's strongest ally, we have a responsibility to ensure that the legitimate anger felt by its citizens and the rest of the world after October 7 does not spiral into endless violence.",
+    "After over a year of fighting, Hamas is weakened but has not been eliminated nor have the remaining Israeli hostages been released.",
+    "Both the Israeli Government and Hamas must agree to end the fighting, release the hostages, and flood the Gaza strip with desperately needed food and medical supplies.",
+    "It is in Israel's security interest to have a stable neighbor and a Palestinian state."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "All young people should be able to benefit from team sports--building character, developing friendships, and improving their mental health."
+   ]
+  }
+ ]
+}

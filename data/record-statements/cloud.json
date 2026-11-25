@@ -1,0 +1,63 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cloud",
+ "name": "Michael Cloud",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "Specifically, this bill repurposes wasteful Biden administration spending on things like unproductive carbon capture toward real infrastructure and energy production capabilities.",
+    "This includes $1.785 billion in total resources for nuclear energy technology, $720 million in investments for fossil energy production, and $190 million to improve cybersecurity and grid resilience.",
+    "Mr. Speaker, I rise today in support of the fiscal year 2026 Energy and Water Appropriations Act."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "The proposed legislation is designed to nullify President Trump's lawful executive order to exclude agencies with national security missions from collective bargaining agreements.",
+    "Yet for decades, Federal collective bargaining agreements have been allowed, and some are even designed to restrict the President's ability to lead the government we elected him to run.",
+    "That is why President Trump, acting fully within the authority granted by the Civil Service Reform Act of 1978, amended Jimmy Carter's 1979 executive order, to exempt additional agencies from burdensome collective bargaining agreements--agencies such as the Departments of Defense, State, Justice, Homeland Security, the Nuclear Regulatory Commission, as well as many others.",
+    "The Biden administration spent the final months, even after being voted out of office, frantically signing union contracts which were explicitly designed to sabotage the incoming administration and prevent President Trump, elected by the people, from carrying out the mandate he was given.",
+    "These same government unions are not neutral public servants.",
+    "In the 2023 to 2024 election cycle, the four largest Federal employee unions spent nearly $1 billion on politics, with 98.8 percent of their Federal contributions going to the Democratic Party.",
+    "Unions like the American Federation of Government Employees, the National Treasury Employees Union, AFSCME, SEIU, and others affected by this executive order have made no secret of their intent to resist the agenda the American people voted for.",
+    "Mr. Speaker, I rise today in strong opposition to H.R. 2550.",
+    "Mr. Speaker, I urge my colleagues to defend Article II, reject this H.R. 2550, and stand with the American people who sent us here to drain the swamp, not to protect it."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "We saw how the EV mandates and the policies of the previous administration spent billions and billions building only a handful of charging stations, again undermining America's energy dominance."
+   ]
+  },
+  {
+   "date": "2025-06-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN ENTREPRENEURS FIRST ACT OF 2025",
+   "title": "AMERICAN ENTREPRENEURS FIRST ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-06/html/CREC-2025-06-06-pt1-PgH2510-6.htm",
+   "sentences": [
+    "This bill ensures that taxpayer-funded SBA loans are reserved for American small businesses, not illegal aliens, certainly not children or people who are dead.",
+    "Billions of loans have been flagged for suspected fraud and ineligible applicants, including illegal aliens."
+   ]
+  }
+ ]
+}

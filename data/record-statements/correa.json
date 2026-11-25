@@ -1,0 +1,335 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "correa",
+ "name": "J. Luis Correa",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 25,
+  "sentences": 98
+ },
+ "statements": [
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "title": "PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3805.htm",
+   "sentences": [
+    "I urge my colleagues to vote ``no'' on this measure."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "Mr. Chair, I rise in strong support of my and General Jack Bergman's amendment No. 10 to restore funding for medical and prosthetic research at the Department of Veterans Affairs, which is being cut in this bill by $45 million.",
+    "Mr. Chair, I urge my colleagues to support this amendment and to restore funding for critical medical research for our Nation's heroes."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE 250TH ANNIVERSARY OF ZOROASTRIAN LEGACY TO AMERICAN INDEPENDENCE",
+   "title": "COMMEMORATING THE 250TH ANNIVERSARY OF ZOROASTRIAN LEGACY TO AMERICAN INDEPENDENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgE435.htm",
+   "sentences": [
+    "July 4, 2026, signifies the 250th anniversary of the Zoroastrian legacy that has shaped the perspectives of the American Founding Fathers, the creators of the Declaration of Independence, and the architects of the United States Constitution in establishing principles for governing a society that is multi-religious, multiracial, multi- ethnic, and multilingual, fostering peace and prosperity.",
+    "We recognize the rich cultural and philosophical heritage of Zoroastrian communities globally and their ongoing contributions to diverse societies."
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT",
+   "title": "LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2190-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Law- Enforcement Innovate to De-Escalate Act.",
+    "Support spans 95 bipartisan cosponsors across 35 States, including the Fraternal Order of Police, Major County Sheriffs, Hispanic American Police Command Officers Association, Peace Officers Research Association of California, African American Mayors Association, Moms Against Police Brutality, and the Prince Jones, Jr. Foundation.",
+    "This collaboration, this coalition of law enforcement leaders and community justice advocates, doesn't happen by accident.",
+    "Modern less-than-lethal devices like the latest taser systems fully integrate with body-worn cameras, automatically capturing events and improving oversight.",
+    "Mr. Speaker, I strongly support this measure."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, in California when you register to vote, you do so under penalty of perjury."
+   ]
+  },
+  {
+   "date": "2025-09-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP ILLEGAL ENTRY ACT OF 2025",
+   "title": "STOP ILLEGAL ENTRY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-11/html/CREC-2025-09-11-pt1-PgH4242-4.htm",
+   "sentences": [
+    "Undocumented workers are in manufacturing.",
+    "Madam Speaker, I strongly oppose this measure."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "title": "CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3016-5.htm",
+   "sentences": [
+    "Remember, we are the biggest manufacturing State in the Union.",
+    "California is the largest ag State in the Union.",
+    "Local police chiefs did not call for the National Guard.",
+    "President Trump promised to deport criminals, those with deportation orders, those here less than 2 years, but now it is hard workers, people who pay taxes that are being picked up.",
+    "I am going to ask my colleagues to vote ``no'' on this measure."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SPECIAL INTEREST ALIEN REPORTING ACT OF 2025",
+   "title": "SPECIAL INTEREST ALIEN REPORTING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2989.htm",
+   "sentences": [
+    "This bill would require Customs and Border Protection to publish sensitive detailed national security information on a monthly basis.",
+    "During markup and during the Rules Committee meeting, we heard from my Republican colleagues how the Department already publishes information about known and suspected terrorists.",
+    "However, this bill demands that DHS post far more detailed information about special interest aliens than DHS publishes about known suspected terrorists.",
+    "Today, DHS publishes suspected terrorist information on a monthly basis, broken down by Border Patrol and ports of entry.",
+    "Here, my colleague from Georgia wants DHS to publish more information about special interest aliens than they publish about suspected terrorists.",
+    "If Ms. Greene's bill mirrored what we report on known and suspected terrorists, I would be happy to support it.",
+    "This bill would require Customs and Border Protection to publish sensitive national security information on a monthly real-time basis.",
+    "I don't know when the last time was that my colleagues were at the border.",
+    "Fentanyl is still coming through that border.",
+    "People were still breaking through that border.",
+    "The fact is that border is not secure.",
+    "That is why you have 2,000 U.S. border agents and 20,000 Mexican border agents trying to work on this issue.",
+    "What goes on at the border in real time is the key here.",
+    "We support this information being made public if the Secretary so deems it to be made public in the interest of our national security.",
+    "Mr. Speaker, I will make it clear to my colleagues and those who are watching this that the Secretary already has the power to disclose this information.",
+    "We support full transparency and accountability of the Department of Homeland Security.",
+    "Transparency, Mr. Speaker, all we are asking for is transparency.",
+    "Mr. Speaker, I will tell you that, back home right now, most of the people who are being rounded up are workers in factories and workers in farms who are picking our crops."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "Mr. Chair, I rise in strong support of amendment No. 8 directing the Department of Veterans Affairs to make recommendations on changes that are needed to its existing healthcare infrastructure so veterans can receive psychedelic-assisted therapies upon FDA approval.",
+    "We introduced this amendment because we need to be ready and be proactive to make sure that when the VA is ready to administer these therapies they actually can.",
+    "I urge my colleagues to support this amendment to make sure that our veterans have the best care they need as soon as possible."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVE SBA FROM SANCTUARY CITIES ACT OF 2025",
+   "title": "SAVE SBA FROM SANCTUARY CITIES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2483.htm",
+   "sentences": [
+    "We feed ourselves and other States in the Union and other nations, and 70 percent of our workforce is--guess what?--undocumented.",
+    "We all know that there are millions and millions of undocumented workers in this country."
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 60, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NAT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.J. RES. 60, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE NATIONAL PARK SERVICE RELATING TO \"GLEN CANYON NATIONAL RECREATION AREA: MOTOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgH1693-6.htm",
+   "sentences": [
+    "I saw seniors having a meal at lunchtime paid for by SNAP, seniors that have relied on Social Security, Medicare, Medicaid, and SNAP, seniors that have worked all their lives to build America, and all they want to do is have a peaceful retirement.",
+    "I rise today because my colleagues across the aisle are looking to cut Medicaid and SNAP, programs that hundreds of millions of Americans rely on to keep food on their table and their families healthy.",
+    "My colleagues are targeting almost $900 billion in cuts to Medicaid, threatening to take away healthcare for some 80 million Americans who rely on this program.",
+    "I urge my colleagues to defeat the previous question so that we can bring up H.R. 2753, the Hands Off Medicaid and SNAP Act, to stop our colleagues from taking away healthcare from Americans and making a big mistake."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DACA AND THE AMERICAN DREAM",
+   "title": "DACA AND THE AMERICAN DREAM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1384-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to share the story of Victoria Rosas, a DACA recipient in my home county, Orange County.",
+    "Victoria was raised in Fullerton, California, and thanks to her DACA status, she was able to pursue her passion for healthcare and helping others.",
+    "Victoria's journey is an example of the important contributions DACA recipients make to this great country and why we need to protect them from deportation.",
+    "Recognizing Carlo Garcia Mr. Speaker, I rise today to recognize Carlo Garcia, a DACA recipient in our community and to tell you little bit of his great story.",
+    "Recognizing Dr. Gloria Itzel Montiel Mr. Speaker, I rise today to recognize Dr. Gloria Itzel Montiel, a DACA recipient, for her achievements and contributions to our great country.",
+    "Dr. Montiel received her DACA status after arriving in the United States at the age of 8 years old."
+   ]
+  },
+  {
+   "date": "2025-03-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCING A RESOLUTION TO RECOGNIZE MARCH AS ZOROASTRIAN LEGACY AND HERITAGE MONTH",
+   "title": "INTRODUCING A RESOLUTION TO RECOGNIZE MARCH AS ZOROASTRIAN LEGACY AND HERITAGE MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-21/html/CREC-2025-03-21-pt1-PgE231-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my Resolution to recognize the month of March as ``Zoroastrian Legacy and Heritage Month.'' Originating in ancient Persia, Zoroastrianism is one of the world's oldest monotheistic religions."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUBTERRANEAN BORDER DEFENSE ACT",
+   "title": "SUBTERRANEAN BORDER DEFENSE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1045-10.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise in strong support of H.R. 495 because we need more oversight and information on the threat of tunnels going under our border.",
+    "Tunnels are used by transnational criminal organizations looking to make a profit at the expense of our taxpayers.",
+    "Over the last 30 years, cartels have created illegal and sophisticated tunnels under our border walls to smuggle drugs into our country, as well as money and weapons out of our country.",
+    "This bill creates an annual reporting requirement to keep Congress informed on the Department of Homeland Security's efforts to counter illicit cross-border tunnels and hold the bad actors accountable.",
+    "This information will help us, Congress, address the issue at the border and let us, as Members of Congress, better respond to the challenges.",
+    "Receiving information from the Department of Homeland Security on an annual basis will improve Congress' efforts to counter illicit cross-border tunnels and hold bad actors accountable.",
+    "That is why I support H.R. 495."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS BIODETECTION IMPROVEMENT ACT",
+   "title": "DHS BIODETECTION IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1046.htm",
+   "sentences": [
+    "I rise today in support of Representative Strong's bill, H.R. 706, the DHS Biodetection Improvement Act."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TSA COMMUTING FAIRNESS ACT",
+   "title": "TSA COMMUTING FAIRNESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1048.htm",
+   "sentences": [
+    "The jobs of TSA employees are difficult, from the Transportation Security officers' perspective who screen millions of passengers a day, to Federal air marshals providing in-flight security, to canine handlers, inspectors, and cybersecurity experts, all helping to secure our air transportation system.",
+    "In recent weeks, life has only become harder for this workforce, as probationary employees have been fired and TSOs' collective bargaining rights have also come under attack.",
+    "The TSA Commuting Fairness Act, offered by my colleagues from New York, Mr. Kennedy and Mr. Garbarino, would require TSA to study the possibility of allowing employees' shifts to start upon arrival at the airport's parking lot and bus and transit stops.",
+    "These employees often face long commutes to get to the airport from the parking lot and then must travel long distances from the airport parking lots and transit stops to get to the TSA checkpoints.",
+    "Letting employees clock in using cell phones and location data would help alleviate the stress caused by irregular shuttles and the traffic that is very unpredictable around the airport.",
+    "This bill would require a feasibility study to improve the quality of life for the TSA workforce, while ensuring that TSA leadership retains the ability to manage the workforce appropriately and maintain security standards."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRATEGIC HOMELAND INTELLIGENCE AND ENFORCEMENT LEGISLATION TO DEFEND AGAINST THE CCP ACT",
+   "title": "STRATEGIC HOMELAND INTELLIGENCE AND ENFORCEMENT LEGISLATION TO DEFEND AGAINST THE CCP ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1049.htm",
+   "sentences": [
+    "Mr. Speaker, I think we all agree that the United States' main competitor is China and the Chinese Communist Party who are intent on tilting the global playing field to their benefit, undermining our national standing.",
+    "This bill would require the Department of Homeland Security to establish a working group to coordinate its efforts to address the threats posed to the homeland by the Chinese Communist Party.",
+    "Mr. Speaker, this bill helps ensure that DHS implements a coordinated and effective response to the Chinese Communist Party's efforts to undermine the United States.",
+    "Mr. Speaker, I urge the Trump administration to work with Congress and not against Congress' efforts to strengthen America's ability to compete with China like this bill that aims to do exactly that."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESEARCH SECURITY AND ACCOUNTABILITY IN DHS ACT",
+   "title": "RESEARCH SECURITY AND ACCOUNTABILITY IN DHS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1051.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 901, the Research Security and Accountability in DHS Act."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMERGING INNOVATIVE BORDER TECHNOLOGIES ACT",
+   "title": "EMERGING INNOVATIVE BORDER TECHNOLOGIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1052.htm",
+   "sentences": [
+    "Mr. Speaker, I am pleased that we are here today to consider my legislation, H.R. 993, the Emerging Innovative Border Technologies Act.",
+    "With this piece of legislation, the House has the opportunity to improve the Department of Homeland Security's ability to quickly acquire and deploy new and innovative technologies, like artificial intelligence and machine learning, to enhance our border security.",
+    "My bill requires the Secretary of Homeland Security to create a plan to address capability gaps and integrating innovative technologies into our border security operations.",
+    "The innovation team finds and tests new commercial technologies and collaborates with companies to adapt them for use along our border.",
+    "These technologies can also help Border Patrol agents communicate reliably in remote areas.",
+    "I have been at the border many times.",
+    "This bill is just one of many solutions we need to fix the border."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DECOUPLING FROM FOREIGN ADVERSARIAL BATTERY DEPENDENCE ACT",
+   "title": "DECOUPLING FROM FOREIGN ADVERSARIAL BATTERY DEPENDENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1053.htm",
+   "sentences": [
+    "My fellow Democrats and I strongly support the intent of this bill, which is to confront our global adversaries and build up an industrial manufacturing base here at home in the United States.",
+    "We can't give the Communist Party of China any opportunity to undermine our homeland security, and I support the goal of this legislation to prohibit DHS from buying batteries from certain Chinese companies.",
+    "Before I close, Mr. Speaker, I will note that, in the last Congress, the Senate made further improvements to this measure not reflected in this bill today.",
+    "I support advancing H.R. 1166 today so that the Senate can continue to work on this measure."
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRODUCING ADVANCED TECHNOLOGIES FOR HOMELAND SECURITY ACT",
+   "title": "PRODUCING ADVANCED TECHNOLOGIES FOR HOMELAND SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-10/html/CREC-2025-03-10-pt1-PgH1055.htm",
+   "sentences": [
+    "These projects include projects such as border security, cybersecurity, counternarcotic security, and a few others."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DACA RECIPIENTS NEED PATHWAY TO CITIZENSHIP",
+   "title": "DACA RECIPIENTS NEED PATHWAY TO CITIZENSHIP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH892.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to share an incredible story of one of my constituents, a proud DACA recipient, Martha Delgado.",
+    "I will not stop fighting until she and other DACA recipients have a shot to earn American citizenship. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTRIBUTIONS OF DREAMERS",
+   "title": "CONTRIBUTIONS OF DREAMERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH693-7.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise to remind my colleagues who Dreamers are.",
+    "Dreamers and DACA recipients came to this country as young children by no fault of their own.",
+    "They are nurses, teachers, police officers, and police chiefs.",
+    "There are Dreamers like Dr. Oliver Lopez, a professor of mathematics at Chapman University in my district.",
+    "Dreamers are also people like Officer Mitchell Soto-Rodriguez, a police officer in Blue Island, Illinois.",
+    "She dreamed of being a police officer all her life.",
+    "She achieved her dream because of DACA.",
+    "They are Dreamers, and they deserve an opportunity to earn the American Dream. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WILDFIRE WORKERS",
+   "title": "WILDFIRE WORKERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-21/html/CREC-2025-01-21-pt1-PgH236-2.htm",
+   "sentences": [
+    "I am grateful for firefighters from across the country, neighboring States, as well as our neighboring countries, Canada and Mexico, who have also come to help us fight these fires.",
+    "Of course, that includes almost 750 incarcerated individuals who are stepping up and acting as firefighters on the front lines."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "title": "PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+   "sentences": [
+    "Let's be clear: I fully support, all of us fully support, getting convicted sexual predators off of our streets, irrespective of their legal status.",
+    "This bill will also apply to individuals with legal status, people with green cards, students, temporary workers, DACA holders, and TPS holders.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this measure."
+   ]
+  }
+ ]
+}

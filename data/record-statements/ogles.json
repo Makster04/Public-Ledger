@@ -1,0 +1,53 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ogles",
+ "name": "Andrew Ogles",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 3,
+  "sentences": 14
+ },
+ "statements": [
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "title": "STRENGTHENING CYBER RESILIENCE AGAINST STATE-SPONSORED THREATS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4682.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of my bill, H.R. 2659, the Strengthening Cyber Resilience Against State-Sponsored Threats Act.",
+    "Earlier this year, I introduced this legislation because the United States is facing an increasingly coordinated and persistent effort by malicious cyber actors linked to the Government of the People's Republic of China, the PRC.",
+    "I strongly urge my colleagues to support this important legislation."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING INFORMATION BY LOCAL LEADERS FOR AGENCY RESILIENCE ACT",
+   "title": "PROTECTING INFORMATION BY LOCAL LEADERS FOR AGENCY RESILIENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4685.htm",
+   "sentences": [
+    "When a resident pays a utility bill online, when a police department dispatches an officer, or when a hospital connects to a county network, all of those activities rely on State and local systems that are now squarely in the sights of foreign adversaries and criminal groups.",
+    "It ensures that the program covers not only traditional information technology systems but also operational technology and systems that incorporate artificial intelligence.",
+    "The bill encourages the adoption of basic but powerful best practices, such as multifactor authentication and stronger identity and access management tools across State and local networks.",
+    "Madam Speaker, I rise today in support of my bill, H.R. 5078, the Protecting Information by Local Leaders for Agency Resilience Act, known as the PILLAR Act.",
+    "Madam Speaker, I urge my colleagues to support H.R. 5078 and to stand with the State, local, Tribal, and territorial partners who are on the front lines of our cyber defense every day."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "title": "DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1241.htm",
+   "sentences": [
+    "The DETERRENT Act does a very valuable service by requiring proper reporting and ensuring that four countries, Iran, Russia, North Korea, and China, who actively seek to undermine our sovereignty, are designated as ``foreign countries of concern.'' Think about that list.",
+    "Mr. Chair, I emphasize that we are talking about countries like Iran, Russia, North Korea, and China.",
+    "Mr. Chair, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "The section 1260H list was established in the FY 2021 National Defense Authorization Act and has since been used as a blacklist for Chinese military companies that are directly or indirectly owned, controlled, or beneficially owned by the People's Liberation Army or the Central Military Commission of the Chinese Communist Party.",
+    "Again, Mr. Chairman, I urge that if we know we have an adversary, we should have access to all of their influence peddling in our country that is targeting our youth so we have the full scale and scope of what they are doing.",
+    "I will note my sincere gratitude to both the chairman of the Education and Workforce Committee as well as the committee staff for working with my team on these amendments."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "moylan",
+ "name": "James C. Moylan",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 13,
+  "sentences": 27
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN SERVICE MODERNIZATION ACT",
+   "title": "FOREIGN SERVICE MODERNIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5913.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 9086, the Foreign Service Modernization Act.",
+    "As a veteran myself, I fully support and recognize the importance of recruiting our veterans to serve in the ranks of the Foreign Service."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAIN STREET CAPITAL ACCESS ACT",
+   "title": "MAIN STREET CAPITAL ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4707.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 6955, the Main Street Capital Access Act."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "It sets a target for military commissaries to source at least 15 percent of produce from local farmers, expanded workforce credentialing for our students, and protected local land by removing a proposed military acquisition of over 100 acres.",
+    "Mr. Chairman, I rise today in strong support of the Fiscal Year 2027 National Defense Authorization Act.",
+    "Mr. Chairman, I urge our colleagues to support the passage of this bipartisan bill."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING 82ND ANNIVERSARY OF LIBERATION OF GUAM",
+   "title": "COMMEMORATING 82ND ANNIVERSARY OF LIBERATION OF GUAM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4635.htm",
+   "sentences": [
+    "Madam Speaker, we commemorate this year's theme: ``Para I Onra, Para I Gloria''; ``For Her Honor, For Her Glory.'' May God continue to watch over our beloved island of Guam and grant us the lasting peace for generations to come. denouncing ending birthright citizenship for territories Madam Speaker, I rise today to strongly denounce the End Birthright Citizenship for the Territories Act.",
+    "By including the very language, this body openly acknowledges that it is attempting to do in the territories what the Supreme Court just ruled it cannot constitutionally do in the 50 States.",
+    "To tell a population that bears a great weight of defending this Republic that Congress can selectively alter birthright citizenship on their soil is a profound sign of disrespect.",
+    "Madam Speaker, this bill fails the test of basic respect, and I urge my colleagues reject this double standard and join me in denouncing this bill. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, as the designee of Ms. Plaskett, I rise to speak in support of the amendment.",
+    "This study is the foundation to developing sustainable aquaculture sectors, and I urge my colleagues to support the territorial aquaculture and vote ``yes'' on this bipartisan amendment."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING DETECTION OF HUMAN TRAFFICKING ACT",
+   "title": "ENHANCING DETECTION OF HUMAN TRAFFICKING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2363.htm",
+   "sentences": [
+    "This bill establishes a framework for employees to assist law enforcement, requires reports to Congress on the scope of the issue, and ensures U.S. DOL personnel have the tools they need to detect forced labor and sexual exploitation when they investigate labor law violations.",
+    "Mr. Speaker, I strongly urge my colleagues to vote for this measure to help address, prevent, and crack down on this terrible practice."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERRITORIAL STUDENT ACCESS TO HIGHER EDUCATION ACT",
+   "title": "TERRITORIAL STUDENT ACCESS TO HIGHER EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2366.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of Guam's students and strongly urge my colleagues to vote for my bill, H.R. 6472.",
+    "I strongly urge my colleagues to support this bill, our students, and our community."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1960.htm",
+   "sentences": [
+    "That is why I rise today in support of the measure before us.",
+    "We simply cannot allow our troops or Federal employees to miss another paycheck."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2025",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4676-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of this bill that ensures our veterans, including the thousands who call Guam home, receive the compensation adjustment they have earned through service and sacrifice.",
+    "Mr. Speaker, I urge my colleagues to support our veterans and pass this bill."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support this bill and to deliver for the American people."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "Mr. Chairman, I rise today in strong support of my amendment urging the Department of Veterans Affairs to develop a comprehensive plan to relocate the VA regional office from Manila to Guam."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAMILY AND MEDICAL LEAVE FOR MILITARY FAMILIES",
+   "title": "FAMILY AND MEDICAL LEAVE FOR MILITARY FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-08/html/CREC-2025-05-08-pt1-PgH1925-2.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of the MIL-FMLA act, legislation that honors the sacrifices of our military families and veterans by ensuring they receive the family and medical leave protections they deserve.",
+    "The MIL-FMLA act fixes this by extending the Family and Medical Leave Act benefits to family members of the National Guard and Reserve troops, recognizing the unique burdens they bear when their loved ones are deployed.",
+    "As the proud Representative of Guam, where service to our Nation runs deep, I urge my colleagues to stand with our military families and pass this bill without delay. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVER FOR VETERANS ACT",
+   "title": "DELIVER FOR VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1439.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 877, the Deliver for Veterans Act, a critical piece of legislation addressing challenges faced by veterans in remote areas, including Guam.",
+    "As the Representative of a region where the unavailability of adaptive vehicles poses a significant barrier to our veterans, I urge my colleagues to support this essential measure."
+   ]
+  }
+ ]
+}

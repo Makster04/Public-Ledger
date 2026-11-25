@@ -1,0 +1,293 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "mcgarvey",
+ "name": "Morgan McGarvey",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 25,
+  "sentences": 56
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6105.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 8552, the Veterans' Compensation Cost-of-Living Adjustment Act of 2026.",
+    "I don't think enough people know that our veterans don't get an automatic cost-of-living adjustment for their pay like somebody on Social Security.",
+    "This annual cost-of-living adjustment is the very least we can do to deliver relief for our veterans on a meaningful basis.",
+    "In exchange for that, we make them a promise--it is both a legal and a moral promise--that we will be there for them after the uniform comes off.",
+    "We are going to miss him on the Veterans' Affairs Committee, but I hope that with Leslie and the boys and with the friends back in Texas, he has nothing but fair winds and following seas."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5127-2.htm",
+   "sentences": [
+    "First, they brought a budget bill to the floor of this House that took away people's healthcare and food so they could give billionaires and corporations the largest permanent tax break in American history.",
+    "Next, President Trump said: I need $70 billion more for the ICE agents acting as my personal police force.",
+    "Republicans said: Fine, we will do that."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING FRAUDULENT PAYMENTS ACT",
+   "title": "STOPPING FRAUDULENT PAYMENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4071.htm",
+   "sentences": [
+    "He has been soliciting donations left and right from billionaires, tech and tobacco companies, defense contractors, and dozens more individuals and companies that do business with and profit from the Federal Government and your tax dollars.",
+    "Madam Speaker, I rise in opposition to H.R. 8464."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "We could make people's lives better by giving free school breakfast and lunch for every kid in America or free childcare for every American family with a kid under 5.",
+    "For $70 billion, we could end veteran homelessness forever, probably seven times over.",
+    "Actually, with $70 billion, we could end homelessness in America."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3147-3.htm",
+   "sentences": [
+    "Yet, the second that Trump needs more money to bankroll his own personal police force, Republicans in Congress can move mountains.",
+    "Mr. Speaker, I rise in opposition to this Republican budget."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MUHAMMAD ALI AMERICAN BOXING REVIVAL ACT OF 2026",
+   "title": "MUHAMMAD ALI AMERICAN BOXING REVIVAL ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2641-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Muhammad Ali American Boxing Revival Act.",
+    "Today's bill is a step in the right direction, and I will vote ``yes.'' But like Ranking Member Scott and Representative Omar, I believe there is more work to do on this bill before it gets to the President's desk."
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO MORE MONEY FOR ICE",
+   "title": "NO MORE MONEY FOR ICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1938-3.htm",
+   "sentences": [
+    "I urge my colleagues to consider what we are wagering at this point."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING DHS IMMIGRATION RAIDS",
+   "title": "FIGHTING DHS IMMIGRATION RAIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5014-3.htm",
+   "sentences": [
+    "At home in Louisville, we don't have national troops in our backyard or ICE performing public raids, but it is the quiet, steady increase in arrests and profiling and detentions that has been devastating to our community."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL COAL COUNCIL REESTABLISHMENT ACT",
+   "title": "NATIONAL COAL COUNCIL REESTABLISHMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4428.htm",
+   "sentences": [
+    "It is a waste of our time to focus on something that already exists just days before the government runs out of funding and mere weeks before people receive notice of their health insurance premiums going up by thousands of dollars next year, unless the House Republicans extend healthcare tax credits for working families.",
+    "Mr. Speaker, I rise in opposition to this bill not just because it is a waste of our time.",
+    "Mr. Speaker, I urge a ``no'' vote."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Republicans are choosing to blow up the national debt by trillions of dollars.",
+    "I don't ever want to hear a Republican say they care about rural America or the debt ever again if they vote for this bill."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONNECTING SMALL BUSINESSES WITH CAREER AND TECHNICAL EDUCATION GRADUATES ACT OF 2025",
+   "title": "CONNECTING SMALL BUSINESSES WITH CAREER AND TECHNICAL EDUCATION GRADUATES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2392-2.htm",
+   "sentences": [
+    "They create millions of neighborhood jobs and reinvest in their local communities, from funding Little League teams to engaging in philanthropy."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PLAIN LANGUAGE IN CONTRACTING ACT",
+   "title": "PLAIN LANGUAGE IN CONTRACTING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2395.htm",
+   "sentences": [
+    "Mr. Speaker, we will put this in really plain words, since that is what the bill does."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 7(a) LOAN AGENT OVERSIGHT ACT",
+   "title": "7(a) LOAN AGENT OVERSIGHT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2398.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1804, the 7(a) Loan Agent Oversight Act."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THINKDIFFERENTLY ABOUT DISABILITY EMPLOYMENT ACT",
+   "title": "THINKDIFFERENTLY ABOUT DISABILITY EMPLOYMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2399.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1634, the ThinkDIFFERENTLY About Disability Employment Act."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENTREPRENEURS WITH DISABILITIES REPORTING ACT OF 2025",
+   "title": "ENTREPRENEURS WITH DISABILITIES REPORTING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2401.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, H.R. 1621, the Entrepreneurs with Disabilities Reporting Act of 2025.",
+    "If we can make it easier for more people to start a small business, we will all benefit."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "It is going to add trillions of dollars to the Nation's debt.",
+    "My colleagues: Mr. Schweikert, Mr. Roy, and Mr. Massie all say this is going to add to the debt and to the deficit of this country, and for what?",
+    "So Donald Trump's small circle of billionaire donors get a tax break.",
+    "Mr. Speaker, 40 percent of the people who get Medicaid in this country are children.",
+    "We are going to gut America's premier antihunger program."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACES ACT",
+   "title": "ACES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1815-6.htm",
+   "sentences": [
+    "This means mental health professionals are in place to assist these veterans through traumatic and life- changing diagnoses.",
+    "That is what this bill hopes to achieve, and I strongly support it.",
+    "Mr. Speaker, I support this legislation, and I ask my colleagues to do the same.",
+    "Mr. Speaker, I urge my colleagues to support this bill that is not only happening quickly but, I will also note, is happening with bipartisan support."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERAN FRAUD REIMBURSEMENT ACT OF 2025",
+   "title": "VETERAN FRAUD REIMBURSEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1817.htm",
+   "sentences": [
+    "Unfortunately, despite the VA's best efforts at vetting proposed fiduciaries, bad actors do arise from time to time.",
+    "On top of the financial harm, the strain of being taken advantage of can further eat away at the veteran's physical and mental health."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING SENSELESS GUN VIOLENCE",
+   "title": "STOPPING SENSELESS GUN VIOLENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1568.htm",
+   "sentences": [
+    "On behalf of all of our communities, we can and must do more to stop senseless gun violence. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Republicans are about to hand billionaires like Elon Musk $5.3 trillion in tax cuts, the biggest billionaire tax cut in American history.",
+    "To pay for it, Republicans are cutting health insurance for families; ripping away food from kids, seniors, and veterans; and cutting public education, all while increasing the national debt by $5 trillion.",
+    "I don't ever want to hear a Republican complain about the debt again because no matter how they try to cook the books--believe me, they are doing that, too--they cannot hide from the negative impact this budget will have."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HER NAME WAS BREONNA TAYLOR",
+   "title": "HER NAME WAS BREONNA TAYLOR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1081.htm",
+   "sentences": [
+    "Mr. Speaker, 5 years ago, a young Louisville woman was killed in the middle of the night by police officers who forced entry into her home without warning.",
+    "While we will never forget how Breonna Taylor died, we get to choose to remember how she lived."
+   ]
+  },
+  {
+   "date": "2025-03-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS DESERVE BETTER",
+   "title": "VETERANS DESERVE BETTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-06/html/CREC-2025-03-06-pt1-PgH1014.htm",
+   "sentences": [
+    "That is why today I am cosponsoring an act to protect veterans' jobs and to reinstate veterans who have been illegally fired by Elon Musk and DOGE.",
+    "I won't stop fighting for veterans like him. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "In their budget, the Republicans make their moral code clear: The rich get richer, and the rest of us pay for it.",
+    "This budget mandates at least $880 billion of cuts to Medicaid; $230 billion of cuts to take meals away from seniors, veterans, and kids; and at least $330 billion of cuts to our public schools.",
+    "Mr. Chair, I rise in opposition to the Republican budget resolution and urge my colleagues to reject it for what it is: a total scam and betrayal of the middle class."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING USAID",
+   "title": "SUPPORTING USAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH519-4.htm",
+   "sentences": [
+    "Last week, Donald Trump empowered Elon Musk to delete USAID.",
+    "Now, they are trying to eliminate the Department of Education and go after Medicaid.",
+    "What is next, Social Security?"
+   ]
+  }
+ ]
+}

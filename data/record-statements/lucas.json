@@ -1,0 +1,106 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "lucas",
+ "name": "Frank D. Lucas",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETIREMENT FAIRNESS FOR CHARITIES AND EDUCATIONAL INSTITUTIONS ACT OF 2025",
+   "title": "RETIREMENT FAIRNESS FOR CHARITIES AND EDUCATIONAL INSTITUTIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6166.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of my bill, H.R. 1013, the Retirement Fairness for Charities and Educational Institutions Act.",
+    "I introduced this bill in the 118th Congress to finish the work that the Ways and Means Committee began and to correct the underlying securities laws.",
+    "Madam Speaker, I urge my colleagues to support this bill so that Americans who serve our communities can finally have the same retirement investment opportunities as every other worker."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMON CENTS ACT",
+   "title": "COMMON CENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4432-4.htm",
+   "sentences": [
+    "We are also proud to boast the endorsements of the National Retail Federation, the National Grocers Association, the United Steelworkers International Union, and the American Bankers Association, among many others.",
+    "Mr. Speaker, I rise today in strong support of the Common Cents Act."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMERGENCY CONSERVATION PROGRAM IMPROVEMENT ACT OF 2025",
+   "title": "EMERGENCY CONSERVATION PROGRAM IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4137-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 629, the Emergency Conservation Program Improvement Act of 2025, introduced by Senator Fischer of Nebraska.",
+    "Mr. Speaker, I support this legislation and encourage my colleagues to vote favorably."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "I urge my colleagues to vote ``yes'' with me on final passage, and I thank Chairman Thompson for bringing forth this bill today."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESSURE REGULATORY ORGANIZATIONS TO END CHINESE THREATS TO TAIWAN ACT",
+   "title": "PRESSURE REGULATORY ORGANIZATIONS TO END CHINESE THREATS TO TAIWAN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2078.htm",
+   "sentences": [
+    "In the wake of the Russian invasion of Ukraine, this body enacted a similar regime to demonstrate to the world that violating international order comes with swift and severe results."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURAL RISK REVIEW ACT OF 2025",
+   "title": "AGRICULTURAL RISK REVIEW ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2865.htm",
+   "sentences": [
+    "H.R. 1713 would amend the Defense Production Act to add the Secretary of Agriculture as a permanent member to the Committee on Foreign Investment in the United States, or CFIUS, for any transactions related to the purchase of farmland, biotechnology, or any other transaction related to the agricultural industry.",
+    "That section of the bill requires CFIUS to consider referrals from USDA for reportable agricultural land transactions prior to the interagency process that determines whether review of the transaction is warranted.",
+    "Former Agriculture Secretary Perdue under the first Trump administration and former Agriculture Secretary Vilsack under the Biden administration agreed that having a permanent seat at the table is vital to the protection of our farmland and food supply.",
+    "From Hawaii and Washington to New York and Florida to my home State of Oklahoma, our Nation's agricultural land must be protected.",
+    "Mr. Speaker, I rise today in support of my bill, H.R. 1713, the Agricultural Risk Review Act.",
+    "I urge my colleagues to join me in supporting this bill."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCIAL REMOTE SENSING AMENDMENT ACT OF 2025",
+   "title": "COMMERCIAL REMOTE SENSING AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1202.htm",
+   "sentences": [
+    "Today, I rise in support of H.R. 1325, the Commercial Remote Sensing Act.",
+    "I have introduced this bipartisan legislation in the past two Congresses, and on both occasions, the measures passed the House by voice vote.",
+    "I thank Ranking Member Lofgren for joining me in advancing this legislation, and I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND USDA INTERAGENCY RESEARCH ACT",
+   "title": "DOE AND USDA INTERAGENCY RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-24/html/CREC-2025-03-24-pt1-PgH1204.htm",
+   "sentences": [
+    "As a farmer and rancher myself, I am proud to sponsor this bill, which will help us address cross-cutting research challenges that will advance crop science, maximize carbon storage, enhance precision agriculture technologies, and much more.",
+    "Mr. Speaker, I rise in support of H.R. 1326, the DOE and USDA Interagency Research Act.",
+    "I introduced this bill in the last Congress with the help of the ranking member of the Science, Space, and Technology Committee, Ms. Lofgren.",
+    "I urge all my colleagues to join us in supporting this bill."
+   ]
+  }
+ ]
+}

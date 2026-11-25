@@ -1,0 +1,182 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "larsen",
+ "name": "Rick Larsen",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 44
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "The climate crisis poses significant threats to water resources infrastructure, and WRDA 2026 continues to develop the tools needed to face these challenges, from enhancing drought resilience to combating harmful algal blooms and assessing wildfire risk.",
+    "The Water Resources Development Act of 2026 is a comprehensive and bipartisan bill that strengthens our water resource infrastructure, empowers communities, responds to climate threats, and supports economic growth.",
+    "Mr. Speaker, I urge my colleagues to support this critical legislation and look forward to productive conversations with our Senate counterparts to get a final bill to the President's desk before the end of this Congress."
+   ]
+  },
+  {
+   "date": "2026-06-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NORTHWEST STRAITS MARINE CONSERVATION INITIATIVE REAUTHORIZATION ACT OF 2025",
+   "title": "NORTHWEST STRAITS MARINE CONSERVATION INITIATIVE REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-02/html/CREC-2026-06-02-pt1-PgH3769.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, H.R. 2860, the Northwest Straits Marine Conservation Initiative Reauthorization Act.",
+    "Mr. Speaker, I urge my colleagues to support this bill to keep the momentum going to restore marine habitat, protect Washington State's environment, and create more jobs in northwest Washington State."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "title": "AIRSPACE LOCATION AND ENHANCED RISK TRANSPARENCY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2856.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 7613, the Airspace Location and Enhanced Risk Transparency Act, or the ALERT Act, as amended, bipartisan legislation introduced by T&I Committee Chair Sam Graves, House Armed Services Committee Chair Mike Rogers, Ranking Member Adam Smith of the Armed Services Committee, and myself, as the ranking member of the T&I Committee.",
+    "I urge all my colleagues to support the ALERT Act, as amended.",
+    "That is why I support H.R. 7613, as amended, and urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "title": "DEFENDING AMERICAN PROPERTY ABROAD ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt1-PgH2782-8.htm",
+   "sentences": [
+    "As we have seen with recent vessel boardings and border operations, the Coast Guard has broad authority to enforce American laws on the water.",
+    "They do all this while protecting global fish stocks and by enforcing domestic and international fisheries laws.",
+    "Importantly, we are working right now on a bill to reauthorize the surface transportation authorization to fix roads, bridges, highways, transit, rail, and some other things.",
+    "Mr. Speaker, today I rise in opposition to H.R. 7084, the Defending American Property Abroad Act of 2026.",
+    "I wanted to take this brief moment as part of my time in closing to just note that we are going to be losing a fierce advocate for infrastructure investment and for transportation safety with his announcement that he will not run again."
+   ]
+  },
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "title": "ROTORCRAFT OPERATIONS TRANSPARENCY AND OVERSIGHT REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-23/html/CREC-2026-02-23-pt1-PgH2248.htm",
+   "sentences": [
+    "Chair Graves of the Committee on Transportation and Infrastructure, Chair Rogers of the Committee on Armed Services, Ranking Member Smith, and I introduced this bill."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "This bill guts Federal, State, Tribal, and local authority and resources to attain clean water and protect locally important water bodies.",
+    "First, this bill significantly restricts Federal oversight and regulatory authorities under the Clean Water Act.",
+    "The current administration has already acted to slash Federal funding for clean water and eliminate agency staff.",
+    "This bill compounds those efforts and will leave Federal agencies powerless to fulfill their responsibilities under the Clean Water Act.",
+    "Members of this committee on a bipartisan basis have supported predictability in regulating clean water, and there is another way.",
+    "We don't have to choose between clean water and a robust economy.",
+    "It is defined by its clean water, including the Puget Sound and hundreds of lakes and thousands of miles of rivers and streams throughout Washington.",
+    "It targeted provisions that eviscerated Federal and State clean water agencies; provisions that made it easier for polluters to put more toxic and cancer-causing chemicals in waters such as PFAS, arsenic, and pesticides; and provisions that endanger not only our own health but the health of local, regional, and State economies.",
+    "Mr. Chair, I rise today to oppose the dirty water act.",
+    "I oppose this bill, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COAST GUARD AUTHORIZATION ACT OF 2025",
+   "title": "COAST GUARD AUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3572-4.htm",
+   "sentences": [
+    "I look forward to our continued collaboration as this legislation moves forward, and I urge all Members to support this bill."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "title": "DESIGNATING THE HOUSE PRESS GALLERY IN THE UNITED STATES CAPITOL AS THE \"FREDERICK DOUGLASS PRESS GALLERY\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2549.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H. Res. 137, as amended, which designates rooms H-315, H-316, H-317, H-318, H-319 in the U.S. Capitol as the Frederick Douglass Press Gallery.",
+    "Mr. Speaker, I support passage of the resolution, as amended, and urge my colleagues to do the same.",
+    "I will also take this time to recognize Republican Staff Director of T&I, Jack Ruddy, who is leaving at the end of the week, after more than 6\\1/2\\ years of work on the committee and, of course, an additional 9 years directly with the chair.",
+    "Mr. Speaker, I support the resolution and encourage my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BABY CHANGING ON BOARD ACT",
+   "title": "BABY CHANGING ON BOARD ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2551.htm",
+   "sentences": [
+    "This bill requires Amtrak to install baby changing stations in accessible bathrooms on new passenger rail cars and include clear signage indicating the availability of changing stations.",
+    "This will ensure that parents with young children on Amtrak trains can use accessible, safe, and comfortable changing facilities."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMPRESSED GAS CYLINDER SAFETY AND OVERSIGHT IMPROVEMENTS ACT OF 2025",
+   "title": "COMPRESSED GAS CYLINDER SAFETY AND OVERSIGHT IMPROVEMENTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2552.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1182, the Compressed Gas Cylinder Safety and Oversight Improvements Act.",
+    "Mr. Speaker, I support this bipartisan bill and urge my colleagues to do the same.",
+    "Mr. Speaker, I will close by saying that I support the Compressed Gas Cylinder Safety and Oversight Improvements Act."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TENNESSEE VALLEY AUTHORITY TRANSPARENCY ACT OF 2025",
+   "title": "TENNESSEE VALLEY AUTHORITY TRANSPARENCY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2554.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1373, as amended, bipartisan legislation to promote additional transparency of board meetings of the Tennessee Valley Authority.",
+    "Mr. Speaker, I support H.R. 1373, as amended, and I urge my colleagues to do the same.",
+    "I support H.R. 1373, as amended, and urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTERNATIONAL BOUNDARY AND WATER COMMISSION AUTHORITY",
+   "title": "INTERNATIONAL BOUNDARY AND WATER COMMISSION AUTHORITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2555.htm",
+   "sentences": [
+    "Mr. Speaker, the IBWC plays a crucial role in addressing water needs across the U.S.-Mexico border.",
+    "Mr. Speaker, I rise in support of H.R. 1948, as amended, bipartisan legislation to assist the U.S. section of the International Boundary and Water Commission, or IBWC, in carrying out its critical water- related missions.",
+    "I support H.R. 1948, as amended, and urge my colleagues to do the same.",
+    "I support H.R. 1948, as amended, to ensure the IBWC has the authority necessary to carry out its critical work and urge my colleagues to support this bill, as well."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "We are against jamming through fiscally reckless bills that rip healthcare away from 13 million Americans and take food assistance away from millions of families so that we can hand out tax breaks to billionaires.",
+    "Unfortunately, this reconciliation package leaves very little room for those investments--to make the needed safety investments for the entire air traffic control system, the safety investments that we need to tackle the highway safety crisis, and the investments that we need to meet the Coast Guard members' healthcare, housing, and childcare needs."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHRISTENING OF THE USNS BILLY FRANK JR.",
+   "title": "CHRISTENING OF THE USNS BILLY FRANK JR.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgE256-4.htm",
+   "sentences": [
+    "He served as chair of the Northwest Indian Fisheries Commission for over 30 years, paved the way for the Boldt decision and was honored with numerous prestigious awards."
+   ]
+  }
+ ]
+}

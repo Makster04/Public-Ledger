@@ -1,0 +1,147 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "whitesides",
+ "name": "George Whitesides",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 12,
+  "sentences": 27
+ },
+ "statements": [
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CALAMITY DOES NOT PAUSE FOR CAMPAIGNS",
+   "title": "CALAMITY DOES NOT PAUSE FOR CAMPAIGNS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5482-6.htm",
+   "sentences": [
+    "Abroad, the war in Iran burns hotter by the hour.",
+    "At home, millions face canceled care, punishing tariffs add thousands to family bills, and our national debt mounts."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL POLICE WEEK AND THE COPS REAUTHORIZATION",
+   "title": "NATIONAL POLICE WEEK AND THE COPS REAUTHORIZATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3470-2.htm",
+   "sentences": [
+    "During National Police Week, we recognize the officers who protect our communities every day.",
+    "When we talk about law enforcement, we aren't just talking about a badge or a uniform.",
+    "I urge my colleagues to support this bipartisan reauthorization."
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SANTA CLARITA LADY FLYERS TRAGEDY",
+   "title": "SANTA CLARITA LADY FLYERS TRAGEDY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2190-3.htm",
+   "sentences": [
+    "We remember Manny as a loving dad to Brody, an excellent partner to April, and a talented tattoo artist."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP THE REPUBLICAN AFFORDABILITY CRISIS",
+   "title": "STOP THE REPUBLICAN AFFORDABILITY CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1970-4.htm",
+   "sentences": [
+    "For food, families are paying even more because of the grocery tariffs from this administration.",
+    "I will continue to fight every day to lower costs and keep the American Dream alive and within reach."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUN SAFETY IN AMERICA",
+   "title": "GUN SAFETY IN AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5946-6.htm",
+   "sentences": [
+    "Mr. Speaker, we need commonsense gun safety legislation now, reforms supported by the vast majority of Americans, to end this epidemic.",
+    "We cannot accept this as normal."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING DETECTIVES WILLIAM OSBORN, VICTOR LEMUS, AND JOSHUA KELLEY-EKLUND",
+   "title": "MOMENT OF SILENCE HONORING DETECTIVES WILLIAM OSBORN, VICTOR LEMUS, AND JOSHUA KELLEY-EKLUND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3520-2.htm",
+   "sentences": [
+    "Today, we stand with them in solidarity, in sorrow, and in gratitude."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLOSURE OF QUARTZ HILL POST OFFICE",
+   "title": "CLOSURE OF QUARTZ HILL POST OFFICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2997-3.htm",
+   "sentences": [
+    "I urge the Postmaster General to reverse the decision to terminate the Quartz Hill Post Office contract. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP TRUMP'S CHAOS--STAND UP FOR SCIENCE",
+   "title": "STOP TRUMP'S CHAOS--STAND UP FOR SCIENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2086.htm",
+   "sentences": [
+    "Programs that previously had broad, bipartisan support, such as the Army Corps of Engineers water infrastructure fund, EPA's drinking water and clean water funds for States, forestry operations, energy utility assistance for low-income households, science and technology programs, and agricultural support are all on the chopping block.",
+    "At NASA, satellites that allow us to understand weather patterns, monitor our changing climate, and track fires as they move and spread are at risk of being deorbited.",
+    "From February to April, the administration terminated nearly 700 grants across 24 NIH institutes and centers focused on subjects such as aging, cancer, child health, diabetes, mental health, and neurological disorders.",
+    "We are not only losing the promise of progress and cures and climate technology, we are losing critical data that allow us to better understand the world we live in and respond to growing threats that we face, both foreign and domestic.",
+    "I am going to keep fighting for the families across my district who need NASA satellites to know if their houses are going to be safe from fires, for seniors who need medical advancements to live long and healthy lives, and for red States and blue States that will be hit by tornadoes and hurricanes in the months and years to come."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTS TO FOREST SERVICE ENDANGER MILLIONS",
+   "title": "CUTS TO FOREST SERVICE ENDANGER MILLIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1502-2.htm",
+   "sentences": [
+    "I brought Jasmin as my guest to the State of the Union where we talked about how difficult it would be for local fire chiefs to control the fires without the maps that she provided."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRED BY PRESIDENT TRUMP",
+   "title": "FIRED BY PRESIDENT TRUMP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH863-2.htm",
+   "sentences": [
+    "Most of my research focused on clean water and human health, such as drinking water, recreational water, and efforts to prevent pollution."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AGAINST EXTREME GOVERNMENT OVERREACH",
+   "title": "PROTECTING AGAINST EXTREME GOVERNMENT OVERREACH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH467-10.htm",
+   "sentences": [
+    "Mr. Speaker, I want to take a minute to talk about the events of this week and to rise on behalf of law enforcement in this country.",
+    "I know that people across my district and across the country are deeply concerned about the personal data being exposed in an act of extreme government overreach.",
+    "I also want to take a moment to talk about the recent attacks against the FBI and brave law enforcement officials who defended our Capitol on January 6 from a violent insurrection.",
+    "These law enforcement officers have now been asked to step away from their actual jobs to take surveys and loyalty tests to the current President.",
+    "That is not how we should treat our law enforcement, our FBI, or anyone who has put their own safety at risk to protect all of us.",
+    "We must all step up in this historic moment to be on the record for law enforcement. ____________________",
+    "We are pursuing legislation that will stop it, and we will also work on legal avenues to prevent this and other unlawful executive actions taken by this administration."
+   ]
+  }
+ ]
+}

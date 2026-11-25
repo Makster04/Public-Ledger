@@ -1,0 +1,251 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "nadler",
+ "name": "Jerrold Nadler",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 18,
+  "sentences": 77
+ },
+ "statements": [
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT",
+   "title": "PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3652.htm",
+   "sentences": [
+    "This misguided legislation is a cruel attack on transgender children who exist, whether the other side wants to recognize that or not, who are already among the most vulnerable in our society.",
+    "This bigoted bill not only infringes on American students' First Amendment rights by censoring curricula and banning books, but it also tries to erase American history and to erase the existence of transgender people by banning discussions of LGBTQ people and their families.",
+    "National Women's Law Center Action Fund, Washington, DC, April 28, 2026 Re Vote NO on H.R. 2616, Stopping Indoctrination and Protecting Kids Act.",
+    "Mr. Speaker, I rise today in strong opposition to the Republicans' don't say trans and forced outing bill."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 2027 PRESIDENTIAL BUDGET REQUEST WILL MAKE LIFE HARDER",
+   "title": "2027 PRESIDENTIAL BUDGET REQUEST WILL MAKE LIFE HARDER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3029-5.htm",
+   "sentences": [
+    "While proposing a massive increase in defense spending to support a reckless war of choice in Iran and supporting numerous policies to protect the billionaire class, the Trump budget would slash programs that provide healthcare, education, and housing to working Americans and would do nothing to lower gas prices or make groceries more affordable.",
+    "Unstable housing or homelessness is linked to late or limited access to care, higher viral loads, increased hospitalizations, and premature death.",
+    "Yet, this President wants to cut HOPWA to the bone, leaving people with HIV and AIDS vulnerable to more HIV transmissions and a spike in homelessness."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE IN MEMORY OF THE HONORABLE ELIOT ENGEL",
+   "title": "MOMENT OF SILENCE IN MEMORY OF THE HONORABLE ELIOT ENGEL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgH2981.htm",
+   "sentences": [
+    "Most of all, he will be remembered as an unwavering friend to Israel."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES REQUIRING A BALANCED BUDGET FOR THE FEDERAL GOVERNMENT",
+   "title": "PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES REQUIRING A BALANCED BUDGET FOR THE FEDERAL GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2560-8.htm",
+   "sentences": [
+    "It is dishonest because the same Republicans who hold all the levers of power can pass a balanced budget any time they want, but instead they pass tax cuts for billionaires, creating trillions of dollars in deficits.",
+    "That puts a thumb on the scale for massive spending cuts rather than ensuring that billionaires pay their fair share.",
+    "If my Republican colleagues believe so strongly in a balanced budget, then they should pass one.",
+    "Mr. Speaker, I oppose this dangerous, dishonest, and undemocratic resolution."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLOCAUST EXPROPRIATED ART RECOVERY ACT OF 2025",
+   "title": "HOLOCAUST EXPROPRIATED ART RECOVERY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-16/html/CREC-2026-03-16-pt1-PgH2497.htm",
+   "sentences": [
+    "During the Holocaust, the Nazis stripped Jewish families of countless works of art, culture, and heritage.",
+    "In addition to the bill's impending expiration, more than 100,000 of the over 600,000 works of art looted by the Nazis remain unrecovered.",
+    "Mr. Speaker, I rise today in strong support of S. 1884, the Holocaust Expropriated Art Recovery Act of 2025, or the HEAR Act.",
+    "In 2016, former Judiciary Committee Chairman Bob Goodlatte and I introduced the first HEAR Act, which was a landmark bill that aimed to aid these victims and their families in recovering their rightful property, a small act of light in the memory of the darkest period in human history.",
+    "I urge my colleagues to support this important legislation to ensure that victims of the Holocaust and their families are able to have their claims heard on their merits alone.",
+    "Mr. Speaker, in closing, I urge my colleagues to support this measure."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPU",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPUBLIC OF IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2395.htm",
+   "sentences": [
+    "President Trump's illegal strikes against Iran are dragging the United States into another costly war in the Middle East.",
+    "Yet, his removal is unlikely to bring about the revolution and regime change that the President seeks.",
+    "We had a diplomatic agreement with Iran that did contain their nuclear threat with constant verification, but President Trump tore up that agreement.",
+    "Mr. Speaker, I rise in strong support of this resolution and reasserting Congress' constitutional responsibility.",
+    "I urge Members to vote ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "I cannot support one more cent for detention facilities with the highest death rate in decades and that fail to meet the basic medical needs of detainees.",
+    "Mr. Speaker, I rise in strong opposition to this legislation because I cannot, in good conscience, vote to spend one more cent on ICE.",
+    "I will not fund an agency that acts like an American gestapo.",
+    "I cannot support one more cent for an agency that would recklessly take the life of Renee Good, an innocent and defenseless young woman.",
+    "I cannot support one more cent for masked agents arresting U.S. citizens, pulling people out of their homes, tearing children away from their parents, and stating that it is exempt from the constitutional requirement for search warrants."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING THE WAR POWERS RESOLUTIONS",
+   "title": "SUPPORTING THE WAR POWERS RESOLUTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgE1218-3.htm",
+   "sentences": [
+    "Over the past decade, that approach led to a steady decline in Venezuela's role as a major drug transit route.",
+    "There is no operational reason for abandoning interdiction, which worked, respected the rule of law, and avoided the use of lethal force where arrest and prosecution were possible.",
+    "Despite that, President Trump escalated his reckless campaign against Venezuela even further last night, pushing the Nation closer to a war the American people do not want.",
+    "The Administration claims these killings are about stopping drugs, but there is no credible evidence that Venezuela is a significant source of fentanyl entering the United States.",
+    "If Trump were serious about stopping drugs and not using counternarcotics as a pretext for military escalation and regime change, he would not be letting convicted traffickers walk free while eyeing Venezuela's vast oil resources.",
+    "Congress and the American people deserve to see the legal rationale for the use of lethal force carried out in their name.",
+    "That is why today, I proudly voted for two War Powers resolutions to block further escalation and reassert Congress's constitutional authority.",
+    "It is unfortunate that Democrats had to force these votes under the War Powers Resolution just to ensure Congress carries out its duties, despite Speaker Johnson's best efforts to keep them off the House floor and avoid accountability."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2550 TO NULLIFY THE EXECUTIVE ORDER RELATING TO EXCLUSIONS FROM FEDERAL LABOR-MANAGEMENT RELATIONS PROGRAMS, AND FOR OTHER PURPO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2550 TO NULLIFY THE EXECUTIVE ORDER RELATING TO EXCLUSIONS FROM FEDERAL LABOR-MANAGEMENT RELATIONS PROGRAMS, AND FOR OTHER PURPOSES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5520.htm",
+   "sentences": [
+    "The Clerk read the resolution as follows: H. Res. 432 Resolved, That immediately upon adoption of this resolution, the House shall proceed to the consideration in the House of the bill (H.R. 2550) to nullify the Executive order relating to Exclusions from Federal Labor-Management Relations Programs, and for other purposes."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRST AMENDMENT IS KEYSTONE OF OUR LIBERTIES",
+   "title": "FIRST AMENDMENT IS KEYSTONE OF OUR LIBERTIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4397.htm",
+   "sentences": [
+    "It even means, according to the Supreme Court in the Brandenburg decision in 1969, the ability to advocate violence except in a manner calculated to induce immediate violence."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING ISRAELI SECURITY AND PALESTINIAN FREEDOM",
+   "title": "SUPPORTING ISRAELI SECURITY AND PALESTINIAN FREEDOM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2662.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of Israeli security; Palestinian freedom; a just, peaceful, and swift end to the war in Gaza; and an eventual, viable, and negotiated two-state solution.",
+    "It will resume when families on both sides of the border can sleep peacefully without the constant fear of rockets and bombs falling from the sky.",
+    "Israel achieved its goal of destroying the military capabilities and existential threat of Hamas months ago.",
+    "He should be signaling his willingness to support an international security force on an interim basis to ensure law and order and Israel's support for international investment in the training and equipping of an eventual Palestinian security force.",
+    "This week, Tom Friedman wrote in The New York Times that: If ``Israel goes ahead with Netanyahu's vow to perpetuate this war indefinitely--to try to achieve . . . the far right's fantasy of ridding Gaza of Palestinians and resettling it with Israelis--Jews worldwide better prepare themselves, their children, and their grandchildren for a reality they have never known: to be Jewish in a world where the Jewish state is a pariah state, a source of shame, not of pride. ``Because one day, foreign photographers and reporters will be allowed to go into Gaza unescorted by the Israeli Army.'' And when they do, the full horror of the destruction there will become clear to all.",
+    "Friedman continued, Mr. Speaker, writing: ``Israel, instead of being seen by Jews as a safe haven from anti-Semitism, will be seen as a new engine generating it; sane Israelis will line up to immigrate to Australia and America rather than beckon their fellow Jews to come Israel's way.",
+    "Indeed, Mr. Speaker, former Israeli security officials have been speaking out.",
+    "Last week, two former Israeli Air Force pilots, Brigadier General Asaf Agmon and Colonel Uri Arad, published a letter in Hebrew in the Israeli newspaper Haaretz.",
+    "They are former top Israeli Air Force pilots and high-ranking officers.",
+    "Commanders for Israel's Security is a movement of over 550 retired senior officials from Israel's defense, security and diplomatic services.",
+    "They wrote: ``Accused of weakening Israel or betraying their connection to the Jewish state, they are told that those who live abroad or do not serve in the IDF must keep silent.",
+    "We categorically reject the notion that Jews in the diaspora must remain silent on matters concerning Israel. . . .",
+    "To those who fear that public criticism undermines Israel, we say that open, honest dialogue only reinforces our democracy and security.'' This is true for this body, too, Mr. Speaker.",
+    "If our voices contribute to preventing one more ounce of bloodshed or to the return home of a hostage 1 minute sooner or gets one more piece of bread into the hands of a starving Gazan or helps redeem the moral position of the State of Israel, our words are worth it."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "title": "STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2038.htm",
+   "sentences": [
+    "When Members of Congress trade individual stocks while in office, it fuels distrust, undermines public confidence, and casts a shadow over the work of this institution.",
+    "There is simply no legitimate reason for Members of Congress, their spouses, or their dependent children to be trading individual stocks, period.",
+    "Mr. Speaker, I am proud to cosponsor the TRUST in Congress Act, and I thank Representatives Magaziner and Roy for their leadership on this critical bipartisan legislation.",
+    "Mr. Speaker, I urge my colleagues in both Chambers to join us in passing this essential reform."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO ROGUE RULINGS ACT OF 2025",
+   "title": "NO ROGUE RULINGS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1482.htm",
+   "sentences": [
+    "Whether it be his efforts to rewrite the 14th Amendment to eliminate birthright citizenship or his scheme to deport immigrants without even the barest hint of due process, the courts have properly acted as a check on his power.",
+    "Mr. Speaker, I urge all Members to oppose this legislation."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MIDNIGHT RULES RELIEF ACT",
+   "title": "MIDNIGHT RULES RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH654-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to H.R. 77, the so-called Midnight Rules Relief Act.",
+    "Mr. Speaker, I urge Members to oppose this legislation."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "title": "BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+   "sentences": [
+    "Republicans campaigned on the promise that they would not ban abortion, yet here we are in the first month of the new Congress and the GOP has already brought this cruel bill to the floor in an effort to advance a dangerous agenda to ban abortion nationwide, although this bill really will ban no abortions at all but rather threaten the lives of some newborns.",
+    "Madam Speaker, I strongly oppose this legislation, which is not rooted in medical realities.",
+    "I will tell you what this bill would do.",
+    "Madam Speaker, I urge my colleagues to reject this bill."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "title": "PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+   "sentences": [
+    "I urge my colleagues to oppose this misguided bill."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "This bill is a cruel attack on transgender children, already among the most vulnerable in our society, facing high risks of suicide, violence, and bullying.",
+    "The NCAA stated last month there are fewer than 10 transgender athletes in collegiate sports out of 510,000, less than 0.002 of 1 percent of athletes.",
+    "Little girls will be forced to have their biological sex verified through humiliating physical examinations of their genitals by strangers and forced to present documentation about their anatomy.",
+    "Mr. Speaker, I rise to oppose this hateful bill.",
+    "Mr. Speaker, I urge my colleagues to reject this hateful bill and focus on real issues affecting our schools and communities."
+   ]
+  },
+  {
+   "date": "2025-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAKEN RILEY ACT",
+   "title": "LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-07/html/CREC-2025-01-07-pt1-PgH53-4.htm",
+   "sentences": [
+    "I start by expressing my deepest condolences to Laken Riley's family.",
+    "Among other things, this legislation would subject to mandatory detention any undocumented immigrants who are merely charged with committing an act of theft or shoplifting, even if they are innocent.",
+    "Congress has never appropriated, and no administration has ever requested, sufficient resources to detain all noncitizens who fall under the mandatory detention categories.",
+    "Since this bill is so sweeping, even Dreamers and people living here on temporary protected status, people who may have lived in this country for decades and shortly after their birth, could be subject to the bill's harsh provisions.",
+    "This appears to be a ham-handed attempt to circumvent recent Supreme Court rulings limiting States' standing to sue the Federal Government over immigration enforcement matters.",
+    "Mr. Speaker, I rise in strong opposition to H.R. 29.",
+    "I urge my colleagues to oppose this legislation."
+   ]
+  }
+ ]
+}

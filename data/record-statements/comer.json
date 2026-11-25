@@ -1,0 +1,388 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "comer",
+ "name": "James Comer",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 28,
+  "sentences": 124
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BILLION DOLLAR BOONDOGGLE ACT OF 2025",
+   "title": "BILLION DOLLAR BOONDOGGLE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5930.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support this important bipartisan and bicameral government reform bill that will ensure the necessary oversight takes place."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COLONEL EDWARD SHAMES POST OFFICE BUILDING",
+   "title": "COLONEL EDWARD SHAMES POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5931-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this bill, which would rename a post office in Virginia Beach, Virginia, for Colonel Edward Shames."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TUSKEGEE AIRMEN MEMORIAL POST OFFICE",
+   "title": "TUSKEGEE AIRMEN MEMORIAL POST OFFICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5933.htm",
+   "sentences": [
+    "These men bravely participated in consequential combat roles during World War II, including more than 15,000 missions and earning over 150 distinguished Flying Crosses.",
+    "This is a bill about a post office, not about Ukraine.",
+    "Mr. Speaker, I rise in support of this bill which would rename a post office in Tuskegee, Alabama, for the Tuskegee Airmen."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING FRAUDULENT PAYMENTS ACT",
+   "title": "STOPPING FRAUDULENT PAYMENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4071.htm",
+   "sentences": [
+    "Whether in Minnesota, California's hospice system, or Medicaid waiver programs in Ohio or New York, one thing is clear: Fraudsters will keep stealing taxpayer dollars until they are stopped.",
+    "Madam Speaker, I urge each of my House colleagues to join us in supporting H.R. 8464 as we work to protect the hard-earned tax dollars of the American people."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRE-PAYMENT FRAUD PREVENTION AND TREASURY DATA ACCESS ACT",
+   "title": "PRE-PAYMENT FRAUD PREVENTION AND TREASURY DATA ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-08/html/CREC-2026-06-08-pt1-PgH3919-7.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 8463, the Pre- Payment Fraud Prevention and Treasury Data Access Act."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INDUSTRIAL HEMP IN KENTUCKY",
+   "title": "INDUSTRIAL HEMP IN KENTUCKY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH697-3.htm",
+   "sentences": [
+    "I will be working to add language to the continuing resolution next week to fix it."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "Even before President Trump took office, Federal collective bargaining legal authorities were weaponized to sabotage what Americans had voted for.",
+    "On their way out the door, lameduck Biden administration officials signed collective bargaining agreements with Federal employee union bosses specifically designed to tie the hands of incoming President Trump.",
+    "In January, at our very first hearing this Congress, the House Committee on Oversight and Government Reform heard testimony from President Biden's Social Security Commissioner, Martin O'Malley.",
+    "He cut a deal with union bosses after the November election and just before leaving the agency to run for chair of the Democratic National Committee.",
+    "The deal locked in telework levels for tens of thousands of Social Security Administration employees for the entirety of the incoming Trump administration.",
+    "Can he truly lead if he is held hostage by union deals to which he never agreed and were intended to undermine his authority?",
+    "Mr. Speaker, she mentioned healthcare, and the healthcare system that she is talking about that she says has failed is ObamaCare, what they voted for and they created.",
+    "Mr. Speaker, the President has been fighting back against the deals that public sector unions have negotiated for themselves at the expense of the American taxpayer by invoking an existing legal authority.",
+    "Collective bargaining agreements often create procedural hurdles to firing such employees, above and beyond steps required in law and regulation.",
+    "For example, unions can bring removals before private arbitrators instead of appealing to the Merit Systems Protection Board.",
+    "The reality is that preexisting union agreements the President never signed onto can subvert these efforts.",
+    "Perhaps the most inappropriate aspect of Federal collective bargaining agreements come from provisions governing the use of official time, which is when Federal employees are paid by taxpayers to do union business.",
+    "Indeed, many Federal employees spend all their time doing union business.",
+    "More than 3 million Federal employee work hours were spent doing union business time in 2024 alone, according to the OPM report.",
+    "House Oversight Committee Republicans have attempted to legislate annual public reporting on the use and abuse of official time.",
+    "They have another opportunity to change their ways by supporting the current version of this legislation H.R. 5749, the Official Time Reporting Act.",
+    "However, if my colleagues on the other side of the aisle are not interested in supporting legislative reforms to bring accountability to the Federal workforce and public sector unions, they should at the very least not roll back existing progress made under this administration.",
+    "Mr. Speaker, I rise in opposition to H.R. 2550.",
+    "We support the Federal workforce."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING RESTRICTIONS FROM A PARCEL OF LAND IN PADUCAH, KENTUCKY",
+   "title": "REMOVING RESTRICTIONS FROM A PARCEL OF LAND IN PADUCAH, KENTUCKY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5073.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 1276, to remove restrictions from a parcel of land in Paducah, Kentucky.",
+    "I also thank Chairman Westerman for his support and I urge passage of H.R. 1276."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IRREFUTABLE EVIDENCE",
+   "title": "IRREFUTABLE EVIDENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4829-3.htm",
+   "sentences": [
+    "Madam Speaker, I have taken to the floor today to respond to Minority Leader Hakeem Jeffries calling me a ``stone-cold liar'' during a press conference defending the recent discovery of Democrats' communication with convicted sex offender Jeffrey Epstein.",
+    "Tuesday, I gave a speech on the House floor detailing my House Oversight Committee's good work to date on our Epstein investigation.",
+    "After all, Hakeem Jeffries, the Democrats in Congress, and their allies in the corporate media have been demanding a full release of the Epstein documents for months, including all the documents from the Epstein estate.",
+    "Without hesitation, I subpoenaed all of the Jeffrey Epstein estate documents because I, as well as my Republican colleagues on the House Oversight Committee, want to know what really happened.",
+    "In the end, after full transparency by the Republicans on the Oversight Committee, there was nothing new about the President's former relationship with Epstein and certainly nothing scandalous.",
+    "We did find two sitting Democrat Members of Congress had communication with Epstein.",
+    "First, it has been highly reported and debated about Congresswoman Stacey Plaskett texting during an Oversight Committee hearing with Jeffrey Epstein, while trying to conspire with him to hurt or embarrass Donald Trump.",
+    "According to Jamie Raskin, that was okay because Mr. Epstein was her constituent.",
+    "The second communication was this email right here where Hakeem Jeffries' campaign reached out directly to Jeffrey Epstein, soliciting campaign dollars for the ``Brooklyn Barack.'' Now, whereas Jamie Raskin explained Plaskett's communication with Epstein as simply responding to a constituent, Hakeem Jeffries had a very different response when asked about it by the media.",
+    "That is the real Jeffrey Epstein, not Jasmine Crockett's Jeffrey Epstein.",
+    "This is the real Jeffrey Epstein."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA CASH BAIL REFORM ACT OF 2025",
+   "title": "DISTRICT OF COLUMBIA CASH BAIL REFORM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4796.htm",
+   "sentences": [
+    "I urge all of my colleagues to support this commonsense public safety bill, and I thank Representative Stefanik for her leadership on this issue and the National Fraternal Order of Police for their support.",
+    "That is why I strongly support this bill.",
+    "Again, we support every measure that can be done to reduce crime and to get criminals that have committed crimes and keep them in jail.",
+    "Mr. Speaker, I urge my colleagues to support this commonsense legislation to bring law and order to D.C. by ensuring that dangerous criminals will not re-offend before their trial date."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMON-SENSE LAW ENFORCEMENT AND ACCOUNTABILITY NOW IN DC ACT OF 2025",
+   "title": "COMMON-SENSE LAW ENFORCEMENT AND ACCOUNTABILITY NOW IN DC ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4800.htm",
+   "sentences": [
+    "We will also restore the integrity of and faith in the law enforcement of the District of Columbia.",
+    "For instance, this law stripped law enforcement officers of many tools needed to execute their duties safely and without fear of retribution, as well as limited their options in situations of life or death.",
+    "It also created new opportunities for antipolice activists to harass law enforcement officers and added many undue burdens and requirements to officers in the D.C. Metropolitan Police Department.",
+    "The CLEAN DC Act would largely repeal D.C.'s antipolice law and ensure that law enforcement officers have the tools to keep visitors and residents safe.",
+    "D.C. law enforcement officers, who put their lives on the line every day for our community, must have the capabilities to do their jobs as they are trained to do.",
+    "By addressing the retention and recruitment crisis gripping D.C.'s Metropolitan Police Department, Congress can do its part in helping to boost the number of crime fighters this city desperately needs to keep violent criminals off of the streets.",
+    "I urge my colleagues to support this critical police reform bill that has the strong support of the National Fraternal Order of Police.",
+    "Mr. Speaker, I support the CLEAN DC Act, which repeals the majority of D.C.'s so-called Comprehensive Policing and Justice Reform Act of 2022.",
+    "By repealing this antipolice law, we will make our Nation's Capital safer."
+   ]
+  },
+  {
+   "date": "2025-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EPSTEIN FILES TRANSPARENCY ACT",
+   "title": "EPSTEIN FILES TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-18/html/CREC-2025-11-18-pt1-PgH4725-2.htm",
+   "sentences": [
+    "For years, the American people have demanded transparency about Jeffrey Epstein and Ghislaine Maxwell's horrific crimes and about the Federal Government's failure to protect the victims.",
+    "The House Oversight Committee is conducting a thorough review of the Federal Government's investigation into Epstein.",
+    "For example, former U.S. Attorney General Bill Barr, who oversaw the 2019 Epstein investigation, stated clearly under oath that the prosecution team found no evidence that President Trump committed wrongdoing.",
+    "His testimony confirmed there was no contact between President Trump and Mr. Acosta and no connection between President Trump in the Epstein case.",
+    "In their latest selective leak, Democrats released just 3 of the 23,000 pages of documents from the Epstein estate, and they made redactions to two of those emails that changed both the context and meaning of the three pages they released.",
+    "In contrast, full transparency exposed how Epstein appears to be TDS Patient Zero.",
+    "The emails reveal that a journalist coached Epstein to blackmail then-Presidential candidate Donald Trump.",
+    "Mr. Speaker, the files also show that a House Democrat colluded with Epstein during the 2019 Committee on Oversight and Government Reform hearing with a discredited witness with a vendetta against President Trump.",
+    "Unsurprisingly, Democrats have been silent about their colleague's coordination with Epstein.",
+    "Another email shows Democrat fundraisers invited Epstein to an event or to meet privately with Hakeem Jeffries as part of their 2013 effort to win a majority.",
+    "Hakeem Jeffries' campaign solicited money from Jeffrey Epstein.",
+    "We are committed to accountability, transparency, and justice for the American people and for the survivors of these appalling crimes."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA JUDICIAL NOMINATIONS REFORM ACT",
+   "title": "DISTRICT OF COLUMBIA JUDICIAL NOMINATIONS REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4375-5.htm",
+   "sentences": [
+    "Mr. Speaker, I support H.R. 5125, the District of Columbia Judicial Nomination Reform Act.",
+    "Mr. Speaker, I urge my colleagues to support the Sessions legislation which corrects an inappropriate limitation on Presidential authority to appoint judges in the District of Columbia."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA POLICING PROTECTION ACT",
+   "title": "DISTRICT OF COLUMBIA POLICING PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4379.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 707, I call up the bill (H.R. 5143) to establish standards for law enforcement officers in the District of Columbia to engage in vehicular pursuits of suspects, and for other purposes, and ask for its immediate consideration.",
+    "This bill repeals subtitle S of the Comprehensive Policing and Justice Reform Amendment Act of 2022 and replaces it with policies empowering police to pursue a suspect fleeing in a vehicle.",
+    "The 2022 act imposes burdensome restrictions on police pursuit of criminal suspects.",
+    "Mr. Speaker, I urge my colleagues to support this commonsense legislation to allow police officers in the District of Columbia to pursue and apprehend criminals to keep residents and visitors in the District safe.",
+    "I thank Representative Clay Higgins for his leadership on this critical local policing reform legislation, and I urge my colleagues to support his bill."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "title": "DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4333.htm",
+   "sentences": [
+    "This data will inform Congress, the District's elected officials, the Metropolitan Police Department, the public, and others of the severity of juvenile crimes in the city.",
+    "Mr. Speaker, I support H.R. 4922, a bill providing commonsense reforms to the District of Columbia criminal code.",
+    "Mr. Speaker, I urge my colleagues to support this commonsense legislation to ensure that citizens of Washington, D.C., and the many visitors to our Nation's Capital feel safe."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWERING AGE AT WHICH A MINOR MAY BE TRIED AS ADULT FOR CERTAIN CRIMINAL OFFENSES IN DISTRICT OF COLUMBIA",
+   "title": "LOWERING AGE AT WHICH A MINOR MAY BE TRIED AS ADULT FOR CERTAIN CRIMINAL OFFENSES IN DISTRICT OF COLUMBIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4339.htm",
+   "sentences": [
+    "According to the Metropolitan Police Department, 51.8 percent of all robbery arrests in 2024 were juveniles, and 53 percent of all carjacking arrests in 2025, as of August, were juveniles.",
+    "Mr. Speaker, I support H.R. 5140 to lower the age at which a minor may be tried as an adult for certain criminal offenses in the District of Columbia to 14 years of age.",
+    "We will continue to work with him to make our Capital City as safe as possible.",
+    "We are going to do it our way if we get the support in the Chamber today.",
+    "I think, Mr. Speaker, this is the path to try to get the crime under control in Washington, D.C. Mr. Speaker, I urge my colleagues to support this legislation to ensure that violent crime, including murder and first degree sexual abuse, are taken seriously in the District of Columbia."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SINGLE, UNIQUE ZIP CODES FOR CERTAIN COMMUNITIES",
+   "title": "SINGLE, UNIQUE ZIP CODES FOR CERTAIN COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3493.htm",
+   "sentences": [
+    "Madam Speaker, I urge my colleagues to vote in favor of the Boebert bill."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA A",
+   "title": "CONDEMNING THE ATTACKS ON MINNESOTA LAWMAKERS IN BROOKLYN PARK AND CHAMPLIN, MINNESOTA, AND CALLING FOR UNITY AND THE REJECTION OF POLITICAL VIOLENCE IN MINNESOTA AND ACROSS THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2909-4.htm",
+   "sentences": [
+    "I would also like to recognize the valiant effort of law enforcement in tracking down and capturing the suspect in this case.",
+    "We stand with the people of Minnesota.",
+    "We will not bend to intimidation or fear, and we refuse to tolerate the actions of those who would seek to usurp the will of the people and their representatives, advancing their own twisted agendas through violence and bloodshed."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA FEDERAL IMMIGRATION COMPLIANCE ACT OF 2025",
+   "title": "DISTRICT OF COLUMBIA FEDERAL IMMIGRATION COMPLIANCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2634.htm",
+   "sentences": [
+    "In March, the committee heard from sanctuary city mayors, who offered carefully crafted, lawyerly statements defending their decisions not to work with the Trump administration as it works to remove criminal aliens as quickly as possible.",
+    "They must also honor lawful detainers.",
+    "H.R. 2056 ensures that the District of Columbia cooperates with Federal immigration agencies, including ICE, to protect our citizens and nullifies prior attempts by the District to make itself a sanctuary city.",
+    "Specifically, H.R. 2056 represents an important step in codifying President Trump's executive order on making the District of Columbia safe and beautiful by directly supporting the directive for enhanced coordination between the Federal Government and law enforcement regarding illegal aliens.",
+    "Mr. Speaker, I rise in support of H.R. 2056, the District of Columbia Federal Immigration Compliance Act."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING OUR NATION'S CAPITAL EMERGENCY ACT",
+   "title": "PROTECTING OUR NATION'S CAPITAL EMERGENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2589-2.htm",
+   "sentences": [
+    "Madam Speaker, pursuant to House Resolution 489, I call up the bill (H.R. 2096) to restore the right to negotiate matters pertaining to the discipline of law enforcement officers of the District of Columbia through collective bargaining, to restore the statute of limitations for bringing disciplinary cases against members or civilian employees of the Metropolitan Police Department of the District of Columbia, and for other purposes, and ask for its immediate consideration.",
+    "The men and women of the D.C. Metropolitan Police Department serve the community every day to keep this District safe and secure.",
+    "The act stripped D.C. police officers of certain employee protections, making the job more difficult despite rising crime in the District.",
+    "In another attempt to protect the D.C. police, Representative Garbarino introduced this bill to repeal certain provisions of D.C.'s Comprehensive Policing and Justice Reform Amendment Act.",
+    "H.R. 2096 restores D.C. police officers' right to collectively bargain over disciplinary matters and reinstates clear timelines for disciplinary investigations.",
+    "In summary, this legislation is necessary to support the recruitment and retention of the Metropolitan Police Department.",
+    "Washington, D.C., cannot afford to continue to lose police officers during the ongoing crime crisis in the Nation's Capital city.",
+    "My colleagues recognize the importance of supporting the law enforcement officers who risk their lives to protect our communities.",
+    "By restoring employee protections, this legislation gives the Metropolitan Police Department officers the due process they need to confidently do their job.",
+    "Madam Speaker, before I reserve, I want to make sure that my colleagues across the aisle know what bill we are actually debating on the floor, that the bill that pertains to law enforcement in Washington, D.C. It has nothing to do with their quest to continue to defend the rioters and illegals in California.",
+    "Madam Speaker, in closing, I note that H.R. 2096 is endorsed by the National Fraternal Order of Police.",
+    "Madam Speaker, I rise in support of H.R. 2096, sponsored by Mr. Garbarino, the Protecting Our Nation's Capital Emergency Act."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS",
+   "title": "PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2594.htm",
+   "sentences": [
+    "Madam Speaker, pursuant to House Resolution 489, I call up the bill (H.R. 884) to prohibit individuals who are not citizens of the United States from voting in elections in the District of Columbia and to repeal the Local Resident Voting Rights Amendment Act of 2022, and ask for its immediate consideration.",
+    "On November 21, 2022, the D.C. Government enacted the Local Resident Voting Rights Amendment Act, permitting noncitizen residents to vote in D.C. local elections.",
+    "This includes illegal immigrants and even foreign diplomats whose interests may be opposed to the interests of Americans.",
+    "Unfortunately, the Senate refused to take up this bipartisan, commonsense bill to maintain election integrity in our Nation's Capital.",
+    "Diluting that right by extending it to noncitizens, whether here legally or illegally, undermines the voice of Washington, D.C., residents.",
+    "D.C.'s noncitizen voting law is a dangerous policy.",
+    "Madam Speaker, I rise in support of H.R. 884, which prohibits individuals who are not citizens of the United States from voting in elections in the District of Columbia.",
+    "I urge my colleagues to support Representative August Pfluger's bill to restore commonsense protections and ensure that only United States citizens have the right to vote in local D.C. elections.",
+    "I urge my colleagues to support this important legislation to prohibit those who are not citizens of the United States from voting in elections in the District of Columbia."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AERIAL FIREFIGHTING ENHANCEMENT ACT OF 2025",
+   "title": "AERIAL FIREFIGHTING ENHANCEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2390-4.htm",
+   "sentences": [
+    "This will help facilitate the acquisition of excess military aircraft for the aerial wildfire suppression fleet.",
+    "In fact, the Congressional Budget Office anticipates this legislation will reduce government spending.",
+    "Mr. Speaker, I urge my colleagues to support this important legislation, which will protect our brave aerial firefighters across the country."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GERALD E. CONNOLLY ESOPHAGEAL CANCER AWARENESS ACT OF 2025",
+   "title": "GERALD E. CONNOLLY ESOPHAGEAL CANCER AWARENESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2390-5.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support this bill honoring the legacy of our friend and colleague, Gerry Connolly."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DRAINING THE SWAMP IN ORDER TO PUT AMERICA FIRST",
+   "title": "DRAINING THE SWAMP IN ORDER TO PUT AMERICA FIRST",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH924.htm",
+   "sentences": [
+    "The first three hearings of that subcommittee have involved improper payments and looking at the USAID's mishandling of funds.",
+    "We continue to pledge to see if we can find wasteful spending and eliminate it altogether.",
+    "I pledge to continue to work with President Trump."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUIDANCE OUT OF DARKNESS ACT",
+   "title": "GUIDANCE OUT OF DARKNESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH928-9.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to support H.R. 1515, the Guidance Out of Darkness Act, or the GOOD Act.",
+    "Mr. Speaker, I urge my colleagues to support the Guidance Out Of Darkness Act, or GOOD Act, and to pass this legislation once again, like the House did in the last term."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL CONTRACTOR CYBERSECURITY VULNERABILITY REDUCTION ACT OF 2025",
+   "title": "FEDERAL CONTRACTOR CYBERSECURITY VULNERABILITY REDUCTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH930.htm",
+   "sentences": [
+    "The sooner a Federal agency knows that it may have a problem, the sooner it can take steps to protect its systems and data, including the personal data of millions of Americans.",
+    "Mr. Speaker, I urge my colleagues to support this important legislation, which will streamline cybersecurity vulnerability disclosure to protect Federal IT systems."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFE AND SMART FEDERAL PURCHASING ACT",
+   "title": "SAFE AND SMART FEDERAL PURCHASING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH932.htm",
+   "sentences": [
+    "Mr. Speaker, the lowest price technically acceptable, LPTA, is a source selection method outlined in the Federal Acquisition Regulation."
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAIL TRAFFIC DEATHS REPORTING ACT OF 2025",
+   "title": "MAIL TRAFFIC DEATHS REPORTING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgH933.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 758, which requires U.S. Postal Service employees and contractors to report to the Postal Service traffic crashes that result in injury or death."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "amodei",
+ "name": "Mark E. Amodei",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 17
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NORTHERN NEVADA ECONOMIC DEVELOPMENT AND CONSERVATION ACT OF 2026",
+   "title": "NORTHERN NEVADA ECONOMIC DEVELOPMENT AND CONSERVATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5586.htm",
+   "sentences": [
+    "The amount of Federal land in Pershing remains virtually unchanged because this bill has a one-to-one consolidation of checkerboard land that was done during the 1800s for railroad construction.",
+    "It is literally a consolidation of the checkerboard into two pieces, one private and one public.",
+    "All of the parcels for conveyance, disposal, and wilderness were identified and requested by local planning and zoning authorities."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAY OUR HOMELAND DEFENDERS ACT",
+   "title": "PAY OUR HOMELAND DEFENDERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2731.htm",
+   "sentences": [
+    "Most Americans support removing dangerous criminal aliens from our communities, stopping immigration enforcement.",
+    "I didn't draft it--no body-worn camera money.",
+    "Madam Speaker, I urge my colleagues to do the right thing: Vote ``yes'' and end this shutdown."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "title": "FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2432-2.htm",
+   "sentences": [
+    "Our bill includes reforms like funding for body-worn cameras, negotiated amongst both sides in both Houses, and de-escalation training, something else that we have heard about.",
+    "One of the biggest successes of the present administration is what they have done on the border and what they have done in terms of ending unlimited immigration from the previous administration and how they are trying to clean that up.",
+    "Because the thing that really upsets them is the success on the number one issue that this administration ran on, which was cleaning up the border.",
+    "Mr. Speaker, as the chairman of the Subcommittee on Homeland Security, obviously, I rise today in strong support of the fiscal year 2026 Homeland Security appropriations bill."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "I also remind everybody, because we get tied up in a lot of stuff, that, essentially, the Homeland Security bill is the Coast Guard, FEMA, TSA, Secret Service, Border Patrol, and ICE.",
+    "The fiscal year 2026 Homeland Security bill under consideration today furthers this administration's goals of undoing the damage caused by the previous administration, starting with the border.",
+    "This funds the President's priorities, codifies reductions and efficiencies, and operationalizes border security and immigration enforcement investments in the reconciliation process.",
+    "Since the last administration wasn't real big on ICE, kind of maybe hoped they didn't exist or whatever, one of the things that didn't happen with respect to ICE, like all other law enforcement agencies around, was the use and implementation of body cameras so that we don't have to rely on somebody who happened to have their cell phone and have a good angle, whether they are accusing or defending themselves for whatever they did.",
+    "This bill funds body cameras for ICE personnel so that we can have first-person, if you will, access to what people really think was done.",
+    "Mr. Speaker, I rise today in strong support of the Homeland Security bill under consideration.",
+    "Finally, I will take the time to thank the committee staff on both sides of the aisle who worked tirelessly over the past month to negotiate the product before us."
+   ]
+  }
+ ]
+}

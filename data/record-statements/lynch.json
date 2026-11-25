@@ -1,0 +1,277 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "lynch",
+ "name": "Stephen F. Lynch",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 16,
+  "sentences": 121
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETIREMENT FAIRNESS FOR CHARITIES AND EDUCATIONAL INSTITUTIONS ACT OF 2025",
+   "title": "RETIREMENT FAIRNESS FOR CHARITIES AND EDUCATIONAL INSTITUTIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6166.htm",
+   "sentences": [
+    "Madam Speaker, just a week ago, in a historic election, the American people sent Congress a clear message: Bring down costs, end the forever wars, and stop the corruption that is lining the pockets of the White House insiders, billionaires, and corporate executives.",
+    "Families are struggling to pay for rent and groceries, while the President's reckless and illegal tariffs push their prices even higher.",
+    "They are paying outrageous prices at the gas pump and on their utility bills while billionaires and the Trump family get richer and richer.",
+    "That is why this bill is opposed by groups such as: AARP; AFL-CIO; American Federation of Teachers; National Education Association; National Nurses United; Americans for Financial Reform; Service Employees International Union; Communications Workers of America; American Federation of State, County, and Municipal Employees; the UAW; North American Securities Administrators Association; Public Citizen; and the Consumer Federation of America.",
+    "Meanwhile, the Trump administration is moving to put risky private equity and private credit investments into workers' retirement plans.",
+    "In a collective bargaining framework under ERISA, the employers of these nurses and teachers, the schools and the hospitals, the people who are running those schools and hospitals and the unions that represent the employees whose plans are being protected, they have spoken out on this bill.",
+    "I am a former union president of the ironworkers union, so I know a lot of these folks personally.",
+    "We want what the teachers, nurses, labor unions, and employers that hold these 403(b) plans want.",
+    "Let me tell you what the AFL-CIO; the American Federation of Teachers; the National Education Association; National Nurses United, which came to the Hill; members and leadership of the Service Employees International Union, the SEIU; the Communications Workers of America; the American Federation of State, County and Municipal Employees, AFSCME; and the United Auto Workers told me and Members of Congress about this bill.",
+    "In fact, the unions that represent our teachers and nurses actually oppose this bill.",
+    "Madam Speaker, I urge my colleagues to oppose H.R. 1013 unless we make the necessary changes to protect our teachers' and nurses' retirement plans."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMON CENTS ACT",
+   "title": "COMMON CENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4432-4.htm",
+   "sentences": [
+    "This decision, not surprisingly, ignored the critical role and constitutional authority of Congress in regulating the currency.",
+    "Mr. Speaker, I rise in support of H.R. 3074, the Common Cents Act, sponsored by Representative McClain."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAILING BANK ACQUISITION FAIRNESS ACT",
+   "title": "FAILING BANK ACQUISITION FAIRNESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4438.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6556, the Failing Bank Acquisition Fairness Act, which I introduced in December 2025.",
+    "Specifically, the Failing Bank Acquisition Fairness Act will prevent megabanks from dominating the bidding process for acquiring a failed bank if there are other eligible bids from well-capitalized and well- managed small and midsized banks.",
+    "Small to midsized banks are unable to compete with the larger institutions in the failed bank acquisition process, even when attainable opportunities arise which might result in a more favorable result for depositors and impacted businesses and communities.",
+    "For example, after the collapse of the First Republic Bank, Silicon Valley Bank, and Signature Bank in 2023, which were the second, third, and fourth largest bank failures in U.S. history, as part of the resolution process, Federal regulators, including the FDIC, structured an immensely favorable acquisition process to allow JPMorganChase, America's biggest bank at the time, to acquire the nearly $230 billion in assets and $103 billion in deposits from the failed First Republic Bank.",
+    "Acquisitions such as these are now the norm rather than the exception.",
+    "This year, U.S. bank mergers and acquisitions have hit a 7- year high, up 45 percent since 2024.",
+    "Consumer advocacy organizations such as Americans for Financial Reform and Better Markets have raised serious concerns about the advantages afforded to large interconnected financial institutions like JPMorganChase in bidding for these failing banks, and as a result growing ever larger while accelerating the process of consolidation.",
+    "To that end, I introduced this legislation, the Failing Bank Acquisition Fairness Act, which if it were law at the time would have created a more level playing field between healthy medium-sized as well as larger banks to both stabilize markets but also to better serve depositors, businesses, and the impacted communities in which those banks are located while avoiding megabanks gobbling up smaller banks in the steady march toward consolidation.",
+    "I think this legislation does point to that loophole that allows megabanks to acquire failing banks even when other eligible, well- managed small and midsize banks have submitted competing bids improving community and regional bank competitiveness and preventing further consolidation among our largest financial institutions.",
+    "I will add that I believe this morning it was announced that JPMorganChase, which was the benefactor of this previous transaction, is now approaching $5 trillion in assets."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4151-3.htm",
+   "sentences": [
+    "Mr. Speaker, as someone who grew up in the Old Colony Housing Projects in South Boston, Massachusetts, and as a cofounder of the Affordable Housing Caucus along with Reverend Emanuel Cleaver, Greg Meeks, and Ritchie Torres, I am proud to join my colleagues, French Hill from Arkansas; the gentlewoman from California, Maxine Waters; Chairman Flood; and Reverend Emanuel Cleaver from Kansas City in rising in support of this bill, which while it does not solve every issue we have today with housing in this country, it does a lot.",
+    "It stops the commoditization of housing by real estate companies and private equity firms that would compete with families in acquiring their first home."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADAMS MEMORIAL-GREAT AMERICAN HEROES ACT",
+   "title": "ADAMS MEMORIAL-GREAT AMERICAN HEROES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5083.htm",
+   "sentences": [
+    "Mr. Speaker, as a member of the Adams Memorial Commission, I rise in strong support of H.R. 2306, the Adams Memorial-Great American Heroes Act.",
+    "In closing, I urge my colleagues on both sides of the aisle to support this act, and I thank you for the time and courtesy."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "I rise in strong opposition to H.R. 3633, the so-called CLARITY Act.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' and protect the American taxpayer."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "title": "GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3405.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to the so-called GENIUS Act.",
+    "President Trump just yesterday posted to pass the GENIUS Act ASAP.",
+    "This bill significantly weakens the U.S. dollar, which is the global U.S. reserve currency and provides a huge competitive advantage for our country.",
+    "This bill allows a complete takeover of our financial system by Big Tech companies by allowing these massive companies to issue their own cryptocurrencies.",
+    "Several of these companies have already indicated they are planning to launch crypto stablecoins if this bill becomes law.",
+    "These companies can easily compel or incentivize users to move away from the dollar, away from traditional banks, and into these so-called stablecoins.",
+    "President Trump's own stablecoin is set to become one of the top 10 stablecoins after Abu Dhabi announced a $2 billion investment in World Liberty Financial, which is a joint venture between the Trump family, his sons, and Steve Witkoff and his family.",
+    "We have seen in the past, in 2008, when the last version of financial innovation blew up, the collateralized debt obligations and other complex derivatives.",
+    "Mr. Speaker, I urge my friends on the other side and my colleagues on our side to defend the U.S. taxpayer and vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTI-CBDC SURVEILLANCE STATE ACT",
+   "title": "ANTI-CBDC SURVEILLANCE STATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3427.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to H.R. 1919, the so-called Anti-CBDC Surveillance State Act.",
+    "At the expense of U.S. global economic leadership, this misguided legislation would prevent the Federal Reserve from issuing a central bank digital currency, also known as a CBDC.",
+    "Unfortunately, the facts surrounding the development of CBDC have been obscured by disinformation, conspiracy theories, and extreme political ideology.",
+    "Republicans and the crypto industry have made unfounded claims that a CBDC will be used as a surveillance tool by the Federal Government.",
+    "Let's be clear about what a CBDC is.",
+    "A CBDC could serve as an alternative to existing forms of payments, and it will have benefits, including instant payment settlement, providing a medium for cross-border transactions, and fostering greater financial inclusion.",
+    "Additionally, Congress could require that the architecture of a central bank digital currency not have surveillance capability.",
+    "Meanwhile, the U.S. remains far behind amid increasing and blatant misinformation about the features of digital currency.",
+    "They have strict data protections, number one, on the GDPR, so EU citizens have access to control of their personal data.",
+    "They have the right to be forgotten, which would prevent data surveillance and surveillance of citizens, and they have strict penalties for companies that violate their personal data rights.",
+    "The United States could have the same in a U.S. digital currency.",
+    "There is a widening gap between the U.S. and its G7 peers, all of whom have far more advanced CBDC projects than the U.S. I will go back to the EU.",
+    "The EU is in the final stages of a pilot retail CBDC program already.",
+    "While concerns about data privacy could be real, we have the ability to protect that data in any architecture that we adopt.",
+    "It is counterintuitive that my colleagues would be raising concerns about data privacy while thousands of private companies are scooping up data every single day."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid or the Supplemental Nutrition Assistance Program."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA FEDERAL IMMIGRATION COMPLIANCE ACT OF 2025",
+   "title": "DISTRICT OF COLUMBIA FEDERAL IMMIGRATION COMPLIANCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2634.htm",
+   "sentences": [
+    "Let us ask the police chiefs for an explanation.",
+    "Counties with laws that do not honor extrajudicial civil detainers have significantly lower levels of violent crime than counties that don't have such laws.",
+    "Mayors, police chiefs, sheriffs, and local leaders across the country have made clear that the way to combat violent crime is allowing local police to do their job of ensuring public safety in their own communities, not commandeering local police to spend limited time and resources rounding up and detaining nonviolent immigrants who pose no threat.",
+    "Forcing the District of Columbia to carry out the Federal Government's immigration duties also discourages residents from coming forward to share information with the police about violent crimes for fear that they or someone close to them will be detained or deported.",
+    "The performance of their local police force is an area within their local control.",
+    "The police department in Washington, D.C., is doing an amazing job, and the political leadership of D.C. has stepped up.",
+    "This year, violent crime in D.C. is down 22 percent compared to the same period last year, and studies show that handling law enforcement the way they have, with community policing and getting to know the people in the neighborhoods, has been a key element.",
+    "This is according to the last five police chiefs in this city.",
+    "I know the gentleman is from law enforcement.",
+    "I am just asking to afford the same respect and deference to our local law enforcement leaders here in this community, give them the benefit of the doubt of how they provide safety in their own city.",
+    "There is a protest every couple of days, a major one in this city, people for various causes marching through the city take it over, and the local law enforcement has to be part of that effort to keep those people safe so they can express their rights.",
+    "It is a special place, but I think we should give deference to the local law enforcement community that they know how best to provide that safety, especially with the record that they have, a 30-year low on crime in this city, 22 percent less violent crime this year compared to the same period last year.",
+    "Yet, to this day, the Speaker of the House refuses to hang the plaque honoring the over 150 police officers who defended the people in this Chamber, who defended the Republicans.",
+    "To this day, Officer Sicknick's family--there were three officers who eventually died of causes related to the attack on the Capitol on January 6.",
+    "They simply want to have their sacrifice and law enforcement recognized by the people who were rescued.",
+    "I know there are a number of my colleagues on the other side who had exemplary careers in law enforcement.",
+    "Mr. Speaker, I strongly oppose H.R. 2056, which would effectively nullify laws, policies, and practices duly enacted by the District of Columbia because I strongly support the ability of the residents of the District of Columbia to govern themselves on local matters.",
+    "Mr. Speaker, I oppose this bill because I strongly support D.C. home rule."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING OUR NATION'S CAPITAL EMERGENCY ACT",
+   "title": "PROTECTING OUR NATION'S CAPITAL EMERGENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2589-2.htm",
+   "sentences": [
+    "The Supreme Court has held that Congress can delegate full legislative authority to the District of Columbia for local matters.",
+    "Police officers are entrusted with extraordinary authority to protect public safety.",
+    "H.R. 2096 would repeal provisions of a 2023 D.C. law that made it easier for the police department to discipline officers for crimes and serious misconduct.",
+    "D.C. also had to pay millions of dollars to resolve police officer misconduct lawsuits.",
+    "Before the 2023 D.C. law, every single D.C. police chief, for at least the prior 25 years, has requested more authority to discipline officers.",
+    "By bringing H.R. 2096 to the floor, Republicans are declaring they know better than the D.C. police chiefs how to run the department.",
+    "Let's hear what some of these D.C. police chiefs have had to say about this authority.",
+    "He said that he had to allow ``very bad police officers back into our department.'' Former Chief Charles Ramsey said: ``It is demoralizing to the rank and file who really do not want to have those kinds of people in their ranks.",
+    "Our credibility is shot whenever these things happen.'' Former Chief Robert Contee said that this authority would ``help reduce the risk of returning poor performers to the force. . . . '' Following the devastating murder of George Floyd, D.C. enacted the Comprehensive Policing and Justice Reform Amendment Act of 2022, which, in pertinent part, made it easier for the police department to discipline officers.",
+    "The purpose is ``to combat the rise in violent crime in our Nation's Capital by eliminating policies which place law enforcement personnel of the District of Columbia at risk and discourage them from serving, ensuring that such personnel will be treated equitably and fairly and the recruitment and retention of such personnel shall be increased.'' We are not surprised that the version of H.R. 2096 on the floor today does not include that purpose section since it is inaccurate.",
+    "The D.C. Police Department is not alone in having difficulty in recruiting and retaining police officers.",
+    "Police departments of all sizes across the country have had this difficulty for many years.",
+    "A survey conducted in 2019, before jurisdictions across the country enacted police accountability and transparency legislation after the murder of George Floyd, found ``that the difficulty in recruiting law enforcement officers and employees is not due to one particular cause.",
+    "First, H.R. 2096 would repeal a provision that removed police officer discipline for collective bargaining.",
+    "Several States, including States represented by Republicans, prohibit collective bargaining by police officers.",
+    "The 2023 D.C. law maintained the right of police officers to collectively bargain, except over discipline, and maintained the civil service protections and due process rights of officers.",
+    "Collective bargaining by police officers has been widely criticized for protecting police officers from discipline.",
+    "A Republican staff report for the Joint Economic Committee said: ``Collective bargaining plays a significant role in shielding police officers from the consequences of their misconduct. . . . '' Second, H.R. 2096 would reinstitute a 90-day statute of limitations on the police department to commence discipline.",
+    "The home State of the sponsor of H.R. 2096 has an 18-month statute of limitations to commence discipline against police officers.",
+    "Third, H.R. 2096 would repeal a provision that gave the police chief the authority to increase the discipline proposed by a police trial board, which consists of police officers.",
+    "Before the 2023 D.C. law, the police chief could only impose or reduce the proposed discipline or order a new trial.",
+    "Fourth, H.R. 2096 would repeal a provision that required the police department to publish on a public website a schedule of officer discipline hearings which are open to the public.",
+    "If Republicans support police officers, why hasn't Speaker Johnson installed the plaque honoring the brave police officers, including D.C. officers, who defended this Capitol on January 6?",
+    "Madam Speaker, I include in the Record a letter from Deirdre Schifeling, Anthony Romero, and Deborah Archer of the American Civil Liberties Union in opposition to H.R. 2096.",
+    "Re Vote ``No'' on H.R. 2096 Protecting Our Nation's Capital Emergency Act Which Would Allow Dangerous Officers Who Have Been Terminated for Criminal Conduct or Police Misconduct to Remain Employed as D.C. Metropolitan Police Officers Endangering Public Safety, Evading Accountability, and Eroding Public Trust."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AERIAL FIREFIGHTING ENHANCEMENT ACT OF 2025",
+   "title": "AERIAL FIREFIGHTING ENHANCEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2390-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of S. 160, the Aerial Firefighting Enhancement Act.",
+    "I urge all of my colleagues to support this bill, the Aerial Firefighting Enhancement Act."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GERALD E. CONNOLLY ESOPHAGEAL CANCER AWARENESS ACT OF 2025",
+   "title": "GERALD E. CONNOLLY ESOPHAGEAL CANCER AWARENESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2390-5.htm",
+   "sentences": [
+    "This bill would direct the GAO to report on key issues relating to esophageal cancer, including Federal spending for it under the Federal Employee Health Benefit Program and the screening rates among high-risk individuals within that program."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "It is the promise to every son and daughter who puts on that uniform that if you come home from service with the scars of war, visible or invisible, we will take care of you and your family.",
+    "I urge my colleagues to vote against this bill."
+   ]
+  },
+  {
+   "date": "2025-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN AID AND NATIONAL SECURITY",
+   "title": "FOREIGN AID AND NATIONAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgH617-4.htm",
+   "sentences": [
+    "Mr. Speaker, as a member of the Subcommittee on Military and Foreign Affairs, I rise in strong opposition to executive actions taken by the Trump administration to shut down U.S. foreign assistance and undermine America's national security.",
+    "Over the past two decades, I have led multiple bipartisan congressional delegations to Iraq, Afghanistan, Lebanon, Syria, Ukraine, Somalia, and Gaza, as well as other conflict zones.",
+    "These oversight missions have examined the implementation of U.S. foreign assistance firsthand, precisely because the security and humanitarian aid that we provide to our international partners is critical to advancing U.S. national security and foreign policy priorities around the world.",
+    "Recent executive actions taken by the Trump administration demonstrate a blatant disregard for the important role that foreign aid serves in keeping America, including American servicemembers who are deployed in these conflict zones, safe.",
+    "In the first major foreign policy action of his new term, President Trump issued an indiscriminate stop order, suspending U.S. foreign assistance for at least 3 months.",
+    "That includes the suspension of security and military aid to Ukraine which is entering the fourth year of its fight for independence against the brutal and unlawful invasion ordered by Russian President Vladimir Putin in 2022.",
+    "Our continued support for Ukraine is vital to the ability of the U.S. and our NATO allies to deter escalating Russian aggression across Europe.",
+    "This week, I will be introducing the Global Demining Protection Act, endorsed by The HALO Trust, to exempt demining programs from the ongoing ban on foreign aid.",
+    "Most recently, the Trump administration launched a full-scale attack on USAID, an independent agency duly established and annually funded by Congress.",
+    "First, top USAID security officers were removed for rightfully refusing to grant billionaire Elon Musk and his so-called DOGE team access to sensitive personnel files and classified systems.",
+    "Next, President Trump attempted to place all directly hired USAID employees on administrative leave, including those who are deployed overseas.",
+    "In Mr. Musk's words: ``USAID is a criminal organization.",
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to oppose these reckless actions in the interest of the safety and security of every American. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSING EXPANSIONIST RHETORIC",
+   "title": "OPPOSING EXPANSIONIST RHETORIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH303-5.htm",
+   "sentences": [
+    "Mr. Speaker, as a member of the Subcommittee on National Security, the Border, and Foreign Affairs, I rise in strong opposition to the expansionist rhetoric that President Trump is directing toward America's strongest and longstanding allies and international partners.",
+    "It also mirrors the imperial ambitions that have misled the likes of Russian President Vladimir Putin and Chinese President Xi Jinping into exerting economic and military power to attack and threaten sovereign nations and the rights of self-governing people in Ukraine, the Republic of Georgia, and Taiwan.",
+    "In his inaugural address, President Trump pronounced that the U.S. will ``expand our territory.'' He has specifically proposed that we make Greenland great again by annexing the island from Denmark, which is a NATO ally that he has threatened with tariffs unless it cedes to his demands.",
+    "The Republic of Panama is a strategic U.S. partner whose cooperation to combat drug trafficking, illegal immigration, and maritime piracy is vital to our national security.",
+    "As Russian President Putin tells it, Russia has no borders, and Ukraine is simply historically Russian land that has been stolen.",
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to firmly reject expansionist rhetoric and actions taken by President Trump. ____________________"
+   ]
+  }
+ ]
+}

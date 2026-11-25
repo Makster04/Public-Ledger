@@ -1,0 +1,641 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "delauro",
+ "name": "Rosa L. DeLauro",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 39,
+  "sentences": 278
+ },
+ "statements": [
+  {
+   "date": "2026-11-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HEALTHCARE",
+   "title": "AFFORDABLE HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-24/html/CREC-2026-11-24-pt1-PgE1275-4.htm",
+   "sentences": [
+    "I have presented a Medicare for all plan, the Medicare for America Act.",
+    "Medicare for America allows all Americans who want an improved Medicare to get it, while preserving high-quality, affordable employer health insurance for those who want to keep their current plan.",
+    "The Affordable Care Act enhanced premium tax credits that Republicans allowed to expire made average annual premium payments for subsidized marketplace enrollees jump 114 percent.",
+    "Starting next year, millions of Americans, who finally gained health coverage under the Medicaid expansion, will lose it because of the work requirements, which have fortunately been delayed for six months.",
+    "Medicare for America guarantees that no one in this country will ever be without coverage, allowing families to choose what works best for them.",
+    "The bill also takes on price gouging, drug company profiteering, and insurance company overpayments that are driving up costs for everyone.",
+    "Among several other payfors, we will repeal the Big Beautiful Bill and ask the highest earners to pay taxes, including a 5 percent surtax on income above $500,000."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGOA EXTENSION ACT",
+   "title": "AGOA EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5377-2.htm",
+   "sentences": [
+    "It did not address a proposed rule from the White House Budget Office that granted unprecedented authority over Federal spending to political appointees in the Trump administration.",
+    "It created a loophole that would have allowed certain funds within the Department of Homeland Security to be diverted to the Border Patrol in violation of the bipartisan agreement struck earlier this year.",
+    "It supports the Commodity Supplemental Food Program, allows the FBI to continue planning for the 2028 Olympics, facilitates preparations for the 2030 census, extends the Commodity Futures Trading Commission's Whistleblower Program, supports the launch schedule for NOAA's weather satellites, and much more.",
+    "The bill contains no funding for ICE and prevents the Department of Homeland Security from using any money in this bill for the Border Patrol.",
+    "I know there is bipartisan opposition to this policy, but I am optimistic that we can work together to prevent it from taking effect, to protect Congress' constitutional prerogative over Federal spending, and protect our communities from being starved of sorely needed Federal resources.",
+    "There can be no replacement for the appropriations process, not continuing resolutions, not reconciliation, not empowerments, nor pocket rescissions.",
+    "We do a disservice to this institution and the American people when we forfeit our authority over Federal spending to the executive branch.",
+    "Mr. Speaker, I rise in support of the measure we are considering today, which would extend government funding through December 11.",
+    "We will not support a single cent in further funding without substantial reforms to protect our communities from abuse.",
+    "Mr. Speaker, I support this measure, as I have indicated."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS ACT, 2027",
+   "title": "CONTINUING APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4731.htm",
+   "sentences": [
+    "And it was in that direction because it included a provision to remove all of the funding for the Border Patrol.",
+    "That prohibition is removed by this continuing resolution, which would allow Homeland Security Secretary Mullin to transfer billions of dollars to the Border Patrol.",
+    "Instead, they chose to introduce a bill that would allow Secretary Mullin to transfer billions more taxpayer dollars to the Border Patrol without implementing any of the protections that Democrats have sought since the killings of Alex Pretti and Renee Nicole Good earlier this year, a clear line in the sand that Democrats have drawn for months.",
+    "The American people support these protections, protections like mandating the use of body-worn cameras, not just taking the money for them and then refusing to turn them on; prohibiting operations at sensitive locations like schools, hospitals, and houses of worship; requiring agents to get a warrant from a judge before kicking in someone's door; allowing independent investigations into misconduct; ending racial profiling; and taking off the masks.",
+    "At minimum, I cannot support this bill without the inclusion of the technical language regarding the Border Patrol that was agreed upon in April.",
+    "Since there is difficulty about ICE and about Border Patrol, let's fund the agencies and move forward.",
+    "The Homeland bill passed--I am going to mention it again--unopposed in April, a voice vote, because it included the provision to remove all funding for the Border Patrol.",
+    "As I said, we viewed that there was an error that was made because it would allow Homeland Security Secretary Mullin to transfer billions of dollars to the Border Patrol, the same agency responsible for harassing and killing American citizens.",
+    "We said no money for Border Patrol unless there would be the protections.",
+    "There is an open door to Border Patrol, and there are no protections.",
+    "We cannot in good conscience allow billions of dollars to flow to these agencies without major reforms to keep our constituents safe from further violence.",
+    "I strongly urge my colleagues to take the time.",
+    "It is what I am committed to doing."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CAPTAIN PAUL W. \"BUD\" BUCHA VA MEDICAL CENTER",
+   "title": "CAPTAIN PAUL W. \"BUD\" BUCHA VA MEDICAL CENTER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4476.htm",
+   "sentences": [
+    "I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+   "sentences": [
+    "The President's war with Iran has been a catastrophic failure.",
+    "Nearly 6 months into the war, and the Iranian regime is still in place.",
+    "The Iranian people are not free.",
+    "We are seeing the consequences of this administration's decisions to dismantle the USAID, withdraw from the World Health Organization, and decimate our global health systems in real time, as the current Ebola outbreak in Africa threatens to become the deadliest in history.",
+    "Let us not forget the Trump administration's choice to dismantle USAID is a moral tragedy.",
+    "The bill threatens women's health around the globe, blocking any funds from going to the U.N. Population Fund, which is dedicated to reducing maternal mortality and violence against women and extending family planning to women and girls everywhere.",
+    "Mr. Chairman, I rise in opposition to this bill.",
+    "Because it took so long to detect and due to the challenging conditions, we will likely be working to contain this outbreak for more than a year."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UKRAINE SUPPORT ACT",
+   "title": "UKRAINE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgE552-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to defend our ally Ukraine, who has bravely resisted Vladimir Putin's invasion for over four years.",
+    "Only the Ukrainian people can decide when it is done fighting--no one else.",
+    "If Vladimir Putin's war is rewarded with Ukrainian land, he will try again for more.",
+    "I will continue to advocate for our ally Ukraine--for their defense, for the civilian and military resources they need, and for allowing them to control their own destiny.",
+    "The Ukraine Support Act would show the strength of our commitment, authorizing additional loans to Ukraine and NATO allies while also providing additional funds for reconstruction, Baltic Security, and Radio Free Europe, which is vital to countering Russian propaganda.",
+    "This legislation includes tough sanctions on Russia, and to hold Putin accountable for this unjustifiable war.",
+    "I will continue to stand with our ally Ukraine for as long as it takes, until its people are safe and free once more."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3840-4.htm",
+   "sentences": [
+    "That includes cuts to the fruit and the vegetable voucher program.",
+    "Specifically, vouchers, again, for fruits and vegetables have been cut.",
+    "I rise in opposition to the bill before us today."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO THE HONORABLE MARTIN M. \"MARTY\" LOONEY ON HIS RETIREMENT",
+   "title": "PAYING TRIBUTE TO THE HONORABLE MARTIN M. \"MARTY\" LOONEY ON HIS RETIREMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgE518-4.htm",
+   "sentences": [
+    "He championed a higher minimum wage, expanded access to healthcare, and stood firm against every effort that would have made life harder for the people of Connecticut."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "This bill in its current form increases funding for suicide prevention and treatment programs, rural health and substance use disorder programs, and women's healthcare, helping to ensure the women who have served our country can get the care that they need."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 6387, FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 6387, FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2892.htm",
+   "sentences": [
+    "Madam Speaker, I will just add that this money will probably run out at some point, and our job and the job of the Appropriations Committee is to make sure that these agencies are funded through the end of the year.",
+    "I will generally say that we can't get unanimous consent on whether or not the sky is blue in this institution."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR DISPOSITION OF SENATE AMENDMENT TO H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "PROVIDING FOR DISPOSITION OF SENATE AMENDMENT TO H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt2-PgH2793-6.htm",
+   "sentences": [
+    "They want to allow them to continue to detain and deport American citizens, allow them to go to sensitive locations, like churches and hospitals and schools.",
+    "Customs and Border Protection have $65 billion and another $11 billion in the Senate bill."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAY OUR HOMELAND DEFENDERS ACT",
+   "title": "PAY OUR HOMELAND DEFENDERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2731.htm",
+   "sentences": [
+    "In her career, she fought to preserve our natural and cultural resources, ensure access to clean air and water, and provide services to all Americans to advance their well-being and help them to achieve a better life.",
+    "The Interior, Environment, and Related Agencies Subcommittee and the entire House of Representatives owe her a debt of gratitude for her tireless work, and that began more than four decades ago.",
+    "Where were they when the President unilaterally eliminated collective bargaining rights for TSA workers?",
+    "Madam Speaker, I rise in opposition to this twice-doomed legislation.",
+    "My proposal, which I introduced over 1 month ago, funds the parts of DHS, the Department of Homeland Security, that we all agree on.",
+    "We will have to pass a bill to fund those agencies, and we will do so when we have come together on an agreement that establishes reasonable protections against abuse, reasonable protections, I might add, that the vast majority of Americans support.",
+    "We will do so when we can come together on an agreement that establishes those protections against abuse, which the majority of Americans support."
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8029, PAY OUR HOMELAND DEFENDERS ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1128, EXPRESSING THE SUPPORT OF THE HOUSE OF REPRES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8029, PAY OUR HOMELAND DEFENDERS ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1128, EXPRESSING THE SUPPORT OF THE HOUSE OF REPRESENTATIVES FOR THE DEPARTMENT OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgH2688-2.htm",
+   "sentences": [
+    "Where were they when the President unilaterally eliminated the collective bargaining rights for the TSA workers?",
+    "Where were they when Kristi Noem spent $20,000 to rent a horse so she could sit on the saddle of this horse for her political ads that were sanctioned by the President of the United States?",
+    "This administration hopes we are going to forget about the harassment, the violence, the chaos, simply because it is not much in the news anymore."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "title": "FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2432-2.htm",
+   "sentences": [
+    "Republican leadership is aware of this, but they still have chosen to waste our time on political theater, while President Trump's aimless, endless, and costly war with Iran puts American lives in danger.",
+    "Democrats are fighting to keep our communities safe, both from foreign adversaries and out-of-control Federal agents.",
+    "If the Republicans are actually serious about the threat that President Trump's war with Iran has caused, then they should move quickly to bring up my bill, which they rejected, which would fund FEMA, TSA, the Coast Guard, the Secret Service, Federal Law Enforcement Training Centers, the Science and Technology Directorate, the Office of Inspector General, Federal Protective Services, and the Cybersecurity and Infrastructure Security Agency, while setting funding for ICE and Customs and Border Protection aside as negotiations on those issues continues.",
+    "What there is a significant controversy over, however, is how ICE and Customs and Border Protection have beaten, detained, harassed, and even killed law-abiding U.S. citizens with zero accountability.",
+    "Allow the Coast Guard to support its servicemembers and ensure our cybersecurity measures are in place while we continue to negotiate the reforms to ICE and Customs and Border Protection that the vast majority of Americans want to see enacted.",
+    "Do they oppose prohibiting the detention or the deportation of U.S. citizens?",
+    "They are the same standards that law enforcement all across this country abide by.",
+    "I encourage my Republican colleagues not to let their opposition to these necessary and overwhelmingly popular reforms stand in the way of funding the rest of the Department of Homeland Security, especially now as President Trump's war with Iran has put Americans at risk.",
+    "We want ICE and Border Patrol agents to follow the same rules as our local law enforcement: Identify yourself, use your body camera, get a real judicial warrant when you enter a home, and establish a policy clearly for use of force.",
+    "Republicans should allow a vote on Ranking Member DeLauro's bill that would separate ICE, Border Patrol, and Secretary Noem's office while we negotiate real reforms.",
+    "If Republicans are serious about funding the vast majority of the Department of Homeland Security as President Trump's open-ended war with Iran puts Americans at risk, then they must bring it up for a vote immediately.",
+    "Mr. Speaker, I rise in opposition to the bill.",
+    "I will not vote for more funding for ICE or CBP until this Congress includes those reforms, period.",
+    "I will not vote for another dime for these agencies until we get the reforms that the American people want in stopping these agencies from terrorizing our communities."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7744, FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 7744, FURTHER ADDITIONAL CONTINUING APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2380-3.htm",
+   "sentences": [
+    "Republican leadership is trying to use President Trump's aimless, costly, and illegal war with Iran to force through more funding for ICE and Customs and Border Protection without the substantial changes that the vast majority of Americans believe those agencies need.",
+    "If Republicans are actually serious about the threat that President Trump's war with Iran has caused, then they would move quickly to bring up my bill.",
+    "The bill would fund law-abiding components of DHS: Federal Emergency Management Agency, FEMA; Disaster Relief Fund; Cybersecurity and Infrastructure Security Agency; U.S. Coast Guard; Transportation Security Administration, TSA; U.S. Secret Service; Federal Law Enforcement Training Centers; Science and Technology Directorate; Office of Inspector General; and Federal Protective Service.",
+    "Mr. Speaker, they do not want to do it because they support lawless, reckless agencies, ICE and Customs and Border Patrol.",
+    "There is significant controversy over ICE and Customs and Border Protection because they have beaten, detained, harassed, and even killed law-abiding U.S. citizens with zero accountability.",
+    "We are going to negotiate reforms to ICE and Customs and Border Protection.",
+    "There is broad public support for prohibiting the detention or deportation of U.S. citizens and prohibiting operations at sensitive locations like schools and houses of worship.",
+    "They rejected the amendment last night in the Rules Committee, but I will tell you what it would fund."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOMEOWNER ENERGY FREEDOM ACT",
+   "title": "HOMEOWNER ENERGY FREEDOM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2301-2.htm",
+   "sentences": [
+    "How about we don't detain and deport American citizens?",
+    "How about we use body cameras?",
+    "Do we need to have border enforcement?",
+    "Aren't we going to indicate that we are going to deal with FEMA and help people out?"
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1960.htm",
+   "sentences": [
+    "For the Social Security Administration, thousands of Social Security Administration employees would likely be furloughed, there would be delays on the SSA's 800 number and limited hours of operation.",
+    "At the National Institutes of Health, it would freeze funding for new research grants, including research on cancer, Alzheimer's, ALS, heart disease, diabetes, kidneys, mental health, maternal mortality, infectious diseases, genetic diseases, and the list goes on and on.",
+    "This is when we were doing the appropriations bill: Prohibition on detaining or deporting U.S. citizens, reducing funding for ICE, prohibition on the use of Border Patrol and CBP officers, a requirement for DHS law enforcement to use body-worn cameras, require reporting on the use of force, training standards--they should be trained in de-escalation, and that is what ought to be happening instead of fomenting escalation--requiring ICE warrants, and there are other things.",
+    "We can't let go of the gains that have been made that make a difference in people's lives, in the education of their kids and their health and their safety, of looking at substance abuse and opioid addiction and how we can deal with that, transportation, rent assistance, homeless assistance, maternal mortality, childcare, and Head Start.",
+    "I am asking my colleagues to understand the moment and meet the moment."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "It increases funding for SAMHSA to provide mental health support and to advance our battle against addiction.",
+    "This bill supports families feeling the squeeze from the cost-of- living crisis by investing in affordable housing and protecting funding for rental assistance as the cost of housing continues to climb.",
+    "At a time of international uncertainty, this bill shores up support for our European allies and does not include any additional funding for operations in Venezuela or the Caribbean.",
+    "As the affordability crisis continues to strain family budgets, this package provides $8.8 billion for childcare and development for that block grant, an $85 million increase.",
+    "Despite efforts by the Trump administration to defund and dismantle health research, this bill boosts funding for the Office of Research on Women's Health by $30 million, a roughly 40 percent increase.",
+    "As we work to provide stable and affordable housing for all those who need it, this bill increases funding for homeless assistance grants by $366 million and protects important housing programs like the Continuum of Care program from being unilaterally dismantled by this administration.",
+    "There are $1.2 trillion in Federal spending accounted for in these bills, and through lengthy, diligent, and worthwhile negotiations, Democrats and Republicans forged an agreement that both sides can proudly stand behind.",
+    "Madam Chair, I rise in support of the measure before us today, which includes the Labor-HHS-Education, Transportation-Housing and Urban Development, and the Department of Defense appropriations bills."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMENDMENT NO. 1 OFFERED BY MR. MASSIE",
+   "title": "AMENDMENT NO. 1 OFFERED BY MR. MASSIE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1297.htm",
+   "sentences": [
+    "Further, we often hear, mostly from the other side of the aisle, about how unelected bureaucrats in Washington, D.C., are making too many decisions about Federal spending.",
+    "The amendment would eliminate funding to Seattle Children's Hospital for a behavioral health crisis stabilization unit.",
+    "The underlying funding would serve pediatric victims of violence with trauma-informed mental health and recovery services.",
+    "The amendment would eliminate funding to Rady Children's Hospital in San Diego for pediatric mental health services.",
+    "We have a mental health crisis in this Nation.",
+    "The underlying funding is intended to support mental health clinicians in pediatric primary care to improve care for pediatric patients.",
+    "I will be clear that this amendment is not limited to children's hospitals.",
+    "I urge a ``no'' vote on this amendment."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1299.htm",
+   "sentences": [
+    "We sought to prevent any funds from being used to detain or deport U.S. citizens, a commonsense measure.",
+    "We proposed prohibiting interior enforcement by non-ICE personnel, like the Border Patrol.",
+    "We reduce their detention capacity, providing funding that could only be used for body-worn cameras.",
+    "This agency is defying this at every step of the way, every day, with the sanctioning of the President of the United States saying that we are going to work to increase the pain, that we are going to detain and potentially deport United States citizens.",
+    "We asked for some simple reforms: Don't deport United States citizens.",
+    "We have watched and focused on Iran.",
+    "We watched the SAVAK in Iran take people off the street, detain them, kill them, and never heard from them again.",
+    "Before I return to the topic of ICE and its funding, I will share some of what else is contained in this bill.",
+    "We need to make it work on behalf of the American people, not make it the fear that a KGB, a SAVAK, or other agencies have had in other countries that we oppose."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "It supports women around the globe, protecting funding for bilateral family planning and the U.N. Population Fund, and it facilitates American cooperation with international environmental initiatives by blocking policy riders that would have prevented our participation.",
+    "Mr. Chair, the strategy and the strength of the Appropriations Committee and its work on behalf of the American people are the heartbeat of the U.S. Government.",
+    "Advocates in Iran supported by NED have been instrumental in documenting the brutality of the Ayatollah's regime.",
+    "Over the last several days, we have seen some of the most egregious acts of violent repression in decades as thousands of Iranian protestors take to the streets.",
+    "Mr. Chairman, I rise in support of this package today, which includes the Financial Services-General Government and the National Security- Department of State-Related Programs appropriations bills.",
+    "That is what we are doing with six bills already passed and signed and two bills that we will pass today.",
+    "Mr. Chair, I will compliment the chair of the full committee for understanding the need to reassert the constitutional power of the purse entrusted to the Congress through the Appropriations Committee and that we do have to hammer out the bills in a civil way; not for the purposes of the process but for what the consequences are of these 12 bills and the services that they provide to the American people.",
+    "I am proud to support the bipartisan, bicameral bill that we have fashioned and, again, give credit to both our Republican chairs and our Democratic ranking members for the great work and their negotiating skills to get it done, and to the staff, above all.",
+    "Mr. Chair, I urge my colleagues to support these bills today and to move forward as we continue to look at the next several bills that we have coming up so that we can, by January 30, pass all the appropriations bills and make a difference for the American people.",
+    "Chairman, I oppose this amendment."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "This package promotes community safety, increasing funding for Violence Against Women Act grants by $7 million, supporting victims of abuse who otherwise would have nowhere to turn.",
+    "However, abandoning the appropriations process only empowers the President and the Office of Management and Budget to continue manipulating Federal spending as a partisan weapon.",
+    "Stopgap measures afford the administration broader discretion over the budget and cede our authority over Federal spending.",
+    "Mr. Speaker, I rise today in support of this bill."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4609-2.htm",
+   "sentences": [
+    "The President should start to listen to the American people, not his millionaire, billionaire friends.",
+    "They are trying to repeal the Affordable Care Act, as they have been trying to do unsuccessfully for 15 years.",
+    "There is one group of people, however, who will receive some relief thanks to this bill: United States Senators who may have participated in an insurrection.",
+    "Snuck into this bill at the eleventh hour by Senate Republicans is a provision to pay out at least a million dollars each to eight United States Senators implicated in the January 6 insurrection.",
+    "At the same time, this bill excludes a provision that would order a plaque to be hung that honors the police officers who put their lives on the line to defend our democracy from that same insurrection.",
+    "Even now, as we debate this bill, the Trump administration is arguing to the Supreme Court that they should be allowed to withhold food stamp funding that Congress lawfully approved.",
+    "Mr. Speaker, I have the greatest honor to yield 2 minutes to the gentlewoman from California (Ms. Pelosi), the distinguished Speaker Emerita and, I might add, probably the epitome of the best Speaker that this Nation has ever had, in addition to which millions of Americans have healthcare coverage through the Affordable Care Act because of Speaker Pelosi.",
+    "Mr. Speaker, I rise in opposition to this bill that does nothing, not one thing to address the Republican healthcare crisis amid a cost-of- living crisis."
+   ]
+  },
+  {
+   "date": "2025-09-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-19/html/CREC-2025-09-19-pt1-PgH4461-6.htm",
+   "sentences": [
+    "Instead of lowering prices, President Trump and Republicans passed a bill to strip healthcare coverage from more than 15 million people, threatened Medicare benefits owed to America's seniors, and slashed nutrition benefits for working families, which will cause an additional 1 million kids to go hungry.",
+    "The majority did this to pass trillions of dollars in tax cuts for big corporations and for billionaires.",
+    "They add $4 trillion to the national debt over the next 10 years.",
+    "Republicans' funding bills are cut from the same cloth: They help billionaires and big corporations grow their power and raise prices on the backs of the middle class and the working class.",
+    "Over $1 billion in nonprofit security grants and homeland security grants that keep our communities safe may disappear.",
+    "Mr. Speaker, I would like the gentleman from Missouri to understand that without the increase in the premium subsidies that were in the ACA that have been cut back in his district, the premiums will go up $760 for folks and almost 266,000 people will lose their healthcare.",
+    "It is absolutely germane that what we talk about is how they have slashed Medicaid, the largest cut in history; that 15 million people are going to lose their healthcare; and how they raise the premiums for copays and deductibles.",
+    "Democrats want to lower costs, deliver critical services to all Americans, and that can be achieved through the continuing resolution that Senator Patty Murray and I introduced yesterday.",
+    "I urge Members to vote ``no'' on this bill that fails to address the needs of Americans and join Democrats at the table.",
+    "We said, yes, we are going to move forward in a bipartisan way to deal with those bills.",
+    "We are not going to support a partisan Republican bill that guts healthcare for the American people."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Motion to Instruct Offered by Ms. DeLauro",
+   "title": "Motion to Instruct Offered by Ms. DeLauro",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4228-6.htm",
+   "sentences": [
+    "Instead of lowering prices, Republicans passed a bill to cut nearly a trillion dollars from Medicaid and the Affordable Care Act, which will strip healthcare coverage for more than 15 million people.",
+    "They did all of this in order to pass trillions of dollars in tax cuts for big corporations and for billionaires, adding $4 trillion to the national debt over the next 10 years.",
+    "They slashed funding for State and local health departments, substance use prevention and treatment, mental health services, and eliminated funding for tobacco prevention and HIV/AIDS prevention and treatment.",
+    "Unfortunately, the report made no mention of the administration's drastically insufficient budget request for WIC or the need to fully fund vouchers issued to participants for fruits and vegetables.",
+    "They must fund WIC at the Senate's proposed level and support the fruit and vegetable vouchers.",
+    "We are in an era of unprecedented corporate consolidation.",
+    "It is astonishing that for all the talk about finding and rooting out waste, fraud, and abuse, that House Republicans would defund the watchdog that is tasked with precisely that role.",
+    "Russ Vought has stripped hope away from cancer patients and singlehandedly made the cost-of-living crisis even worse for working families.",
+    "Mr. Speaker, I rise in support of the motion to instruct conferees to adopt the Senate funding level for Special Supplemental Nutrition Program for Women, Infants, and Children, WIC, as part of the conference on three fiscal year 2026 funding bills: Agriculture, Military Construction and Veterans Affairs, and legislative branch.",
+    "Once again, Mr. Speaker, I urge my colleagues to vote ``yes'' on the motion to instruct."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Since taking office, the Trump Administration has stolen resources, appropriated by this committee, for programs and services across the federal government that help to grow the middle class, protect the working class, support small businesses, and make sure billionaires and corporations play by the rules and pay their fair share.",
+    "The cost-of-living crisis is felt by every American family--middle class families, working families, rural families, seniors and other vulnerable Americans.",
+    "Nearly $400 million was going to be invested through the Department of Energy's Grid Innovation Program to provide onshore connections for offshore wind power, improve the electric grid, and install energy storage through a project called Power Up New England.",
+    "But the President's Day One executive order abruptly halted offshore wind energy projects in their tracks, and the Department of Energy froze Power Up New England's grant.",
+    "Their cut of nearly half the budget for Energy Efficiency and Renewable Energy is a direct attack on the programs that lower energy bills for working families, create good-paying jobs in our communities, and keep America competitive.",
+    "This bill revokes funding that supports hydrogen energy, batten, recycling, and energy improvements in public schools, as well as support for public-private clean energy projects.",
+    "All of this after Republicans passed the Big Ugly Bill, a law that gives massive tax breaks to billionaires and the biggest corporations while driving up home energy bills for families by as much as 30 percent.",
+    "We have to increase energy supply or costs will continue to rise for the American people--and we will be dependent on importing energy to meet our goals.",
+    "I cannot support this bill, and I urge my colleagues to vote NO."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SENATE AMENDMENT TO H.R. 4",
+   "title": "SENATE AMENDMENT TO H.R. 4",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgE720-3.htm",
+   "sentences": [
+    "Mr. Speaker, there is another critical point I must make about the rescissions proposal that the House is now considering.",
+    "OMB's defiance of the norms around review of special messages and the law mandating disclosure of apportionments appears to be designed to evade review of the rescission proposals by the Congress, Congress's watchdog, and the public alike.",
+    "In its report to Congress on the June 3, 2025, special message proposing these rescissions, the Government Accountability Office noted that for ``previous special messages, GAO has reviewed updated apportionment data to ensure [OMB's] instructions were consistent with the special message.'' But for these rescissions proposals, OMB flat out refused ``to provide GAO with updated apportionment data that would permit GAO to conduct the same analysis for the President's special message of June 3, 2025.'' This is unacceptable, and it is unlawful.",
+    "If OMB were obeying this law, then not only would Congress and the GAO have critical information we needed to consider the rescissions package before us, but the public would have had the critical information they needed to share their opinions with us about the impact of these cuts and any other funds OMB or these agencies may be withholding in violation of the Impoundment Control Act.",
+    "Finally, I must speak out against the pattern of unlawful impoundment that is being led by OMB Director Russ Vought, who insists that there is somehow a loophole in the Impoundment Control Act that permits the Executive Branch to unilaterally cancel appropriations--that otherwise expire under current law at the end of the fiscal year--by transmitting a special message proposing rescissions late in the fiscal year and withholding the amounts until they can no longer be used.",
+    "Director Vought refers to his unlawful maneuver as a ``pocket rescission,'' which is just another name for unlawful impoundment.",
+    "I urge my colleagues to reject this rule, which would automatically adopt the rescissions package pursuant to the June 3, 2025, special message. ____________________",
+    "Congress has required OMB to make this information public, and once again, I urge OMB to comply with the law and do so--now."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3451-4.htm",
+   "sentences": [
+    "Mr. Speaker, I remain strongly opposed to this rescissions bill, which is a rubberstamp on stealing from the American people.",
+    "This rescissions bill is another effort to subvert the Congress' power of the purse.",
+    "To hand billionaires and the biggest corporations that already pay little or no taxes a massive tax break and, ultimately, to embrace privatization; to give the biggest companies unchecked power to rig the economy against the middle class, the working class, and vulnerable people; and to ensure the American people have no faith in their government.",
+    "This bill abandons the people of Ukraine while they resist Putin's tyranny.",
+    "I will tell you what waste is: 500 tons of food grown by American farmers destroyed at a cost of $130,000 to American taxpayers because of the chaos caused by dismantling USAID.",
+    "This is the bill to help Republicans claim that they are practicing fiscal responsibility while concealing that what they are doing is ripping health insurance away from at least 17 million Americans in order to make billionaires even more rich, and they increase the debt by $4 trillion.",
+    "This bill codifies the right of the Trump administration to steal from vulnerable American communities, children, and the global poor for the sake of handing even more money to billionaires.",
+    "Fight for the middle class, the working class, the vulnerable, not to protect the interests of billionaires and big corporations.",
+    "Mr. Speaker, I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "title": "DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3333.htm",
+   "sentences": [
+    "I am also proud that Pratt & Whitney produces the F135 engine, the power plant for the F-35 Joint Strike Fighter, in my district.",
+    "While I am pleased that Pratt & Whitney and the union representing that facility's workers have agreed on a contract, Congress must do more to address the cost of living.",
+    "They might rely on Medicaid to see a doctor.",
+    "Despite broad support in Congress for helping Ukraine defend itself against Russia's brutal invasion, they empower Putin by failing to include $300 million for the Ukraine Security Assistance Initiative.",
+    "The majority's bill holds the door open for disinformation created by America's enemies rather than allowing the Department of Defense to counter the threat, allowing extremism and propaganda to proliferate across the internet and media landscape.",
+    "The bill continues House Republicans' attacks on the right of women to seek an abortion and the rights of minorities to be protected from discrimination, while destroying the Department's efforts to build a more inclusive, effective, and modern military.",
+    "I cannot support this bill, and I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "This bill hands $4.5 trillion in tax cuts to billionaires and the biggest corporations."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "This is a step toward privatization of the Veterans Administration because if you hollow out the Veterans Administration, if you make it impossible for people to be able to access their benefits, then they say: Well, we can't trust the VA.",
+    "Then they will move in the direction of privatization, and that is where this administration wants to go.",
+    "The bill leaves military installations, servicemembers, and their families vulnerable to climate change and worsening natural disasters by failing to include dedicated funding to strengthen our military installations against these threats or to help them recover from past disasters.",
+    "Defense leaders, including during President Trump's first term, have warned of the danger that climate change poses to our military, and the tens of billions of dollars in damage to military installations from recent severe weather reinforces their point.",
+    "Former Secretary James Mattis warned that climate change threatened American interests and our defense assets around the world and said climate change is ``a challenge that requires a broader whole-of-government response.'' This bill attacks women veterans, who are the fastest growing group served by the Department of Veterans Affairs, with a policy rider that limits abortion access and prohibits abortion counseling.",
+    "The women who volunteer to serve and defend our Nation, to protect Americans' sacred rights and freedoms, should not come home to find their medical care and family planning decisions being made by anyone other than themselves, their families, and their doctors.",
+    "It underfunds NATO, the infrastructure, by almost $200 million.",
+    "While I am glad that the Democrats on the Appropriations Committee were successful in shaming our colleagues across the aisle into amending their original bill to include advance funding for the PACT Act, this bill still fails too many veterans in too many ways, so I cannot support it, and I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025",
+   "title": "RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+   "sentences": [
+    "Mr. Speaker, I am opposed to this bill to aid and abet billionaires in stealing from the American people and which does nothing to help the American people with the cost of living.",
+    "It is to hand billionaires and the biggest corporations, who already pay little or no taxes, another massive tax break.",
+    "This money is going to the wealthiest people and the biggest corporations.",
+    "Ultimately, they want to embrace privatization and give the biggest companies unchecked power.",
+    "The late Justices Scalia and Rehnquist said so.",
+    "This rescissions package dated May 28, submitted June 3, 134 days after the President began unlawfully freezing funding, is an admission by President Trump and Russ Vought that they are breaking the law by impounding $425 billion in appropriated funds across the government.",
+    "This is a bill to codify the rights of billionaires and to rubberstamp the right of billionaires to steal from rural and vulnerable American communities, children, and the global poor, for the sake of handing even more money to billionaires.",
+    "Congress needs to fight for the middle class, for the working class, and for the most vulnerable, not to protect the interests of billionaires and big corporations.",
+    "This is a bill to abandon the people of Ukraine while they resist Putin's tyranny.",
+    "We are here today considering cuts after months of unlawful impoundment, stealing, that will conceal a Republican reconciliation bill to make the billionaires in America even more rich and increase the debt by $3 trillion.",
+    "Mr. Speaker, you increase the debt.",
+    "Mr. Speaker, I strongly urge my colleagues to oppose this bill which forfeits our global leadership, undermines national security, and steals from the American people to hand more wealth to billionaires.",
+    "If my colleagues want to deal with waste, fraud, and abuse, they have to deal with cutting back on the $4.5 trillion tax cut for billionaires that the Republicans supported and voted on, tax cuts for billionaires and the biggest corporations."
+   ]
+  },
+  {
+   "date": "2025-05-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-29/html/CREC-2025-05-29-pt1-PgE486-3.htm",
+   "sentences": [
+    "He is a tireless fighter for working families and I am proud to be in that fight with him.",
+    "I am glad to call out the egregious giveaway to billionaires and big corporations being orchestrated in this Republican tax bill.",
+    "That is what Republicans are preparing to shower on the richest companies and their billionaire owners, while giving mere pennies to the middle class, working class, and vulnerable families who are struggling with the cost-of-living crisis.",
+    "It gave real money back to millions of working families in the form of monthly checks, cutting child hunger by a fourth and bringing child poverty down to the lowest recorded levels in history.",
+    "This is not an issue of work requirements.",
+    "Are you truly saying that billionaires and corporations need tax breaks more than the youngest of your constituents?",
+    "Across the country, families are living paycheck to paycheck while prices for everyday goods and essential services, from eggs to gasoline to medicine and childcare, continue to rise.",
+    "They are gutting Medicaid, food stamps, and anything else that stands in the way of more money for billionaires.",
+    "My promise to American families is that I will fight as hard as I can, with every ally I can find, to stop this corrupt giveaway and focus on bringing down the cost of living through a proven policy, the expanded Child Tax Credit--not the meager substitute in this bill. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING THE DEMOCRATIC WOMEN'S CAUCUS ON DEFENDING SNAP AND MEDICAID CUTS",
+   "title": "SUPPORTING THE DEMOCRATIC WOMEN'S CAUCUS ON DEFENDING SNAP AND MEDICAID CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgE456-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to defend Medicaid and the Supplemental Nutrition Assistance Program, or food stamps, from an ongoing Republican assault.",
+    "It guts Medicaid, which covers health care for children, people with disabilities, seniors, and low-income workers, and it cuts nearly $300 billion from agriculture and programs that combat hunger, including food stamps.",
+    "This Republican bill cuts Medicaid, forcing states to pay more or cover fewer people--it cuts benefits.",
+    "All to pay for massive giveaways to billionaires. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING UKRAINE",
+   "title": "SUPPORTING UKRAINE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgE380-2.htm",
+   "sentences": [
+    "Mr. Speaker, Democrats will always be a friend to those fighting for their freedom--and the American people will always stand with Ukraine.",
+    "While ceasefire negotiations may be underway, Ukraine is not giving up, nor should they.",
+    "European partners and allies are still committed to the struggle against aggression from Putin.",
+    "And the Ukrainian people are speaking clearly, through their elected President Zelensky, that they are a sovereign Nation, and they speak for themselves.",
+    "Only Ukraine can decide when it is done fighting--no one else.",
+    "If Vladimir Putin's war is rewarded with Ukrainian land, he will try again for more.",
+    "I will continue to advocate for our ally Ukraine--for their defense, for the civilian and military resources they need, and for allowing them to control their own destiny.",
+    "I will continue to support resources and funding for the Ukrainian people, and I urge them not to give up.",
+    "We must all continue speaking out, for as long as it takes, until Ukraine is safe and free once more. ____________________",
+    "As the lead Democrat on the House Appropriations Committee, I promise that I will never give up that fight."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC POPULISM",
+   "title": "ECONOMIC POPULISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+   "sentences": [
+    "Mr. Speaker, let me just say a thank-you to my colleague from Pennsylvania, who at his roots understands the plight of working Americans, middle-class families, working families, and the vulnerable and stands tall on their behalf and wants to utilize the good offices of this institution to make sure that it does what the Founding Fathers intended it to do, and that is to provide opportunity for people in this Nation.",
+    "President Trump said he will fight for the working class, but instead put Elon Musk and billionaires in charge of our government.",
+    "I applaud, again, Representative Deluzio for hosting this Special Order about economic patriotism, taking on corporate power, as well as for all his work supporting the right to organize, creating well-paying union jobs here in America.",
+    "As a result, big corporations are consolidating, creating monopolies, and making unbelievable profits.",
+    "Instead of doing anything to address this cost-of-living crisis, the President has stacked his Cabinet with billionaire after billionaire, empowering them to slash the programs American families rely on with no oversight and no disclosures about the conflicts of interest.",
+    "Elon Musk, the unchecked billionaire leading the efforts to end Social Security as we know it, owes the success of his company to billions in Federal contracts and huge factories in China.",
+    "The Republican focus is to rip away programs like Social Security and Medicaid.",
+    "Some of the biggest corporations in the country are taking advantage of it, all while Americans are paying more for less due to corporate price gouging and shrinkflation while the CEOs of the Nation's largest grocery stores and supermarkets rake in record salaries.",
+    "What is the Republicans' response to this cost-of-living crisis driven by corporate consolidation and power?",
+    "Why, it is to give out even more corporate tax cuts, of course, $4.5 trillion worth of them to be precise, paid for by slashing Medicaid which serves nearly one-third of all Americans.",
+    "It is time for this Congress and it is time for Democrats to act to rein in this habitual price gouging from massive, massive corporations, rein in the unchecked billionaires enriching themselves while Americans suffer, and rein in Republican spending while targeting Social Security and Medicaid.",
+    "If the Trump administration continues to prioritize tax cuts for the rich over price cuts for the middle class, then I will continue to stand with my colleagues as we call out their broken promises and fight back against their disastrous policies.",
+    "It is a path of economic patriotism where we take on corporate monopolies and the self-serving billionaires who are squeezing the middle class, the working class, and the vulnerable.",
+    "It is a path that listens to the American people and protects programs like Medicaid and Social Security while lowering the cost of living through proven policies like the expanded child tax credit which lifted one-half of our children in this Nation out of poverty, lowered the hunger rate, and provided a path forward in economic security for millions of families in the United States."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGHLIGHTING THE STORY OF KRIS LEBRON ROMERO",
+   "title": "HIGHLIGHTING THE STORY OF KRIS LEBRON ROMERO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgE201-4.htm",
+   "sentences": [
+    "I worked with one of its partner organizations, Haven's Harvest, a food recovery non- profit that collects food that would otherwise be thrown away and redistributes it to people in our community who are food insecure."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "As the White House has said, this bill creates more flexibility for this administration to continue to undermine the Constitution and the countless spending laws by stealing promised investments from American families, children, and businesses, unlawfully dismantling agencies, arbitrarily firing civil servants, and canceling union contracts.",
+    "The answer should not be cutting nondefense programs by $15 billion and defense by $3 billion, as compared to the Fiscal Responsibility Act agreement for 2025.",
+    "They are in violation of the Fiscal Responsibility Act.",
+    "This is a violation that cuts nondefense by $15 billion and defense by $3 billion.",
+    "Yes, we do not oversee Social Security.",
+    "However, we do have control over the administration on Social Security, and the President and Elon Musk would be able to fire thousands of employees at the Social Security Administration.",
+    "It is nice if you can individually negotiate with the administration on your own to keep your Social Security office open.",
+    "We do it with the Indian Health Service.",
+    "I implore my colleagues to join me and stand up for our constituents against an unelected billionaire, Elon Musk, who is stealing taxpayer dollars from American families, children, and businesses.",
+    "We will evict more than 32,000 households.",
+    "Pass a short-term CR, which I introduced yesterday, which would take us to April 11, to continue negotiations."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "I also see the importance of programs like Medicaid, which help tens of millions of people afford health insurance.",
+    "For this majority, billionaires and the biggest corporations always come first.",
+    "Elon Musk and President Trump are hard at work trying to gut Medicaid and the Affordable Care Act, which helps nearly 100 million Americans afford health insurance, medications, and lifesaving care.",
+    "Nationwide, Medicaid and the Children's Health Insurance Program provide medical coverage to nearly 4 in 10 children.",
+    "Almost 40 percent of the children in the United States get their healthcare through Medicaid.",
+    "In my district alone, there are 229,000 people on Medicaid, including 79,000 children and 33,000 seniors.",
+    "Medicaid paid for 3,000 births last year, providing comprehensive prenatal, delivery, and postpartum care to newborns and mothers.",
+    "His dream is to fully extend more than $4.5 trillion worth of tax breaks to his billionaire friends and the wealthiest corporations in the world.",
+    "Republicans want to pay for this with cuts to Medicaid, $880 billion from Medicaid and the Affordable Care Act, putting coverage at risk for millions of Americans and raising their premiums.",
+    "Democrats will stand where we always do, on the side of the middle class, against yet another reckless Republican budget that steals even more wealth for the billionaire class."
+   ]
+  }
+ ]
+}

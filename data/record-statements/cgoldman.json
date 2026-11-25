@@ -1,0 +1,61 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "cgoldman",
+ "name": "Craig A. Goldman",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING REPRESENTATIVE KAY GRANGER",
+   "title": "MOMENT OF SILENCE HONORING REPRESENTATIVE KAY GRANGER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-31/html/CREC-2026-08-31-pt1-PgH5348.htm",
+   "sentences": [
+    "I am going to anyway,'' as all of you know, especially when she rose to be the Appropriations Committee chair.",
+    "We will never forget her, and we will remember her forever just as every single one of you who served with her will as well."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELIABLE FEDERAL INFRASTRUCTURE ACT",
+   "title": "RELIABLE FEDERAL INFRASTRUCTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3057-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Reliable Federal Infrastructure Act, led by my colleague Representative Langworthy.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes'' on the Reliable Federal Infrastructure Act."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOMEOWNER ENERGY FREEDOM ACT",
+   "title": "HOMEOWNER ENERGY FREEDOM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2301-2.htm",
+   "sentences": [
+    "Mr. Speaker, our Nation is facing a housing affordability crisis.",
+    "When I was growing up, the median age of a first-time home buyer was 29 years old.",
+    "Specifically, they imposed costly climate change codes, restricting which appliances families can use to cook their food and heat their homes.",
+    "Instead of improving housing affordability, the Federal Government is burying the dream of homeownership under 6 feet of red tape.",
+    "Americans are calling on Congress to improve housing affordability.",
+    "Mr. Speaker, I rise today in support of my legislation, the Homeowner Energy Freedom Act.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes'' on the Homeowner Energy Freedom Act."
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF ENERGY EFFICIENCY AND RENEWABLE ENERGY, DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONS",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF ENERGY EFFICIENCY AND RENEWABLE ENERGY, DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-26/html/CREC-2025-03-26-pt1-PgH1284-7.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my resolution, H.J. Res. 75, which repeals the Biden administration's burdensome energy conservation standards for commercial refrigerators and freezers.",
+    "Mr. Speaker, I urge my colleagues to support this resolution."
+   ]
+  }
+ ]
+}

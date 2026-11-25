@@ -1,0 +1,438 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ascott",
+ "name": "Austin Scott",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 21,
+  "sentences": 237
+ },
+ "statements": [
+  {
+   "date": "2026-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT",
+   "title": "REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-23/html/CREC-2026-07-23-pt1-PgH5182-6.htm",
+   "sentences": [
+    "He worked at the local auto parts store and wanted to work more hours, but if he made $1 more than, at that time, the $1,100 a month, he would lose 100 percent of his Social Security benefits.",
+    "It gives people who are currently receiving Social Security disability benefits the ability to go back to work if they voluntarily choose to, in order to have a little more money at the end of the month instead of less.",
+    "We are simply giving people the ability to go back to work, not lose 100 percent of their Social Security benefits, and have more money left over at the end of the month.",
+    "If they go back to work, they lose 100 percent of their Social Security benefits if they make $1 more than this imaginary threshold, which is not enough for them to live on.",
+    "The same things that will work for our wounded warriors will also work for other Americans, if they choose, if they want, if they volunteer, if they voluntarily want to go back to work and make a little extra money, and not lose 100 percent of their Social Security benefits.",
+    "We know there are a lot of people that are on Social Security disability that want to go back to work.",
+    "I am going to tell you, I am disappointed that my Democratic colleagues are taking the position on the floor that they have with this."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8595, NATIONAL SECURITY, DEPA",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8595, NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4335-4.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 1398 Resolved, That at any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 8800) to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+    "At any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 8595) making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 8884) to amend title II of the Social Security Act to reauthorize demonstration authority for the disability insurance program.",
+    "Upon adoption of this resolution it shall be in order without intervention of any point of order to consider in the House the resolution (H. Res. 1383) commemorating the one-year anniversary of the enactment of the Working Families Tax Cuts.",
+    "The previous question shall be considered as ordered on the resolution and preamble, as amended, to adoption without intervening motion or demand for division of the question except one hour of debate equally divided and controlled by the chair and ranking minority member of the Committee on Ways and Means or their respective designees.",
+    "H. Res. 1383, Commemorating the One-Year Anniversary of the Enactment of the Working Families Tax Cuts.",
+    "Additionally, the rule provides that H. Res. 1377 is laid on the table and, once the NDAA is passed, the Clerk shall add the text of S. 1383, the SAVE America Act, to the bill and transmit it, once again, to the United States Senate.",
+    "To reduce costs, this bill expands the multiyear procurement authority for critical platforms such as the F-35, F-15EX, Arleigh Burke-class destroyers, and many other weapon systems.",
+    "It authorizes a 5 to 7 percent pay raise; improves military housing, education, and childcare options for military families; and invests in support systems that keep our force resilient.",
+    "Implementing the Peace Through Strength agenda, the fiscal year 2027 NDAA rebuilds depleted stockpiles and accelerates game-changing technologies, like quantum computing, hypersonics, and autonomous systems, while sustaining legacy platforms until future replacements become operational.",
+    "Platforms such as the F-22, F-18, A-10, and MQ-9 have been instrumental in the operations against Venezuela and the Iranian regime.",
+    "Additionally it codifies President Trump's executive orders to eliminate wasteful programs in spending, strengthen oversight of foreign assistance, and ensure no funds flow to organizations that refuse to cooperate with the United States.",
+    "H.R. 8884 gives the Social Security Administration the tools it needs to test new approaches, gather real data, and design policies that support work instead of discouraging it.",
+    "This bill extends the Social Security Administration demonstration authority through 2030.",
+    "This demonstration authority will be a gateway for the Social Security Administration to run scoped test programs which could help disabled Americans work, earn, and maintain stability without risking harm to beneficiaries.",
+    "Finally, Mr. Speaker, the rule provides for consideration of H. Res. 1383, Commemorating the One-Year Anniversary of the Enactment of the Working Families Tax Cuts Act.",
+    "The Working Families Tax Cuts Act is the largest tax reform passed by Congress in decades, making permanent the tax cuts passed under the first Trump administration and ensuring a tax cut for over 140 million Americans.",
+    "American families and workers overwhelmingly benefited from the Working Families Tax Cuts Act, and President Trump and congressional Republicans delivered for the American people by making these tax cuts permanent.",
+    "He told me: I work at O'Reilly Auto Parts, but I have to be careful--at the time, it was $1,100 a month--to make sure that I don't make more than $1,100 a month or my family loses the Social Security benefits.",
+    "When I came to D.C., I scheduled a meeting with the attorneys up here who deal with Social Security.",
+    "I am a firm believer that the number one thing we can do for our veterans, especially when it comes to veteran suicide and their mental health, is to get them back to work as soon as possible.",
+    "What it would allow people to do is, for people who are combat wounded, totally and permanently disabled, it will allow them to go back to work and keep their Social Security benefits.",
+    "If we can get it through the Senate--and that is a big ``if'' with getting anything through the Senate--then, hopefully, our combat- wounded, totally and permanently disabled veterans can go back to work and not be afraid of going back to work because they would lose their Social Security benefits.",
+    "It is about H.R. 8884 and allowing--in the case of the legislation that I had--Purple Heart recipients, people who are wounded in combat totally and permanently having the ability to go back to work and not worrying about losing their Social Security benefits, at least for a period of time.",
+    "Yes, the SAVE America Act will be attached to the legislation when it goes across because, yes, we do think you all are letting noncitizens vote in elections.",
+    "Let me tell you something: When you gave UnitedHealthcare and the other multibillion dollar corporations control over all aspects of our lives, you did a lot of damage, and you did that in your so-called Affordable Care Act.",
+    "If the Affordable Care Act had worked, we wouldn't be having this discussion.",
+    "Look who you made rich with the Affordable Care Act.",
+    "Real GDP grew at a 2.2 percent annual rate for the full year of 2025.",
+    "I will admit, after Donald Trump tried to end the Iranian jihadist control over what was happening around the world--and he has done a pretty good job with it--and let me tell you this: Donald Trump, the President of the United States, knows exactly what he is doing with Iran.",
+    "He knows exactly what he is doing with Iran, and if you would get the briefings, you would understand why.",
+    "When the Democratic Party does things like canceling the Keystone pipeline, like stopping the development of nuclear power plants, like stopping oil and gas developments inside the United States of America, it hurts the American citizens.",
+    "I am sorry that we are having to deal with the inflation that the Democrats started with the American Rescue Plan and the Inflation Reduction Act and the pain that has come from that, and I am sorry the American citizens are dealing with the pain of the Affordable Care Act.",
+    "Mr. Speaker, the Affordable Care Act created a system where the major insurance carriers are not answerable to anybody.",
+    "This side of the aisle recognizes there are problems, and this side of the aisle recognizes that the only way to fix those problems is to repeal and replace the Affordable Care Act.",
+    "Before the Affordable Care Act went into place, UnitedHealth Group was trending at $28 a share.",
+    "The only thing the Affordable Care Act did was make a bunch of health insurance executives rich.",
+    "I can tell you, Mr. Speaker, my local hospital has about $15 million outstanding with the UnitedHealth Group.",
+    "It is a small hospital, $15 million; a big company, a small hospital.",
+    "This legislation will deter China and counter Russia, North Korea, Iran, and foreign terrorist organizations while leveraging our alliances across Europe, the Middle East, and Asia.",
+    "Further, H.R. 8884, the Removing Barriers to Work for Disabled American Act, allows the Social Security Administration to test new approaches on a voluntary basis and without impacting the participants' overall income to ensure Americans with disabilities are not punished for returning to the workforce.",
+    "Finally, H. Res. 1383, Commemorating the One-Year Anniversary of the Enactment of the Working Families Tax Cuts, highlights the largest tax reform passed by Congress in decades, making permanent the tax cuts passed under the first Trump administration, and ensuring a tax cut for over 140 million Americans.",
+    "If we get the chance to vote on it, I hope we will get it corrected.",
+    "I will tell you, several years ago, I went to Bethesda, and a young man I represented had stepped on a pressure plate and lost both legs in Afghanistan.",
+    "I told him: When I get back to DC, I am going to meet with the lawyers because that just doesn't sound right.",
+    "Mr. Speaker, I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTENSION OF AUTHORITIES OF TITLE VII OF THE FOREIGN INTELLIGENCE SURVEILLANCE ACT OF 1978",
+   "title": "EXTENSION OF AUTHORITIES OF TITLE VII OF THE FOREIGN INTELLIGENCE SURVEILLANCE ACT OF 1978",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4079-8.htm",
+   "sentences": [
+    "Say what you want to about it with Iran.",
+    "It is going to be Customs and Border Protection checking statuses when they come in through the border.",
+    "We then did a 45-day extension, and now we are asking, yes, for 21- day extension."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7567, FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026; PROVIDING FOR CONSIDERATION OF H.R. 2616, PARENTAL RIGHTS OVER THE EDUCATIO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 7567, FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026; PROVIDING FOR CONSIDERATION OF H.R. 2616, PARENTAL RIGHTS OVER THE EDUCATION AND CARE OF THEIR KIDS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3137.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 1224 Resolved, That at any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 2616) to require public elementary and middle schools that receive funds under the Elementary and Secondary Education Act of 1965 to obtain parental consent before changing a minor's gender markers, pronouns, or preferred name on any school form or sex-based accommodations, including locker rooms or bathrooms.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the concurrent resolution (S. Con. Res. 33) setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+    "The previous question shall be considered as ordered on the concurrent resolution to adoption without intervening motion or demand for division of the question except one hour of debate equally divided and controlled by the chair and ranking minority member of the Committee on the Budget or their respective designees.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (S. 1318) to direct the American Battle Monuments Commission to establish a program to identify American-Jewish servicemembers buried in United States military cemeteries overseas under markers that incorrectly represent their religion and heritage, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 1346) to amend the Clean Air Act with respect to the ethanol waiver for Reid Vapor Pressure under that Act, and for other purposes.",
+    "The rule provides for consideration of H.R. 2616, the Stopping Indoctrination and Protecting Kids Act, to be considered under a closed rule.",
+    "Misguided policy decisions from the previous administration have led to overregulation and consolidation, leaving the American producer to pay the price.",
+    "Investments in broadband, childcare, healthcare, workforce needs, and critical water and infrastructure projects strengthen our rural communities and give them the support to thrive in the years to come.",
+    "Section 702 allows the United States Government to collect intelligence on foreign nationals located overseas--I repeat, foreign nationals located overseas--who are reasonably believed to possess foreign intelligence information.",
+    "To account for needed reforms, Congress passed the Reforming Intelligence and Securing America Act in 2024, the largest FBI and FISA reform in decades.",
+    "Next, Mr. Speaker, we have H.R. 2616, the Stopping Indoctrination and Protecting Kids Act.",
+    "Madam Speaker, Customs and Border Protection is an extremely important part of protecting the United States of America.",
+    "While the Democrats might want to eliminate Customs and Border Protection so that they can make the borders wide open, the American citizens want those borders secure.",
+    "The Foreign Intelligence Accountability Act reauthorizes section 702, with reforms, providing the continued ability to collect intelligence on foreign nationals overseas, who are reasonably believed to possess foreign intelligence information, in order to stop terrorist attacks on United States soil--again, stopping terrorist attacks on United States soil.",
+    "The Stopping Indoctrination and Protecting Kids Act supports parents, strengthens transparency, and protects our children in educational environments.",
+    "Madam Speaker, in order to keep America's border secure, I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule.",
+    "Immediately upon adoption of this resolution, the House shall take from the Speaker's table the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes, with the Senate amendment thereto, and consider in the House, without intervention of any point of order, a motion that the House recede from its amendment and concur in the Senate amendment.",
+    "The previous question shall be considered as ordered on the motion to its adoption without intervening motion.",
+    "The Speaker is directed to sign the enrolled bill no later than one calendar day after adoption, and the Clerk is directed to present the bill to the President immediately upon signature by the Senate President.",
+    "Mr. Speaker, I thank my colleagues and all the staff for the work that went into the Farm, Food, and National Security Act of 2026, and I urge my colleagues to join me in supporting this legislation.",
+    "I will be clear: We cannot allow section 702 to expire at a moment when our adversaries are expanding their capabilities, accelerating their operations, and exploiting every gap in our intelligence posture.",
+    "Madam Speaker, I will just remind the gentlewoman that New Mexico has experienced a historic financial boom driven by what President Trump has done in unleashing America's domestic energy production."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "I encourage the adoption of it."
+   ]
+  },
+  {
+   "date": "2026-04-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8035, EXTENSION OF AUTHORITIES OF TITLE VII OF THE FOREIGN INTELLIGENCE SURVEILLANCE ACT OF 1978",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8035, EXTENSION OF AUTHORITIES OF TITLE VII OF THE FOREIGN INTELLIGENCE SURVEILLANCE ACT OF 1978",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-16/html/CREC-2026-04-16-pt1-PgH2948-5.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 1175 Resolved, That upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intel-ligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+    "Section 702 allows the United States Government to collect intelligence on foreign nationals located overseas--I repeat, foreign nationals located overseas who are reasonably believed to possess foreign intelligence information.",
+    "To account for the needed reforms, Congress passed RISAA, the Reforming Intelligence and Securing America Act in 2024, the largest FBI and FISA reform in decades.",
+    "Our purpose here today is to give law enforcement the ability to operate in a timely manner to stop terrorist attacks on United States soil.",
+    "First of all, 702 is not a law enforcement tool.",
+    "Mr. Speaker, 702 is not a law enforcement tool.",
+    "Again, 702 is not a law enforcement tool.",
+    "It is not a law enforcement tool.",
+    "We cannot allow section 702 to lapse, not at a moment when our adversaries are expanding their capabilities, accelerating their operations, and exploiting every gap in our intelligence posture.",
+    "Mr. Speaker, again, I will go back to this provision that I read to you, where if any information is obtained against a United States person, none of that information can be used to prosecute a United States person unless a warrant has been obtained first."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING THE HONORABLE CLAY FULLER TO THE HOUSE OF REPRESENTATIVES",
+   "title": "WELCOMING THE HONORABLE CLAY FULLER TO THE HOUSE OF REPRESENTATIVES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2875-2.htm",
+   "sentences": [
+    "I will be brief before Mr. Fuller has his 10 words."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR DISPOSITION OF SENATE AMENDMENT TO H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "PROVIDING FOR DISPOSITION OF SENATE AMENDMENT TO H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt2-PgH2793-6.htm",
+   "sentences": [
+    "I want to read, for the American citizens, what is written in the bill because I want you to understand why we cannot accept, and it is not in your best interest as American citizens for us to accept, the language that the Senate sent over here."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1131-5.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 1009 Resolved, That upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 6945) to amend part A of title IV of the Social Security Act to clarify the authority of States to use funds for pregnancy centers, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 6359) to require institutions of higher education to disseminate information on the rights of, and accommodations and resources for, pregnant students, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the joint resolution (H.J. Res. 140) providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+    "Mr. Speaker, across the country, pregnancy centers serve as trusted, community-based nonprofits that offer a wide range of material assistance and support, including pregnancy testing, prenatal education, parenting classes, ultrasounds, diapers, baby clothing, adoption referrals, and connections to housing and other services.",
+    "As for the Affordable Care Act or ObamaCare that you all take so much credit for and are so proud of the way you wrote it, the benefactors of that legislation, the large insurance companies' CEOs are actually going to be on the Hill this week and will get to be questioned.",
+    "As far as Canada and the NATO alliance goes, I just have to tell you that Canada committed to buying approximately 90 F-35s.",
+    "Donald Trump has done the right thing by making NATO and our partners stand up and acknowledge that they don't have the defenses in place that they need.",
+    "Mark Rutte, NATO chief, praises Trump at Davos by saying that he forced Europe to step up on defense.",
+    "Now, this is the head of NATO.",
+    "They are all on 2 percent now.'' It went on during a panel at the World Economic Forum. ``I'm absolutely convinced, without Donald Trump we would not have taken those decisions.",
+    "And they are crucial, particularly for the European and the Canadian side of NATO to really grow up''--``grow up,'' this is the head of NATO saying this about NATO--``in the post- Cold War world.'' ``The Americans still have over 80,000 soldiers in Europe. . . . including in Poland, in Germany . . . they are still heavily invested in European defense.",
+    "If NATO is not willing to do what it takes to defend Greenland, then the United States should.",
+    "They are honest, dedicated, hardworking people who care about the pregnant mothers and the unborn children.",
+    "H.R. 6945, the Supporting Pregnant and Parenting Women and Families Act, addresses uncertainty and makes clear that States may not be restricted from choosing to work with pregnancy centers and that TANF funds may be used for these services consistent with Federal law.",
+    "Immediately upon adoption of this resolution, the House shall proceed to the consideration in the House of the bill (H.R. 12) to protect a person's ability to determine whether to continue or end a pregnancy, and to protect a health care provider's ability to provide abortion services.",
+    "While some people might not want to believe it, I will tell you one that does.",
+    "So, it is only logical for them to expect us in Europe to step up, over time.'' I will tell you: Donald Trump doesn't have any plans to invade Greenland, but the Russians do.",
+    "Mr. Speaker, all three of these measures are worthy of support, and I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUCCESSFUL OPERATION TO ARREST NICOLAS MADURO",
+   "title": "SUCCESSFUL OPERATION TO ARREST NICOLAS MADURO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH650-5.htm",
+   "sentences": [
+    "President of the United States of America, find that the situation in Venezuela, including the government of Venezuela's erosion of human rights guarantees, persecution of political opponents, curtailment of press freedoms, use of violence and human rights violations and abuses in response to antigovernment protests, and arbitrary arrest and detention of antigovernment protestors, as well as the exacerbating presence of significant public corruption, constitutes an unusual and extraordinary threat to the national security and foreign policy of the United States. . . .'' Now, what I want you to know is that wasn't Donald Trump that wrote that.",
+    "Chuck Schumer in 2020 attacked: ``And the President brags about his Venezuela policy.",
+    "The Western Hemisphere cannot be a safe space for China, Russia, Iran, Hamas, Hezbollah, or the other terrorists that were being given safe haven in Venezuela.",
+    "Instead, what did she say: ``Venezuela is ruled by an illegitimate regime, but the administration has not made the case that an urgent threat to America's national security existed to justify the use of U.S. military force.'' Mr. Speaker, I am thankful that we have a President in the White House with the guts to get it done, who has helped us build a military with the capability to get it done.",
+    "I will read this to you: ``. . ."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "title": "PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH238.htm",
+   "sentences": [
+    "When the local sheriff's department asked for help with people who knew how to operate diesel equipment, Doug showed up.",
+    "He is the Member of Congress that we saw on camera, getting on a bulldozer, saying: I love the smell of diesel power in the afternoon."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3898, PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT; PROVIDING FOR CONSIDERATION OF H.R. 3383, INCREASING INVES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 3898, PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT; PROVIDING FOR CONSIDERATION OF H.R. 3383, INCREASING INVESTOR OPPORTUNITIES ACT; PROVIDING...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5124-6.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 936 Resolved, That at any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 3898) to amend the Federal Water Pollution Control Act to make targeted reforms with respect to waters of the United States and other matters, and for other purposes.",
+    "At any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 3383) to amend the Investment Company Act of 1940 with respect to the authority of closed-end companies to invest in private funds.",
+    "At any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 3638) to direct the Secretary of Energy to prepare periodic assessments and submit reports on the supply chain for the generation and transmission of electricity, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 3628) to amend the Public Utility Regulatory Policies Act of 1978 to add a standard related to State consideration of reliable generation, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 3668) to promote interagency coordination for reviewing certain authorizations under section 3 of the Natural Gas Act, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (S. 1071) to require the Secretary of Veterans Affairs to disinter the remains of Fernando V. Cota from Fort Sam Houston National Cemetery, Texas, and for other purposes.",
+    "Notwithstanding clause 13 of rule I, on any legislative day of the second session of the One Hundred Nineteenth Congress before January 6, 2026-- (a) the Speaker may dispense with organizational and legislative business; and (b) the Journal of the proceedings of the previous day shall be considered as approved if applicable.",
+    "Mr. Speaker, under the leadership of Chairman Mike Rogers and Ranking Member Adam Smith, one of the top priorities of the fiscal year '26 NDAA was to reform the defense acquisition system and equip our armed services with the technology they need to deter national security threats.",
+    "This bill cuts red tape and shifts the focus of the defense acquisition system from compliance to quickly and cost effectively fielding new capabilities to ensure that our armed forces are the most lethal and effective fighting force in the world.",
+    "It grows manufacturing jobs in America, all while pressing our NATO allies to pay more for their own defense.",
+    "It improves housing and Department of Defense schools, and it expands access to healthcare and childcare.",
+    "Additionally, this bill continues the focus on countering threats to our national security from Russia, North Korea, Iran, and other foreign terrorist organizations.",
+    "To further secure our border and fight drug trafficking, the fiscal year '26 NDAA fully funds the establishment and enforcement of national defense areas along the southwest border of the United States of America, authorizes the Department of Defense to provide additional support to Customs and Border Protection, and authorizes over $1 billion to combat drug trafficking.",
+    "This bill contains targeted commonsense reforms to the permitting process under the Clean Water Act, restoring the balance between the need to ensure both water quality and economic growth.",
+    "People on Medicaid are not eligible for the tax credit.",
+    "I am covered under the Affordable Care Act today.",
+    "As I said, I am covered under the Affordable Care Act.",
+    "Let me just tell you, the Affordable Care Act needs to be replaced with something that actually works for the American citizens.",
+    "I think the worst thing that has ever happened is when it obtained the name of ObamaCare because then it became about President Obama instead of about what the actual law and the flaws in the piece of legislation are.",
+    "If it wasn't named ObamaCare, we might have been able to fix it.",
+    "We might have been able to fix it, but the Democrats are scared to do anything, because their primaries, to change ObamaCare.",
+    "It states in here that various human rights groups suggest the range was as high as 1,100 killed by Barack Obama's drone strikes.",
+    "S. 1071, the National Defense Authorization Act for fiscal year 2026, significantly improves the defense acquisition system.",
+    "This legislation will deter China, defend Israel, and counter Russia, North Korea, Iran, and other foreign terrorist organizations.",
+    "H.R. 3898, the PERMIT Act, contains targeted, balanced reforms to the permitting process under the Clean Water Act that will cut red tape, reduce project delays, and provide regulatory certainty.",
+    "Immediately upon adoption of this resolution, the House shall proceed to the consideration in the House of the bill (H.R. 6074) to amend the Internal Revenue Code of 1986 to extend the enhancement of the health care premium tax credit.",
+    "This bipartisan, commonsense legislation aims to ensure we won't.",
+    "I urge my colleagues to vote ``yes'' on the rule and ``yes'' on the underlying piece of legislation, especially the National Defense Authorization Act.",
+    "It is junk, and we are not going to continue to send billions upon billions of dollars to the insurance companies.",
+    "Mr. Speaker, I will make sure that my colleague understood what I said and meant when I said that when I go to the pharmacy, I pay cash instead of using my insurance card.",
+    "They are all worthy of support, and I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4595-3.htm",
+   "sentences": [
+    "The men and women who protect us here in this Capitol and all Federal law enforcement need this bill to pass.",
+    "As for the provision that has been mentioned a few times about the Senate language, I have introduced a piece of legislation already to repeal the Senate language, and I am hopeful that we will have a vote on that as soon as we get back."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "My amendment authorizes the Secretary of Defense to carry out a security assistance program known as the Baltic Security Initiative for the purpose of expanding security cooperation with the armed forces of Estonia, Latvia, and Lithuania.",
+    "This security assistance program has been in existence since the first Trump administration in fiscal year 2020.",
+    "If you look at what happened last night with the Russian incursion of drones into Poland, I think it is now, more than ever, necessary that we make sure that these countries have what they need to defend themselves from Vladimir Putin's aggression."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3838, STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026;",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 3838, STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026; AND PROVIDING FOR CONSIDERATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3907-2.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 682 Resolved, That at any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 3838) to authorize appropriations for fiscal year 2026 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 3486) to amend the Immigration and Nationality Act to increase penalties for individuals who illegally enter and reenter the United States after being removed, and for other purposes.",
+    "Mr. Speaker, under the leadership of Chairman Mike Rogers and Ranking Member Adam Smith, one of the top priorities of the bipartisan fiscal year 2026 National Defense Authorization Act was to reform the defense acquisition system and equip our armed services with the technology they need to deter national security threats.",
+    "This bill cuts red tape and shifts the focus of the defense acquisition system from compliance to quickly and cost-effectively fielding new capabilities to ensure that our Armed Forces are the most lethal and effective fighting force in the world.",
+    "It fully funds top defense priorities, revitalizes the defense industrial base, and grows manufacturing jobs in America, all while pressing our NATO and other allies to pay more for their own defense.",
+    "Building upon last year's NDAA, which focused on servicemember quality of life, this bill supports a 3.8 percent pay raise for all servicemembers, improves housing and DOD schools, and expands access to healthcare and childcare.",
+    "Additionally, this bill continues to focus on countering threats to our national security from Russia, North Korea, Iran, and other foreign terrorist organizations.",
+    "To further secure our border and fight drug trafficking, the fiscal year '26 NDAA fully funds the establishment and enforcement of national defense areas along the southwest border of the United States, authorizes DOD to provide additional support to Customs and Border Protection, and authorizes President Trump's budget request of nearly $1 billion to combat drug traffickers.",
+    "It requires between 5 years of imprisonment to life imprisonment for an alien who illegally enters the United States and is later convicted of a felony.",
+    "It requires between 10 years of imprisonment to life imprisonment for an alien who illegally reenters the United States after being removed following a felony conviction.",
+    "Mr. Speaker, there is absolutely nothing that can make Affordable Care Act plans affordable.",
+    "I should have commended the courage of the victims that came forward to Congress last week and met with Members, including the Speaker of the House of Representatives, before I even commended Chairman Comer for his work on the Epstein files.",
+    "The key to the Epstein files is the flight logs and the tax records, neither of which is mentioned in the Khanna-Massie language.",
+    "H.R. 3838, the Streamlining Procurement for Effective Execution and Delivery and National Defense Authorization Act for Fiscal Year 2026, significantly improves the defense acquisition system.",
+    "This legislation will deter China, defend Israel, and counter Russia, North Korea, Iran, and other foreign terrorist organizations, including the drug dealers riding around the oceans with pangas full of dope.",
+    "Additionally, H.R. 3486, the Stop Illegal Entry Act of 2025, simply strengthens current law to deter criminal aliens from entering and reentering again and again the United States and gives Federal officials more tools to prosecute aliens who have illegally entered the country and are convicted of a felony or who try to reenter the country after removal following a felony conviction.",
+    "Immediately upon adoption of this resolution, the House shall proceed to the consideration in the House of the bill (H.R. 4849) to repeal health-related portions of An Act to provide for reconciliation pursuant to title II of H. Con. Res. 14, and for other purposes.",
+    "Mr. Speaker, I look forward to consideration of these pieces of legislation, and I urge passage of this rule.",
+    "I am going to leave it at that.",
+    "We are going to continue to push forward that way.",
+    "Mr. Speaker, I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule."
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES GRAIN STANDARDS REAUTHORIZATION ACT OF 2025",
+   "title": "UNITED STATES GRAIN STANDARDS REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-08/html/CREC-2025-09-08-pt1-PgH3870-2.htm",
+   "sentences": [
+    "Mr. Speaker, I am proud to support this bipartisan legislation, and I urge my colleagues to support its final passage."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "title": "RELATING TO CONSIDERATION OF THE SENATE AMENDMENT TO H.R. 4, RESCISSIONS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3451-4.htm",
+   "sentences": [
+    "While I hear my colleague talk about how much help we in the small town need for more government, as a small-town guy, the deficit and the debt scares us."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Paragraph (2) shall not apply to an individual if the individual is-- (A) under 18, or over 65, years of age; (B) medically certified as physically or mentally unfit for employment; (C) a parent or other member of a household with responsibility for a dependent child under 14 years of age . . .'' When the Democrats are telling you that we are kicking disabled people off of SNAP or we are kicking disabled people off of Medicaid, it is an absolute lie."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3944, MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 3944, MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R. 275, SPECIAL INTEREST ALIEN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2900-2.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 530 Resolved, That at any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 3944) making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2026, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 275) to require the Secretary of Homeland Security to publish on a monthly basis the number of special interest aliens encountered attempting to unlawfully enter the United States, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 875) to amend the Immigration and Nationality Act to provide that aliens who have been convicted of or who have committed an offense for driving while intoxicated or impaired are inadmissible and deportable.",
+    "Upon adoption of this resolution it shall be in order without intervention of any point of order to consider in the House the resolution (H. Res. 516) condemning the violent June 2025 riots in Los Angeles, California.",
+    "The previous question shall be considered as ordered on the resolution and preamble to adoption without intervening motion or demand for division of the question except one hour of debate equally divided and controlled by the chair and ranking minority member of the Committee on the Judiciary or their respective designees.",
+    "Further, the rule provides for consideration of H.R. 875, the Jeremy and Angel Seay and Sergeant Brandon Mendoza Protect Our Communities from DUIs Act of 2025, under a closed rule.",
+    "It protects the Second Amendment rights of veterans by preventing the VA from sending information on veterans to the FBI without a judge's consent.",
+    "Further, it syncs with President Trump's executive order on no funds for DEI or gender-affirming care and protects the Hyde-like language at the VA.",
+    "It goes without saying, Mr. Speaker, that the situation at our southern border has improved significantly under the Trump administration.",
+    "However, under the previous administration, illegal aliens from over 170 different countries, including Iran, the People's Republic of China, and Russia, came across our borders.",
+    "Additionally, Mr. Speaker, the rule provides for consideration of H.R. 875, the Jeremy and Angel Seay and Sergeant Brandon Mendoza Protect Our Communities from DUIs Act of 2025.",
+    "It closes a loophole in U.S. immigration law and ensures that aliens who endanger communities by driving while intoxicated are inadmissible to and deportable from the United States.",
+    "All three of the individuals included in the title lost their lives in automobile crashes caused by illegal aliens who were driving under the influence.",
+    "This resolution recognizes the right to assemble and protest peacefully while condemning the riots and violence against law enforcement.",
+    "If there is an able-bodied adult of working age not taking care of a dependent, we believe that it is in their best interest to be at work.",
+    "Mr. Speaker, I am laughing because I honestly don't even know if a billionaire lives in my district.",
+    "The idea we would be up here, doing a bunch of tax cuts for billionaires, as they have continued to repeat, I guess they think if they say it enough times, then everybody will start to believe it.",
+    "Mr. Speaker, 22,427 of those citizens would be impacted by the return of the alternative minimum tax, and 1,780 family-owned farms in Massachusetts-02 would have their death tax exemptions slashed in half next year.",
+    "Mr. Speaker, they keep using the word ``billionaires.'' The bottom line is they are trying to raise taxes on everyday Americans that deserve better.",
+    "Peaceful protests do not include assaults of law enforcement officers or burning vehicles.",
+    "I would also like to point out to the American citizens that when they hear the Democrats talk about the top 5 percent, the top 5 percent are not billionaires.",
+    "I will say this: President Trump wants peace between Israel and Iran.",
+    "He wanted peace with India and Pakistan, and he wants peace with Ukraine and Russia.",
+    "Mr. Speaker, I certainly have thanked before, and I will thank again, all of the law enforcement and the men and women who keep us safe in this Capitol.",
+    "H.R. 875 is the Jeremy and Angel Seay and Sergeant Brandon Mendoza Protect Our Communities from DUIs Act of 2025, which works to keep the American people safe by closing a loophole in U.S. immigration law to ensure that aliens who drive intoxicated are inadmissible to, and deportable from, the United States.",
+    "H. Res. 516 condemns the violent June 2025 riots in Los Angeles, California, which recognizes the right to assemble and protest peacefully while condemning the riots and violence against law enforcement.",
+    "Immediately upon adoption of this resolution, the House shall proceed to the consideration in the House of the bill (H.R. 2753) to amend the Congressional Budget Act of 1974 to provide for a point of order against reconciliation measures that cut benefits for Medicaid or the Supplemental Nutrition Assistance Program, and for other purposes.",
+    "Mr. Speaker, I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule."
+   ]
+  },
+  {
+   "date": "2025-05-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 276, GULF OF AMERICA ACT; AND PROVIDING FOR CONSIDERATION OF H.R. 881, DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTI",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 276, GULF OF AMERICA ACT; AND PROVIDING FOR CONSIDERATION OF H.R. 881, DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-06/html/CREC-2025-05-06-pt1-PgH1864-6.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 377 Resolved, That upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 276) to rename the Gulf of Mexico as the ``Gulf of America''.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (H.R. 881) to establish Department of Homeland Security funding restrictions on institutions of higher education that have a relationship with Confucius Institutes, and for other purposes.",
+    "The first one is H.R. 276, the Gulf of America Act, under a closed rule.",
+    "Mr. Speaker, we are here to debate a rule on two pieces of legislation beginning with H.R. 276, the Gulf of America Act.",
+    "It goes without saying, Mr. Speaker, that the Chinese Communist Party does not share our interests or our values.",
+    "Further, the Department of Education has shown that over $3 billion has been collected by U.S. universities from entities connected to the People's Republic of China and the Chinese Communist Party.",
+    "If you took 100 percent of the money from the people that are billionaires in this country, you probably couldn't pay the interest on the national debt for a year.",
+    "Mr. Speaker, I would remind you that the Chinese Communist Party is no longer an economic adversary.",
+    "With all of the antics, yelling, screaming, and pointing of fingers, I just remind you, there is a very serious piece of legislation to deal with the Chinese Communist Party in this rule that I believe will pass in very much a bipartisan manner.",
+    "It is very convenient that they say billionaires.",
+    "Now, they have acknowledged millionaires, but just factually speaking, if the tax rates are allowed to expire, virtually every American that works would receive a tax increase.",
+    "Today, and this week, the House has the ability to advance two pieces of legislation under this rule: H.R. 276, the Gulf of America Act, which simply reflects the Gulf's importance to our country, the United States of America, and H.R. 881, the DHS restrictions on Confucius Institutes and Chinese Entities of Concern Act which puts our national security first and bans eligibility for DHS funding from an institution with a relationship to a Confucius Institute, Thousand Talents Program, or Chinese entities of concern until such relationship is terminated.",
+    "Mr. Speaker, the Chinese Communist Party is our enemy.",
+    "Immediately upon adoption of this resolution, the House shall proceed to the consideration in the House of the bill (H.R. 2753) to amend the Congressional Budget Act of 1974 to provide for a point of order against reconciliation measures that cut benefits for Medicaid or the Supplemental Nutrition Assistance Program, and for other purposes.",
+    "I urge my colleagues to join me in voting ``yes'' on the previous question and ``yes'' on the rule."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 471, FIX OUR FORESTS ACT, AND PROVIDING FOR CONSIDERATION OF S. 5, LAKEN RILEY ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 471, FIX OUR FORESTS ACT, AND PROVIDING FOR CONSIDERATION OF S. 5, LAKEN RILEY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH268.htm",
+   "sentences": [
+    "The Clerk read the resolution, as follows: H. Res. 53 Resolved, That at any time after adoption of this resolution the Speaker may, pursuant to clause 2(b) of rule XVIII, declare the House resolved into the Committee of the Whole House on the state of the Union for consideration of the bill (H.R. 471) to expedite under the National Environmental Policy Act of 1969 and improve forest management activities on National Forest System lands, on public lands under the jurisdiction of the Bureau of Land Management, and on Tribal lands to return resilience to overgrown, fire-prone forested lands, and for other purposes.",
+    "Upon adoption of this resolution it shall be in order to consider in the House the bill (S. 5) to require the Secretary of Homeland Security to take into custody aliens who have been charged in the United States with theft, and for other purposes.",
+    "Additionally, the rule provides for consideration of S. 5, the Laken Riley Act, under a closed rule.",
+    "Mr. Speaker, the rule also provides for the consideration of S. 5, the Laken Riley Act, another bipartisan piece of legislation.",
+    "Mr. Speaker, Laken Riley was murdered in my home State of Georgia in February of 2024 by a Venezuelan man who was illegally present in the United States.",
+    "He previously crossed our southern border in September of 2022, where he was paroled and released for further processing.",
+    "At the time of Laken Riley's murder, there was a bench warrant out for his arrest for failing to show up in court.",
+    "Mr. Speaker, S. 5, the Laken Riley Act, as amended, requires the Department of Homeland Security to issue a detainer for any individual inadmissible to the United States who is charged with, is arrested for, convicted of, admits to having committed, or admits to committing acts which constitute the essential elements of any burglary, theft, larceny, shoplifting, assault of a law enforcement officer, or any crime that results in death or serious bodily injury to another person.",
+    "I send my condolences to Laken Riley's family.",
+    "Let's see, Biden commuted the sentences for 2,500 drug offenders and clemency for 37 of the 40 people on death row, 1 of whom shot two FBI agents , if I am not mistaken.",
+    "I would suggest to you that Donald Trump is the President of the United States today and sitting in the White House today because your policies are so bad because you put illegal immigrants and their rights above the rights of American citizens.",
+    "Mr. Speaker, this rule is about the Laken Riley Act and the Fix Our Forests Act.",
+    "Mr. Speaker, I, too, want to thank all of the law enforcement and first responders who protect this country on a daily basis, and, Mr. Speaker, we know the polls show that a majority of them voted for Donald Trump.",
+    "Mr. Speaker, this vote is on the rule to advance H.R. 471, the Fix Our Forests Act; and S. 5, the Laken Riley Act, regardless of what you have listened to if you have been watching this over the last hour.",
+    "The Laken Riley Act will ensure that criminals who illegally cross our borders and endanger our communities are detained and deported while also giving States the ability to bring civil action against any Federal official in the future should they refuse to enforce our country's immigration laws and put American citizens at risk by refusing to do so.",
+    "Again, I thank the law enforcement officers, the Capitol Police specifically, and all those who take care of us on a daily basis.",
+    "I urge my colleagues to join me in voting ``yes'' on the previous question, ``yes'' on the rule, and then I hope Members will vote ``yes'' on the legislation."
+   ]
+  }
+ ]
+}

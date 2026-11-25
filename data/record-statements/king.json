@@ -1,0 +1,248 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "king",
+ "name": "Angus S. King, Jr.",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 110
+ },
+ "statements": [
+  {
+   "date": "2026-03-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Homeland Security (Executive Session)",
+   "title": "Department of Homeland Security (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-21/html/CREC-2026-03-21-pt1-PgS1472-3.htm",
+   "sentences": [
+    "If ICE, as the Senator suggested, were talking about criminal aliens, we wouldn't be here having this debate.",
+    "I can tell you, from knowing my constituents, a lot of them are people who were asylum seekers, who were paying taxes, who were working people, who were refugees.",
+    "So, if it were the worst of the worst--the Senator kept using terms like ``criminal illegal aliens,'' and he gave these horrible cases.",
+    "Nobody I have heard of is talking about defunding DHS or defunding the police.",
+    "We are talking about guardrails being applied to ICE that are similar to the guardrails and the codes of conduct that apply to every police force in America.",
+    "If we could solve this and if we could fund those other Agencies, which we should--I agree--then we could talk about guardrails for ICE and putting them under the same kind of reasonable constraints as every other law enforcement agencies in the country.",
+    "In my whole life, I have never seen a law enforcement agency that wears masks.",
+    "For myself, given what happened in Maine and what happened in Minnesota, I cannot vote for a budget that leaves ICE rampant and without the guardrails that apply to every other police force in the United States.",
+    "That is why I am voting to move forward with the funding of the other Agencies but then will focus on ICE to try to get some reasonable guardrails, and we are negotiating and working toward those."
+   ]
+  },
+  {
+   "date": "2026-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-11/html/CREC-2026-03-11-pt1-PgS969-8.htm",
+   "sentences": [
+    "I think it was for the NATO conference.",
+    "The glory of our country is the journey to ``a more perfect Union.'' I have always thought, ever since I first read the Constitution in law school, it was very telling that the Framers used the term ``more perfect Union.'' They didn't say ``a perfect union'' or ``toward a union.'' They saw America as a journey."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSE BILLS",
+   "title": "HOUSE BILLS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgS8766.htm",
+   "sentences": [
+    "So the Senate has given the House the courtesy of taking up their bills, passing them in a previous group, as I mentioned, and now this group of House bills that we are going to be passing this afternoon.",
+    "All I am asking is that the House extend to this body the same courtesy that we have extended to them."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgS8591-2.htm",
+   "sentences": [
+    "I realize it is a little contorted, but, basically, what he found was that the role of the Health and Human Services Department was vastly expanded after Medicare, Medicaid, and the other responsibilities that had been placed in that Department.",
+    "By rescinding it, which is what they did, we are--the CRA that we are talking about today would rescind the rescission.",
+    "But there should be some--when it is a wholesale reorganization, there should be some notice of ``here is what we are going to do, here is the basis, here is the study we have done, here is why we need these jobs; and we don't need these jobs.'' None of that happened after the rescission of this rule.",
+    "So he said, in effect: We will be subject to the Administrative Procedure Act, and we will notice the major activities that we are going to do to the public, and we will allow public comment.",
+    "There was a notice posted that we are going to appoint these advisory committees."
+   ]
+  },
+  {
+   "date": "2025-10-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EN BLOC NOMINATIONS--Continued",
+   "title": "EN BLOC NOMINATIONS--Continued",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-07/html/CREC-2025-10-07-pt1-PgS6967-3.htm",
+   "sentences": [
+    "Madam President, as if in legislative session and notwithstanding rule XXII, I ask unanimous consent that the Committee on Homeland Security and Governmental Affairs be discharged from further consideration of S. 1337 and the Senate proceed to its immediate consideration; that the bill be considered read a third time and passed; and that the motion to reconsider be considered made and laid upon the table with no intervening action or debate.",
+    "The private sector is protected from liability for exchanging, for sharing the information.",
+    "I urge him to bring those issues before the committee, bring a bill to the floor, and they can be considered."
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Rescissions (Executive Session)",
+   "title": "Rescissions (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgS4347-3.htm",
+   "sentences": [
+    "Mr. President, I would like to talk today about the rescission bill that will be coming before us in the next couple of days, and I want to really cover two points: what is being done in this bill and how it is being done.",
+    "The rescission bill talks about, essentially, two areas: public broadcasting and USAID.",
+    "In my view, the rescission--the total rescission--of those two Agencies--and, by the way, it is a total rescission.",
+    "It is the whole thing, both in the Corporation for Public Broadcasting and USAID.",
+    "The rescissions range from bad policy to downright dangerous, and I want to talk about that for a minute.",
+    "USAID is an essential part of our foreign policy to help to stabilize unstable parts of the world; to extend America's soft power; to build America's brand; and, yes, to do some very essential projects.",
+    "Just those two programs together--those two USAID projects--have saved 36 million lives.",
+    "Of course, foreign aid has a lot of benefits aside from the ones that I have just outlined.",
+    "You are going to have to buy me more bullets because the programs of USAID tend to stabilize the world and mitigate the tendency toward extremism and violence.",
+    "Since we have started to gut USAID, which was one of the first acts of this administration back in January and February, China has stepped into our shoes.",
+    "A significant share of the foreign aid ends up going back to businesses and NGOs here in the United States.",
+    "USAID is doing important work all over the world.",
+    "I met with USAID people in Kabul, Afghanistan.",
+    "They are facing a tremendous crisis, so one of the projects that they are relying on is a very large water production facility that is supported by USAID.",
+    "So that is the picture on these rescissions.",
+    "The President can submit his budget, and he can submit a budget that zeroes out USAID and that zeroes out the Corporation for Public Broadcasting, but then the way the process works is that we have hearings; that we have meetings with the Appropriations Committee; the appropriators meet and decide and discuss and debate and come to the floor with a bill that represents the consensus of those on the Appropriations Committee, and then we consider it here.",
+    "This process that we are talking about here, this rescission process, turns the whole thing upside down.",
+    "We learned this week that he is talking about a 50-percent tariff against Brazil because he doesn't like the way the current government is treating the prior President.",
+    "It has nothing to do with tariffs.",
+    "The up-and-down roller coaster that we have been on with regard to tariffs is a perfect example of why one person shouldn't have this authority.",
+    "This should be something that is done thoughtfully and systematically here in the Congress under article I, section 8, to debate and decide what appropriate tariff levels there are across the world and not this helter-skelter, up and down, changing every other day that has not only already--we have reports today--affected inflation in this country and brought it up, but it has also created enormous uncertainty both in our markets and across the world.",
+    "The ridiculous decision of the Supreme Court yesterday on the Department of Education is an indication that we cannot count on the courts to protect us from the depredations of a proto-authoritarian regime.",
+    "They did the same thing with birthright citizenship.",
+    "This bill is important because of the merits, as I talked about, about the danger of wiping out USAID and all the good it does in the world and the good it does for our country and also wiping out public broadcasting and all the good that it does--the irreplaceable good that it does--for the people in the United States.",
+    "They basically said: The President can continue to gut the Department of Education because we are going to hear the case later, and maybe we will decide it when it comes.",
+    "We are going to draw a line here, and we will establish a relationship with the President that is cooperative, collaborative, bipartisan, and sharing the power that the Constitution gives to each of us."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+   "sentences": [
+    "If you think people making $1 billion a year need and deserve a tax break, and also, if you want to give a really good ad to these guys in November of 2026, vote no on the amendment and say that billionaires--no, not billionaires, people earning $1 billion--need and deserve a tax break."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 1",
+   "title": "H.R. 1",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4079.htm",
+   "sentences": [
+    "A motion to commit the bill to the committee on Finance with instructions to report H.R. 1 back to the Senate with changes that would strike any provision that reduces funding to Medicaid and would ensure that any reduction in average tax liability for individual taxpayers is limited to those with an income under $400,000. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-28/html/CREC-2025-06-28-pt1-PgS3651.htm",
+   "sentences": [
+    "Let's give $32,000 worth of tax breaks to a millionaire, and we will pay for it by taking health insurance away from lower income and middle-income people.",
+    "Well, here is a little suggestion of how to get out of this mess: If you cap the tax cuts at people making $400,000 a year--which is a pretty healthy income--the cost of this bill would drop by 60 percent, and you wouldn't have any need to cut Medicaid.",
+    "But just stop it at $400,000, and don't give the tax breaks to the people--a millionaire, under this bill, gets a $32,000 tax cut.",
+    "But with 60 percent of the cost above $400,000 in income, this bill is literally taking food out of the mouths of kids to give a millionaire a $32,000 tax break.",
+    "The second thing that happens is a loss of services for everybody in town, not just the Medicaid people.",
+    "And again, do we really need to do this to give a millionaire a $32,000 tax break?",
+    "The analysis is that 60,000 people in Maine would lose their insurance coverage--40,000 under Medicaid, about 20,000 under the Affordable Care Act.",
+    "And by the way, people say: Well, we are talking about fraud in Medicaid.",
+    "Listen, at almost a trillion-dollar cut in Medicaid, 15 million people being cut off--40,000 in the State of Maine--that isn't fraud; that is cutting people who need the care.",
+    "And I don't understand the obsession, and I never have--and I stood right there and watched John McCain cast that vote to save the Affordable Care Act, along with my colleague Susan Collins.",
+    "Trying to take away the Affordable Care Act in 2017 or 2018 and now this.",
+    "That is one out of five kids are food insecure, and we are going to cut that food in order to give a millionaire a $32,000 tax cut.",
+    "And the thing that really gives a lie to this nonsense is, also in this bill is a $5 trillion increase in the debt ceiling.",
+    "If it is not really debt, then we don't need to increase the debt ceiling.",
+    "By the way, the Committee for a Responsible Federal Budget, a nonpartisan group, has said--and I haven't heard this mentioned--this bill will actually accelerate the insolvency of the Social Security trust fund and the Medicare trust fund.",
+    "That is the estimate: $600 billion a year is left on the table because cheaters, mostly high-income, are not paying the taxes they owe.",
+    "That would be nice, instead of cutting Medicare and Medicaid and food stamps.",
+    "We are dangerously close to creating a Federal police force, which we have never had in this country, and we shouldn't have.",
+    "And by the way, I have never in my life seen a law enforcement officer with a mask on.",
+    "I don't get where that came from, a law enforcement officer wearing a mask.",
+    "It will ameliorate the need for any cuts to Medicaid and SNAP.",
+    "It would also minimize the hit on the debt and the deficit."
+   ]
+  },
+  {
+   "date": "2025-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Administration First 100 Days (Executive Calendar)",
+   "title": "Trump Administration First 100 Days (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-29/html/CREC-2025-04-29-pt1-PgS2624.htm",
+   "sentences": [
+    "Mr. President, almost 75 years ago, the junior Senator from Maine rose in this Chamber to deliver a speech from her heart about a crisis then facing our country, a crisis not arising from a foreign adversary but from within, a crisis that threatened the values and ideals at the base of the American experiment."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+   "sentences": [
+    "I urge a ``yes'' vote and will accept a voice vote."
+   ]
+  },
+  {
+   "date": "2025-02-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-20/html/CREC-2025-02-20-pt1-PgS1075-2.htm",
+   "sentences": [
+    "We are talking about immigration and the border and the control of immigration, and we are firing immigration judges?",
+    "I don't know who these 25-year-olds are that are in the IRS, rummaging around in the IRS IT system or--we learned in the last couple of days--Social Security.",
+    "USAID was established by statute, and over a weekend, these people fired everybody, closed the Agency, took the name off the door, and threw the rest of the world into chaos where these people were working on important projects all over the world that were part of our outreach to the world.",
+    "James Mattis famously said when he was a general: If you cut the foreign aid budget, you are going to have to buy me more bullets.",
+    "Foreign aid is part of the national security of this country, and to demolish this Agency without any input from Congress, without any relationship to the Foreign Affairs Committee or anybody else up here in Congress, is grossly unconstitutional.",
+    "The President gets to appoint members of the board, and they are very carefully balanced--not firing someone at the National Labor Relations Board so there is no quorum so they can't act.",
+    "So I intended to talk about Ukraine, but Senator Tillis and Senator Shaheen did it so articulately, I think I will let that pass except to say that it is shameful that we have suddenly pivoted from the support of a democracy that was grossly and illegally invaded--from the support of that country to the support of a murderous dictator.",
+    "The only dictator in this game is Vladimir Putin.",
+    "And to argue that somehow Ukraine started the war--what universe is somebody in that would say something like that?",
+    "Again, I won't pursue, but I can tell you, Putin is happy, Xi Jinping is happy, Iran is happy, and North Korea is happy.",
+    "They love what is going on, to see us retreating from the world, whether it is AID or Ukraine.",
+    "But we are giving away our asymmetric advantage in the world by what looks like systematically alienating our allies, whether it is threats of tariffs or speeches in Europe telling them what their problems are, basically saying we are going to abandon Europe.",
+    "The worst possible geopolitical thing that we could do would be to abandon Ukraine.",
+    "That is all the amendment does--no tax reduction and liability for those making more than $500 million.",
+    "I don't believe what I am going to be talking about today is partisan.",
+    "We are going to be OK with park seasonal employees.",
+    "It was, ``If you want to leave Federal service, we will pay you through September,'' but it hit everybody.",
+    "They would have realized from the outset that these are jobs that we aren't going to be firing, that we aren't going to be eliminating.",
+    "So, to save a buck, we are going to lose 5 bucks from fees not being collected.",
+    "But I think, if we are going to take on this exercise, it ought to be done in a sensible way by people who know what they are doing.",
+    "The President is trying to say: Congress appropriated this money with an appropriation bill signed by the President, but I am not going to spend it because I don't like it.",
+    "It is a constitutional crisis, and I will tell you what makes it worse: The President and the Vice President are already hinting that they are not going to obey decisions of the courts.",
+    "We are going to let the courts take care of this.",
+    "But to stand back and say: Oh, we are going to watch all this happen, and the courts are going to take care of it--that is an abdication of our responsibility.",
+    "I urge a ``yes'' vote to verify what we were told on the floor this afternoon."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Federal Fumbles (Executive Calendar)",
+   "title": "Federal Fumbles (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS903.htm",
+   "sentences": [
+    "But here we are; we are going to take a vote.",
+    "I urge my colleagues to vote no."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)",
+   "title": "Nomination of Russell Vought (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt2-PgS746.htm",
+   "sentences": [
+    "The answer to the first question, why have a Constitution in the first place, is contained in the preamble: We the People of the United States, in Order to form a more perfect Union-- There is No. 1-- establish Justice-- No. 2-- insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.",
+    "The whole idea, the whole idea was that no part of the government, no one person, no one institution had or could ever have a monopoly on power.",
+    "But don't stand aside in the midst of these confirmations, ill- considered foreign policy pronouncements, flood of Executive orders-- none of which, by the way, will do anything about the price of eggs, the cost of housing, or the availability of childcare.",
+    "But this small group--apparently, it is reported, is in their twenties--have no experience with government, no experience with foreign aid, no experience with the operation of the U.S. Government, but they are making, basically, policy decisions and constitutional decisions.",
+    "And by the way, I find it especially galling to read the sneering comment from the richest man in the world: We spent the weekend feeding USAID into the chipper.",
+    "Although it is impossible to determine what they are taking-- remember, there is no transparency or oversight--access to Social Security numbers seems to be in the mix, all the government's personnel files, personal financial data, potentially everyone's tax returns and medical records.",
+    "Mr. President, we all began our careers here with the following words: I do solemnly swear that I will support and defend the Constitution of the United States against all enemies, foreign and domestic.",
+    "I am not talking about the specifics, and I will touch on AID and other issues, but what I am really worried about are the implications--the structural implications for our freedom and our government of what is happening here.",
+    "We will be written down through history.",
+    "We will be lit through history ``in honor or dishonor to the latest generation.'' And I would suggest that the redline should be the Constitution of the United States."
+   ]
+  }
+ ]
+}

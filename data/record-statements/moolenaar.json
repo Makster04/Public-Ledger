@@ -1,0 +1,70 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "moolenaar",
+ "name": "John R. Moolenaar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "title": "WHOLE MILK FOR HEALTHY KIDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5857.htm",
+   "sentences": [
+    "Today, I rise in support of the Whole Milk for Healthy Kids Act.",
+    "I thank the chairman for his leadership on this legislation, and I urge all my colleague to support it."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADAMS MEMORIAL-GREAT AMERICAN HEROES ACT",
+   "title": "ADAMS MEMORIAL-GREAT AMERICAN HEROES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5083.htm",
+   "sentences": [
+    "Today, I rise in support of H.R. 2306, the Adams Memorial-Great American Heroes Act.",
+    "I urge all my colleagues to support this bipartisan legislation."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPARENCY IN REPORTING OF ADVERSARIAL CONTRIBUTIONS TO EDUCATION ACT",
+   "title": "TRANSPARENCY IN REPORTING OF ADVERSARIAL CONTRIBUTIONS TO EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5007.htm",
+   "sentences": [
+    "Parents may think the Chinese Communist Party isn't interested in what their kids are learning, but the CCP wants to influence every American.",
+    "Mr. Speaker, I urge my colleagues to vote for the bills."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHANDRA EISENGA HUMAN CELL AND TISSUE PRODUCT SAFETY ACT",
+   "title": "SHANDRA EISENGA HUMAN CELL AND TISSUE PRODUCT SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2860.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this bipartisan legislation, H.R. 1082, the Shandra Eisenga Human Cell and Tissue Product Safety Act.",
+    "Mr. Speaker, I urge my colleagues to support this vital bipartisan legislation in honor of Shandra and her family."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "title": "DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1891-2.htm",
+   "sentences": [
+    "Mr. Speaker, this legislation is about one thing, and that is protecting American students, American research, and America's future from malign foreign influence, especially from the Chinese Communist Party.",
+    "They are trying to shape how young Americans see the world and to rewrite the story of the Chinese Communist Party one classroom at a time.",
+    "If we want taxpayer dollars, we cannot partner with a foreign adversary.",
+    "As chairman of the Select Committee on the Chinese Communist Party, I can tell you the threat is real, and the evidence is overwhelming.",
+    "Mr. Speaker, I rise today in strong support of Representative Pfluger's bipartisan bill, H.R. 881, the DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act."
+   ]
+  }
+ ]
+}

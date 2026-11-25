@@ -1,0 +1,123 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "degette",
+ "name": "Diana DeGette",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 39
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTIVE HEALTH SAVINGS ACT",
+   "title": "PREVENTIVE HEALTH SAVINGS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgH6266.htm",
+   "sentences": [
+    "I was on the Energy and Commerce Committee when we developed the Affordable Care Act.",
+    "However, I was told by the CBO that they could not include smoking cessation programs in the ACA because the fiscal note was too high and because it would cost too much money to pay for the patches and the Nicorette and all that that."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EARLY ACT REAUTHORIZATION OF 2025",
+   "title": "EARLY ACT REAUTHORIZATION OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4648.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 4541, the EARLY Act Reauthorization of 2025."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "title": "NIH IMPLEMENTING A MATERNAL HEALTH AND PREGNANCY OUTCOMES VISION FOR EVERYONE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4651.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues to join us in passing the bill today because no pregnancy-related death is acceptable in the richest nation in the world."
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOLDING ICE ACCOUNTABLE",
+   "title": "HOLDING ICE ACCOUNTABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2104-3.htm",
+   "sentences": [
+    "President Trump and Secretary Noem have turned ICE and border patrol into masked paramilitary forces that are terrorizing our neighborhoods.",
+    "I am working to take the $75 billion that Republicans gave to ICE in the big, bad bill and invest the money where it belongs, which is in expanded healthcare and affordable housing.",
+    "I cosponsored Articles of Impeachment against Kristi Noem, and I voted against funding the Department of Homeland Security to hold this administration accountable.",
+    "Mr. Speaker, I won't stop fighting until the families in Denver and across the country are safe from these thugs. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTEND ENHANCED PREMIUM TAX CREDIT",
+   "title": "EXTEND ENHANCED PREMIUM TAX CREDIT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH111.htm",
+   "sentences": [
+    "They could have had a vote in December, yet they blocked Democratic efforts to extend the Affordable Care Act's enhanced premium tax credits.",
+    "This week, we can pass the bill that would extend the ACA's premium tax credits for 3 years.",
+    "I was part of the original team that negotiated and passed the Affordable Care Act.",
+    "While we were forced to accept less than the universal healthcare plan we wanted, we secured protections that have since saved tens of thousands of lives, ending discrimination against people with preexisting conditions, letting parents keep their kids on their insurance policies while the kids start their careers, and guaranteeing that every plan covers basic essential care.",
+    "They have voted more than 70 times to repeal the Affordable Care Act and always with no replacement.",
+    "They subjected the ACA to death by a thousand cuts, offering nothing but snake oil alternatives like high-deductible plans and health savings accounts that would leave families high and dry.",
+    "When we passed the ACA on this floor, I said this is just a start to affordable universal healthcare.",
+    "Democrats have worked to improve the ACA.",
+    "I have been a cosponsor of the Medicare for All Act since day one because I know it will guarantee a healthy nation.",
+    "Unfortunately, my colleagues across the aisle have made it crystal clear: They have no appetite for meaningful reforms like Medicare for All.",
+    "Medical debt will bury them bill by bill, week by week."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6029-4.htm",
+   "sentences": [
+    "Earlier this year, the Supreme Court ruled on a case in my home State of Colorado.",
+    "Mr. Chairman, I urge my colleagues to vote ``no.'' The Acting CHAIR (Mr. Stutzman)."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "Mr. Speaker, among the many other deficiencies of the bill, it is a direct assault on women's reproductive freedom.",
+    "Number one, it defunds Planned Parenthood, which means if this bill passes, 1 million Americans will have no pap smears.",
+    "Then, the manager's amendment, introduced in the dead of night, says that one in seven Americans who are on the insurance exchanges will no longer be able to get abortion coverage on those exchanges with their own money.",
+    "I can see why the Republicans wanted to do this in the dead of night because after the Dobbs decision, America woke up.",
+    "When the women and families of America wake up and find out the direct assault on reproductive freedom in this bill, they are going to be mad, and they are not going to forget when they go to the ballot box in 2026."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "Now, as a Coloradan from an energy-producing State, I don't oppose fracking, and frankly, opposition to fracking is not in the Democratic agenda.",
+    "However, I think we can all agree that fracking must be done safely and with transparency.",
+    "This bill would allow natural gas producers to keep abusing loopholes that allow them to hide dangerous chemical components in their fracking fluid, and that is something I don't think any of us should support.",
+    "Having served as the top Democrat on the Energy and Commerce Subcommittee on Energy, Climate, and Grid Security in the last Congress, I have worked closely on this issue for many years.",
+    "I have introduced legislation that would ensure that our communities would be safe from the dangerous chemicals that are often used in fracking fluid.",
+    "Fracking releases thousands of harmful chemicals that poison our drinking water and pollute our air, including hydrogen sulfide, which causes nausea, vomiting, and headaches; benzene, a known carcinogen; toxic metals; acids; and even diesel fuel.",
+    "A significant number of scientific studies prove negative health effects like cancers, asthma, and birth complications are caused by fracking chemicals.",
+    "For example, those who gave birth while living near a fracking site had children who are two to three times more likely to be diagnosed with leukemia between the ages of 2 and 7 than those who were not exposed.",
+    "For older adults, a study found that living near fracking sites in Pennsylvania during its so-called fracking boom between 2002 and 2015 were more likely to be hospitalized for cardiovascular disease than those in neighboring States where fracking was banned.",
+    "It was just 2 years ago that scientists were able to conclude the extent of harm caused by the fracking fluid in 2016, that was almost 10 years ago.",
+    "We don't even have accurate numbers of just how many Americans are affected because the law prioritizes polluters over people by protecting the exact chemical makeup of fracking fluid that fracking companies call ``proprietary information.'' It has been proven that fracking chemical disclosure requirements lead to significant declines in the use of hazardous chemicals and better water quality.",
+    "I urge my colleagues to oppose this legislation and work in a bipartisan way to make sure that where we do fracking it is done safely.",
+    "Madam Speaker, I rise today in opposition to the Protecting American Energy Production Act."
+   ]
+  }
+ ]
+}

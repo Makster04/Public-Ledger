@@ -1,0 +1,70 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "buchanan",
+ "name": "Vern Buchanan",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, the Sunshine Protection Act, which would make daylight saving time permanent and finally end the biannual clock switch.",
+    "My bill is simply a solution to make daylight saving time permanent.",
+    "Importantly, this bill allows States to opt out in favor of standard time if that is important to them.",
+    "Mr. Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTH CARE EFFICIENCY THROUGH FLEXIBILITY ACT",
+   "title": "HEALTH CARE EFFICIENCY THROUGH FLEXIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4272.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of my bill, the Health Care Efficiency Through Flexibility Act, which helps minimize burdens on value-based care organizations.",
+    "Mr. Speaker, I urge my colleagues to support the Health Care Efficiency Through Flexibility Act."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOSPITAL INPATIENT SERVICES MODERNIZATION ACT",
+   "title": "HOSPITAL INPATIENT SERVICES MODERNIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4935.htm",
+   "sentences": [
+    "I rise today in strong support of my bill, the Hospital Inpatient Services Modernization Act, which would allow hospitals to treat Medicare patients safely at home.",
+    "I urge my colleagues to support the hospital at home program extension for hospitals, providers, and patients."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO THE CONGRESSIONAL LAW ENFORCEMENT AWARDS RECIPIENTS OF FLORIDA'S 16TH CONGRESSIONAL DISTRICT",
+   "title": "PAYING TRIBUTE TO THE CONGRESSIONAL LAW ENFORCEMENT AWARDS RECIPIENTS OF FLORIDA'S 16TH CONGRESSIONAL DISTRICT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgE689-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to pay tribute to law enforcement men and women who have provided distinguished service to the people of Florida's 16th Congressional District.",
+    "Law enforcement is a demanding profession that requires sacrifice, courage, and dedication to serve others.",
+    "Fifteen years ago, I established the 16th District Congressional Law Enforcement Awards to give special recognition to law enforcement officers, departments, or units for exceptional achievement."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHRONIC DISEASE FLEXIBLE COVERAGE ACT",
+   "title": "CHRONIC DISEASE FLEXIBLE COVERAGE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH964.htm",
+   "sentences": [
+    "I rise today in strong support of my bill, the Chronic Disease Flexible Coverage Act.",
+    "I urge my colleagues to support this commonsense bill to help give Americans the tools they need for a longer, healthier, and happier life."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,602 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "murkowski",
+ "name": "Lisa Murkowski",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 33,
+  "sentences": 293
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgS5729-6.htm",
+   "sentences": [
+    "What happens then is we end up outsourcing really important projects and all the benefits that they would provide to nations that have lower standards or perhaps no standards at all.",
+    "Ultimately, it went all the way up to the U.S. Supreme Court.",
+    "This is our chance to reform NEPA, to address the Endangered Species Act, the Clean Water Act--a lot of statutes that we are talking about here.",
+    "But I am also very, very pleased that BAAJA includes bipartisan legislation that my vice chairman on the Indian Affairs Committee, Senator Schatz, and I introduced to reduce permitting barriers on Tribal lands and support Tribal economic development.",
+    "And I really want to thank the sponsors for working directly with me and my team on the Indian Affairs team.",
+    "My team and I on the Indian Affairs Committee really get how important section 106 is to making sure that we get these projects right.",
+    "I will give a couple examples here.",
+    "We will increase the authorization for the Historic Preservation Fund to $300 million.",
+    "We cannot keep holding out on permitting reform year after year in the hopes that maybe--just maybe-- somehow we are going to do it just a little bit better next time with just a little more time."
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRENGTHENING AMERICA'S TURNING POINT ACT",
+   "title": "STRENGTHENING AMERICA'S TURNING POINT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5140-3.htm",
+   "sentences": [
+    "This is land that is currently owned by the Indian Health Service, and it would be conveyed from IHS to the Southcentral Foundation.",
+    "This is where Alaska Native people can find support, find connection and a path forward when they are dealing with mental health challenges.",
+    "The program serves adults that are over 21 who are experiencing severe and persistent mental health issues through case management, therapy sessions, health education, tobacco cessation, life skills training--all while integrating Alaska Native culture.",
+    "Without ownership of the parcel, Southcentral Foundation cannot finance and construct capital improvements and permanent facilities and, in turn, do more to address mental health in Alaska.",
+    "Both have been marked up and reported favorably by unanimous consent on the Committee on Indian Affairs.",
+    "Senator Sullivan and I have introduced this in the Senate."
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE CALENDAR",
+   "title": "THE CALENDAR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5144.htm",
+   "sentences": [
+    "There being no objection, the Senate proceeded to consider the bills en bloc, which had been reported from the Committee on Indian Affairs."
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALBUQUERQUE INDIAN SCHOOL ACT OF 2026",
+   "title": "ALBUQUERQUE INDIAN SCHOOL ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5145.htm",
+   "sentences": [
+    "It is good to be able to not only get the Southcentral Foundation Land Transfer Act accomplished but several other measures that the Indian Affairs Committee has been working on for some time. ____________________"
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALS",
+   "title": "ALS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5146.htm",
+   "sentences": [
+    "We are going to make this thing happen.",
+    "We are going to get it across before the September 30 deadline.",
+    "And, in fact, it was through my family that I came to this cause, and it is through my family that I will remain committed to this cause, until such time as we have a full treatment and a cure for this awful and dreaded disease."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 25TH ANNIVERSARY OF THE SEPTEMBER 11, 2001 ATTACKS",
+   "title": "25TH ANNIVERSARY OF THE SEPTEMBER 11, 2001 ATTACKS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgS4650-2.htm",
+   "sentences": [
+    "May we continue to support those who wear the uniform of the fire and emergency services."
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGOA EXTENSION ACT--Motion to Proceed",
+   "title": "AGOA EXTENSION ACT--Motion to Proceed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-30/html/CREC-2026-07-30-pt1-PgS4360-3.htm",
+   "sentences": [
+    "We will celebrate you, and we will remain grateful for all that you have done."
+   ]
+  },
+  {
+   "date": "2026-07-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Native Children Commission Implementation Act (Executive Session)",
+   "title": "Native Children Commission Implementation Act (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-29/html/CREC-2026-07-29-pt1-PgS4323-3.htm",
+   "sentences": [
+    "Mr. President, I come to the floor this evening to speak about legislation that I have recently introduced as chairman of the Indian Affairs Committee, alongside my friend Vice Chairman Schatz.",
+    "I have to say I can't tell you how proud I was to see the Senate Indian Affairs hearing room.",
+    "I was particularly grateful to the Tribal leaders, to Native youth, to advocates, and to commissioners who traveled from Alaska and across Indian Country all to be there.",
+    "Gloria and her fellow commissioners have devoted years to traveling throughout Indian Country.",
+    "Across Indian Country, too many Native children experience challenges that no child should have to face.",
+    "Others have entered foster care.",
+    "They have struggled to access healthcare or behavioral health services.",
+    "If there is one lesson that I learned from traveling across my State and meeting with Tribal communities across Indian Country, it is that resilience is every bit as real as hardship.",
+    "And the commission had a very straightforward but very important mission, and that was travel throughout Indian country, listen to Native children, listen to the families, to the Tribal leaders, to the service providers, the experts, and then come back and tell us here in Congress what is needed to improve outcomes for Native youth.",
+    "And when the commissioners presented their recommendations to our Committee on Indian Affairs, they urged us; they said: Please, don't let this work become another report that just sits on the shelf and gathers dust.",
+    "Behavioral health is connected to family stability.",
+    "Parents cannot succeed if they can't find childcare.",
+    "It strengthens access to healthcare and behavioral health services.",
+    "During a hearing earlier this year on a draft legislation, Joan Johnson of the Fort Belknap Indian Community shared a story of a young woman who entered the Tribe's Tiwahe wellness program, and the Tiwahe Initiative is a pilot program at BIA that assists Tribes in providing holistic services that promote everything from child safety to family stability and Tribal self-determination.",
+    "To understand the need to make this initiative permanent, Joan shared the story of a young woman who had struggled with addiction and homelessness.",
+    "So instead of forcing parents in crisis--maybe it is addiction, maybe it is homelessness.",
+    "And so through this initiative, they brought education, employment, childcare, family services all together in one place.",
+    "It is about trusting Tribal governments, investing in Native families, and ensuring--ensuring--that every Native child--whether Alaska Native, American Indian, Native Hawaiian--has the opportunity to grow up healthy, to grow up safe, connected to their culture, and confident in who they are.",
+    "Let's turn their recommendations of ``The Way Forward'' report into meaningful action, and let's work together to build a future where every Alaska Native, American Indian, and Native Hawaiian child has the opportunity to not only overcome challenges, but to become those leaders of the next generation.",
+    "The bill that we have introduced is the Native Children Commission Implementation Act.",
+    "And I am going to keep coming back to those young people from Tanana, because they said--it was more than a decade ago."
+   ]
+  },
+  {
+   "date": "2026-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVING THE OOI ACT OF 2026",
+   "title": "SAVING THE OOI ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-17/html/CREC-2026-06-17-pt1-PgS2885.htm",
+   "sentences": [
+    "So Congress has made really clear that we intend to maintain this cost-effective system by ensuring that we have funding for the program in our annual appropriations bill."
+   ]
+  },
+  {
+   "date": "2026-06-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IRAN",
+   "title": "IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-15/html/CREC-2026-06-15-pt1-PgS2776-5.htm",
+   "sentences": [
+    "Madam President, like so many of us here in the Senate and really across the country, I think we have all been watching the news this weekend to see whether or not we would have an announcement from the Trump administration on a possible agreement to reopen the Strait of Hormuz and ensure that Iran never develops a nuclear weapon, among other objectives.",
+    "It would clearly be good for the region and it would be good for the world if the Iranian regime stops funding terror and permanently abandons its nuclear ambitious.",
+    "The price of oil went up substantially during the war, and so did the price of gasoline, the price of diesel, of kerosene, of avgas, and other fuels as well.",
+    "We have also tapped into commercial stocks and our emergency reserves through the Strategic Petroleum Reserve.",
+    "How is the war in Iran impacting towns and villages more than 6,000 miles away in Alaska so much more so than in other places?",
+    "If you stretched Alaska over the lower 48 States, we would stretch from Florida all the way to these Aleutian Islands, all the way out to California, practically from the Canadian border going south.",
+    "So many of these particularly small coastal communities, they are diesel-powered generation.",
+    "So they rely on diesel to be able to keep their lights on.",
+    "And sometimes they are offset by a little bit of wind, maybe a little bit of solar, but for the most part many of those communities are diesel-powered, so they rely on this as their fuel supply.",
+    "So as this Chamber considers an Iran supplemental to replenish missiles, interceptors, radars, drones, and the infrastructure that we have lost, I would hope that some of these options might be on the table because, for some of our fellow Americans--especially those in rural Alaska--the impacts of this war won't end when a peace agreement is signed; it is going to continue long after, making life even more challenging.",
+    "We are going to learn more this week.",
+    "As we do that, I hope that things will begin to reopen and that we will be able to stave off what has been rapidly approaching in our energy markets, and that is what I want to speak to more directly today.",
+    "I hope we are going to be able to avoid that, absolutely, because the consequences could be catastrophic in some places.",
+    "I will be going there in a couple weeks."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Disaster Relief (Executive Calendar)",
+   "title": "Disaster Relief (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgS2391.htm",
+   "sentences": [
+    "Mr. President, earlier this month, when I was back home in Alaska, I had an opportunity to have a two-part field hearing in my role as the chairman of the Senate Committee on Indian Affairs.",
+    "But history moves forward, and following the purchase of Alaska from Russia and in line with the assimilationist policies of the time, the Bureau of Indian Affairs began to build schools, and this caused families to settle then around the schools.",
+    "Others are becoming homeless and ending up on our streets.",
+    "I also want to acknowledge Assistant Secretary for Indian Affairs Billy Kirkland.",
+    "Sometimes it is easier to say ``Kip and Kwig.'' But I will tell you, so much of what we heard on that first day was really heartbreaking.",
+    "I will tell you, no doubt about it, these communities are resilient, and we saw that on display in our field hearings as leaders recounted their personal traumatic experiences but at the same time advocated for their communities and urged what the path forward should look like for their communities and also for others that may be threatened.",
+    "And we introduced the land conveyance bill, the land exchange bill.",
+    "I am not going to assign blame for it, but the housing is still a challenge.",
+    "And in the coming months, my team and I will continue working with Alaska communities, the State, and other Federal Agencies to chart a path forward.",
+    "And we will do better if we can pool experience and lessons learned and work from a centralized vantage point."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IRAN",
+   "title": "IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-30/html/CREC-2026-04-30-pt1-PgS2158-3.htm",
+   "sentences": [
+    "Mr. President, I am here to speak this afternoon about the conflict involving Iran and more specifically, the role of Congress within it.",
+    "The fact of the matter is, the Iranian regime is not an abstract adversary of America or anyone who supports free people and a more peaceful world.",
+    "There is no doubt that the Iranian people would be better without the Islamic Republic of Iran.",
+    "We now find our Nation at war with Iran, and I am not here to relitigate how we got into this conflict.",
+    "And this is where I think we are falling short, because we are approaching the 60-day mark under the War Powers Act.",
+    "That is why I have been working with several of my colleagues on an authorization for the use of military force.",
+    "We just had a vote on a War Powers Resolution.",
+    "Actually, we have had several votes on War Powers Resolution, and I have opposed each of them, including the one that we just took today.",
+    "So why AUMF and not a War Powers Resolution?",
+    "The War Powers Resolution we have voted on would have required the removal of U.S. forces from active hostilities.",
+    "Iran has been targeting United States personnel, our allies, and our partners across the region.",
+    "The War Powers Resolution has attempted to stop this conflict without establishing a path forward.",
+    "An AUMF recognizes the reality that the U.S. military is already engaged and provides structure and clarity by requiring the administration to define what they are trying to achieve and the means of achieving it.",
+    "Now, I am not introducing an AUMF today, but if we pass this 60-day mark from the start of hostilities with still a lack of a credible plan and information from the administration, it is something that I intend to introduce once the Senate reconvenes here.",
+    "They would have halted operations that were already underway without any framework for what comes next, and that is just something I can't support.",
+    "As part of that, I do not take their deployment lightly, and I do not accept that we should engage in open-ended military action without clear direction or accountability."
+   ]
+  },
+  {
+   "date": "2026-03-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgS1314.htm",
+   "sentences": [
+    "Mr. President, I come to the floor this evening to speak about the SAVE America Act.",
+    "I want to begin my comments this evening about the SAVE America Act and why I have spoken out in opposition to this measure--not because I disagree with what my colleague from Utah has shared--that it should be a privilege allowed to U.S. citizens, this privilege of the vote.",
+    "So it is the challenges we have specifically with registration, with the requirements for photo ID, and then I will speak a little bit to the mail-in voting limitation.",
+    "When I say support, there are no Federal resources that come and say: All right, you need to figure out how you can get more photo identification mobile units out to remote areas where it is hard to do.",
+    "Requiring proof of citizenship--OK.",
+    "But I am going to walk you through the challenge of what it means to meet a requirement that says you have to provide your proof of citizenship--you have to provide your documentation in person in order to register to vote.",
+    "That is where the voter ID comes into place.",
+    "This would be a major, major departure from how most Alaskans currently register to vote.",
+    "There were about 29,000 new voter registrations in 2024, and under the SAVE America Act, it would have effectively forced about 25,000 of these Alaskans to go to the Alaska Division of Elections offices to provide the documentation in order to certify their citizenship.",
+    "There are potentially other agencies that you can take documentation to, whether it is State public assistance agency, the department of motor vehicles, or other locations that the State has designated as voter registration agencies.",
+    "So, again, if you had my other big map, Alaska stretches from Florida to just about California, down from the southwest, practically up to the Canadian border.",
+    "So it is clear through the SAVE America Act that this is where Alaskans can present their documentary proof of citizenship.",
+    "What is less clear is whether or not you can present that documentary proof if you go to a division of motor vehicles, if you go to a State public assistance office, or if you go to other locations that currently provide voter registration services, although pretty low levels.",
+    "The SAVE America Act doesn't change the Federal law that mandates that States designate public assistance and disability offices as what they are calling voter registration agencies.",
+    "That might extend voter registration beyond, again, these six election regional offices, but the law is not consistently enforced.",
+    "In addition, none of these offices are equipped to handle in-person voter registration that the SAVE Act could force upon them.",
+    "So States can also continue to designate other nongovernment offices as voter registration offices, but only--so you have to agree to do that.",
+    "And I heard again the argument by my colleague from Utah, that we are not asking for fees to vote, but in order to get me to go, like, let's start: I am 18 years old, I want to register to vote, how am I going to do that?",
+    "And while disenfranchisement may not be the intent of the SAVE America Act--and I don't think that it is--I think we will see that.",
+    "So what is this young person going to have to do in order to register to vote?",
+    "So, again, the reality that we are looking at is it is costing thousands of dollars to just get me to the place so that I can register to vote.",
+    "Now the SAVE Act is going to require a new photo ID with specifics attached to it.",
+    "I have said I support voter ID.",
+    "They qualify for you to go through the TSA, but the act requires that you have a photo ID that has an expiration to it.",
+    "Others are saying: Well, if what you need is just a photo ID, you can have a State ID.",
+    "So there is an exception, and I want to acknowledge that that recognizes that voters would be able to provide the last four digits of their Social Security number and an affidavit attesting that they are unable to obtain a copy of a valid photo ID, but it says, ``after making reasonable efforts to obtain a copy.'' So I want to know: What does that mean?",
+    "This contradicts Alaska's long- allowed, no-excuse absentee voting by mail.",
+    "In the way the amendment is drafted, absentee ballots would only be allowed if the voter were a member of the armed services or is stationed abroad or out of State, unable to vote in person due to illness, infirmity, hospitalization, or physical disability, is the primary caregiver of an individual who is medically incapacitated, or will be absent from the State due to verified travel.",
+    "The bill then goes on to describe very different and specific chain- of-custody rules for a State's handling of absentee ballots, on top of the other changes that SAVE America would mandate be implemented immediately.",
+    "In addition to the geography, I am going to introduce you to the climate and to the weather because, in November, when we hold our elections--along with everybody else in a Presidential year--the weather is notoriously not good in Alaska.",
+    "So we have worked this long and hard and well to accommodate the many, many tens of thousands of Alaskans who will vote by mail.",
+    "I will restate again that the goals of what we are talking about with the SAVE America Act I support.",
+    "Only U.S. citizens should vote in our elections, and Federal law already-- already--makes it a crime for noncitizens to vote in Federal elections.",
+    "So I have asked: Do we see evidence for the need of these sweeping changes, given the lack of credible evidence of noncitizens voting at a significant level, certainly, in my State?",
+    "I am also not happy to see some provisions tucked into the substitute that target transgender individuals simply because there is, apparently, an opening to do so.",
+    "Again, the SAVE America Act may be well-intended, but how its goals are achieved matters, and the implementation matters.",
+    "So I am going to give you some specific examples.",
+    "So what has happened is Alaskans have taken their voting responsibility very seriously, and they are, like, I am not going to be shut down by the weather because remember, a few years ago, we had that bad storm, and we weren't even able to get out of the driveway to go to town.",
+    "So I am going to vote absentee.",
+    "I have introduced over a dozen amendments--germane amendments--to make what, I think, would allow this bill to work better."
+   ]
+  },
+  {
+   "date": "2026-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CAPE FOX LAND ENTITLEMENT FINALIZATION ACT OF 2025",
+   "title": "CAPE FOX LAND ENTITLEMENT FINALIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-26/html/CREC-2026-02-26-pt1-PgS697-2.htm",
+   "sentences": [
+    "Mr. President, as if in legislative session and notwithstanding rule XXII, I ask unanimous consent that the Committee on Energy and Natural Resources be discharged and the Senate proceed to the immediate consideration of the following bills en bloc; further, that the bills be considered read a third time and passed en bloc and that the motions to reconsider be considered made and laid upon the table, all en bloc: H.R. 2815, Cape Fox Land Entitlement Finalization Act of 2025 and H.R. 972, Sloan Canyon Conservation and Lateral Pipeline Act.",
+    "So my commitment to my colleagues on the Republican side of the aisle and on the Democrat side of the aisle is let's leave from here and let's make the calls to set up the sitdowns with our colleagues on the other side--in the other body--to talk about how we are going to move these in a way that is fair and does not penalize the Members, the communities."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE CENTERS FOR MEDICARE & MEDICAID SERVICES RELATI",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE CENTERS FOR MEDICARE & MEDICAID SERVICES RELATING TO \"PATIENT PROTECTION AND...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgS152-2.htm",
+   "sentences": [
+    "Within the Interior bill, we not only have management of our public lands, but we have oversight of the EPA, we have the arts, and we have the Indian health and Tribal programs.",
+    "Overall, we prioritized fiscal responsibility, cutting a total of $1.9 billion.",
+    "We have provided robust funding for the Bureau of Indian Affairs, for the Indian Health Service, and for similar Agencies.",
+    "We fully funded the Clean Water and the Safe Drinking Water State Revolving Funds.",
+    "We did instruct Agencies not to undertake certain activities that would waste taxpayer dollars and impose burdens, like the regulation of lead tackle and greenhouse gas reporting requirements for farmers and livestock producers.",
+    "We are going to live to fight another day on that because nobody is going to take that mountain from us."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Greenland (Executive Session)",
+   "title": "Greenland (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgS109.htm",
+   "sentences": [
+    "We just had a vote on a motion to discharge a War Powers Resolution as it relates to Venezuela.",
+    "We need to strengthen sanctions on Russia, which continues to prosecute this awful war against Ukraine.",
+    "It is deeply unsettling, if you understand the immense value of NATO--of the North Atlantic Treaty Organization--and how one cofounding member taking land from another shatters this crucial alliance forever.",
+    "We have seen that in statements coming from our NATO allies.",
+    "But Greenland is not Venezuela.",
+    "Greenland's Prime Minister has rejected any comparison to Venezuela and has emphasized that Greenland is a peaceful democracy.",
+    "Instead, at least publicly, the Trump administration is focused on acquisition, on ownership, even though every one of our strategic goals can be accomplished with Greenland as our partner, rather than a possession.",
+    "We will destroy--we will destroy--our strongest international alliance, and that is NATO, and that gives Russia and China exactly--exactly--what they are looking for.",
+    "And I think it is good news that we will be able to begin that process to advance this next minibus, these three bills--my Interior subcommittee appropriations as well as CJS, and Energy and Water--be able to advance those.",
+    "If we do the wrong thing in Greenland, we will not--we will not--end up with a more secure Arctic.",
+    "If we lose the people of Greenland, we will lose partners in Denmark and across Europe.",
+    "I urge--I urge--a reset in how we are conducting these discussions."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Healthcare (Executive Session)",
+   "title": "Healthcare (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgS8661.htm",
+   "sentences": [
+    "I said then that we are going to have to address the issue of the enhanced premium tax credits at the Federal level.",
+    "But what we are facing right now, literally, on this 11th day of December, the immediate issue is this expiration of the enhanced premium tax credits and this cliff that is in front of thousands of Alaskans--about 24,000 Alaskans.",
+    "The Democratic proposal would have extended the status quo under the Affordable Care Act which, as we have heard, has failed to restrain costs, and it has done so for longer than necessary to build the stability that I think we need to develop better policy.",
+    "I have put legislation on the table, a 2-year extension of the premium tax credits, to buy us time to avoid this situation.",
+    "I think there are so many that agree that we have got to have some extension of an enhanced premium tax credit.",
+    "We are going to need to address the fact that these come to an end at the end of this calendar year.",
+    "If we are going to be addressing a program and a continuation of it, I think it is our responsibility to make sure that we are making sure that these programs don't have ways-- that they are not being abused.",
+    "It is not because I fully endorse the Democratic proposal and I fully endorse the Republican proposal.",
+    "We had a chance to address it in budget reconciliation, but we couldn't agree to do so.",
+    "I refuse to accept that where we are right now, which is two failed bills, is the best that we can do.",
+    "But I will tell you the alternative, which is doing nothing and letting people--really letting people suffer here, I think, is worse.",
+    "The ingredients for what we are going to need have been out there.",
+    "We just need to get them all together and figure out how we are going to bake this."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. RES. 91 AND H.J. RES. 131",
+   "title": "S.J. RES. 91 AND H.J. RES. 131",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgS8503-15.htm",
+   "sentences": [
+    "Mr. President, I ask unanimous consent to have printed in the Congressional Record a letter from the Kaktovik Inupiat Corporation, dated December 3, 2025, expressing strong support for S.J. Res. 91 and H.J. Res. 131, joint resolutions providing for congressional disapproval of the Bureau of Land Management's 2024 Coastal Plain Oil and Gas Leasing Program Record of Decision under the Congressional Review Act."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. Res. 91 and H.J. Res. 131 (Executive Session)",
+   "title": "S.J. Res. 91 and H.J. Res. 131 (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgS8460.htm",
+   "sentences": [
+    "These resolutions would nullify the Biden administration's Coastal Plain Oil and Gas Leasing Program.",
+    "We opposed their Central Yukon Resource Management Plan, their integrated activity plan for our National Petroleum Reserve, and their decision to shut down any potential development on a very small part of the Coastal Plain.",
+    "So for those who have not followed this, the Coastal Plain is a 1.56 million-acre tract of land.",
+    "So if you look at the overlay here of Alaska, across the lower 48 States, the ANWR region is up here in the upper eastern corner.",
+    "The nonwilderness area--this is the 1002 area--is 1.5 million acres, which is approximately the size of Delaware.",
+    "The Coastal Plain is part of the Arctic National Wildlife Refuge, but in designating that as a refuge, Congress specifically reserved this area up at the top, on the slope there, for energy exploration and potential future development.",
+    "So when we refer to the 1002 area, it is this Coastal Plain here within the ANWR region.",
+    "Section 1002 of ANILCA starts with a purpose that explicitly authorizes ``exploratory activity within the coastal plain in a manner that avoids significant adverse effects on the fish and wildlife and other resources.'' So I think it is important that people understand this purpose, this distinction.",
+    "The 1002 area--this area here, the purple area--is not Federal wilderness.",
+    "The 1002 area, again, was specifically set aside to authorize exploratory activity.",
+    "I was chairman of the Energy and Natural Resources Committee at the time, and we added a title II to the Tax Cuts and Jobs Act.",
+    "We opened up a small fraction of the Coastal Plain to responsible development.",
+    "So, keep in mind, in this area that is the size of Delaware, we limited surface development to 2,000 acres, which is one one-hundredth of 1 percent--one one-hundredth of 1 percent--or one ten-thousandth of all of ANWR.",
+    "We have talked a lot on this floor and in other areas about the resources that we project to be in the ANWR area--prolific resources-- an estimated 7.7 billion barrels of oil, which would be enough to add a half million barrels a day to our Trans-Alaska Pipeline System for perhaps the next 40 years and help to fill up our pipeline.",
+    "And like so much of Alaska, the Coastal Plain is a special place.",
+    "We held our first lease sale in early 2021, but after that, everything seems to have just kind of gone in reverse, because on his first day in office, President Biden suspended the Coastal Plain Program.",
+    "They next decided to rewrite the Coastal Plain Program to make leasing unattractive and development impossible.",
+    "For starters, the Biden administration failed to meaningfully consult with the people who actually live on the North Slope, including those who live in Kaktovik, which is the only community within ANWR's boundaries.",
+    "The Biden administration issued a record of decision for a new Coastal Plain Program in November of 2024.",
+    "And if you spend time looking at it, you will understand why we are here, because it clearly and repeatedly contradicts Federal law, because the Tax Cut and Jobs Act opened the 1.56 million-acre Coastal Plain to potential development, subject to the 2,000-acre surface limit.",
+    "Gone was potential leasing on 74 percent of the 1002 area.",
+    "And the 400,000 acres that was left available, which is--I question the availability there-- but it amounted to less than was bid on at the 2021 lease sale.",
+    "So only about 5 percent--only about 5 percent--of the overall Coastal Plain was subject to standard lease terms and conditions under the Biden plan.",
+    "Interior acknowledged that, under their preferred alternative, future oil production from the Coastal Plain would decline nearly 80 percent.",
+    "Under the 2024 plan, there would be no leasing, as we clearly saw in a lease sale that was designed to fail and then did fail late last year.",
+    "There would be no development on the Coastal Plain, regardless of congressional action, support from Alaskans who live on the North Slope and within the Coastal Plain, or our national need for responsibly produced energy.",
+    "Bear in mind, this is all taking place right as the Biden administration was relaxing sanctions on countries like Iran, like Venezuela, allowing them to produce more and financially benefit from the development.",
+    "It didn't matter that they wound up in court and lost--and lost badly--as they did when a Federal judge ruled that their cancellation of the Coastal Plain leases was blatantly illegal.",
+    "We can return to balanced management on the Coastal Plain, while still protecting 99.99 percent of ANWR's surface acreage.",
+    "Re Support for S.J. Res. 91 and H.J. Res 131--Congressional Review Act Disapproval of the ``2024 BLM Coastal Plain Oil and Gas Leasing Program Record of Decision'' Hon."
+   ]
+  },
+  {
+   "date": "2025-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-08/html/CREC-2025-11-08-pt1-PgS8009-9.htm",
+   "sentences": [
+    "They keep the wheels on the bus, if you will.",
+    "And so I am asking that our Sergeant at Arms, along with those who have the oversight--it is the Senate Committee on Rules and Administration--I am asking them to take a look at this list and to make sure that we are treating the people who stand by us with the degree of respect that they deserve during a really difficult time."
+   ]
+  },
+  {
+   "date": "2025-10-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING THE NATIONAL EMERGENCY DECLARED TO IMPOSE DUTIES ON ARTICLES IMPORTED FROM CANADA",
+   "title": "TERMINATING THE NATIONAL EMERGENCY DECLARED TO IMPOSE DUTIES ON ARTICLES IMPORTED FROM CANADA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-29/html/CREC-2025-10-29-pt1-PgS7811.htm",
+   "sentences": [
+    "The 2022 plan admits--they admit--that it will reduce oil and gas activity, which was fine in the eyes of the Biden administration because, right as they were putting sanctions on Alaska, they were taking them off of places like Iran and Venezuela to free up those nations to produce more.",
+    "In addition to cutting off access, they refused to hold a single lease sale in the NPR-A during their time in office.",
+    "This was the big fight over ANWR.",
+    "They said: Don't go to ANWR; go to NPR-A. I have kind of outlined the history of this, some of the politics of it, but I would suggest that folks just shouldn't take the delegation's word for it either.",
+    "He sponsored it and I cosponsored it because the Biden administration imposed this management plan over not only our objections but the objections of leaders from across Alaska's North Slope."
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-27/html/CREC-2025-10-27-pt1-PgS7744-2.htm",
+   "sentences": [
+    "We have Capitol Hill police that are in the area.",
+    "The Capitol Hill police that I visit with on a daily basis outside and inside are not getting paid.",
+    "I have kids at home that are young kids, and they go to childcare.",
+    "This is a Capitol Hill police officer saying this.",
+    "And he says: So I still have to pay the childcare provider even though I have to come in and I am not getting paid.",
+    "I was talking with one Capitol Hill police officer on Thursday of last week, and he says: Every day, I go home and my wife says, ``So, did they open it up?",
+    "I am just going to do what I am going to do''--we are starting to feel this in real time, and it is having an impact not only financially but, I fear, from a mental health perspective.",
+    "Some of those Capitol Hill police officers still had to come in this weekend to keep this place moving.",
+    "And not just our military but our U.S. Coast Guard and those that are in law enforcement.",
+    "Maybe there is going to be a vote that would allow us to pay our U.S. Capitol Police.",
+    "And it can't be about Republicans winning and Democrats losing or Democrats winning and Republicans losing because right now--right now--those that are losing are the American people, those who are calling us up and saying Social Security hasn't released her survivor's benefits after her husband's death.",
+    "This is my mission, and I will be here.",
+    "So I think the suggestion about us maybe taking fewer long weekends is something not only that we should consider, but I am going to challenge this body.",
+    "Maybe there will be a way that the military, who has been paid up until the end of this month--that we will be able to make that next pay increment.",
+    "We need to act to end this shutdown, and I am going to call on all of my colleagues to stay here until we get it done."
+   ]
+  },
+  {
+   "date": "2025-10-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026--Resumed",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-09/html/CREC-2025-10-09-pt1-PgS7041-6.htm",
+   "sentences": [
+    "This is where Congress withdrew and conserved tens of millions of acres in our State in exchange for reasonable opportunities for economic development, whether it be within the 1002 Area, the Ambler Road, but this was the deal back in 1980.",
+    "So that is just misinformation out there.",
+    "This is the companion to the resolution that Senator Sullivan and I have introduced to reopen the Central Yukon resource management plan after BLM finalized it over our objection last fall.",
+    "I will give you a couple of examples here."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgS4381-6.htm",
+   "sentences": [
+    "What we do in this amendment is we tweak the rescission for the Corporation for Public Broadcasting to protect public broadcasting while removing the pot of money that can go directly to NPR."
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgS4358-6.htm",
+   "sentences": [
+    "Madam President, I know we are approaching the hour that was planned for the vote on this motion to discharge this rescissions package.",
+    "We do rescissions in our annual budget bills, in our own appropriations bills--in fact, bills that we are working on right now as appropriators.",
+    "There is a good reason, I think, that we haven't seen a successful rescissions package before the Senate in almost 33 years.",
+    "First, it is unclear to me how the specific accounts that are targeted for the rescission are going to be impacted.",
+    "We have got big, broad categories, but I haven't been given the comfort, if you will, that we are not impacting maternal and child health; that we are not impacting HIV/AIDS; that we are not impacting nutrition programs and programs related to tuberculosis, malaria, polio, neglected tropical disease, pandemic prevention, family planning.",
+    "I don't want us to go from one reconciliation bill to a rescissions package to another rescissions package to a reconciliation package to a continuing resolution.",
+    "When it comes to the Corporation for Public Broadcasting, my colleagues know I have been a strong supporter, and I will continue to be a strong supporter.",
+    "I am going to continue to be an advocate for the Corporation for Public Broadcasting.",
+    "We will be back with you with another round."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tariffs (Executive Session)",
+   "title": "Tariffs (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgS2540.htm",
+   "sentences": [
+    "We have all been talking about tariffs for a little bit, but yesterday was the day that really brought the focus to what was going on here in the United States.",
+    "At 12:01 in the morning on Wednesday, President Trump's tariffs on the countries with which the United States has had the largest trade deficits went into effect, on top of the 10-percent tariff rates that had previously applied to all countries, which had been initiated on Saturday, April 5.",
+    "And then just hours later yesterday afternoon, the President announced a 90-day pause on lowering reciprocal tariffs to then 10 percent--at the same time announced that he was raising tariffs on China to 125 percent.",
+    "We are seeing some of this play out literally as we speak; other countries that have approached the administration to have discussions about tariffs.",
+    "But bringing the world, potentially, to a--to the brink of a ruinous trade war certainly qualifies as a very unique point of leverage.",
+    "But I want to focus more on the process of how these tariffs were imposed because I believe--I believe--it is yet another example of Congress is choosing to cede its powers to the executive branch.",
+    "If the global implications of these tariffs have shown us nothing else, it is that measures that are as important as the issue be considered by the 535 elected individuals that are in tune with the American people rather than vesting that with just one individual acting unilaterally.",
+    "It is under article I section 8 of our U.S. States Constitution that clearly enumerates that Congress ``shall have Power To Lay and collect Taxes, Duties, Imposts, and Excises.'' In other words, the power to levy tariffs rests with us here in Congress.",
+    "So why--why--have we seen the Executive take control over tariff rates?",
+    "Following the disastrous Smoot-Hawley Act of 1930, which plunged our Nation deeper into the Great Depression, Congress passed the following legislation: First, it was the Reciprocal Trade Agreements Act of 1934, which authorized the President to make limited tariff rates without congressional review on top of negotiating bilateral reciprocal trade agreements.",
+    "Then it was the Trade Expansion Act of 1962, which broadened the President's trade powers to include multilateral trade agreements while also allowing the President to unilaterally impose tariffs if imports could threaten national security.",
+    "Then the Trade Act of 1974, which allowed the President to protect U.S. workers by adjusting tariffs if foreign countries engaged in unfair trade practices.",
+    "So in his April 2 Executive order, President Trump declared a national emergency because of ``a lack of reciprocity in our bilateral trade relationships'' and our ``trading partners' economic policies that suppress domestic wages.'' He is authorized--he is authorized to do so under the National Emergencies Act of 1976.",
+    "The President is clearly within his powers to impose tariffs on our allies like Mexico and Canada and the EU just as much as he is with our adversaries like China, Russia, and Iran.",
+    "President Trump, and President Biden before him, took this route because Congress has largely relegated tariff authority to the President through the laws that effectively cede to the Executive.",
+    "We also say a lot around here that ``business loves certainty.'' I would suggest the country's entire tariff regime being subject to the whims of one individual lends anything but certainty, and that is why-- that is why--I have signed onto Senator Grassley and Senator Cantwell's legislation.",
+    "They call it the Trade Review Act of 2025, and it would reclaim this branch's authority and duty to help manage tariffs as outlined in the U.S. Constitution.",
+    "The bill requires notice to the Congress of the imposition of--or increase in--any tariffs, requires notice to the Congress in 48 hours; and with that congressional notification, it has to include an explanation of the President's reasoning for imposing or raising the tariffs as well as providing an analysis of potential impact on American businesses and consumers.",
+    "Another provision within the Grassley-Cantwell act is, within 60 days, Congress would pass a joint resolution for approval on the new tariff.",
+    "Otherwise, all new tariffs on imports could expire on that deadline.",
+    "So what this act effectively would do would be to reaffirm Congress's role with regards to tariffs.",
+    "And the first question from one of the 16-year-olds in that group was: Can you tell me what is going on with tariffs?",
+    "Let's have a vote on the Trade Review Act.",
+    "I think it is time for Congress to reassert itself, whether it is on tariffs, whether it is on the power of appropriation, whether it is overseeing the bodies and the Agencies that we as a body have authorized.",
+    "I am not going to comment here on the floor today about the negotiating tactics of President Trump."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding (Executive Calendar)",
+   "title": "Government Funding (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgS1649-6.htm",
+   "sentences": [
+    "I am going to use a term that maybe some people are not familiar with."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ukraine (Executive Calendar)",
+   "title": "Ukraine (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgS1650.htm",
+   "sentences": [
+    "Mr. President, I am pleased to be on the floor today with the Senator from New Hampshire as well as other colleagues on both sides of the aisle to support Ukraine.",
+    "We are now more than 3 years into Russia's unprovoked brutal war against Ukraine.",
+    "I think we are encouraged by the news that we are seeing advance this afternoon with the talks in Saudi Arabia between the United States and Ukrainian officials as they talk about the potential for a cease-fire and potential for the United States to restore military support and intelligence sharing.",
+    "But when we talk about how the peace is gained, I think, again, the discussions that are had on this floor--those of us who have had an opportunity to go to Ukraine and see the situation on the ground ourselves, to speak with so many engaged in this effort--the stakes are not only about Ukraine's sovereignty.",
+    "As was stated, the Ukrainian people are not asking us to fight their war.",
+    "We have helped Ukraine push back the Russian advance.",
+    "It continues to help Ukrainian defenders hold the line there.",
+    "Senator Shaheen showed a picture of the Ukrainian families and the people in her State.",
+    "In Alaska, we have welcomed, we have embraced, we have helped situate Ukrainian families who have sought refuge, who are here in a place like Alaska, in a place like New Hampshire, because where they call home is not safe to be.",
+    "So how we can support them is important because when we support Ukraine, we are not just helping a nation in need, we are protecting and we are preserving the rules-based international order that has helped keep the peace for generations.",
+    "So if it is seen that we are walking away from Ukraine, if we embrace appeasement, we embolden every aggressor around the globe.",
+    "It is significant, yes, for Ukraine, but it is about democratic values and standing up for democratic values; it is about stopping the expansionist ambitions of authoritarian regimes.",
+    "Russia is not going to stop at Ukraine.",
+    "In 2005, in a state of the nation address, Putin said: The demise of the Soviet Union was the greatest geopolitical catastrophe of the century.",
+    "When Putin says that the ``ongoing collapse of Western hegemony is irreversible,'' he means us.",
+    "He wants NATO to be divided, and he wants the United States isolated.",
+    "Why are we going to start trusting and believing Putin's word now given his track record?",
+    "Russia started this conflict, and it is critical for us to stand with Ukraine to end it--not just because it is right but because it is necessary."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgS1367-3.htm",
+   "sentences": [
+    "We have got communities where power costs 10 times the national average, where gasoline can easily exceed $10 a gallon, and that includes diesel as well.",
+    "But when you are paying this much for diesel, for gasoline, for avgas, it impacts everything.",
+    "Right now, in our State, we have an oil pipeline that is one-quarter filled.",
+    "That oil pipeline was completed in 1974 and has been producing for America ever since.",
+    "America's resource production is good for the global environment because, when we are producing our resources--where we stop paying countries that have little to no environmental standards, no interest in reducing their emissions, and that often rely on child or slave labor and that, frankly, don't even like us--so why not seize the opportunities that we have here, benefit our own people, our own economies, and, again, benefit the global environment as well.",
+    "Almost in every village that I am going to, you are looking at prices over $50 a box--$50 for a box of Tide laundry detergent--and it is not because Tide is any more expensive than anything else.",
+    "I think we will all be better off."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Executive Orders (Executive Calendar)",
+   "title": "Executive Orders (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgS967-2.htm",
+   "sentences": [
+    "Colleagues know that I am the chairman of the Senate Indian Affairs Committee.",
+    "But one area that I want to make very, very clear to colleagues, as I have sought to make clear to those who are part of the incoming administration, that when we are speaking about our Indian Tribes and our Tribal programs, and the Federal funding that they receive, they do not fall into the category, if you will, of diversity, equity, inclusion.",
+    "And so when the Executive order was announced in the very first week of the Trump administration, there was confusion as to whether or not Indian and Tribal programs were impacted, and in that confusion, I think, a lot of undue stress and anxiety.",
+    "And so I immediately asked the OMB--I met with Mr. Vought personally, and I asked him to take steps immediately to reaffirm the unique treatment, the programs and services to Indian Tribes based on their political and their legal status, which is recognized in our U.S. Constitution, in our treaties, under many Federal laws and policies, to ensure that there is no disruption to our Federal Tribal programs.",
+    "We know--our Supreme Court has affirmed our Indian Tribes are a unique political class--this is not a racial one--and their sovereignty and their trust relationship with the Federal Government must be upheld."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATEMENTS ON INTRODUCED BILLS AND JOINT RESOLUTIONS",
+   "title": "STATEMENTS ON INTRODUCED BILLS AND JOINT RESOLUTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgS973.htm",
+   "sentences": [
+    "But much like Native lands, health, and culture, you just don't come in and say we are going to disregard, we are going to disrespect the rightful name, the name that had been in place for generations, for thousands of years.",
+    "So that is why today I have introduced legislation that would officially restore the federally recognized name of this quintessential mountain as Denali.",
+    "This is actually the fourth Congress that I have introduced this legislation.",
+    "Maybe I am persistent; I think Alaskans are just very resilient, and we will continue to be.",
+    "We will continue to be because this magnificent mountain is something that each of us holds in our hearts, that we hold dear."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 573",
+   "title": "Introductory Statement on S. 573",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgS974.htm",
+   "sentences": [
+    "But much like Native lands, health, and culture, you just don't come in and say we are going to disregard, we are going to disrespect the rightful name, the name that had been in place for generations, for thousands of years.",
+    "So that is why today I have introduced legislation that would officially restore the federally recognized name of this quintessential mountain as Denali.",
+    "This is actually the fourth Congress that I have introduced this legislation.",
+    "Maybe I am persistent; I think Alaskans are just very resilient, and we will continue to be.",
+    "We will continue to be because this magnificent mountain is something that each of us holds in our hearts, that we hold dear."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: U.S. SENATE COMMITTEE ON INDIAN AFFAIRS RULES OF PROCEDURE",
+   "title": "U.S. SENATE COMMITTEE ON INDIAN AFFAIRS RULES OF PROCEDURE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgS661-2.htm",
+   "sentences": [
+    "Mr. President, I ask unanimous consent that the Senate Committee on Indian Affairs Rules for the 119th Congress be printed in the Record.",
+    "There being no objection, the material was ordered to be printed in the Record, as follows: Senate Committee on Indian Affairs--119th Congress Committee Rules COMMITTEE ON INDIAN AFFAIRS RULES OF PROCEDURE Rule 1.",
+    "The Standing Rules of the Senate, Senate Resolution 4, and the provisions of the Legislative Reorganization Act of 1946, as amended by the Legislative Reorganization Act of 1970, as supplemented by these rules, are adopted as the rules of the Committee to the extent the provisions of such Rules, Resolution, and Acts are applicable to the Committee on Indian Affairs."
+   ]
+  }
+ ]
+}

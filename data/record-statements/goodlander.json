@@ -1,0 +1,112 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "goodlander",
+ "name": "Maggie Goodlander",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 9,
+  "sentences": 19
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Major Richard Star Act.",
+    "Mr. Speaker, I urge this House to take action today to honor the most patriotic and the best among us."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of this bipartisan package of amendments, which includes an amendment I am proud to be leading alongside my colleague from New Hampshire, Congressman Pappas.",
+    "Mr. Chair, I urge my colleagues to support this bipartisan amendment."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OFFICE OF RURAL AFFAIRS ENHANCEMENT ACT",
+   "title": "OFFICE OF RURAL AFFAIRS ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4916.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues from across this body and across our Nation to come together to deliver for our rural small businesses."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "Madam Chair, we worked in good faith to find common cause to stand up for our servicemembers and our shipyards, to stand up to determined and dangerous common enemies like Vladimir Putin, and to stand up for our allies like the people of Ukraine."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and to SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+   "sentences": [
+    "Mr. Chair, I urge my colleagues here in Congress to support my amendment which will do just that."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTOMOTIVE SUPPORT SERVICES TO IMPROVE SAFE TRANSPORTATION ACT OF 2025",
+   "title": "AUTOMOTIVE SUPPORT SERVICES TO IMPROVE SAFE TRANSPORTATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2132.htm",
+   "sentences": [
+    "Gary Gordon has truly dedicated his life to our country in uniform as an EMT, and as a mental health worker at our State hospital for more than two decades.",
+    "Mr. Speaker, I rise today in support of a bipartisan bill that I am very proud to be leading with my colleague and friend, Congressman Barrett."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC POPULISM",
+   "title": "ECONOMIC POPULISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+   "sentences": [
+    "He said that there is a right of every businessman--businesswoman, too--large and small, to trade in an atmosphere of freedom from unfair competition and domination by monopolies at home or abroad.",
+    "It has been said on the floor of this House and on the floor of the United States Senate that monopolies are inconsistent with our form of government.",
+    "Just like political power, economic power has to be checked, too, but the fact is that big corporations and monopolies have too much power in America today.",
+    "I come to Congress having worked in the Department of Justice in the Antitrust Division.",
+    "I hear about big health insurers who are charging people more for less, big health insurers who are rolling up the entire industry, from providers to hospital beds and to the prescription drugs that people rely on for their lives.",
+    "Our antitrust laws are alive and well, but they could use an update, and I look forward to working with everyone here today and in the days ahead to make that dream a reality because it is core to the American Dream."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS ADVOCACY IMPROVEMENTS ACT OF 2025",
+   "title": "SMALL BUSINESS ADVOCACY IMPROVEMENTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH739.htm",
+   "sentences": [
+    "I have traveled all across New Hampshire and heard directly from small business owners and employees about the concerns they have about the use of tariffs, which are an important tool in leveling the economic playing field, but they will have a real impact on our small businesses in New Hampshire.",
+    "Mr. Speaker, I rise in support of H.R. 832, the Small Business Advocacy Improvements Act.",
+    "In Congress, I am fighting every single day to ensure that New Hampshire small businesses get true advocates and a seat at the table in trade negotiations and discussions that impact our international and interconnected economy."
+   ]
+  }
+ ]
+}

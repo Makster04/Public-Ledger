@@ -1,0 +1,85 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "womack",
+ "name": "Steve Womack",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 19
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS ACT, 2027",
+   "title": "CONTINUING APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4731.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to support H.R. 9770, the Continuing Appropriations Act of 2027, in hopes that it is not necessary."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of this MILCON-VA bill.",
+    "There is some unfinished business, and we will roll up our sleeves, and we will get this work done."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1960.htm",
+   "sentences": [
+    "The T-HUD division invests in what matters to the American people: economic growth, safe and efficient mobility, and housing affordability.",
+    "At the same time, we preserve housing assistance for the most vulnerable, such as youth aging out of our Nation's foster care system, while promoting affordability through flexible, locally driven programs that allow communities to expand housing supply without the micromanagement of the Federal Government.",
+    "Madam Speaker, I rise in support of the consolidated appropriations package before the House today.",
+    "Madam Speaker, I am going to take that 30 seconds and brag on this guy right here, Tom Cole."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "The bill refocuses taxpayer dollars on priorities that matter to the American people: safety, mobility, economic growth, and housing affordability.",
+    "At the same time, we preserve housing assistance for the most vulnerable, while promoting affordability through flexible, locally driven programs that allow communities to expand housing supply without the micromanagement of the Federal Government.",
+    "We protect seniors, people with disabilities, and families facing homelessness, while ensuring that these programs are managed responsibly.",
+    "Just as importantly, this bill exercises strong oversight by eliminating funding for failed and mismanaged projects like California High-Speed Rail, reducing transit programs, and rightsizing staffing levels at HUD and the Department of Transportation, all without compromising safety or mission effectiveness.",
+    "It supports programs like the F-35 FMS mission at Ebbing Air National Guard Base in Fort Smith, Arkansas, and the E-7 Wedgetail, both of which ensure our military and allies have the capabilities they need to deter threats across the globe.",
+    "Madam Chair, I rise in support of the consolidated appropriations package before the House today.",
+    "I am grateful for the outpouring of support from Members from both sides of this aisle, and I urge a ``yes'' vote on the legislation."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TIPPED EMPLOYEE PROTECTION ACT",
+   "title": "TIPPED EMPLOYEE PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH685.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my legislation, the Tipped Employee Protection Act, which clarifies the definition of a tipped employee, providing long-term certainty for the service industry and, ultimately, protecting tipped employees' right to earn a living, a good living.",
+    "In fact, research shows that servers at full-service restaurants earn over twice--let me say it again, earn over twice--the Federal minimum wage.",
+    "Mr. Speaker, I support this bill, and I urge its passage."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING VETERAN ACCESS TO TELEMEDICINE SERVICES ACT OF 2025",
+   "title": "PROTECTING VETERAN ACCESS TO TELEMEDICINE SERVICES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4279.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 1107, the Protecting Veteran Access to Telemedicine Services Act of 2025.",
+    "Mr. Speaker, I urge my colleagues to join me in supporting this legislation and to act swiftly to make sure that our veterans never see their care delayed, denied, or diminished because of outdated laws."
+   ]
+  }
+ ]
+}

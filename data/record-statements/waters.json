@@ -1,0 +1,879 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "waters",
+ "name": "Maxine Waters",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 43,
+  "sentences": 480
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAIN STREET CAPITAL ACCESS ACT",
+   "title": "MAIN STREET CAPITAL ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4707.htm",
+   "sentences": [
+    "It did not have handouts for megabanks, Big Tech, payday lenders, debt collectors, or credit bureaus.",
+    "Voting for H.R. 6955 would add insult to injury by thwarting a future CFPB from issuing rules, such as fixing credit reporting or reining in debt collectors or abusive medical debt practices.",
+    "The largest labor union in the U.S., the AFL-CIO, and consumer advocates like Americans for Financial Reform and others wrote a letter saying that taken together, these changes would be more damaging than the sum of their parts, leaving the financial system dramatically weaker and more vulnerable to instability and crisis.",
+    "Mr. Speaker, instead of letting Wall Street put Americans and our economy at risk again, we should be addressing the affordability crisis caused by Trump's failed economic policies and endless war with Iran.",
+    "Let me be clear: Dodd-Frank has not led to bank consolidation.",
+    "Now, this bill will actually make it easier for more, not less consolidation.",
+    "Mr. Speaker, I am asking for a ``no'' vote on this bill because, in the final analysis, I know that if you get away with these deregulations, we are going to have consolidation.",
+    "As a matter of fact, many communities where there are residents who could afford the houses in their community are sold out to private equity firms and others who come and buy these houses for pennies on the dollar, but they won't sell them to you, Mr. Speaker, because you don't look like a big profitmaker for them.",
+    "My friend tells me that we should not be concerned about deregulation that puts these banks in a position where they are not only moving toward consolidation, but they are taking over banking in ways that will help them to get richer and richer.",
+    "Let me read from one of the letters we received: ``The National Community Reinvestment Coalition (NCRC) and our network of 700+ community organizations urge Members to oppose H.R. 6955, the Main Street Capital Access Act and vote no on the House floor.'' That is what we are being urged to do by our supporters. ``H.R. 6955 is a broad bank deregulation package that would weaken fair lending transparency, community accountability, bank supervision, and merger review.",
+    "The bill would reduce the tools regulators and communities rely on to detect redlining, monitor access to credit, evaluate bank mergers, prevent harmful consolidation, and hold financial institutions accountable to the people they serve.'' The signers of the letters don't just come from blue States but from all over the United States of America.",
+    "Do you want to advance Donald Trump's deregulatory agenda to help out his wealthy friends on Wall Street, or are you on the side of working families, labor unions, consumers, and civil rights groups like those all over the country who just want equal and fair access to affordable financial products and services?",
+    "Mr. Speaker, I will mention again one of the atrocities that I have been able to experience working on these issues.",
+    "Again, I will repeat: They know and understand when you have a problem, you can call a big bank and you will find nobody.",
+    "I urge my colleagues to please vote ``no'' on this bill, and support the citizens, support their constituents, not Wall Street."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING PRIVACY IN PURCHASES ACT",
+   "title": "PROTECTING PRIVACY IN PURCHASES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4441-2.htm",
+   "sentences": [
+    "Mr. Speaker, I strongly oppose this bill because it limits efforts to detect and investigate gun violence and acts of terrorism.",
+    "Before I discuss the bill, let's start with a few sobering statistics: 46,000 Americans die from gun violence every year.",
+    "That comes out to an average of more than 125 Americans losing their life each day due to gun violence.",
+    "In the past decade, more than 1.2 million Americans have been shot, with more than 400,000 who died from gun violence.",
+    "Most of these data points come from GIFFORDS, a gun violence prevention group set up by our former colleague in the House, Gabby Giffords.",
+    "Many different types of retailers have unique MCC codes, including florists, barbershops, art dealers, automotive tire shops, and even candy stores.",
+    "This information could help law enforcement track suspicious purchases and prevent even more gun violence.",
+    "Leading gun safety groups, including Brady, Community Justice, Everytown for Gun Safety, GIFFORDS, Guns Down America, and Newtown Action Alliance, sent the House a letter to urge Members to vote ``no'' on this harmful legislation.",
+    "None of the credit card operators, payment processors, or banks were alerted to the types of transactions being undertaken, and they did not notify law enforcement officials about these purchases.",
+    "We don't know for sure, but had these MCC codes been in place for gun shops back then, a financial institution would have been empowered to report these suspicious credit card purchases to law enforcement.",
+    "Americans are tired of the senseless gun violence and want Congress to do something to curb it.",
+    "Mr. Speaker, I yield 2 minutes to the gentleman from California (Mr. Thompson), who is a leader in this Congress against gun violence.",
+    "Mr. Speaker, I yield 2 minutes to the gentleman from Florida (Mr. Frost) who has been active on this issue of gun violence.",
+    "Mr. Speaker, I now yield 1 minute to the gentleman from Texas (Mr. Green), the ranking member of the Oversight and Investigations Subcommittee, who has always been an advocate against gun violence.",
+    "The codes themselves don't identify what is purchased, but it might have triggered a flag for unusual and suspicious purchases that get reported to law enforcement.",
+    "Even if it is a fraction of the 416,000 who have died from gun violence over the past decade, wouldn't it be worth it?",
+    "As I conclude, I will point out that when our committee held a hearing last year, none of the majority's witnesses said a single positive thing about this bill in their testimony."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgE645.htm",
+   "sentences": [
+    "Madam Speaker, the 21st Century Road to Housing Act is historic legislation that will improve housing affordability and access in this country for millions of Americans."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL EXPLOITATION PREVENTION ACT OF 2025",
+   "title": "FINANCIAL EXPLOITATION PREVENTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4222-2.htm",
+   "sentences": [
+    "The introduction of artificial intelligence is making these scams all the more prevalent and harmful.",
+    "While this bill could empower financial industry participants to help protect seniors when they suspect fraud, it is absurd that, at the same time, Republicans are cheering on Trump's attempts to shut down the Consumer Financial Protection Bureau and defang and defund the SEC.",
+    "I want the SAVE America Act that will undermine voting and strip those who have been protected by the Civil Rights Act and the Voting Rights Act from being able to vote in a way that our democracy demands and the Constitution protects.",
+    "Mr. Speaker, with the advent of new technologies like artificial intelligence, senior fraud is more prevalent today than it ever has been, and it is only going to get worse.",
+    "As a matter of fact, the President of the United States said he loves inflation, for example, and we know what his tariffs have done to our economy.",
+    "Many of them don't have a lot of money, and if they are ripped off, they may end up homeless and on the street.",
+    "We are going to support a bill to keep people off the street, homelessness.",
+    "Mr. President, get us out of this war in Iran.",
+    "Mr. Speaker, I rise in support of H.R. 2478, the Financial Exploitation Prevention Act of 2025, sponsored by Representative Wagner.",
+    "I certainly support it, but we need more.",
+    "We are going to support a bill that ensures that people have an opportunity to pursue their talent and to do what they can to make their lives more comfortable."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4151-3.htm",
+   "sentences": [
+    "This bill represents the most significant housing reform package in decades and will finally get America back on track to building affordable housing.",
+    "Our bill includes dozens of bipartisan provisions to build new housing, lower mortgage and rental costs, expand homeownership, modernize Federal housing programs, prioritize home buyers and renters over corporate landlords, and support community bankers that finance affordable housing development and mortgages each day.",
+    "Not surprisingly, 42 million American households are cost-burdened, and most shamefully, 800,000 people experience homelessness on any given night.",
+    "By working together, we will deliver a stronger, more impactful legislative package to be signed into law, one with more practical solutions and affordable housing opportunities for American families than before.",
+    "The bill will reduce unnecessary barriers to housing development, expand financing for housing and community investment, and support the development of innovative housing like modular homes and accessory dwelling units.",
+    "It creates databases for available publicly owned lands so communities know where they can build.",
+    "The bill provides a range of new protections for renters, including a hotline to file complaints with HUD and corporate landlords.",
+    "The bill increases access to smaller-dollar mortgages under $100,000, and the bill, finally, codifies the Community Development Block Grant-Disaster Recovery Program, which will help expedite flexible funding to communities seeking to rebuild homes after major disasters like hurricanes and wildfires.",
+    "Importantly, this bill includes the House language to responsibly rein in corporate landlords by banning large institutional investors from purchasing single-family homes but without halting construction of new rental housing or evicting families in the middle of a housing crisis.",
+    "Tenants will have a national resource center to file grievances about corporate landlords, to which HUD will respond, and large institutional investors will be publicly named in an annual report along with the number and location of their properties.",
+    "I am very proud of this legislation, and I urge my colleagues to join me in this first step to finally addressing our Nation's affordable housing crisis.",
+    "Mr. Speaker, I yield 3 minutes to the gentleman from Missouri (Mr. Cleaver), who authored several bills in this legislation, including H.R. 1981, the Choice in Affordable Housing Act; H.R. 5878, the HOME Reform Act; and H.R. 5938, the Innovation Fund Act.",
+    "Mr. Speaker, I yield 1 minute to the gentleman from Nevada (Mr. Horsford), who is a strong advocate for affordable housing and a former member of our committee.",
+    "Mr. Speaker, I rise in support of H.R. 6644, the 21st Century ROAD to Housing Act, sponsored by Chairman Hill and myself.",
+    "Our country must do better, and today we will do better by passing H.R. 6644.",
+    "We are now leading to a point where we will be able to make all of those projects more livable.",
+    "We will be able to have the constituents in those projects understand how their lives can be bettered."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 25TH ANNIVERSARY OF 9/11 COMMEMORATIVE COIN ACT",
+   "title": "25TH ANNIVERSARY OF 9/11 COMMEMORATIVE COIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3579.htm",
+   "sentences": [
+    "In the aftermath, countless people across the country continued to suffer from the physical and mental health impacts of this tragedy.",
+    "Mr. Speaker, I rise in support of H.R. 1993, the 25th Anniversary of 9/11 Commemorative Coin Act, sponsored by Representative Goldman of New York.",
+    "The National 9/11 Memorial & Museum at the World Trade Center carries out this important work by providing services and engaging in educational efforts, which is why I am glad that we are supporting this bill today."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KEEPING DEPOSITS LOCAL ACT",
+   "title": "KEEPING DEPOSITS LOCAL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3582.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3234, the Keeping Deposits Local Act, sponsored by Representative Emmer and our former Diversity and Inclusion Subcommittee chairwoman, Mrs. Joyce Beatty.",
+    "After convening a roundtable with industry experts and consulting extensively with our former chairman, Mr. McHenry, I introduced my bill, H.R. 4551, the Employee Paycheck and Small Business Protection Act.",
+    "In a letter from when we marked up this bill we are considering today, the Independent Community Bankers of America wrote: ``ICBA looks forward to working with the committee on the broader, comprehensive deposit insurance coverage level debate and ensuring more small businesses can have important protection for their deposits.'' We should do more, Mr. Speaker, but in the meantime, I urge my colleagues to support H.R. 3234, which will complement broader deposit insurance reform efforts."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN ACCESS TO BANKING ACT",
+   "title": "AMERICAN ACCESS TO BANKING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3584.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4544, the American Access to Banking Act that I sponsored."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMUNITY BANK DEPOSIT ACCESS ACT OF 2025",
+   "title": "COMMUNITY BANK DEPOSIT ACCESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3586.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 5317, the Community Bank Deposit Access Act of 2025, sponsored by Chairman Hill.",
+    "Mr. Speaker, I urge the chairman to work with me and our members to advance broad deposit insurance reform.",
+    "In the meantime, I urge the House to advance the chairman's bill, which serves as a good, complementary reform to help our smallest banks compete."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR THE CONCURRENCE BY THE HOUSE IN THE SENATE AMENDMENT TO H.R. 6644, WITH AMENDMENT",
+   "title": "PROVIDING FOR THE CONCURRENCE BY THE HOUSE IN THE SENATE AMENDMENT TO H.R. 6644, WITH AMENDMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3588.htm",
+   "sentences": [
+    "Mr. Speaker, our housing bill is the most comprehensive housing reform bill in a generation and is a huge step toward finally addressing the affordable housing and homelessness crises in our country.",
+    "The age of a median first-time homebuyer is now 40 years old.",
+    "What is most shameful is that nearly 800,000 people experience homelessness on any given night.",
+    "However, the Senate also added a poorly drafted ban on large institutional investors buying new single-family homes.",
+    "I say this not as someone who is a fan of private equity ownership of these homes, but as someone who was concerned that the Senate's drafting was unconstitutional and could lead to thousands of families and persons living with disabilities being evicted, students and servicemembers without housing options, and private equity being incentivized to use certain types of contracts with tenants that have been rife with abuses.",
+    "Second, we added a new section 107, called Housing Supply Frameworks.",
+    "Fifth, we are revising section 1001 of the bill, which relates to private equity ownership of single-family homes, by replacing our text with the Senate-based language while removing the divestment requirement, changing the definition of build-to-rent, and inserting a renter hotline that requires HUD to respond to renter complaints.",
+    "We do this by: creating a pilot to increase access to small-dollar mortgages, especially in rural areas; allowing housing cooperatives, a type of affordable housing option, to participate in Federal programs; creating local databases about unused, government- owned land--very important; increasing access to more family-sized affordable housing units; and adding in community bank and credit union reforms so that these small institutions can help.",
+    "Finally, the Senate had a temporary ban on central bank digital currencies, that is the CBDC.",
+    "This is the status quo we have in effect today as Trump's new Fed Chair has stated that he will not issue a CBDC during his tenure.",
+    "More importantly, this temporary ban is only partial and will still allow the Fed to study other forms of CBDC, like the ones that more closely parallel how currency is used in our economy.",
+    "We are now using our experiences working on housing bills to interject into how we are going to be able to get more housing for all of those who are in desperate need and to get the homeless off of our streets.",
+    "Mr. Speaker, I say to Chairman Hill that in light of changes we agreed to today, I want to take a moment to make clarifications about the authority the Treasury has and should use related to the provisions banning large institutional investors from purchasing single-family homes.",
+    "This bill was also not intended to include or impact nonprofits or community land trusts that purchase single-family homes.",
+    "These entities are not for-profit, large institutional investors.",
+    "In addition, large institutional investors are still prohibited from buying properties with land contracts, again, as defined in our earlier May 15 posted draft.",
+    "Large institutional investors should only be allowed to purchase foreclosed, federally backed properties after individuals and approved nonprofits have been given the first chance to buy them through a 30-day first look period, as described in our earlier May 15 posted draft.",
+    "Mr. Speaker, I rise in support of H. Res. 1299, amending H.R. 6644, the 21st Century ROAD to Housing Act, sponsored by Chairman Hill and me.",
+    "While I support our final agreement, we must inform our colleagues about how this bill has changed since it was posted on Friday, as they will be voting on it tomorrow, so I am going to describe those changes here.",
+    "As a result, we will be providing more relief and support to millions of families and communities all across the Nation.",
+    "Mr. Speaker, I urge Members to join me in passing this bill."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVE OUR SHRIMPERS ACT",
+   "title": "SAVE OUR SHRIMPERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3352-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2071, the Save Our Shrimpers Act."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPERVISORY MODIFICATIONS FOR APPROPRIATE RISK-BASED TESTING ACT OF 2025",
+   "title": "SUPERVISORY MODIFICATIONS FOR APPROPRIATE RISK-BASED TESTING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3353.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4437, the Supervisory Modifications for Appropriate Risk-based Testing Act of 2025, sponsored by Representative Timmons and our Subcommittee on Financial Institutions Ranking Member (Mr. Foster).",
+    "If Members want to do something meaningful to help our community banks and credit unions, then I urge them to support this bill."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADVANCING THE MENTOR-PROTEGE PROGRAM FOR SMALL FINANCIAL INSTITUTIONS ACT",
+   "title": "ADVANCING THE MENTOR-PROTEGE PROGRAM FOR SMALL FINANCIAL INSTITUTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3356.htm",
+   "sentences": [
+    "I rise in support of H.R. 3709, the Advancing the Mentor-Protege Program for Small Financial Institutions Act sponsored by our colleague and former chair of our Diversity and Inclusion Subcommittee, Representative Joyce Beatty."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAILORED REGULATORY UPDATES FOR SUPERVISORY TESTING ACT OF 2025",
+   "title": "TAILORED REGULATORY UPDATES FOR SUPERVISORY TESTING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3357.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4478, the Tailored Regulatory Updates for Supervisory Testing Act of 2025, sponsored by the gentleman from North Carolina (Mr. Moore) and the gentleman from New York (Mr. Torres).",
+    "By raising the threshold to $6 billion today, we will update this threshold while covering roughly the same portion of banks."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANOTHER BLIGHT ON AMERICAN HISTORY",
+   "title": "ANOTHER BLIGHT ON AMERICAN HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3379-3.htm",
+   "sentences": [
+    "From day one, he has worked to dismantle diversity, equity, and inclusion and programs all across corporate America and throughout the Federal Government, fueling layoffs, shrinking opportunity, and pushing Black and Brown Americans further out of positions of power and economic mobility.",
+    "Throughout racist redistricting schemes, backed by Republican legislatures and enabled by the Supreme Court, which recently voted to gut the Voting Rights Act, they are attempting to eliminate or weaken districts represented by Black lawmakers and potentially wipe out nearly a third of the Congressional Black Caucus.",
+    "They know they cannot defend Donald Trump's failed economic agenda, rising costs, or assaults on working families, so instead, they are trying to rig the system and silence the very communities most harmed by their reckless policies.",
+    "First, they attack DEI and celebrate the rollback of programs that helped open the doors for Black and Brown Americans in business, banking, and government.",
+    "I am not afraid of the Supreme Court, not afraid of the opposite side of the aisle, not intimidated by anything or anybody.",
+    "Rest assured, I will not be silent.",
+    "I will continue fighting to protect our democracy, defend the Voting Rights Act, and ensure Black communities and all underserved communities are heard, represented, and respected in the United States Congress.",
+    "We will be in our universities.",
+    "We will be in the Halls of Congress.",
+    "We will go to the White House.",
+    "We will do everything that we need to do to show not only Trump, but America in general, that we are not about to be intimidated by someone who disrespects our history and disrespects the sacrifices that have been made by our forefathers and foremothers.",
+    "We know how to fight, and we are going to fight.",
+    "We are going to fight like you have never seen us fight before.",
+    "We will be in the suites everywhere."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPU",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPUBLIC OF IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2395.htm",
+   "sentences": [
+    "Mr. Speaker, I am especially concerned about Iran's stockpile of enhanced uranium, which could be used at any time.",
+    "I know that the President has said that the nuclear capability of Iran had been obliterated.",
+    "However, prior to the first Trump administration, the U.S. was able to monitor the status of Iran's uranium under an agreement called the ``Joint Comprehensive Plan of Action,'' the JCPOA.",
+    "The U.S. negotiated this agreement with Iran in 2015, but Trump withdrew from the JCPOA in 2018.",
+    "Now, we have no way to track the status of Iran's dangerous uranium stockpile.",
+    "Mr. Speaker, I urge my colleagues to vote for the resolution."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: $2.50 FOR AMERICA'S 250TH ACT",
+   "title": "$2.50 FOR AMERICA'S 250TH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2048.htm",
+   "sentences": [
+    "The Treasury's decision to put Donald Trump's face, a living President, on our currency is illegal and reminiscent of a monarchy, which 250 years ago our country firmly rejected.",
+    "Mr. Speaker, I urge my colleagues to support this bill, and I thank Mrs. Watson Coleman for all of the work that she has put in on America250 Caucus."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2050.htm",
+   "sentences": [
+    "Our housing and homelessness crisis has reached a breaking point, as millions of Americans each night struggle to find a decent, stable, and affordable place to live.",
+    "On any given night, 800,000 people are experiencing homelessness in the United States of America.",
+    "As the lead Democrat on the House Financial Services Committee, it has been my mission to fight to end this homelessness and housing crisis.",
+    "I am excited that it includes my bill, H.R. 5077, which would allow cities to use CDBG funds toward affordable housing construction.",
+    "It includes my bill, H.R. 6773, which directs cities across America to finally publish a database of their unused land so that developers may be able to bid on it and build more housing.",
+    "We can't pass this bill, call it a night, and then claim that this affordable housing and homelessness crisis is over.",
+    "Among meaningless tweets, empty promises, costly tariffs, and ridiculous policies like the 50- year mortgage, while this affordability crisis rages on, Congress can act tonight to support Americans who are looking for real housing solutions.",
+    "Mr. Speaker, I rise in support of H.R. 6644, the Housing for the 21st Century Act, sponsored by myself and, of course, by Representatives Hill, Cleaver, and Flood."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF A RESOLUTION RECOGNIZING THE 90TH ANNIVERSARY OF THE NATIONAL COUNCIL OF NEGRO WOMEN",
+   "title": "INTRODUCTION OF A RESOLUTION RECOGNIZING THE 90TH ANNIVERSARY OF THE NATIONAL COUNCIL OF NEGRO WOMEN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgE1228-3.htm",
+   "sentences": [
+    "I urge my colleagues to join me in supporting this resolution and in celebrating the National Council of Negro Women on its 90th anniversary. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INCREASING INVESTOR OPPORTUNITIES ACT",
+   "title": "INCREASING INVESTOR OPPORTUNITIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5534.htm",
+   "sentences": [
+    "At a time when the President's disastrous tariff policies are causing many Americans to struggle just to pay the bills, the INVEST Act would reduce Federal investor protections, jeopardizing the retirement savings of millions of regular, hardworking Americans, but it didn't have to be this way.",
+    "It is not surprising that, while those Wall Street middlemen are heavily lobbying this bill, the groups and unions representing the teachers, nurses, and other workers who would be affected strongly oppose.",
+    "It does so by allowing what is known as closed- end funds, which is similar to mutual funds and used by many everyday investors to invest up to 100 percent of their assets in shares of private equity and venture capital funds and directly into the unregistered shares of private companies.",
+    "This is because private assets are very different from the publicly traded stocks and bonds that most folks are used to investing in.",
+    "Unlike publicly traded stocks, private assets are not registered with the SEC, meaning Wall Street's cop on the block and all of the ensuing protections that come from its oversight are not in place.",
+    "These various provisions and the bill as a whole are opposed by the groups who are fighting on behalf of everyday Americans, including, again, the AFL-CIO; American Federation of Teachers; Americans for Financial Reform; Public Citizen; the Service Employees International Union; Communication Workers of America; American Federation of State, County, and Municipal Employees; National Education Association; National Nurses United; and the United Auto Workers.",
+    "As I mentioned, the teachers and the nurses and all of the other labor unions, et cetera, are really, really worried that these poison pills will do so much harm that we had to plea but walk away from what we thought we could get as a bipartisan operation because of the poison pills at the last minute.",
+    "In fact, this section is opposed by major unions and investor protection groups.",
+    "Let me make sure that it is very well understood who is opposing these poison pills: American Federation of Labor and Congress of Industrial Organizations, AFL-CIO; Communications Workers of America, CWA; Consumer Federation of America, CFA; National Education Association, NEA; American Federation of Teachers, AFT; National Nurses United, NNU; Public Citizen; Service Employees International Union, SEIU; The Academy of Financial Education, AFE; the United Auto Workers, UAW; North American Securities Administrators Association, NASAA; and American Federation of State, County and Municipal Employees, AFSCME.",
+    "The bill is opposed by the AFL-CIO; the American Federation of Teachers; the Americans for Financial Reform; Public Citizen; Service Employees International Union; Communications Workers of America Union; American Federation of State, County, and Municipal Employees; National Education Association; National Nurses United; and the United Auto Workers.",
+    "These unions represent over 20 million Americans.",
+    "At a time when small businesses are struggling to stay afloat due to the impacts of Trump's harmful tariffs and disastrous economic policies, it is crucial that small businesses are represented through every step of the regulatory process.",
+    "Mr. Chair, with costs soaring and small businesses struggling to weather the impacts of the Trump tariffs and his administration's war on small businesses, it is crucial that we do what we can to make sure government is working for them, not against them.",
+    "Her amendment requires foreign hedge funds to put in place anti-money laundering policies that will ensure the safety of our markets and prevent bad actors from using these funds to launder criminal profits.",
+    "This amendment is supported by all of those organized unions and advocacy groups that I have spoken about earlier this evening.",
+    "Mr. Chair, I rise today in strong opposition to H.R. 3383, the INVEST Act, which is an end-of-year holiday gift to Wall Street, paid for by the hard-earned savings of teachers, nurses, seniors, and other hardworking Americans.",
+    "Mr. Chair, I will tell you about these poison pill provisions and what they will do.",
+    "Mr. Chair, we support capital formation.",
+    "What we don't support is these poison pills that will just do the kind of deregulation that would put so many hardworking people at risk.",
+    "Mr. Chair, for that reason, we can't vote for it.",
+    "We cannot vote for it with these poison pills.",
+    "That is why I urge my colleagues to vote against this bill with these poison pills in it that I have described over and over again.",
+    "Mr. Chairman, I rise in opposition to the amendment.",
+    "Mr. Chair, I oppose Mr. Self's amendment to strike section 307 of the INVEST Act.",
+    "I urge my colleagues to reject this amendment so that investors have the basic information they need about a company's governing structure to make the best investment decisions for themselves.",
+    "I oppose Mr. Self's amendment to limit the ability of the SEC to carry out its mandate in section 105.",
+    "I urge my colleagues to vote ``no'' on this amendment.",
+    "Mr. Chair, I rise in support of this amendment originally offered by my colleague, Representative Garcia.",
+    "I urge all Members to vote ``yes'' in support of my amendment to prohibit junk fees and make all other fees more transparent to investors.",
+    "I am sure you can agree that every American should have a right to know what they are paying for, and that is why I am asking for a vote on this amendment."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HUD TRANSPARENCY ACT OF 2025",
+   "title": "HUD TRANSPARENCY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4944.htm",
+   "sentences": [
+    "That said, and while I support this bill, this debate ignores the real and urgent challenges facing HUD and our housing market, and how the President and his administration are actively taking steps to undermine efforts to address the affordable housing crisis.",
+    "If Republicans wanted to lower housing costs, why aren't they calling to exempt materials like lumber from Trump's tariffs or why aren't we negotiating the ROAD to Housing Act so that it can be included in NDAA and quickly passed into law?",
+    "Mr. Speaker, HUD plays a vital role in providing safe and affordable housing to families all across the United States.",
+    "Mr. Speaker, I rise in support of H.R. 225, the HUD Transparency Act of 2025, sponsored by Representative De La Cruz.",
+    "We will join Republicans in passing this bill today, but we need to finally get to work to deliver real change for the American people."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING CAPITAL ALLOCATION FOR NEWCOMERS ACT OF 2025",
+   "title": "IMPROVING CAPITAL ALLOCATION FOR NEWCOMERS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4950.htm",
+   "sentences": [
+    "I rise in support of H.R. 4431, the Improving Capital Allocation for Newcomers Act of 2025, or ICAN Act, offered by Mr. Timmons and Ms. Pettersen.",
+    "Mr. Speaker, I urge all colleagues to support H.R. 4431 to make it easier for capital to flow to startups and small businesses."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPANDING WKSI ELIGIBILITY ACT",
+   "title": "EXPANDING WKSI ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4952.htm",
+   "sentences": [
+    "Think of WKSI status like having frequent-flyer privileges.",
+    "Mr. Speaker, I rise today in support of H.R. 4430, which expands the number of public companies that can qualify as a well-known seasoned issuer, or WKSI.",
+    "Mr. Speaker, I support this bill and urge all Members to do the same."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE HORRORS OF SOCIALISM",
+   "title": "DENOUNCING THE HORRORS OF SOCIALISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4883-2.htm",
+   "sentences": [
+    "Mr. Speaker, I wish we were here on the House floor this morning debating solutions that would reduce grocery bills, lower housing costs, end Trump's tariffs that are strangling American small businesses and manufacturers, solve the Republican healthcare crisis, or any legislation that allows Americans to afford to live through the catastrophic economic policies of Trump and the Republicans.",
+    "What is worse is that this very resolution goes further by using the specter of socialism to undermine some of the most important government programs in our country like Social Security, Medicare, Medicaid, and ObamaCare.",
+    "Instead of working with Congress to end the shutdown or with local communities to blunt the impacts of the shutdown, it decided to use the full force of the United States Government to make sure these American families went hungry and fought twice in the Supreme Court to block legally available funds from being used to help feed them.",
+    "All of this because Republicans want to raise the cost for people with ObamaCare health insurance.",
+    "Somehow, once again, this resolution fails to condemn some of our history's most terrible dictators, like Adolph Hitler and modern-day dictators like Vladimir Putin, who is responsible for killing countless people in Ukraine, or President Xi who basically runs actual concentration camps for ethnic minorities.",
+    "It is probably because President Trump has said he thinks Putin has done ``a great job,'' and is ``a genius,'' or maybe because he thinks President Xi ``is really a friend of mine.'' In line with these other authoritarian regimes, just this week, Trump said Democrats in the House and Senate had committed ``seditious behavior, punishable by death'' and reposted a post saying: ``hang them.'' We should be working as Congress to denounce these horrific words, not beloved government programs like Medicare and Medicaid.",
+    "Since taking office, they have issued their own stablecoins and meme coins and various crypto products, even as Congress was in the middle of considering legislation and regulators were drafting rules.",
+    "In fact, the Trump family is more than $1 billion richer from crypto alone since Trump took office, and Trump's billionaire buddies have also made fistfuls of money as the rest of America struggles just to put food on the table.",
+    "He is sending $40 billion to bail out Argentina and his billionaire buddies and has even hosted Great Gatsby- themed parties at Mar-a-Lago.",
+    "Mr. Speaker, for those who are expecting their Social Security checks this month, turn them down if you think that is socialism.",
+    "It is estimated that the illegal disastrous tariffs Trump has imposed will amount to an average tax increase of $1,200 in 2025 and $1,600 in 2026 per household and represent the largest U.S. tax increase as a percent of GDP since 1993.",
+    "Although he campaigned on bringing back manufacturing to the United States, President Trump's tariff policies have killed 42,000 manufacturing jobs.",
+    "The President of the United States refuses to accept the facts, and he keeps supporting these tariffs.",
+    "Are the fire departments, police departments, schools, and hospitals socialism?",
+    "Let's talk about our Social Security.",
+    "Yes, I fought hard to keep the President of the United States, the Cabinet, and the Members of Congress from owning cryptocurrency, but unfortunately, they are enriching themselves every day.",
+    "Let's talk about how people are sleeping on the street, homeless, when we are cutting Section 8 programs in housing.",
+    "Republicans have always opposed Medicaid and Medicare.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this resolution.",
+    "If they keep it up, I am going to name all of the Republicans who took PPP money.",
+    "I am going to name them who are taking advantage of other programs that they call socialist.",
+    "When the next election comes, we are going to see what happens."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "Another amendment that the Republicans are blocking would increase funding for affordable housing.",
+    "For all of these reasons and many more, I urge a ``no'' vote on H.R. 3838."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN DEFENSE OF LISA COOK",
+   "title": "IN DEFENSE OF LISA COOK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3745.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of Lisa Cook.",
+    "I rise to support her because there is an attempt to fire her if she does not retire or resign.",
+    "We cannot allow the President of the United States to own, dictate, and tell the Federal Reserve what they can and cannot do."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHINA FINANCIAL THREAT MITIGATION ACT OF 2025",
+   "title": "CHINA FINANCIAL THREAT MITIGATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3620.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 1549, the China Financial Threat Mitigation Act, sponsored by Mr. Williams of Texas and Mr. Gottheimer of New Jersey."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING MULTI-CLASS SHARE DISCLOSURES ACT",
+   "title": "ENHANCING MULTI-CLASS SHARE DISCLOSURES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3508.htm",
+   "sentences": [
+    "This bill is supported by the Council of Institutional Investors, whose members manage trillions in working families' assets."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL TECHNOLOGY PROTECTION ACT OF 2025",
+   "title": "FINANCIAL TECHNOLOGY PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3509.htm",
+   "sentences": [
+    "It will be tasked with evaluating emerging financial technologies, including digital assets, to assess their potential use in combating terrorism and illicit activities.",
+    "We know that Russia has used crypto exchanges and alternative payment platforms to try to bypass the sanctions imposed after its brutal and unlawful invasion of Ukraine.",
+    "Hamas and other terrorist groups have turned to cryptocurrencies to funnel resources toward violent operations against innocent civilians as was exposed in the investigation following the violent October 7 attacks on Israel.",
+    "North Korean hackers, operating as arms of the regime, have stolen billions of dollars in cryptocurrency through cyberattacks, laundering those funds to bankroll their illegal weapons programs and bypass international sanctions.",
+    "Mr. Speaker, cybercriminal syndicates, supported by North Korea and rogue states like Russia, are already exploiting financial technologies to evade sanctions, fund war and terrorism, and destabilize democracies.",
+    "I rise in support of H.R. 2384, the Financial Technology Protection Act sponsored by Representative Nunn and Representative Himes."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MIDDLE MARKET IPO COST ACT",
+   "title": "MIDDLE MARKET IPO COST ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3511.htm",
+   "sentences": [
+    "Mr. Speaker, I urge all of my colleagues to support my friend from Connecticut (Mr. Himes) commonsense measure.",
+    "I support Mr. Himes' bill, which will shed light on how much small- and medium-sized companies are paying for their underwriting fees to go public."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALIGNING SEC REGULATIONS FOR THE WORLD BANK'S INTERNATIONAL DEVELOPMENT ASSOCIATION ACT",
+   "title": "ALIGNING SEC REGULATIONS FOR THE WORLD BANK'S INTERNATIONAL DEVELOPMENT ASSOCIATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3513.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, H.R. 1764, the Aligning SEC Regulations for the World Bank's International Development Act.",
+    "The International Development Association, IDA, is an example of both the value of our multilateral institutions and America's leadership in these organizations."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAIWAN CONFLICT DETERRENCE ACT OF 2025",
+   "title": "TAIWAN CONFLICT DETERRENCE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3514.htm",
+   "sentences": [
+    "The commander of the U.S. Indo-Pacific Command shared in his April congressional testimony that the Chinese military pressure on Taiwan has reached a ``rapid boil.'' Month after month, the Chinese Communist Party and Government further press at the edges of Taiwan's security and America's support for Taiwan.",
+    "Mr. Speaker, I rise in support of H.R. 1716, the Taiwan Conflict Deterrence Act of 2025, sponsored by Representative McClain and cosponsored by Representative Sherman.",
+    "Mr. Speaker, I support H.R. 1716, cosponsored by my colleagues Representative McClain and Representative Sherman.",
+    "Especially now, as China increases its forays into Taiwanese territory, the United States Congress should support stricter measures against China's Government, sending the message that we will not tolerate the next step beyond its incursions.",
+    "I support H.R. 1716 to protect global security and democracy, and I support doing more to accomplish this goal."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OFAC LICENSURE FOR INVESTIGATORS ACT",
+   "title": "OFAC LICENSURE FOR INVESTIGATORS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3517.htm",
+   "sentences": [
+    "This bill would require the Secretary of the Treasury to develop a pilot program at the Office of Foreign Assets Control, OFAC, by which private-sector firms like blockchain analytics firms or the financial intelligence units within correspondent banks could receive a license to send or receive nominal financial transactions to and through sanctioned entities.",
+    "These small amounts could yield big details that could further our understanding of what is happening and by whom in sanctions evasion and money laundering investigations.",
+    "Investigators, whether in private firms or large bank intelligence units, must stop a transaction after finding evidence that suggests that a wallet, account, or address may be associated with a sanctioned person.",
+    "Mr. Speaker, I rise in support of H.R. 1450, the OFAC Licensure for Investigators Act, sponsored by Representative Beatty."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, that is because bailing out billionaires is hard work.",
+    "In 2021, Trump said: ``Bitcoin, it just seems like a scam . . .",
+    "I don't like it because it is another currency competing against the dollar.'' Melania was actually the first to get involved in the crypto ecosystem.",
+    "World Liberty Financial launched a stablecoin called USD1.",
+    "Trump's family has also launched a bitcoin mining operation and multiple crypto exchange-traded funds, or ETFs.",
+    "Not only that, under the Trump administration, the SEC has said that memecoins, stablecoins, and bitcoin mining all do not fall under their oversight.",
+    "Mr. Speaker, I yield 1 minute to the gentleman from Massachusetts (Mr. Lynch), who is also the ranking member of the Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence.",
+    "It is why I introduced the Stop Trump and Crypto Act to ban the President, Vice President, and all the Members of Congress from crypto corruption.",
+    "That is why I am voting ``no'' on H.R. 3633, the calamity act, and I urge all Members to not give a vote to Trump to own crypto and not to give a vote to the Vice President."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "title": "GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3405.htm",
+   "sentences": [
+    "Mr. Speaker, 2 weeks ago Republicans boasted about how they would provide billionaires with tax cuts they don't need by stripping healthcare from 17 million Americans, shuttering hospitals across the country, and starving 12 million families, including millions of children.",
+    "These billionaires are the same individuals who proudly gave millions of dollars to President Trump's campaign.",
+    "S. 1582, the so-called GENIUS Act, establishes a woefully deficient Federal framework for dollar-denominated payment stablecoins in the United States.",
+    "Stablecoins are a form of digitized private money.",
+    "Nevertheless, that promise of stability is precisely what causes stablecoins to be subject to bank-like runs where the public rushes to sell their stablecoins at the first whiff of instability, making a bit of bad news into a full-blown financial crisis.",
+    "It was for this reason that when I was chairwoman of the committee, I sought to create a Federal framework to oversee these stablecoins and ensure that consumers are protected.",
+    "Unfortunately, the election of Donald Trump ended those bipartisan efforts and brought a significant new challenge to stablecoins.",
+    "That challenge was the Trump family's brazen corruption using crypto to sell access in exchange for official acts.",
+    "It just so happens that those stablecoins are one of the main vehicles Trump is using to make his corrupt crypto billions.",
+    "The Trump family's crypto company, World Liberty Financial, launched a stablecoin called USD1 in April.",
+    "Let me be clear on this point because there has been a lot of misinformation.",
+    "This bill has a policy statement that elected officials like Members of Congress and Senators, as well as government officials, cannot issue their own stablecoin.",
+    "Anyone who says the bill stops the President's company from issuing stablecoins is not telling the truth.",
+    "Yet, even if we adopted such a ban, the GENIUS Act, sent over by the Senate and apparently unable to be amended, is still bad public policy.",
+    "S. 1582 creates the appearance of a Federal framework for stablecoins, but it does not provide the Federal Government with the full authority it needs to ensure that all stablecoin issuers comply with the law.",
+    "The bill also creates risks for consumers who will be stuck in a lengthy bankruptcy process if a stablecoin ever fails.",
+    "Yes, I am talking about Tether, the foreign stablecoin issuer everyone knows has been used in terrorist financing, organized crime schemes, and other horrible acts but which the Secretary of Commerce has close ties with.",
+    "The very heart of this bill is that stablecoins will, in fact, be stable because they will be backed one to one with solid, safe assets.",
+    "When Silicon Valley Bank failed, Circle, the largest stablecoin today, had $3 billion locked up in uninsured deposits and needed the Federal Government to rescue it.",
+    "A stablecoin issuer is also permitted to hold bitcoin as reserves.",
+    "The language allows for a stablecoin issuer to use any money received under repurchase agreements that are a means of exchange currently authorized or adopted by a foreign government.",
+    "Do my colleagues know what Trump's favorite strongman, the dictator of El Salvador, adopted as a legal currency?",
+    "This highly volatile cryptocurrency will now be eligible to be a reserve backing your stablecoins.",
+    "One interesting point is that even Chairman Hill himself inserted language at the end of the so-called CLARITY Act that the House is separately considering this week that actually amends the GENIUS Act.",
+    "Rather than amend the GENIUS Act, which our own chairman saw had problems, he put his changes at the end of the CLARITY Act.",
+    "He could just offer his amendments to the GENIUS Act.",
+    "One of Chairman Hill's changes to the GENIUS Act addresses a key concern I have had from the beginning, which is that Facebook and any other Big Tech company should not be allowed to issue their own stablecoin.",
+    "Unfortunately, the GENIUS Act allows Elon Musk's X to issue its own stablecoin and creates a pathway for Facebook to do the same.",
+    "Mr. Speaker, I yield 3 minutes to the gentleman from Massachusetts (Mr. Lynch), who is also the ranking member of the Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence.",
+    "On March 25, 2025, World Liberty Financial launched a dollar-pegged stablecoin just 1 week before the House Financial Services Committee marked up stablecoin legislation and 2 weeks after Senate colleagues held their markup.",
+    "On March 31, Eric Trump and Donald Trump, Jr.'s, American data centers merged with American bitcoin, a bitcoin mining operation.",
+    "Everyday Americans are simply trying to survive, thanks to Republican policies, while President Trump and his billionaire boys' club thrive in the economy.",
+    "That is why I will be voting ``no'' on S. 1582, the GENIUS Act, and I urge all other Members to also vote ``no''.",
+    "It is why I introduced the Stop TRUMP in Crypto Act, to ban the President, Vice President, and Members of Congress from crypto corruption.",
+    "For these reasons and many more, I strongly oppose this bill."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTI-CBDC SURVEILLANCE STATE ACT",
+   "title": "ANTI-CBDC SURVEILLANCE STATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3427.htm",
+   "sentences": [
+    "We have been discussing a lot about cryptocurrency.",
+    "We have talked about two different acts, which are the CLARITY Act and the GENIUS Act.",
+    "H.R. 1919 would immediately halt and prohibit the United States from any research and exploration of the benefits of a central bank digital currency, or CBDC.",
+    "A central bank digital currency is essentially a digital version of the dollar, issued by the Federal Government, that uses crypto technology known as blockchain to record everything and everybody who owns tokens.",
+    "A retail CBDC is made available directly to consumers from the Federal Reserve, from a bank, or other Federal institutions.",
+    "A wholesale CBDC is not available to the public but only to the banks and other financial institutions.",
+    "For example, J.P. Morgan Chase has estimated that $100 billion could be saved in cross-border transactions every year if a wholesale CBDC is adopted.",
+    "Earlier this week in the Rules Committee, we heard Republicans claim that we need to weaken oversight of private crypto because doing so will help cross-border payments.",
+    "If this bill passes, the United States would be the only country in the world to ban any research in the world on CBDC.",
+    "Some are studying, and others are issuing their own CBDC.",
+    "The foreign currency markets are evolving, but Republicans want to stick their heads in the stand.",
+    "Those 137 countries and currency unions represent 98 percent of the global GDP, and China is one of the frontrunners in the global race to implement a viable CBDC.",
+    "Do my friends across the aisle know why China is quickly rolling out its digital currency?",
+    "It desperately wants to create an alternative to the U.S. dollar to determine the dominance of our currency.",
+    "Mr. Speaker, America reaps great riches because our currency, the dollar, is the premium currency used around the world for all sorts of trade.",
+    "Another benefit is that the United States can pressure bad actors from Iran to Russia to China by cutting off access to our financial system and the dollar using sanctions.",
+    "Those same countries would love to replace the dollar with their currency or something else.",
+    "One way China hopes to do this is to show that the dollar is an antiquated currency, whereas the Chinese currency is the future.",
+    "It is so shortsighted to not even study how the dollar could be digitized, especially during the same week that Republicans want to let private companies create their own currency.",
+    "Mr. Speaker, I yield 3 minutes to the gentleman from Massachusetts (Mr. Lynch), who is also the ranking member of the Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence.",
+    "He knows more about digital assets than anybody on the opposite side of the aisle.",
+    "Mr. Speaker, Democrats are not the only ones who want to study CBDC.",
+    "In 2021, my dear friend, Chairman Hill, worked with Representative Foster to introduce the Central Bank Digital Currency Study Act.",
+    "Mr. Speaker, yet, again, my colleague confuses retail and wholesale CBDC.",
+    "Banning wholesale CBDC is nonsensical.",
+    "It has nothing to do with surveillance and everything to do with modernizing how American financial institutions and our central bank engage in intrabank cross-border transactions.",
+    "Earlier my colleagues praised our wonderful private sector, and we know now my friends do not like studies, but I would encourage them to read the study from our biggest bank, JPMorgan Chase, explaining how CBDC's can save $120 billion in cross-border payments.",
+    "We are already seeing inflation rise on consumer goods as Trump's tariffs take place.",
+    "It comes as a surprise to me that the last bill we will debate would block any research, pilots, or consideration about how to digitize the U.S. dollar, it is the reason that I call H.R. 1919 the anti-innovation act.",
+    "It is very important for all of us to understand that if we want to be innovative and if we want innovation, we will study and we will understand so we then will be able to explain.",
+    "If we really want to protect the American dollar, we will not put our heads in the sand.",
+    "We will allow this research to go on to make sure that the American dollar stays strong even in digital.",
+    "Finally, we have a chance to vote, and certainly I am asking for a ``no'' vote, and I hope that the gentleman would, too.",
+    "That is why I will vote ``no.'' Further, Mr. Speaker, Mr. Himes made a great argument and a great point about ignorance."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "The entire bill will add a whopping $3.3 trillion to our Nation's $35 trillion debt.",
+    "So much for Republicans being the party of fiscal responsibility.",
+    "Maybe they have forgotten that the people elected them, not Trump or the billionaire class.",
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING OPPORTUNITIES FOR NON-TRADITIONAL CAPITAL FORMATION ACT",
+   "title": "PROMOTING OPPORTUNITIES FOR NON-TRADITIONAL CAPITAL FORMATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2875-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 3422, the Promoting Opportunities for Non-Traditional Capital Formation Act.",
+    "Mr. Speaker, I thank my colleague (Mrs. Wagner) for cosponsoring my bill, and I urge my colleagues to join us in passing this bill into law."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF THE COMPTROLLER OF THE CURRENCY OF THE DEPARTMENT OF THE TREASURY RELATING TO THE REV",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE OFFICE OF THE COMPTROLLER OF THE CURRENCY OF THE DEPARTMENT OF THE TREASURY RELATING TO THE REVIEW OF APPLICATIONS UNDER THE...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2168-2.htm",
+   "sentences": [
+    "As a matter of fact, he is here talking about not being in support of big bank mergers because he is trying so hard to get more community banks.",
+    "The fact is, we really do need them because of the big bank mergers.",
+    "One of the things he could do to increase having community banks that relate to the neighborhoods and relate to the people in the communities is to stop allowing these big mergers to take place.",
+    "I rise to express my opposition to S.J. Res. 13, a Congressional Review Act resolution that would rescind a rule the Office of the Comptroller of the Currency has put forth to improve their bank merger application review procedures.",
+    "Consumer groups, experts, and I have long rung the alarm bell as the Federal Government rubberstamped bank mergers for decades to the detriment of competition.",
+    "Let's see what happens after a merger.",
+    "I want him to know what happens after the big bank mergers.",
+    "When these big bank mergers come in, you don't have tellers anymore.",
+    "In fact, while thousands of bank mergers were approved in the last few decades, the last bank merger application that regulators denied was denied in 2003, 22 years ago.",
+    "Meanwhile, the biggest banks have grown much bigger through mergers and, not surprisingly, are charging customers more for banking products and services.",
+    "In fact, that negative consumer impact is one of the many reasons I and more than 90 percent of public commenters urged regulators to oppose a recent Capital One and Discover merger--I think the gentleman supported that--which created the largest credit card issuer.",
+    "They grew larger through mergers and then repeatedly violated the law and harmed millions of consumers.",
+    "To curb these rubberstamped mergers, former President Biden issued an executive order to encourage the Department of Justice and the banking agencies, including the OCC, to strengthen their merger reviews--get more information and find out what they intended to do and how they were going to provide more services.",
+    "After going through a public notice and comment process, the OCC, which oversees most large banks, including the four largest commercial banks in the country, published a final rule last year that made several commonsense improvements to its merger review procedures.",
+    "First, it eliminated a fast-track procedure where even the largest bank mergers could receive automatic approval of their mergers 15 days after their public notice comment period closed.",
+    "Second, the OCC required merger applicants to file the standard merger application to ensure they had enough information to weed out harmful mergers.",
+    "Rolling back these reforms is dangerous, especially at a time when DOGE is firing staff at the OCC and the other bank agencies, making it harder for them to carefully review these mergers.",
+    "They decided that they would fire staff at the OCC and the other bank agencies, making it harder for them to carefully review these mergers.",
+    "They want to make sure that they are supporting the biggest banks with these mergers, the biggest banks that are going to close down the community relationships that we have with community banks.",
+    "President Trump's Acting Comptroller of the Currency rescinded this very rule last week when it issued an interim final rule that took effect on May 15.",
+    "This resolution is only moving because Republicans needed to waste time while they hammer out how best to give $5 trillion in tax breaks to billionaires.",
+    "They needed more time to figure out if tens of millions of Americans would lose Medicaid, whether millions of children would lose access to food stamps, and just how many consumer watchdogs they would fire at the Consumer Financial Protection Bureau.",
+    "It doesn't matter that the United States bond ratings were downgraded, that foreign investors are dumping U.S. investments, or that small businesses are struggling to keep their lights on.",
+    "Much later tonight, when the rest of America is sleeping, Republicans are going to figure out just how many Americans they can squeeze to pay off their billionaire overlords.",
+    "In 2023, the OCC approved--you won't believe this--22 of 23 mergers within 60 days.",
+    "Again, I will remind you that when these big mergers take place, they lay off people, and they close down branch banking.",
+    "The Republicans may claim this resolution also prevents the OCC from updating its merger review procedures in the future.",
+    "Oftentimes, the people don't really understand what we are saying when we talk about things like mergers, and we talk about the OCC and we talk about review and all of that.",
+    "First of all, I have said and I stand by the fact that with these big bank mergers, they close down branch banking.",
+    "The reason branches were there in the first place are when you have these big bank mergers that close down the branch bankers.",
+    "We have seen how the largest banks have grown too big to manage through these bank mergers and then repeatedly broke the law and harmed their customers.",
+    "Wells Fargo was originally founded in 1852, and it grew, in part, through several bank mergers, including a 1998 merger with Northwest and an acquisition of Wachovia during the 2008 financial crisis.",
+    "Mr. Speaker, I hope Members will think of our constituents, including the servicemembers, the seniors, the students, the veterans, and our neighbors that Wells Fargo harmed when deciding if we could make bank mergers easier.",
+    "Mr. Speaker, as we consider whether we should make the approval of bank mergers easier, I have another example of how mergers have led to major problems.",
+    "It was a longstanding issue that Citi had after they went through a series of mergers in the 1990s.",
+    "When the 2020 fine of $400 million was imposed, there was an article in The Wall Street Journal that explained how mergers harm the bank.",
+    "The bank lacked sufficient controls because of its past mergers--too big to manage--and accidentally paid $900 million to Revlon, which quickly went into litigation.",
+    "Again, this is the logical conclusion if we have faster mergers.",
+    "That is why we have to make sure that the customers are serviced properly, that when a big merger wants to have support from the government, that they will have been vetted in such a way that OCC understands very well: How are you going to service these customers?",
+    "The customers are the victims of these big mergers who do not want to be reviewed properly and who you support in not wanting to be reviewed properly.",
+    "Listen, I am not opposed to credible mergers.",
+    "Democrats just want mergers that result in a bank that will follow the law and serve the community.",
+    "We can understand when the mergers want to take place, who these entities are that want to merge, how huge this is going to make this bank, and what they are going to do about branch banking.",
+    "Maybe they felt that this was one of those executive orders that would get ruled out by the courts when we absolutely oppose him.",
+    "I urge Members to reject this wasteful, harmful, anticompetition resolution.",
+    "Mr. Speaker, I will elaborate on an earlier point that I made.",
+    "We will go on doing what we do."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICANS FROM HARMFUL CRYPTO PRACTICES",
+   "title": "PROTECTING AMERICANS FROM HARMFUL CRYPTO PRACTICES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-08/html/CREC-2025-05-08-pt1-PgH1927-2.htm",
+   "sentences": [
+    "Elon Musk has said that the government ``should privatize everything that we possibly can.'' They are laying off or pushing into retirement tens of thousands of Federal employees.",
+    "As a matter of fact, the American Civil Liberties Union has called the Trump administration's action: ``One of the most abusive and aggressive assaults on human rights in United States Presidential history.'' In carrying out their pro-billionaire agenda, Republicans have also gutted programs and agencies that serve as critical lifelines to American families, many of which include their very own constituents.",
+    "The international leadership which Americans benefit greatly and built for decades is now destabilized by Trump's trade war against our allies.",
+    "In just a few months, Trump has introduced chaos in the stock market and undermined confidence for consumers, investors, and small businesses, many of which have cautioned that they will have to close due to Trump's untenable tariffs which act as a tax on Americans and their businesses.",
+    "A $2 billion business deal using the Trump firm's stablecoins with a fund backed by Abu Dhabi was announced at a conference in Dubai.",
+    "While Trump and his billionaire insiders' wealth catapults, Americans are bracing themselves for layoffs, shortages, and higher prices in a recession engineered by Trump.",
+    "While Republicans work hard to make room for $7 trillion in tax cuts for American oligarchs like Elon Musk and Jeff Bezos, Republicans are cutting $880 billion in funding from Medicaid food stamps for Americans who rely on this help.",
+    "After years of good faith, bipartisan negotiation and collaboration with regulators and stakeholders, former Chair McHenry and I even drafted payment stablecoin legislation that would create a strong Federal framework and put consumer protection front and center.",
+    "Our bill also addressed national security concerns that adversaries and criminal organizations could use stablecoins for their very harmful purposes.",
+    "Then, in March, President Trump's World Liberty Financial announced the launch of its stablecoin, conveniently named USD1, just before our Financial Services Committee was scheduled to vote on legislation regulating the stablecoin market.",
+    "Stablecoins are a type of crypto that claim to maintain a constant or ``stable'' value and are used in most crypto transactions today.",
+    "In May, World Liberty Financial announced the firm will be making a $2 billion business deal with a fund backed by Abu Dhabi, using the Trump firm's stablecoins.",
+    "Nevertheless, Republicans' stablecoin bill did nothing to address Trump's conflict and instead voted to hand Trump the authority to write the rules over his and his competitors' stablecoins.",
+    "If stablecoin legislation is passed, then agencies would draft rules that would be sent straight to the Trump White House, and he could directly make edits that would benefit his own stablecoin business.",
+    "Later, in March, Trump's sons launched their own Bitcoin company called American Bitcoin.",
+    "President Trump had conveniently already instructed the Treasury to create a Bitcoin reserve and a digital asset strategic reserve, a move that would boost the value of the Bitcoin he and his Cabinet members own, using taxpayer resources.",
+    "Leading up to the White House's first crypto summit, World Liberty purchased $20 million in crypto tokens, some of which include those Trump picked for the strategic cryptocurrency reserve.",
+    "This would be his very own video game that uses crypto.",
+    "The video game is supposed to resemble Monopoly GO!",
+    "Trump is producing video games that involve crypto to model his own real estate business, which went bankrupt.",
+    "Who do you think is helping him launch this video game?",
+    "The United States' role and reputation globally have been severely damaged, and many Americans are worried they will no longer receive the Social Security checks and Medicaid they need.",
+    "He has gutted the Corporate Transparency Act, frozen enforcement of the Foreign Corrupt Practices Act, and disbanded the Department of Justice's National Cryptocurrency Enforcement Team.",
+    "The SEC's own complaint detailed how Sun sold unregistered crypto asset securities, manipulated trading to artificially inflate the prices of the tokens he issued, and secretly paid celebrities to tout his tokens, all in violation of well- established and widely recognized securities laws.",
+    "Instead, regulators are being manipulated to serve the political and financial interests of the President and his billionaire insiders.",
+    "For example, according to recent reports, the Department of Housing and Urban Development, or HUD, is attempting to experiment with crypto in their operations, including by paying grantees in stablecoin or crypto.",
+    "One of Trump's executive orders leaves the door wide open for Trump to require the use of his stablecoins and meme coins in order to pay taxes or enter into other arrangements with the government.",
+    "Bias and discrimination have contributed to the exclusion of qualified women, people of color, LGBT, and persons with disabilities, and veterans.",
+    "Diversity, equity, and inclusion policies are not about mandates and quotas.",
+    "DEI is about eliminating bias, opening doors, and giving everyone, no matter what they look like or who they love a fair opportunity for employment, promotion, and access to capital.",
+    "DEI is about understanding and knowing what these differences are and doing everything that can be done, both in government and in corporations, to just let those who wish to have a promotion--many of whom have worked for 25 and 30 years--have a chance to interview, to see if their talents are understood, and that they will have the opportunity to move up.",
+    "Well, he has made DEI a very, very vocal point.",
+    "He sent memos around to all of the nonprofits and agencies telling them if they dare to have anything that looks like DEI, which he doesn't have a definition for, that they are going to be shut down, and that they are going to be penalized.",
+    "Trump and Musk are targeting any institution that displays a focus towards diversity, equity, and inclusion.",
+    "When I became the first Black and the first woman chair of the House Financial Services Committee back in 2019, I established Congress' first-ever Diversity and Inclusion Subcommittee, chaired by Representative Joyce Beatty.",
+    "The Subcommittee on Diversity and Inclusion held 18 hearings, released three major reports, and brought long-overdue scrutiny to the ways in which systemic barriers in our financial system disadvantage entire communities.",
+    "My commitment to DEI did not start there.",
+    "These offices were designed to embed DEI into the DNA of the financial system, from hiring and contracting to how institutions supervise the banks they regulate.",
+    "DEI is about more than just checking a box.",
+    "We are in the midst of a full-blown affordable housing and homelessness crisis with over 771,000 people experiencing homelessness on any given night in this country.",
+    "Housing supply is not keeping up with demand.",
+    "That is why I will soon reintroduce my legislative housing package to address the housing and homelessness crisis head-on, which many of you are familiar with, my Housing Crisis Response Act, Ending Homelessness Act, and Downpayment Toward Equity Act.",
+    "Since January, this administration has halted critical agency operations, unlawfully put staff on leave or fired staff; terminated programs that are key to ending housing discrimination, such as Affirmatively Furthering Fair Housing and the Equal Access Rules; compromised Americans' sensitive data by granting Elon Musk's so-called DOGE personnel with the agency exposing victims of domestic violence and/or assault; reported plans to launch dangerous blockchain and crypto experiments within HUD; and begun planning to shut down HUD field offices all over the country.",
+    "What is equally concerning to me in Congress is that Republican Members continue their push to slash Federal investments in housing, which represent less than 1 percent of all Federal spending.",
+    "In their latest fiscal year 2025 budget, they slashed housing by more than $500 million, which will put at least 32 million households at risk of eviction and homelessness.",
+    "Just this week, Trump released a heartless fiscal year 2026 budget that cuts 26 billion from rental assistance programs, including public housing, housing choice vouchers, project-based rental assistance, and housing for seniors and people with disabilities.",
+    "He is turning these lifeline programs into State block grants and imposing a cruel 2-year cap on aid for able-bodied adults.",
+    "His budget also calls for the obliteration of critical community development programs like the Community Development Block Grant, HOME, and fair housing grants.",
+    "These are the very programs that help create affordable housing, revitalize disadvantaged neighborhoods, and protect families from housing discrimination.",
+    "Eliminating these programs will devastate our communities, displace families who are already on the brink of homelessness, and destroy the progress made to ensure every person in our Nation has access to safe, stable, and affordable housing.",
+    "I will continue to fight against Trump's sabotage, defend the agency, and stand up for the families who depend on the agency to keep a roof over their heads.",
+    "I have fought too long and too hard to let this administration tear it down, and I will not stop until our Nation's affordable housing and homelessness crisis ends once and for all.",
+    "Let's take a look at Social Security.",
+    "Trump promised repeatedly not to cut Social Security under his administration.",
+    "He said: ``Social Security will not be touched, it will only be strengthened.'' But listen carefully to what Trump billionaire appointees are saying: Elon Musk called Social Security ``the biggest Ponzi scheme of all time.'' Let me say it again.",
+    "The co-president, not elected by anybody, appointed by Trump, Elon Musk called Social Security ``the biggest Ponzi scheme of all time.'' Commerce Secretary Howard Lutnick said only a ``fraudster'' would complain about a missed Social Security check.",
+    "He is saying: Seniors, if you didn't get your Social Security check, don't complain because if you complain, you must be about fraud.",
+    "I don't know who this Lutnick is, but I only know that he is, too, a billionaire.",
+    "What the heck does he care about Social Security?",
+    "What does he care about a missed Social Security check?",
+    "Trump, Musk, and DOGE are undermining the infrastructure of Social Security by planning to cut 7,000 employees at the Social Security Administration.",
+    "Now Trump is adding Social Security numbers to the Social Security death list to force immigrants to leave the country.",
+    "People who have their Social Security numbers placed on the death list by mistake can have their homes foreclosed on or bank accounts closed.",
+    "These actions would violate data privacy law.",
+    "He said he would not cut Social Security, but he is destroying the infrastructure of Social Security.",
+    "So people can't have their questions answered, they can't get into a Social Security office that has been closed down and they can't get any answers by phone.",
+    "This is outrageous, and I am so afraid of what is happening to those who depend on Social Security.",
+    "I am so afraid that seniors with limited amounts of Social Security are going to end up hungry.",
+    "Just like with Social Security, Trump and the Republicans are playing games with people's lives because now they are coming for Medicaid through this dangerous reconciliation bill.",
+    "Congress' nonpartisan scorekeeper, the Congressional Budget Office, just confirmed the truth: 5.5 million people would lose their Medicaid coverage if Republicans cut the Federal match for expansion States; 3.3 million more would lose coverage if they cap Federal Medicaid spending in those same States; 2.3 million people, mostly low income seniors and people with disabilities, would lose coverage if Republicans repeal Biden's enrollment rule; and a staggering 8.6 million Americans would be pushed off Medicaid if Republicans limit States' ability to fund the program through provider taxes.",
+    "Republicans don't care as long as their billionaire boys' club can pad their pockets.",
+    "Probably, but not to the extent that people believe.' `` `I just think it is going to cost more money, and then it is going to hurt us with retaliatory tariffs,' said Higgins, a self-described `Reagan Republican' who could not bring himself to vote for Trump. ``Trump argues that levying tariffs on imports will give him leverage for trade deals and ultimately compel companies to ramp up production in the United States.",
+    "Critics say the strategy will raise costs for consumers and destabilize the economy while leaving businesses too uncertain about the future to make plans.'' Here, let me just share with you what was on an article from The Washington Post: Trump's tariffs are causing untold harm to America.",
+    "This story is from The Wall Street Journal, ``The Dumbest Trade War in History.'' The Wall Street Journal said that. ``President Trump will fire his first tariff salvo on Saturday against those notorious American adversaries, Mexico and Canada.",
+    "They will get hit with a 25 percent border tax, while China, a real adversary, will endure 10 percent.",
+    "Neither country can stop it. ``Drugs may be an excuse since Mr. Trump has made clear he likes tariffs for their own sake. `We don't need the products they have,' Mr. Trump said on Thursday. `We have all the oil you need.",
+    "Industry experts say a vehicle made on the continent goes back and forth across borders a half dozen times or more, as companies source components and add value in the most cost-effective ways, and everyone benefits. ``The Office of the U.S. Trade Representative says that in 2023 the industry added more than $809 billion to the U.S. economy, or about 11.2 percent of total U.S. manufacturing output, supporting `9.7 million direct and indirect jobs.' In 2022, the U.S. exported $75.4 billion in vehicles and parts to Canada and Mexico.",
+    "Regional integration is now an industrywide manufacturing strategy--also employed in Japan, Korea, and Europe--aimed at using a variety of high-skilled and low-cost labor markets to source components, software, and assembly. ``The result has been that U.S. industrial capacity in autos has grown alongside an increase in imported motor vehicles, engines, and parts.",
+    "From 1995 to 2019, imports of autos, engines, and parts rose 169 percent while U.S. industrial capacity in autos, engines, and parts rose 71 percent. ``As the Cato Institute's Scott Lincicome puts it, the data shows that `as imports go up, U.S. production goes up.' Thousands of good- paying auto jobs in Texas, Ohio, Illinois, and Michigan owe their competitiveness to this ecosystem, relying heavily on suppliers in Mexico and Canada. ``Tariffs will also cause mayhem in the cross-border trade in farm goods.",
+    "Many top U.S. growers have moved to Mexico because limits on legal immigration have made it hard to find workers in the U.S. Mexico now supplies 90 percent of avocados sold in the U.S. Is Mr. Trump now an avocado nationalist? ``Then, there is the prospect of retaliation, which Canada and Mexico have shown they know how to do for maximum political impact.",
+    "In 2009, the Obama administration and congressional Democrats ended a pilot program that allowed Mexican long-haul truckers into the U.S. as stipulated in NAFTA.",
+    "When Mr. Trump imposed steel and aluminum tariffs in 2018, Mexico got results using the same tactic, putting tariffs on steel, pork products, fresh cheese, and bourbon. ``Canadian Prime Minister Justin Trudeau has promised to respond to U.S. tariffs on a dollar-for-dollar basis.",
+    "Retiree Rick Janko was mostly''--he was at one time--``mostly supportive of the President's agenda but rolled his eyes at claims that tariffs will bring manufacturing back.",
+    "His tariffs are leading to a recession and raising costs of food, cars, and housing.",
+    "Every day they try to shutter the CFPB, every day, we are fighting, whether it is at agency headquarters or in the court.",
+    "Since the Republican majority refuses to do its job, I am determined to shed light on these critical issues.",
+    "Now, I will move from the Consumer Financial Protection Bureau into the diversity, equality, and inclusion that he has made a top priority in his administration.",
+    "That is why I continue to support the Minority Business Development Agency, which has now been defunded and dismantled, even though it has provided critical support to businesses all around the country.",
+    "Despite all the chaos, I will not give up."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"DEFINING LARGER PARTICIPANTS OF A MARKET FOR GENERAL-USE DIGITAL CONSUME",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"DEFINING LARGER PARTICIPANTS OF A MARKET FOR GENERAL-USE DIGITAL CONSUMER PAYMENT APPLICATIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1514-2.htm",
+   "sentences": [
+    "Before I explain why this resolution is bad, let us not ignore that President Trump and co-president Musk are tearing down key government agencies and programs as we speak, like the CFPB and Social Security.",
+    "Last week, the President launched a global trade war against the rest of the world, including our friends, resulting in a record 2-day loss of $6.6 trillion in wealth.",
+    "Fed Chair Powell warned that these tariffs will lead to higher inflation and job losses.",
+    "Later today, Republicans will try to pass the President's budget that is loaded with $7 trillion in tax cuts for Musk and the other Big Tech billionaires, all while they are slashing Medicaid by $880 billion and walking into our agencies and firing employees, some who have been working at these agencies for 10, 15, 20 years, telling them to get out by 5 o'clock.",
+    "All of that is being done by an unelected billionaire who is intent on changing this government in ways that make it look like a dictatorship.",
+    "This will help the Consumer Financial Protection Bureau oversee these great Big Tech apps to protect the millions of consumers who use them and their digital wallets from fraud, to safeguard their sensitive personal data, and to prevent unfair, deceptive, or abusive practices.",
+    "Mr. Speaker, as we stand here and discuss these anticonsumer CRAs today, our constituents are deeply concerned about losing Social Security and Medicaid because of Elon Musk's reckless cuts to government.",
+    "Families and businesses across America are struggling as Trump raises taxes on Americans nationwide through tariffs.",
+    "We see this bill for what it is: a thank-you gift to Elon Musk and other Big Tech billionaires who came to Trump's rescue during the 2024 election.",
+    "You saw those billionaires accompanying him.",
+    "Why are all the billionaires getting together?",
+    "The Consumer Financial Protection Bureau previously issued five larger participant rules to examine the largest nonbanks with respect to consumer reporting, consumer debt collection, student loan servicing, international money transfers, and automobile financing.",
+    "Through this CRA, Republicans are opening the door for President Trump and co-president Musk to further enrich themselves and all of their business ventures with their own digital payment systems, including X and Trump's new payment system, Stablecoin.",
+    "In addition to that, in the middle of us trying to negotiate on Stablecoin to come to some agreement about guardrails to protect the average investor, he has now founded a new company where he is going to own Stablecoin.",
+    "When I was chair of the Committee on Financial Services, Democrats held Big Tech companies to account, including convening a hearing with Facebook CEO Mark Zuckerberg over his plans to develop cryptocurrency called Libra.",
+    "I urge my colleagues to vote for American consumers, not the unelected Elon Musk and other Big Tech oligarchs and billionaires that are just waiting to take over this country.",
+    "Mr. Speaker, I rise today in strong opposition to S.J. Res. 28, a partisan Congressional Review Act resolution that will block the Consumer Financial Protection Bureau from supervising payment apps offered by Big Tech firms like Apple and Google.",
+    "I urge Members of this House to show some courage and stand up for consumers."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "Despite Trump and Republican campaign promises to lower prices, the President decided to launch a global trade war just last week that wiped out a 2-day record of $6.6 trillion of wealth, affecting the retirement savings of millions of Americans.",
+    "The Federal Reserve reported that a key metric of inflation is going up, and that was before President Trump sent the stock market further into the tank with the global trade war he launched last week.",
+    "For example, I just got word that he has changed his mind about tariffs.",
+    "We were all trying to convince this administration that they should not be raising the tariffs on all of these countries and the fact that they were even harming our relationship with our allies, but no.",
+    "He placed tariffs on every country in the world, even for an island that had nothing but penguins on it.",
+    "I am going to raise the tariffs on China, but I think I will put a 90-day pause on all of the stuff that I did raising these tariffs for all these other countries just a few days ago.",
+    "So here we are without the protection of the experts to let us know what should be done to make sure that we don't have nuclear power destroying us all.",
+    "Mr. Speaker, they have forced seniors to go in person to apply for Social Security.",
+    "I am so worried about our seniors and Social Security.",
+    "He promised us that he would not cut Social Security, but what he did was he destroyed the infrastructure of Social Security.",
+    "He fired people and shut off the telephones making them go in person to find their Social Security office, which they are closing all of them down.",
+    "Now all of our Social Security and our seniors are at stake not knowing what is going to happen and not knowing how to get in touch with the Social Security personnel who work there to get these questions answered.",
+    "Mr. Speaker, when did it become unpopular to put more hands in the pockets of working families?",
+    "We are watching what Trump and Musk are doing, aligned with the billionaires who want more and more money and don't want to pay their taxes, and we are here fighting about $5.",
+    "Democrats on the Financial Services Committee voted unanimously to oppose this resolution at a markup in February, and I urge all of my colleagues to unanimously reject it on the floor today.",
+    "We said that all we are asking you to do is to let the people know exactly what you are doing about fees.",
+    "Mr. Speaker, I urge all Members to join Senate bipartisan opposition to this resolution and vote ``no.'' Stand up for our constituents."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Unfortunately, the Republican rip-off is a slap in the face to working families.",
+    "Trump, Elon Musk, and House Republicans are asking us to support axing Medicaid by $180 billion, even though food stamps reduce rural poverty.",
+    "Republicans are defunding the police by stripping funding from the Consumer Financial Protection Bureau, and the CFPB is the only Federal cop on the block to hold Wall Street banks and Big Tech payment apps accountable when they cheat Americans.",
+    "Mr. Chairman, they are going to give $4.5 trillion in tax cuts to the billionaires in this country.",
+    "It is outrageous that Republicans have the audacity to come here with this budget that harms so many Americans and ask us to support billionaires and think we are going to buy it?",
+    "Mr. Chairman, I strongly oppose the Republican budget rip-off.",
+    "Mr. Chairman, we are not going to do that, and Democrats are voting ``no'' on this budget.",
+    "The majority thinks we are going to support it?"
+   ]
+  }
+ ]
+}

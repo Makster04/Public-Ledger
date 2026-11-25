@@ -1,0 +1,61 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "casar",
+ "name": "Greg Casar",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5408, FASTER LABOR CONTRACTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4029.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today for us to pass the Faster Labor Contracts Act tonight in the U.S. House to uphold the fundamental right for all American workers, the right to bargain collectively for a fair contract.",
+    "American workers marched, bled, and died for the right to form a union.",
+    "On average, it takes more than 465 days to secure a first union contract.",
+    "Today, we say: When you exercise your fundamental rights to organize a union, you deserve a contract without needless delay.",
+    "Just this Congress, we have stood together to demand a vote on collective bargaining for Federal workers, the right to form a union, affordable healthcare, defense for the people of Ukraine, and the rights of those with temporary protected status."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAFFIRMING IRAN REMAINS THE LARGEST STATE SPONSOR OF TERRORISM",
+   "title": "REAFFIRMING IRAN REMAINS THE LARGEST STATE SPONSOR OF TERRORISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgE193-5.htm",
+   "sentences": [
+    "While I unambiguously condemn the brutal, repressive Iranian regime, I will vote against this resolution because I fear it will be used as a pretext to support Trump's illegal war of choice.",
+    "I oppose Trump's illegal war in Iran, which is killing U.S. servicemembers, destabilizing the Middle East, wasting billions of taxpayer dollars, and raising the price of gas, all while Americans are losing their healthcare.",
+    "I remain clear-eyed about the nature of the Iranian government and condemn its malign activities across the region and its brutal domestic repression, including its recent slaughter of thousands of protesters.",
+    "Mr. Speaker, I rise in opposition to H. Res. 1099."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ECONOMIC POPULISM",
+   "title": "ECONOMIC POPULISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+   "sentences": [
+    "Before all of that, I started my career as a labor organizer, and I saw up close how corporate lobbyists and corrupt politicians would trade campaign contributions for corporate tax breaks and how they would trade lower wages for workers for fatter paychecks for CEOs and their political friends.",
+    "We have to break up the giant monopolies that are screwing over consumers and small businesses alike.",
+    "We have to unionize workplaces and pass laws that protect the American worker and the American worker's wages."
+   ]
+  }
+ ]
+}

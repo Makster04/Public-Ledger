@@ -1,0 +1,404 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bilirakis",
+ "name": "Gus M. Bilirakis",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 33,
+  "sentences": 95
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "title": "AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5667.htm",
+   "sentences": [
+    "Madam Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2026-08-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO SPECIALIST LARISA DICKERSON (RETIRED) ON RECEIVING THE PURPLE HEART",
+   "title": "PAYING TRIBUTE TO SPECIALIST LARISA DICKERSON (RETIRED) ON RECEIVING THE PURPLE HEART",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-08-03/html/CREC-2026-08-03-pt1-PgE758-3.htm",
+   "sentences": [
+    "At just nineteen years old, she enlisted in the United States Army in 2002 and completed Basic Combat Training at Fort Leonard Wood, Missouri, before being assigned to the 410th Military Police Company of the 89th Military Police Brigade at Fort Hood, Texas.",
+    "During that deployment, she and her fellow Military Police Soldiers carded out some of the most demanding and dangerous missions of the war.",
+    "They protected U.S. government dignitaries, secured vital supply convoys, established checkpoints to safeguard Coalition Forces, and trained Iraqi police officers, helping to lay the foundation for stability and security in a volatile region."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STEM CELL THERAPEUTIC AND RESEARCH REAUTHORIZATION ACT OF 2025",
+   "title": "STEM CELL THERAPEUTIC AND RESEARCH REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4642.htm",
+   "sentences": [
+    "I rise today in strong support of the Stem Cell Therapeutic and Research Reauthorization Act, bipartisan legislation that will save lives by ensuring continued access to stem cell, bone marrow, and cord blood transplants for patients across our Nation.",
+    "I urge my colleagues to pass this good piece of legislation."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE CARE OF AMERICA'S VETERANS ACT",
+   "title": "TAKE CARE OF AMERICA'S VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4548-3.htm",
+   "sentences": [
+    "It enhances mental health services, expands care in rural communities, improves transition assistance for servicemembers entering civilian life, and modernizes VA facilities to better serve future generations.",
+    "Mr. Speaker, I rise today in strong support of the Take Care of America's Veterans Act.",
+    "Anything that is not included in this bill, we are going to pursue for the benefit of our veterans."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1423, I call up the bill (H.R. 139) to make daylight savings time permanent, and for other purposes, and ask for its immediate consideration.",
+    "Mr. Speaker, I rise today in strong support of the Sunshine Protection Act.",
+    "This important legislation will finally end the outdated practice of changing our clocks twice a year and establish permanent daylight saving time.",
+    "Establishing permanent daylight saving time would provide families with more usable daylight hours in the evening, giving people additional opportunities to spend time outdoors, support local businesses, participate in community activities, and enjoy the quality of life that makes our communities so special.",
+    "They want permanent daylight saving time.",
+    "Also, if you want your standard time under this bill, you can keep your standard time.",
+    "Mr. Speaker, 19 States, again, have passed legislation for permanent daylight saving time.",
+    "Mr. Speaker, I will add this: This is great for our kids.",
+    "Mr. Speaker, I urge a strong, very strong vote in favor of this bill.",
+    "I will tell you that it is very, very important that we get this done as soon as possible."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "title": "KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+   "sentences": [
+    "Nearly half of American teenagers say they are online almost constantly, about half spend 4 or more hours a day on screens for leisure, and 95 percent have a smartphone in their pocket, placing them in a digital environment that too often prioritizes engagement and profit over safety.",
+    "Their algorithms are designed to maximize attention, not protect kids."
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAX POLICY SHOULD REWARD A LIFETIME OF HARD WORK",
+   "title": "TAX POLICY SHOULD REWARD A LIFETIME OF HARD WORK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2206-5.htm",
+   "sentences": [
+    "For too long seniors were treated unfairly, Mr. Speaker, taxed on their Social Security benefits and left struggling to cover rising costs.",
+    "Enacted as part of the Working Families Tax Cut Act, this deduction applies through 2028 and is available whether seniors take the standard deduction or itemize.",
+    "To many seniors, they still see their Social Security benefits taxed.",
+    "That is why I support legislation to fully exempt Social Security income from Federal taxation."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MIKAELA NAYLON GIVE KIDS A CHANCE ACT",
+   "title": "MIKAELA NAYLON GIVE KIDS A CHANCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4929.htm",
+   "sentences": [
+    "These cures are just a few of the success stories attributable to the FDA's Rare Pediatric Disease Priority Review Voucher Program.",
+    "Mr. Speaker, this bill has one of the largest totals of bipartisan cosponsors of any legislation we will see this Congress.",
+    "She was 16 years old, and I will never forget the videos."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ASSESSMENT OF TRANS-ATLANTIC SUBMARINE FIBER OPTIC CABLE",
+   "title": "ASSESSMENT OF TRANS-ATLANTIC SUBMARINE FIBER OPTIC CABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2847.htm",
+   "sentences": [
+    "I thank Delegate Plaskett and Representative Fulcher for their leadership on this particular bill, and I urge my colleagues to join me in voting in favor of H.R. 1737."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ROMANCE SCAM PREVENTION ACT",
+   "title": "ROMANCE SCAM PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2848.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2481, the Romance Scam Prevention Act, led by Representative Valadao.",
+    "Mr. Speaker, in closing, I urge a ``yes'' vote on this particular bill."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GLOBAL INVESTMENT IN AMERICAN JOBS ACT OF 2025",
+   "title": "GLOBAL INVESTMENT IN AMERICAN JOBS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2850.htm",
+   "sentences": [
+    "The United States is currently a global leader in deployment of emerging technologies such as artificial intelligence, autonomous vehicles, blockchain, and many more.",
+    "Mr. Speaker, I rise today in support of H.R. 1679, the Global Investment in American Jobs Act of 2025.",
+    "Mr. Speaker, I urge my colleagues to join me in favor of this particular bill, H.R. 1679."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WASTEWATER INFRASTRUCTURE POLLUTION PREVENTION AND ENVIRONMENTAL SAFETY ACT",
+   "title": "WASTEWATER INFRASTRUCTURE POLLUTION PREVENTION AND ENVIRONMENTAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2852.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 2269, the Wastewater Infrastructure Pollution Prevention and Environmental Safety Act, or the WIPPES Act, led by Representative McClain."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AWNING SAFETY ACT OF 2025",
+   "title": "AWNING SAFETY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2854.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1767, the Awning Safety Act of 2025, led by my good friend, Representative Balderson.",
+    "Mr. Speaker, I urge my colleagues to support this particular bill.",
+    "Mr. Speaker, I am proud to support this particular piece of legislation in memory of Dr. Michael Hnat, a cherished part of the Energy and Commerce Committee family, who tragically lost his life, as has been said, in an awning accident."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPLOYING AMERICAN BLOCKCHAINS ACT OF 2025",
+   "title": "DEPLOYING AMERICAN BLOCKCHAINS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2855.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1664) to direct the Secretary of Commerce to take actions necessary and appropriate to promote the competitiveness of the United States related to the deployment, use, application, and competitiveness of blockchain technology or other distributed ledger technology, and for other purposes, as amended.",
+    "This legislation directs the Secretary of Commerce to take the necessary actions to promote the competitiveness of the United States in the development and application of blockchain technology.",
+    "Blockchain technology has the potential to revolutionize industries by enhancing security, transparency, and efficiency.",
+    "Whether it is used as a privacy enhancement technology, a supply chain management tool, or as a method to provide a secure ledger to enhance data security, blockchain can usher in a new era in American technological leadership.",
+    "By fostering innovation and establishing best practices, this bill positions the United States as a leader in blockchain technology, driving economic growth and technological advancement.",
+    "Mr. Speaker, I rise today in support of H.R. 1664, the Deploying American Blockchains Act of 2025, championed by my good friend and fellow Florida Gator, Representative Cammack.",
+    "I urge my colleagues to join me in passing this very good bill primarily sponsored by my good friend Mrs. Cammack from the State of Florida."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "title": "CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2858.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1520, the Charlotte Woodward Organ Transplant Discrimination Prevention Act led by my good friend Mrs. Cammack."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHANDRA EISENGA HUMAN CELL AND TISSUE PRODUCT SAFETY ACT",
+   "title": "SHANDRA EISENGA HUMAN CELL AND TISSUE PRODUCT SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2860.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1082, the Shandra Eisenga Human Cell and Tissue Product Safety Act, led by my good friend Chairman Moolenaar from the great State of Michigan."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2625-5.htm",
+   "sentences": [
+    "Illicit drugs have poured across the border, made it onto the streets, and affected our communities, every one of our communities.",
+    "I heard the example just today by our chairman with regard to some of these drugs, say marijuana, what have you, and other drugs.",
+    "We must ensure that law enforcement has the tools it needs to address these threats, and that is what we are doing today.",
+    "The HALT Fentanyl Act will permanently schedule fentanyl-related substances as a class I drug.",
+    "This is a very important bill, and I strongly urge that the House pass this particular bill."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN MUSIC TOURISM ACT OF 2025",
+   "title": "AMERICAN MUSIC TOURISM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1635.htm",
+   "sentences": [
+    "Madam Speaker, I move to suspend the rules and pass the bill (H.R. 617) to amend the Visit America Act to promote music tourism, and for other purposes.",
+    "Madam Speaker, I rise today in strong support of H.R. 617, the American Music Tourism Act of 2025, led by the gentlewoman from Tennessee (Mrs. Harshbarger), my good friend and a great member of the Committee on Energy and Commerce.",
+    "Mr. Speaker, let me tell you, the speaker on the floor of the House of Representatives in the great State of Florida used to begin his speeches by saying, ``I am fired up.'' I am fired up, Mr. Speaker, because we are going to pass a great bill that promotes America."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SETTING CONSUMER STANDARDS FOR LITHIUM-ION BATTERIES ACT",
+   "title": "SETTING CONSUMER STANDARDS FOR LITHIUM-ION BATTERIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1637.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 973, the Setting Consumer Standards for Lithium-Ion Batteries Act, led by Representative Torres."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPARENCY IN CHARGES FOR KEY EVENTS TICKETING ACT",
+   "title": "TRANSPARENCY IN CHARGES FOR KEY EVENTS TICKETING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1640.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1402, the Transparency In Charges for Key Events Ticketing Act, or the TICKET Act.",
+    "I urge my colleagues to join me in voting in favor of this very good bill, H.R. 1402."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: YOUTH POISONING PROTECTION ACT",
+   "title": "YOUTH POISONING PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1642.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1442) a bill to ban the sale of products with a high concentration of sodium nitrate to individuals, and for other purposes, as amended.",
+    "I rise today in strong support of H.R. 1442, the Youth Poisoning Protection Act, led by Representative Trahan."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "title": "TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1644.htm",
+   "sentences": [
+    "Under current law, only the use of the actual photos is illegal, the AI-generated, sexually explicit content is not.",
+    "Because of this gap, law enforcement was unable to fully charge this particular individual, this sick individual, in my opinion, for the scope of the images in his possession.",
+    "We must continue working hand in hand with our law enforcement partners to stay ahead of these emerging threats and safeguard our most vulnerable.",
+    "Mr. Speaker, I thank the President of the United States for shedding light on this particular bill at the state of the Union.",
+    "I rise today in strong support of S. 146, the TAKE IT DOWN Act by Senator Ted Cruz.",
+    "I urge my colleagues to join me in voting in favor of S. 146.",
+    "This is a bipartisan accomplishment, and we will protect our kids if we pass this particular bill."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOTEL FEES TRANSPARENCY ACT OF 2025",
+   "title": "HOTEL FEES TRANSPARENCY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1647.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 1479, the Hotel Fees Transparency Act of 2025, led by Representative Kim.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING SEMICONDUCTOR SUPPLY CHAINS ACT OF 2025",
+   "title": "SECURING SEMICONDUCTOR SUPPLY CHAINS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1650.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 2480) to require SelectUSA to coordinate with State-level economic development organizations to increase foreign direct investment in semiconductor-related manufacturing and production.",
+    "Mr. Speaker, I rise today in strong support of H.R. 2480, the Securing Semiconductor Supply Chains Act of 2025, led by Representative Landsman.",
+    "This legislation directs the Department of Commerce's SelectUSA program to coordinate with State-level economic development organizations to increase foreign direct investment in semiconductor- related manufacturing and production.",
+    "Semiconductors are critical to our national security and economic prosperity, yet recent shortages have exposed vulnerabilities in our supply chains.",
+    "By fostering investment in domestic semiconductor production, this bill aims to enhance supply chain resilience and reduce dependence on foreign sources."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CRITICAL INFRASTRUCTURE MANUFACTURING FEASIBILITY ACT",
+   "title": "CRITICAL INFRASTRUCTURE MANUFACTURING FEASIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1651.htm",
+   "sentences": [
+    "This legislation will advance domestic manufacturing while safeguarding our economy and national security.",
+    "Mr. Speaker, I rise today in strong support of H.R. 1721, the Critical Infrastructure Manufacturing Feasibility Act, led by Representative Miller-Meeks, my good friend."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE SPACE ACT OF 2025",
+   "title": "SECURE SPACE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1652.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2458, the Secure Space Act."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING RESILIENT SUPPLY CHAINS ACT OF 2025",
+   "title": "PROMOTING RESILIENT SUPPLY CHAINS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1653.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 2444) to establish a critical supply chain resiliency and crisis response program in the Department of Commerce, and to secure American leadership in deploying emerging technologies, and for other purposes.",
+    "Mr. Speaker, I rise today in strong support of H.R. 2444, the Promoting Resilient Supply Chains Act of 2025, led by the gentleman from Michigan (Mr. James), my good friend and a very effective Member of Congress.",
+    "By mapping and monitoring our supply chains and mitigating future vulnerabilities, we will also secure our global leadership in the advancement and development of emerging technologies."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION REAUTHORIZATION ACT OF 2025",
+   "title": "NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1657.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2482, as amended, the NTIA Reauthorization Act, led by my good friend, Chairman Latta."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING OUR UNSECURE TECHNOLOGIES TO ENSURE RELIABILITY AND SECURITY ACT",
+   "title": "REMOVING OUR UNSECURE TECHNOLOGIES TO ENSURE RELIABILITY AND SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1661.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 866, the ROUTERS Act, led by Chairman Latta, my good friend.",
+    "This legislation passed by voice vote last Congress, and I urge my colleagues to support it once again."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RURAL BROADBAND PROTECTION ACT OF 2025",
+   "title": "RURAL BROADBAND PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1662.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 2399) to require the Federal Communications Commission to establish a vetting process for prospective applicants for high-cost universal service program funding.",
+    "The Federal Communications Commission's Universal Service Fund provides funding for broadband networks in our rural communities.",
+    "The Rural Broadband Protection Act requires the FCC to establish a process for upfront vetting of providers seeking USF funds.",
+    "Mr. Speaker, I rise in support of H.R. 2399, the Rural Broadband Protection Act led by my good friend, Representative Houchin.",
+    "I thank Representative Houchin for leading this particular bill, and I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUTURE USES OF TECHNOLOGY UPHOLDING RELIABLE AND ENHANCED NETWORKS ACT",
+   "title": "FUTURE USES OF TECHNOLOGY UPHOLDING RELIABLE AND ENHANCED NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1663.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this bill, H.R. 2449, the FUTURE Networks Act led by Representative Matsui and Representative Allen."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOREIGN ADVERSARY COMMUNICATIONS TRANSPARENCY ACT",
+   "title": "FOREIGN ADVERSARY COMMUNICATIONS TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1665.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 906) to direct the Federal Communications Commission to publish a list of entities that hold authorizations, licenses, or other grants of authority issued by the Commission and that have certain foreign ownership, and for other purposes.",
+    "Mr. Speaker, I rise in support of H.R. 906, the Foreign Adversary Communications Transparency Act, led by the gentleman from Virginia (Mr. Wittman), my good friend.",
+    "Entities with ties to our adversaries--China, Russia, Iran, and North Korea--are threats to our communications networks, unfortunately, but it is a reality.",
+    "I thank Representative Wittman, a great Member, for his leadership on this bill, which passed last Congress by voice vote, and I urge my colleagues to support this very important and necessary bill.",
+    "Mr. Speaker, in closing, I commend Representative Wittman and Representative Castor for their good work on this particular bill, and I urge passage."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INFORMING CONSUMERS ABOUT SMART DEVICES ACT",
+   "title": "INFORMING CONSUMERS ABOUT SMART DEVICES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1666.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 859, the Informing Consumers About Smart Devices Act led by Representative Fulcher."
+   ]
+  }
+ ]
+}

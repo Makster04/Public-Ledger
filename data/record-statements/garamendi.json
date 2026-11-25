@@ -1,0 +1,239 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "garamendi",
+ "name": "John Garamendi",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 101
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4736.htm",
+   "sentences": [
+    "Mr. Chair, I begin by honoring those members of the military that lost their lives recently in the Iran conflict.",
+    "The bill includes positive provisions, including servicemember pay raises, protections for civilian workers, right-to-repair authorities, and transparency on military operations in the Middle East.",
+    "This bill cannot continue to increase military spending while the administration unilaterally misuses our Armed Forces at home and abroad, as they intend to fight immigration and Iran.",
+    "This bill also authorizes more than $1.5 trillion, plus another $300 billion in the reconciliation bill, which apparently will be with us soon, plus another $80 billion or $90 billion to pay for the Iran war.",
+    "Medicaid is eviscerated in the upcoming months ahead.",
+    "The children's food programs, in schools and out, are not there."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPIRATION OF NEW START",
+   "title": "EXPIRATION OF NEW START",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH804.htm",
+   "sentences": [
+    "If we allow this treaty to lapse without a replacement, then we will be entering a world we haven't seen in decades, a world without limits on the nuclear arsenals of the two largest nuclear powers: Russia and the United States.",
+    "We will be stripping away the last guardrail preventing a catastrophic return to the unchecked nuclear buildup of the Cold War.",
+    "We are on remote control: more bombs, more, more, and we will be safe.",
+    "We will build more bombs, and we will stop their bombs."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "He said, Okay, you go ahead, but I am going to go first."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "title": "PROTECTING HEALTHCARE FOR MILLIONS OF AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH238.htm",
+   "sentences": [
+    "If you take a look at the big, ugly bill and you get into the details, well, there are the enhanced tax credits for the Affordable Care Act, and we will talk about that in a few moments; but also in the big, ugly bill is the big problem coming up at the end of this 2026 year.",
+    "They have put in place a dismantling of the Medicaid program.",
+    "Now, if we talk about what the issue is today--and thank goodness, the Democratic leadership in this House put forth an opportunity to solve one of the most critical problems that face Americans right now, and that is the expiration of the Affordable Care Act tax credits.",
+    "Fortunately, the House of Representatives, led by the Democrats and a handful of Republicans, pushed forward an extension, a 3-year extension of the Affordable Care Act subsidies which will be exceedingly important."
+   ]
+  },
+  {
+   "date": "2025-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-09/html/CREC-2025-09-09-pt1-PgH3915.htm",
+   "sentences": [
+    "One of them, the 101st Airborne, now has several thousand of its troops deployed to the southern border.",
+    "We are going to spend probably a billion dollars retrofitting a luxury jet gifted by the Qatari royal family to President Trump."
+   ]
+  },
+  {
+   "date": "2025-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENERGY AND WATER CUTS",
+   "title": "ENERGY AND WATER CUTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-04/html/CREC-2025-09-04-pt1-PgH3845-6.htm",
+   "sentences": [
+    "We would do well to understand what was actually in that bill: money to deal with the climate, removed; money to deal with new energy sources, renewable energy sources, removed; energy efficiency, removed."
+   ]
+  },
+  {
+   "date": "2025-08-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE TRANSPORTATION EMERGENCY RELIEF EXTENSION ACT",
+   "title": "INTRODUCTION OF THE TRANSPORTATION EMERGENCY RELIEF EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-08-01/html/CREC-2025-08-01-pt1-PgE748-2.htm",
+   "sentences": [
+    "Americans across the country are facing increasingly frequent and severe floods and wildfires due to the climate crisis."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF A RESOLUTION REAFFIRMING THE PRINCIPLES OF THE CONSTITUTION OF THE UNITED STATES",
+   "title": "INTRODUCTION OF A RESOLUTION REAFFIRMING THE PRINCIPLES OF THE CONSTITUTION OF THE UNITED STATES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgE722.htm",
+   "sentences": [
+    "This resolution is endorsed by more than a dozen public interest and legal advocacy organizations, who stand united in reasserting the essential roles of the legislative and judicial branches and in declaring unequivocally that no individual--especially the President-- is above the law.",
+    "Mr. Speaker, today I introduced a House resolution along with my colleague, Representative Lizzie Fletcher (TX-08), to reaffirm the principles of the Constitution of the United States of America, including the separation of powers, checks and balances, the independence of the judiciary, and the power of Congress to control spending, declare war, and conduct oversight.",
+    "It quotes James Madison, who said ``this power over the purse may, in fact, be regarded as the most complete and effectual weapon with which any constitution can arm the immediate representatives of the people.'' I urge my colleagues to hear this message today.",
+    "Mr. Speaker, I urge all Members of the House to cosponsor this important resolution. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE BRIDGE CORROSION PREVENTION AND REPAIR ACT OF 2025",
+   "title": "INTRODUCTION OF THE BRIDGE CORROSION PREVENTION AND REPAIR ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgE627.htm",
+   "sentences": [
+    "Mr. Speaker, today I introduced the ``Bridge Corrosion Prevention and Repair Act of 2025'' with Representative Mike Bost (R- IL), Representative Chris Deluzio (D-PA), and Representative Brian Fitzpatrick (R-PA).",
+    "In July 2021, the House passed Section 2 of the ``Bridge Corrosion Prevention and Repair Act'' as Section 1116 of former Chairman Peter A. DeFazio's (D-OR) ``Investing in a New Vision for the Environment and Surface Transportation (INVEST) in America Act,'' of which I was a cosponsor.",
+    "America's corrosion professionals and union painters are ready, willing, and able to do the job.",
+    "Our legislation is endorsed by the International Union of Painters and Allied Trades (IUPAT) and the Association for Materials Protection and Performance (formerly called the National Association of Corrosion Engineers and the Society for Protective Coatings).",
+    "Mr. Speaker, I urge all Members of the House to cosponsor the ``Bridge Corrosion Prevention and Repair Act of 2025.'' ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE PUBLIC INSPECTORS FOR SAFE INFRASTRUCTURE ACT",
+   "title": "INTRODUCTION OF THE PUBLIC INSPECTORS FOR SAFE INFRASTRUCTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgE570.htm",
+   "sentences": [
+    "From the delays in building the carpool bridge connecting the San Diego (405) and Costa Mesa (55) freeways to the series of issues that delayed the Bay Bridge, there are numerous examples where outsourcing inspection work to private contractors has undermined public safety, delayed projects, and contributed to cost overruns.",
+    "Mr. Speaker, today I introduced the ``Public Inspectors for Safe Infrastructure Act'' with U.S. Representative Julia Brownley (D-CA) along with U.S. Representatives Stephen Lynch (D-MA) and Rashida Tlaib (D-MI)."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS",
+   "title": "DEMOCRATIC PROPOSALS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+   "sentences": [
+    "As we hear those stories of the reality of the programs that are not moving forward, the reversal of critical programs to protect individuals and their healthcare, to protect individuals in their daily lives as they travel, to protect Americans now and in the future as we address the issues of climate change and the enormous challenges, much more will be said about that in the days ahead.",
+    "Republicans have purged the military of competent, experienced leaders and have usurped congressional, constitutional power of the purse and power of the law by dissolving programs, such as USAID, which is authorized by law; the Consumer Finance Protection Bureau; and many, many other government agencies.",
+    "Mr. Speaker, instead of reclaiming the constitutional power of Congress, our Republican colleagues are now pushing forward their budget that will make working families sicker, less healthy, and hungry, all the while giving $3.5 trillion in lower taxes and tax breaks to their billionaire donor friends and corporations.",
+    "In all of this, the majority will add trillions to our national debt.",
+    "Here are some of those policies that the congressional Democrats would bring to the floor if we had four more Members in our Caucus: Democrats will support working families.",
+    "The first thing we will do to support working families is to expand the child tax credit.",
+    "If we had those four additional Democrats, we would include provisions in our budget to protect American families from price gouging.",
+    "It is unacceptable that American corporations continue to exploit the crisis and leave working families with the bill.",
+    "Democrats will establish a Federal ban on price gouging, and we will hold those corporations accountable.",
+    "Democrats will build and expand on the $35 insulin cap, which incidentally is a price cap that Trump removed.",
+    "Democrats will expand the $2,000 out-of-pocket prescription drug cap for all Americans, and Democrats will lower housing costs by expanding the affordable housing programs, the low-income housing tax credit, and strengthening access to housing using a bill that I have introduced called the HOME Act, which will increase housing availability.",
+    "The third provision that we would include in our budget is the PRO Act.",
+    "The PRO Act protects the right for working men and women to organize, ensuring that workers have the power to negotiate for fair wages and benefits.",
+    "As a Member of the Labor Caucus, I know the importance of collective bargaining and protecting unions.",
+    "Collective bargaining is the fairest possible way for workers to earn the money that they deserve for the work that they have performed.",
+    "We will also push forward the Raise the Wage Act to gradually bring the Federal minimum wage in line with the economic reality of American workers.",
+    "Mr. Speaker, Democrats will also defend Social Security, Medicare, and Medicaid.",
+    "We will do this with legislation such as Representative John Larson's Social Security 2100 Act, which will increase benefits while ensuring that the superwealthy pay their fair share and secure this critical program for future generations.",
+    "The House Republican budget scheme, endorsed by our President and designed to help the superwealthy and their billionaire buddies like Elon Musk, will cut Social Security benefits and Medicare and Medicaid benefits.",
+    "In my district alone, the Republican proposal will gut Medicaid for 250,000 of my constituents.",
+    "My colleagues on the other side of the aisle will also go after Social Security benefits for those in need.",
+    "Republicans will also cut $1 trillion out of Medicaid, and that will gut healthcare services for millions of seniors, for pregnant women, and for children with disabilities.",
+    "Congresswoman Linda Sanchez' U.S. Citizenship Act will modernize our immigration laws, strengthen our economy, and provide for a responsible approach to border management, family reunification, and for the necessary workers that we need.",
+    "Democrats will pay for all of this by making sure that we have a fair, equitable tax system in which the superwealthy and the billionaires will pay their fair share.",
+    "We will not go down the path that our Republican friends intend to go, and that is to extend the 2017 tax cut law that actually provided more than 85 percent of the trillions of dollars of benefits of lower taxes that go to the superwealthy and the billionaire class.",
+    "The superwealthy and the billionaires should not have a continuation of that tax cut.",
+    "We will also take a look at the cut to corporate taxes that was in that legislation.",
+    "We will restore the long-term capital gains rate to 28 percent, which is actually lower than the previous rates.",
+    "In the Department of the Interior alone, we had just over 100,000 employees at the National Park Service, Bureau of Land Management, U.S. Geological Survey, Bureau of Indian Affairs, and others.",
+    "It is our moment to push back and to stand up for working families.",
+    "Mr. Speaker, it is hard to say where to start, but perhaps I will simply augment what we just heard from my Democratic colleagues, who gave example after example of the crazy, uncoordinated attack on Americans that we are now seeing from the current administration.",
+    "Mr. Speaker, the Democrats will defend our borders, and we will do this with wise legislation and comprehensive reform.",
+    "We will do better, and we will deliver actual results that solve problems, not create additional problems.",
+    "We are not going to go that direction.",
+    "We will not raise taxes on any family earning less than $400,000.",
+    "We have much work ahead of us, and we intend to see that it gets done.",
+    "We will create a level playing field upon which every American will have an opportunity to rise and thrive to whatever level they want with a solid education program, a solid economy, and an opportunity to join with others to raise their future.",
+    "We will put people over politics, and this is our moment to build an economy that works for everyone, not just for a few.",
+    "I happen to know where she is from, so I won't ask her, although she should certainly tell all of us about her district and her vision."
+   ]
+  },
+  {
+   "date": "2025-02-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES AGENCY FOR INTERNATIONAL DEVELOPMENT (USAID)",
+   "title": "UNITED STATES AGENCY FOR INTERNATIONAL DEVELOPMENT (USAID)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-14/html/CREC-2025-02-14-pt1-PgE129-2.htm",
+   "sentences": [
+    "Mr. Speaker, we now know what a $280 million investment in the presidential campaign will give you--the opportunity to totally destroy one of America's most important soft power institutions, that is the United States Agency for International Development.",
+    "For me and for my wife, more than almost 58 years ago, we participated in a USAID program which at that time was just four years old.",
+    "An effort created by the United Nations funded by the American government, through USAID, to eradicate smallpox.",
+    "USAID is not only providing the necessary food to allow people to continue to live, but also to thrive.",
+    "So, Mr. Speaker, what we have is here is a billionaire Elon Musk, who has the greatest wealth of any individual in the world, who seems to think he has the right to destroy people's lives.",
+    "And then and only then can they both come back and decide whether to put USAID into the wood chopper.",
+    "If Musk or President Trump have just a modicum of humanity or any sense of compassion, they would never ever have taken USAID and destroyed it.",
+    "Mr. Speaker if President Trump and Musk had any sense that both of their actions are doing to the thousands, indeed, millions of people around the world they both would decide to reverse what they are both are doing to USAID.",
+    "I urge them to go to one of the famine camps in southern Sudan and hold a starving child in their arms.",
+    "I urge Musk and Trump to look at the extended belly, the vacant stare, look at this child who cannot even to hold up their own head up and know that the American people have developed an emergency supplemental food program that can revive that child.",
+    "There are other programs that are out there, and we will be talking about those programs.",
+    "These are serious questions that my colleagues and I will continue to raise. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE DESTRUCTION OF USAID",
+   "title": "THE DESTRUCTION OF USAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH694-5.htm",
+   "sentences": [
+    "Mr. Speaker, so we now know what a $280 million- investment in a Presidential campaign will give you: the opportunity to totally destroy one of America's most important soft power, and that is the United States Agency for International Development.",
+    "Mr. Musk and Mr. President, before you set about destroying USAID and the work that it does to provide necessary support for people, refugees and starving children around the world, I want you to hold in your hand a starving child.",
+    "Look at their extended belly, look at their eyes, and understand what you are doing to hundreds, indeed millions, of people around the world when you take USAID and put it in the wood chipper.",
+    "If you do, you will reverse the policy of destroying USAID."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP ADMINISTRATION'S DISMANTLING OF THE FEDERAL GOVERNMENT",
+   "title": "TRUMP ADMINISTRATION'S DISMANTLING OF THE FEDERAL GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH695-6.htm",
+   "sentences": [
+    "More than almost 58 years ago, we participated in a USAID program which at that time was just 4 years old set up by Kennedy.",
+    "It was a vaccination program, an effort of the United Nations, funded by the American Government through USAID, to eradicate smallpox.",
+    "USAID not only providing the necessary food to allow people to continue to live, but also to thrive through agricultural programs and economic development programs around the world.",
+    "After that, come back and decide whether to put USAID into the wood chipper.",
+    "If anyone has just a modicum of humanity and a sense of compassion, they would never, never ever take USAID and destroy it.",
+    "In total, it is more than $15 billion, but in each of these there are some very subtle and ominous opportunities for corruption.",
+    "In the Inflation Reduction Act and in the Infrastructure Investment and Jobs Act, there is money for electric vehicle charging stations.",
+    "It turns out that Tesla has some 20,000 charging stations around the United States and has become the principal charging station connection to all electric vehicles.",
+    "If Elon Musk were to shut down the money for other companies to build charging stations, he would then have a monopoly.",
+    "She is tied up in a hearing, so I will try to do my best to lay it out.",
+    "There are other programs out there, and we will be talking about these other programs as my colleagues join us here on the floor.",
+    "My colleagues and I will raise these questions.",
+    "I will draw the attention of the House to this diagram, and this is just a display of some of the contracts that Elon Musk has with the government.",
+    "I will suggest that the Democrats have a different view of government and a different view of purpose.",
+    "We will do that together with the men and women around this Nation who have seen the effect, in many cases, the tragic effect of the shutdown of government and the shutdown of agencies upon which we all rely.",
+    "Simultaneously, we will put forth a positive agenda about what we stand for and how we see America growing in the future."
+   ]
+  }
+ ]
+}

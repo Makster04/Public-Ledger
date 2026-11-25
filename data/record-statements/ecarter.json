@@ -1,0 +1,524 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "ecarter",
+ "name": "Earl L. \"Buddy\" Carter",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 42,
+  "sentences": 134
+ },
+ "statements": [
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GEORGIA PORTS",
+   "title": "GEORGIA PORTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6120.htm",
+   "sentences": [
+    "Madam Speaker, it is a great honor to represent the town of St. Marys, and I could not be prouder of the rich history this place holds."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "title": "AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5667.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of H.R. 979, the AM Radio for Every Vehicle Act.",
+    "Madam Speaker, I thank Congressman Bilirakis for his leadership, and I urge my colleagues to support this commonsense legislation."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5127-2.htm",
+   "sentences": [
+    "Today, I rise in support of the SAVE America Act and the Protect America Act because it is about security, and it is getting back to common sense."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FDA MODERNIZATION ACT 3.0",
+   "title": "FDA MODERNIZATION ACT 3.0",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4639.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 2821, the FDA Modernization Act 3.0, bipartisan legislation that ensures the FDA fully embraces modern science while reducing unnecessary animal testing.",
+    "In 2022, Congress took an important first step by passing the FDA Modernization Act 2.0.",
+    "That law gave drug developers the ability to use modern, scientifically validated alternatives to traditional animal testing when appropriate.",
+    "Today's researchers have access to technologies that simply did not exist a generation ago: advanced human cell models, organ-on-a-chip technology, artificial intelligence, and computational modeling.",
+    "These innovative tools have the potential to better predict how medicines will perform in humans while reducing reliance on animal testing.",
+    "Mr. Speaker, the FDA Modernization Act 3.0 fulfills the promise Congress made when we passed the FDA Modernization Act 2.0.",
+    "It helps reduce unnecessary animal testing and strengthens American medical innovation.",
+    "I urge my colleagues to support H.R. 2821, the FDA Modernization Act 3.0."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "First, they opened the border to millions of unvetted, illegal immigrants.",
+    "Now, they have repeatedly refused to fund Immigration and Customs Enforcement and Customs and Border Protection agents, failing in the number one responsibility of elected officials: keeping our citizens safe.",
+    "For instance, in my district, Linda Davis, a beloved special education teacher at Hesse K-8 School in Savannah, was killed by an illegal immigrant who rammed into her while fleeing law enforcement.",
+    "Then, of course, in the State of Georgia, Laken Riley, a bright nursing student, was murdered while out for what should have been a pleasant jog in Athens.",
+    "Linda Davis, Danny Sharpe, Laken Riley, these are real people, real people who should be with us today."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT",
+   "title": "FIRE IMPROVEMENT AND REFORMING EXCEPTIONAL EVENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3013.htm",
+   "sentences": [
+    "By discouraging wildfire mitigation, this outdated provision in the Clean Air Act undermines efforts to improve air quality.",
+    "Hopefully, improving air quality and reducing the devastating impact of wildfires is more important to the Members of this Chamber than thwarting Congress' efforts to make necessary updates to outdated provisions of the Clean Air Act.",
+    "Legislation like the FIRE Act and my bill, the CLEAR Act, will modernize the Clean Air Act to work in the 21st century, protecting us from pollution without strangling business development and job creation.",
+    "Mr. Speaker, I thank my friend Representative Evans for introducing this bill, and I urge its immediate adoption.",
+    "Mr. Speaker, I rise today in support of the FIRE Act."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING CARE IN RURAL AMERICA REAUTHORIZATION ACT OF 2025",
+   "title": "IMPROVING CARE IN RURAL AMERICA REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3021.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of my bill, H.R. 2493, the Improving Care in Rural America Reauthorization Act of 2025, a bipartisan bill that ensures Americans, no matter where they live, have access to quality healthcare.",
+    "Madam Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MYSTIC ALERTS ACT",
+   "title": "MYSTIC ALERTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgH2970.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of the bipartisan H.R. 7022, the Mystic Alerts Act introduced by Congressman Pfluger.",
+    "It also honors the victims of the Camp Mystic flood by ensuring that we will not simply mourn tragedy but learn from it and act.",
+    "I urge my colleagues to support H.R. 7022, the Mystic Alerts Act."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHARIA-FREE AMERICA",
+   "title": "SHARIA-FREE AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2761.htm",
+   "sentences": [
+    "Speaking out against the government will get you killed, like the 30,000 Iranian protesters murdered in January of this year.",
+    "Mr. Speaker, I rise today to speak against the invasion of sharia law in America and across Western civilization."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong and unapologetic support of the SAVE America Act, legislation that defends the integrity of our elections and makes one principle perfectly clear: U.S. elections are for U.S. citizens only.",
+    "New York City has allowed noncitizens to vote in local elections.",
+    "Washington, D.C., has done the same, granting political power to foreign nationals in the Capital of our Nation.",
+    "Georgia's own Senator John Ossoff, who once said that voter ID was right and appropriate, now supports his party reframing it as voter suppression.",
+    "What changed was he and other Democrat politicians like him realized that illegal immigrants could no longer vote to keep Democrats in office.",
+    "That is exactly what Democrats are doing right now, fighting to allow illegal aliens to vote."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNDERSEA CABLE PROTECTION ACT OF 2025",
+   "title": "UNDERSEA CABLE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2161-2.htm",
+   "sentences": [
+    "Georgia's economy depends on global connectivity from the Port of Savannah and our logistics and supply chain networks, to manufacturing defense contractors, data centers, and a growing technology sector.",
+    "Mr. Speaker, I rise in support of my bill, H.R. 261, the Undersea Cable Protection Act of 2025.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 261."
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARK BURNS INDUCTED INTO LIVING LEGENDS OF AVIATION",
+   "title": "MARK BURNS INDUCTED INTO LIVING LEGENDS OF AVIATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2102-2.htm",
+   "sentences": [
+    "Under his visionary leadership, enrollment grew from nearly 30,000 to 35,000 students, Federal research expenditures nearly tripled, and the endowment more than doubled."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETIREMENT OF JUDGE RONNIE FENDER",
+   "title": "RETIREMENT OF JUDGE RONNIE FENDER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1989-2.htm",
+   "sentences": [
+    "Through services like medication therapy management, they review entire regimens, including prescriptions, over-the-counter products, vitamins, and supplements to identify duplicates, unnecessary drugs, or risky combinations that could lead to dizziness, falls, or confusion.",
+    "The birth of the Scottish Rite dates back to 1801 when the Supreme Court of the 33rd Degree for the United States of America and the first Supreme Council in the world was established."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PASSING LEGISLATION TO REDUCE UNNECESSARY ANIMAL TESTING",
+   "title": "PASSING LEGISLATION TO REDUCE UNNECESSARY ANIMAL TESTING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH941-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to urge the House to immediately consider and pass the FDA Modernization Act 3.0, which reduces unnecessary animal testing.",
+    "In 2022, I helped pass the FDA Modernization Act 2.0, allowing drug developers to use modern, animal-free testing methods for the first time.",
+    "That is why I introduced a bill called the FDA Modernization Act 3.0 to compel the FDA's career bureaucrats to finally implement the will of the Congress and the American people."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOW REPUBLICANS HAVE DELIVERED FOR AMERICANS",
+   "title": "HOW REPUBLICANS HAVE DELIVERED FOR AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH803-5.htm",
+   "sentences": [
+    "We delivered no tax on tips, no tax on overtime, and tax relief for seniors by lowering taxes on Social Security benefits, because the key to affordability is bigger paychecks, not bigger government.",
+    "As we move to 2026, Republicans are focused on expanding opportunity even further, bringing jobs back home, growing domestic manufacturing, and ensuring the American Dream is within reach for every person willing to work hard, especially our young people.",
+    "It is common sense to use our vast natural resources and unleash American energy dominance because affordable energy means affordable living, just like it is common sense that trillions spent on so-called Green New Deal projects caused runaway inflation at over 9 percent."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "title": "AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH595-2.htm",
+   "sentences": [
+    "Manufactured homes are an essential part of our effort to meet the demand for affordable housing in America.",
+    "Mr. Speaker, I thank my friend, Representative Houchin, for introducing this bill, and I urge its immediate adoption.",
+    "Mr. Speaker, I rise today in support of the Affordable HOMES Act."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6033-2.htm",
+   "sentences": [
+    "Mr. Chair, I rise today in support of H.R. 4776, the SPEED Act.",
+    "Mr. Chair, I urge the passage of this legislation."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Since its inception, ObamaCare premiums have skyrocketed by over 220 percent.",
+    "A family of four now pays $10,000 more for coverage today than they did before ObamaCare, and their deductibles have doubled, in part to offset waste, fraud, and abuse that runs rampant throughout the program.",
+    "Mr. Speaker, I rise today in strong support of the Lower Health Care Premiums for All Americans Act, which is the right prescription to lower healthcare costs and provide American citizens with more affordable coverage."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: POWER PLANT RELIABILITY ACT OF 2025",
+   "title": "POWER PLANT RELIABILITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5927.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Power Plant Reliability Act of 2025.",
+    "Mr. Speaker, I am proud to cosponsor Congressman Griffith's Power Plant Reliability Act of 2025, and I urge my colleagues to vote for this bill."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING CHILDREN FROM UNSCIENTIFIC MEDICAL PROCEDURES",
+   "title": "PROTECTING CHILDREN FROM UNSCIENTIFIC MEDICAL PROCEDURES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5937-4.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of the Do No Harm in Medicaid Act, which protects children from unscientific sex-rejecting procedures.",
+    "Dangerous and irreversible sex-change interventions for children should have no place in our medical system.",
+    "Subjecting healthy, developing children, many of whom may be suffering from mental health issues, to damaging and harmful procedures without a clear, proven medical purpose is simply wrong.",
+    "In fact, the Department of Health and Human Services issued a report finding that the so-called gender-affirming model of care for gender-distressed children lacks sufficient scientific and ethical justification.",
+    "Prohibiting Federal Medicaid funding of sex-rejecting procedures for minors is essential to protect our Nation's children, not exposing them to unproven and irreversible medical interventions."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE FIGHT AGAINST SUICIDE",
+   "title": "THE FIGHT AGAINST SUICIDE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5013-6.htm",
+   "sentences": [
+    "Born out of a student movement, this charity boxing event was created to spread mental health awareness, particularly among young men.",
+    "Mr. Speaker, I thank the students at the University of Georgia for their leadership in suicide prevention and for starting conversations that can save lives. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MIKAELA NAYLON GIVE KIDS A CHANCE ACT",
+   "title": "MIKAELA NAYLON GIVE KIDS A CHANCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4929.htm",
+   "sentences": [
+    "The Rare Pediatric Disease Priority Review Voucher Program has been a catalyst for developing therapies for these vulnerable populations.",
+    "Mr. Speaker, I rise today in strong support of the bipartisan Give Kids a Chance Act, which supports research and development of drugs for children with cancer and other rare diseases."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE HORRORS OF SOCIALISM",
+   "title": "DENOUNCING THE HORRORS OF SOCIALISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4883-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of this resolution denouncing the horrors of socialism, and there are horrors."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "title": "RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4835-6.htm",
+   "sentences": [
+    "The Biden administration declared war on American energy by suspending oil and gas leasing on Federal lands, delaying permits for energy infrastructure, and canceling the Keystone XL pipeline.",
+    "Mr. Speaker, I rise today in support of H.R. 3109, the REFINER Act."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "title": "DC CRIMINAL REFORMS TO IMMEDIATELY MAKE EVERYONE SAFE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4333.htm",
+   "sentences": [
+    "Families are safely going out to restaurants, businesses are seeing life return to their neighborhoods, and tourists feel secure, knowing law enforcement officers are empowered to do their job and enforce the law.",
+    "We are the party that stands with our police and responds to our communities that demand law and order.",
+    "Mr. Speaker, I rise today in strong support of the D.C. CRIMES Act, legislation that builds on the extraordinary progress we have seen under President Trump's leadership to restore law and order in Washington, D.C. Thanks to President Trump and his administration, we are finally seeing real results in this city.",
+    "I urge my colleagues to support the D.C. CRIMES Act and keep our Capital safe, strong, and beautiful."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA'S FORESTERS ARE IN NEED OF HELP",
+   "title": "AMERICA'S FORESTERS ARE IN NEED OF HELP",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3827.htm",
+   "sentences": [
+    "This bill will save family forestry in America, and I urge my colleagues to cosponsor this bipartisan, bicameral piece of legislation.",
+    "I urge its immediate passage. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING THE GROWING ABUSES OF VISION BENEFIT MANAGERS",
+   "title": "ADDRESSING THE GROWING ABUSES OF VISION BENEFIT MANAGERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3521.htm",
+   "sentences": [
+    "The growing VBM acquisition and control over independent eye care practices have created worrying conflict of interest issues."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to voice my support for the CLARITY Act.",
+    "The CLARITY Act is a bill that will make clear laws to help better regulate digital assets and blockchain technology.",
+    "The CLARITY Act will help modernize financial laws to make innovation possible and clear up many opaque and sometimes contradictory laws.",
+    "Today, I again would like to give my support for the CLARITY Act, as it cements America as a hub for the world's financial innovation.",
+    "We cannot allow our adversaries, such as China, to control the digital economy."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "title": "GUIDING AND ESTABLISHING NATIONAL INNOVATION FOR U.S. STABLECOINS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3405.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to voice my support for S. 1582, the GENIUS Act of 2025, which will provide a clear regulatory framework for the issuance of stablecoins in the U.S. This bipartisan, industry-supported bill will finally give the stablecoin asset class clear rules of the road for the issuance and use of digital assets.",
+    "The GENIUS Act will establish standards so that issuers are credible and stablecoins are quality assets in a rapidly innovating digital market.",
+    "I encourage all of my colleagues to vote in support of the GENIUS Act."
+   ]
+  },
+  {
+   "date": "2025-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4016, DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R. 3633, DIGITAL ASSET MARKET CLARITY ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 4016, DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R. 3633, DIGITAL ASSET MARKET CLARITY ACT OF 2025; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-15/html/CREC-2025-07-15-pt1-PgH3257-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of three key pieces of legislation regarding cryptocurrency and our financial markets.",
+    "The GENIUS Act, the CLARITY Act, and the Anti-CBDC Surveillance State Act are all critical bills that will help make America the crypto capital of the world.",
+    "Specifically, they create federal standards for stablecoins, provide clear definitions for different digital assets, and prohibit the Federal Reserve from issuing its central bank digital currency.",
+    "We are in another arms race with our adversaries over cryptocurrency and blockchain dominance, like China and Russia.",
+    "PRESERVATION AND RELEASE OF RECORDS. (a) The Attorney General shall retain, preserve, and compile any records or evidence related to any investigation, prosecution, or incarceration of Jeffrey Epstein. (b) Not later than 30 days after the date of the enactment of this Act, the Attorney General shall release and publish any records or evidence related to any investigation, prosecution, or incarceration of Jeffrey Epstein on a publicly accessible website."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INSTITUTE FOR TELECOMMUNICATION SCIENCES CODIFICATION ACT",
+   "title": "INSTITUTE FOR TELECOMMUNICATION SCIENCES CODIFICATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3215-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 1455, the ITS Codification Act.",
+    "Mr. Speaker, I urge my colleagues to support this bipartisan legislation."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "We can continue down our current fiscally unsustainable path where we have waiting lists for Medicaid, insufficient border security resources, and are facing the largest tax hike in American history, or we can change course.",
+    "The One Big Beautiful Bill Act ushers in the golden age of America, as our great President says, where taxpayers, not illegal immigrants, are put first.",
+    "It saves and sustains Medicaid so it is there for those who truly need it.",
+    "It secures our southern border, making every community safe.",
+    "Mr. Speaker, I rise today in support of H.R. 1.",
+    "All that is required of us, to unleash this prosperity, Mr. Speaker, is to vote ``yes.'' I am proud to vote for this bill, and I encourage my colleagues to unleash America's shackles and make this country work for those who work for it every single day."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FLETC CELEBRATES 55 YEAR ANNIVERSARY",
+   "title": "FLETC CELEBRATES 55 YEAR ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2977-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to celebrate the 55th anniversary of the Federal Law Enforcement Training Center, FLETC.",
+    "FLETC's mission is to facilitate the training of Federal, State, local, and Tribal law enforcement officers, as well as international partners that are entrusted to enforce the laws, treaties, and regulations within the United States and abroad.",
+    "In the 1960s, studies revealed an urgent need for Federal law enforcement training by professional instructors using modern facilities and standardized course content.",
+    "For 55 years, FLETC has molded Federal law enforcement through high- quality, cost-effective, and standardized training programs.",
+    "The academy's professional instruction and emphasis on practical applications provides students with the knowledge and skills they need to succeed as Federal law enforcement officers.",
+    "Marshal Lyons previously served as chief of police in Garden City, Georgia, a position he held for 16 years.",
+    "While serving as Garden City police chief, Marshal Lyons was appointed to the Criminal Justice Coordinating Council and was elected to the Executive Board of the Georgia Association of Chiefs of Police.",
+    "Before his service as the Garden City police chief, Marshal Lyons served a combined 22 years in the United States Navy and Army.",
+    "In 2016, Marshal Lyons was selected as Chief of the Year by the Georgia Association of Chiefs of Police before retiring from Garden City in December of 2017.",
+    "These are only a handful of positions Marshal Lyons has held in our Nation's police force throughout his impressive career."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JEREMY AND ANGEL SEAY AND SERGEANT BRANDON MENDOZA PROTECT OUR COMMUNITIES FROM DUIS ACT OF 2025",
+   "title": "JEREMY AND ANGEL SEAY AND SERGEANT BRANDON MENDOZA PROTECT OUR COMMUNITIES FROM DUIS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2984-6.htm",
+   "sentences": [
+    "Madam Speaker, I rise in strong support of H.R. 875, the Jeremy and Angel Seay and Sergeant Brandon Mendoza Protect Our Communities from DUIs Act of 2025.",
+    "Over the past 4 years, the Biden administration has allowed millions of undocumented immigrants to pour into our country.",
+    "Along with zero oversight and accountability for the crisis, the Biden administration allowed illegal immigrants to stay in the country even after committing horrible crimes.",
+    "This piece of legislation would give the courts the ability to deport illegal aliens from America and bar them from reentry if they are convicted of a DUI or a DUI-related charge.",
+    "Though my example is the worst outcome possible, illegal aliens should not be able to stay in America with a minor penalty for driving under the influence in the first place.",
+    "It would close that loophole that allows illegal aliens to get off lightly when committing fatal acts, such as vehicular manslaughter under the influence.",
+    "Madam Speaker, I urge my colleagues to vote in support of this legislation to help bring back common sense to our immigration and legal systems after these 4 years of pure chaos."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "title": "CHARLOTTE WOODWARD ORGAN TRANSPLANT DISCRIMINATION PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2858.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Charlotte Woodward Organ Transplant Discrimination Prevention Act, which prohibits discrimination against people with disabilities in the organ transplant system.",
+    "That is why I am proud to support this bill, which will make sure that all Americans, no matter their disability status, will be able to receive the access to care that they need and deserve.",
+    "Mr. Speaker, I thank my good friends, Representative Cammack and Representative Dingell, for their leadership on this important issue, and I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SHANDRA EISENGA HUMAN CELL AND TISSUE PRODUCT SAFETY ACT",
+   "title": "SHANDRA EISENGA HUMAN CELL AND TISSUE PRODUCT SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2860.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Shandra Eisenga Human Cell and Tissue Product Safety Act, which is a critical piece of legislation aimed at preventing tuberculosis infections linked to tissue transplants.",
+    "Shandra's death was a preventable tragedy, and we will honor her memory by strengthening guidelines and improving education for these medical products, so no other family has to suffer through this again."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2625-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the HALT Fentanyl Act, which permanently extends President Trump's 2018 schedule I classification of fentanyl-related substances.",
+    "That is why Congress must pass the HALT Fentanyl Act that is before us today.",
+    "We cannot allow this lawlessness and tragedy to continue to tear our communities apart."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "Mr. Chair, I rise today in strong support of Chairman Guthrie's SUPPORT for Patients and Communities Reauthorization Act of 2025.",
+    "Mr. Chair, I thank Chairman Guthrie for his work on this important issue, and I urge my colleagues on both sides of the aisle to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOGNITION OF RICHARD \"DICK\" WALLACE",
+   "title": "RECOGNITION OF RICHARD \"DICK\" WALLACE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2388-2.htm",
+   "sentences": [
+    "NFA Burger's recognition was earned without flashy branding and large investors."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the One Big Beautiful Bill Act."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "Even in his final days in office, President Biden tried to ban American energy by stopping almost all new U.S. offshore drilling projects.",
+    "Congressman Pfluger's bill is a commonsense piece of legislation that will allow individual States to maintain control of their own fracking policies and prevent executive overreach.",
+    "This bill simply acknowledges that States, not the Federal Government, know what energy sources are best for them and allows fracking to be a tool in a State's tool chest.",
+    "Madam Speaker, I rise today in strong support of the Protecting American Energy Production Act."
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "title": "PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the Protection of Women and Girls in Sports Act, which ensures fairness and safety in girls athletics.",
+    "They want to force schools to allow biological males to share private spaces with biological females and compete in women's sports.",
+    "In fact, the vast majority of Americans agree that men do not belong in women's sports or in women's locker rooms.",
+    "I commend Representative Steube for working on this issue, and I urge my colleagues to join me in supporting the Protection of Women and Girls in Sports Act."
+   ]
+  }
+ ]
+}

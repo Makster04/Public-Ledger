@@ -1,0 +1,27 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "hrogers",
+ "name": "Harold Rogers",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 1,
+  "sentences": 6
+ },
+ "statements": [
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "From national security and law enforcement to American innovation and space exploration, the CJS bill before us puts the Nation on a path to greatness while reinforcing President Trump's bold agenda on trade and combating illicit drug trafficking.",
+    "To continue the fight against the drug cartels that are ravaging American communities, the Drug Enforcement Administration receives an increase of $63 million in this bill.",
+    "This bill is pro-law enforcement.",
+    "It includes increased funding for State and local police through the Byrne Formula Grant Program and COPS hiring grants, while also making cuts to wasteful grant programs.",
+    "Mr. Speaker, as chairman of the CJS Subcommittee, I rise in support of H.R. 6938.",
+    "Mr. Speaker, I urge a ``yes'' vote."
+   ]
+  }
+ ]
+}

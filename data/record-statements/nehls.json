@@ -1,0 +1,92 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "nehls",
+ "name": "Troy E. Nehls",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 17
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL LAW ENFORCEMENT OFFICERS REMEMBRANCE, SUPPORT, AND COMMUNITY OUTREACH ACT",
+   "title": "NATIONAL LAW ENFORCEMENT OFFICERS REMEMBRANCE, SUPPORT, AND COMMUNITY OUTREACH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5582.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 309, the National Law Enforcement Officers Remembrance, Support, and Community Outreach Act.",
+    "Congressman Panetta and more than 120 Members--120 of us--all came together in this bipartisan effort to support our law enforcement officers.",
+    "I urge my colleagues to support H.R. 309."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING TRIBUTE TO MILTON TURNER WRIGHT, JR., RETIRED TEXAS SHERIFF",
+   "title": "PAYING TRIBUTE TO MILTON TURNER WRIGHT, JR., RETIRED TEXAS SHERIFF",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4334-3.htm",
+   "sentences": [
+    "From serving honorably in the United States Navy to dedicating his life to law enforcement, he always put others before himself."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVE OUR SHRIMPERS ACT",
+   "title": "SAVE OUR SHRIMPERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3352-2.htm",
+   "sentences": [
+    "For decades, billions of dollars tied to international development financing have helped support foreign shrimp production overseas.",
+    "Mr. Speaker, I rise today in support of H.R. 2071, the Save Our Shrimpers Act.",
+    "Mr. Speaker, I urge my colleagues to stand up for our shrimpers and protect the American industry, and I ask them to vote ``yes'' on H.R. 2071."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPERSONIC AVIATION MODERNIZATION ACT",
+   "title": "SUPERSONIC AVIATION MODERNIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2661.htm",
+   "sentences": [
+    "By embracing innovation while maintaining rigorous safety and noise standards, we can accelerate the development of future-generation air travel, create high-skilled jobs, and ensure that American companies, not foreign competitors, set the pace for the future of flight.",
+    "Madam Speaker, I rise in strong support of H.R. 3410, the Supersonic Aviation Modernization Act, which will help unlock the next era of American aviation innovation.",
+    "I urge my colleagues to support this legislation and help usher in a new era of quiet, efficient, and transformative supersonic travel."
+   ]
+  },
+  {
+   "date": "2025-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANNOUNCEMENT BY THE SPEAKER PRO TEMPORE",
+   "title": "ANNOUNCEMENT BY THE SPEAKER PRO TEMPORE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-18/html/CREC-2025-11-18-pt1-PgH4730.htm",
+   "sentences": [
+    "Mr. Speaker, the Democratic Party, with help from the dishonest media, used the Epstein files not to seek justice for the victims but to smear President Trump, and it is sickening, quite sickening.",
+    "The Democrats have used the Epstein files to distract the American people from the wins President Trump and his administration have delivered for the American people for the last 11 months.",
+    "Mr. Speaker, 65,000 pages of documents related to Epstein have been released.",
+    "I am voting to release the files so that we can move on from this smear campaign the Democrats have manufactured."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "We are just going to tax the net earnings on their investments at 21 percent, which is equal to the corporate tax rate."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDAL OF HONOR ACT",
+   "title": "MEDAL OF HONOR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH857.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise in strong support of H.R. 695, the Medal of Honor Act.",
+    "Mr. Speaker, I urge all of my colleagues on both sides of the aisle to support our Medal of Honor recipients by passing this bipartisan legislation."
+   ]
+  }
+ ]
+}

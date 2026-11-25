@@ -1,0 +1,169 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "shreve",
+ "name": "Jefferson Shreve",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 14,
+  "sentences": 31
+ },
+ "statements": [
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING DOMESTIC MINING ACT OF 2025",
+   "title": "PROTECTING DOMESTIC MINING ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5452.htm",
+   "sentences": [
+    "I urge my colleagues to support the Protecting Domestic Mining Act."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+   "sentences": [
+    "This legislation candidly and simply delivers on conservative promises, helps put America first while conducting vigorous oversight of our foreign assistance programs.",
+    "It upholds longstanding pro-life protections, and holds foreign governments that violate religious freedoms are held accountable.",
+    "It provides the critical tools to fight human trafficking these syndicates engage in and, frankly, rely upon while building up the law enforcement capacity of partner nations to stop these scammers.",
+    "Mr. Chair, I rise in strong support of fiscal year 2027 National Security and Department of State Appropriations Act.",
+    "Mr. Chair, I support these commonsense provisions in the underlying bill, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FREEDOM 250 GRAND PRIX",
+   "title": "FREEDOM 250 GRAND PRIX",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2085-4.htm",
+   "sentences": [
+    "I will be honest, Washington could use a little less gridlock and a little more green flag.",
+    "This August, we will put that on display at 200 miles an hour right here in our Nation's Capital."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INDIANA--COLLEGE NATIONAL FOOTBALL CHAMPIONS",
+   "title": "INDIANA--COLLEGE NATIONAL FOOTBALL CHAMPIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH942-2.htm",
+   "sentences": [
+    "We will be talking about this play for a long time: Fourth and five, Fernando Mendoza puts his head down, bounces off defenders, spins, stretches, and powers in for the touchdown."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUST VERSUS WASTE",
+   "title": "TRUST VERSUS WASTE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH802-3.htm",
+   "sentences": [
+    "For every dollar stolen by fraud, it is a dollar we cannot spend on public safety, on our national security, or on helping working families get ahead."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "title": "AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH595-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Affordable HOMES Act.",
+    "Mr. Speaker, I urge my colleagues to support this."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RURAL HEALTH TRANSFORMATION PROGRAM",
+   "title": "RURAL HEALTH TRANSFORMATION PROGRAM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH229-4.htm",
+   "sentences": [
+    "That is why the Working Families Tax Cut Act matters.",
+    "For communities from Connersville to Richmond and across Rush, Shelby, and Henry Counties, this means quality care closer, shorter drives for appointments, faster response times when minutes count, especially for our seniors, veterans, and working families."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE YEAR IN OFFICE",
+   "title": "ONE YEAR IN OFFICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5937-2.htm",
+   "sentences": [
+    "This year, six of my bills passed the House, including the Build the Wall Act, which was signed into law by President Trump.",
+    "It repurposes unspent COVID funds to complete construction of our southern border wall, and it didn't cost taxpayers an additional dime.",
+    "Next year, I will keep traveling our district, listening first, and doing my level best to bring some Hoosier common sense here to Washington. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "I appreciate the time, and I appreciate my colleague Mike Collins' work on this commonsense package of clean water reforms.",
+    "My bill serves to maintain State and local leadership in setting their water quality standards under the Clean Water Act.",
+    "These updates were an aid to ensure that Hoosiers had access to clean water and that our localities were able to deliver on this responsibility.",
+    "I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-09-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REFLECTING ON TRIP TO ISRAEL",
+   "title": "REFLECTING ON TRIP TO ISRAEL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-19/html/CREC-2025-09-19-pt1-PgH4479-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to reflect on my very recent visit to Israel.",
+    "It was a humbling journey through the Holy Land, where the history and resilience of the Israeli people left a deep impression.",
+    "I stood inside Jerusalem's Church of the Holy Sepulcher, a profound moment for me as a Christian.",
+    "I was grateful to have met Prime Minister Netanyahu, Israel's President Herzog, and our own Ambassador Mike Huckabee.",
+    "It reaffirmed my conviction to stand with the people of Israel, while working toward the goal of a more peaceful Middle East. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICA'S INFRASTRUCTURE",
+   "title": "PROTECTING AMERICA'S INFRASTRUCTURE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-11/html/CREC-2025-09-11-pt1-PgH4242-3.htm",
+   "sentences": [
+    "My amendment No. 270 directs our Secretary of State with developing a comprehensive strategy to counter Iran's and Hezbollah's missionary and propaganda operations in Latin America.",
+    "Iran's goal in Latin America is to export its ideology to the region, so as to cultivate anti-Americanism in our Western Hemisphere."
+   ]
+  },
+  {
+   "date": "2025-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOOSIER HEARTLAND TOUR",
+   "title": "HOOSIER HEARTLAND TOUR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-04/html/CREC-2025-09-04-pt1-PgH3834-2.htm",
+   "sentences": [
+    "I discussed our passage of the working families tax cuts."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ALL POLICY IS LOCAL",
+   "title": "ALL POLICY IS LOCAL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1306-4.htm",
+   "sentences": [
+    "With our community leaders, we had conversations that focused on the need to extend the progrowth policies of the Tax Cuts and Jobs Act."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETURN THE UNITED STATES TO A BALANCED BUDGET",
+   "title": "RETURN THE UNITED STATES TO A BALANCED BUDGET",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH895-3.htm",
+   "sentences": [
+    "Mr. Speaker, that is the commitment I made, and that is what I will continue to do."
+   ]
+  }
+ ]
+}

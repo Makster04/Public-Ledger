@@ -1,0 +1,97 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "kinghinds",
+ "name": "Kimberlyn King-Hinds",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 8,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISASTER LOAN OUTREACH CONSISTENCY ACT",
+   "title": "DISASTER LOAN OUTREACH CONSISTENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6154.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Chairman Williams and Ranking Member Velazquez, whom I will miss and deeply appreciate, for their leadership and support, and I urge my colleagues to adopt this bipartisan legislation."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAKE CARE OF AMERICA'S VETERANS ACT",
+   "title": "TAKE CARE OF AMERICA'S VETERANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4548-3.htm",
+   "sentences": [
+    "I urge my colleagues to join me in supporting the passage of H.R. 9237."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPER TYPHOON SINLAKU RECOVERY IN NORTHERN MARIANA ISLANDS",
+   "title": "SUPER TYPHOON SINLAKU RECOVERY IN NORTHERN MARIANA ISLANDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3465-2.htm",
+   "sentences": [
+    "In the coming weeks, I will be working with my colleagues, Federal agencies, and the administration on proposals aimed at addressing the underlying vulnerabilities this disaster has exposed because we cannot simply rebuild to what existed before."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPER TYPHOON SINLAKU",
+   "title": "SUPER TYPHOON SINLAKU",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2840-3.htm",
+   "sentences": [
+    "First, I call on FEMA to ensure rapid deployment of personnel and pre-positioned supplies, with a focus on restoring access to food, clean water, and emergency medical care.",
+    "Second, I urge the administration to expedite individual assistance and public assistance under the Stafford Act so families can begin recovery immediately, not weeks from now.",
+    "We serve this Nation, and in this moment, we are asking this Nation to stand with us."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NORTHERN MARIANA ISLANDS SMALL BUSINESS ACCESS ACT",
+   "title": "NORTHERN MARIANA ISLANDS SMALL BUSINESS ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH929-7.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of my bill, H.R. 3496, as amended, the Northern Mariana Islands Small Business Access Act.",
+    "I urge all of my colleagues to support this bipartisan, commonsense, no-cost bill."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERRITORIAL RESPONSE AND ACCESS TO VETERANS' ESSENTIAL LIFECARE ACT",
+   "title": "TERRITORIAL RESPONSE AND ACCESS TO VETERANS' ESSENTIAL LIFECARE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4284.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of my bill, H.R. 3400, as amended, the Territorial Response and Access to Veterans Essential Lifecare Act, otherwise known as the TRAVEL Act of 2025.",
+    "Mr. Speaker, I urge all my colleagues to support the TRAVEL Act."
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARIANAS AIR SERVICE IMPROVEMENT ACT",
+   "title": "MARIANAS AIR SERVICE IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-14/html/CREC-2025-03-14-pt1-PgE216-2.htm",
+   "sentences": [
+    "Mr. Speaker, today, I am proud to introduce critical legislation that would include my district, the Northern Mariana Islands, in the Department of Transportation's Essential Air Service (EAS) program.",
+    "I urge all my colleagues to support this legislation. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTRODUCTION OF THE EMPLOYMENT SERVICES AND JOBS PARITY ACT",
+   "title": "INTRODUCTION OF THE EMPLOYMENT SERVICES AND JOBS PARITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-03/html/CREC-2025-03-03-pt1-PgE179-3.htm",
+   "sentences": [
+    "I urge all my colleagues to support this legislation. ____________________"
+   ]
+  }
+ ]
+}

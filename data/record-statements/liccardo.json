@@ -1,0 +1,99 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "liccardo",
+ "name": "Sam T. Liccardo",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 24
+ },
+ "statements": [
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY AND JUSTICE FOR ALL",
+   "title": "LIBERTY AND JUSTICE FOR ALL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5413-2.htm",
+   "sentences": [
+    "This is not the first time our country has put the most ambitious of our Dreamers and doers behind bars."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR THE CONCURRENCE BY THE HOUSE IN THE SENATE AMENDMENT TO H.R. 6644, WITH AMENDMENT",
+   "title": "PROVIDING FOR THE CONCURRENCE BY THE HOUSE IN THE SENATE AMENDMENT TO H.R. 6644, WITH AMENDMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3588.htm",
+   "sentences": [
+    "Our housing crisis requires many actions from this Congress, but we should start precisely where we all agree, Republicans and Democrats, on improving affordability through accelerating expansion of housing supply.",
+    "Mr. Speaker, I rise today in support of this amendment to the 21st Century ROAD to Housing Act.",
+    "Mr. Speaker, I urge my colleagues to support this package."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICA FACES A HOUSING CRISIS",
+   "title": "AMERICA FACES A HOUSING CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3469.htm",
+   "sentences": [
+    "The solution has many names: granny flats, backyard cottages, or accessory dwelling units, but all expand our affordable housing supply.",
+    "When I was mayor of San Jose, we made building backyard apartments easier by enabling thousands of homeowners to be able to get their permits online in a single day.",
+    "Mr. Speaker, together we can make affordable housing a reality for thousands more Americans. ____________________",
+    "Today, along with my Republican colleague Andrew Garbarino, I have introduced a bill to do just that."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: POCCA",
+   "title": "POCCA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2063.htm",
+   "sentences": [
+    "It is just a bill on Capitol Hill, but it offers an opportunity to Congress to restore the rule of law against President Trump's unconstitutional highjacking of Federal spending.",
+    "With cuts of thousands of employees in the SSA, for example, the website that millions of Social Security recipients depend upon for services and information has crashed four times in only 10 days.",
+    "Tens of thousands of renters will be unable to pay their summer utility bills, and thousands more parents will be stranded without Head Start childcare.",
+    "It shouldn't be hard to persuade this Congress because our Republican majorities in both Houses have been unable to muster the courage to oppose other Trumpian blunders, whether they are tariffs that burden families with higher grocery bills or the deprivation of millions of Americans without healthcare coverage or the kleptocratic meme coin schemes to enrich the Trump family by more than $200 million.",
+    "Under the ICA, the President can notify Congress when he intends to withhold or impound funds through either deferral or rescission.",
+    "By waiving qualified immunity, it would make Elon Musk and any other administration officials who willfully break the law personally liable."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CO",
+   "title": "PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CONTROL STANDARDS; HEAVY-DUTY...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1741-6.htm",
+   "sentences": [
+    "Instead, in this administration's first 100 days, I have seen this Republican majority capitulate to the largest sales tax in U.S. history in the form of Trump tariffs, costing the average American family perhaps $4,900 annually at the checkout counter.",
+    "Instead, my Republican colleagues seek to undermine waivers from Federal regulations that California and 13 other States have relied upon for half a century to protect our clean air.",
+    "Indeed, it will also cost us in higher medical bills.",
+    "The waiver for the Advanced Clean Cars II rule will save Californians some $13 billion in spending on healthcare for respiratory ailments.",
+    "The health and cost benefits are even greater under the heavy-duty truck regulations.",
+    "Despite our many faults, my State has used this waiver and these clean air standards to clear skies that were once filled with smog when I grew up there in the 1970s and in building the world's fourth largest economy.",
+    "It is larger than Japan, India, the U.K., and, yes, even Texas.",
+    "Mr. Speaker, I rise today in opposition to H.J. Res. 87, H.J. Res. 88, and H.J. Res. 89."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "A week ago, Liberation Day brought us President Trump's tariffs which will liberate a typical American family from 3,800 of their hard-earned dollars each year, according to one study."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKING CORRUPTION CRIMINAL AGAIN",
+   "title": "MAKING CORRUPTION CRIMINAL AGAIN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH893-2.htm",
+   "sentences": [
+    "Today, I introduced the MEME Act, which prohibits top Federal officials from issuing, sponsoring, or promoting financial assets, with criminal and civil penalties."
+   ]
+  }
+ ]
+}

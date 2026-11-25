@@ -1,0 +1,56 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "fuller",
+ "name": "Clay Fuller",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 8
+ },
+ "statements": [
+  {
+   "date": "2026-11-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESHORING AMERICAN MANUFACTURING ACT OF 2026",
+   "title": "RESHORING AMERICAN MANUFACTURING ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6158.htm",
+   "sentences": [
+    "One of those courts may be the highest court in the land over at the Supreme Court, where I am more than happy to dunk on Senator Ted Cruz or any Democrat who is willing to clog up the lane.",
+    "Mr. Speaker, I rise in support of H.R. 9718, the Reshoring American Manufacturing Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "I thank the Committee for their bipartisan leadership, and I urge my colleagues to support these important provisions."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8884, REMOVING BARRIERS TO WO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8884, REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4698-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the rule.",
+    "Mr. Speaker, I urge my colleagues to support this rule."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS STEWARDS OF THE ENVIRONMENT, MAJOR SUPPLIERS OF UNITED STATES ENERGY RESOURCES, CRITICAL PROVID",
+   "title": "EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS STEWARDS OF THE ENVIRONMENT, MAJOR SUPPLIERS OF UNITED STATES ENERGY RESOURCES, CRITICAL PROVIDERS OF FOOD PRODUCTION AND...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3052-4.htm",
+   "sentences": [
+    "One of the main things that I want to highlight is President Trump using those tariffs that were just mentioned, making sure that he is bringing manufacturing back to communities that have been hollowed out by 30 to 40 years of policies that had been put in place by the Democrats.",
+    "That is the promise that I made to rural communities, that I will be a warrior for them in this body.",
+    "Anytime there is a chance for me to celebrate the positive work that we are doing in this body, and if there is a chance for me to celebrate those communities, I am going to take that opportunity."
+   ]
+  }
+ ]
+}

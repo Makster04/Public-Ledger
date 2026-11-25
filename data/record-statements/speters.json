@@ -1,0 +1,144 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "speters",
+ "name": "Scott H. Peters",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 42
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTIVE HEALTH SAVINGS ACT",
+   "title": "PREVENTIVE HEALTH SAVINGS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgH6266.htm",
+   "sentences": [
+    "We will miss him, and I will have more to say about that personally to him later.",
+    "Mr. Speaker, I rise today to support the Preventive Health Savings Act, which I co-lead with my, colleagues, Representatives Obernolte, DeGette, and Carter.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes,'' and I urge the Senate to act."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6029-4.htm",
+   "sentences": [
+    "Reforming NEPA, the most litigated environmental law on the books, is necessary if we are going to make America competitive and if we are going to protect our environment."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "title": "PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5768-3.htm",
+   "sentences": [
+    "Mr. Chairman, my amendment includes the language from my bill, H.R. 1948, allowing the International Boundary and Water Commission, or IBWC, to accept up to $5 million per year from other Federal agencies or outside entities, such as cities, States, and nonprofit organizations, for wastewater treatment and flood-control projects like those that would fight the cross-border sewage crisis in San Diego.",
+    "In this case, our amendment would authorize additional funding sources to further expedite the completion of clean water projects that fall under IBWC's jurisdiction."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUNDING CUTS TO SCIENCE",
+   "title": "FUNDING CUTS TO SCIENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4419.htm",
+   "sentences": [
+    "The final story I will tell, and maybe the most emblematic of the issue, is that of Dr. Ardem Patapoutian.",
+    "If we are going to keep up, we have to put up.",
+    "I hope we will do the same here in the House."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INTERNATIONAL BOUNDARY AND WATER COMMISSION AUTHORITY",
+   "title": "INTERNATIONAL BOUNDARY AND WATER COMMISSION AUTHORITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-09/html/CREC-2025-06-09-pt1-PgH2555.htm",
+   "sentences": [
+    "Mr. Speaker, my bill, H.R. 1948, allows the International Boundary and Water Commission, or IBWC, to accept up to $5 million per year from other Federal agencies or outside entities like cities, States, and nonprofit organizations for wastewater treatment and flood control projects like those that would fight the cross-border sewage crisis in and around San Diego and Coronado."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS CLAIMS EDUCATION ACT OF 2025",
+   "title": "VETERANS CLAIMS EDUCATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2133.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bill, H.R. 1578, the Veterans Claims Education Act.",
+    "I look forward to working with these groups to make this law the law of the land, and I urge my colleagues to support the bill and our veterans."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Mr. Speaker, if you don't believe me, look at when we vote for the debt ceiling increase; $5 trillion to $18 trillion."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL G",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"WASTE EMISSIONS CHARGE FOR PETROLEUM AND NATURAL GAS SYSTEMS: PROCEDURES FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH846.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to strongly oppose efforts to repeal the waste emissions charge, commonly known as the methane fee, which is a commonsense measure that benefits American industry, protects consumers, and provides much-needed regulatory certainty in the energy sector.",
+    "Addressing methane emissions, especially fugitive emissions from oil and gas, is one of the most effective ways to combat the climate crisis, protect public health, and ensure America's energy sector remains globally competitive.",
+    "Methane has a global warming potential 80 times higher than carbon dioxide over a 20-year period, meaning that even small leaks can erase the climate benefits of utilizing cleaner energy sources.",
+    "Unfortunately, methane regulations have been caught in a cycle of constant change.",
+    "The first Trump administration repealed methane regulations from the previous administration.",
+    "Then, in 2022, House Democrats passed the Inflation Reduction Act, which not only reinstated strong methane controls but also implemented a market-driven approach to reducing waste, the methane fee.",
+    "The methane fee is not a blanket tax on energy production.",
+    "It is designed to encourage companies to capture more methane rather than venting or leaking it.",
+    "The methane fee provides proof to consumers and competitors that we are serious about producing the cleanest, most efficient natural gas on the market.",
+    "Now, I am supposed to get up here and bash Big Oil, but actually, Big Oil is for the methane fee.",
+    "The largest companies--ExxonMobil, TotalEnergies, and Cheniere Energy--support strong methane rules.",
+    "These companies know that the methane fee demonstrates that our gas is cleaner.",
+    "Also, the consumer demand from those customers has led to the development of technologies to detect methane, its presence, and its concentration in a way that we can make much more efficient ways to regulate it.",
+    "A repeal would undercut responsible producers who have invested in cutting-edge methane detection and capture technologies that make them globally competitive.",
+    "My colleagues on the other side never miss a chance to point out that the natural gas revolution has contributed to our historic energy independence and cut our CO2 emissions from energy production.",
+    "That is true, but even small leaks of methane wipe out that advantage from a climate perspective.",
+    "World markets and domestic politics are demanding that the industry can prove with real credibility and transparency that we fixed this methane problem.",
+    "It is increasingly apparent that the viability of exporting U.S. liquefied natural gas depends on American policies to address methane pollution.",
+    "I urge my colleagues to stand with responsible energy producers and American consumers to reject efforts that repeal this vital provision."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Mr. Speaker, our national debt is more than $36 trillion.",
+    "We spend more in interest payments now than we do on Medicaid, schools, childcare, and the national defense.",
+    "Republicans have raised the alarm about this deficit, but this budget actually makes the debt and deficit much worse.",
+    "This is the exact wrong time to blow up the debt.",
+    "This bill will add between $4 trillion and $11 trillion to the debt, which will increase interest rates, raise prices, and keep inflation high.",
+    "Mr. Speaker, I work with many of my Republican colleagues as co-chair of the Bipartisan Fiscal Forum on controlling the debt and deficit."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIX OUR FORESTS ACT",
+   "title": "FIX OUR FORESTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-6.htm",
+   "sentences": [
+    "The wildfire crisis is also climate change.",
+    "California wildfires in 2020 contributed more greenhouse gases than the State's entire power sector.",
+    "It was said before that the fires in that 1 year undid the State's entire progress on emissions reduction from 2003 to 2019.",
+    "There is more we need to do, and along with Chairman Westerman, we support providing aid for all those hurting in Los Angeles without conditions."
+   ]
+  }
+ ]
+}

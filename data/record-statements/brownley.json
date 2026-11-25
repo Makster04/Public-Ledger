@@ -1,0 +1,66 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "brownley",
+ "name": "Julia Brownley",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 18
+ },
+ "statements": [
+  {
+   "date": "2026-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ESTABLISHMENT OF QUALIFICATIONS FOR THE APPOINTMENT OF A PERSON AS A MARRIAGE AND FAMILY THERAPIST, QUALIFIED TO PROVIDE CLINICAL SUPERVISION, IN THE VETERANS HEALT",
+   "title": "ESTABLISHMENT OF QUALIFICATIONS FOR THE APPOINTMENT OF A PERSON AS A MARRIAGE AND FAMILY THERAPIST, QUALIFIED TO PROVIDE CLINICAL SUPERVISION, IN THE VETERANS HEALTH ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-02/html/CREC-2026-02-02-pt1-PgH1932.htm",
+   "sentences": [
+    "Their accreditations are also already recognized by private insurance, TRICARE, and some State Medicaid programs.",
+    "It is about removing an unnecessary bureaucratic barrier that is shrinking the pool of providers and supervisors at a time when demand for mental health services has never been greater.",
+    "I rise in support of the bill titled: Establishment of Qualifications for the Appointment of a Person as a Marriage and Family Therapist, Qualified to Provide Clinical Supervision, in the Veterans Health Administration, legislation I have authored, because of the very real stories I have heard from veterans, from their families, and from therapists, not only in my district but across our great country.",
+    "Madam Speaker, I urge my colleagues to support this bill today and support our Nation's veterans and their families who depend on this care."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "This isn't about whether the Pentagon is going to serve cultivated meat tomorrow.",
+    "Meanwhile, China has already made cultivated meat a national priority in its 5-year plan.",
+    "They are scaling up production, while countries like Singapore, Israel, Australia, and the U.K. are moving forward, as well.",
+    "If cultivated meat helps deliver cheaper, scaleable protein solutions worldwide, do we really want China setting the standards, dominating the intellectual property, and reaping the jobs this burgeoning industry creates?",
+    "Mr. Chair, I have spoken directly with senior DOD officials who have shared with me the potential benefits cultivated meat could bring to readiness.",
+    "Mr. Chair, if we take this even out of the military, this is about investing in a new industry in our country that both Democrats and Republicans support because it is an opportunity for us to move and lead this, as opposed to China, Singapore, Israel, or Australia, which are already leading in this.",
+    "Mr. Chair, I rise in opposition to the amendment.",
+    "Mr. Chair, I rise in opposition to amendment No. 20, which would place a blanket statutory ban on any DOD research, development, procurement, or promotion when it comes to cultivated cell-based meat.",
+    "Mr. Chair, I urge my colleagues to vote ``no'' on this amendment to ensure DOD can test, validate, or reject technology on the merits, not because of shortsighted, anti-science ideology."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MUSK-TRUMP ADMINISTRATION",
+   "title": "MUSK-TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH664-7.htm",
+   "sentences": [
+    "Madam Speaker, yesterday, Elon Musk, an unelected, unvetted billionaire who has seized control of our government, addressed the Nation from the Oval Office.",
+    "Worse, today, reports show a 3 percent inflation rate, the highest since June 2024, due to Musk-Trump tariffs.",
+    "House Democrats are working to protect Social Security, Medicare, Medicaid, nutrition assistance programs, Head Start, the Department of Education, and much more.",
+    "I urge this administration and House Republicans to work with us on real solutions that prioritize the interests of working families over the interests of billionaires. ____________________"
+   ]
+  }
+ ]
+}

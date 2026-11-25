@@ -1,0 +1,439 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "latta",
+ "name": "Robert E. Latta",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 34,
+  "sentences": 121
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NUCLEAR REFUEL (RECYCLING EFFICIENT FUELS UTILIZING EXPEDITED LICENSING) ACT",
+   "title": "NUCLEAR REFUEL (RECYCLING EFFICIENT FUELS UTILIZING EXPEDITED LICENSING) ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6096-2.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3978) to amend the definition of ``production facility'' in the Atomic Energy Act of 1954 to exclude an equipment or device capable of reprocessing spent nuclear fuel in a manner that does not separate plutonium from other transuranic elements, and for other purposes, as amended.",
+    "A strong, robust, domestic nuclear fuel cycle is essential for maintaining growing nuclear capacity in this country.",
+    "To assist this important goal, H.R. 3978 advances a policy to maximize access to the additional energy available in spent nuclear fuel, which retains up to 90 percent of potential energy for future use.",
+    "This legislation does this by clarifying that spent fuel reprocessing facilities would be licensed under the same one-step framework as other fuel cycle facilities rather than the longer two-step process more appropriate for nuclear reactors and facilities that produce special nuclear material for national security purposes.",
+    "It also creates a more efficient path for extraction of certain important isotopes from spent fuel, which are critical to American space exploration and national security missions.",
+    "If our Nation is going to maintain its lead on nuclear technologies, we must make maximum use of our nuclear fuel resources and provide an efficient path to license promising reprocessing technologies.",
+    "Mr. Speaker, I rise to speak in support of H.R. 3978, the Nuclear REFUEL Act, which I introduced with the gentleman from California's 50th Congressional District.",
+    "I urge all my colleagues to support H.R. 3978, the Nuclear REFUEL Act."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EFFICIENT NUCLEAR LICENSING HEARINGS ACT",
+   "title": "EFFICIENT NUCLEAR LICENSING HEARINGS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6097.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 5549, the Efficient Nuclear Licensing Hearings Act, sponsored by the gentleman from Virginia's Ninth Congressional District, the gentlewoman from Washington's Eighth Congressional District, and the gentleman from Texas' 33rd Congressional District.",
+    "Since Congress enacted the ADVANCE Act 2 years ago, the Nuclear Regulatory Commission, the NRC, has been hard at work to ensure an efficient, timely, and predictable licensing process.",
+    "By removing this requirement for an uncontested hearing, this bill significantly reduces the time and cost to deploy nuclear energy without impacting safety or public engagement.",
+    "This legislation, in combination with the suite of nuclear bills being considered today, will help enable the efficient and safe deployment of nuclear energy to benefit our society.",
+    "Mr. Speaker, again, I encourage an ``aye'' vote on this legislation, H.R. 5549, which will help make sure that we keep advancing nuclear power, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF ENERGY NUCLEAR TRANSPARENCY ACT",
+   "title": "DEPARTMENT OF ENERGY NUCLEAR TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6099.htm",
+   "sentences": [
+    "These actions would include changes to safety directives, standards, analyses, and any license or authorization to construct and operate a nuclear reactor under DOE jurisdiction.",
+    "As DOE increases its regulatory activity over certain nuclear reactors and facilities, we should expect similar levels of public information, which is essential to public support and confidence.",
+    "Mr. Speaker, H.R. 9084, as amended, again, is another piece of legislation that advances our nuclear energy program in the United States.",
+    "Mr. Speaker, I rise in support of H.R. 9084, the Department of Energy Nuclear Transparency Act, as sponsored by the gentlewoman from Florida's 14th Congressional District and the gentlewoman from Iowa's First Congressional District."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN ENRICHMENT DEPLOYMENT ACT",
+   "title": "AMERICAN ENRICHMENT DEPLOYMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6100.htm",
+   "sentences": [
+    "H.R. 9612 amends the Atomic Energy Act to ensure the licensing for nuclear fuel enrichment facilities aligns with the more efficient one- step licensing process for similar-risk uranium conversion and fuel fabrication facilities.",
+    "If we are going to build out our nuclear industry, we need nuclear fuel.",
+    "Mr. Speaker, H.R. 9612, as amended, is another piece of legislation that advances our nuclear energy program in the United States.",
+    "Mr. Speaker, I rise to speak in support of H.R. 9612, the American Enrichment Deployment Act, which is led by the gentleman from South Carolina's Seventh District and the gentlewoman from Washington's Eighth Congressional District."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NUCLEAR ADVISORY COMMITTEE REFORM ACT",
+   "title": "NUCLEAR ADVISORY COMMITTEE REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6102.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 9613) to update the role of the Advisory Committee on Reactor Safeguards in the licensing and oversight of nuclear reactor facilities, and for other purposes, as amended.",
+    "Congress established ACRS in the 1950s when the commission was licensing the first generation of nuclear reactors.",
+    "I urge my colleagues to join me in supporting this bipartisan legislation to advance our work to ensure the benefits of nuclear energy for our society.",
+    "And, again, this piece of legislation also advances our nuclear energy policy in the United States, and I yield back the balance of my time.",
+    "Mr. Speaker, I rise in support of H.R. 9613, the Nuclear Advisory Committee Reform Act, sponsored by the gentlewoman from Tennessee's First Congressional District and the gentleman from Texas' 12th Congressional District.",
+    "Mr. Speaker, I also urge support of H.R. 9613, as amended."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NRC STAFF PAY ALIGNMENT ACT",
+   "title": "NRC STAFF PAY ALIGNMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6104.htm",
+   "sentences": [
+    "The special workforce and pay authority Congress established for the NRC in the bipartisan ADVANCE Act just over 2 years ago sought to help attract and preserve exceptional employees at the NRC.",
+    "H.R. 9614 fixes an issue which was inadvertently created with those incentive pay provisions in the ADVANCE Act.",
+    "Mr. Speaker, I rise to speak in support of H.R. 9614, the NRC Staff Pay Alignment Act, sponsored by the gentleman from New Jersey's Eighth Congressional District.",
+    "Mr. Speaker, I urge support and a ``yea'' vote on H.R. 9614."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RATEPAYER PROTECTION ACT",
+   "title": "RATEPAYER PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5656-3.htm",
+   "sentences": [
+    "Mr. Speaker, the goal here is very simple: Data centers should pay their own way.",
+    "We must ensure that American families and small businesses are protected from electricity price increases caused by large loads like data centers.",
+    "The increase in data center development raises important questions about how these facilities will affect local electric grids in nearby communities.",
+    "H.R. 9340 encourages States to establish a standard that requires large data centers to cover the full costs necessary to service their loads.",
+    "While data center demand growth is exploding, at the same time, record amounts of baseload generation are prematurely leaving our grids.",
+    "Mr. Speaker, I rise in support of H.R. 9340, the Ratepayer Protection Act, led by the gentleman from Colorado's Eighth Congressional District.",
+    "Mr. Speaker, I urge the House to pass the Ratepayer Protection Act."
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SPECIAL RECOGNITION OF CALVIN RETTIG BEING NAMED HANCOCK COUNTY VETERAN OF THE YEAR",
+   "title": "SPECIAL RECOGNITION OF CALVIN RETTIG BEING NAMED HANCOCK COUNTY VETERAN OF THE YEAR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-10/html/CREC-2026-09-10-pt1-PgE889-2.htm",
+   "sentences": [
+    "Following the bombing of Japan, his group occupied Tokyo, where Cal served on security and police patrol as a staff sergeant until his release in 1946."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURING COMMUNITY UPGRADES FOR A RESILIENT GRID ACT",
+   "title": "SECURING COMMUNITY UPGRADES FOR A RESILIENT GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4296.htm",
+   "sentences": [
+    "I rise in support of H.R. 7257, the SECURE Grid Act, which I sponsored with the gentlewoman from California's Seventh Congressional District."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of my amendment, which I am pleased to lead with the gentlewoman from Illinois' Second Congressional District.",
+    "I am committed to ensuring our agricultural producers have the tools at their disposal to help them to increase productivity while minimizing costs."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOMEOWNER ENERGY FREEDOM ACT",
+   "title": "HOMEOWNER ENERGY FREEDOM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2301-2.htm",
+   "sentences": [
+    "The Homeowner Energy Freedom Act repeals disastrous policies from the Inflation Reduction Act that were used to subsidize expensive mandates and implement backdoor fossil fuel bans.",
+    "It is important to remember that upwards of 60 percent of homes utilize natural gas appliances and that the number rises to more than 75 percent in colder climate States.",
+    "Importantly, H.R. 4758 builds on the important work of the Working Families Tax Cut law by officially putting an end to these egregious authorities so future abuses cannot occur.",
+    "Housing affordability is a critical issue facing the American people.",
+    "Mr. Speaker, I rise in support of H.R. 4758, the Homeowner Energy Freedom Act, sponsored by the gentleman from Texas' 12th Congressional District."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "title": "AFFORDABLE HOUSING OVER MANDATING EFFICIENCY STANDARDS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH595-2.htm",
+   "sentences": [
+    "In fact, polls show that more than four out of five Americans agree that housing affordability is a problem in the area in which they live, with median-priced homes costing more than 50 percent of a typical household's income.",
+    "Manufactured homes play an essential role in meeting our Nation's demand for affordable housing.",
+    "Just this week in the Energy Subcommittee, we had another hearing on nuclear power to make sure that we are bringing nuclear power back online in this country.",
+    "As we have heard from both sides of the aisle today, H.R. 5184 is a commonsense reform to unlock the construction of manufactured housing and increasing housing affordability for all Americans."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: POWER PLANT RELIABILITY ACT OF 2025",
+   "title": "POWER PLANT RELIABILITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5927.htm",
+   "sentences": [
+    "The Trump administration is working tirelessly to reverse unnecessary barriers to generation development and fuel innovation and baseload power like advanced nuclear.",
+    "He was referring to the severe impact that the Biden administration EPA's power plant rule, commonly known as the Clean Power Plan 2.0, was having.",
+    "Mr. Speaker, I rise in support of H.R. 3632, the Power Plant Reliability Act, sponsored by my colleague from Virginia's Ninth Congressional District (Mr. Griffith).",
+    "I urge my colleagues to support H.R. 3632.",
+    "We are going to take off 115 gigawatts of generation alone in this country when we are supposed to be putting on 155 gigawatts of power."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "title": "IMPROVING INTERAGENCY COORDINATION FOR PIPELINE REVIEWS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5814-6.htm",
+   "sentences": [
+    "Section 401 of the Clean Water Act has turned into a procedural chokepoint with varying application and drawn-out State reviews, undermining otherwise federally authorized projects.",
+    "These Clean Water Act denials haven't been because of legitimate water quality impact concern.",
+    "The basis of these blockades has been in the name of radical climate agendas, ignoring what is best for consumers, grid reliability, and economic growth.",
+    "Opponents argue that this legislation will gut the Clean Water Act.",
+    "However, this legislation doesn't even amend the Clean Water Act.",
+    "Without statutory reforms to section 401 of the Clean Water Act, these savings will not be realized, our Nation will not be able to compete with China in the intelligence race, and our electric grid will experience serious vulnerabilities.",
+    "I thank the gentleman from North Carolina (Mr. Hudson) for his leadership, and I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "title": "STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5522.htm",
+   "sentences": [
+    "States with the most aggressive forms of clean energy standards are the same States with the higher electricity bills.",
+    "Across the country, rate case filings by utilities detail the reasons for rising costs: new infrastructure to meet State climate goals, stranded assets of prematurely retired power plants, and the need for additional backup generation to keep the lights on when the weather doesn't cooperate.",
+    "Comparatively, States that have responsibly maintained reliability of their system have enjoyed affordable electricity rates and an influx of investment into energy-intensive industries, such as domestic manufacturing, that drive economic growth.",
+    "While climate and environmental justice goals of States seem laudable, the greatest harm that could come to our communities is a grid without enough electricity.",
+    "Madam Speaker, I rise in support of H.R. 3628, the State Planning for Reliability and Affordability Act, sponsored by my colleague from Colorado's Eighth District.",
+    "Madam Speaker, H.R. 3628 brings common sense back to integrated resource planning, and I urge my colleagues to support the legislation."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTRIC SUPPLY CHAIN ACT",
+   "title": "ELECTRIC SUPPLY CHAIN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5528.htm",
+   "sentences": [
+    "It is clear that our Nation is on the precipice of great technological advancements that are straining our electricity supplies, primarily driven by energy-intensive users such as data centers and domestic manufacturing.",
+    "Mr. Chairman, I rise in support of my legislation, H.R. 3638, the Electric Supply Chain Act.",
+    "Mr. Chair, I urge my colleagues to support H.R. 3638."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "title": "RESEARCHING EFFICIENT FEDERAL IMPROVEMENTS FOR NECESSARY ENERGY REFINING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4835-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, H.R. 3109, the REFINER Act.",
+    "Mr. Speaker, I urge my colleagues to support the legislation, and I thank the chairman for yielding."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "title": "UNLOCKING OUR DOMESTIC LNG POTENTIAL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4841-2.htm",
+   "sentences": [
+    "In response to Russia's unprovoked invasion of Ukraine in 2022, American energy producers immediately supplied Europe and our allies with LNG.",
+    "Unfortunately, in 2024, the Biden administration took politically motivated actions to place an indefinite ban on LNG export permits to appease the climate lobby.",
+    "Mr. Speaker, I rise in support of H.R. 1949, the Unlocking our Domestic LNG Potential Act, introduced by my friend and colleague from the 11th District of Texas.",
+    "Mr. Speaker, I urge my colleagues to support this legislation, and I thank my friend, the chairman of the committee, for bringing forth this bill."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNDERSTANDING CYBERSECURITY OF MOBILE NETWORKS ACT",
+   "title": "UNDERSTANDING CYBERSECURITY OF MOBILE NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3209-7.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1709, the Understanding Cybersecurity of Mobile Networks Act, led by the gentlewoman from Florida's Third District and the gentleman from Ohio's First District.",
+    "Mr. Speaker, I urge support and ask for passage of the legislation."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRECISION AGRICULTURE SATELLITE CONNECTIVITY ACT",
+   "title": "PRECISION AGRICULTURE SATELLITE CONNECTIVITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3211.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my legislation, H.R. 1618, the Precision Agriculture Satellite Connectivity Act, that I was pleased to introduce with the gentlewoman from Illinois' Second Congressional District (Ms. Kelly).",
+    "I am committed to ensuring our farmers have the tools at their disposal to help increase productivity while minimizing costs.",
+    "Mr. Speaker, I urge support of this legislation, because I know across my district--I have one of the largest farm income- producing districts in the State of Ohio--our farmers rely on this technology."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSUMER SAFETY TECHNOLOGY ACT",
+   "title": "CONSUMER SAFETY TECHNOLOGY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3212.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 1770) to direct the Consumer Product Safety Commission to establish a pilot program to explore the use of artificial intelligence in support of the mission of the Commission and to direct the Secretary of Commerce and the Federal Trade Commission to study and report on the use of blockchain technology and tokens, respectively.",
+    "This legislation will require the Consumer Product Safety Commission to establish a pilot program to explore the use of artificial intelligence in support of its product safety efforts.",
+    "It would also direct the Secretary of Commerce and the Federal Trade Commission to study and report on the consumer protection applications of blockchain technology.",
+    "Technology such as AI and blockchain are revolutionizing the private sector with improvements in efficiency, security, and transparency.",
+    "Mr. Speaker, as has been pointed out, the technologies are changing so rapidly, especially when looking at AI and blockchain and how they are revolutionizing the private sector because of the efficient security and transparency and what we need to be doing on the Federal Government side at the same time.",
+    "Mr. Speaker, I rise today in support of H.R. 1770, the Consumer Safety Technology Act, led by the gentlewoman from Indiana's Ninth District, the gentleman from Florida's Ninth District, and the gentlewoman from Massachusetts."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NTIA POLICY AND CYBERSECURITY COORDINATION ACT",
+   "title": "NTIA POLICY AND CYBERSECURITY COORDINATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3214.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1766, the NTIA Policy and Cybersecurity Coordination Act, led by the gentleman from California's 23rd District and the gentlewoman from Virginia's Fourth District."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INSTITUTE FOR TELECOMMUNICATION SCIENCES CODIFICATION ACT",
+   "title": "INSTITUTE FOR TELECOMMUNICATION SCIENCES CODIFICATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3215-2.htm",
+   "sentences": [
+    "ITS will also help ensure that NTIA, as the Federal spectrum manager, can continue to find opportunities to unleash commercial wireless innovation, while also ensuring military readiness, securing our southern border, advancing scientific discovery, and other Federal missions are successful.",
+    "Mr. Speaker, I rise in support of H.R. 1455, the Institute for Telecommunications Sciences Codification Act, or ITS Codification Act, led by the Representative from Georgia's First District and the Representative from Colorado's Seventh District."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPEN RAN OUTREACH ACT",
+   "title": "OPEN RAN OUTREACH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3217.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2037, the Open RAN Outreach Act, led by the gentleman from North Carolina (Mr. Hudson), who is the chairman of the Subcommittee on Communications and Technology of the Committee on Energy and Commerce, and the gentleman from Louisiana (Mr. Carter), who represents the Second District.",
+    "Mr. Speaker, I also urge Members of the House to support this legislation."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMUNICATIONS SECURITY ACT",
+   "title": "COMMUNICATIONS SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3218.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1717, the Communications Security Act, led by the gentleman from Pennsylvania's 13th District and the gentleman from New Jersey's Eighth District.",
+    "Mr. Speaker, I also urge support of this legislation because, as I have said, we have been working on many of these areas in the Energy and Commerce Committee."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROMOTING UNITED STATES WIRELESS LEADERSHIP ACT OF 2025",
+   "title": "PROMOTING UNITED STATES WIRELESS LEADERSHIP ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3220.htm",
+   "sentences": [
+    "Already, we are hearing about the Chinese Communist Party's efforts to dominate the upcoming 2027 World Radiocommunication Conference.",
+    "Mr. Speaker, I rise in support of H.R. 1765, the Promoting United States Wireless Leadership Act, sponsored by the gentleman from New Jersey's Seventh District, the gentlewoman from Michigan's Sixth District, and the gentlewoman from New York's Ninth District."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HYDROPOWER LICENSING TRANSPARENCY ACT",
+   "title": "HYDROPOWER LICENSING TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3221.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 3657, the Hydropower Licensing Transparency Act, led by the gentleman from Idaho's First District and the gentlewoman from Washington's Eighth District."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2625-5.htm",
+   "sentences": [
+    "Mr. Speaker, for 4 years I have worked tirelessly with my colleague from Virginia's Ninth District to pass the HALT Fentanyl Act.",
+    "Cartels are quite literally killing Americans for ten cents.",
+    "Currently, to trigger a 10-year mandatory minimum, an offense must involve 100 or more grams of a mixture containing a fentanyl analogue.",
+    "Mr. Speaker, I thank our Senate colleagues for passing this critical legislation, and I encourage all of my House colleagues to support the HALT Fentanyl Act so we can get this to the President's desk and stop the greatest poisoning in American history."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "We must continue vital resources for prevention, education, treatment, recovery, workforce, and law enforcement to help patients struggling with substance abuse.",
+    "Mr. Chair, I rise in support of H.R. 2483, the SUPPORT for Patients and Communities Reauthorization Act of 2025.",
+    "This reauthorization ensures that we will continue to make progress, continue to fight back, and will continue to save lives."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION REAUTHORIZATION ACT OF 2025",
+   "title": "NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1657.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2482, the National Telecommunications and Information Administration Reauthorization Act of 2025, which I am pleased to lead with the ranking member of the Subcommittee on Communications and Technology, my good friend, the gentlewoman from the Seventh District of California (Ms. Matsui)."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING OUR UNSECURE TECHNOLOGIES TO ENSURE RELIABILITY AND SECURITY ACT",
+   "title": "REMOVING OUR UNSECURE TECHNOLOGIES TO ENSURE RELIABILITY AND SECURITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1661.htm",
+   "sentences": [
+    "National security agencies, including the Director of National Intelligence, the Department of Justice, and the Department of Homeland Security, have reported on the threat posed by vulnerabilities in routers and how some Chinese Communist Party-sponsored hackers have used these vulnerabilities to launch attacks.",
+    "I rise today in support of my legislation, H.R. 866, the ROUTERS Act."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FO",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM: ENERGY CONSERVATION STANDARDS FOR CONSUMER GAS-FIRED...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH884-6.htm",
+   "sentences": [
+    "Not only do bans on gas appliances infringe on consumer choice, but it also increases strains on our Nation's grid, which cannot sustain such massive and rapid amounts of forced electrification without new, baseload generation coming online.",
+    "Not only does this rule go on to ban these gas appliances and infringe on consumer choice, but it also increases strains on the Nation's grid, which cannot sustain such massive and rapid amounts of forced electrification without new baseload generation coming online.",
+    "Madam Speaker, we have heard from various speakers today, but I think it is really important to point out that, once again, because of the Biden-Harris administration's gas heater rule, we are going to ban approximately 40 percent of the tankless gas water heaters currently available, forcing consumers to have to pay more and get less efficient models.",
+    "If we are going to make sure we become energy independent in this country, we have to start thinking about those things."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "title": "PROTECTING AMERICAN ENERGY PRODUCTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 26, the Protecting American Energy Production Act, to prevent a ban on the use of hydraulic fracturing.",
+    "The shale revolution has unleashed American innovation, specifically hydraulic fracturing, and has led to the U.S. becoming an energy superpower, stabilizing global markets and lowering prices for consumers, farmers, and manufacturers.",
+    "Unfortunately, some States have implemented misguided policies to ban or limit the use of fracking.",
+    "Additionally, natural gas will be essential to ensuring our ability to meet the massive energy demand from the data centers coming online and lead the world in artificial intelligence development."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH520-3.htm",
+   "sentences": [
+    "For 4 years, I have worked tirelessly with my colleague and friend, the gentleman from the Ninth Congressional District of Virginia (Mr. Griffith), to pass the HALT Fentanyl Act to permanently label fentanyl- related substances as a schedule I narcotic.",
+    "Cartels are literally killing Americans for 10 cents a pill.",
+    "Mr. Speaker, currently, to trigger a 10-year mandatory minimum, an offense must involve 100 or more grams of a mixture containing a fentanyl analogue.",
+    "Since the average lethal dose of fentanyl or a fentanyl analogue can be as small as 2 milligrams, the offense would need to contain roughly 50,000 lethal doses in order to trigger the 10-year mandatory minimum."
+   ]
+  }
+ ]
+}

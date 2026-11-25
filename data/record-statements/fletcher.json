@@ -1,0 +1,204 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "fletcher",
+ "name": "Lizzie Fletcher",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 17,
+  "sentences": 39
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HIGH-CAPACITY GRID ACT",
+   "title": "HIGH-CAPACITY GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5662.htm",
+   "sentences": [
+    "A grid that is larger, smarter, and more flexible is what we need, especially if we hope to withstand a wave of data-center-driven demand for power."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOAD FORECASTING ENHANCEMENT ACT",
+   "title": "LOAD FORECASTING ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5663.htm",
+   "sentences": [
+    "Madam Speaker, one of the most frustrating aspects of the explosion of artificial intelligence-driven demand for electricity is that we actually have no idea how large it will be.",
+    "One study from this February estimated that by the end of the decade, data centers would consume anywhere between 9 and 17 percent of all American electricity.",
+    "I will note that all of these efforts become more difficult if data centers continue issuing NDAs that prevent utilities from comparing notes to see if they are getting requests from the same data center.",
+    "We need guardrails on data center development to ensure transparency for communities and regulators."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "title": "AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5665.htm",
+   "sentences": [
+    "Like many of my colleagues and constituents, I am concerned about the impacts that data centers fuelling AI technologies are having on the affordability and reliability of our Nation's power grid, absent guardrails from Congress.",
+    "It requires the Department of Energy, the Federal Energy Regulatory Commission, and the North American Electric Reliability Corporation to study how to use artificial intelligence and other computing tools to enhance grid reliability and to report those findings back to Congress.",
+    "Nothing in this bill means that I or my colleagues will pause our efforts to put commonsense guardrails on data centers to protect American families, but we want to make sure we can get the most out of these technologies at the same time to better protect our grid in an era where the risk of blackouts is rising."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN MUSIC TOURISM ACT OF 2025",
+   "title": "AMERICAN MUSIC TOURISM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5666.htm",
+   "sentences": [
+    "Visitors come to see an artist they love or for the chance to stand where a famous musician got their start.",
+    "Madam Speaker, I rise to speak in support of S. 195, the American Music Tourism Act of 2025.",
+    "Madam Speaker, I am proud to support this bill."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "title": "AM RADIO FOR EVERY VEHICLE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5667.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of H.R. 979, the AM Radio for Every Vehicle Act, bipartisan legislation that Ranking Member Pallone introduced with Commerce, Manufacturing, and Trade Subcommittee Chairman Bilirakis of Florida."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KAY HAGAN TICK REAUTHORIZATION ACT",
+   "title": "KAY HAGAN TICK REAUTHORIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5670.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of S. 2398, the Kay Hagan Tick Reauthorization Act.",
+    "For those reasons, I will be voting ``yes'' on this bill, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING ILLICIT XYLAZINE ACT",
+   "title": "COMBATING ILLICIT XYLAZINE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5671.htm",
+   "sentences": [
+    "We need investment in harm reduction, prevention, and treatment services to reduce overdose deaths across the Nation.",
+    "Mr. Speaker, I rise to speak in support of H.R. 1266."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TYLER'S LAW",
+   "title": "TYLER'S LAW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5673.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to speak in support of H.R. 2004, Tyler's Law."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOP PILLS THAT KILL ACT",
+   "title": "STOP PILLS THAT KILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5674.htm",
+   "sentences": [
+    "The good news is that we know what does: expanding access to treatment for opioid use disorder and harm-reduction interventions like fentanyl test strips and naloxone.",
+    "The Trump administration has dismantled the Substance Abuse and Mental Health Services Administration, SAMHSA, the agency responsible for addressing the overdose crisis, and it has kept hundreds of millions of dollars in addiction and overdose prevention funding.",
+    "Mr. Speaker, I rise in support of H.R. 8005."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COORDINATING AND HARNESSING AMERICA'S RECOVERY OF MINERALS ACT",
+   "title": "COORDINATING AND HARNESSING AMERICA'S RECOVERY OF MINERALS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5676.htm",
+   "sentences": [
+    "Critical minerals are a vital component of many modern technologies, from our cell phones to clean energy technologies like solar panels and electric vehicles.",
+    "Mr. Speaker, I rise in support of H.R. 9617, the CHARM Act, bipartisan legislation led by our committee's Environment Subcommittee Ranking Member Tonko and Chairman Palmer."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BATTERY RECYCLING FOR AMERICA'S COMPETITIVE ECONOMY ACT",
+   "title": "BATTERY RECYCLING FOR AMERICA'S COMPETITIVE ECONOMY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5678.htm",
+   "sentences": [
+    "I believe the BRACE Act is a reasonable and meaningful step forward on battery recycling, and I urge my colleagues to support it.",
+    "I urge my colleagues to support it and vote in favor of it."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIESEL EMISSIONS REDUCTION ACT OF 2025",
+   "title": "DIESEL EMISSIONS REDUCTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5679.htm",
+   "sentences": [
+    "Mr. Speaker, H.R. 2140, the Diesel Emissions Reduction Act, reauthorizes a longstanding bipartisan program to cut pollution from diesel engines.",
+    "Through the program, the Environmental Protection Agency administers grants and loans to States and projects that help replace and retrofit diesel engines across the country that emit dangerous air pollutants, like nitrogen oxides and particulate matter, to improve air quality and public health.",
+    "Mr. Speaker, the Diesel Emissions Reduction Act reauthorizes a long-standing bipartisan program to cut pollution from diesel engines, and it is a great example of a program that works.",
+    "I thank Representative Matsui for her leadership on this legislation, and I urge my colleagues to support the bill."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8312, FRAUD PREVENTION AND ACCOUNTABILITY ACT; PROVIDING FOR CONSIDERATION OF H.R. 8464, STOPPING FRAUDULENT PAYMENTS ACT; PROVI",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8312, FRAUD PREVENTION AND ACCOUNTABILITY ACT; PROVIDING FOR CONSIDERATION OF H.R. 8464, STOPPING FRAUDULENT PAYMENTS ACT; PROVIDING FOR CONSIDERATION OF H.R...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4004-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to this rule and the underlying bill.",
+    "Mr. Speaker, for these reasons, I am voting ``no,'' and I urge all Members who believe that the people should have a say here to do the same."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "title": "AGRICULTURE, RURAL DEVELOPMENT, FOOD AND DRUG ADMINISTRATION, AND RELATED AGENCY APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgH3840-4.htm",
+   "sentences": [
+    "There are more than 12 million cattle, and it is a nearly a $15-billion cattle industry.",
+    "Madam Chair, I rise in opposition to this bill and to object that House Republicans on the Rules Committee failed to include the amendment that I offered to increase and decrease funding for the Animal and Plant Health Inspection Service by $10 million to focus on the threat of New World screwworm.",
+    "Madam Chair, for these reasons and the many others my colleagues have identified, I will be voting against this bill, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENTS TO H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.J. RES. 142, DISAPPROVING THE",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENTS TO H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.J. RES. 142, DISAPPROVING THE ACTION OF THE DISTRICT OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1951-6.htm",
+   "sentences": [
+    "Mr. Speaker, in the nearly 2 weeks since the House last met, people across America witnessed the execution of another American citizen, Alex Pretti, by agents of the United States Government, Border Patrol agents operating far from the border in Minneapolis.",
+    "That is why I am voting ``no'' on this rule, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "It is a response to the crisis that this Republican Congress has created with the cuts it made earlier this year and its failure to extend the premium tax credits, which we can fix today.",
+    "Instead, the experts tell us this bill will do nothing to decrease costs for Americans and nothing to curb junk plans, but it does have a backdoor ban on abortion for people on ACA plans.",
+    "Mr. Speaker, I rise in opposition to the disingenuously named Lower Healthcare Premiums for All Americans Act, which does not, in fact, lower healthcare premiums for all Americans."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  }
+ ]
+}

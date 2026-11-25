@@ -1,0 +1,96 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "luttrell",
+ "name": "Morgan Luttrell",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 21
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6105.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 8552, the Veterans' Cost-of-Living Adjustment Act of 2026, and I thank the DAMA Subcommittee ranking member and my good friend, Morgan McGarvey.",
+    "Reducing the financial burden too many veterans, survivors, and their families face helps alleviate some of the stress and anxiety within the veteran community, and passing this cost-of-living adjustment provides veterans with the peace of mind they deserve and access to the benefits they are owed.",
+    "With Veterans Day this Wednesday, I urge all my colleagues to support this bill honoring our commitment to serving those who served us."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRANSPORTATION WORKER IDENTIFICATION CREDENTIAL EFFICIENCY ACT",
+   "title": "TRANSPORTATION WORKER IDENTIFICATION CREDENTIAL EFFICIENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5896.htm",
+   "sentences": [
+    "H.R. 5109 directs the TSA to use existing authorities to develop clear guidelines that help formerly incarcerated individuals prepare for their applications for a Transportation Worker Identification Credential, or TWIC, before they are released and begin the reentry process.",
+    "This legislation absolutely cuts red tape for formerly incarcerated Americans seeking TWIC and a second chance at work.",
+    "It is absolutely important to note that this bill does not change or seek to change any of the factors that could disqualify an applicant from receiving a TWIC credential, and it keeps the rigorous vetting process fully intact.",
+    "Mr. Speaker, I rise today in support of H.R. 5109, the TWICE Act."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HUMAN TRAFFICKING AWARENESS MONTH",
+   "title": "HUMAN TRAFFICKING AWARENESS MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH665-2.htm",
+   "sentences": [
+    "I am from Texas and Texas being a border State, we are a hot spot for human trafficking.",
+    "I asked our elected officials and I asked our law enforcement officials: How do we combat this?",
+    "These cartels and these gangs move these people every day.",
+    "I asked law enforcement: What do you need?",
+    "We have to fix that in every single State in the country, and we can do that if we just activate and show the bad actors that we will tolerate this no more. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SYRIA TERRORISM THREAT ASSESSMENT ACT",
+   "title": "SYRIA TERRORISM THREAT ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4782-5.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Mr. Correa for his support, and I urge my colleagues to support this sensible legislation."
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2025",
+   "title": "VETERANS' COMPENSATION COST-OF-LIVING ADJUSTMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4676-4.htm",
+   "sentences": [
+    "Mr. Speaker, passing this cost-of-living adjustment provides them with the peace of mind they deserve and access to benefits they are owed.",
+    "Mr. Speaker, I rise today in support of S. 2392.",
+    "I know many of my House colleagues are committed to serving their veteran constituents, which is why I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSE REPUBLICANS DELIVERING RESULTS FOR AMERICAN PEOPLE",
+   "title": "HOUSE REPUBLICANS DELIVERING RESULTS FOR AMERICAN PEOPLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgH666-5.htm",
+   "sentences": [
+    "Madam Speaker, the Biden administration's open-border policies turned our border into a gateway for cartels, human traffickers, and criminals, putting American lives at risk and endangering innocent children.",
+    "That is why I introduced legislation to hold DHS and HHS accountable for properly vetting and tracking unaccompanied migrant children.",
+    "We must hold traffickers accountable and ensure that illegal immigrants who break our laws face real consequences.",
+    "Our border must be secured, and those who exploit our system, whether criminals or failed bureaucrats, must answer for their failures."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING TEXAS' EIGHTH DISTRICT FIREFIGHTERS",
+   "title": "THANKING TEXAS' EIGHTH DISTRICT FIREFIGHTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH204.htm",
+   "sentences": [
+    "I will take a moment to recognize the brave firefighters from District Eight of Texas who have traveled from far east Texas all the way to California."
+   ]
+  }
+ ]
+}

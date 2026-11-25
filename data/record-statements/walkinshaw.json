@@ -1,0 +1,405 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "walkinshaw",
+ "name": "James R. Walkinshaw",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 30,
+  "sentences": 123
+ },
+ "statements": [
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE VOTERS HAVE SPOKEN",
+   "title": "THE VOTERS HAVE SPOKEN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6121.htm",
+   "sentences": [
+    "Federal workers in my district were being fired by a chainsaw-wielding billionaire, and families were already paying more for groceries and healthcare.",
+    "Since then, tariffs have shown up at every checkout counter in America.",
+    "In February, the President took us into war with Iran that Congress never authorized.",
+    "They told us to end the tariffs.",
+    "Democrats are ready to reverse the cuts and repeal the tariffs that act as a tax on every household, to bring our servicemembers home, and to reduce prices and increase paychecks.",
+    "For working families, this Congress has meant higher prices and ICE-inflicted chaos in their communities."
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PUT AMERICAN FAMILIES FIRST",
+   "title": "PUT AMERICAN FAMILIES FIRST",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5491-4.htm",
+   "sentences": [
+    "They are paying more for groceries, electricity, housing, and healthcare, and President Trump's war of choice in Iran is making life more expensive."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5029-6.htm",
+   "sentences": [
+    "FedRAMP seeks to create a ``certify once, reuse many times'' model for cloud products and services that provides a secure and cost- effective approach to federal cloud service adoption.",
+    "The idea behind this concept of ``certify once, reuse many times'' or ``reciprocity'' as I like to refer to it, is that if a cloud service's security controls have already been certified at a basic level, multiple federal agencies should be comfortable with adopting the service for their own purposes.",
+    "This amendment would save the federal government time and resources by encouraging reciprocity between the parallel FedRAMP and DoD cloud security assessment processes.",
+    "Mr. Chair, I rise today in support of Amendment No. 309 to the FY2027 National Defense Authorization Act.",
+    "I urge my collegues to support this amendment."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+   "sentences": [
+    "That is why the dismantling of USAID is so dangerous.",
+    "Slashing foreign aid will not balance the Federal budget.",
+    "Anyone with a calculator knows you are not going to address the skyrocketing deficit by cutting programs that amount to a rounding error in Federal spending.",
+    "Mr. Chairman, that is why I cannot support this bill."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESSMAN GERALD E. CONNOLLY POST OFFICE BUILDING",
+   "title": "CONGRESSMAN GERALD E. CONNOLLY POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4386-4.htm",
+   "sentences": [
+    "He was a champion for the Federal workers he represented, a champion for the Postal Service, a principled statesman who represented our Nation at the NATO Parliamentary Assembly.",
+    "I am confident he is the only person in history who will have served twice as president of the Fairfax County Federation of Citizens Associations and twice as the president of the NATO Parliamentary Assembly.",
+    "Under his leadership, Fairfax County invested in smart growth, in transit, in environmental stewardship, in libraries, trails, and affordable housing.",
+    "I will carry his wisdom and his love for this community, for this institution with me for the rest of my life."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ULYSSES S. GRANT POST OFFICE BUILDING",
+   "title": "ULYSSES S. GRANT POST OFFICE BUILDING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4387.htm",
+   "sentences": [
+    "In March 1864, President Lincoln designated Grant as the general-in- chief of the U.S. Army Forces, ultimately leading to a Union victory in April 1865 with the surrender of Confederate General Lee at Appomattox in Virginia."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SPENDING AVIATION FEES FOR EQUIPMENT, GUARANTEEING UPGRADED AND ADVANCED RISK DETECTION AND SAFETY ACT OF 2026",
+   "title": "SPENDING AVIATION FEES FOR EQUIPMENT, GUARANTEEING UPGRADED AND ADVANCED RISK DETECTION AND SAFETY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4388.htm",
+   "sentences": [
+    "The increased investments in technology are not paid for, and I am concerned that these increases could result in cuts to funding for TSA workforce salaries and benefits if TSA's overall budget does not increase.",
+    "To start, the House should take up Ranking Member Thompson's bill, H.R. 2086, the Rights for the TSA Workforce Act, which would codify fair pay and collective bargaining rights for this critical workforce.",
+    "House Democrats have long been supportive of investments in new and innovative security technologies, but we must also make sure that we are supporting the workforce that operates those technologies."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING TRAVEL FOR MILITARY MEMBERS ACT",
+   "title": "IMPROVING TRAVEL FOR MILITARY MEMBERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4390.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 9328, the Improving Travel for Military Members Act.",
+    "Expediting wait times for servicemembers and their families makes travel a little bit easier and a little bit less stressful for them, and I support advancing this effort."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REIMBURSABLE SCREENING SERVICES PROGRAM EXTENSION ACT OF 2026",
+   "title": "REIMBURSABLE SCREENING SERVICES PROGRAM EXTENSION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4392.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 9391, the Reimbursable Screening Services Program Extension Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE-STOP PILOT PROGRAM EXTENSION ACT",
+   "title": "ONE-STOP PILOT PROGRAM EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4393.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 9388."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WEATHERIZING INFRASTRUCTURE IN THE NORTH AND TERRORISM EMERGENCY READINESS ACT OF 2025",
+   "title": "WEATHERIZING INFRASTRUCTURE IN THE NORTH AND TERRORISM EMERGENCY READINESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4394.htm",
+   "sentences": [
+    "Mr. Speaker, I applaud Representative Kennedy's leadership on this bill, and I urge my colleagues to support H.R. 3106."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING TRAVEL FOR AMERICAN FAMILIES ACT",
+   "title": "IMPROVING TRAVEL FOR AMERICAN FAMILIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4395.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 8897, the Improving Travel for American Families Act.",
+    "This bill will help improve that experience while upholding security standards, and I urge support."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAJOR NON-NATO ALLY TERROR THREAT ASSESSMENT ACT",
+   "title": "MAJOR NON-NATO ALLY TERROR THREAT ASSESSMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4396.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 8168, the Major Non-NATO Ally Terror Threat Assessment Act.",
+    "This bill directs the Secretary of Homeland Security, in consultation with the Secretary of State and the Director of National Intelligence, to provide an assessment of the threats to the United States posed by foreign terrorist organizations and specially designated global terrorists present in countries that the State Department designates as ``major non-NATO allies.'' The assessment required under the bill will give Congress a more comprehensive view of terrorist threats to the homeland, which will inform Congress of authorities and resources needed to combat those threats."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELO REALIGNMENT AND STRATEGIC ENGAGEMENT REFORM ACT OF 2026",
+   "title": "ELO REALIGNMENT AND STRATEGIC ENGAGEMENT REFORM ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-13/html/CREC-2026-07-13-pt1-PgH4398-2.htm",
+   "sentences": [
+    "Madam Speaker, engagement with State, local, Tribal, and territorial law enforcement is essential to the Department of Homeland Security's mission to secure the homeland.",
+    "State and local law enforcement partners must have clear points of contact within DHS to maximize information sharing and collaboration on issues like emergency and cybersecurity incident response.",
+    "I&A is charged with delivering timely and actionable intelligence to our law enforcement on the front lines and unnecessarily slashing their capacity could unintentionally create security gaps and make our communities more vulnerable to cyber terror attacks and other threats.",
+    "While I understand that H.R. 7574 seeks to improve DHS relationships with law enforcement agencies by establishing clear communication protocols and centralizing points of contact for law enforcement engagement, I urge DHS to consult with Congress on the implementation of this bill and before any staffing changes or reductions are made.",
+    "I just want to be sure that the language in the bill referring to redundancies isn't used to defund the I&A at the Department of Homeland Security."
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER P",
+   "title": "CONDEMNING ACTORS SEEKING TO DEFRAUD THE UNITED STATES GOVERNMENT, AND EXPRESSING THE SENSE OF THE HOUSE OF REPRESENTATIVES THAT GOVERNMENTWIDE FRAUD AND IMPROPER PAYMENT PREVENTION REFORMS WILL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4089.htm",
+   "sentences": [
+    "It diverts money meant for children, seniors, and working families into the pockets of criminals.",
+    "In the largest public fraud case in that State's history, more than $77 million was stolen from the Temporary Assistance for Needy Families, or TANF, program, money meant for some of the poorest families in America.",
+    "As of today, they are sitting on $145 million in unallocated TANF funds with no real plan.",
+    "In Florida, Federal prosecutors recently arrested a Russian national accused of submitting billions of dollars in fraudulent Medicare and Medicaid claims through a Texas-based supplier and funneling millions overseas.",
+    "The same gentleman in the State of New York was convicted by a jury of his peers--12 jurors--of 34 felony counts of falsifying business records, fraud.",
+    "The facts demonstrate that Minnesota officials partnered with law enforcement, strengthened safeguards, and helped bring perpetrators to justice-- undermining the central premise of this investigation.",
+    "Committee Republicans amplified their investigation into social services fraud in Minnesota after right-wing YouTuber Nick Shirley posted a viral video in December 2025 claiming, without proof, to have unearthed widespread fraud within the state's child care centers.",
+    "Witnesses uniformly rejected unsubstantiated whistleblower claims raised by Republicans on the Walz Administration's handling of fraud. 2.",
+    "C. Working families will suffer if Republicans continue to use fraud as a pretext to cut access to Medicaid, child care funding, and other programs.",
+    "More than 90 people have been charged and at least 59 people have been convicted across three key fraud schemes: The Minneapolis-based nonprofit Feeding Our Future took advantage of expanded access to federal nutrition benefits during the COVID-19 pandemic to use federal funding to buy luxury goods instead of feeding tens of thousands of Minnesota children; Certain social services providers falsely certified children as qualifying for autism treatment in order to steal public funds and provide kickbacks to the children's parents; and Hundreds of social services providers falsely claimed to have provided services to people at risk for homelessness.",
+    "Director of Nutrition Program Services at MDE Daron Korte, Assistant Commissioner of MDE Mary Cathryn Ricker, Former Commissioner of MDE Dave Greeman, Former Chief Financial Officer of DHS Eric Grumdahl, Former Assistant Commissioner for Homelessness and Housing Supports at DHS Jodi Harpstead, Former Commissioner of DHS Tony Lourey, Former Commissioner of DHS Shireen Gandhi, Commissioner of DHS The Oversight Committee also conducted a transcribed interview with Chris Schmitter, former Chief of Staff to Governor Walz.",
+    "Last time, he let them walk.'' Mr. Speaker, I include in the Record the full text of a PBS News article: ``Trump's pardons included health care execs behind massive frauds.'' Mr. Speaker, I include in the Record the CBS Miami article: ``Florida Eye Doctor Salomon Melgen Gets Clemency From Trump In Medicare Fraud.'' That does come up in the resolution.",
+    "Trump has said he will target fraud in Medicare, Medicaid, and Social Security programs, and his Republican allies in Congress have made combating fraud a key argument in their plans to slash Medicaid.",
+    "Trump also has empowered the Elon Musk-led Department of Government Efficiency to make massive cuts to government spending, often claiming to snuff out fraud and waste in the process.",
+    "In his first and second terms, Trump has granted pardons or commutations to at least 68 people convicted of fraud crimes or interfering with fraud investigations, according to a KFF Health News review of court and clemency records, Department of Justice press releases, and news reports.",
+    "At least 13 of those fraudsters were convicted in cases involving more than $1.6 billion in fraudulent claims filed with Medicare and Medicaid, according to the DOJ.",
+    "But I don't know that what he's saying translates into what they believe.'' Even so, Trump's past leniency to fraudsters might discourage the Justice Department from pursuing the whistleblowers' claims, Martin said. ``There are a lot of rank-and-file people who are operating at the lowest point in their professional careers, where they've seen a lot of their work essentially be water under the bridge,'' Martin said, ``That's got to be really demoralizing.'' The White House did not respond to requests for comment.",
+    "Instead, they describe the fraud controls, the law enforcement partnerships, and the steps to stop fraudulent payments.",
+    "Minnesota's Medicaid Fraud Control Unit has prosecuted more than 300 cases and recovered more than $80 million for taxpayers.",
+    "I haven't gotten into the conflicts of interest, the stock trades, the prediction market profits.",
+    "Let's not forget the $1.8 billion slush fund for January 6 cop beaters, that he continues to try to put in place.",
+    "In April of 2026, a drone manufacturer, backed by Eric and Donald Trump, Jr., won its first DOD contract to supply drones to the Pentagon, while their father and the President of the United States led the country into an illegal war with Iran.",
+    "We have fraud being perpetrated on the American public with memecoins, no-bid contracts, Tom Homan's alleged $50,000 paper bag of money, insider trading in the White House, and the appearance, at least, maybe more, of pardons for sale.",
+    "Mr. Speaker, I support robust, bipartisan efforts to prevent fraud in Federal programs.",
+    "I will quote a former U.S. attorney who spent his career prosecuting the healthcare fraud that is rampant in Mississippi, not mentioned in the resolution.",
+    "It doesn't sound like we are going to bring any other Governors or State officials before the committee.",
+    "I am going to send the bill to the taxpayers, totaling hundreds of millions of dollars.",
+    "While oversight Democrats will oppose this partisan resolution, we are going to continue to support legislation and continue to work in a bipartisan way to combat financial fraud and improper payments, protect the privacy of sensitive taxpayer information, toughen Federal ethics laws, and hold fraudsters accountable, especially those that have been pardoned by President Trump."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FRAUD PREVENTION AND ACCOUNTABILITY ACT",
+   "title": "FRAUD PREVENTION AND ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4065-5.htm",
+   "sentences": [
+    "Investigators and law enforcement officers across the IG community were left without access to essential training.",
+    "Worse, the bill's expansion of the Do Not Pay system could threaten the privacy of millions of Americans, given this administration's really poor track record on information privacy.",
+    "I support making it permanent, as do my Democratic colleagues on the Oversight Committee.",
+    "Independent oversight has been blocked, and I fear that this bill would give the Trump administration another way to pull the rug out from inspectors general, and I urge my colleagues to oppose it.",
+    "I will give you three reasons, Madam Speaker."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING FRAUDULENT PAYMENTS ACT",
+   "title": "STOPPING FRAUDULENT PAYMENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-10/html/CREC-2026-06-10-pt1-PgH4071.htm",
+   "sentences": [
+    "For millions of families, Federal assistance, healthcare, food assistance, and Social Security is the only thing standing between them and financial ruin.",
+    "Just last month, it suspended $1.3 billion in Medicaid payments to California, which will harm nearly a million elderly and disabled residents.",
+    "Madam Speaker, I will just give one agency, Social Security, an agency that has been under assault by this administration.",
+    "It is estimated that 10,000 times a year, Social Security falsely declares somebody dead.",
+    "It happens oftentimes because States send bad information to the Social Security Administration.",
+    "Time after time after time, the IG has recommended that Social Security and this body make improvements in that process.",
+    "This bill would make a terrible situation for someone falsely declared by their government to be dead even worse, because if the government says you are dead, you don't get your Social Security checks.",
+    "This bill would make an already impossible process, where someone has to go call Social Security, get into an office, and try to get an appointment with an agency that has been decimated by DOGE--I know that my constituents tell me every day that they call Social Security offices and can't get anyone to answer the phone because folks have been fired and pushed out.",
+    "This bill would further delay at least 10,000 Americans falsely declared dead each year from getting their Social Security checks.",
+    "This bill does nothing to address that situation, to ensure the Do Not Pay list is actually getting the fraudsters, not the law-abiding Americans who deserve their Social Security checks.",
+    "I will be happy to work with colleagues on both sides of the aisle to support legislation like the eight suspension bills we considered earlier this week to combat fraud, but this bill misses the mark."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of the bipartisan amendments en bloc, which includes my amendment to address air quality for our veterans and the Federal employees who care for them."
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MAKE THE DISTRICT OF COLUMBIA SAFE AND BEAUTIFUL ACT OF 2025",
+   "title": "MAKE THE DISTRICT OF COLUMBIA SAFE AND BEAUTIFUL ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgH2698-3.htm",
+   "sentences": [
+    "As we speak, President Trump has us engaged in an unconstitutional, reckless war with Iran.",
+    "Republicans have stripped healthcare from millions of Americans while giving big tax cuts to billionaires.",
+    "In this Congress, the Committee on Oversight and Government Reform has spent a lot of time meddling in local D.C. matters and none holding the Trump administration accountable for corruption, its coverup of the Epstein files, and for the failure to deliver the lower costs that the President promised.",
+    "The commission is required to develop policies to ``direct the maximum enforcement of Federal immigration law within the District of Columbia, including policies to encourage the redirection of available Federal, State, or local law enforcement resources to apprehend and deport illegal aliens.'' It is to redirect law enforcement.",
+    "Redirect law enforcement from the worst of the worst and, presumably, toward detaining more hardworking folks and children on top of the thousands of children that this administration has detained.",
+    "At the same time, the commission is required to support efforts to speed up and lower the costs of concealed carry permits in D.C., increasing the risk of gun violence.",
+    "With respect to the concealed carry permit and streamlining the process, one of the aspects of the District's process that does take a little bit of time is the requirement for range training.",
+    "I suspect that what the gentleman means when he says he wants to streamline the process for concealed carry permits in D.C. is he wants folks to have a concealed carry permit without completing range training.",
+    "The investigation backfired on my Republican friends almost as soon as it began, thanks in large part to the testimony of every one of the eight current and former D.C. police commanders who sat down for transcribed interviews.",
+    "The evidence was that President Trump was not telling the truth and is not telling the truth about crime in D.C. to justify his federalization of the D.C. police and deployment of troops on D.C. streets.",
+    "According to a poll conducted by The Washington Post, 80 percent of D.C. residents opposed President Trump's federalization of the D.C. police department and the deployment of the National Guard and Federal law enforcement in D.C. They disagree with the majority's view that President Trump and Federal troops have made D.C. safer.",
+    "Mr. Speaker, $4 a gallon gas, 4-hour waits at TSA lines, millions of Americans losing their healthcare, rural hospitals set to close, and tariffs driving up costs for hardworking American families.",
+    "Mr. Speaker, I rise in opposition to the so-called Make the District of Columbia Safe and Beautiful Act.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this legislation and instead support efforts that respect local officials here in D.C. and across the country who work to make our communities safer and more beautiful."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO NEW WARS",
+   "title": "NO NEW WARS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2379-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to oppose President Trump's illegal, unconstitutional, and reckless war in Iran.",
+    "That is why I will vote for the bipartisan War Powers Resolution to rein in this out-of-control President and end his unauthorized hostilities in Iran. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PERMISSION FOR MEMBER TO BE CONSIDERED AS FIRST SPONSOR OF H.R. 1600, H.R. 1601, AND H.R. 670",
+   "title": "PERMISSION FOR MEMBER TO BE CONSIDERED AS FIRST SPONSOR OF H.R. 1600, H.R. 1601, AND H.R. 670",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH227.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent that I may hereafter be considered as the first sponsor of H.R. 1600, the Crimea Annexation Non-Recognition Act; H.R. 1601, the Defending Ukraine's Territorial Integrity Act; and H.R. 670, the Lady Liberty Act, bills originally introduced by Representative Connolly of Virginia, for the purposes of adding cosponsors and requesting reprintings pursuant to clause 7 of rule XII."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT",
+   "title": "PROTECT AMERICA'S WORKFORCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+   "sentences": [
+    "These civil servants protect our national security, care for our veterans, process Social Security claims, advance medical research, and respond when disaster strikes.",
+    "Stripping collective bargaining rights is a direct assault on our nonpartisan civil service.",
+    "Mr. Speaker, I rise in strong support of the Protect America's Workforce Act.",
+    "Mr. Speaker, I urge my colleagues to support the bill."
+   ]
+  },
+  {
+   "date": "2025-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DESTROYING UNNECESSARY, MISALIGNED, AND PROHIBITIVE RED TAPE ACT",
+   "title": "DESTROYING UNNECESSARY, MISALIGNED, AND PROHIBITIVE RED TAPE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-02/html/CREC-2025-12-02-pt1-PgH4989.htm",
+   "sentences": [
+    "While the majority is busy claiming to fight bureaucracy by creating new bureaucracy, they are ignoring the real crisis small businesses are begging us to address: the looming lapse of the enhanced premium tax credits.",
+    "Nearly half of all adults with ACA marketplace coverage are small business owners, small business employees, or self-employed.",
+    "In many cases, the Affordable Care Act and the enhanced premium tax credits have given them the freedom to start their small business, but the Republican attacks on healthcare will force small businesses to close.",
+    "Mr. Speaker, I rise in opposition to this bill.",
+    "Mr. Speaker, I urge my colleagues to oppose this bill."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPEAL OF SENATE NOTIFICATION REQUIREMENTS RELATING TO LEGAL PROCESS ON DISCLOSURES OF SENATE DATA",
+   "title": "REPEAL OF SENATE NOTIFICATION REQUIREMENTS RELATING TO LEGAL PROCESS ON DISCLOSURES OF SENATE DATA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4790.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of legislation to repeal a last-minute, dead-of-night provision added to the Legislative Branch Appropriations Act that green-lights eight Republican Senators to raid the Treasury and reward themselves with millions of taxpayer dollars because they were investigated for their involvement in the 2021 insurrection.",
+    "It is a brazen attempt by Republicans to further whitewash a conspiracy and a violent insurrection while lining their own pockets with taxpayer dollars."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA CASH BAIL REFORM ACT OF 2025",
+   "title": "DISTRICT OF COLUMBIA CASH BAIL REFORM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4796.htm",
+   "sentences": [
+    "Tariffs are driving up prices.",
+    "Mr. Speaker, I rise in opposition to H.R. 5214, which erodes the self-governance of the District of Columbia.",
+    "I strongly oppose this bill and encourage my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EPSTEIN FILES TRANSPARENCY ACT",
+   "title": "EPSTEIN FILES TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-18/html/CREC-2025-11-18-pt1-PgH4725-2.htm",
+   "sentences": [
+    "They helped fuel the rise of President Trump and were built on baseless claims about secret pedophile rings, while the real documented case of child sex trafficking involving Jeffrey Epstein remains shrouded in secrecy because President Trump refuses to release the files."
+   ]
+  },
+  {
+   "date": "2025-10-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING HICKORY FARMS ON ITS 50TH ANNIVERSARY",
+   "title": "COMMEMORATING HICKORY FARMS ON ITS 50TH ANNIVERSARY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-06/html/CREC-2025-10-06-pt1-PgE933-3.htm",
+   "sentences": [
+    "Established in 1975, Hickory Farms is a community made up of 198 single-family homes in the Braddock District."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DELIVERING FOR THE AMERICAN PEOPLE",
+   "title": "DELIVERING FOR THE AMERICAN PEOPLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4375-3.htm",
+   "sentences": [
+    "Our economy is sputtering, and the tariffs are jacking up prices.",
+    "The so-called big, beautiful bill will decimate Medicaid, taking healthcare from seniors, children, and working families, while driving up premiums."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PERMISSION FOR MEMBER TO BE CONSIDERED AS FIRST SPONSOR OF H.R. 491, H.R. 492, H.R. 493, AND H.R. 1670",
+   "title": "PERMISSION FOR MEMBER TO BE CONSIDERED AS FIRST SPONSOR OF H.R. 491, H.R. 492, H.R. 493, AND H.R. 1670",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4347-2.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent that I may hereafter be considered to be the first sponsor of H.R. 491, the Equal COLA Act; H.R. 492, the Saving the Civil Service Act; H.R. 493, the FAIR Act; and H.R. 1670, the Family Building FEHB Fairness Act, all bills originally introduced by Representative Connolly of Virginia, for the purpose of adding cosponsors and requesting reprintings pursuant to clause 7 of rule XII."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING THE HONORABLE JAMES WALKINSHAW TO THE HOUSE OF REPRESENTATIVES",
+   "title": "WELCOMING THE HONORABLE JAMES WALKINSHAW TO THE HOUSE OF REPRESENTATIVES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4215.htm",
+   "sentences": [
+    "Families everywhere will know someone who has lost their job because of the DOGE cuts, the tariffs, the budget bill, or our failure to address the rising costs on everything from groceries to rent to prescription drugs.",
+    "They want us to tackle the high cost of living, housing, and health care, to confront climate change, to honor the public servants, our Federal employees, who keep our government running.",
+    "I will carry their hopes and their voices into this Chamber every day.",
+    "I will never forget where I came from, and I will never stop working for a government that reflects the best of who we are."
+   ]
+  }
+ ]
+}

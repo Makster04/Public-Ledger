@@ -1,0 +1,772 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "jsmith",
+ "name": "Jason Smith",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 49,
+  "sentences": 319
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: END TAX PENALTIES ON AMERICAN HOSTAGES ACT",
+   "title": "END TAX PENALTIES ON AMERICAN HOSTAGES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5683.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 9496, the End Tax Penalties on American Hostages Act, introduced by Representative Tenney."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER ADVOCATE PARTICIPATION ACT",
+   "title": "TAXPAYER ADVOCATE PARTICIPATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5685.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 9498, the Taxpayer Advocate Participation Act, introduced by Representative Steube."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING TAXPAYERS FROM GHOST PREPARERS ACT",
+   "title": "PROTECTING TAXPAYERS FROM GHOST PREPARERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5686.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 9499) to amend the Internal Revenue Code of 1986 to apply tax return preparation penalties to improperly altered returns, and for other purposes, as amended.",
+    "Mr. Speaker, I rise today in support of H.R. 9499, the Protecting Taxpayers from Ghost Preparers Act, introduced by Representative Malliotakis."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAX RELIEF FOR FRAUD VICTIMS ACT",
+   "title": "TAX RELIEF FOR FRAUD VICTIMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5687.htm",
+   "sentences": [
+    "The bill gives taxpayers more time to amend previous tax returns in order to receive credits and refunds on their losses.",
+    "Mr. Speaker, I rise today in support of H.R. 9500, the Tax Relief for Fraud Victims Act, introduced by Representative Miller of Ohio.",
+    "I urge all my colleagues to do the same and support this legislation."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGOA EXTENSION ACT",
+   "title": "AGOA EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5377-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this legislation, which not only prevents another government shutdown but also includes legislation passed by the Ways and Means Committee and the House to reauthorize trade policies that are vital to our Nation's economy and national security."
+   ]
+  },
+  {
+   "date": "2026-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT",
+   "title": "REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-23/html/CREC-2026-07-23-pt1-PgH5182-6.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1438, I call up the bill (H.R. 8884) to amend title II of the Social Security Act to reauthorize demonstration authority for the disability insurance program, and ask for its immediate consideration in the House.",
+    "In fact, an estimated 60 percent of Americans who receive benefits under the Social Security Disability Insurance program have stated a desire to return to work.",
+    "The Removing Barriers to Work for Disabled Americans Act seeks to shrink that gap by simply restoring the Social Security Administration's authority to test drive solutions that can empower more of our fellow Americans to get back to work.",
+    "Just so we do not forget why we should be focused on this issue, at a hearing of the Ways and Means Social Security and Work and Welfare Subcommittees in September, we heard from a witness, a former beneficiary, about how the work he found helped give his life real purpose and a different outlook.",
+    "Mr. Speaker, I rise in support of H.R. 8884, the Removing Barriers to Work for Disabled Americans Act, introduced by our colleague from Georgia, Representative Austin Scott."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOVER COVID UNEMPLOYMENT FRAUD IN BANKS ACT",
+   "title": "RECOVER COVID UNEMPLOYMENT FRAUD IN BANKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4269-4.htm",
+   "sentences": [
+    "The statute of limitations for prosecuting COVID-era unemployment insurance fraud has already begun to expire, limiting the amount of money law enforcement can return or the number of criminals that they can bring to justice.",
+    "Mr. Speaker, I rise in support of the Recover COVID Unemployment Fraud in Banks Act led by my Ways and Means colleagues Representative Beth Van Duyne and Representative Tom Suozzi.",
+    "Mr. Speaker, I urge my colleagues to provide a similar level of support and advance this to the Senate and President Trump's desk."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTH CARE EFFICIENCY THROUGH FLEXIBILITY ACT",
+   "title": "HEALTH CARE EFFICIENCY THROUGH FLEXIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4272.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5347) to amend title XVIII of the Social Security Act to ensure the availability of appropriate collection types for quality reporting under the Medicare Shared Savings Program, and for other purposes, as amended.",
+    "Mr. Speaker, I rise in support of the Health Care Efficiency Through Flexibility Act led by Committee on Ways and Means members, the Subcommittee on Health Chairman Vern Buchanan and Representative Jimmy Panetta."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "title": "PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3805.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1333, I call up the bill (H.R. 8872) to amend part A of title IV of the Social Security Act to target funds to low-income families, strengthen program integrity guardrails for State expenditure of funds, require measurement of improper payments, and establish goals for eliminating fraud and improper payments under the program of block grants to States for temporary assistance for needy families, and for other purposes, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in support of H.R. 8872, the Preventing Waste, Fraud, and Abuse in TANF Act, introduced by my Ways and Means Committee colleague Representative Mike Carey.",
+    "With an annual price tag of over $16 billion, the Temporary Assistance for Needy Families program is a sizable investment and plays a critical support role for families who have fallen on hard times.",
+    "Unfortunately, right now, there are major weaknesses in the TANF program that make it ripe for waste, fraud, and abuse.",
+    "Despite the billions of dollars flowing through TANF, it is one of the few Federal programs we have that is not required to account for improper payments.",
+    "Additionally, investigations and reporting conducted by the Government Accountability Office found that the 78 percent of TANF spending that goes toward non-assistance activities lacks guardrails to prevent abuse and misuse of these Federal resources.",
+    "That is why the Ways and Means Committee has held hearings and conducted critical oversight to determine what solutions will protect taxpayers and the families who should be benefiting from programs like TANF.",
+    "The Preventing Waste, Fraud, and Abuse in TANF Act is a straightforward piece of legislation that addresses four key areas of concern, reflecting priorities of four members of the Ways and Means Committee.",
+    "The lead sponsor of this bill, Representative Carey, has fought to keep States from sitting on TANF funds while families struggle.",
+    "This legislation requires that States spend down their TANF funds within a 3-year window.",
+    "With her understanding of how States often repurpose TANF funds to cover unrelated gaps in State budgets, Representative Tenney has worked to ensure States only use Federal TANF resources to supplement, not replace, State and local spending.",
+    "Thanks to the leadership of Representative Adrian Smith, who has worked to ensure TANF funding is actually going to those truly in need of assistance, this bill includes a provision that establishes an income threshold of 200 percent of the Federal poverty line, which is $62,000 for a family of four, to ensure States are targeting TANF spending to give more to those who are truly in need.",
+    "These policies defend against the abuse and misuse of taxpayer dollars and improve the integrity of the TANF program to better support those it was created to serve.",
+    "The Preventing Waste, Fraud, and Abuse in TANF Act is a targeted and timely piece of legislation that protects the American taxpayers' hard- earned money and ensures that resources get to families who are truly in need of our help.",
+    "I appreciate my Ways and Means Committee colleagues for the time, attention, and work that they have contributed to this reform effort, and I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOSTERING THE FUTURE ACT",
+   "title": "FOSTERING THE FUTURE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3558.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 7432) to amend section 477 of the Social Security Act to improve coordination with Federal housing assistance programs for youth who have experienced foster care, as amended.",
+    "Mr. Speaker, I rise in strong support of H.R. 7432, the Fostering the Future Act, bipartisan legislation led by my Ways and Means Committee colleagues, Work and Welfare Subcommittee Chairman Darin LaHood, and Congresswoman Gwen Moore.",
+    "What we have before us is the first comprehensive modernization of the John H. Chafee Foster Care Program for Successful Transition to Adulthood since its creation in 1999, nearly three decades ago.",
+    "Nearly 35 percent experience homelessness by age 21, and 70 percent are expectant or parenting by age 21, double the national average.",
+    "We also incorporated the feedback of Jaydan, a former foster youth from Texas, who spoke at our roundtable about the importance of increasing the value of the education and training voucher.",
+    "The Fostering the Future Act expands flexibility in Chafee's education and training voucher program, with feedback from youth like Kimberley in Missouri and Raven in Ohio, so young people can pursue short-term workforce programs and apprenticeship opportunities to earn a high-paying job or receive remedial education to earn their high school diploma, reforms prioritized by Representatives Max Miller from Ohio and Dwight Evans from Pennsylvania.",
+    "Every young person who has experienced foster care deserves a real shot at the American Dream, and they should not be left without any support at a very vulnerable time.",
+    "The Fostering the Future Act is built on the direct feedback of foster youth, caregivers, and community organizations on the ground."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER DUE PROCESS ENHANCEMENT ACT",
+   "title": "TAXPAYER DUE PROCESS ENHANCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3564.htm",
+   "sentences": [
+    "A recent Supreme Court decision will make it more difficult for American taxpayers to challenge the IRS in court when the agency seeks to impose levies over an alleged tax liability.",
+    "Mr. Speaker, I rise in support of H.R. 6506, the Taxpayer Due Process Enhancement Act, bipartisan legislation introduced by my Ways and Means colleagues, Representatives Nathaniel Moran and Terri Sewell."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BARCODE AUTOMATION FOR REVENUE COLLECTION TO ORGANIZE DISBURSEMENT AND ENHANCE EFFICIENCY ACT",
+   "title": "BARCODE AUTOMATION FOR REVENUE COLLECTION TO ORGANIZE DISBURSEMENT AND ENHANCE EFFICIENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3100.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 6956) to require electronically prepared tax returns to include scannable code when submitted on paper, and to require the use of optical character recognition technology for paper documents received by the Internal Revenue Service, as amended.",
+    "By requiring the IRS to deploy scanning technology for certain returns and correspondence, this bill will streamline the tax filing process for millions of Americans and go a long way to improving accuracy over the previous method of manually entering data from paper tax returns.",
+    "Many Americans have had to endure frustration and anxiety at the hands of the IRS bureaucracy when it comes to filing or waiting on their tax returns to be processed.",
+    "If we are reforming our tax code to provide more relief to working families, we should be modernizing our tax agency to get that relief to them as soon as possible.",
+    "Mr. Speaker, I rise in support of H.R. 6956, the Barcode Automation for Revenue Collection to Organize Disbursement and Enhance Efficiency Act, also known as the BARCODE Efficiency Act, which is a bipartisan piece of legislation introduced by Representatives Rudy Yakym and Brad Schneider."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER EXPERIENCE IMPROVEMENT ACT",
+   "title": "TAXPAYER EXPERIENCE IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3101.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 7971, the Taxpayer Experience Improvement Act, bipartisan legislation introduced by Ways and Means Oversight Subcommittee chair, Representative Schweikert, and Representative Don Beyer."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IRS WHISTLEBLOWER PROGRAM IMPROVEMENT ACT",
+   "title": "IRS WHISTLEBLOWER PROGRAM IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3104.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 7959) to amend the Internal Revenue Code of 1986 to make improvements with respect to the treatment of whistleblowers, and for other purposes, as amended.",
+    "Mr. Speaker, I rise in support of H.R. 7959, the IRS Whistleblower Program Improvement Act, bipartisan legislation introduced by the Ways and Means Tax Subcommittee chairman, Mr. Mike Kelly, and the subcommittee's ranking member, Mr. Mike Thompson.",
+    "The IRS relies in part upon whistleblowers who have the courage to report bad actors who are committing tax fraud, tax evasion, and other similar crimes they witness occurring in the private sector.",
+    "The IRS Whistleblower Program is one of the many government efforts that is crucial to combat the epidemic of fraud and stop bad actors from stealing hard-earned dollars from American taxpayers.",
+    "At a time when it appears we need a comprehensive approach to combating fraud across various government programs, Ways and Means Tax Subcommittee Chairman Kelly is building on his longstanding commitment to reform and improve the IRS Whistleblower Program to better protect whistleblowers and appropriately reward them for their contributions to combating fraud.",
+    "Mr. Speaker, whistleblowers play a critical role in government oversight, whether it be uncovering bad actors within government or, in the case of the IRS Whistleblower Program, alerting the IRS to those in the private sector who are defrauding American taxpayers."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER NOTIFICATION AND PRIVACY ACT",
+   "title": "TAXPAYER NOTIFICATION AND PRIVACY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3106.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6495, the Taxpayer Notification and Privacy Act, bipartisan legislation introduced by Representatives Greg Steube and Jimmy Panetta."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOUG LAMALFA FEDERAL DISASTER TAX RELIEF CERTAINTY ACT",
+   "title": "DOUG LAMALFA FEDERAL DISASTER TAX RELIEF CERTAINTY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3107.htm",
+   "sentences": [
+    "I rise in support of H.R. 5366, the Doug LaMalfa Federal Disaster Tax Relief Certainty Act, bipartisan legislation introduced by Representatives Greg Steube, Mike Thompson, and Jimmy Panetta and named after our late colleague, Mr. Doug LaMalfa, who dedicated his life to public service and was a very strong advocate for helping so many of his constituents whose lives had been turned upside down by wildfires."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SURVIVOR JUSTICE TAX PREVENTION ACT",
+   "title": "SURVIVOR JUSTICE TAX PREVENTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3110.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2347, the Survivor Justice Tax Prevention Act, bipartisan legislation introduced by Representatives Lloyd Smucker and Gwen Moore."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING EARLY-CHILDHOOD EDUCATORS' DEDUCTIONS ACT",
+   "title": "SUPPORTING EARLY-CHILDHOOD EDUCATORS' DEDUCTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3111.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 5334, the Supporting Early- childhood Educators' Deductions, or the SEED, Act, which is bipartisan legislation introduced by Representatives Brian Fitzpatrick and Jimmy Panetta."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING CHILDREN RECEIVE SUPPORT ACT",
+   "title": "ENSURING CHILDREN RECEIVE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3113.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 6903, the Ensuring Children Receive Support Act, bipartisan legislation introduced by Representatives Beth Van Duyne and Jimmy Panetta."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "Mr. Speaker, Pursuant to House Resolution 1147, I call up the resolution (H. Res. 1156) expressing support for tax policies that support working families, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in support of H. Res. 1156 and the working families tax cuts, which have led to this year's historic tax refund season.",
+    "The IRS typically receives around 24 percent of tax returns in April.",
+    "What millions of Americans are finding out today is that their tax refund is significantly larger than it has been in the past, thanks to the working families tax cuts.",
+    "Over 6 million Americans have claimed no tax on tips, 25 million Americans have claimed no tax on overtime, and 30 million taxpayers claimed the Social Security deduction.",
+    "A $12,000 deduction for a married couple on Social Security means a more secure retirement.",
+    "When Republicans enacted the working families tax cuts, we made America's workers, families, farmers, and small businesses our top priority.",
+    "An inconvenient fact that the Democrats don't talk about is that the share of income taxes paid by the top 1 percent actually went up from 37 percent to 40 percent.",
+    "For those who are looking to adopt, they have more access to the adoption tax credit, with $5,000 of that cost being refundable.",
+    "Due to the working families tax cuts, Americans have more money to buy school supplies and put food on their tables.",
+    "These are the results of Republican tax relief that puts America's working families first.",
+    "Mr. Speaker, because of the passage of the One Big Beautiful Bill Act, also known as the working families tax cuts, the folks in Brooklyn, New York, will actually face an average tax cut of $3,341.",
+    "Mr. Speaker, I think the most important point about the child tax credit in the working families tax bill is that it is, in fact, permanent.",
+    "Mr. Speaker, the working families tax cuts were written for the working families of this country by the working families of this country.",
+    "It was at a lumberyard in Petersburg, West Virginia, ``The State of the American Economy: Appalachia.'' We then traveled across the country, listening to workers and job creators and families in Yukon, Oklahoma; in Peachtree City, Georgia; and in Erie, Pennsylvania."
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT",
+   "title": "LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2190-5.htm",
+   "sentences": [
+    "Across the country, law enforcement officers are asked to resolve dangerous situations every day with the least amount of harm as possible.",
+    "The result is higher costs, more red tape, and slower adoption of technology that can actually make encounters safer for both officers and civilians.",
+    "It gives clarity to manufacturers; certainty to regulators; and, ultimately, better access to lifesaving tools for law enforcement and the communities that they serve.",
+    "It is about time that we support the Law-Enforcement Innovate to De- Escalate Act.",
+    "This crucial legislation ensures that law enforcement officers have access to the best, less-than-lethal technologies for de- escalation.",
+    "While some on the other side resort to fear-mongering, House Republicans and, as I said 22, I believe, commonsense Democrats, are committed to ensuring law enforcement has the tools and resources they need to keep our communities safe.",
+    "Every major police organization is supporting the passage of this legislation, including the Fraternal Order of Police, the Federal Law Enforcement Officers Association, the Major County Sheriffs Association, and the National Organization of Black Law Enforcement Executives.",
+    "This is a pro-police, pro-community, and lifesaving piece of legislation.",
+    "It supports innovation, it encourages less lethal means of law enforcement, and removes an outdated burden that never made much sense to begin with.",
+    "I congratulate the 22 brave Democrats who believe in less lethal force by sponsoring this legislation.",
+    "Mr. Speaker, I rise today in support of H.R. 2189, which includes the Innovate Less Lethal to De-Escalate Tax Modernization Act, led by Congressman David Schweikert.",
+    "I urge the Senate to vote on this bill expediently.",
+    "I commend Congressman Schweikert for his leadership, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025",
+   "title": "DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2002-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.J. Res. 142, legislation to reverse a District of Columbia law that bars the citizens of our Nation's Capital from seeing the benefits of the working families tax cuts enacted by Republicans and signed into law by President Trump on July 4.",
+    "Instead of seizing the opportunity to provide relief to the working families and small businesses in their communities, the elected leaders in D.C. are going out of their way to deny their own citizens tax relief.",
+    "Under the working families tax cut, a family of four who makes less than $73,000 will pay zero dollars in Federal taxes, and every single Democrat in the House and the Senate voted against that provision.",
+    "They are not the party about working families."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HISTORIC TAX RELIEF FOR FAMILIES",
+   "title": "HISTORIC TAX RELIEF FOR FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2021.htm",
+   "sentences": [
+    "I am told that most Ways and Means Committee staff directors often have their legacies defined by their one signature accomplishment, and I think it says so much about Mark that his signature accomplishment will be the largest tax cut in our Nation's history and a bill remembered for rejecting special interest tax policy in favor of relief for the tens of millions of working American families, farmers, and many small businesses that are the heartbeat of this Nation."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "title": "SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1139.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 1009, I call up the bill (H.R. 6945) to amend part A of title IV of the Social Security Act to clarify the authority of States to use funds for pregnancy centers, and for other purposes, and ask for its immediate consideration in the House.",
+    "It ensures States will be able to continue to use TANF funds for pregnancy resource centers and the maternal care they provide to pregnant women and moms.",
+    "These services meet the core purposes of TANF.",
+    "Yet, the Biden administration proposed a regulation to discriminate against the pro- life mission of pregnancy resource centers by forbidding States from using TANF funds for these centers.",
+    "Nothing, Mr. Speaker, in the TANF statute gave the Biden administration or any other future administration the ability to target pregnancy resource centers.",
+    "In my home State of Missouri, $3 out of every $4 the State gives to pregnancy resource centers comes from TANF, and it is not just Missouri.",
+    "Democrats will talk until they are blue in the face, Mr. Speaker, about a woman's right to choose, but they oppose this bill, which is all about empowering women to make their own choices.",
+    "Mr. Speaker, I yield 5 minutes to the gentleman from New Jersey (Mr. Smith), an incredible advocate for the unborn.",
+    "The majority of pregnancy resource centers have voluntarily signed on to industry standards, a call to commitment of care and competence created by Heartbeat International.",
+    "I include in the Record a copy of Heartbeat International's ``Our Commitment of Care and Competence.'' Our Commitment of Care & Competence Clients are served without regard to age, race, income, nationality, religious affiliation, disability or other arbitrary circumstances.",
+    "We do not offer, recommend, or refer for abortions or abortifacients, or contraceptives.",
+    "Democrats distract and fearmonger because they can't admit that pregnancy resource centers fulfill the purposes of TANF.",
+    "They are eligible for State TANF funds, period.",
+    "We are committed to offering accurate information about related risks and procedures."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENDING IMPROPER PAYMENTS TO DECEASED PEOPLE ACT",
+   "title": "ENDING IMPROPER PAYMENTS TO DECEASED PEOPLE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH634.htm",
+   "sentences": [
+    "Currently, the Social Security Administration has temporary authority to share its death data with the Treasury Department's Do Not Pay Portal to identify, prevent, and recover improper payments.",
+    "Unfortunately, Social Security's authority to share its data with Treasury is temporary and lapses at the end of this year if Congress doesn't pass this bill.",
+    "As a former law enforcement officer, Clay Higgins has worked to protect Americans from criminals, and now he is translating that commitment into finding ways that we can protect taxpayer dollars as well.",
+    "Before the Social Security Administration began sharing its complete death records with the Treasury Department, the Federal Government paid $1.3 billion to the dead in just a single year.",
+    "Congress authorized the Treasury to access Social Security's death data for 3 years ending in 2026.",
+    "Madam Speaker, I rise in support of the Ending Improper Payments to Deceased People Act."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGOA EXTENSION ACT",
+   "title": "AGOA EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH637.htm",
+   "sentences": [
+    "The U.S. International Development Finance Corporation (DFC) has financed--or is preparing to finance--mineral projects in a number of AGOA countries, including Angola, Mozambique, Tanzania, and Zambia.",
+    "A2: AGOA offers limited tariff advantages to the mining sector, since most minerals already face relatively low tariffs.",
+    "In June 2025, China announced that it would expand market access by removing tariffs on all imports from 53 African nations.",
+    "If the United States were to let AGOA expire and reimpose tariffs on African exports, it would send a damaging signal about the future of U.S. commercial diplomacy on the continent.",
+    "Today, Namibia hosts three active uranium mines--Rossing, Husab, and Langer Heinrich--all of which have significant Chinese ownership through entities such as the China National Uranium Corporation, China General Nuclear Power Group, and the China Africa Development Fund.",
+    "A useful precedent for an investment incentive came from the Inflation Reduction Act's Section 30D tax credit, which offered up to $7,500 for the purchase of a new electric vehicle if its batteries met specific sourcing requirements for critical minerals and manufacturing.",
+    "The incentive should be industry agnostic, so minerals sourced for defense, semiconductors, and energy would be eligible for the incentive.",
+    "Madam Speaker, I rise in support of H.R. 6500, the AGOA Extension Act, legislation to reauthorize the African Growth and Opportunity Act trade preference program.",
+    "There will be a party in Beijing if we don't reauthorize it.'' To achieve this, however, we aren't going to lower our standards.",
+    "Stronger partnerships with African nations mean we will limit China's ability to make further gains in the region and protect our national security interests.",
+    "I urge my colleagues to support this extension of AGOA, which received strong bipartisan approval in the Ways and Means Committee."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAITI ECONOMIC LIFT PROGRAM EXTENSION ACT",
+   "title": "HAITI ECONOMIC LIFT PROGRAM EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH642.htm",
+   "sentences": [
+    "I commend Dr. Murphy for his leadership, and I urge adoption of the Haiti Economic Lift Program Extension Act.",
+    "Madam Speaker, I rise today in support of H.R. 6504, the Haiti Economic Lift Program Extension Act, introduced by my colleague, Representative Murphy."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to using hard-earned taxpayer dollars to bail Democrats out of their own decision_their own decision_to make this COVID-era spending temporary so that they could give Green New Deal tax breaks to the wealthy for electric vehicles and solar panels.",
+    "Nearly half of all Americans get their insurance from their employer, nearly a quarter from Medicaid, and a bit less than that from Medicare.",
+    "Mr. Speaker, only 7 percent of the population relies on ObamaCare marketplace plans.",
+    "Mr. Speaker, it is shameful that Democrats are only focusing on 7 percent of the population while ignoring the millions of working families who are struggling to afford healthcare.",
+    "Since ObamaCare was enacted, premiums have increased by 80 percent.",
+    "Since ObamaCare was enacted_let me say that again_the premiums have increased by 80 percent.",
+    "Families worry about medical debt_that is, those who still have access to doctors.",
+    "In fact, 150 rural hospitals have closed since passage of ObamaCare, and small businesses were crushed under the weight of the new mandates.",
+    "The reason they did so was to shower the rich with Green New Deal subsidies, which they made permanent.",
+    "Mr. Speaker, here is a word you won't hear from Democrats: ``fraud.'' They forced taxpayers to pay up to $27 billion for as many as 6.4 million individuals fraudulently enrolled in the ObamaCare plans.",
+    "It sounds like they didn't even know that they had insurance through ObamaCare, but those insurance companies were subsidized, almost half of them, on the exchanges. 1540 If Democrats think that is not a problem, that is pretty scary.",
+    "They created fictitious ObamaCare applicants with fake documentation, and 100 percent_not some, but 100 percent; not half, but 100 percent_were approved in the first year, and 90 percent are still being subsidized, resulting in checks worth more than $12,000 per month going to insurance companies.",
+    "One Social Security number was associated with more than 125 different ObamaCare policies.",
+    "One Social Security number was tied to more than 125 policies_waste, fraud, abuse.",
+    "In response, Democrats only brag about higher health insurance enrollment.",
+    "Republicans blocked illegal immigrants' access to taxpayer-funded healthcare benefits, then eliminated over $185 billion worth of fraud and waste in the ObamaCare marketplace.",
+    "For Americans who are eligible, Republicans actually lowered ObamaCare premiums and expanded access to health savings accounts, direct primary care, and telehealth for millions, including ObamaCare enrollees, as part of the Working Families Tax Cuts.",
+    "The Lower Health Care Premiums for All Americans Act was passed, which also lowered premiums even further, as well as provided more freedom and flexibility for healthcare access and increased competition by negotiating better drug prices for workers.",
+    "Mr. Speaker, I remind this body that the reason why these COVID-era tax credits expired is because the Democrats focused all their resources on helping their wealthy environmentalists with permanent tax credits for electric vehicles and solar panels.",
+    "Patient Protection and Affordable Care Act: Preliminary Results from Ongoing Review Suggest Fraud Risks in the Advance Premium Tax Credit Persist Hon.",
+    "The Patient Protection and Affordable Care Act (PPACA) provides premium tax credits to those who purchase private health insurance plans and meet certain income and other requirements.",
+    "Individuals may have the federal government pay this credit to their health insurance issuers in advance on their behalf, known as the advance premium tax credit (APTC), which lowers their monthly premium payments.",
+    "The Centers for Medicare & Medicaid Services (CMS), within the Department of Health and Human Services (HHS), is responsible for maintaining the federal Marketplace and overseeing state- based marketplaces.",
+    "Such practices can result in wasteful federal spending on APTC for enrollees who are not eligible.",
+    "Specifically, this report addresses preliminary results from our 1. covert testing of federal Marketplace enrollment controls for plan years 2024 and 2025, 2. analyses of federal Marketplace enrollment data for plan years 2023 and 2024, and 3. evaluation of CMS's fraud risk assessment and antifraud strategy for APTC.",
+    "To perform covert testing of federal Marketplace enrollment controls, we created 20 fictitious identities and submitted applications for individual health care coverage in the federal Marketplace.",
+    "For applications for plan year 2024, our covert tests included fictitious applicants who provided invalid (i.e., never issued) Social Security numbers (SSN).",
+    "The results of our covert testing, while illustrative of potential enrollment control weaknesses, cannot be generalized to the overall enrollment population.",
+    "To examine federal Marketplace enrollment for plan years 2023 and 2024, we obtained and analyzed federal Marketplace enrollment and payment data, including APTC information, from CMS.",
+    "We also matched enrollee SSNs in the data to two additional data sources: (1) Social Security Administration's (SSA) full death file, a database containing records of death that have been reported to SSA, as of November 2024 and (2) April 2025 data from the Internal Revenue Service (IRS) on APTC reconciliation from tax forms filed for tax year 2023.",
+    "Background APTC ELIGIBILITY AND ENROLLMENT PROCESSES APTC Eligibility To qualify for a premium tax credit, individuals must be enrolled in a qualified health plan offered through a marketplace and meet certain criteria.",
+    "The amount of the premium tax credit varies based on household income and the cost of a benchmark plan.",
+    "The American Rescue Plan Act of 2021 made temporary changes to premium tax credits by expanding eligibility to higher-income individuals and increasing premium tax credits for lower- income individuals for tax years 2021 and 2022.",
+    "For example, the law increased the premium tax credit amounts for eligible individuals and families, resulting in access to plans with no premium contributions for those earning 100 to 150 percent of the federal poverty level.",
+    "It also expanded eligibility for premium tax credits to include certain individuals and families with incomes at or above 400 percent of the federal poverty level.",
+    "Marketplaces and Enrollment Pathways States, along with the District of Columbia, may elect to rely on the federal Marketplace or operate their own health insurance marketplace.",
+    "Consumers in states that use the federal Marketplace may enroll in coverage through the pathway known as HealthCare.gov or an enhanced direct enrollment (EDE) pathway, among others.",
+    "According to CMS, most enrollments in the federal Marketplace are assisted by an agent or broker through the EDE and direct enrollment pathways.",
+    "The Federal Marketplace Approved Subsidized Coverage for Nearly All of Our Fictitious Applicants in Plan Years 2024 and 2025, Suggesting Weaknesses Persist Our covert testing of enrollment controls in the federal Marketplace suggests weaknesses have persisted since our tests in plan years 2015 through 2016.",
+    "All Four of Our Fictitious Applicants Received Subsidized Coverage in Late 2024 To test enrollment controls, we developed and submitted four fictitious applications to obtain insurance coverage with APTC through the federal Marketplace.",
+    "We submitted the applications outside of the open enrollment period, using a special enrollment period for low-income applicants.",
+    "While our fictitious enrollees are not generalizable to the universe of enrollees, they suggest weaknesses in enrollment controls--such as identity proofing and income verification--in the federal Marketplace through both HealthCare.gov and EDE systems.",
+    "Apparently, they regret that vote because they focused most of their dollars on making permanent environmental tax policy in the Green New Deal.",
+    "It was the Democrats who wrote the Affordable Care Act that is being debated on the floor right now.",
+    "They are upset because, as of December 31, it reverted back to the Affordable Care Act, which they have championed, what they passed, not Republicans, Democrats.",
+    "Mr. Speaker, I rise in opposition to $100 billion worth of bailouts for a broken system that is fueled by Democratic mandates.",
+    "Mr. Speaker, I rise in opposition to subsidizing insurance plans for wealthy people.",
+    "Mr. Speaker, I will take greater access to affordable healthcare any day over shoveling more tax dollars into Democrats' healthcare fraud schemes.",
+    "As a result, we will describe additional details of the 2025 applications in a future report.",
+    "We will continue to monitor the status of these applications during plan year 2025.",
+    "Mr. Speaker, I will remind the body that the reason why these enhanced subsidies are expiring is because the Democrats are the only ones in this Chamber who voted for them to expire on December 31.",
+    "Mr. Speaker, with that, I urge this body to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, for more than a decade, Democrats have promised that ObamaCare would lower costs.",
+    "They actually named the bill the ``Affordable Care Act.'' Find one American--find one American who says that their healthcare is now cheaper today than it was when they passed this disastrous bill.",
+    "In fact, the sky is falling because of their enhanced premium tax credits that they made temporary because they decided to make permanent tax benefits for wealthy environmentalists who support them.",
+    "Mr. Speaker, since ObamaCare has passed, we have seen 150-plus hospitals close their doors.",
+    "Since ObamaCare has passed, we have seen premiums go up more than 80 percent.",
+    "It doesn't sound like the Affordable Care Act by any means.",
+    "Even worse, the Government Accountability Office has confirmed what Republicans have been warning for years: ObamaCare is riddled with waste, fraud, and abuse.",
+    "The GAO led a covert investigation by creating fictitious ObamaCare applicants with fake documentation where 100 percent of those applicants were accepted and enrolled.",
+    "Data analysis from GAO also finds that 58,000-plus enrollees matched Social Security numbers with death records, with 7,000 of them dead before enrollment even began.",
+    "Mr. Speaker, one Social Security number alone had more than 125 different policies attached to it--just one.",
+    "The bill also brings transparency to pharmacy benefit managers, requiring them to open up the books to finally give employers the data that they need to increase competition and negotiate better drug prices for workers.",
+    "The result: Healthcare costs and premiums will be lowered for all--for all Americans, not just the 7 percent that the Democrats are fighting for in the enhanced COVID-era premium tax credits, but also for the 300 million-plus Americans.",
+    "Mr. Speaker, ObamaCare has driven costs up and choice down.",
+    "Mr. Speaker, I include in the Record the bombshell GAO report showing the waste, fraud, and abuse within the ObamaCare exchanges.",
+    "Patient Protection and Affordable Care Act: Preliminary Results from Ongoing Review Suggest Fraud Risks in the Advance Premium Tax Credit Persist The Patient Protection and Affordable Care Act (PPACA) provides premium tax credits to those who purchase private health insurance plans and meet certain income and other requirements.",
+    "Individuals may have the federal government pay this credit to their health insurance issuers in advance on their behalf, known as the advance premium tax credit (APTC), which lowers their monthly premium payments.",
+    "The Centers for Medicare & Medicaid Services (CMS), within the Department of Health and Human Services (HHS), is responsible for maintaining the federal Marketplace and overseeing state- based marketplaces.",
+    "Such practices can result in wasteful federal spending on APTC for enrollees who are not eligible.",
+    "Specifically. this report addresses preliminary results from our 1. covert testing of federal Marketplace enrollment controls'for plan years 2024 and 2025, 2. analyses of federal Marketplace enrollment data for plan years 2023 and 2024, and 3. evaluation of CMS's fraud risk assessment and antifraud strategy for APTC.",
+    "To perform covert testing of federal Marketplace enrollment controls, we created 20 fictitious identities and submitted applications for individual health care coverage in the federal Marketplace.",
+    "For applications for plan year 2024, our covert tests included fictitious applicants who provided invalid (i.e., never issued) Social Security numbers (SSN).",
+    "The results of our covert testing, while illustrative of potential enrollment control weaknesses, cannot be generalized to the overall enrollment population.",
+    "To examine federal Marketplace enrollment for plan years 2023 and 2024, we obtained and analyzed federal Marketplace enrollment and payment data, including APTC information, from CMS.",
+    "We also matched enrollee SSNs in the data to two additional data sources: (1) Social Security Administration's (SSA) full death file, a database containing records of death that have been reported to SSA, as of November 2024 and (2) April 2025 data from the Internal Revenue Service (IRS) on APTC reconciliation from tax forms filed for tax year 2023.",
+    "Background APTC Eligibility and Enrollment Processes APTC Eligibility To qualify for a premium tax credit, individuals must be enrolled in a qualified health plan offered through a marketplace and meet certain criteria.",
+    "The amount of the premium tax credit varies based on household income and the cost of a benchmark plan.",
+    "The American Rescue Plan Act of 2021 made temporary changes to premium tax credits by expanding eligibility to higher-income individuals and increasing premium tax credits for lower- income individuals for tax years 2021 and 2022.",
+    "For example, the law increased the premium tax credit amounts for eligible individuals and families, resulting in access to plans with no premium contributions for those earning 100 to 150 percent of the federal poverty level.",
+    "It also expanded eligibility for premium tax credits to include certain individuals and families with incomes at or above 400 percent of the federal poverty level.",
+    "Marketplaces and Enrollment Pathways States, along with the District of Columbia, may elect to rely on the federal Marketplace or operate their own health insurance marketplace.",
+    "Consumers in states that use the federal Marketplace may enroll in coverage through the pathway known as HealthCare.gov or an enhanced direct enrollment (EDE) pathway, among others.",
+    "Table 3 describes examples of enrollment pathways in the federal Marketplace.",
+    "According to CMS, most enrollments in the federal Marketplace are assisted by an agent or broker through the EDE and direct enrollment pathways.",
+    "The Federal Marketplace Approved Subsidized Coverage for Nearly All of Our Fictitious Applicants in Plan Years 2024 and 2025, Suggesting Weaknesses Persist Our convert testing of enrollment controls in the federal Marketplace suggests weaknesses have persisted since our tests in plan years 2015 through 2016.",
+    "All Four of Our Fictitious Applicants Received Subsidized Coverage in Late 2024 To test enrollment controls, we developed and submitted four fictitious applications to obtain insurance coverage with APTC through the federal Marketplace.",
+    "We submitted the applications outside of the open enrollment period, using a special enrollment period for low-income applicants. in two cases, we applied for coverage directly through HealthCare.gov.",
+    "While our fictitious enrollees are not generalizable to the universe of enrollees, they suggest weaknesses in enrollment controls--such as identity proofing and income verification--in the federal Marketplace through both HealthCare.gov and EDE systems.",
+    "Table 4 summarizes the results of our covert testing of enrollment controls for plan year 2024.",
+    "Mr. Speaker, I urge my colleagues to support the Lower Healthcare Premiums for All Americans Act and stand with families, workers, and small businesses who deserve--they deserve a real affordable, accountable healthcare plan.",
+    "As a result, we will describe additional details of the 2025 applications in a future report.",
+    "We will continue to monitor the status of these applications during plan year 2025."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOSPITAL INPATIENT SERVICES MODERNIZATION ACT",
+   "title": "HOSPITAL INPATIENT SERVICES MODERNIZATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4935.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 4313) to amend title XVIII of the Social Security Act to extend acute hospital care at home waiver flexibilities, and to require an additional study and report on such flexibilities, as amended.",
+    "Mr. Speaker, I rise in support of the Hospital Inpatient Services Modernization Act introduced by the Committee on Ways and Means Health Subcommittee chairman, Mr. Buchanan, and Congressman Dwight Evans."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLAIMING AGE CLARITY ACT",
+   "title": "CLAIMING AGE CLARITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4937.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5284) to require the Social Security Administration to make changes to the social security terminology used in the rules, regulation, guidance, or other materials of the Administration, as amended.",
+    "Mr. Speaker, I rise in support of the Claiming Age Clarity Act, bipartisan legislation introduced by my Ways and Means colleagues, Representative Lloyd Smucker and Don Beyer.",
+    "Unfortunately, millions of Americans claiming Social Security today often face confusing and misleading terms used by the agency that make it that much harder to make informed decisions about one's financial future.",
+    "Under the legislation before us, the Social Security Administration will be required to update the agency's language to make it clearer and more straightforward.",
+    "This is critical for the nearly 100,000 citizens living in Representative Smucker's district and the over 80,000 in Representative Beyer's district who are nearing retirement age today.",
+    "Mr. Speaker, no American entering retirement should lose out on their hard-earned Social Security benefits because the Social Security Administration failed to provide information in clear and understandable terms.",
+    "The Claiming Age Clarity Act is a positive step in the right direction."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING SOCIAL SECURITY'S SERVICE TO VICTIMS OF IDENTITY THEFT ACT",
+   "title": "IMPROVING SOCIAL SECURITY'S SERVICE TO VICTIMS OF IDENTITY THEFT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4938.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5345) to amend title VII of the Social Security Act to provide for a single point of contact at the Social Security Administration for individuals who are victims of identity theft, as amended.",
+    "Mr. Speaker, in recent years, the theft and misuse of Social Security numbers has become a very serious problem in our country.",
+    "In 2024 alone, there were over 3,000 reported data breaches, and over half of them included compromised Social Security numbers.",
+    "Instead of finding clear guidance at the Social Security Administration to deal with this stressful situation, too many folks are bounced from one office to another.",
+    "During a previous Ways and Means Subcommittee on Social Security hearing, we heard directly from a mother about how a single point of contact at the Social Security office would have been beneficial in helping her deal with the fallout from her daughter's Social Security number being compromised.",
+    "This bill provides a simple and commonsense fix to provide victims of identity theft with a single point of contact at the Social Security Administration when their number is lost or compromised.",
+    "Thanks to his work, victims of identity theft whose Social Security numbers have been compromised will get the help that they so need.",
+    "One of the main ways that bad actors exploit victims is through the misuse of their Social Security number.",
+    "Unfortunately, when people contact the Social Security Administration for help with a stolen or missing Social Security number, they are often met with red tape, waiting for callbacks, confusion, and conflicting information.",
+    "This bill sponsored by Representative Kustoff will make it easier for Americans to resolve issues with stolen or missing Social Security numbers by providing them with a single point of contact at the SSA."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SOCIAL SECURITY CHILD PROTECTION ACT OF 2025",
+   "title": "SOCIAL SECURITY CHILD PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4939.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5348) to amend title II of the Social Security Act to provide for the reissuance of social security account numbers to young children in cases where confidentiality has been compromised, as amended.",
+    "Mr. Speaker, a lost or stolen Social Security number can cause a lifetime of harm to American children.",
+    "Current Social Security Administration policy makes it extremely difficult for families to get a new Social Security number for a child, even when families know the original number was compromised through no fault of their own.",
+    "Previously, the Ways and Means Committee heard direct testimony from a mother who had to battle with the Social Security Administration when her 1-month-old child's Social Security number was compromised, and she was denied a new number.",
+    "This bill, the Social Security Child Protection Act of 2025, sponsored by Representative Smucker, will help families when their child's Social Security number is lost or stolen.",
+    "A mother testifying before the Ways and Means Committee told us how it took ``hours of effort over months'' to protect her daughter from identity theft and that ``the threat will never completely go away unless she is assigned a new Social Security number.'' This mother had to battle with the SSA after her infant daughter's Social Security number was compromised.",
+    "Unfortunately, the story is all too common for millions of Americans who have had their Social Security numbers stolen or misused each year.",
+    "I urge my colleagues to support this so we can continue to stand together to better safeguard the identities of American kids."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAIR AND ACCOUNTABLE IRS REVIEWS ACT",
+   "title": "FAIR AND ACCOUNTABLE IRS REVIEWS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4940.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Fair and Accountable IRS Reviews Act introduced by our colleague, Representative Glenn Grothman."
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAX COURT IMPROVEMENT ACT",
+   "title": "TAX COURT IMPROVEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4942.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the Tax Court Improvement Act, bipartisan legislation introduced by Representatives Nathaniel Moran and Terri Sewell.",
+    "This bill received total support in the Ways and Means Committee, and I urge all my colleagues to do the same here in the House."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "They opened our borders, funded illegal immigration with your tax dollars, and increased IRS audits on the middle class, all while leaving the working class behind.",
+    "This is the largest tax cut for working families, farmers, and small businesses in U.S. history.",
+    "While Democrats defend illegal immigrants, fraudsters, and bureaucrats, Republicans are standing up for the American people, putting more money in their pockets.",
+    "Moms and dads get new support for adoption, paid leave, childcare, and healthcare costs.",
+    "It is about restoring sanity in a town that has lost it, cutting waste, and reining in reckless spending.",
+    "It stops asking working families to foot the bill for Washington's bad decisions.",
+    "Mr. Speaker, yes, it is the legislative intent that vehicles shall be treated as ``acquired'' as of the date on which a written binding contract is entered into for their acquisition and a payment has been made.",
+    "I can tell you this piece of legislation is for those working families, those small business owners, and those farmers who are doing everything they can just to get by.",
+    "It is not for the millionaires and the billionaires.",
+    "How many waitresses who are tipped are billionaires?",
+    "How many billionaires work hourly jobs and overtime?",
+    "Mr. Speaker, the 8 hours of hogwash that we just heard will not change the outcome that you will see very shortly when we deliver historic tax relief for working families, small business owners, and farmers.",
+    "I will tell you, for the 8 hours--could we have order?"
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, today, we embark on a golden age for working families and small businesses with the One Big Beautiful Bill Act.",
+    "Working families, farmers, and small businesses win with this bill.",
+    "We expand and make permanent the small business deduction and increase the child tax credit, the standard deduction, and the death tax exemption.",
+    "President Trump promised no taxes on Social Security, and in this bill, we deliver.",
+    "Low- and middle-income seniors on Social Security will now have their tax liability erased with an increase in their standard deduction.",
+    "President Trump stopped the flow of illegal immigrants over our borders.",
+    "After the October 7 attacks on Israel, rampant anti-Semitism stormed college campuses.",
+    "We can boost short-run real GDP by as much as 5.2 percent and long-run real GDP by over 3 percent.",
+    "Parents win with expanded education savings accounts to choose the education that best fits their kids' needs.",
+    "Working families get better access to childcare and a permanent paid leave tax credit.",
+    "This is what 77 million Americans voted for: make the 2017 Trump tax cuts permanent, no tax on tips, no tax on overtime, no tax on car loan interest, and tax relief for seniors.",
+    "The relief for working families simply can't wait.",
+    "We will save or create 7.4 million jobs, add 1 million new small business jobs annually, and unlock $1.5 trillion in additional small business economic growth, including $284 billion in growth just from manufacturing alone.",
+    "Mr. Speaker, I urge my colleagues to support the One Big Beautiful Bill Act.",
+    "We are voting for the one big, beautiful bill first thing in the morning.",
+    "We will work until the job is done, and we are going to do that."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FILING RELIEF FOR NATURAL DISASTERS ACT",
+   "title": "FILING RELIEF FOR NATURAL DISASTERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1347.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Filing Relief for Natural Disasters Act, introduced by Ways and Means Committee members Representatives Kustoff and Chu."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL TAXPAYER ADVOCATE ENHANCEMENT ACT OF 2025",
+   "title": "NATIONAL TAXPAYER ADVOCATE ENHANCEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1349.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 997, the National Taxpayer Advocate Enhancement Act, introduced by my Committee on Ways and Means colleagues, Representatives Feenstra and Davis."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOVERY OF STOLEN CHECKS ACT",
+   "title": "RECOVERY OF STOLEN CHECKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1351.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1155, the Recovery of Stolen Checks Act."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISASTER RELATED EXTENSION OF DEADLINES ACT",
+   "title": "DISASTER RELATED EXTENSION OF DEADLINES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1353.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1491, the Disaster Related Extension of Deadlines Act, introduced by my Ways and Means colleagues Representatives Murphy and Panetta.",
+    "I urge my colleagues to stand with taxpayers and provide this measure of tax relief to victims of natural disasters."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ELECTRONIC FILING AND PAYMENT FAIRNESS ACT",
+   "title": "ELECTRONIC FILING AND PAYMENT FAIRNESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1354.htm",
+   "sentences": [
+    "Right now, if a taxpayer mails a payment or tax return to the IRS that is postmarked by midnight on the due date, the payment or tax return will be considered timely even if it is received a week later."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "title": "PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1093-2.htm",
+   "sentences": [
+    "A woman from Rockford, Iowa, was sentenced to more than a year in prison for receiving $45,000 in unemployment benefits from eight different States using stolen identities and laundering the proceedings through cryptocurrency.",
+    "Iowa Woman Sentenced to Federal Prison for COVID-19 Related Benefit Fraud and Money Laundering mendenhall received over $45,000 in fraudulently obtained benefits and laundered most of the funds by purchasing cryptocurrency A Rockford, Iowa woman who received unemployment benefits in other people's names, and laundered most of those funds through cryptocurrency transactions, was sentenced September 20, 2022, to more than a year in federal prison.",
+    "Mendenhall spent some of the money on herself, but laundered the majority of it by purchasing cryptocurrency and sending it to a co-conspirator.",
+    "He is well within his power to remove members of the executive branch at will, and it is understandable, Mr. Speaker, that he wants people in his administration who reflect his views."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RETURNING SENATE JOINT RESOLUTION 3 TO THE SENATE",
+   "title": "RETURNING SENATE JOINT RESOLUTION 3 TO THE SENATE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1093.htm",
+   "sentences": [
+    "The Clerk read as follows: H. Res. 212 Resolved, That Senate Joint Resolution 3, entitled ``A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to `Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales' '', in the opinion of this House, contravenes the first clause of the seventh section of the first article of the Constitution of the United States and is an infringement of the privileges of this House and that such joint resolution be respectfully returned to the Senate with a message communicating this resolution."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVID",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVIDE SERVICES EFFECTUATING DIGITAL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1099.htm",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 211, I call up the joint resolution (H.J. Res. 25) providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to ``Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales'', and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise today in support of a Congressional Review Act resolution repealing the last-minute, unfair, and unworkable Biden IRS rule that places a bureaucratic burden on the Americans who own cryptocurrency and the platforms that allow them to own it.",
+    "Congress gave the IRS clear instructions in the 2021 infrastructure law regarding digital asset reporting.",
+    "The Biden administration made no secret of its opposition to digital assets and America's leadership in this booming industry.",
+    "Bureaucrats weaponized every tool in the toolbox, including finalizing this rule at the eleventh hour, crippling the digital asset industry and threatening American leadership and innovation in the process.",
+    "Approximately one in four Americans own cryptocurrency.",
+    "This rule puts a huge burden on these regular folks and could discourage participation in the digital asset market altogether.",
+    "The rule disincentivizes the very innovation that has powered American leadership in the digital asset industry.",
+    "Their software never controls the digital assets.",
+    "The repeal of this misguided rule would remove a barrier preventing American consumers from participating in crypto and help cement America's digital asset leadership.",
+    "The Federal Government shouldn't demand decentralized finance platforms, used by ordinary Americans to buy and sell cryptocurrency, to fill out forms when those platforms don't collect the information needed for the form.",
+    "In order to justify the burden placed on ordinary people, Mr. Speaker, the Biden IRS stretched and twisted congressional intent to enact regulations designed to cripple the digital asset industry.",
+    "I urge all of my colleagues to vote for this bill and help dismantle the politically motivated regulations from the last administration."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECRUITING FAMILIES USING DATA ACT OF 2025",
+   "title": "RECRUITING FAMILIES USING DATA ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH962-2.htm",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 579) to amend parts B and E of title IV of the Social Security Act to improve foster and adoptive parent recruitment and retention, and for other purposes.",
+    "This bill would make a relatively straightforward but needed update to current law to promote State-level recruitment of foster care families.",
+    "Much of the foster care system is coordinated at the State level, which means we need to enlist the States in helping expand the number of foster families.",
+    "Under current law, States are required, as a condition of receiving funding, to have a plan in place to recruit foster and adoptive families, but we know, based on an analysis by the Department of Health and Human Services, that many States continue to face challenges.",
+    "This bill would build on existing law by calling on States receiving Federal funding to develop family partnership plans that lay out their specific process for finding potential foster families and recruiting and retaining them in the foster care system.",
+    "Mr. Speaker, I rise today in support of the Recruiting Families Using Data Act introduced by my Ways and Means colleagues, Representatives Randy Feenstra and Brendan Boyle."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHRONIC DISEASE FLEXIBLE COVERAGE ACT",
+   "title": "CHRONIC DISEASE FLEXIBLE COVERAGE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH964.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the Chronic Disease Flexible Coverage Act, introduced by Ways and Means Health Subcommittee Chairman Vern Buchanan and our Ways and Means colleague, Representative Jimmy Panetta."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "They created the highest inflation in 40 years that made it impossible for working families to survive.",
+    "Now it is up to Congress to deliver on that mandate, to make our economy work again for working families.",
+    "Mr. Chair, 2 million family-owned farms need certainty that they won't be forced to sell their farm to pay an increased death tax.",
+    "We will reignite our economy with a return of policies like 100 percent immediate expensing and incentives to make sure R&D is happening here and not being outsourced around the globe.",
+    "We will deliver on President Trump's commitment to tax relief for tipped workers, help for seniors struggling with inflation, and tax relief for overtime workers."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "This bill before us establishes fair tax treatment for both American workers and businesses operating in Taiwan and puts Americans on equal footing with our competitors around the world.",
+    "It will help support our domestic semiconductor and chip manufacturing capabilities, securing strategic supply chains and helping us further move away from China.",
+    "Instead of leaving critical supply chains in the hands of the Chinese Communist Party, we need to be making more goods in America, or in partnership with allies like Taiwan that share our interests, to reduce our dependence on China.",
+    "Mr. Speaker, to continue to rely on China for critical items like semiconductors and chips is very dangerous.",
+    "Mr. Speaker, I rise in strong support of the United States-Taiwan Expedited Double-Tax Relief Act, bipartisan legislation that will unleash more American manufacturing investment and jobs and help combat China's harmful influence."
+   ]
+  }
+ ]
+}

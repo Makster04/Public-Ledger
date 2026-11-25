@@ -1,0 +1,221 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "plaskett",
+ "name": "Stacey E. Plaskett",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 18,
+  "sentences": 47
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PETER G. THURLAND, SR., BANDSTAND",
+   "title": "PETER G. THURLAND, SR., BANDSTAND",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5566.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 8121, legislation I introduced to designate the Christiansted Bandstand in Christiansted, St. Croix, in the Virgin Islands of the United States as the Peter G. Thurland, Sr., Bandstand.",
+    "Mr. Speaker, I urge my colleagues to support H.R. 8121."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CARIBBEAN AMERICAN HERITAGE MONTH",
+   "title": "CARIBBEAN AMERICAN HERITAGE MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3679-2.htm",
+   "sentences": [
+    "I am honored to serve alongside my sister, Congresswoman Yvette Clarke of Brooklyn, New York, the daughter of Jamaican immigrants, who spent her entire career championing the rights of working families, immigrants, and communities of color with a tenacity that reflects the very best of the Caribbean tradition."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERRITORIAL STUDENT ACCESS TO HIGHER EDUCATION ACT",
+   "title": "TERRITORIAL STUDENT ACCESS TO HIGHER EDUCATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2366.htm",
+   "sentences": [
+    "Mr. Speaker, I thank the ranking member for yielding time, and I rise in strong support of H.R. 6472, the Territorial Student Access to Higher Education Act."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAITI TPS EXPIRATION",
+   "title": "HAITI TPS EXPIRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1992-4.htm",
+   "sentences": [
+    "Mr. Speaker, 350,000 Haitian TPS recipients applied, passed background checks, contribute $4.4 billion annually to our economy, and pay over $1 billion in Federal taxes."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAITI ECONOMIC LIFT PROGRAM EXTENSION ACT",
+   "title": "HAITI ECONOMIC LIFT PROGRAM EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH642.htm",
+   "sentences": [
+    "The bill also restores eligibility for certain textiles that were initially eligible for duty-free treatment but became ineligible due to changes in the Harmonized Tariff Schedule.",
+    "The 37 percent youth unemployment rate, combined with declining female literacy and lower school enrollment rates, as well as the crime and gang violence we all know about, makes finding skilled work very difficult.",
+    "The initial debt was 150 million in gold, later reduced to 90 million in gold, which equals approximately $560 million in today's currency.",
+    "I rise today in support of H.R. 6504, the Haiti Economic Lift Program Extension Act."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "We have caps on Medicaid in jurisdictions, unlike elsewhere.",
+    "If my colleagues need a clear illustration of what happens when Affordable Care Act benefits are taken away, look to the Virgin Islands and Puerto Rico, which are excluded from those.",
+    "More than 3,000 people have lost Medicaid.",
+    "Puerto Rico's capped Medicaid funding forced reliance on borrowing and debt, which contributed to their 2017 bankruptcy.",
+    "The failure to extend enhanced premium tax credits has doubled healthcare costs for 20 million Americans."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING VIRGIN ISLANDS HEALTHCARE CRISIS",
+   "title": "ADDRESSING VIRGIN ISLANDS HEALTHCARE CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6095-2.htm",
+   "sentences": [
+    "While I continue to fight for Medicare rebasing, fortunately we have secured permanent increases in Medicaid funding from 55 to 83 percent and over $1.7 billion in FEMA obligations to rebuild our hospitals.",
+    "We will not stop fighting until our healthcare system receives the Federal support required to deliver standard of care. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARKING SOLEMN EIGHTH ANNIVERSARY OF HURRICANES IRMA AND MARIA",
+   "title": "MARKING SOLEMN EIGHTH ANNIVERSARY OF HURRICANES IRMA AND MARIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4169-2.htm",
+   "sentences": [
+    "It is a testament to what we can achieve when we refuse to accept that natural disasters must define our destiny.",
+    "We cannot and we will not squander this transformational opportunity.",
+    "We will build smarter, stronger, more resilient, and we will continue to prove that Virgin Islanders, undeterred by any challenge, remain VI Strong. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TART WARS",
+   "title": "TART WARS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3570.htm",
+   "sentences": [
+    "Mr. Speaker, there is so much upheaval and so much concern that is going on in our country right now--unemployment, Medicaid cuts, all the things that are happening."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EMANCIPATION DAY",
+   "title": "EMANCIPATION DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2976-2.htm",
+   "sentences": [
+    "I will be introducing this legislation this term, and I ask my colleagues to join."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOLLOW THE MONEY",
+   "title": "FOLLOW THE MONEY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2996.htm",
+   "sentences": [
+    "He reminded us of those motives in the Republicans' reconciliation bill when he explained the lucrative opportunities for powerful private contractors to profit off of the red tape the bill creates in Medicaid.",
+    "Republicans' beautiful bill for billionaires requires increased work check-ins for people to retain that Medicaid."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ASSESSMENT OF TRANS-ATLANTIC SUBMARINE FIBER OPTIC CABLE",
+   "title": "ASSESSMENT OF TRANS-ATLANTIC SUBMARINE FIBER OPTIC CABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2847.htm",
+   "sentences": [
+    "The diaspora link act represents an opportunity to establish a high- speed, secure telecommunications data connection to Africa from American soil to facilitate deepened economic connections and aid American regional security assistance.",
+    "Russia, as well, has destabilized Africa through disinformation campaigns and mercenary operations, positioning itself as an alternative to Western partnerships while fueling antidemocratic sentiment.",
+    "The Virgin Islands, the most southern point of the United States, sits at the crossroads of centuries-old transit routes, and we now have a chance to transform this strategic location into a cornerstone of American telecommunications infrastructure.",
+    "Mr. Speaker, I urge my colleagues to support this critical measure."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CARIBBEAN-AMERICAN HERITAGE MONTH",
+   "title": "CARIBBEAN-AMERICAN HERITAGE MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2658.htm",
+   "sentences": [
+    "During this Caribbean-American Heritage Month, we honor not just Caribbean Americans, but the enduring spirit of a people who transformed challenge into opportunity, who preserved culture while embracing innovation, and who continue to strengthen America's promise of diversity and inclusion.",
+    "Mr. Speaker, I urge my colleagues to remember that healthcare equity means ensuring that the ZIP Code, or in my case, the island I call home, doesn't determine whether you live or die."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Nearly one in three Americans count on Medicaid.",
+    "Yet Republicans are pushing a cut of at least $880 billion in Medicaid.",
+    "As I sit on the Committee on Ways and Means, I know that they must add $7 trillion, trillion with a t, in giveaways to billionaire donors and big corporations, while ripping healthcare and food away from veterans, seniors, and children."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VIRGIN ISLANDS HISTORY MONTH",
+   "title": "VIRGIN ISLANDS HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH979-4.htm",
+   "sentences": [
+    "I have introduced legislation over 10 years as the Virgin Islands Delegate to Congress to directly reflect this history in an attempt to secure the place of the Virgin Islands history in the American consciousness and to enshrine the legacy's intangible articles of remembrances, which will allow the next generation of Americans raised in the Virgin Islands to know the history of their people and their Nation.",
+    "The territorial tax bills I have introduced are critical and will address longstanding issues and compensate for historic disadvantages, as well as to create jobs and middle-class incomes.",
+    "To remedy the unintended results of historically inequitable provisions, since the 117th Congress, I have introduced legislation to place the territories on par with other States, which is not intended to favor the issue of status in any of the U.S. territories."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "The bulk of those cost savings come from slashing Medicaid funding, which ensures that 70 million Americans, and funds from the Children's Health Insurance Program, CHIP, where another 10 million American children are helped.",
+    "Veterans, children, working families who are barely making it, rely on this.",
+    "Mr. Chair, I rise in opposition to this budget."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SELF-DETERMINATION AND VIRGIN ISLANDS CONSTITUTIONAL CONVENTION",
+   "title": "SELF-DETERMINATION AND VIRGIN ISLANDS CONSTITUTIONAL CONVENTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH512-2.htm",
+   "sentences": [
+    "The Virgin Islands has held five Constitutional Conventions since its acquisition by the United States in 1917, yet no constitutional drafts have been approved since 1977.",
+    "The Insular Cases were decided at the turn of the 20th century by the Supreme Court to justify a racist and colonial legal framework for the territories.",
+    "When the Supreme Court Justice in his opinion says that the people who inhabit these islands are savages who cannot understand constitutional law, that is prima facie racism to me, particularly when a Virgin Islander who came to the United States in the 1700s, Alexander Hamilton, helped to write that Constitution under which we stand.",
+    "In both the 116th and 117th Congress, I am grateful that under Democratic leadership the For the People Act of 2019 and the For the People Act of 2021 included a path for voting rights and self- determination for U.S. territories.",
+    "Both pieces of legislation included a congressional task force to review the issues and make recommendations on providing equitable voting representation in Congress, voting rights in the Presidential election, and fair inclusion in Federal voter protection and election integrity laws.",
+    "That is the legacy from which I come, and as a daughter of the Virgin Islands, I will continue that fight.",
+    "In this 119th Congress, I will continue to advocate for the equitable treatment of all Americans, including my fellow brothers and sisters in the territories."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "By removing these traps, H.R. 33 facilitates the creation of a strong domestic semiconductor ecosystem, creates jobs, and incentivizes investments in semiconductor technology and our American economy.",
+    "Mr. Speaker, I rise today in support of H.R. 33."
+   ]
+  }
+ ]
+}

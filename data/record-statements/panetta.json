@@ -1,0 +1,330 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "panetta",
+ "name": "Jimmy Panetta",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 25,
+  "sentences": 93
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMBATING ILLICIT XYLAZINE ACT",
+   "title": "COMBATING ILLICIT XYLAZINE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5671.htm",
+   "sentences": [
+    "This is a bill, as we have heard, that would provide an important tool for law enforcement to go after the illegitimate use of xylazine by scheduling it under the Controlled Substances Act.",
+    "It is a consensus bill that is supported by Democratic and Republican Presidential administrations, by 41 bipartisan attorneys general across the country, by law enforcement groups, by DEA and HHS, by veterinary medicine, and by more than 100 Members in this Chamber.",
+    "Mr. Speaker, I rise in support of H.R. 1266, my bipartisan legislation, the Combating Illicit Xylazine Act.",
+    "That is why I authored this bill, and that is why I urge my colleagues to support this effort and to pass my Combating Illicit Xylazine Act."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5127-2.htm",
+   "sentences": [
+    "Mr. Chair, the President made some simple promises to get elected: release the Epstein files, end forever wars, and reduce costs.",
+    "This third budget resolution allows for another $95 billion to support the President's war in Iran, paper over damaging trade policies, and pass legislation that will deter legally eligible voters.",
+    "I remind my colleagues on both sides of the aisle that the purpose of the budget reconciliation process is supposed to be deficit reduction.",
+    "I get that for over the past decade Congress has abandoned any sense of normal budgeting process and rejected any talk of serious deficit reduction, but this budget could have been an opportunity for this Congress to advance policies that reduce our debt and actually make life more affordable.",
+    "Instead, the President, once again, pushed the Republican majority to put forward a purely partisan resolution that does nothing to lower costs, nothing to strengthen our economy, and in no way exercises fiscal responsibility.",
+    "It not only shows that the President doesn't care about Americans, but it also shows that the majority doesn't care about our growing debt and deficit and that Congress' responsibility is to the future of this country."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CORPORAL PATRICK D. TILLMAN VA CLINIC",
+   "title": "CORPORAL PATRICK D. TILLMAN VA CLINIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4478.htm",
+   "sentences": [
+    "Mr. Speaker, it was on April 22 of that year that Pat was in Khost province in the southeast Afghanistan border region, and on that day he was part of two convoys on patrol in a narrow valley.",
+    "Mr. Speaker, I rise today in support of my bipartisan legislation to rename the San Jose veterans affairs clinic for U.S. Army Corporal Patrick D. Tillman."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RE",
+   "title": "PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4425-2.htm",
+   "sentences": [
+    "I oppose the resolution as written so that the House of Representatives can advance my amendment to Massie Amendment No. 8, printed therein.",
+    "However, without the opportunity to advance my amendment, I will oppose H. Res. 1423."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "Mr. Speaker, the Republicans' reconciliation bill gives a blank check again to ICE and Border Patrol.",
+    "Money was used to rush agents through training, push them into the streets, to troll big-box store parking lots and target immigrants well beyond gang members and felons.",
+    "They called themselves law enforcement.",
+    "Now, I support a secure border.",
+    "But before I give one more cent to ICE and Border Patrol, all we are asking for are commonsensical reforms, such as taking off the masks, turning on the cameras, identifying themselves, having independent investigations, staying away from polling places, and obtaining a warrant before going into our homes.",
+    "Instead, your bill ignores bipartisanship reforms, ignores high prices, ignores the war in Iran, and hands over billions more to ICE and CBP without any guidance on how to spend it and without any way to pay for it.",
+    "You are giving in to Donald Trump, and you are giving up on your responsibility to the stability of our economy, the debt of our country, and the safety of American communities."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSHRINING THE WORDS OF CALIFORNIA STATE SENATOR BILL MONNING IN OUR NATION'S HISTORY",
+   "title": "ENSHRINING THE WORDS OF CALIFORNIA STATE SENATOR BILL MONNING IN OUR NATION'S HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgE531-2.htm",
+   "sentences": [
+    "For three years, Global Majority, a non-profit formed by MIIS students, organized training programs in Amman, Jordan, hosted by the United Nations Peace University that included Palestinian and Israeli students along with U.S. and international students.",
+    "Each year, when the students first convened, there was visible tension--expressions of animosity and mistrust between the Palestinian and Israeli students--most had never talked to ``the other''.",
+    "In fact, out of one of those Global Majority conferences emerged a romance and a marriage between a Palestinian and an Israeli!",
+    "While our world is rich in natural resources, we are also living in a world that faces the ravages of climate change that threatens all life on land and sea.",
+    "Internationally, we have witnessed the dismantling and dissolution of the US Agency for International Development (USAID), which has resulted in the documented deaths of over 600,000 innocent civilians--the majority, women and children."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3147-3.htm",
+   "sentences": [
+    "Mr. Speaker, I support a strong and secure border, but the Trump deportation policy goes way beyond going after felons and gang members.",
+    "They called themselves law enforcement, but they acted with lawlessness, trolling big box store parking lots, causing chaos in our communities, deaths to American citizens, and they were allowed to act with impunity.",
+    "I said: No more funding until they transform, reform, and retrain with commonsensical law enforcement protocols and procedures.",
+    "You are adding to our debt and deficit.",
+    "I am voting ``no'' not just because I am for reforming ICE, but I am standing up to this administration, and I am living up to my oath of office."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER NOTIFICATION AND PRIVACY ACT",
+   "title": "TAXPAYER NOTIFICATION AND PRIVACY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3106.htm",
+   "sentences": [
+    "Just briefly, again, I thank Representative Steube and Chairman Smith for their leadership on this legislation, and I urge the House to pass this commonsense legislation."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOUG LAMALFA FEDERAL DISASTER TAX RELIEF CERTAINTY ACT",
+   "title": "DOUG LAMALFA FEDERAL DISASTER TAX RELIEF CERTAINTY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3107.htm",
+   "sentences": [
+    "I support the Doug LaMalfa Federal Disaster Tax Relief Certainty Act.",
+    "Mr. Speaker, I urge my colleagues to support this commonsense bill to extend the Federal Disaster Tax Relief Act, to help families all across America, from Hawaii to California to Florida and those in between, who are struck by natural disasters and get the necessary tax relief to recover, rebuild, and move forward with their lives."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING EARLY-CHILDHOOD EDUCATORS' DEDUCTIONS ACT",
+   "title": "SUPPORTING EARLY-CHILDHOOD EDUCATORS' DEDUCTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3111.htm",
+   "sentences": [
+    "This is legislation that would extend eligibility for the educator expense deduction to early-childhood educators, pre-K educators, who are currently excluded from that benefit.",
+    "By expanding eligibility for the educator expense deduction to early-childhood educators, the bill will finally recognize the incredible dedication and work of these pre-K educators.",
+    "I rise in support of my Supporting Early-childhood Educators' Deductions Act.",
+    "We will just call it the SEED Act.",
+    "I urge the House to pass this commonsense legislation.",
+    "I urge all of my colleagues to support this bill with a vote of ``yes.''"
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING CHILDREN RECEIVE SUPPORT ACT",
+   "title": "ENSURING CHILDREN RECEIVE SUPPORT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3113.htm",
+   "sentences": [
+    "That program collects about $30 million a year in outstanding child support debt, but this is out of about $30 billion that we collect each year in total child support payments.",
+    "Mr. Speaker, I rise today in support of the Ensuring Children Receive Support Act, which I am proud to co-lead with Representative Van Duyne.",
+    "Mr. Speaker, I urge the House to pass this commonsense, bipartisan legislation."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEW OPPORTUNITIES FOR BUSINESS OWNERSHIP AND SELF-SUFFICIENCY ACT",
+   "title": "NEW OPPORTUNITIES FOR BUSINESS OWNERSHIP AND SELF-SUFFICIENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3114.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the NO BOSS Act, legislation from my good friend and colleague, Representative Mike Carey.",
+    "Mr. Speaker, I urge the House to pass this commonsense legislation."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING IS A HUMAN RIGHT",
+   "title": "HOUSING IS A HUMAN RIGHT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2175.htm",
+   "sentences": [
+    "Mr. Speaker, I recognize the 40th anniversary of the Saka Nakodar massacre where four unarmed Sikh students, Ravinder Singh, Jhilman Singh, Harminder Singh, and Baldhir Singh Multani, were shot and killed while peacefully protesting the desecration of the sacred Scripture of Sikhs.",
+    "The killing, which took place in the Punjab region of India on February 4, 1986, was absolutely abhorrent, but the investigation was definitely deplorable."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "title": "REMOVAL OF THE USE OF UNITED STATES FORCES FOR HOSTILITIES WITHIN OR AGAINST VENEZUELA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1317.htm",
+   "sentences": [
+    "Mr. Speaker, the military intervention in Venezuela left us with uncertainty, instability, and insecurity.",
+    "By replacing one despot with another, we are uncertain as to the government, to the oil, to the cartels, and to the future of democracy in Venezuela.",
+    "This type of military adventurism can also create instability not just in Venezuela, but in the region, and that creates insecurity for the United States.",
+    "This War Powers Resolution would not only prevent that in Venezuela without further congressional approval, it will also demonstrate that this Congress can actually act like a coequal branch of government and fulfill our responsibilities under the United States Constitution."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "Mr. Speaker, for the past year we have been talking about the damage done by not extending tax credits for the Affordable Care Act."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, if we don't extend the tax credits for the Affordable Care Act, costs for healthcare will go up for 20 million people and millions more will lose their health insurance.",
+    "Rather than fulfill the President's promise to reduce prices, they gave tax breaks to billionaires, they gutted Medicaid, and they added trillions to our debt."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STUDYING NEPA'S IMPACT ON PROJECTS ACT",
+   "title": "STUDYING NEPA'S IMPACT ON PROJECTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5086.htm",
+   "sentences": [
+    "It is a process that, as we know, can be bogged down, burdensome, and brutally bureaucratic, leading to unnecessary delays that make it very difficult to increase affordable housing, improve our infrastructure, and advance important energy and transmission projects.",
+    "People in California's 19th Congressional District, as well as I am sure people in the Second District of Indiana and communities all across the country, have a great amount of concern and consternation as the permitting process is stunting their will and ability to reduce their carbon output, to solve the affordability crisis, and to decrease the damage from natural disasters.",
+    "It is a first step--we get that--but we know it is also a very big and impactful step so that, together, we can implement our efforts to protect our planet, increase clean energy options for our country, and reduce costs for communities.",
+    "Mr. Speaker, I urge my colleagues to vote ``aye.''"
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H. RES. 719, HONORING THE LIFE AND LEGA",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H. RES. 719, HONORING THE LIFE AND LEGACY OF CHARLES \"CHARLIE\" JAMES...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4386-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to the previous question, which includes a detrimental and damaging provision that abdicates, that gives up, and that capitulates Congress' constitutional authority over this administration's disastrous tariff policy.",
+    "This administration's incoherent, inconsistent, and incompetent tariff policy is causing Americans to get crushed by high prices.",
+    "These are people and businesses who don't have the margins to survive these tariff policies and who don't have access to the Oval Office to cut a backroom deal for relief.",
+    "The tariffs not only have caused high prices, they have caused uncertainty that has destroyed what was once a strong jobs market.",
+    "Diplomatically, the President's tariff policy is causing consternation amongst our biggest trading partners and our allies and contributing to diplomatic crises.",
+    "Legally, the President's tariffs are hanging by a thread after a Federal court found that their claims of emergency power is dubious at best.",
+    "The reality is the President's trade policies that are based on his 40-year fetish with tariffs is bad for Americans.",
+    "It is time to repeal these various tariff powers that Congress has granted the executive branch over the past few decades.",
+    "Mr. Speaker, because of those authorities that the President is using capriciously and whimsically to impose his tariffs, it is causing great damage to our economy, and they are creating a crisis with these high costs that all of us are facing."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Mr. Speaker, this partisan tax bill will be our Nation's single-largest self-inflicted wound to working families and our economy.",
+    "It is the largest unfunded tax break for the wealthiest families and will lead to the largest number of working families losing healthcare.",
+    "Instead, it adds trillions to our debt that will drag down our economy and our credibility.",
+    "I am voting ``no,'' Mr. Speaker, on this partisan bill to stand up to the President, to stand with working families, and to stand for the financial stability of our country and the credibility of this institution."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, this Republican partisan tax bill will be the largest self-inflicted wound on America's working families in our Nation's history, with the largest cut in healthcare and food assistance to pay for the largest tax cuts for billionaires.",
+    "I get that this bill is about fulfilling the President's promises, but like the President, we can't rely on it for working families, as the bottom 10 percent would lose basic services so that the top 10 percent can increase their wealth.",
+    "What is worse is that, in order to pay for this bill, they are relying on not just the cuts but fabricated economic growth numbers, ignoring costs of the TCJA, and hoping that there are revenues from tariffs.",
+    "Yet, even with all of that, they stick it to our children by adding trillions to our Federal debt.",
+    "If we work together, we could help working families, bring down prices, and bring down our national debt.",
+    "Instead, Mr. Speaker, I am voting ``no'' on this partisan bill because it gives in to the President's politics, breaks promises to working families, and gives up on our promise to the future of our children."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to this disastrous, debt-inflating budget resolution.",
+    "Despite what the majority is saying today, it is a resolution that inflates our debt and deficit.",
+    "It will hide the cost of tax cuts for billionaires, and it threatens our economy.",
+    "It is a resolution that would do damage to our Nation's finances and add $4.6 trillion to our Nation's debt.",
+    "That is why I introduced an amendment to this resolution so that the Senate uses real estimates to determine its cost.",
+    "That is why I oppose this and I ask my colleagues to oppose this resolution, as well."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISASTER RELATED EXTENSION OF DEADLINES ACT",
+   "title": "DISASTER RELATED EXTENSION OF DEADLINES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1353.htm",
+   "sentences": [
+    "I rise in support of H.R. 1491, the Disaster Related Extension of Deadlines Act, authored and introduced by my friend, the gentleman from North Carolina (Mr. Murphy).",
+    "I urge my colleagues to support this bill that would help our government be better in helping those constituents in times of need all across this country."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHRONIC DISEASE FLEXIBLE COVERAGE ACT",
+   "title": "CHRONIC DISEASE FLEXIBLE COVERAGE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH964.htm",
+   "sentences": [
+    "Mr. Speaker, 90 percent of our annual health spending goes to chronic disease and mental health management.",
+    "Let's just hope they have that same concern when it comes to Medicaid and Medicare going forward, especially with the reconciliation package.",
+    "With his work, I rise today to support this legislation, the Chronic Disease Flexible Coverage Act."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIX OUR FORESTS ACT",
+   "title": "FIX OUR FORESTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-6.htm",
+   "sentences": [
+    "It is nice to have national forests as your backyard, but national forests have been neglected and mismanaged, and the risk of wildfires is much worse due to extreme weather and climate change."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "That is an issue that has long impaired our mutual investment opportunities, including the ability of the United States to shore up the semiconductor supply chain and fully capitalize on the potential of our partnership with Taiwan.",
+    "Mr. Speaker, I don't need to remind my colleagues of the security challenges that we faced during the pandemic, when we dealt with the overwhelming supply chain issues, especially for semiconductor chips.",
+    "He knows and we know that the Taiwanese companies that are investing in semiconductor facilities right here in America and are helping fulfill the objectives of the CHIPS and Science Act need the tax relief and regulation clarity now more than ever.",
+    "Mr. Speaker, I rise today to support the United States-Taiwan Expedited Double-Tax Relief Act."
+   ]
+  }
+ ]
+}

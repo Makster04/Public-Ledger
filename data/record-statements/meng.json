@@ -1,0 +1,120 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "meng",
+ "name": "Grace Meng",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 9,
+  "sentences": 27
+ },
+ "statements": [
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE TO HONOR VICTIMS OF DEVASTATING FLOODS IN NEPAL AND TIBET",
+   "title": "MOMENT OF SILENCE TO HONOR VICTIMS OF DEVASTATING FLOODS IN NEPAL AND TIBET",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5410.htm",
+   "sentences": [
+    "We are committed to supporting our Asian-American communities across the United States, and especially those who live in my district in Queens, New York, as we navigate this profound tragedy.",
+    "We stand with all those affected, both at home and abroad."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "title": "NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+   "sentences": [
+    "This bill cuts our national security budget by another 6 percent to fund more tax cuts for billionaires and a proposed military budget now exceeding $1.5 trillion.",
+    "That is a ``trillion'' with a capital T. It comes after this administration destroyed USAID, clawed back hundreds of millions in humanitarian aid already approved by Congress, and canceled over 80 percent of our foreign aid programs.",
+    "Instead of gutting diplomacy and development to pay for a record Pentagon budget, we should be growing our diplomatic presence and investing in programs that tackle conflict and instability at the roots.",
+    "It also doubles down on attacks on women and girls, gutting international family planning and banning funding to the U.N. Population Fund.",
+    "It also locks in the administration's expanded global gag rule, exporting a radical rightwing agenda, politicizing aid, and targeting women, minorities, and LGBTQ+ people--people who look to America as a beacon of freedom, not repression.",
+    "For these reasons, I cannot support this bill, and I urge my colleagues to oppose it."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "Mr. Chairman, I rise in support of the 2026 Financial Services and General Government and National Security, Department of State, and Related Programs Appropriations Act.",
+    "This bill isn't the one Democrats would have written if we were in the majority, but I want to share why I support it."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "I am proud that this bill increases funding for grants to State and local law enforcement, including for Community Oriented Policing Services programs and the Violence Against Women Act.",
+    "Mr. Speaker, I rise in support of this appropriations package.",
+    "I will be voting in favor, and I urge my colleagues to do the same.",
+    "Mr. Speaker, I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE 12TH ANNIVERSARY OF WOMEN'S ENTREPRENEURSHIP DAY",
+   "title": "COMMEMORATING THE 12TH ANNIVERSARY OF WOMEN'S ENTREPRENEURSHIP DAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgE1099.htm",
+   "sentences": [
+    "WEDO has also partnered with Defy Ventures to drive the Entrepreneurs in Training (EIT) program, achieving an outstanding 84 percent success rate among formerly incarcerated women by providing them with a path to opportunity and reintegration.",
+    "I include in the Record this year's honorees: Angelina Jolie, Humanitarian, Artist, and Entrepreneur; Rachel Drori, Founder of Daily Harvest; Howard Morgan, Cofounder of Renaissance Technologies, Chairman of B Capital, and Cofounder of First Round Capital; Chloe Ting, Global Fitness and Wellness Entrepreneur, Gloria Allred, Civil Rights Attorney and Founding Partner of Allred, Maroko & Goldberg, Jesse Draper, Founder of Halogen Ventures, Sheila Lino Marcelo, Cofounder and CEO of Ohai.ai, and Founder of Proof of Learn and Care.com."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2181-4.htm",
+   "sentences": [
+    "This big, bad billionaire bill would impact nearly 200,000 Asian- American constituents, many of them senior citizens in my district alone, not to mention the nearly 1 in 10 Asian Americans across our country that rely on food assistance through SNAP and the 1 in 6 NHPIs living in poverty."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "title": "FULL-YEAR CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1102.htm",
+   "sentences": [
+    "As ranking member of the House Appropriations Subcommittee on Commerce, Justice, Science, and Related Agencies, I cannot stand by as the GOP slashes funding for law enforcement, the courts, and NOAA, which includes the National Weather Service.",
+    "This bill hurts our local police officers by taking away $247 million from their public safety technology and equipment.",
+    "Additionally, it cuts $350 million from projects that support community efforts to prevent crime, improve law enforcement, to provide precincts with equipment to prevent car theft and provide victim services.",
+    "This includes Social Security, Medicare, Medicaid, and SNAP benefits which serve as a lifeline for millions of Americans.",
+    "Let's be clear: Social Security, Medicare, and Medicaid are not entitlements.",
+    "Mr. Speaker, this bill allows the administration to fire thousands of employees at the Social Security Administration and close offices nationwide, which will mean long wait times and delayed benefits for families.",
+    "Mr. Speaker, I rise today in opposition to this partisan bill."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDING WITH CBC IN SHARED FIGHT FOR EQUALITY AND JUSTICE",
+   "title": "STANDING WITH CBC IN SHARED FIGHT FOR EQUALITY AND JUSTICE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH827-3.htm",
+   "sentences": [
+    "Make no mistake, we will fight tooth and nail for our communities and stand up to these attacks.",
+    "We will not let anyone tell us that our stories don't matter."
+   ]
+  }
+ ]
+}

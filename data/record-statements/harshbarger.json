@@ -1,0 +1,125 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "harshbarger",
+ "name": "Diana Harshbarger",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 9,
+  "sentences": 32
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NUCLEAR ADVISORY COMMITTEE REFORM ACT",
+   "title": "NUCLEAR ADVISORY COMMITTEE REFORM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6102.htm",
+   "sentences": [
+    "The next generation of American nuclear energy is here, with advanced reactors entering the pipeline amid skyrocketing demand for reliable, affordable energy.",
+    "When it comes to nuclear energy, safety must always come first.",
+    "This was critical when nuclear energy was untested and Federal regulators had limited in-house technical expertise.",
+    "Mr. Speaker, I rise today in support of the Nuclear Advisory Committee Reform Act, legislation that I introduced with my colleague, the gentleman from Texas, Mr. Goldman.",
+    "I thank Chairman Guthrie and Ranking Member Pallone for their leadership, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "title": "AFFORDABLE INNOVATION FOR THE GRID ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5665.htm",
+   "sentences": [
+    "It directs the Secretary of Energy, working with FERC and NERC, to conduct a comprehensive assessment to determine how technologies like high- performance computing and artificial intelligence can be used to enhance grid operations, finding efficiency in our existing capacity, speeding up these interconnection studies, and improving reliability with tools like predictive maintenance and digital twins.",
+    "As part of the study, DOE will also work to understand the technical and cybersecurity barriers for widespread adoption.",
+    "Madam Speaker, I rise today in support of the Affordable Innovation for the Grid Act.",
+    "It is bipartisan legislation I introduced with my colleague from California, Congressman Mullin.",
+    "Madam Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN MUSIC TOURISM ACT OF 2025",
+   "title": "AMERICAN MUSIC TOURISM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5666.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in support of the American Music Tourism Act of 2025.",
+    "Madam Speaker, I urge my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "title": "FOURTH ANNIVERSARY OF DOBBS DECISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4229-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to mark the fourth anniversary of one of the most consequential decisions in the history of our Supreme Court, and that is Dobbs v. Jackson Women's Health Organization.",
+    "Mr. Speaker, 4 years ago, the Supreme Court corrected a 50-year wrong and returned the question of life back to where it has always belonged, and that is to the American people and to their elected representatives.",
+    "As a mother, a grandmother, and a lifelong advocate for life, I have always believed that the pro-life movement is fundamentally a movement of deep affection and love: love for mothers facing impossible choices, love for families navigating the unexpected, and love for the most vulnerable among us--the unborn, who have no voice.",
+    "And for every Planned Parenthood, there are 15 pregnancy resource centers ready to serve women with real support and real choices.",
+    "That is the true face of the pro-life movement.",
+    "Since Dobbs, abortions in this country have actually increased by nearly 400,000 a year.",
+    "It is because the Biden-Harris administration spent 4 years dismantling every commonsense safeguard around chemical abortion drugs.",
+    "Nearly every House Democrat has signed on to legislation that would impose abortion on demand until birth wiping out every pro-life protection at the State and Federal level, and we cannot let that stand.",
+    "I will not stop fighting for life in every form at every stage."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOMEN AND LUNG CANCER RESEARCH AND PREVENTIVE SERVICES ACT OF 2025",
+   "title": "WOMEN AND LUNG CANCER RESEARCH AND PREVENTIVE SERVICES ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3020-3.htm",
+   "sentences": [
+    "I rise today in strong support of H.R. 2319, the Women and Lung Cancer Research and Preventive Services Act of 2025 led by my colleague Representative Brendan F. Boyle."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMPROVING CARE IN RURAL AMERICA REAUTHORIZATION ACT OF 2025",
+   "title": "IMPROVING CARE IN RURAL AMERICA REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3021.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of H.R. 2493, the Improving Care in Rural America Reauthorization Act of 2025, led by my friend from Georgia, Congressman Carter.",
+    "Madam Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REAUTHORIZATION OF TELEHEALTH NETWORK AND TELEHEALTH RESOURCE CENTERS GRANT PROGRAMS",
+   "title": "REAUTHORIZATION OF TELEHEALTH NETWORK AND TELEHEALTH RESOURCE CENTERS GRANT PROGRAMS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3023.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong support of H.R. 3419, which would reauthorize the telehealth network and telehealth resource grant programs, led by my colleague Congressman Valadao.",
+    "Madam Speaker, I urge my colleagues to support this bill, and I thank the sponsors for their work on this bill."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTENSION OF TIME TO COMMENCE CONSTRUCTION OF CERTAIN HYDROPOWER PROJECTS",
+   "title": "EXTENSION OF TIME TO COMMENCE CONSTRUCTION OF CERTAIN HYDROPOWER PROJECTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-21/html/CREC-2026-04-21-pt1-PgH3024.htm",
+   "sentences": [
+    "These projects in limbo would provide energy that is imperative to power our communities, win the artificial intelligence race, and lower electricity prices for consumers.",
+    "Madam Speaker, I rise in support of S. 1020, led by Senator Daines and, in the House of Representatives, by Representative Newhouse."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AMERICAN MUSIC TOURISM ACT OF 2025",
+   "title": "AMERICAN MUSIC TOURISM ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1635.htm",
+   "sentences": [
+    "It will require the Assistant Secretary of Commerce for Travel and Tourism to develop a plan to boost music tourism, welcoming both domestic and international visitors to experience the rich musical heritage we have across America.",
+    "Whether it is New Orleans, the birthplace of jazz; Seattle, where they rock out to grunge; the cradles of hip hop, which are L.A. and New York; or Austin, which proudly calls itself the Live Music Capital of the World, our Nation is overflowing with the rich history of music.",
+    "Today, we will take the American Music Tourism Act under consideration.",
+    "Mr. Speaker, I urge all of my colleagues to support this legislation."
+   ]
+  }
+ ]
+}

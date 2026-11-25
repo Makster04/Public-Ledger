@@ -1,0 +1,261 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "simon",
+ "name": "Lateefah Simon",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 21,
+  "sentences": 60
+ },
+ "statements": [
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMALL BUSINESS CYBERSECURITY ASSISTANCE EVALUATION ACT OF 2026",
+   "title": "SMALL BUSINESS CYBERSECURITY ASSISTANCE EVALUATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4146.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my bipartisan legislation, the Small Business Cybersecurity Assistance Evaluation Act.",
+    "Mr. Speaker, I urge all my colleagues to support this very important legislation."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8312, FRAUD PREVENTION AND ACCOUNTABILITY ACT; PROVIDING FOR CONSIDERATION OF H.R. 8464, STOPPING FRAUDULENT PAYMENTS ACT; PROVI",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8312, FRAUD PREVENTION AND ACCOUNTABILITY ACT; PROVIDING FOR CONSIDERATION OF H.R. 8464, STOPPING FRAUDULENT PAYMENTS ACT; PROVIDING FOR CONSIDERATION OF H.R...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4004-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to the rule and to the dangerous Republican reconciliation bill."
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IRAN",
+   "title": "IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-15/html/CREC-2026-05-15-pt1-PgH3545-5.htm",
+   "sentences": [
+    "We are bombing schoolgirls in Iran, and we are standing by while civilians are being murdered by the thousands.",
+    "To achieve a free Iran, a free Cuba, a free Lebanon, a free Venezuela, a free Sudan, a free Gaza, diplomacy is our best tool.",
+    "I will not support or give another dime to this war, and I call on Congress to remember who we are meant to be. ____________________"
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KEEPING VIOLENT OFFENDERS OFF OUR STREETS ACT OF 2025",
+   "title": "KEEPING VIOLENT OFFENDERS OFF OUR STREETS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3474.htm",
+   "sentences": [
+    "Mr. Speaker, think about what we are asking today: for churches and charities to stop their mission to ensure that people in this country have the life, liberty, and due process that they so deserve."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE T",
+   "title": "PROVIDING FOR CONSIDERATION OF S. 1383, VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025; PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW- ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2121-6.htm",
+   "sentences": [
+    "It has been a Federal crime, we know, for noncitizens to vote since 1996.",
+    "Georgia audited 8.2 million voter registrations and found 20 noncitizens, Mr. Speaker, 20."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A CONFESSION OF OUR VALUES",
+   "title": "A CONFESSION OF OUR VALUES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH607-2.htm",
+   "sentences": [
+    "Nearly 14,000 veterans who served this Nation will sleep unsheltered tonight, not in beds.",
+    "There are 37 million American children who depend on Medicaid for their healthcare, and this Congress just signed $1 trillion in cuts to that lifeline."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "Mr. Chair, for the folks who are watching, for the transgender community, you are loved and respected for your resilience and for your breadth.",
+    "Mr. Chair, I rise today in opposition to this amendment that would prohibit the Department of Defense from collecting data on gender identity.",
+    "It is clear that it is an attempt to erase the existence of transgender servicemembers at the Department of Defense.",
+    "Without data collection, the Department of Defense cannot adequately address the challenges that lesbian, bisexual, and transgender servicemembers may face.",
+    "Transgender employees will have a difficult time filing equal employment opportunity complaints without accurate data."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFUNDING PLANNED PARENTHOOD",
+   "title": "DEFUNDING PLANNED PARENTHOOD",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3565.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to address the House and oppose the defunding of Planned Parenthood clinics nationwide.",
+    "The Republicans' cruel budget bill, which all Democrats opposed, included a provision to block Federal Planned Parenthood clinics from receiving Medicaid funds.",
+    "Planned Parenthood does not just provide birth control.",
+    "Women across this country today will walk into Planned Parenthood clinics across counties and States to receive both diagnostic and care for cervical cancer, hypertension, and basic medical care.",
+    "Earlier this year, the largest Planned Parenthood health center in the country opened in my district, named after my predecessor and champion of reproductive health and access, Congresswoman and now Mayor Barbara Lee.",
+    "The Barbara Lee Oakland Health Center has over 19 exam rooms and is transit accessible, but the Republican budget bill will put Planned Parenthood centers like ours across the country at risk.",
+    "Mr. Speaker, 200 of the 600 Planned Parenthood clinics across the country may close and women will die.",
+    "Planned Parenthood closures will disproportionately impact Black and Brown mothers, who already have a maternal mortality rate more than three times their White counterparts.",
+    "These cuts will disproportionately impact poor folks' access to reproductive care, since 40 percent of all births in this country are covered by the very Medicaid services that are now being gutted.",
+    "That is why I offered an amendment to the Republican budget reconciliation bill that would have protected the vital services of Planned Parenthood.",
+    "Just this week, the district courts put a temporary pause on parts of the Republican bill that would defund Planned Parenthood.",
+    "We will continue to fight back.",
+    "It is vital to communities' health, and I will not stand by while it is defunded and while our health is devalued."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN DEFENSE OF CHILDREN",
+   "title": "IN DEFENSE OF CHILDREN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgH3325-2.htm",
+   "sentences": [
+    "This week, the Supreme Court handed the President of the United States the power to gut the Department of Education without congressional approval.",
+    "National standards for protecting LGBTQ students, because they are students and are children, will go away."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3944, MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 3944, MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.R. 275, SPECIAL INTEREST ALIEN...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2900-2.htm",
+   "sentences": [
+    "As the Representative of California's 12th Congressional District, representing the East Bay, I rise today in opposition to H. Res. 516.",
+    "We will not have a democracy if the President of the United States continues to abuse his power and push authoritarian measures."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 884, PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS; PROVIDING FOR CONSIDERATION OF H.R. 2056, DISTRICT OF ",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 884, PROHIBITING VOTING BY NONCITIZENS IN DISTRICT OF COLUMBIA ELECTIONS; PROVIDING FOR CONSIDERATION OF H.R. 2056, DISTRICT OF COLUMBIA FEDERAL IMMIGRATION...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2581-4.htm",
+   "sentences": [
+    "Then there are those who cannot sleep at night because their child has a rare form of cancer and are worried about Medicaid not covering their care.",
+    "Today, if you go to the children's hospital here in Washington, D.C., and sit with the mother who is praying over her dying child, who had to quit her job and who now qualifies for Medicaid expansion, under their bill she will be cut.",
+    "Mr. Speaker, I urge my colleagues today to vote ``no'' on the previous question."
+   ]
+  },
+  {
+   "date": "2025-06-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING GUN VIOLENCE PREVENTION PROGRAMS",
+   "title": "SUPPORTING GUN VIOLENCE PREVENTION PROGRAMS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-06/html/CREC-2025-06-06-pt1-PgH2519.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to oppose the administration's cuts to critical gun violence prevention programs, and I rise today in deep solidarity with the innovators of CeaseFire, violence interrupters, and community organizations around this country that spend every day, hour after hour, working on the ground and in our communities to stop gun violence.",
+    "It is so critical and needed at a time when the Trump administration has announced cuts of $500 million to community violence intervention organizations and funding opportunities directly from the Department of Justice and over $1 billion in gun violence prevention funding for schools from the Department of Education.",
+    "Now, organizations like Youth Alive in Oakland, California, will not have the funding that they need that is so critical in this moment to do the work of violence interruption on our streets in conjunction with law enforcement and community members who have lost loved ones to violence.",
+    "June is Gun Violence Prevention Month, Mr. Speaker, and we cannot stop this work in decreasing gun violence on our streets and in our communities. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THINKDIFFERENTLY ABOUT DISABILITY EMPLOYMENT ACT",
+   "title": "THINKDIFFERENTLY ABOUT DISABILITY EMPLOYMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2399.htm",
+   "sentences": [
+    "I strongly urge my colleagues to support this bill and build an economy that works for all of us."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ATTACKS ON NONPROFITS",
+   "title": "ATTACKS ON NONPROFITS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2138-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to oppose our administration's attacks on our Nation's nonprofit sector."
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VULNERABLE CHILDREN MUST BE SUPPORTED",
+   "title": "VULNERABLE CHILDREN MUST BE SUPPORTED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2084-4.htm",
+   "sentences": [
+    "I most recently visited an organization in my district called the Unity Council that serves families, parents, seniors, and children, providing them with affordable housing, career opportunities, community engagement and, yes, Head Start programs.",
+    "This means that over 600 children will not have daycare, mental health services, dental care, and basic health screenings all provided by this incredible program."
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVID",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVIDE SERVICES EFFECTUATING DIGITAL...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-14/html/CREC-2025-03-14-pt1-PgE215-4.htm",
+   "sentences": [
+    "Mr Speaker, I will vote for H.J. Res. 25, a joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to ``Gross Proceeds Reporting by Brokers that Regularly Provide Services Effectuating Digital Asset Sales.'' My constituents in the East Bay are among the many adopters of digital assets and cryptocurrencies.",
+    "And while I have consistently opposed any Congressional Review Act (CRA) joint resolutions advanced by the House Majority--and am concerned about the loss in critical tax revenue as a result of this CRA--I believe the digital asset space offers new pathways for economic opportunity, especially for historically marginalized communities; and I strongly believe we must craft an inclusive regulatory framework that protects consumers, holds bad actors accountable, and supports financial inclusion for those who utilize these services.",
+    "I welcome the opportunity to work with my colleagues to thoughtfully legislate oversight of and implement necessary guardrails around digital assets so that we protect consumers--especially Black and Brown entrepreneurs, small investors, and working people--and promote innovation. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ASSISTING SMALL BUSINESSES NOT FRAUDSTERS ACT",
+   "title": "ASSISTING SMALL BUSINESSES NOT FRAUDSTERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH737-8.htm",
+   "sentences": [
+    "Mr. Speaker, firing Federal employees in this moment does not decrease the need or importance of the agency; it just makes it harder for entrepreneurs, for restaurateurs, for childcare operators, and others to keep their employees paid, to keep their doors open, and to keep our downtowns thriving.",
+    "Mr. Speaker, I urge my colleagues to support this effort to prioritize small businesses in the future through funding opportunities by preventing pandemic fraudsters from accessing Federal small business funds."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "title": "BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+   "sentences": [
+    "At 21 weeks, his faint heartbeat clapped right next to my daughter's.",
+    "If we want to talk about children, let's talk about childcare.",
+    "Mr. Speaker, I oppose this misleading bill that deeply will criminalize doctors who provide the most basic and emergency healthcare to women.",
+    "Mr. Speaker, I strongly oppose this bill."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "title": "PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+   "sentences": [
+    "I have been in the tanks of our county jails, literally on my knees, pleading with law enforcement to let young women out who themselves were victims and who were incarcerated wrongly for standing up for themselves while they fought for their lives.",
+    "We expanded access and legal representation for migrants and asylum seekers, many who came seeking peace and solidarity, in search of safety and dignity.",
+    "Instead, it broadens the definition of domestic violence in ways that punishes survivors, making them inadmissible and subject to deportation, regardless of their legal status.",
+    "I am proud to stand with millions of women and girls who have been victims and who are moving toward survivorship in saying no to this piece of legislation."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ILLEGITIMATE COURT COUNTERACTION ACT",
+   "title": "ILLEGITIMATE COURT COUNTERACTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgE35-3.htm",
+   "sentences": [
+    "Imposing mandatory sanctions and visa restrictions on foreign individuals interacting with International Criminal Court prosecutors is a broad, dangerous approach, which is why I oppose this bill.",
+    "For those reasons, I oppose the bill. ____________________"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "crow",
+ "name": "Jason Crow",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 22
+ },
+ "statements": [
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "title": "DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5609-3.htm",
+   "sentences": [
+    "If that is the case, then we will be at war forever.",
+    "We will spend another $3 trillion in addition to the $3 trillion we have already spent."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "title": "DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5160-6.htm",
+   "sentences": [
+    "Iran does and has posed a threat to Americans, as has North Korea, Russia, and many other regimes, countries, and terrorists around the world.",
+    "I want to be really clear about Iran, in particular.",
+    "There was no intelligence showing that Iran was proceeding with the development of a nuclear weapon.",
+    "They simply want to wait us out knowing that we will just spend more money, have more combat deployments, that we will just continue to do it year after year until we wear out."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "title": "DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgH3648.htm",
+   "sentences": [
+    "They see that the burden of these wars falls on them, while the elites, the rich, and the powerful in this country get richer, more powerful, and more comfortable.",
+    "We are paying for these wars with debt, $5 trillion to $8 trillion, 7,000 American lives, and on and on it goes."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WHY I CAME TO CONGRESS",
+   "title": "WHY I CAME TO CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgH4450.htm",
+   "sentences": [
+    "Instead, I have seen two impeachments, an insurrection, a pandemic, cyberattacks, social unrest, political assassinations, mass shooting after mass shooting, wars, tumultuous elections, and a rapid collapse of our social fabric.",
+    "Gun violence continues to devastate our schools and our towns.",
+    "In Twisp, Washington, a small, rural town that Trump won last November, hundreds of residents gather every Saturday to protest cuts to Medicaid and SNAP.",
+    "Everyone must defend the ability of a minority, Republican or Democrat, to question and protest, because at some point, we will need that right.",
+    "We will not shop at their stores.",
+    "We will not tune in to their TV and radio stations.",
+    "We won't send our kids and our money to their universities.",
+    "We won't use their services if they are going to enable our slide to authoritarianism."
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2240, IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT; PROVIDING FOR CONSIDERATION OF H.R. 2243, LEOSA RE",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2240, IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT; PROVIDING FOR CONSIDERATION OF H.R. 2243, LEOSA REFORM ACT; AND PROVIDING FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2014-10.htm",
+   "sentences": [
+    "Mr. Speaker, as we commemorate Police Week, I join my colleagues in honoring law enforcement around the country and back home in Colorado.",
+    "On Capitol Hill, the men and women of the U.S. Capitol Police protect us and the seat of our democracy.",
+    "I personally owe a great debt of gratitude to these officers who responded to the attack on the U.S. Capitol on January 6, 2021.",
+    "Officers from the Capitol Police, Metropolitan Police Department, and numerous other departments risked their lives to protect us and our democracy.",
+    "This Police Week let's honor the men and women who bravely risked everything to do their duty to protect this House and to protect this Capitol and our democracy.",
+    "It is time to display this plaque so Americans around the country who visit the seat of this democracy will see and be able to join us in honoring the bravery of those men and women from January 6, 2021."
+   ]
+  }
+ ]
+}

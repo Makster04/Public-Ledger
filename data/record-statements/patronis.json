@@ -1,0 +1,94 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "patronis",
+ "name": "Jimmy Patronis",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 28
+ },
+ "statements": [
+  {
+   "date": "2026-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUE COST OF BIG TECH",
+   "title": "TRUE COST OF BIG TECH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgE94.htm",
+   "sentences": [
+    "Mr. Speaker, Section 230 of the Communications Decency Act insulates ``Big Tech'' from most liability for the digital fentanyl promoted on their sites.",
+    "Time and time again, drugs are sold, sexually suggestive and/or explicit content is posted without consent, algorithms promote and normalize suicide and self-harm, and chatbots tell children how to cope with their emotions.",
+    "Chatbot usage is now so widespread that nearly three quarters of teens have used AI companions, and of these users approximately one in three have used them for social interactions and relationships to include the more than one in ten who sought emotional or mental health support.",
+    "That is why I proudly introduced H.R. 7045, the Promoting Responsible Online Technology and Ensuring Consumer Trust (PROTECT) Act, to immediately repeal Section 230 of the Communications Decency Act and to restore accountability for online platforms.",
+    "Increasingly, children have been suffering, and parents have been unable to pursue an effective means of encouraging the industry to police itself.",
+    "Despite Section 230 continuing to insulate online predation, I am proud of the work multiple sheriff offices, as well as state and federal agencies did to arrest 13 suspects during an online child sexual predator operation in my district and in surrounding communities last fall.",
+    "As a successful Section 230 defense often results in the court granting dismissal early in the litigation, the facts are often accepted as plead.",
+    "Only Fans Parent Company Faces No Liability for Allegedly Profiting Off Rape of a Miami Teenager In April 2022, Michelson Romelus and Bendjy Charles allegedly filmed each other on video while they forcible raped and sodomized the teenage victim in Miami.",
+    "Despite these facts, the case was recommended for dismissal based on Section 230, meaning the alleged victim could not recover from the platform.",
+    "Omegle Immune From Liability for Allegedly Connecting a Minor With a Predator Who Coerced an 11-Year-Old Into Undressing On March 31, 2020, an 11-year-old girl and user of the Omegle platform, which allowed users to connect with people randomly and anonymously allegedly connected the child with a predator.",
+    "The case was dismissed by the Court as the victim's family ``failed to plead claims that withstand Omegle's Section 230 immunity.'' The platform has since ceased operations.",
+    "The Court concluded that Section 230 barred the claim against OfferUp.",
+    "Craigslist Faces No Accountability for Allegedly Facilitating Sex Trafficking of a 15-Year-Old Back in 2008, a then fifteen-year-old girl began to allegedly be forcibly trafficked for commercial sex, which allegedly continued for a decade across Miami-Dade County.",
+    "The traffickers allegedly used craigslist's ``erotic services'', ``adult services'', ``massage services'', ``casual encounters'', and``personals'' categories to display their posts and to send emails on the platform to negotiate commercial sex sales.",
+    "Her traffickers allegedly posted sexually explicit, nude and partially nude photos as well as coded words to advertise commercial sex.",
+    "Although the Court explained that ``some of her allegations demonstrate craigslist's appalling lack of diligence in preventing trafficking, not a single one establishes that craigslist created or developed the trafficking content.'' After an extensive legal battle, the Court ultimately found craigslist not liable based on a Section 230 defense.",
+    "Ultimately, this case was appealed all the way to the Florida Supreme Court.",
+    "The mother was denied civil relief from America Online, Inc., after the Court found Section 230 preempted Florida law."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPEAL SECTION 230",
+   "title": "REPEAL SECTION 230",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1176.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to urge my colleagues to support H.R. 7045, the PROTECT Act, because it is time to repeal section 230 and hold Big Tech accountable for the harm being done to our children.",
+    "It is replacing relationships with robots.",
+    "Algorithms and chatbots fuel addiction, depression, self-harm, and even suicide, all while these companies hide behind section 230.",
+    "As a father of two young boys, I refuse to stand by and allow harm to happen to our children when there are no consequences, and these companies walk away without responsibility."
+   ]
+  },
+  {
+   "date": "2026-01-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 504 PROGRAM RISK OVERSIGHT ACT",
+   "title": "504 PROGRAM RISK OVERSIGHT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-20/html/CREC-2026-01-20-pt1-PgH932.htm",
+   "sentences": [
+    "Madam Speaker, I urge my colleagues to support H.R. 5788."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4231-3.htm",
+   "sentences": [
+    "He is also a champion for protecting our natural environment, earning him the title of the ``Green Patriarch.'' His leadership is a source of inspiration not only for the Greek Orthodox community but all those who care about human rights, religious liberty, and the stewardship of God's creation."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THANKING EMERGENCY MEDICAL SERVICES PERSONNEL",
+   "title": "THANKING EMERGENCY MEDICAL SERVICES PERSONNEL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2154-2.htm",
+   "sentences": [
+    "As long as I have a voice in Washington, D.C., I will always support our EMS professionals and every first responder working to serve our local communities, the State of Florida, and our great country.",
+    "I urge all in Florida's District One to join us in honoring Judge Remington's remarkable commitment to service. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESTORING TRUST IN OUR NATION'S GOVERNMENT",
+   "title": "RESTORING TRUST IN OUR NATION'S GOVERNMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-02/html/CREC-2025-04-02-pt1-PgH1410-2.htm",
+   "sentences": [
+    "As a lifelong native of the Florida panhandle, I am ready to get to work to support President Trump's agenda to make America first, to protect our southern border, to make groceries affordable, to strengthen our military, and to provide much-needed support to our veterans.",
+    "In fact, it is just a fact that we cannot achieve greatness when we are saddling our children with unbearable amounts of debt."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "lalota",
+ "name": "Nick LaLota",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 6,
+  "sentences": 13
+ },
+ "statements": [
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "At the same time, America, with our $38 trillion in debt, needs to start to freeze and cut spending wherever possible.",
+    "In addition to nearly $300 million for the High Intensity Drug Trafficking Areas program, the bill strengthens the Treasury's counterterrorism and financial intelligence efforts, cutting off funding streams used by cartels, traffickers, and foreign bad actors.",
+    "That is why I rise today in strong support of this bill.",
+    "I urge support of the bill, and I thank the chairman for his leadership."
+   ]
+  },
+  {
+   "date": "2025-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOSB ACCOUNTABILITY ACT",
+   "title": "WOSB ACCOUNTABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-03/html/CREC-2025-06-03-pt1-PgH2393.htm",
+   "sentences": [
+    "That is why I am proud to support the WOSB Accountability Act, a bipartisan effort that ensures contracts meant for women go to women.",
+    "I urge all of my colleagues to support the WOSB Accountability Act."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VIETNAM VETERANS LIVER FLUKE CANCER STUDY ACT",
+   "title": "VIETNAM VETERANS LIVER FLUKE CANCER STUDY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1435.htm",
+   "sentences": [
+    "In response, I introduced H.R. 4424, the Vietnam Veterans Liver Fluke Cancer Study Act, a bipartisan bill requiring the VA, in partnership with the CDC, to conduct a nationwide study and finally confront the truth: Bile duct cancer caused by the liver fluke parasite is a service-related illness.",
+    "I urge all of my colleagues to join me in standing with those who once stood for us."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DOE AND SBA RESEARCH ACT",
+   "title": "DOE AND SBA RESEARCH ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH742.htm",
+   "sentences": [
+    "We will get it done this time.",
+    "I urge my colleagues to support this commonsense legislation."
+   ]
+  },
+  {
+   "date": "2025-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 9/11 MEMORIAL AND MUSEUM ACT",
+   "title": "9/11 MEMORIAL AND MUSEUM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgH442-7.htm",
+   "sentences": [
+    "We cannot allow the heroism, the sacrifice, and the unity that followed be forgotten.",
+    "I urge my colleagues to join me in ensuring that we keep our promise."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SALT EQUITY",
+   "title": "SALT EQUITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH286-3.htm",
+   "sentences": [
+    "We Long Islanders aren't asking for any special treatment, we just want our fair share."
+   ]
+  }
+ ]
+}

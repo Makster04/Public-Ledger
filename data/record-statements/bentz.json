@@ -1,0 +1,90 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "bentz",
+ "name": "Cliff Bentz",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 7,
+  "sentences": 15
+ },
+ "statements": [
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, I urge adoption of the amendment, and I reserve the balance of my time."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "title": "STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6029-4.htm",
+   "sentences": [
+    "As the Supreme Court stated in the Seven County case: NEPA is a purely procedural statute, not a mandate for a particular result.",
+    "Mr. Chair, I urge support of this bill."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 845.",
+    "I will address the lack of management first."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNFAIR ENFORCEMENT OF ENDANGERED SPECIES ACT",
+   "title": "UNFAIR ENFORCEMENT OF ENDANGERED SPECIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5120.htm",
+   "sentences": [
+    "I will address the lack of management first."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "title": "SECURE RURAL SCHOOLS REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5066-5.htm",
+   "sentences": [
+    "Demand for SNAP and Medicaid shot up.",
+    "Mr. Speaker, I rise today in support of S. 356, the Secure Rural Schools Reauthorization Act of 2025.",
+    "I urge my colleagues to support S. 356."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DALLES WATERSHED DEVELOPMENT ACT",
+   "title": "DALLES WATERSHED DEVELOPMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5075.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my legislation, H.R. 655, the Dalles Watershed Development Act."
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING CALIFORNIA WILDFIRES",
+   "title": "ADDRESSING CALIFORNIA WILDFIRES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH206-2.htm",
+   "sentences": [
+    "There is a separation, I guess, in how we approach our response to changing climate.",
+    "It was said by members of the climate commission at Oregon State University that if we stopped all CO2 production today, our climate would not improve for between 30 and 40 years.",
+    "Wishing this away or blaming it on climate change and shrugging ones' shoulders that this isn't happening will not work.",
+    "During this period of time, we are going to see a repeat of what we are seeing in southern California unless we do something about it.",
+    "We want you to not just come in and help repair and clean up, which we will do, but, also, we want you to try to stop the damage that is being done to our forests."
+   ]
+  }
+ ]
+}

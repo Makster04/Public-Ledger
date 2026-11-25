@@ -1,0 +1,129 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "asmith",
+ "name": "Adrian Smith",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 27
+ },
+ "statements": [
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "title": "NATIONWIDE CONSUMER AND FUEL RETAILER CHOICE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3421.htm",
+   "sentences": [
+    "To my colleagues in Congress, I urge you to stand with America's consumers, America's farmers, and America's energy future by making nationwide, year-round E15 a reality."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "Today would have been no different from the past if Democrats had gotten their way and if Republicans had failed to pass the Working Families Tax Cuts Act.",
+    "We also strengthened America's agriculture industry by permanently doubling death tax relief and allowing producers to fully deduct new equipment costs, helping family operations innovate and continue for generations to come."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEBRASKA WILDFIRE CRISIS",
+   "title": "NEBRASKA WILDFIRE CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2554-3.htm",
+   "sentences": [
+    "I also will take a moment to be honest about what is happening here in Washington.",
+    "We will do that again now because that is who we are as Nebraskans. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "title": "RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+   "sentences": [
+    "In 2023 alone, this crisis contributed to the deaths of 70,000 Americans--in just one year, 2023--a number that only worsened the following year, when the amount of fentanyl that crossed our border with Canada was actually enough to kill 9.5 million people, given that potential.",
+    "Given this context, it is no surprise that between 2024 and 2025, under President Trump, fentanyl seizures at the northern border nearly doubled.",
+    "These productive--and I will say oftentimes uncomfortable-- conversations must continue, though, as we strengthen and extend USMCA during this 2026 Joint Review.",
+    "The President has, at every turn, reaffirmed his commitment to use tariffs as a means to drive these conversations, and Congress has delegated a number of tariff authorities to the executive.",
+    "While we are ultimately debating the merits of the emergency, let me be clear: This approach will not change the President's tariff strategy, just the conditions.",
+    "As we await the Supreme Court's decision on whether tariffs lie within the authority of IEEPA, today's politically motivated vote, I believe, is premature.",
+    "If my colleagues have full confidence there is no risk of fentanyl imports at the northern border, then they have more faith than I do.",
+    "Mr. Speaker, if this resolution is instead driven by a newfound tariff skepticism, I urge them to allow the Supreme Court to first make its decision.",
+    "To overlook the very basis of the emergency in the hope of removing tariffs for which the President has other authorities to pursue only increases uncertainty in the short term.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on the resolution."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AGOA EXTENSION ACT",
+   "title": "AGOA EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH637.htm",
+   "sentences": [
+    "With over 17,000 tariff lines and complex supply chains, trade is a detailed and dynamic system which values certainty.",
+    "We cannot sit on the sidelines while our global adversaries, including the Chinese Communist Party, spread their malign influence across the continent.",
+    "As the Trump administration engages on trade, AGOA can be a complementary trade policy as we look to build mutually beneficial reciprocal trade."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HAITI ECONOMIC LIFT PROGRAM EXTENSION ACT",
+   "title": "HAITI ECONOMIC LIFT PROGRAM EXTENSION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH642.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of H.R. 6504, the Haiti Economic Lift Program Extension Act."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "I will also point out that my colleagues across the aisle voted for a large portion of this bill last year."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of this package, which fulfills commitments to secure our border, rein in waste, and strengthen the economy for American families.",
+    "In the Ways and Means Committee portion of this bill, we build on the huge success of the Tax Cuts and Jobs Act by further increasing the standard deduction, increasing the child tax credit, and further reducing taxes on income earned by family-owned farms, ranches, and small businesses.",
+    "We also make a landmark investment in educating kids with the inclusion of my bill, the Educational Choice For Children Act, which creates a tax credit for scholarships to meet the needs of K-12 students and puts more parents back in control of their child's education, regardless of ZIP Code.",
+    "I strongly urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "The resolution would allow us to extend the historic tax relief from the Tax Cuts and Jobs Act, which has been enormously successful, and we know this, in allowing families to keep more of their paychecks and supercharging growth for small businesses.",
+    "I will hopefully contribute to that, especially when I hear some of the accusations made that are just off base, misleading, and false."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of the United States-Taiwan Expedited Double-Tax Relief Act."
+   ]
+  }
+ ]
+}

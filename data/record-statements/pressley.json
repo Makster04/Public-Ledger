@@ -1,0 +1,472 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "pressley",
+ "name": "Ayanna Pressley",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 35,
+  "sentences": 145
+ },
+ "statements": [
+  {
+   "date": "2026-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JUSTICE DELAYED IS JUSTICE DENIED",
+   "title": "JUSTICE DELAYED IS JUSTICE DENIED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-17/html/CREC-2026-11-17-pt1-PgH6253-3.htm",
+   "sentences": [
+    "Mr. Speaker, justice delayed is justice denied, and we will not back down in our pursuit of healing and reparative justice."
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING FOR A MORE JUST AMERICA",
+   "title": "FIGHTING FOR A MORE JUST AMERICA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6202-6.htm",
+   "sentences": [
+    "We need a more just America where people don't have to choose between rent, medical bills, and groceries."
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PIERRE DAMAS BEL",
+   "title": "PIERRE DAMAS BEL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5491-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise for the family and loved ones of Pierre Damas Bel, a beloved son and brother, 20-year-old college student, and Haitian immigrant with temporary protected status."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR LEBANON WAR POWERS RESOLUTION",
+   "title": "SUPPORT FOR LEBANON WAR POWERS RESOLUTION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3782-3.htm",
+   "sentences": [
+    "Madam Speaker, I rise in support of the Lebanon War Powers Resolution.",
+    "More than 3,000 innocent people have been killed in Lebanon by the Israeli military and over a million are displaced.",
+    "We must take action for peace and pass this War Powers Resolution.",
+    "Madam Speaker, I rise in favor of the Ukraine Support Act.",
+    "In the Massachusetts Seventh Congressional District, I hear from Ukrainians about the necessity of American support to put an end to Putin's attacks.",
+    "I was proud to sign the discharge petition to force this vote, and I urge all of my colleagues to stand with Ukraine. ____________________",
+    "Madam Speaker, I urge my colleagues to vote ``yes'' on H. Con. Res. 84."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: END THE WAR IN IRAN",
+   "title": "END THE WAR IN IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2455.htm",
+   "sentences": [
+    "I rise on behalf of the little girls in Iran killed by bombs raining down on their schools.",
+    "Constituents in my district are horrified to see the United States and Israel launch a war with Iran that has already spread to a dozen more countries.",
+    "They see the baby girls in Iran, their small bodies decimated, as their own daughters.",
+    "We will not tolerate his callous disregard for human life."
+   ]
+  },
+  {
+   "date": "2026-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATE OF OUR UNION IS TRAUMATIZING OUR CHILDREN",
+   "title": "STATE OF OUR UNION IS TRAUMATIZING OUR CHILDREN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-24/html/CREC-2026-02-24-pt1-PgH2263-2.htm",
+   "sentences": [
+    "Madam Speaker, the state of our Union is traumatizing our children.",
+    "Madam Speaker, Juan Nicolas, Susej, Ailany, Liam, Ashley, and Daphne, today, I recognize you as my honorary guests to the state of the Union, not because the man who imprisoned you or denied you your parents' care deserves an audience, but because you belong everywhere.",
+    "We will do everything we can to keep him home with you where he belongs.",
+    "I will not stop fighting until you are free.",
+    "Madam Speaker, I say to Ailany, Liam, and Ashley that we will do everything we can to bring your daddy back home.",
+    "We will not stop fighting until your family is reunited.",
+    "I will fight for you like you are my own because you deserve that. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSTITUENT TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "title": "CONSTITUENT TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgE101-4.htm",
+   "sentences": [
+    "How can I get a loan to finance one of my development projects when I don't know what my legal status will be in a year?",
+    "When Temporary Protected Status (TPS) was designated for Haiti, it brought me immense relief during an incredibly painful and uncertain time.",
+    "I pray that the Supreme Court will consider the plight of all TPS recipients across the United States--people like me who have built lives here, serve our communities, and have nowhere safe to return.",
+    "Thank you so much for your support. __________ I am a Haitian national living legally in the United States under Temporary Protected Status (TPS).",
+    "As a proud first-generation Haitian-American, an immigration attorney, and the Legal Service Coordinator and Immigration Policy Analyst for the City of Somerville, I submit this written testimony to address the devastating impact that terminating Temporary Protected Status (TPS) for Haitian individuals and families would have on our communities in Somerville, across the Commonwealth of Massachusetts, and throughout our nation.",
+    "Some may point to the word ``temporary'' in Temporary Protected Status and suggest that termination was always inevitable.",
+    "They have registered with the government, undergone background checks, paid fees, and maintained their status through regular renewals.",
+    "People who have been authorized to work, pay taxes, contribute to Social Security, and build their lives legally would overnight become subject to deportation through no fault of their own.",
+    "This is not merely an ``immigrant'' issue, the termination of TPS impacts all of us, citizens and noncitizens alike.",
+    "This issue is about whether we will honor our commitments, protect vulnerable families, and recognize the immeasurable contributions of our Haitian neighbors."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WITNESS TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "title": "WITNESS TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgE103-4.htm",
+   "sentences": [
+    "Therefore, I include in the Record their testimonies: To the Honorable Congresswoman Pressley, Senator Markey, and other participating members of the Massachusetts Congressional Delegation, Thank you for receiving this testimony in support of Temporary Protected Status (TPS) for Haitians.",
+    "Already, nearly half of US nursing homes report they've had to limit admissions because of staffing shortages and only 19% currently meet the minimum staffing levels that the Centers for Medicare & Medicaid Services have mandated these facilities achieve by 2029.",
+    "Multiple studies demonstrated that children who are experience this type of family separation suffer increased rates of mental health disorders, developmental delays, and long-term health problems.",
+    "Please, don't get me wrong, I think that throughout the COVID epidemic as an industry we were able to give our staffs well deserved raises this time however, we will not have the Medicare, Medicaid, and bailout money to fund these raises.",
+    "It is devastating that I will have to turn these valuable caretakers away. __________ ENRIQUE PEPEN, BOSTON CITY COUNCILOR DISTRICT 5 On January 20th, my team attended the congressional field hearing hosted by Congresswoman Pressley and Senator Markey regarding the pending termination of Haitian Temporary Protected Status (TPS).",
+    "Stripping TPS forces many to return to a country that is currently facing extreme humanitarian and security concerns that no one should have to endure such as widespread gun violence, political instability, and larger crumbling infrastructure.",
+    "The termination of TPS eliminates essential safeguards such as protection from deportation, legal status, and the ability to work.",
+    "Rather than terrorizing an already vulnerable mass of people, the Trump administration should acknowledge the incredible contributions these individuals have made and create a path to citizenship for the hardworking and beloved TPS holders in our nation. __________ Statement on the Importance of Maintaining Haitian Temporary Protected Status (TPS) Jacky Poteau, Brockton, Massachusetts Temporary Protected Status for Haitian nationals is not only a humanitarian necessity--it is a matter of economic stability and public well-being for Massachusetts.",
+    "Haitian and other TPS holders also play critical roles in public transportation, construction, food services, childcare, and elder care--industries already experiencing severe labor shortages.",
+    "Maintaining TPS, asylum and other status is a matter of humanity and a fundamental right . . . ____________________",
+    "Inevitably it seems that we are going to end up spending more money to provide less care to our residents.",
+    "I urge serious consideration of the devastating consequences this decision will have on our communities."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMUNITY TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "title": "COMMUNITY TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgE105-5.htm",
+   "sentences": [
+    "Therefore, I include in the Record their testimonies: Dear Honorable Senator Markey and Honorable Congresswoman Pressley: In response to the slated termination of Temporary Protected Status (``TPS'') for Haitian nationals on February 3, 2026, Rian Immigrant Center respectfully submits the following remarks.",
+    "Over the years, Rian has transformed into a vibrant center serving immigrants and refugees from over 125 countries worldwide, and reflecting the rich diversity of the foreign- born communities of Boston and throughout Massachusetts.",
+    "The evacuation of consular officers from the U.S. embassy; the suspension of normal consular operations for several years; reports of active gunfire between U.S. Marines guarding the embassy and violent gang members; and Department of State-issued travel warnings for Haiti all point to the inaccurate, if not flagrantly deceptive nature of Secretary Noem's TPS termination announcement.",
+    "I submit this testimony, not only for myself, but on behalf of the Haitian residents of Boston whose lives, families, and livelihoods are directly threatened by the termination of Temporary Protected Status (TPS).",
+    "The termination of TPS also threatens Boston's economy as they are our essential workers in healthcare, food service, construction, childcare, transportation, and home health care.",
+    "I sincerely urge the United States Department of Homeland Security (DHS) to consider extending Temporary Protected Status for Haitians to remain safe, employed, and united with their families.",
+    "It is hateful and contrary to the country my father fought for and was so proud of. __________ To Sen. Ed Markey, Rep. Ayanna Pressley, and Whom It May Concern: Haitian Temporary Protected Status is critical to the safety and stability of families across Boston.",
+    "In Boston, Haitian TPS holders are essential workers in our healthcare system, schools, childcare centers, construction sites, restaurants, and small businesses.",
+    "After the catastrophic earthquake in 2010--an event that affected more than three million people and claimed over 200,000 lives--the United States granted Temporary Protected Status to Haitians already living here.",
+    "I don't know if I will be able to sell my home before the due dates.",
+    "I stand with Boston's Haitian community, local advocates, and faith leaders calling for an extension of Haitian TPS and permanent protections.",
+    "Our city is stronger when families can live without fear and we will continue to stand with immigrant communities who call Boston home.",
+    "I urge the federal government to reconsider this termination--for the safety of our neighbors, the stability of our economy, and the values we claim as the greatest nation on Earth."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPERT TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "title": "EXPERT TESTIMONY DURING THE CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgE108-3.htm",
+   "sentences": [
+    "Therefore, I include in the Record their testimonies: Testimony of Attorney Mirian Albert of Lawyers for Civil Rights to the Congressional Field Hearing on the Termination of Haitian Temporary Protected Status Lawyers for Civil Rights (``LCR'') advocates for communities of color and immigrants through legal action, education, and economic empowerment.",
+    "On March 3, 2025, LCR fIled a federal lawsuit to block the termination of Temporary Protected Status (``TPS'') for Haitian and Venezuelan immigrants.",
+    "We must choose policies rooted in justice, grounded in law, and reflective of this Nation's fundamental values. __________ To Whom it May Concern: This testimony is submitted anonymously on behalf of a Massachusetts-based, community- rooted mental health organization that primarily serves Haitian individuals and families, many of whom hold TPS.",
+    "Our mission has been to destigmatize and normatize conversations around mental health within the Haitian community, a community that has long been taught to endure suffering in silence, to ``be strong,'' and to survive without support.",
+    "For many of our clients, seeking mental health care represents a cultural and emotional rupture: the first time they have allowed themselves to name fear, grief, trauma, and exhaustion out loud.",
+    "It will undo years of trust- building, reinforce stigma around seeking help, and send a devastating message to Haitian communities that safety and healing are conditional and disposable.",
+    "The mental health impact will reverberate through families, schools, churches, and workplaces.",
+    "Preserving TPS is essential to protecting not only legal status, but mental health, dignity, and human life.",
+    "Respectfully submitted, Massachusetts-based Haitian Community Mental Health Organization (on behalf of Haitian clients and families). __________ My name is Rebecca Henry.",
+    "We urge decision-makers to consider the profound emotional harm TPS termination will cause to Haitian individuals, families, and communities."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "title": "CONGRESSIONAL FIELD HEARING ON HAITIAN TPS TERMINATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgE99-3.htm",
+   "sentences": [
+    "For those unaware, Temporary Protected Status, or TPS, is an immigration designation in recognition of a country facing conflict, disaster or extraordinary conditions, TPS has received bipartisan support for over 30 years as a program.",
+    "If Donald Trump and his anti-immigrant crusade are successful, more than 350,000 Haitian nationals will lose their legal status on February 3rd.",
+    "And so, I will continue to pray and to move my feet, to steward every tool available to me in the work of resistance, the actualization of justice and the furthering of progress--using the power of my congressional letterhead, using the power of my pen as a lawmaker, using the power of my platform, using the power of convening, which is what brings us here today."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: END QUALIFIED IMMUNITY FOR ICE AGENTS",
+   "title": "END QUALIFIED IMMUNITY FOR ICE AGENTS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgH649-2.htm",
+   "sentences": [
+    "Millions have seen the videos of ICE shooting and killing Renee Good, a poet and mother who was unarmed and trying to drive away.",
+    "Following her tragic death at the hands of law enforcement, Republicans rushed to deny the truth and smear the victim, a playbook that has been employed frequently, especially against the Black community.",
+    "That is why I will reintroduce my bill to end qualified immunity to hold Federal agents accountable for breaking the law and killing our neighbors.",
+    "For the families of these victims, Congress must end qualified immunity. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACA TAX CREDITS EXTENSION",
+   "title": "ACA TAX CREDITS EXTENSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH144-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today carrying the voices and the lives of the people in the Massachusetts Seventh whose survival depends on the Affordable Care Act tax credits: the grandmother skipping meals to pay for her prescriptions; the young mom lying awake at night wondering how she will afford her baby's asthma inhaler if premiums go up; families like Deborah's in Boston, staring down premiums that will double while they care for loved ones, serve their community, and do everything right.",
+    "If these ACA tax credits expire, they will pay nearly $2,000 a month for an even worse plan, and that doesn't even include their daughter, who has aged out of the plan, is underpaid in her job, and whose premiums they will have to help cover.",
+    "She saw the humanity of everyone and spoke about intersectionality from her hometown to Capitol Hill to Gaza to the border.",
+    "Mr. Speaker, I urge my colleagues to do right by the people who sent them here and join us in passing this extension before it is too late."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "A broken bone, asthma, gender dysphoria, diabetes, whatever the presenting issue is, a treatment plan takes shape.",
+    "For some families, what their children need to be okay is access to gender-affirming care.",
+    "Yet today, we are debating a bill that would tell parents on Medicaid that their child's pain is unworthy of care, that their doctor's judgment does not matter, and that politicians know better than parents sitting in exam rooms.",
+    "Cole, a young person from Massachusetts, wrote to me and said: Transgender people deserve the same chance to thrive and live fulfilling lives as everyone else.",
+    "Having the freedom to control our bodies and seek the healthcare we need, including gender-affirming care, is an essential right for all people.",
+    "Mr. Speaker, I rise in strong opposition to this legislation."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ABORTION CARE IS HEALTHCARE",
+   "title": "ABORTION CARE IS HEALTHCARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6096-4.htm",
+   "sentences": [
+    "They want to deny children food, ban abortion care, and obstruct the extension of the Affordable Care Act subsidies.",
+    "For my constituent, Paula, whose husband lost his job and became ill, the ACA has been their lifeline, carrying them through years of uncertainty as she became his caregiver.",
+    "Once again, the Republicans are using abortion care as a political bargaining chip.",
+    "The truth: Republicans will send premiums sky high just to stop families from using their own money on a plan that covers abortion."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OPPOSITION TO THE MILITARY SPENDING BILL",
+   "title": "OPPOSITION TO THE MILITARY SPENDING BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5805.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to this year's massive $900 billion military spending bill.",
+    "It certainly is poor character to ban initiatives associated with diversity, equity, and inclusion, even though these cuts will undermine military readiness."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP IS A THREAT TO OUR REPUBLIC",
+   "title": "PRESIDENT TRUMP IS A THREAT TO OUR REPUBLIC",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-04/html/CREC-2025-12-04-pt1-PgH5044.htm",
+   "sentences": [
+    "Mr. Speaker, in Gaza, children have been murdered as U.S. bombs deployed by the Israeli Army have rained down on civilians.",
+    "In the timeless words of James Baldwin: ``The children are always ours, every single one of them, all over the globe; and I am beginning to suspect that whoever is incapable of recognizing this may be incapable of morality.'' Mr. Speaker, the United States of America built, bought, and sold the bombs that killed Palestinians throughout this horrific genocidal campaign carried out by the Israeli military."
+   ]
+  },
+  {
+   "date": "2025-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING DHS IMMIGRATION RAIDS",
+   "title": "FIGHTING DHS IMMIGRATION RAIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-03/html/CREC-2025-12-03-pt1-PgH5014-3.htm",
+   "sentences": [
+    "It is so important that we do not allow the hostile acts of this administration to be normalized.",
+    "Together, we will protect our communities and defend our immigrant neighbors and their families."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IMMIGRANT NEIGHBORS",
+   "title": "IMMIGRANT NEIGHBORS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4893-4.htm",
+   "sentences": [
+    "They are pulling childcare workers from classrooms in front of desperate toddlers.",
+    "For our immigrant families, they belong here, and I will not stop fighting for them, their rights, and their dignity."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4595-3.htm",
+   "sentences": [
+    "We the people deserve better, and I won't stop fighting until you get it."
+   ]
+  },
+  {
+   "date": "2025-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWERING AGE AT WHICH A MINOR MAY BE TRIED AS ADULT FOR CERTAIN CRIMINAL OFFENSES IN DISTRICT OF COLUMBIA",
+   "title": "LOWERING AGE AT WHICH A MINOR MAY BE TRIED AS ADULT FOR CERTAIN CRIMINAL OFFENSES IN DISTRICT OF COLUMBIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-16/html/CREC-2025-09-16-pt1-PgH4339.htm",
+   "sentences": [
+    "Donald J. Trump himself spent the equivalent of more than $200,000 advocating for them to get the death penalty.",
+    "Lawyers explain that children treated as adults, even when they are innocent, are denied age-appropriate legal protections for the rest of their lives.",
+    "If Republicans cared about our kids, then they would invest in restorative justice programs that teach children how to resolve their conflicts without violence.",
+    "Mr. Speaker, I rise in strong opposition to this legislation.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this bill to keep our babies safe from trauma, abuse, and fear."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ACCESS TO ABORTION CARE",
+   "title": "ACCESS TO ABORTION CARE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3521-6.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to condemn the cruelty of the Hyde Amendment and reintroduce the EACH Act to end it once and for all.",
+    "So he came to this floor and put forward an amendment with a simple, cruel aim to ban as many people as he could from getting abortion care.",
+    "The Hyde Amendment denies abortion care to patients who receive their care through Medicaid, CHIP, and other government programs.",
+    "Mr. Speaker, in my lifetime, we will defeat it once and for all because everyone deserves access to fundamental healthcare, and that is exactly what abortion care is."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in vigorous opposition to the CLARITY Act.",
+    "Across our country, millions of working families are battling rising costs, our elders are targeted by financial scams, and investors are trying to recover from volatile markets."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING OUR IMMIGRANT COMMUNITIES",
+   "title": "PROTECTING OUR IMMIGRANT COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-11/html/CREC-2025-06-11-pt1-PgH2623.htm",
+   "sentences": [
+    "Jose was living here legally with temporary protected status but was told by the ICE agents who detained him that only people born here have rights."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADRIANA SMITH",
+   "title": "ADRIANA SMITH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2478.htm",
+   "sentences": [
+    "The hospital believed that the anti-abortion bill that Georgia enacted in 2022 following the gutting of Roe v. Wade tied the hospital's hands and mandated that Adriana's body, her brain-dead body, remain hooked to machines.",
+    "I grieve for Adriana's family, for the torture they are experiencing layered with the daily uncertainty that they are navigating as they try to do right by their daughter and lay her to rest peacefully."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "It will line the pockets and stroke the egos of a fewer petty billionaires."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2186-2.htm",
+   "sentences": [
+    "America's broken for-profit healthcare system denies far too many this basic dignity, but Medicaid has been a lifeline.",
+    "Today, 42 percent of births in America are funded by Medicaid.",
+    "Republicans who claim to be pro-family are coming for Medicaid with a sledgehammer.",
+    "It would mean even worse maternal health outcomes, States rescinding policies that improve access to reproductive care, and decimating access to prenatal care, contraception, and cancer screenings."
+   ]
+  },
+  {
+   "date": "2025-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BABY BONDS",
+   "title": "BABY BONDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-19/html/CREC-2025-05-19-pt1-PgH2139.htm",
+   "sentences": [
+    "The so- called MAGA accounts in their reconciliation bill are intentionally designed to help the rich get richer while poor children are left further and further behind.",
+    "Mr. Speaker, I rise in support of investing in every child's future.",
+    "Mr. Speaker, I urge my colleagues to reject this regressive proposal and support true baby bonds. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTH DISPARITIES IN MINORITY COMMUNITIES",
+   "title": "HEALTH DISPARITIES IN MINORITY COMMUNITIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1673.htm",
+   "sentences": [
+    "In the Congressional Black Caucus, we are daily organizing and legislating towards a different vision: one of true healthcare justice, a vision where Black men can grow old, where birth is safe and sacred, where every baby has clean air to breathe and safe water to drink, where health equity is a given and not an afterthought, where Black pain is believed.",
+    "Meanwhile, we have a Trump White House threatening to gut and defund essential health programs.",
+    "They are gutting Medicaid and tearing away school lunches.",
+    "They are coming for Planned Parenthood.",
+    "Behind the wall, as co-chair of the House's Reproductive Freedom Caucus, I met women who were pregnant, entering the latter months of their pregnancy and being denied routine prenatal care.",
+    "I spoke to a woman diagnosed with cancer who has pleaded to anyone she can reach to spare her life and to deport her.",
+    "A cage is a cage at a for-profit prison or at a detention center.",
+    "Now, some have tired of hearing these sobering statistics, but I will enumerate them time and again until they change.",
+    "I will tell you this: Every day I will use each tool I have to fight for the lives of my constituents, neighbors, and families across this Nation that I have never met."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Ranking Member Waters for her leadership, under which we have advocated to create an economy that works for all people, not just Elon Musk and wealthy billionaires.",
+    "Whether it is an elder whose Social Security check was delayed into her direct deposit, likely because of Trump's mass firings, or the young college student who makes the innocent mistake of confusing a savings and checking account, anyone can be affected by unnecessary junk fees.",
+    "The exorbitant fees, sometimes $35 for every overdraft, would further push them into debt.",
+    "That is why I oppose this measure to overturn the Consumer Financial Protection--emphasis on ``Protection''--Bureau rule that caps overdraft fees by banks at $5.",
+    "I oppose this resolution and encourage everyone to stand with working people who are struggling to make every single dollar stretch."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP'S ATTACKS ON BLACK HISTORY",
+   "title": "TRUMP'S ATTACKS ON BLACK HISTORY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1555-3.htm",
+   "sentences": [
+    "Dictators try to shutter museums, censor history, and whitewash the truth, but we know the truth."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "As the House prepares to vote on a truly horrifying Republican budget resolution, one void of empathy or common sense, I am thinking of the people in my district who stand to be harmed the most: families in Mattapan who receive their healthcare through MassHealth, the Medicaid program for Massachusetts; mothers in Chelsea, who rely on SNAP to feed their babies; disabled veterans in Randolph who receive lifesaving care and benefits through the VA; families in Roxbury who rely on Head Start for childcare.",
+    "Tell me how it is efficient to buy more toy rockets for Donald Trump's billionaire friends while parents can't afford groceries.",
+    "I urge my colleagues to stand with the people."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "title": "BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+   "sentences": [
+    "I would ask my colleagues if they have ever met or spoken to a woman who had abortion care late in pregnancy?"
+   ]
+  },
+  {
+   "date": "2025-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RISKING CHILD SAFETY TO VILIFY TRANS KIDS",
+   "title": "RISKING CHILD SAFETY TO VILIFY TRANS KIDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH120.htm",
+   "sentences": [
+    "It allows adults--not medical professionals, just random adults--to demand to inspect our child's genitals without parental consent.",
+    "We Need Clemency Madam Speaker, for too long, our Nation's criminal legal system has been wrought with systemic injustices and biases and has prioritized cruelty at the expense of rehabilitation and justice.",
+    "Today, in the name of all who have felt the injustices of the carceral state, we are standing united to call on President Biden to use his clemency powers to release people from prison and reunite them with their families.",
+    "There are mothers like Michelle West, who is incarcerated for the crimes of her abuser; brothers like Charles Ellis, Jr., from my district, the Massachusetts Seventh, who had ineffective assistance of counsel when he committed a crime at the age of 19; and sons like Ismael Lira, who was sentenced to life in prison for a nonviolent cannabis charge.",
+    "Madam Speaker, why is anyone still incarcerated for cannabis?",
+    "With nearly 1 million people behind bars, more people per capita than any other country, it is time for clemency to put the United States on a path toward ending mass incarceration.",
+    "Madam Speaker, I urge my colleagues to vote ``no'' and to speak out in strong opposition to this disgusting, predatory bill that does nothing to keep a single child safe."
+   ]
+  }
+ ]
+}

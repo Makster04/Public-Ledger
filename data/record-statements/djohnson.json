@@ -1,0 +1,133 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "djohnson",
+ "name": "Dusty Johnson",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 31
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FAREWELL TO CONGRESS",
+   "title": "FAREWELL TO CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5629.htm",
+   "sentences": [
+    "Mr. Speaker, there is still much to be done in the 119th Congress, and I promise I will keep working hard for South Dakota until the very end, but when this chapter of my life closes in January, I will not miss the shutdowns, the political posturing, or the TV cameras.",
+    "I will miss the people, the very best people. ____________________"
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES TO REQUIRE THAT THE SUPREME COURT OF THE UNITED STATES BE COMPOSED OF NINE JUSTICES",
+   "title": "PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES TO REQUIRE THAT THE SUPREME COURT OF THE UNITED STATES BE COMPOSED OF NINE JUSTICES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5443-2.htm",
+   "sentences": [
+    "Mr. Speaker, today's debate has convinced me more than ever that we need to cap the number of Supreme Court Justices at nine.",
+    "Seemingly no norm is safe, and indeed prominent leaders on the other side of the aisle have promised us that they will pack the Court with four more Supreme Court Justices when they regain power.",
+    "Now, the size of the Supreme Court should not be an arms race.",
+    "You can see Venezuela increasing their court to an eye-watering 32 justices in the pursuit of political power.",
+    "For 150 years, nine Supreme Court Justices have served us well.",
+    "Actually, Supreme Court Justices support nine as the number.",
+    "That is the Goldilocks spot, and it is not just conservative Justices who say it.",
+    "Today, we have an opportunity, Mr. Speaker, to heed those bipartisan calls, to remove a weapon in the hands of partisans, to defend and to protect a longstanding judicial norm, and to place the number of Supreme Court Justices as nine in our Constitution.",
+    "Mr. Speaker, I support the measure before us today."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING THAT SECTION 11 OF HOUSE RESOLUTION 1224 SHALL HAVE NO FORCE OR EFFECT",
+   "title": "PROVIDING THAT SECTION 11 OF HOUSE RESOLUTION 1224 SHALL HAVE NO FORCE OR EFFECT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3410.htm",
+   "sentences": [
+    "Secondly, when it comes to American energy dominance, I think most South Dakotans would rather our energy future be driven by what is going on in South Dakota cornfields rather than in Iranian oilfields."
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRIBAL TRUST LAND HOMEOWNERSHIP ACT OF 2025",
+   "title": "TRIBAL TRUST LAND HOMEOWNERSHIP ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgH2359.htm",
+   "sentences": [
+    "First off, we know that our country is facing a housing affordability crisis.",
+    "In Indian Country, it is even worse.",
+    "Frankly, it is hard to understand what a big problem this is in Indian Country."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAVE OUR SEAS 2.0 AMENDMENTS ACT",
+   "title": "SAVE OUR SEAS 2.0 AMENDMENTS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5867.htm",
+   "sentences": [
+    "Importantly, this legislation will promote clean water and the protection of our natural resources without imposing new mandates on industry or local governments."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL MARITIME COMMISSION REAUTHORIZATION ACT OF 2025",
+   "title": "FEDERAL MARITIME COMMISSION REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5869.htm",
+   "sentences": [
+    "Mr. Speaker, the Chinese Communist Party does not play fair.",
+    "Because the Chinese Communist Party doesn't play fair, we need a focused and effective cop on the beat.",
+    "We need someone who will be focused on the anticompetitive behavior from the Chinese Communist Party and others.",
+    "Secondly, it also provides the new authorities and direction that the FMC needs to be a vigilant protector for our American shippers so they can be a more informed regulator and a more effective guardian against the abuses by the Chinese Communist Party and their partners."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENHANCING SCIENCE, TREATMENT, AND UPKEEP OF AMERICA'S RESILIENT AND IMPORTANT ESTUARINE SYSTEMS ACT",
+   "title": "ENHANCING SCIENCE, TREATMENT, AND UPKEEP OF AMERICA'S RESILIENT AND IMPORTANT ESTUARINE SYSTEMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5872.htm",
+   "sentences": [
+    "I commend my colleagues on both sides of the aisle, particularly the diligent and hardworking Mr. Figures, as lead sponsor, for their work on this bill, and I urge support."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EPERMIT ACT",
+   "title": "EPERMIT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5088.htm",
+   "sentences": [
+    "I was involved when Congress recognized the importance of these digital solutions in the Fiscal Responsibility Act of 2023.",
+    "Mr. Speaker, I will admit to being pretty excited that the ePermit Act is on the floor today, not just because it is my bill but because America needs this.",
+    "Because of this bill, we will modernize and digitize our permitting process with uniform data standards and a unified permitting portal so that agencies can work together and so that the public and communities can see what is actually happening.",
+    "I urge my colleagues to join us in letting America build again."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "That is certainly true for digital assets, NFTs, and memecoins.",
+    "Here is what matters: Blockchain technology, Web3, will transform every single industry in the same way that the internet has transformed every single industry over the last 30 years.",
+    "This is not about buying bubble gum with bitcoin.",
+    "This is about blockchain innovation happening here rather than overseas, about more liquid capital markets, about small businesses creating new services and products, about removing friction from transactions for every single American, and about protecting consumers so the debacles like the FTX meltdown never happen again.",
+    "The regulatory certainty provided by this incredible bipartisan work product will launch a golden age of innovation and the golden age of digital assets."
+   ]
+  },
+  {
+   "date": "2025-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WOUNDED KNEE MASSACRE MEMORIAL AND SACRED SITE ACT",
+   "title": "WOUNDED KNEE MASSACRE MEMORIAL AND SACRED SITE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-21/html/CREC-2025-01-21-pt1-PgH246.htm",
+   "sentences": [
+    "As has been said, in December 1890, Chief Spotted Elk and his band of Lakota, which largely consisted of women and children, were headed from the Cheyenne River Indian Reservation to the Pine Ridge Indian Reservation."
+   ]
+  }
+ ]
+}

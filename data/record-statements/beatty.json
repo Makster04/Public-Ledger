@@ -1,0 +1,193 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "beatty",
+ "name": "Joyce Beatty",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 15,
+  "sentences": 46
+ },
+ "statements": [
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-23/html/CREC-2026-06-23-pt1-PgH4151-3.htm",
+   "sentences": [
+    "My HOME Investment Partnerships Reauthorization and Improvement Act will make it easier for local organizations to fund affordable housing projects, while another provision strengthens coordination between the Departments of Housing, Agriculture, and Veterans Affairs.",
+    "Mr. Speaker, I rise in strong support of the Housing for the 21st Century Act."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KEEPING DEPOSITS LOCAL ACT",
+   "title": "KEEPING DEPOSITS LOCAL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-19/html/CREC-2026-05-19-pt1-PgH3582.htm",
+   "sentences": [
+    "Mr. Speaker, increasing nonbrokered treatment of reciprocal deposits will greatly support these institutions by allowing them to access stable funding to help finance affordable housing projects, small business loans, and community infrastructure.",
+    "Mr. Speaker, I rise in support of my bill, H.R. 3234, the Keeping Deposits Local Act, which I am very proud to co-lead with Congressman Emmer.",
+    "I urge my colleagues to support the passage of this bill."
+   ]
+  },
+  {
+   "date": "2026-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADVANCING THE MENTOR-PROTEGE PROGRAM FOR SMALL FINANCIAL INSTITUTIONS ACT",
+   "title": "ADVANCING THE MENTOR-PROTEGE PROGRAM FOR SMALL FINANCIAL INSTITUTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-12/html/CREC-2026-05-12-pt1-PgH3356.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bill, H.R. 3709, the Advancing Mentor-Protege Program for Small Financial Institutions Act, which supports small banks, credit unions by codifying the Financial Agent Mentor-Protege Program at the Department of the Treasury."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2050.htm",
+   "sentences": [
+    "I am proud to have five affordable housing bills included in this overwhelmingly bipartisan package.",
+    "The package also expands foreclosure mitigation counseling to delinquent borrowers and raises the public welfare investment, or PWI, cap to 20 percent to free up capital for historic investments in affordable housing and community development.",
+    "It provides a critical foundation for us to end the affordable housing and homelessness crisis.",
+    "Mr. Speaker, I rise in support of H.R. 6644, the Housing for the 21st Century Act.",
+    "Lastly, again, I thank Ranking Member Waters and Chairman Hill for their leadership on this package, and I urge my colleagues to support the package."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL STABILITY OVERSIGHT COUNCIL IMPROVEMENT ACT OF 2025",
+   "title": "FINANCIAL STABILITY OVERSIGHT COUNCIL IMPROVEMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2074.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3682, the Financial Stability Oversight Council Improvement Act of 2025, sponsored by Representative Foster."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BRINGING THE DISCOUNT WINDOW INTO THE 21ST CENTURY ACT",
+   "title": "BRINGING THE DISCOUNT WINDOW INTO THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2076.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3390, the Bringing the Discount Window into the 21st Century Act, sponsored by Representative De La Cruz."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESSURE REGULATORY ORGANIZATIONS TO END CHINESE THREATS TO TAIWAN ACT",
+   "title": "PRESSURE REGULATORY ORGANIZATIONS TO END CHINESE THREATS TO TAIWAN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2078.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1531, the PROTECT Taiwan Act, sponsored by Representatives Lucas and Gonzalez."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BRINGING REAL ACCOUNTABILITY VIA ENFORCEMENT IN BURMA ACT",
+   "title": "BRINGING REAL ACCOUNTABILITY VIA ENFORCEMENT IN BURMA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2080.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 3190, the BRAVE Burma Act, sponsored by Representative Huizenga."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PAYING HOMAGE TO THE BLACK MEN AND WOMEN OF THE ARMED FORCES",
+   "title": "PAYING HOMAGE TO THE BLACK MEN AND WOMEN OF THE ARMED FORCES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2085-6.htm",
+   "sentences": [
+    "From brutal attacks on Black history to Secretary Hegseth's attempt to remove women from combat roles, the message is clear."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RESTORING ENHANCED PREMIUM TAX CREDITS",
+   "title": "RESTORING ENHANCED PREMIUM TAX CREDITS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-09/html/CREC-2025-12-09-pt1-PgH5105.htm",
+   "sentences": [
+    "Mr. Speaker, I rise to share the human cost of allowing the Affordable Care Act healthcare tax credits to expire.",
+    "Small businesses make up 48 percent of the ACA marketplace consumers.",
+    "If I could go back and remind you, Mr. Speaker, and all those who are listening, it was the Democrats with our American Rescue Plan who expanded the promise of the Affordable Care Act to make healthcare more affordable.",
+    "I could take you back to 1965, Mr. Speaker, when then, too, we were dealing with healthcare, and it was the government body that came up with Medicaid and Medicare to make sure that we protected the American people and provided not just for the wealthy, but for all, for the least of us.",
+    "He told me his ACA premiums will rise $11,000 in 2026.",
+    "I thank her for her brilliance and her tenacity that she comes here and stands and tells the stories and leads us so hopefully we will be able to make a difference."
+   ]
+  },
+  {
+   "date": "2025-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: OFAC LICENSURE FOR INVESTIGATORS ACT",
+   "title": "OFAC LICENSURE FOR INVESTIGATORS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-21/html/CREC-2025-07-21-pt1-PgH3517.htm",
+   "sentences": [
+    "This pilot project would grant private-sector firms a temporary specific license to conduct nominal financial transactions with sanctioned entities to assist with law enforcement investigations.",
+    "These private firms would be, for example, as you have heard, Mr. Speaker, blockchain analytics firms or the financial intelligence units within corresponding banks.",
+    "That also means that it is impossible to access data about bad actors' networks and methods, intelligence that would be of great assistance to law enforcement agents, to government, to consumers of their products, and the financial industry overall, Mr. Speaker.",
+    "I rise in support of my bipartisan bill, H.R. 1450, the OFAC, Licensure for Investigators Act, which I am very proud to co-lead with my colleague, the gentleman from Iowa (Mr. Nunn).",
+    "Mr. Speaker, I urge my colleagues to join our chairman, our ranking member, and my colleague, Mr. Nunn, in supporting this bill."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SANDRA'S STORY: WHY MEDICAID MATTERS",
+   "title": "SANDRA'S STORY: WHY MEDICAID MATTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2185-4.htm",
+   "sentences": [
+    "She would tell you tonight, Mr. Speaker: ``Without Medicaid, literally, our lives would be at stake.'' Republicans want to slash Medicaid and bankroll billionaires.",
+    "Republicans want to slash Medicaid and bankroll billionaires.",
+    "Mr. Speaker, today is about billionaires over hardworking Americans like Sandra Black's family.",
+    "That is because we want America to know that we are standing up for Medicaid.",
+    "I will fight for lives like Sandra's and Naomi's. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP'S PROPOSED DEPARTMENT OF EDUCATION SHUTDOWN",
+   "title": "PRESIDENT TRUMP'S PROPOSED DEPARTMENT OF EDUCATION SHUTDOWN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-17/html/CREC-2025-04-17-pt1-PgE320-2.htm",
+   "sentences": [
+    "All of this--to make billionaires richer?",
+    "And I want to go on the record: we will fight back--against President Trump, against you, Speaker Johnson, and against every Republican who remains silent in the face of this attack."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BLACK HISTORY MONTH",
+   "title": "BLACK HISTORY MONTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH752-4.htm",
+   "sentences": [
+    "We come tonight, and we speak truth to power in this most unprecedented time in our Nation's history: a time when we are fighting for civil rights and justice, a time when we are fighting just to ask for an opportunity, for a broader talent base, something we call diversity, equity, and inclusion.",
+    "Programs like Medicaid and Medicare, Consumer Financial Protection Bureau, FAA, and funding for HBCUs, historically Black colleges and universities, Federal jobs being taken away from individuals with little or no notice and promise of payment that has only fallen short or to be told that they would get it and found out only to be lies.",
+    "Tonight, we will answer what the people are asking for: What are we doing?",
+    "We know that if we will not stand up for them and fight for them that little might not happen.",
+    "We are fighting to protect and pursue opportunities that give Black Americans the same advantages that White Americans have enjoyed since our Nation's founding.",
+    "I could tell you that we are fighting because we possess those talents in fields because we have suffered along the way.",
+    "We want America to know that we stand with them in this time when we are in trouble.",
+    "We want America to know that we will not be silent even against this administration.",
+    "We will do all the things that our forefathers did.",
+    "We will do all the things that those shoulders that we stand on did.",
+    "What they did, we will do because this America belongs to us."
+   ]
+  }
+ ]
+}

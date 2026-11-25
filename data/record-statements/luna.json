@@ -1,0 +1,73 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "luna",
+ "name": "Anna Paulina Luna",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 16
+ },
+ "statements": [
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, I rise to support this amendment.",
+    "Mr. Chairman, I will end by saying that I take zero money from pesticide liability and manufacturers, and my colleague takes $124,000 from them."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Yet the SAVE America Act, a commonsense piece of legislation that requires two things, voter ID, plus proof of citizenship, is being labeled by people in the Senate and people in this very Chamber as Jim Crow-era laws.",
+    "In fact, Mr. Speaker, if you are doing that, then you are insulting over 70 percent of your voters, Democrats, who believe that voter ID is the best way to secure an election.",
+    "However, the fact is that if we are going to play that game, then you would want voter ID and you would want to secure the elections.",
+    "I do not believe that Barack Obama in showing his voter ID was engaging in Jim Crow-era law or pushing that type of perspective.",
+    "A majority of the world has voter ID in place.",
+    "I support all of my colleagues, and I urge them to vote for this piece of legislation."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "The National Endowment for Democracy needs to change its name to the National Endowment for Censorship.",
+    "I hear if we defund programs in Pakistan, Congo, and the Ukraine, all of which--Pakistan has election fraud, Congo has 40,000 child slaves in cobalt mines, and Ukraine is jailing Christians--then we are simply despots and part of the problem, but I disagree."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "Starting in November, I was campaigning with our very popular President, who won not just the national popular vote but also the electoral college and who campaigned on ending taxes on tips, taxes on overtime pay, everything that would help the American people who have felt far too long left by Washington, D.C. We are finally able to deliver.",
+    "It makes sure that we restore border security."
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LAR",
+   "title": "PROVIDING FOR CONSIDERATION OF S.J. RES. 18, DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-01/html/CREC-2025-04-01-pt1-PgH1389-6.htm",
+   "sentences": [
+    "In addition to that, I would also like to add that for a while we have had the majority and we have had the ability to bring legislation to the floor on election integrity and also to call out rogue judges, and yet they chose at this point in time to tie this discharge petition killer to this rule that would also permanently paint me and the Members supporting it, and I would like to also share that I am one of the most conservative Members of this body, I would like to hold up my voting record to anyone else as not just being anti-election integrity but also enabling a position that I don't typically agree with.",
+    "Mr. Speaker, I rise in opposition to this rule.",
+    "As of right now, they slipped language into this rule, and I will get to what they attached the rule to in a second, that would permanently kill any ability for new Members of Congress to be able to bring this up and allow those Members who just had a child to be able to vote.",
+    "I would also ask my colleagues to remember that up until 1916, female representation was not a common thing in Washington, D.C. Mr. Speaker, I urge all of my colleagues to give this a fair shot."
+   ]
+  }
+ ]
+}

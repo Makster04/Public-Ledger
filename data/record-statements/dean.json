@@ -1,0 +1,461 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "dean",
+ "name": "Madeleine Dean",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 37,
+  "sentences": 116
+ },
+ "statements": [
+  {
+   "date": "2026-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOMENT OF SILENCE HONORING FORMER CONGRESSMAN TIM HOLDEN",
+   "title": "MOMENT OF SILENCE HONORING FORMER CONGRESSMAN TIM HOLDEN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-19/html/CREC-2026-11-19-pt1-PgH6295-2.htm",
+   "sentences": [
+    "I will remember him as a man of faith, decency, and good humor."
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+   "sentences": [
+    "Veterans Day is a moment to thank them, although we can never fully express our debt of gratitude, and to recognize their courage, dedication, and patriotism with respect and reverence."
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPAIR AND RENEWAL",
+   "title": "REPAIR AND RENEWAL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194.htm",
+   "sentences": [
+    "Mr. Speaker, last week, the American people issued a resounding rejection of the chaos, corruption, and cruelty of the current administration: a reckless war with Iran, an erratic trade war, inhumane immigration tactics, ripping apart our social safety net, and degrading our institutions and civil servants."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REDUCING VOTING DAYS",
+   "title": "REDUCING VOTING DAYS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5963-3.htm",
+   "sentences": [
+    "Perhaps my Republican colleagues do not feel the need to vote because they have surrendered their constitutional powers--for example, our duty to impose taxes as they support Donald Trump's inane and chaotic tariffs and our power to declare war as they buckle to the President's reckless war with Iran."
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REBUILDING USAID",
+   "title": "REBUILDING USAID",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5473.htm",
+   "sentences": [
+    "Mr. Speaker, I have with me just some of the products USAID had used around the world to save lives and to protect nutrition.",
+    "Just look at USAID, which Trump's billionaire buddy Elon Musk, now the world's richest man, bragged about ``feeding it into the wood chipper.'' The result of this deliberate, gleeful destruction has been nearly 750,000 deaths around the world, nearly one person a minute, an irreplaceable humanitarian loss.",
+    "In sub-Saharan Africa, as many as 159,000 people are estimated to have died due to the interruption of critical USAID and PEPFAR funds.",
+    "Due to the interruption of critical USAID funds, it is likely that the final death toll by 2030 is estimated to be even higher, maybe more than 9 million people.",
+    "We often argue that we spend less than 1 percent of our budget on foreign aid.",
+    "I argue we should spend more on foreign aid because it returns to us in our national security and, of course, in security around the world.",
+    "Mr. Speaker, I ask Mr. Trump to restore the funding to USAID."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY AND JUSTICE FOR ALL",
+   "title": "LIBERTY AND JUSTICE FOR ALL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5413-2.htm",
+   "sentences": [
+    "In New York, The Washington Post detailed dozens of detainees held for days in rooms that usually hold no more than 12 for hours and hours.",
+    "People are forced to sleep sitting up, to use bathrooms without any privacy, and others with serious health conditions, including tuberculosis, an ovarian cyst, and kidney failure, lacking proper care.",
+    "In February of last year, Daphy Michel, a 31-year-old woman suffering from untreated severe mental illness, with a significant language barrier, was dropped off by ICE at a bus stop in freezing winter temperatures.",
+    "I urge the administration to stop this illegal set of detentions and not let people pay with their liberty and their lives."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RE",
+   "title": "PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4425-2.htm",
+   "sentences": [
+    "For my remarks, within it, I will speak to the Sunshine Protection Act.",
+    "We tried permanent daylight saving time during the 1970s oil crisis, and it lasted less than a year.",
+    "Members should have been able to speak and ask doctors how permanent daylight savings time would affect our health, safety, and well-being.",
+    "Congresswoman Scanlon proposed an amendment for a permanent standard time to do just that, but it was promptly rejected.",
+    "Mr. Speaker, I rise in strong opposition to this rule for many reasons, as expressed--the outrage about what is in here regarding veterans and their deserved, earned benefits.",
+    "In closing, for the health and safety of our constituents, I urge my colleagues to vote ``no'' on the rule."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025",
+   "title": "SUNSHINE PROTECTION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Ranking Member Pallone for this opportunity to talk about the Sunshine Protection Act.",
+    "For example, we should be able to test the provision that eliminates a State's right to opt out of daylight saving time or the decision to ``stop the clock'' on daylight saving time in the first place.",
+    "That is why we observe standard time in the winter months and why we should at least consider observing it year-round.",
+    "The American Medical Association, American Academy of Sleep Medicine, National Sleep Foundation, and dozens of other societies tell us that if we stop the clock, permanent standard time is a healthier choice-- permanent standard time.",
+    "In 1974, children died as a result of a permanent daylight saving time attempt or trial when they were trying to go to school in the dark for hours.",
+    "More than that, we aren't voting on bills right now that would reduce the sky-high costs of food, fuel, and healthcare or address the President's war in Iran.",
+    "I rise in opposition to the bill and the danger it poses to our health and safety.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VOTING RIGHTS MUST BE PROTECTED",
+   "title": "VOTING RIGHTS MUST BE PROTECTED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3713.htm",
+   "sentences": [
+    "On April 29, the Supreme Court of the United States gutted the Voting Rights Act, opening the door to coordinated attacks on Black voters, particularly in the South."
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ON CARING",
+   "title": "ON CARING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-15/html/CREC-2026-05-15-pt1-PgH3536-2.htm",
+   "sentences": [
+    "Diesel is even higher, farmers input costs soaring.",
+    "Through his illegal tariffs, grotesque immigration policies, and now a reckless $30 billion-to-date, poorly thought out, deadly war with Iran, everything costs more."
+   ]
+  },
+  {
+   "date": "2026-04-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ARTEMIS II",
+   "title": "ARTEMIS II",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-23/html/CREC-2026-04-23-pt1-PgH3072-5.htm",
+   "sentences": [
+    "Through the Artemis II mission, these courageous four ventured farther from Earth than humankind has ever been, reminding us of our relative smallness and the love and common humanity that binds us together.",
+    "Yet a feat as interstellar as Artemis is, it offers some local pride."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CREATE TARIFF POLICY THAT SUPPORTS U.S. ECONOMY",
+   "title": "CREATE TARIFF POLICY THAT SUPPORTS U.S. ECONOMY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2300-3.htm",
+   "sentences": [
+    "Mr. Speaker, Article I, Section 8 of the Constitution grants Congress, and Congress alone, the ``power to lay and collect taxes, duties, imposts, and excises.'' As Chief Justice John Roberts correctly noted last week, the Framers were explicit: The executive has no given power to reach into the pockets of the people to impose taxes and tariffs.",
+    "The Supreme Court has now confirmed two truths that we have known: Tariffs are a tax on consumers, on you and me; and number two, the President's disastrous, on-again-off-again tariffs are not just illegal, they are also unconstitutional.",
+    "I call upon all of my colleagues in Congress, Republicans and Democrats, let's work together to create tariff policy that supports U.S. economic objectives, laws that give businesses the security and time needed for investments, and that bring costs down for consumers. ____________________"
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PENNIE ENROLLMENT",
+   "title": "PENNIE ENROLLMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2205-2.htm",
+   "sentences": [
+    "Mr. Speaker, on January 1, Republicans in Congress allowed the Affordable Care Act credits to expire.",
+    "Just look at my home State of Pennsylvania, where 85,000 people who receive their health insurance through Pennie, our health insurance marketplace, were forced to drop coverage."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "title": "CONSOLIDATED APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+   "sentences": [
+    "We secured $7.4 billion for the Substance Abuse and Mental Health Services Administration, SAMHSA, despite the administration's callous attempt just 1 week ago to eliminate almost all discretionary grant funding for the agency.",
+    "I am pleased to say that Congress exercised its constitutional power of the purse and rejected cuts to an agency that serves as the backbone of our Nation's response to the mental health and addiction crises, which continue to take too many lives in America.",
+    "We restored funding for homeless prevention programs, peer support services, and mental health workforce training, and we secured funding increases for State opioid response grants and the 988 Suicide and Crisis Lifeline.",
+    "In addition, we successfully removed more than 20 partisan policy riders from the L-HHS bill, riders that would have defunded Planned Parenthood, blocked gun violence prevention research, and threatened the safety and dignity of immigrant and LGBTQ communities.",
+    "Mr. Chair, I rise today in support of the negotiated fiscal year 2026 appropriations package for Labor-Health and Human Services-Education, for Defense, and for Transportation-Housing and Urban Development.",
+    "Mr. Chair, I urge my colleagues to join me in supporting this package, and I thank the chairman and the ranking member."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NATO",
+   "title": "NATO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH727-2.htm",
+   "sentences": [
+    "Mr. Speaker, the core of NATO is Article 5: An attack on one is an attack on all.",
+    "There is no article for if a NATO member attacks another because for 80 years, we have led a peaceful partnership for our shared democratic ideals."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GREATEST CASUALTY IS TRUTH",
+   "title": "GREATEST CASUALTY IS TRUTH",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH594-6.htm",
+   "sentences": [
+    "The President and the courtiers who encircle him traffic, intentionally and carelessly, in falsehoods, misinformation, and lies.",
+    "On Venezuela, they lied when they said it was about drugs.",
+    "Whether it was the repeated murder of unidentified people in small boats or last Saturday's extraordinary capture of Maduro, they lied, saying they would not attack Venezuela before going to Congress.",
+    "On this week's fifth anniversary of January 6, the President continues his dangerous lies, supported by the Speaker of the House.",
+    "The White House is going so far as an attempt to whitewash history on the official website of the White House, even blaming Capitol Police for the President's deadly insurrection."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+   "sentences": [
+    "Despite being in the minority, Democrats on the Appropriations Committee have fought for months to reject the Trump administration's proposed cuts to crucial programs, programs that make our communities safer and support our law enforcement.",
+    "For example, we secured $50 million for community violence intervention and prevention initiative grants, despite the President and the House Republicans' attempts to eliminate this funding that so many of our local law enforcement rely upon.",
+    "These programs have immeasurably reduced crime and gun violence.",
+    "We successfully removed 76 partisan policy riders that would have eliminated firearms trafficking regulations, climate change, and so much more.",
+    "Mr. Speaker, I rise today in support of the negotiated FY26 Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act.",
+    "It has been a privilege to serve on this committee, and I urge my colleagues to join me in supporting the package."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HEALTHCARE AND AFFORDABILITY",
+   "title": "HEALTHCARE AND AFFORDABILITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-12/html/CREC-2025-12-12-pt1-PgH5814.htm",
+   "sentences": [
+    "The President and Republicans in Congress are ripping the hope of recovery away for so many, slashing and shuttering SAMHSA, the Substance Abuse and Mental Health Services Administration.",
+    "Their big, beautiful bill gutted nearly $1 trillion from Medicaid.",
+    "In my State, 100,000 people through Medicaid have access to treatment and to recovery.",
+    "In 19 days, ACA tax credits will expire, spiking premiums overnight."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CARELESS PEOPLE",
+   "title": "CARELESS PEOPLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgH4852-3.htm",
+   "sentences": [
+    "They responded by inserting a disgusting, corrupt provision into a so-called clean spending bill that allows for a slush fund for eight Republican Senators at the last hour to each collect as much as a million dollars or more--one million taxpayer dollars each--because their phone records were lawfully seized in connection with the January 6 insurrection."
+   ]
+  },
+  {
+   "date": "2025-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GAZA IS STARVING",
+   "title": "GAZA IS STARVING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-04/html/CREC-2025-09-04-pt1-PgH3842-3.htm",
+   "sentences": [
+    "We are 698 days into the Hamas- Israel war, which we all understand, but it has been nearly 200 days since Prime Minister Netanyahu barbarously blocked all food, water, and medicine into Gaza."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUKUS REFORM FOR MILITARY OPTIMIZATION AND REVIEW ACT",
+   "title": "AUKUS REFORM FOR MILITARY OPTIMIZATION AND REVIEW ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3736.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 4233, the ARMOR Act, legislation that I was proud to work on with Representative Kim and Representative Zinke."
+   ]
+  },
+  {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NURSING HOMES",
+   "title": "NURSING HOMES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-23/html/CREC-2025-07-23-pt1-PgH3624-5.htm",
+   "sentences": [
+    "Mr. Speaker, in Pennsylvania nearly 65 percent of nursing home residents rely on Medicaid.",
+    "President Trump and the Republicans' big, ugly bill will cut Pennsylvania's Medicaid program, known as Pennie, by about $53 million over the next decade.",
+    "Some facilities may be forced to make impossible decisions like reducing staff or raising prices for those who don't qualify for Medicaid.",
+    "After all, through Medicaid, think about it, Mr. Speaker: I was disabled and you offered me aid; I was infirm and you offered me care; I was aging and you offered me dignity."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP LEADS WITH SMOKE AND MIRRORS",
+   "title": "TRUMP LEADS WITH SMOKE AND MIRRORS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3015-8.htm",
+   "sentences": [
+    "Mr. Speaker, the United States airstrikes in Iran, which we hope to be briefed on today, is the latest in the signature chaos and erratic decisionmaking from the Trump White House.",
+    "While the news is inundated with reports of Trump's airstrikes, there are many concerns that we are not hearing about here at home: hostages; Ukraine; Federal institutions, like USAID and NIH, gutted; the big, ugly bill that would slash Medicaid for 14 million Americans, including 110,000 of my constituents; and the cruel cuts at SAMHSA that will jeopardize the lives of those struggling with addiction and mental health."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2186-4.htm",
+   "sentences": [
+    "Shuttering SAMHSA and shifting and shafting it into an illogical AHA--somebody tell me what that department is--organization and proposing a budget that kicks nearly 14 million people off Medicaid.",
+    "Nearly half of those struggling with opioid use disorder rely on Medicaid.",
+    "Mr. Speaker, I ask that the President not cut Medicaid and SAMHSA. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTTING AMERICORPS DEPRIVES AMERICANS",
+   "title": "CUTTING AMERICORPS DEPRIVES AMERICANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2081-5.htm",
+   "sentences": [
+    "Millions of Americans are losing access to services they rely upon: veterans receiving mental health treatment, children enrolled in public schools, homebound seniors in need of assistance and companionship.",
+    "Their goal is to serve the rich while forsaking the poor. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HUNGER IS ALL-CONSUMING PAIN",
+   "title": "HUNGER IS ALL-CONSUMING PAIN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1889-8.htm",
+   "sentences": [
+    "Now, Republicans sadly want to cut SNAP in order to subsidize another tax break for the rich, a move that could increase a household of four's grocery bill by $175 a month, or nearly $2,000 a year.",
+    "I will not stand by as Republicans steal from the American people and give even more to the rich."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 100 DAYS OF CHAOS, CRUELTY, AND LAWLESSNESS UNDER THE TRUMP ADMINISTRATION",
+   "title": "100 DAYS OF CHAOS, CRUELTY, AND LAWLESSNESS UNDER THE TRUMP ADMINISTRATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1780-4.htm",
+   "sentences": [
+    "He imposed punishing tariffs, then he didn't, wiping out $11 trillion in wealth in 11 weeks.",
+    "The President handed an unelected, unqualified billionaire, Elon Musk, unfettered access to private data and indiscriminately fired devoted civil servants.",
+    "Services at Social Security and IRS have been slowed in the aftermath.",
+    "Because the President has aligned himself with dictators like Putin, our allies across the globe are now openly admitting they can't trust us."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "title": "TOOLS TO ADDRESS KNOWN EXPLOITATION BY IMMOBILIZING TECHNOLOGICAL DEEPFAKES ON WEBSITES AND NETWORKS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1644.htm",
+   "sentences": [
+    "During the 2023-2024 school year, 15 percent of high school students reported hearing about deepfakes of nonconsensual intimate images that depicted kids at their schools.",
+    "The TAKE IT DOWN Act criminalizes the publication of real or fake AI-generated intimate images.",
+    "Mr. Speaker, I rise in support of the TAKE IT DOWN Act."
+   ]
+  },
+  {
+   "date": "2025-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING UKRAINE'S INDEPENDENCE",
+   "title": "SUPPORTING UKRAINE'S INDEPENDENCE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1677.htm",
+   "sentences": [
+    "Mr. Speaker, I thank Representative Marcy Kaptur and Representative Mike Quigley for so ably, faithfully, and loyally co-chairing the Congressional Ukraine Caucus for us and for bringing us here to the floor tonight to remember how urgent it is that we support Ukraine and how urgent it is that we support the peace process that results in the protection of the sovereignty of Ukraine and its democracy.",
+    "As cease-fire negotiations start and stop between Ukraine and Russia, the United States must stand firm in our support of Ukraine's young democracy.",
+    "Since Russia began this unprovoked war more than 3 years ago, tens of thousands of Ukrainians have paid with their lives, and we must never forget the more than 20,000 children from Ukraine who have been forcibly deported by Russia and remain missing.",
+    "I remind our President and our Vice President that it was Putin who started this ruthless and illegal war more than 3 years ago and, we must not forget, 11 years ago in Crimea.",
+    "To endorse a so-called peace deal that fulfills Russia's every wish and forces our Ukrainian allies to bend to Putin's will by ceding their sovereign territory is beyond disgraceful.",
+    "Last week, I joined a bipartisan group of lawmakers on a trip to the United Kingdom, Israel, Jordan, and Denmark to meet with our allies abroad.",
+    "They are increasing their military support for defense as is their obligation, and they want to do whatever we can to ensure Ukraine's protection and sovereignty because what happens to Ukraine and its young democracy happens to theirs and happens to ours.",
+    "As cease-fire talks continue, may we strive for an end to this devastating war, to its suffering for all of Europe, frankly, but obviously so much so for the people of Ukraine, and we must do it through strength.",
+    "I plead for this administration to help bring us peace, no appeasement, peace through the sovereignty of the democracy that is Ukraine, our friend and our ally.",
+    "As my friend knows, I have a very large Ukrainian-American population, cultural center, churches, and just extraordinary constituents.",
+    "As Ms. Kaptur says, they have prepared--whether they are Ukrainian- American or not, the folks in my district care desperately about this.",
+    "I have one woman who has been physically a part of delivering ambulances to Ukraine and so many other materials.",
+    "We ought to look at the folks, the people of Ukraine, led by President Zelenskyy, with such admiration.",
+    "Putin will go on to seek other territory and other land.",
+    "I will end with this: With the passing of the Holy Father and holding on to a promise of my faith, he reminded us over and over again of the Gospel of Matthew: Blessed are the peacemakers, for they shall be called the children of God.",
+    "Mr. Speaker, maybe I will end by just thanking Representative Kaptur again for the lead she has taken on this."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TARIFFS",
+   "title": "TARIFFS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1568-7.htm",
+   "sentences": [
+    "Now we are all scrambling with the news of a 90-day pause on tariffs after President Trump swore up and down he would do no such thing."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SENIORS NEED SOCIAL SECURITY",
+   "title": "SENIORS NEED SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1317-6.htm",
+   "sentences": [
+    "Yet, Republicans look to weaken or sever lifelines like Medicaid, Medicare, and Social Security.",
+    "President Trump announced a plan to fire 12 percent of Social Security employees, close 26 offices, and slash phone services.",
+    "Commerce Secretary Howard Lutnick recently said his family wouldn't complain about missing a Social Security check and that the only people who would are fraudsters.",
+    "Mr. Speaker, on behalf of my constituents, seniors, Americans with disabilities, and working families, I have a message for President Trump and his incompetent billionaire buddies: Hell no, our seniors are not the fraudsters."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 60TH ANNIVERSARY OF BLOODY SUNDAY",
+   "title": "60TH ANNIVERSARY OF BLOODY SUNDAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1080.htm",
+   "sentences": [
+    "I call out the appalling silence of so many of my colleagues in the face of what we will vote on today, in the face of what we have seen from this administration: cuts to veterans, cuts to families, and a threat to eliminate Social Security, Medicare, and Medicaid."
+   ]
+  },
+  {
+   "date": "2025-03-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIGHTING FOR OUR VETERANS",
+   "title": "FIGHTING FOR OUR VETERANS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-06/html/CREC-2025-03-06-pt1-PgH1023-4.htm",
+   "sentences": [
+    "Mr. Speaker, my Pennsylvania district is home to more than 32,000 veterans, many of whom rely on physical and mental health care from three VA medical centers: Lebanon in Berks County, Coatesville in West Norriton, and Philadelphia for Montgomery County."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUNDING MEDICAID IS NOT NEGOTIABLE",
+   "title": "FUNDING MEDICAID IS NOT NEGOTIABLE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH893-3.htm",
+   "sentences": [
+    "Instead, House Republicans passed a blueprint to slash up to $2.5 trillion from Medicaid.",
+    "In my district, that means risking medical care for more than 45,000 people under the age of 21 and more than 15,000 people over the age of 60.",
+    "These are children and seniors, vulnerable people who rely upon Medicaid for their health and for their very lives."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING COMMUNITY HEALTH CENTERS",
+   "title": "SUPPORTING COMMUNITY HEALTH CENTERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-5.htm",
+   "sentences": [
+    "Mr. Speaker, for the uninsured, the working poor, Medicaid recipients, and rural communities, healthcare is hard to find.",
+    "Some of our most vulnerable, those with no health insurance, struggling with addiction or homelessness, have no hope."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP 2.0",
+   "title": "TRUMP 2.0",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH560-5.htm",
+   "sentences": [
+    "Mr. Speaker, shuttering USAID, gutting the Department of Education, threatening the Department of Labor, firing FBI agents, buying out civil servants, vilifying workforces over grotesque DEI concerns, stripping away legal protected status of refugees, giving an unelected billionaire access to the most sensitive information of everyday Americans, and unchecked control of our institutions."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING ALL ISRAELI HOSTAGES RETURN HOME",
+   "title": "ENSURING ALL ISRAELI HOSTAGES RETURN HOME",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH349.htm",
+   "sentences": [
+    "Mr. Speaker, after more than a year in captivity, 15 months of pain, fear, and horror, Israeli hostages are finally coming home.",
+    "God bless the people of Israel."
+   ]
+  }
+ ]
+}

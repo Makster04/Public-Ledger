@@ -1,0 +1,226 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "schrier",
+ "name": "Kim Schrier",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 12,
+  "sentences": 106
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EFFICIENT NUCLEAR LICENSING HEARINGS ACT",
+   "title": "EFFICIENT NUCLEAR LICENSING HEARINGS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6097.htm",
+   "sentences": [
+    "We need to expand and accelerate our Nation's build-out of clean energy to lower prices, curb carbon emissions, and protect our environment.",
+    "Nuclear power is essential to this energy mix.",
+    "To bolster access to nuclear energy, regulations need to be modernized to bring power online safely and lower costs.",
+    "My bill with Congressmen Griffith and Veasey, the Efficient Nuclear Licensing Hearings Act, would eliminate red tape that drives up costs and wastes thousands of agency staff hours.",
+    "Right now, nuclear regulators are required to hold hearings even on uncontested nuclear reactor projects, wasting time that could easily be spent on critical environmental or contested reviews.",
+    "I am also joining my colleague, Representative Fry, on the American Enrichment Deployment Act, a bipartisan bill that will bolster our domestic production of nuclear fuel.",
+    "The licensing process can take years, and any delays in licensing or construction leave us just further behind in building our enrichment capacity and bringing nuclear energy to market.",
+    "It is time to lower costs and build out more energy resources while lowering emissions.",
+    "Mr. Speaker, I urge my colleagues to pass both of these bills."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RE",
+   "title": "PROVIDING FOR CONSIDERATION OF (H.R. 139) SUNSHINE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF (H.R. 8595) NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4425-2.htm",
+   "sentences": [
+    "From misinformation about vaccines and lifesaving medicines to devastating cuts to critical research, along with political litmus tests, this administration is putting Americans in danger.",
+    "Misinformation is rampant, and real information is lacking."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "title": "KIDS INTERNET AND DIGITAL SAFETY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+   "sentences": [
+    "In my 20 years as a pediatrician, I have seen the rise of mental and behavioral health concerns for kids and teens coincide directly with the rise of screen time and social media.",
+    "That is why I am continuing to call for a duty of care and language that goes further to hold social media companies accountable for the many harms that their platforms are causing, including serious mental health issues, like anxiety, depression, addiction, eating disorders, and suicidality.",
+    "Mr. Speaker, as a mom, a pediatrician, and a Member of Congress, I rise today to support the advancement of the KIDS Act to take some serious steps to protect our kids and their data online and hold Big Tech accountable.",
+    "I strongly urge my colleagues to support it today so we can make it even stronger."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING THAT SECTION 11 OF HOUSE RESOLUTION 1224 SHALL HAVE NO FORCE OR EFFECT",
+   "title": "PROVIDING THAT SECTION 11 OF HOUSE RESOLUTION 1224 SHALL HAVE NO FORCE OR EFFECT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3410.htm",
+   "sentences": [
+    "They deserve better than emptying their wallet every time they fill up at the pump.",
+    "That is why I am offering this bill, the Lower Prices at the Pump Act, the commonsense solution to protect the American people from price gouging.",
+    "The bill I am offering prevents Big Oil from price gouging in case they attempt to take advantage of the economic uncertainty and instability created by the war with Iran.",
+    "Mr. Speaker, I urge my Republican colleagues to join us to bring this bill up for a vote.",
+    "That is why I am asking my colleagues to defeat the previous question so we can bring up this important bill."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "I have heard from farmers who are thrilled to have this opportunity to restore their land, which of course, benefits them financially but also protects habitat, improves soil health, limits erosion, and sequesters carbon.",
+    "Mr. Chair, I rise today in support of my amendment to the Farm, Food, and National Security Act that would codify the State Acres for Wildlife Enhancement, or SAFE Initiative.",
+    "It is past time for this initiative to be signed into law, and I urge my colleagues to support my amendment that would codify the SAFE Initiative and ensure land can be continuously enrolled in this program."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT CHILDREN'S INNOCENCE ACT",
+   "title": "PROTECT CHILDREN'S INNOCENCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5992.htm",
+   "sentences": [
+    "Madam Speaker, as the first and only pediatrician in Congress, I rise today to condemn the so-called Protect Children's Innocence Act."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "title": "STATE PLANNING FOR RELIABILITY AND AFFORDABILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5522.htm",
+   "sentences": [
+    "Moreover, with their big, ugly bill they have gutted clean energy investments meant to lower utility bills and strengthen our energy infrastructure in the Pacific Northwest and keep the lights on.",
+    "With Republicans in charge here in Washington, D.C., jobs and innovation are down, clean energy projects are canceled, and energy prices are up.",
+    "At a time when families are struggling to pay for the essentials, the single most valuable thing we can do in the energy sector is roll out more low-cost, clean energy, not hinder it.",
+    "This bill that we are voting on today does none of that, and that is why I am asking my colleagues to oppose this bill and start a good- faith, bipartisan discussion to bring real solutions to the American people, not just empty promises."
+   ]
+  },
+  {
+   "date": "2025-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HYDROPOWER LICENSING TRANSPARENCY ACT",
+   "title": "HYDROPOWER LICENSING TRANSPARENCY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-14/html/CREC-2025-07-14-pt1-PgH3221.htm",
+   "sentences": [
+    "I look forward to continuing to work with my colleagues on comprehensive, bipartisan hydropower licensing reform, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOU",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"REVIEW OF FINAL RULE RECLASSIFICATION OF MAJOR SOURCES AS AREA SOURCES UNDER...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgH2212-7.htm",
+   "sentences": [
+    "As a Member of Congress who strives always to find pragmatic, bipartisan solutions for us and for our children, I simply fail to understand when my colleagues on the other side of the aisle are choosing to relax these standards for clean air, all while stripping healthcare away from more than 13 million Americans.",
+    "I urge my colleagues to strongly oppose this bill."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS EVERYONE",
+   "title": "GOP TAX SCAM HURTS EVERYONE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2191.htm",
+   "sentences": [
+    "It will also hurt every single person in this country by making the biggest cuts to Medicaid and to food benefits ever.",
+    "I want to make clear, as I talk about this, how reckless it is and that even people who do not rely on Medicaid themselves will be impacted by this.",
+    "We are talking about a cut of $715 billion to Medicaid.",
+    "This is to pay for a gigantic tax break for the wealthiest people in this country a la Elon Musk.",
+    "It is morally bankrupt to think about that, that transfer, about taking healthcare away from the people in my district and across this country and transferring it to the wealthiest Americans.",
+    "Mr. Speaker, in the State of Washington, one in three people rely on Medicaid.",
+    "If people are asked if they are on Medicaid, they will say no.",
+    "Even if you are not on Medicaid, as I think about my patients with private insurance, they are going to be waiting in that emergency department line, too.",
+    "That is the people who are not on Medicaid but who are paying private insurance premiums.",
+    "If Medicaid gets cut and these rural hospitals see a disproportionate share of patients on Medicaid, either those hospitals are going to close or they are going to start cutting back services.",
+    "What if that had happened after these Medicaid cuts?",
+    "That is what we are going to see when they start cutting away at Medicaid.",
+    "One of those legs is Medicaid.",
+    "That is why I am so outraged that this is the mechanism that my Republican colleagues want to use to pay for a tax plan that will give gigantic cuts to the wealthiest taxpayers in this country such as Elon Musk.",
+    "We saw with the Republican 2017 tax cut that the vast majority of that benefit went to the wealthiest, and it did not trickle down to people.",
+    "Putting this kind of financial pressure not just on Medicaid recipients but on everybody else, because insurance rates and medical costs are going to go higher, only makes that squeeze worse.",
+    "When over 40 percent of births in this country are covered by Medicaid, I think about what it would mean for a family to be bankrupt for the rest of their lives if they had a premature baby or a baby with special needs.",
+    "That is what good NICU care will mean, and it makes a difference for these babies who are relying on Medicaid.",
+    "I have sat with the heads of school-based health clinics and community health centers, with heads of hospitals, with nursing homes--and, by the way, we have been referring to rural hospitals, but there are urban hospitals and suburban hospitals that are also highly dependent or have a very high percentage of Medicaid-dependent patients.",
+    "We are already seeing cuts in hundreds of employees in the Seattle area because of these impending cuts to Medicaid.",
+    "We are hearing this across the board that when Medicaid gets cut, we all lose.",
+    "That is completely preventable by using the leanest, most efficient healthcare service and insurance that we have called Medicaid.",
+    "He is a constituent who is dependent on Medicaid.",
+    "Now, after Miguel's wife passed away, he relied solely on his Social Security check to cover his living expenses.",
+    "He is a retired orchard worker, and he worked hard to earn that Social Security.",
+    "He still depends on Medicaid to stay in his modest home, receiving regular in-home nursing visits and help with daily tasks, like bathing, cooking, and managing his medications.",
+    "Medicaid's coverage for home- based care is, by the way, far more affordable than nursing home-based care.",
+    "He gets that home-based care, transportation, and care coordination through Medicaid.",
+    "For seniors like Miguel, Medicaid is not optional.",
+    "The rural hospital that he depends on treats patients who are more likely to be on Medicaid or Medicare.",
+    "I could also talk about mental health services and opioid treatment.",
+    "Speaker Emerita Pelosi touched on this, but I also want to be very clear that three out of five middle-class, working- class Americans in nursing homes depend on Medicaid to pay those bills.",
+    "If I had a parent who relied on Medicaid to be in a nursing home and could not otherwise afford that, I would need to leave my job to take care of my parents.",
+    "This is what millions of families out there will go through if these Medicaid cuts happen.",
+    "All of this just adds up, once again, to hurting people in need in order to fund a tax cut for the billionaires in this country.",
+    "Mr. Speaker, I now yield to my colleague from Minnesota (Ms. Morrison) to give her perspective about Medicaid.",
+    "Mr. Speaker, I thank Representative Dr. Morrison for her perspective, from the perspective of an OB/GYN who has taken care of pregnant women and new babies and really paints a very clear picture about maternal mortality in this country and what cuts to Medicaid mean for that.",
+    "All of us in the Doctors Caucus have been talking for years--in fact, for the whole time I have been in Congress--trying and trying to improve Medicaid reimbursement, to make it so that Medicaid reimbursement can match Medicare reimbursement so that more children can have a medical home.",
+    "It is about expanding Medicaid care for pregnant women until 1 year postpartum to make sure that they are healthy and plan their pregnancies and that we can cut down this outrageous incidence of maternal mortality in this country.",
+    "Now we are just fighting to keep Medicaid.",
+    "That is the situation we are in now because Republicans want to gut Medicaid and take health insurance away from 13.7 million Americans to pay for a tax cut for the wealthiest Americans.",
+    "I will talk for a moment about another constituent of mine who paints just a different angle on what it looks like to cut Medicaid.",
+    "Medicaid supplemented her traditional Medicare plan in the last years of her life and allowed her to get the medical care that she needed.",
+    "When Kathleen's mom injured herself in a fall, Medicaid covered the rehabilitation facility and, later, in-home physical therapy and occupational therapy so she could be in her own home.",
+    "Again, Medicaid was there for her.",
+    "In the last months of her life, Medicaid provided hospice care.",
+    "Isn't this the type of treatment and care, the care made possible by Medicaid, that all of us deserve, that all of us want, and that we want for our friends, family, and ourselves?",
+    "For so many seniors in this country, this type of care is made possible thanks to Medicaid.",
+    "That brings us full circle to how these cuts to Medicaid, Apple Health in Washington State--something a lot of people out there think is that they are not relying on Medicaid, so maybe it doesn't affect them.",
+    "The message I really want to deliver, Mr. Speaker--and I am actually going to look at the camera to speak directly to the American people-- is that cuts to Medicaid, or to Apple Health, impact every single person in this country.",
+    "They impact everybody who lives in a rural community or in an urban community where there are a lot of patients who rely on Medicaid insurance, because when Medicaid doesn't pay the bills for those people, the hospital gives away that care for free.",
+    "I bet, at some point, you are going to the emergency room, and those patients who don't have Medicaid are now getting sicker, waiting longer, and getting their care late in an emergency department.",
+    "If you think the waits are bad now because hospital beds and ER beds are full of patients in mental health crises or with fentanyl overdoses or with nursing home patients who don't have a nursing home to go to, if you think the waits are bad now, just wait till 13.7 million Americans lose their health insurance.",
+    "We have excellent healthcare here, and to think that my Republican colleagues want to cut Medicaid, a lifeline for the patients who depend on it and for our entire healthcare system, that they want to cut what the people most in need depend on--again, we are talking about the elderly, people with disabilities, pregnant women, children.",
+    "To think that they would cut care for them in order to pay for gigantic tax cuts for billionaires--it is a backward transfer of money.",
+    "Again, when it is one out of three in Washington State, what would it mean if these largest-ever cuts to Medicaid transpired?",
+    "We have taken care of patients who didn't have insurance like Medicaid, so they delayed care or they didn't pick up a medication because it was too expensive and they didn't have coverage.",
+    "These are patients who rely on Medicaid.",
+    "This is us standing up for our patients, to plead with my Republican colleagues not to cut Medicaid.",
+    "I am going to tell you that most people who do don't even know it because in Washington State it is called Apple Health.",
+    "Mr. Speaker, I will tell you the first service to go will be labor and delivery.",
+    "I will tell you that our phones are ringing off the hook.",
+    "I will tell you about Kathleen, who graciously shared a story about her own mother.",
+    "Mr. Speaker, I will let them know and will let my constituents and the American people know that I will continue to fight every minute to make sure that these cuts don't happen and that we keep this oath to our patients."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDICAL DEBTS OF TRIBAL MEMBERS",
+   "title": "MEDICAL DEBTS OF TRIBAL MEMBERS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-08/html/CREC-2025-05-08-pt1-PgH1925-3.htm",
+   "sentences": [
+    "This bill works to correct an all-too-common occurrence, which is that Tribal members are referred to collection agencies because the Indian Health Service failed to pay its bills.",
+    "Sometimes Tribal members utilizing the Indian Health Service will be referred to an outside specialist or another provider, and this is what is known as purchased and referred care.",
+    "These unpaid bills often lead to Tribal members paying those themselves and being saddled with medical debt that they should never have incurred in the first place.",
+    "Colville Tribal members have been hounded by debt collection agencies for bills that the Indian Health Service failed to pay.",
+    "This bill would ensure that this never happens again and that Tribal members will not be burdened with IHS' debts or saddled with medical debt."
+   ]
+  },
+  {
+   "date": "2025-04-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CUTS TO FOREST SERVICE ENDANGER MILLIONS",
+   "title": "CUTS TO FOREST SERVICE ENDANGER MILLIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-08/html/CREC-2025-04-08-pt1-PgH1502-2.htm",
+   "sentences": [
+    "We need them for fighting fires as I discussed, for maintaining our forests, but also for supporting recreation, maintaining roads and trails, and producing timber that we all need for affordable housing, and for water restoration, watershed restoration, and more.",
+    "You are taking away safety from the people who are camping in the Lake Wenatchee area.",
+    "We could talk about tariffs, but what I really want to focus on, which is a big issue in my district and my State, is the cost of housing.",
+    "What is happening now, we are going to rely on Canada for timber at, what, a 25 percent surcharge because of these tariffs?",
+    "Mr. Speaker, I will tell you something about the town of Roslyn in my district.",
+    "I will continue fighting for the employees in my district, for the people in my district, for Washington State to protect our forests, to fight these cuts, and to protect the U.S. Forest Service employees who have dedicated their lives to public service."
+   ]
+  }
+ ]
+}

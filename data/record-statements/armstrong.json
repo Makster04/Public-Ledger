@@ -1,0 +1,76 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "armstrong",
+ "name": "Alan Armstrong",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 4,
+  "sentences": 28
+ },
+ "statements": [
+  {
+   "date": "2026-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Farewell to the Senate (Executive Session)",
+   "title": "Farewell to the Senate (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-20/html/CREC-2026-11-20-pt1-PgS5829-6.htm",
+   "sentences": [
+    "I believe we could establish a fair, more predictable permitting process without compromising environmental protections or creating other Federal spending programs.",
+    "If you look at the list of supporters from across all sectors of industry, from labor unions and consumer protections groups, it is just an enormous amount and list of people.",
+    "I don't think we have ever seen oil and gas producers standing right alongside renewable energy developers, the transmission line developers, manufacturers, mining companies, building and trades unions, and consumer advocates.",
+    "Among some of the most profound and humbling experiences that I didn't expect were two trips that I took to Ukraine.",
+    "And speaking of serving others, I owe my wife Shelly an extraordinary debt of gratitude.",
+    "This was the conviction behind the American Energy and Minerals Infrastructure Act, which I introduced earlier this year--and I was very grateful to have 20 Republican colleagues join me as cosponsors."
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-17/html/CREC-2026-11-17-pt1-PgS5705-7.htm",
+   "sentences": [
+    "Everyone in Washington, while I have been up here, talks endlessly about affordability, and permitting reform is the one very practical solution that we have that delivers real cost relief to consumers and unlocks investment without requiring a major new Federal spending program.",
+    "And nowhere is that connection between infrastructure and affordability more important than when it comes to the tremendous growth that we are seeing from data centers.",
+    "This bill solves the massive affordability challenge by requiring new facilities to pay 100 percent of all grid upgrade costs and pay the full tariff on the existing system, rather than receiving subsidized rates.",
+    "Because the data center funds its own rate base additions under this bill, the utility's capital costs for regular customers don't go up, but the overall system volume and revenue on the system increase significantly.",
+    "That increased revenue helps to lower the monthly utility bills for retail consumers, while giving data centers a clear, cost-effective path to build their facilities right here in America, instead of being forced overseas.",
+    "But looking across the spectrum today, it is remarkable when you see the list of supporters, from industry and labor unions to consumer protection groups.",
+    "And without the infrastructure to power the future, our data center and artificial intelligence leadership will follow them right out the door.",
+    "Madam President, I rise today in support of this bipartisan permitting reform legislation because it tackles a fundamental challenge to American prosperity: making energy affordable for everyday families by building the critical infrastructure needed to connect our Nation's abundant resources, connecting it directly to the fast-growing demand.",
+    "I will admit that going into this process, I was genuinely concerned that we might wind up with a bill that was permitting reform in name only, rather than a truly meaningful bill.",
+    "You know, a lot of the solutions here in Congress wind up being a debate about what we are going to spend."
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER ASSISTANCE AND SERVICE ACT",
+   "title": "TAXPAYER ASSISTANCE AND SERVICE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5207-2.htm",
+   "sentences": [
+    "So it is impossible--that is the second time I have gotten to go to Ukraine--it is impossible to miss the spirit of these people and how badly they want to defend their own democracy and not be told somebody else's version of the world but their own open, free perspective of the world.",
+    "If you think about the static approach that we have today to war and defense and how long it takes us to develop and to acquire our acquisition systems, that is no match for a group of people that have the spirit that they do and for a continuous improvement process that is being developed.",
+    "And so that is one reason that I support the bipartisan Fast Tracking European Investment in Ukraine's Defense Act.",
+    "This legislation would make it easier for NATO allies and other designated partners to purchase and transfer certain defensive munitions to Ukraine while maintaining congressional notification safeguards against unauthorized retransfer.",
+    "But S. 5175 is actually designed to help them do that, and it welcomes greater allied investment in the American defense base and creates a more predictable pathway for our allies and partners to provide Ukraine with specified American-made munitions.",
+    "And the weaponry they use, we need to make sure we are adequately providing it to them so they can help support Ukraine as well.",
+    "I have about 10 pounds of potatoes here for a 5-pound bag, but I am going to turn it back to Senator Tillis as well."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgS4124-3.htm",
+   "sentences": [
+    "But we were stopped by a State government that used section 401 of the Clean Water Act as a political veto, actually waiting until Earth Day to deny a permit for reasons that had absolutely nothing to do with water quality.",
+    "Opponents to natural gas projects act like they are saving the planet, but what their efforts really do is make us shift to energy sources that have much higher emissions, like having folks in New England burn fuel oil.",
+    "A manufacturer, a data center, an industrial facility will not commit billions of dollars to a region if it cannot obtain reliable energy at a competitive price.",
+    "Unless you are a trial lawyer looking for a payout or a foreign adversary looking for a weakened America, there really is no reason to be against this.",
+    "And I will remind you that this is gas that is priced at an equivalence of $0.42 a gallon versus the $4 per gallon fuel oil that it was substituted with."
+   ]
+  }
+ ]
+}

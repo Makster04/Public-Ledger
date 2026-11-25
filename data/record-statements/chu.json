@@ -1,0 +1,496 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "chu",
+ "name": "Judy Chu",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 36,
+  "sentences": 160
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: END TAX PENALTIES ON AMERICAN HOSTAGES ACT",
+   "title": "END TAX PENALTIES ON AMERICAN HOSTAGES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5683.htm",
+   "sentences": [
+    "This is a commonsense bill that would prevent hostages, detainees, and their spouses from experiencing unnecessary financial hardships when they are unable to meet their Federal tax obligations.",
+    "Additionally, the bill enables the Secretary of the Treasury to refund and abate any relevant interest, penalties, or addition to tax that was assessed or collected on hostages and detainees since January 2021.",
+    "I rise today in support of H.R. 9496, the End Tax Penalties on American Hostages Act.",
+    "I urge my colleagues on both sides of the aisle to vote ``yes'' on this bill."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAXPAYER ADVOCATE PARTICIPATION ACT",
+   "title": "TAXPAYER ADVOCATE PARTICIPATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5685.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 9498, the Taxpayer Advocate Participation Act."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECTING TAXPAYERS FROM GHOST PREPARERS ACT",
+   "title": "PROTECTING TAXPAYERS FROM GHOST PREPARERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5686.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 9499, the Protecting Taxpayers from Ghost Preparers Act."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TAX RELIEF FOR FRAUD VICTIMS ACT",
+   "title": "TAX RELIEF FOR FRAUD VICTIMS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-15/html/CREC-2026-09-15-pt1-PgH5687.htm",
+   "sentences": [
+    "During President Trump's first administration, Republicans passed the Tax Cuts and Jobs Act--or what Democrats like to call the Trump tax scam--where they chose to limit the deduction for casualty and theft losses by limiting that deduction only to those losses that were incurred in a Presidential-declared disaster.",
+    "I rise today in support of H.R. 9500, the Tax Relief for Fraud Victims Act."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LIBERTY AND JUSTICE FOR ALL",
+   "title": "LIBERTY AND JUSTICE FOR ALL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5413-2.htm",
+   "sentences": [
+    "In June, I met directly with Adelanto detainees on a hunger strike.",
+    "They told me how they use their own underwear to filter worms out of their drinking water, how the food they have been given is rotten or raw, and how they have watched fellow detainees suffer and ultimately die from medical emergencies when all ICE offered them was ibuprofen."
+   ]
+  },
+  {
+   "date": "2026-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT",
+   "title": "REMOVING BARRIERS TO WORK FOR DISABLED AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-23/html/CREC-2026-07-23-pt1-PgH5182-6.htm",
+   "sentences": [
+    "Mr. Speaker, at a time when Americans are dealing with skyrocketing prices and vulnerable populations like seniors and people with disabilities are struggling to get help with their Social Security benefits because this administration has created a customer service crisis through reckless staffing cuts, it is shameful that Republicans have chosen to bring H.R. 8884 to the floor.",
+    "H.R. 8884, the Removing Barriers to Work for Disabled Americans Act, aims to remove barriers to employment faced by individuals receiving Social Security Disability Insurance, or SSDI, benefits.",
+    "It tries to do this by authorizing the Social Security Administration to conduct demonstration projects designed to test program changes that may encourage work.",
+    "Instead of protecting beneficiaries, it hands the Trump administration broad new authority to experiment with Social Security disability benefits with virtually no meaningful guardrails.",
+    "First, let me be clear about what Social Security disability benefits are for.",
+    "Most SSDI beneficiaries could not survive without these monthly payments, and that is why we must ensure that any potential change to the program does not put those benefits at risk.",
+    "Picture this: You have been on Social Security disability for the past 10 years after a devastating car accident rendered you unable to work and support yourself.",
+    "Then, one day, the Social Security Administration contacts you about an opportunity that sounds promising--a demonstration program that will make it easier for you to get a part-time job while remaining on SSDI.",
+    "That deceptive phrasing does not guarantee that your Social Security disability benefits won't be cut or reduced because you are earning money at a part-time job.",
+    "Thanks to the administration cutting over 7,000 staff at Social Security, our constituents are waiting for hours on the phone and facing extremely long backlogs when trying to get their issues resolved.",
+    "If Republicans truly cared about making life better for people on Social Security disability benefits, we would be discussing bills to increase monthly benefits, fix the appeals process so people with disabilities aren't waiting years to get approved for benefits, and fix customer service at SSA by undoing this administration's disastrous staffing cuts.",
+    "Instead, Republicans have brought us a bill that gives the Trump administration new authority to experiment with Social Security disability benefits while failing to protect the very people it claims to help.",
+    "Mr. Speaker, the risk that this bill poses to vulnerable Social Security disability benefits cannot be overstated."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "They claim there is no money for healthcare, no money for affordable housing, no money for childcare, and no money for gas, which costs an arm and a leg.",
+    "Yet, today, Republicans are demanding another $70 billion to supercharge Trump's mass deportation agenda, plus ICE already got $170 billion from Republicans' big, ugly bill, making them our highest funded law enforcement agency.",
+    "There is always money to target immigrants but never enough for working families?",
+    "At the same time, detainees are dying in ICE custody at record rates.",
+    "I spoke directly with detainees, who described inhumane conditions like dirty drinking water, inedible food, and nonexistent medical care."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "title": "NO FUNDS FOR REPEAT CHILD CARE VIOLATIONS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3796.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to H.R. 7726, the Stop Child Care Scams Act.",
+    "As families across the country struggle with the high cost of childcare, Republicans are advancing legislation that would make it easier for the Trump administration to withhold funding that helps working people afford childcare and helps providers keep their doors open.",
+    "Earlier this year, it implemented its nationwide Defend the Spend policy requiring States to submit a slew of new data to access childcare funding Congress already appropriated.",
+    "The administration claims this is necessary to combat widespread fraud in our childcare programs, but it has failed to produce any evidence whatsoever.",
+    "Until we get answers, we should not be expanding President Trump's ability to interfere with childcare funding that families depend on."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "title": "PREVENTING WASTE, FRAUD, AND ABUSE IN TANF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-03/html/CREC-2026-06-03-pt1-PgH3805.htm",
+   "sentences": [
+    "Madam Speaker, I rise in strong opposition to H.R. 8872, the Preventing Waste, Fraud, and Abuse in TANF Act.",
+    "Let me remind us of one of the biggest TANF fraud scandals of all time.",
+    "It was because under current law, the Federal Government has no authority to conduct oversight into how States spend their TANF block grant funds, which makes up roughly 80 percent of TANF spending.",
+    "By doing this, though, it empowers the administration to use these calculations to justify withholding TANF funds from certain States.",
+    "This selective process would only apply to less than 15 percent of total TANF funding.",
+    "This completely ignores the 80 percent of TANF spending where the fraud is actually occurring.",
+    "When Republicans brought this bill before the Ways and Means Committee, I offered an amendment to insert into the bill the bill that I had introduced with Congressman Danny Davis, the TANF State Expenditure Integrity Act.",
+    "Our bill would finally allow Federal oversight of TANF block grant funding and require States that intentionally misuse TANF funds to direct an equivalent amount toward legitimate assistance for families.",
+    "Last Congress, Republicans held a hearing on TANF fraud where they actually apologized to Brett Favre.",
+    "My amendment would remove H.R. 8872's provisions empowering President Trump's continued attacks on struggling families and replace them with provisions that actually fight fraud, and that includes my TANF State Expenditure Integrity Act.",
+    "The President of the United States sued his own government and got a settlement allowing him to direct $1.8 billion of taxpayer dollars to political allies and January 6 rioters, the violent criminals who assaulted police officers and attacked our democracy."
+   ]
+  },
+  {
+   "date": "2026-05-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE 100TH ANNIVERSARY OF YWCA GLENDALE AND PASADENA",
+   "title": "COMMEMORATING THE 100TH ANNIVERSARY OF YWCA GLENDALE AND PASADENA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-29/html/CREC-2026-05-29-pt1-PgE497-3.htm",
+   "sentences": [
+    "It offers a range of therapy services designed to support the mental health and well-being of survivors, including individual counseling, group therapy, and specialized techniques."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "title": "SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3692.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to Republicans' partisan version of my previously bipartisan bill, the Smithsonian American Women's History Museum Act.",
+    "Mr. Speaker, women deserve better, and I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2026-05-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE 100TH ANNIVERSARY OF FOOTHILL FAMILY",
+   "title": "COMMEMORATING THE 100TH ANNIVERSARY OF FOOTHILL FAMILY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-11/html/CREC-2026-05-11-pt1-PgE425-3.htm",
+   "sentences": [
+    "Beyond childhood intervention programs, Foothill Family specializes in mental health care at the community level.",
+    "Through sustained access to therapy, school-based mental health services, and community support, Foothill Family helps ensure that our neighbors affected are not left to recover alone."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "title": "EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+   "sentences": [
+    "Mr. Speaker, on this tax day, working families are not feeling the relief they were promised.",
+    "This reverse Robin Hood fails to make life more affordable for working families.",
+    "In reality, this bill kicks 15 million people off their health insurance, off their Medicaid, and off their Affordable Care Act insurance.",
+    "When Republicans say this is about helping working families, we must ask: Which families?"
+   ]
+  },
+  {
+   "date": "2026-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT",
+   "title": "LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-12/html/CREC-2026-02-12-pt1-PgH2190-5.htm",
+   "sentences": [
+    "Monterey Park, and every community across this country, deserves to be safe from violence, whether from guns, tasers, or anything else, but Republicans are working to make our communities less safe by handing over access of weapons to individuals we know should not have them and making them far harder for law enforcement to track."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1131-5.htm",
+   "sentences": [
+    "Across this country, countless women are being forced to flee their States for lifesaving abortion care while too many others have suffered or died waiting for care that should never have been denied.",
+    "Instead, it diverts scarce Federal antipoverty dollars, TANF dollars, away from struggling families and toward so-called crisis pregnancy centers that exist to shame, mislead, and delay women from accessing abortion care.",
+    "It does nothing to address the deadly consequences of extreme Republican abortion bans that are forcing women to delay care and risk their lives.",
+    "Mr. Speaker, if we defeat the previous question on this rule, my Democratic colleagues and I will offer my bill, the Women's Health Protection Act, or WHPA.",
+    "WHPA is the Federal solution to the extremist Supreme Court's decision to strike down Roe v. Wade.",
+    "It would restore the right for everyone, no matter what State they live in, no matter their ZIP Code, to receive abortion care.",
+    "I urge my colleagues to defeat the previous question so we can bring up this important legislation."
+   ]
+  },
+  {
+   "date": "2026-01-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "title": "SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1139.htm",
+   "sentences": [
+    "Instead, the bill before us today would allow Temporary Assistance for Needy Families, or TANF, dollars to be used to fund so-called crisis pregnancy centers that have a proven track record of intentionally lying to, misleading, and endangering women.",
+    "It is no coincidence that this bill is being rushed to the floor this week as Republicans once again prioritize appeasing a national anti- abortion group in town for its annual rally instead of addressing the real crises facing American families.",
+    "They don't tell this woman that, in order to get these free services, she has to first sit through an ideological or religious indoctrination session in which all the reasons not to have an abortion are given.",
+    "They don't tell her that the person administering the ultrasound has no medical credentials, that, in fact, this is not an official ultrasound, and that she could be misdiagnosed.",
+    "The real world of the crisis pregnancy centers is exemplified by an OB/GYN in Iowa, who has seen patients who visited these centers and were told that using contraceptives was the same as having an abortion.",
+    "She has seen patients who suffered miscarriages and ectopic pregnancies because they were misdiagnosed by these anti-abortion centers.",
+    "In Illinois, a woman seeking an abortion was deliberately misled by a fake clinic.",
+    "She was subjected to graphic videos and told that having an abortion would make her infertile and, ultimately, mentally ill.",
+    "Now, Republicans want to guarantee that taxpayer dollars through these TANF funds will fund these centers and that there will be no accountability for these dollars.",
+    "Let's first be clear about what TANF is actually supposed to be for.",
+    "TANF exists to help families experiencing poverty meet their most basic needs and stabilize their lives so parents can work and children can thrive.",
+    "TANF was never intended to subsidize anti-abortion propaganda or unregulated sham clinics that endanger women's health.",
+    "Not only that, it goes beyond the regular TANF program, which requires reporting and accountability.",
+    "Actually, this bill says that nothing shall be construed to restrict TANF funding for these centers, meaning that funding could not be taken away from them even if the center engages in deceptive practices or even causes a woman's death.",
+    "We simply proposed that TANF funds not go to pregnancy centers that have engaged in deceptive or misleading practices that provide medically inaccurate information or that have endangered the health of a woman seeking care.",
+    "We also offered amendments to address the real crisis affecting the TANF program, which is the Trump administration's decision to seek revenge against five Democratic Governors by preventing them from accessing $10 billion in already appropriated funds for TANF and childcare.",
+    "It is about shielding deceptive actors, supporting Trump's revenge tactics, and using public funds to advance an extreme anti- abortion agenda.",
+    "If Republicans truly cared about pregnant women and families, we would be debating how to undo their $1 trillion cut to Medicaid, which rips healthcare away from millions of pregnant women, new mothers, and children, and how to help the millions of women seeing their health insurance premiums skyrocket due to months of Republican inaction.",
+    "Instead, this bill is merely an attempt to distract from these devastating realities with the ultimate goal of appeasing the anti- abortion advocates parading around Washington this week as countless women suffer and die under extreme Republican abortion bans.",
+    "Mr. Speaker, 95 percent do not provide prenatal care, and only 1 out of 607 provides contraception, and the facilities are unregulated.",
+    "At Clear Way, a nurse administered an ultrasound and told the plaintiff that she had a viable intrauterine pregnancy.",
+    "During her training, she learned that the clinic was using expired disinfectants to sanitize ultrasound equipment.",
+    "She filed whistleblower complaints with the State, but nothing was ever done, highlighting the lack of accountability at the centers.",
+    "Mr. Speaker, let me say, there is a comprehensive study by the Alliance for Women's Rights and Gender Equality that studied 607 crisis pregnancy centers across nine States, and they documented a consistent pattern of deception, misinformation, and patient harm.",
+    "Nearly two-thirds of the centers promoted patently false or biased medical claims about pregnancy, abortions, contraception, or reproductive health providers, and fewer than half reported having a licensed medical professional on staff.",
+    "The ultrasound technician incorrectly informed her that her baby's kidneys were filled with water and that she needed to see a primary care doctor.",
+    "It actually changes the way in which these TANF funds are being used.",
+    "Right now, there has to be accountability if States use TANF funds for the crisis pregnancy centers.",
+    "What this bill does is, by amending section 404 of the Social Security Act to state that nothing in this part may be construed to restrict TANF funding for pregnancy centers, this bill actually overrides TANF's statutory purposes, reporting requirements, penalty authority, and HHS enforcement provisions.",
+    "As a result, any future Federal effort to limit condition or review TANF funding for these crisis pregnancy centers could be challenged as prohibited by this statute.",
+    "In one case, a patient seeking abortion care was misled into believing she was too early in pregnancy to receive medical care and was encouraged to delay seeing a licensed provider, despite experiencing symptoms consistent with a pregnancy complication.",
+    "In another documented case, a patient was falsely told that abortion would cause infertility and severe mental illness, information that directly contradicted established medical evidence.",
+    "If Republicans truly cared about TANF oversight, they would have spoken out when millions of TANF dollars were stolen from struggling families in Mississippi to build a volleyball stadium and when the Trump administration stepped in to shield the perpetrators from accountability.",
+    "Anti-abortion centers that spread misinformation and put women at risk should not receive taxpayer dollars."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT",
+   "title": "BREAKING THE GRIDLOCK ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+   "sentences": [
+    "They chose to let the ACA tax credits expire, even though there was bipartisan support to extend them."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MARKING ANNIVERSARY OF LOS ANGELES FIRE",
+   "title": "MARKING ANNIVERSARY OF LOS ANGELES FIRE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH110.htm",
+   "sentences": [
+    "The fire destroyed over 9,000 structures, most of them single-family homes.",
+    "Families are exhausting their savings, taking on debt, skipping medical care, and making impossible choices just to get by.",
+    "That is why, today, I have introduced a resolution with Representative Sherman and Senators Schiff and Padilla to commemorate and honor all the lives that we lost in these fires."
+   ]
+  },
+  {
+   "date": "2025-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT",
+   "title": "PET AND LIVESTOCK PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to H.R. 498, the so-called Do No Harm in Medicaid Act.",
+    "Yesterday, four Republicans stood with Democrats and signed a discharge petition to force a vote on a clean extension of ACA premium tax credits, but Republican leadership is refusing to immediately bring that bill to the floor.",
+    "Instead of allowing a bipartisan vote to lower healthcare costs, Republicans have chosen to bring forward H.R. 498, which completely ignores the affordability crisis and needlessly targets transgender children.",
+    "H.R. 498 would strip Medicaid coverage for gender-affirming care for trans youth, care that is medically necessary, evidence-based, and supported by every major medical association in this country.",
+    "As vice chair of the Equality Caucus, I will always fight to protect the dignity, safety, and humanity of the trans community."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "title": "LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+   "sentences": [
+    "Mr. Speaker, in 2 weeks, 22 million Americans will see their health insurance premiums skyrocket, not by accident, but because Republicans refuse to extend ACA tax credits that keep care affordable.",
+    "After 15 years, this is the Republican healthcare plan: higher costs, weaker coverage, and recycled ACA sabotage."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+   "sentences": [
+    "Medicaid enables Lisa to be his full-time caregiver and ensures that he has the care he needs.",
+    "Instead, Republicans are fighting for billionaires like Donald Trump and the top 0.1 percent who will get an average tax cut of $309,000 per year, while those earning less than $50,000 get 68 cents a day.",
+    "Mr. Speaker, I rise in opposition to Republicans' big, ugly bill because of my constituents like Lisa whose son was diagnosed with a life-altering disease that left him unable to work by mid-age."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "title": "CONDEMNING THE VIOLENT JUNE 2025 RIOTS IN LOS ANGELES, CALIFORNIA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3016-5.htm",
+   "sentences": [
+    "Most importantly, it stands up for our constitutional rights to due process and free expression and shows our appreciation to local law enforcement for upholding public safety.",
+    "Mr. Speaker, I rise in opposition to this extremely partisan resolution that seeks to legitimize President Trump's baseless attacks on Los Angeles and our elected leaders, including Governor Newsom and Mayor Bass."
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CAPPING EXCESSIVE AWARDING OF SBLC ENTRANTS ACT OF 2025",
+   "title": "CAPPING EXCESSIVE AWARDING OF SBLC ENTRANTS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-05/html/CREC-2025-06-05-pt1-PgH2489.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to H.R. 2987, the CEASE Act, because it has the potential to harm our Nation's most underserved small businesses.",
+    "I will never forget visiting one of these businesses in Santa Monica, California.",
+    "That is why I will reintroduce the Community Advantage Loan Program Act, which will give permanent authorization to this program.",
+    "Mr. Speaker, I urge my colleagues to support our Nation's veteran, rural, and low-income entrepreneurs by voting ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "By ripping Medicaid and food assistance away from many millions of vulnerable Americans while slashing taxes for the ultrawealthy, the nonpartisan CBO found that it would make the poorest 10 percent poorer while making the richest 10 percent richer.",
+    "This bill would also increase the debt so much that it will trigger cuts to Medicare benefits by almost $500 billion.",
+    "Maria needs Medicaid, Medicare, and Social Security to care for her daughter who resides in a nursing home, uses a feeding tube to eat, and can't recognize her mother.",
+    "Maria asked: If Medicaid is cut, where would my daughter go?",
+    "Tax cuts for the wealthiest at the expense of Maria's daughter getting the care she needs to survive is despicable.",
+    "Mr. Speaker, I rise in strong opposition to the Republicans' unbelievably ugly bill.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "title": "GOP TAX SCAM HURTS WOMEN AND FAMILIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2181.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to the GOP tax scam, which would gut the programs that families rely on, like Medicaid and SNAP, just to give trillions in tax breaks to the wealthy.",
+    "In my district, more than 208,000 people rely on Medicaid, and 75,000 people rely on SNAP.",
+    "She relies on Medicaid, SNAP, and Social Security to keep a roof over her head, food on her table, and continue her treatment."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "title": "DHS RESTRICTIONS ON CONFUCIUS INSTITUTES AND CHINESE ENTITIES OF CONCERN ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1891-2.htm",
+   "sentences": [
+    "Mr. Speaker, on behalf of the Congressional Asian Pacific American Caucus, I rise in strong opposition to H.R. 881.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRUMP IMMIGRATION POLICIES",
+   "title": "TRUMP IMMIGRATION POLICIES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1767.htm",
+   "sentences": [
+    "Mr. Speaker, this administration has thrown out the Constitution and asserted that the President has king-like power to arrest anybody in this country and deport them, even to a foreign prison for life, with no due process.",
+    "I will soon be reintroducing the Southeast Asian Deportation Relief Act, which would prevent the administration from deporting these refugees to countries where they have often never lived and ensure that those who have already been deported can return home to the U.S. If the Trump administration can disappear immigrants to other countries without due process or deport refugees to places they have no memories of, we are all in danger."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+   "sentences": [
+    "It will explode our national debt.",
+    "Mr. Speaker, it is a betrayal, and I won't stand for it."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FILING RELIEF FOR NATURAL DISASTERS ACT",
+   "title": "FILING RELIEF FOR NATURAL DISASTERS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1347.htm",
+   "sentences": [
+    "The Eaton fire took 17 of my constituents' lives, burned 9,500 structures, and left 20,000 people in my district homeless.",
+    "I rise in strong support of H.R. 517, the Filing Relief for Natural Disasters Act.",
+    "I also urge my colleagues to work with me to support the victims of January's Los Angeles fires, including the Eaton fire in my district, by passing a supplemental disaster appropriations package with no strings attached.",
+    "While FEMA has been there since the start, we will need more help from Congress."
+   ]
+  },
+  {
+   "date": "2025-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "title": "DEFENDING EDUCATION TRANSPARENCY AND ENDING ROGUE REGIMES ENGAGING IN NEFARIOUS TRANSACTIONS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1241.htm",
+   "sentences": [
+    "Mr. Chairman, as chair emerita of the Congressional Asian Pacific American Caucus, I rise in strong opposition to the DETERRENT Act.",
+    "Mr. Chair, I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "title": "PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1093-2.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong opposition to H.R. 1156.",
+    "Mr. Speaker, I urge my colleagues to vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Budgets tell priorities, and as inflation goes up and Americans continue struggling to pay their rent, purchase groceries, and afford going to the doctor, Republicans stand united to sell out the working class by ripping away healthcare coverage and food from children to pay for tax cuts for the rich.",
+    "Make devastating cuts to Medicaid for 135,000 mostly seniors and children in my district alone, slash SNAP benefits for thousands of hungry children and families, and end ACA premium tax cuts that currently save families over $6,000 annually, and for what?",
+    "The majority of the tax cuts that they aim to extend will only benefit the rich, and the middle class will lose so many of the benefits they rely on.",
+    "In their 2017 Trump tax scam, Republicans slashed the corporate tax rate and watched 100 percent of those benefits flow to shareholders, billionaires, and high-paid executives.",
+    "Even still, President Trump wants to cut the corporate tax rate by even more.",
+    "What is more, Republicans' apparent concern for fiscal responsibility is nowhere to be found.",
+    "Their budget will actually balloon our national debt in a reverse Robin Hood scheme that betrays the working Americans we all represent.",
+    "Mr. Chair, I rise in opposition to the Republican rip-off."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: INVESTING IN MAIN STREET ACT OF 2025",
+   "title": "INVESTING IN MAIN STREET ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-24/html/CREC-2025-02-24-pt1-PgH743.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of my bill, H.R. 754, the Investing in Main Street Act of 2025, which would spur innovation, entrepreneurship, and growth in our small businesses nationwide.",
+    "Mr. Speaker, I urge my colleagues to vote ``yes'' on this bill and for the Senate to expeditiously take it up so we can unlock more of the potential of American entrepreneurs."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "title": "BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+   "sentences": [
+    "Infanticide is already illegal in every State of the Union, and Congress unanimously affirmed this with a law in 2002, but this bill is not about saving lives.",
+    "It is about spreading misinformation about abortion care to further anti-abortion talking points.",
+    "If the majority is interested in caring for newborns, I invite them to support Democrats' efforts to provide paid family leave to every new parent.",
+    "Republicans are welcome to join our efforts to expand the child tax credit to families struggling with paying the bills, and we would be thrilled to have bipartisan support in this Chamber to make childcare affordable everywhere.",
+    "Instead, House Republicans have brought up a bill designed to intimidate doctors and perpetuate disinformation about how abortion care really works.",
+    "If the House rules permitted, I would have offered my bill, the Women's Health Protection Act, legislation that would create a Federal right to abortion care, free from medically unnecessary restrictions in all 50 States, in all ZIP Codes."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "title": "UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+   "sentences": [
+    "They told me stories of facing huge tax bills after doing business in both markets and having to curtail their cross-border investment as a result.",
+    "This bill would ensure that our Nation can take full advantage of the historic investments that we have made under the Biden-Harris administration, like the bipartisan CHIPS and Science Act.",
+    "Mr. Speaker, I rise in strong support of H.R. 33, the United States- Taiwan Expedited Double-Tax Relief Act.",
+    "Together, we introduced a resolution last Congress calling to advance legislation to address that barrier, the issue of double taxation on income earned in the United States and Taiwan."
+   ]
+  }
+ ]
+}

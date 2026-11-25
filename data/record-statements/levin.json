@@ -1,0 +1,169 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "levin",
+ "name": "Mike Levin",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 10,
+  "sentences": 67
+ },
+ "statements": [
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "title": "MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+   "sentences": [
+    "I supported this bill in committee, and I urge my colleagues to protect this bipartisan compromise and reject any amendments that would jeopardize it."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMEMORATING THE ARMENIAN GENOCIDE",
+   "title": "COMMEMORATING THE ARMENIAN GENOCIDE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgE371-4.htm",
+   "sentences": [
+    "I stand with them in remembering the lives of the 1.5 million Armenians--along with 750,000 Assyrians, Greeks, Maronites, and other Christians--who perished.",
+    "As we honor the memory of the victims and survivors of the Armenian Genocide, we also stand with the Armenian families who carry that pain to this day."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WINNERS OF THE GLOBAL ENERGY RACE ARE BEING DECIDED",
+   "title": "WINNERS OF THE GLOBAL ENERGY RACE ARE BEING DECIDED",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2314.htm",
+   "sentences": [
+    "He dismissed clean energy as a scam and suggested that the path forward is simply to double down on the past.",
+    "It is whether working families feel relief when they open their utility statements.",
+    "The countries that deploy clean energy the fastest are lowering costs, strengthening domestic manufacturing, and securing control over the energy supply chains that will define economic power for decades.",
+    "Over the past year, more than 165,000 clean energy jobs have been wiped out or delayed.",
+    "Clean energy tax credits are under attack.",
+    "The truth--and it is a truth grounded in financial analysis, not political branding--is that clean energy is the lowest cost new electricity in the United States.",
+    "In fact, I was genuinely pleased that he acknowledged the pressure that data centers are placing on our electric grid.",
+    "The explosion of artificial intelligence, cloud computing, and advanced manufacturing is real, and it is transforming our economy.",
+    "Even if data centers build dedicated generation, the broader grid still absorbs the consequences of rising demand.",
+    "If, on the other hand, we modernize the grid, we deploy the lowest- cost resources at scale--if we accelerate transmission expansion, integrate storage, and allow clean energy to compete fairly and fully-- then rising demand can be met with falling costs and less volatility.",
+    "Mr. Speaker, I would like to just spell out some basic facts and some myths about clean energy because there is a whole lot of misinformation out there these days.",
+    "The first thing I will say is that clean energy is the lowest-cost new electricity in America.",
+    "Independent financial analysis confirms that utility-scale solar and onshore wind are the cheapest forms of new electricity generation available in the United States.",
+    "There was recently a report that solar projects are on average 41 percent cheaper than the lowest cost fossil fuel alternatives globally, and onshore wind projects are 53 percent cheaper.",
+    "Markets are already choosing clean energy because it is the least expensive option.",
+    "At the same time that clean energy deployment is being obstructed, this Department of Energy has issued emergency orders forcing aging coal plants to remain online.",
+    "Next, I hear that clean energy can't meet growing demand.",
+    "AI-driven data centers, I think we all know, are a major contributor, with electricity demand from data centers expected to double by 2030.",
+    "Clean energy is the fastest resource to deploy.",
+    "Next, I want to talk about data centers and fairness.",
+    "Data centers are expanding dramatically, and utilities are investing billions of dollars in transmission upgrades.",
+    "For example, in PJM, $4.3 billion in transmission costs associated with data center growth were passed to ratepayers.",
+    "That is why I am proud that our Energy Bills Relief Act includes protections for consumers to ensure that data centers pay for their own grid updates.",
+    "Number one: It would rescind the tax hike on low-cost, clean energy, and it would restore tax credits for clean energy such as those in the Inflation Reduction Act.",
+    "Number two: It would reverse roadblocks to clean energy permitting and restrict the abuse of Department of Energy emergency orders.",
+    "Number three: It would ensure that data centers pay their fair share.",
+    "Most importantly and lastly: It would share the economic benefits of clean energy with host communities.",
+    "Farmers earn steady lease payments from solar panels and wind turbines that help keep their family farms afloat through droughts, floods, and commodity swings.",
+    "Here is what cannot be debated away with partisan politics: Clean energy is the lowest cost new energy in America.",
+    "Clean energy is the fastest path to stabilizing energy bills.",
+    "Clean energy is how we meet rising demand without squeezing households.",
+    "Clean energy is how we compete with China, rather than handing them the supply chain of the future.",
+    "Clean energy is how we reduce volatility, because sunshine and wind do not spike in price when global markets panic.",
+    "That is why the question is not whether clean energy wins.",
+    "Now, I will turn close to my home for just a second and talk about wildfires and, in particular, California.",
+    "It is one that we worked on for a long time, and we are going to get as much support as we can."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BIG, UGLY BILL, CLEAN ENERGY TAX CREDITS.",
+   "title": "BIG, UGLY BILL, CLEAN ENERGY TAX CREDITS.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2459-2.htm",
+   "sentences": [
+    "The big, ugly bill ends tax credits to promote clean energy and will increase household energy costs by up to $415 a year.",
+    "I urge my friends in the Senate to fix this mess and actually lower energy prices for the American people. ____________________"
+   ]
+  },
+  {
+   "date": "2025-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "title": "STOCK TRADING BAN FOR MEMBERS OF CONGRESS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2038.htm",
+   "sentences": [
+    "Mr. Speaker, when I first started running for Congress a number of years ago, my wife and I sold all of our individual stocks, and I made a commitment that if I were elected, I wouldn't trade individual stocks while in office because being a Representative isn't just a title; it is a responsibility that we all have, and that responsibility is to serve the people and not our own financial interests.",
+    "That is why I have long supported legislation to ban Members of Congress from trading individual stocks, and I am encouraged that we are working together in a bipartisan way to get this done.",
+    "Today, as was said, Speaker Johnson said that he supports a stock trading ban.",
+    "Leader Jeffries supports a stock trading ban.",
+    "President Trump has said that he would sign a stock trading ban into the law.",
+    "Approximately 80 percent of Americans want Congress to pass a ban on Members stock trading.",
+    "Last month, markets moved sharply after the reversal of tariffs that had been threatened.",
+    "We need a law that says, clearly and without exception, if you serve in Congress, you cannot trade individual stocks.",
+    "Allow a vote on a stock trading ban.",
+    "We can't allow that doubt to grow."
+   ]
+  },
+  {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CLEAN AIR ISN'T A PARTISAN ISSUE",
+   "title": "CLEAN AIR ISN'T A PARTISAN ISSUE",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-01/html/CREC-2025-05-01-pt1-PgH1789-3.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to support California's right to clean air.",
+    "When President Richard Nixon signed the Federal Clean Air Act in 1970, California, under Governor Ronald Reagan, was given a waiver, letting us set stricter air pollution rules than the Federal Government.",
+    "Clean air is not a partisan issue.",
+    "It is a public health issue, and I will never stop fighting to protect it. ____________________"
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISMANTLING SOCIAL SECURITY",
+   "title": "DISMANTLING SOCIAL SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-27/html/CREC-2025-02-27-pt1-PgH891-4.htm",
+   "sentences": [
+    "Mr. Speaker, in January, a largely unknown midlevel career employee at the Social Security Administration, Leland Dudek, was caught sharing unauthorized data with Elon Musk's team at DOGE.",
+    "President Trump just promoted him to be the Acting Commissioner of Social Security.",
+    "DOGE, which I think stands for destruction of government by Elon, is reportedly demanding plans to gut the Social Security Administration, firing up to 50 percent of workers and closing field offices across the country, potentially including one in my district.",
+    "It is a back-door attack on Social Security itself.",
+    "This is nothing more than an attempt to dismantle Social Security from the inside."
+   ]
+  },
+  {
+   "date": "2025-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GREAT BILLIONAIRE TAKEOVER",
+   "title": "GREAT BILLIONAIRE TAKEOVER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH693-5.htm",
+   "sentences": [
+    "Mr. Speaker, it has been another week of the attempted great billionaire takeover of our Federal Government, being led by DOGE, which actually stands for destruction of government by Elon."
+   ]
+  },
+  {
+   "date": "2025-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LOOMING CONSTITUTIONAL CRISIS",
+   "title": "LOOMING CONSTITUTIONAL CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH571-2.htm",
+   "sentences": [
+    "President Trump is flouting the law, and he has deputized unelected billionaire in chief Elon Musk, who is accountable to no one.",
+    "Everything that is happening is leading to one thing: the great billionaire takeover of our government to line the pockets of the very few.",
+    "This is not efficiency, and we cannot let this happen.",
+    "I will honor his legacy every day by fighting to defend our Constitution."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECEIVING DISASTER AID SHOULD NOT BE CONDITIONAL",
+   "title": "RECEIVING DISASTER AID SHOULD NOT BE CONDITIONAL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH173-2.htm",
+   "sentences": [
+    "There is even talk about attaching disaster aid to an increase in the debt ceiling.",
+    "They can't raise the debt ceiling on their own, so they want to tie that to disaster aid."
+   ]
+  }
+ ]
+}

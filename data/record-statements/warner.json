@@ -1,0 +1,545 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "warner",
+ "name": "Mark R. Warner",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 32,
+  "sentences": 245
+ },
+ "statements": [
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5132.htm",
+   "sentences": [
+    "I can say without reservation that as big as wireless was, as big as the internet is, as big as cloud computing is, they will pale in comparison to the innovation that will come about through artificial intelligence.",
+    "I have laid out my ideas on how we ought to have a comprehensive approach--legislation on data centers that would actually, if they don't meet minimum Federal standards, would impose their inability to get a bonus tax depreciation.",
+    "When AI companies, one after another, come out and say ``We have to elevate safety and put that first and foremost,'' when OpenAI just yesterday said they are slowing the model on Astra, when Anthropic has said they are trying to build in more safety protocols--I think that is good, but are we really going to trust the industry to self-police on something that, if it goes beyond what is happening--and we have already seen not tens but literally thousands of examples where these models go beyond what humans want them to do, the most famous being the OpenAI Hugging example, where 3,000 bots jumped the sandbox fence, attacked another company, and then came back and attacked OpenAI.",
+    "Madam President, I ask unanimous consent that the Senate proceed to the immediate consideration of the Artificial Intelligence Risk Management and Security Act, which is at the desk; further, that the bill be considered read a third time and passed and that the motion to reconsider be considered made and laid upon the table.",
+    "I will make a wager with anyone that I hope I will lose that we could see up to 30 percent of recent college grad unemployment as companies try to integrate the productivity gains from AI, and they are simply not going to hire as many folks going forward.",
+    "Madam President, in a moment, I am going to ask for a UC.",
+    "If we are not able to move forward today, I commit to continuing to work with my colleagues on both sides of the aisle because I think there is, frankly, no issue more important.",
+    "But I still--and I defer to my colleagues--feel like, my gosh, we are going to look pretty darned silly if something happens, and the American people turn dramatically against this technology because we didn't put safety first."
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WILDFIRE EMISSIONS PREVENTION ACT OF 2026",
+   "title": "WILDFIRE EMISSIONS PREVENTION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/html/CREC-2026-09-29-pt1-PgS5148.htm",
+   "sentences": [
+    "Mr. President, I have spent the last couple of years trying to learn as much as I can about artificial intelligence and its upside, and still long AI in terms of innovational brain.",
+    "As a matter a fact, they even went so far as to say all of the President's critique about concerns about AI being a hoax or about data centers not a problem are suddenly being solved because the President has renamed AI, ``SI''--superintelligence.",
+    "So I am back again this afternoon to talk about another piece of the AI debate that certainly needs congressional action, and that is the whole question about how we build out and ensure consumers don't get stuck with the build-out of data centers.",
+    "Virginia is the capital of data centers in our country, and there is enormous concern from neighbors and communities.",
+    "Many of the worst examples of data centers were built 15, 20 years ago, but the industry has moved forward.",
+    "But the angst about data centers--what I think is also reflective of the angst, generally, about AI--is not going away, no matter what the President wants to say.",
+    "I would urge him to travel anywhere across Virginia, for that matter, anywhere across Kansas or Texas or anywhere else these data centers are being proposed because communities actually want to have a say in what happens in their backyard, what happens with their utility rates, what happens with their water usage, what happens with local communities signing nondisclosure agreements so the community doesn't even know what they are getting until after the deal is cut.",
+    "It says: States can consider adopting a Federal standard that would hold data centers responsible for rising electricity bills, and then they get 2 years to consider that.",
+    "Anything happen to these data centers?",
+    "We have seen these data centers sometimes literally intrude right into neighborhoods.",
+    "But I would urge the Senate not to take this flimflam, do-nothing bill but actually take a look at my Data Center Tax Accountability and Disclosure Act, which I didn't dream up in the last couple of days but put forward much earlier this summer on an issue that I have been working on for a couple of years.",
+    "And, frankly, I have had ongoing discussions with most of the hyperscalers who are building out these data centers who, frankly, think my piece of legislation makes some sense.",
+    "So the second half of my legislation would say: If you don't meet Gold LEED or Platinum LEED standards, which are already established--if you don't show how you are bringing your own clean power or power, if you don't have criteria on water usage--and that has gotten better because more of these data centers now have circulatory systems, if you don't have setbacks from neighborhoods, if you use nondisclosure agreements, what it would say is: Well, if you are going to do all that and not meet those standards, then you shouldn't get bonus depreciation.",
+    "I am not going to raise anybody's taxes, but we have given these hyperscalers, we have given these data center builders enormous tax benefits and bonus depreciation where they can write off the cost of these very expensive centers all in the first year.",
+    "Just today, we learned that Microsoft saved about $10 billion in taxes on using accelerated depreciation, a bonus depreciation; Meta saved about $16 billion, $15.9 billion from using bonus depreciation.",
+    "So I hope that I can encourage my colleagues to join me in passing the Data Center Tax Accountability and Disclosure Act, one that I have already socialized within industry, one that would put some mandatory requirements but also put some real teeth in this very important issue.",
+    "They are already enormously concerned at a 90-10 ratio about data centers.",
+    "I think many of the hyperscalers would meet these new standards, but unless we put some consequences, I think we are going to completely miss the boat.",
+    "But the idea, after we all have experienced some of the ups and downs of social media, we are going to turn the same power over to the same group of CEOs and say: We are going to trust you to figure this all out on your own without any public input.",
+    "But at least tomorrow, if the Senate takes up this Ratepayer Reduction Act, I hope and I would--I am not sure what I am going to do on the vote tomorrow."
+   ]
+  },
+  {
+   "date": "2026-09-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "title": "DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-24/html/CREC-2026-09-24-pt1-PgS4962.htm",
+   "sentences": [
+    "As significant as both of those are, they pale in comparison to what we are facing now with this transformation, and there is a lot of good that will come out of artificial intelligence.",
+    "I have got ideas about data centers, about kids' safety, about liability for AI agents, national security.",
+    "Yes, I have got frustrations on data centers, but this is the issue of our time.",
+    "So we ought to have a time to have a fulsome debate about data centers, kids' safety, liability, and other issues, but right now--and we were going to do this today, but we are going to come back on Monday because the Senate has left.",
+    "I don't believe--I am not a ``doomer'' on AI--I don't think the robots are going to take over the world--but I do think, if we had an event where an AI tool went out and took over a hospital or took over a water system or shut down a power system--and Americans are already concerned about the rate of this technology change--they could shut down this innovation, and that would be the worst for our country.",
+    "We have a lot of data centers, which is of some concern.",
+    "So what we are going to be proposing is, I think, as simple as possible.",
+    "Madam President, I will wrap it up here.",
+    "I am going to go back to where we started."
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROTECT COLLEGE SPORTS ACT OF 2026",
+   "title": "PROTECT COLLEGE SPORTS ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-23/html/CREC-2026-09-23-pt1-PgS4902-2.htm",
+   "sentences": [
+    "President Trump signed two Executive orders, one that ripped away collective bargaining rights from more than a million public servants and the other that unilaterally canceled hundreds of thousands of existing union contracts under, frankly, what I think are false national security pretense, to make it easier, frankly, to fire experienced nonpartisan civil servants and, candidly, to replace them with political loyalists.",
+    "Mr. President, notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of H.R. 2550, which is at the desk; further, that the bill be considered read a third time and passed, and the motion to reconsider be considered made and laid upon the table.",
+    "Mr. President, in a moment, I am going to ask this body on a unanimous consent basis to pass an important piece of legislation that has already passed in an overwhelming fashion out of the Republican-controlled House.",
+    "So I urge my colleagues to join us in passing the Protect America's Workforce Act."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Artificial Intelligence (Executive Calendar)",
+   "title": "Artificial Intelligence (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgS4178.htm",
+   "sentences": [
+    "For most of the last decade, conversations about artificial intelligence were largely conversations about the future, but today they are conversations about the present.",
+    "The question is no longer whether artificial intelligence will transform our society.",
+    "The AI revolution depends on enormous amounts of physical infrastructure--particularly massive data centers being built in the Presiding Officer's State, many being built already in Virginia.",
+    "They deserve to know exactly what is being built in their backyard and a full understanding of what these facilities will mean for their electric grid, their water supply, their air quality, and local infrastructure.",
+    "My Data Center Tax Accountability and Disclosure Act fixes the problem.",
+    "My bill will ensure transparency about data center electricity and water consumption, backup power generation, and setbacks in residential communities, so as these data centers get built, they are not built right on top of residential neighborhoods--candidly, all information communities should have when planning and building decisions are being made.",
+    "My legislation would establish a process to verify that AI models cannot generate child sexual abuse material or nonconsensual intimate images.",
+    "As AI-generated content becomes increasingly sophisticated, we also have to protect our financial markets and our democratic institutions from fraud, deception, and manipulation, which is why, in the upcoming weeks, I will reintroduce my bipartisan legislation to require financial regulators to address the uses of AI-generated content that could disrupt financial markets.",
+    "It is also why Senator Rounds and I introduced bipartisan legislation creating an Economy of the Future Commission to help our country develop a long-term strategy for artificial intelligence and other transformative technologies.",
+    "We need a national strategy equal to the scale of the challenge because while there is every reason to believe that artificial intelligence will actually create new industries and new jobs over the long run, history tells us that technological revolutions rarely unfold smoothly.",
+    "Many of the occupations most vulnerable to generative AI are the very white-collar, entry-level jobs that have long served as the first rung on a career ladder--jobs in business, finance, marketing, software development, customer support, and other knowledge positions.",
+    "I am also introducing legislation to strengthen American's pipeline of homegrown STEM talent by helping universities create accelerated pathways into doctoral programs in critical technologies like AI, cyber security, semiconductors, and quantum.",
+    "Finally, I want to talk about artificial intelligence through the lens of national security.",
+    "China has made artificial intelligence a national priority.",
+    "So has Russia, Iran, North Korea, and more specifically, international criminal organizations.",
+    "The same frontier AI models that accelerate scientific discovery can also identify cyber vulnerabilities, automate sophisticated cyber operations, and lower the barriers-- The PRESIDING OFFICER (Mr. Curtis).",
+    "The same frontier AI models that accelerate discovery can also figure out where the vulnerabilities are in our systems.",
+    "That is why we cannot approach frontier AI models the same way we approach ordinary software updates.",
+    "The most advanced AI systems deserve a higher standard of security before they are widely deployed.",
+    "We are not going to put this genie back in the bottle, and the amount of disruption this technology will bring over the next 5 years is beyond jaw-dropping.",
+    "That is why today I am introducing a legislative agenda--a series of bills--built around four simple principles: First, we need to build the infrastructure for America's AI future responsibly.",
+    "And part of the way we will make this new standard be met, if Congress is going to provide special tax breaks that allow companies to write off the cost of building these facilities far faster than they otherwise could, these subsidies should come with conditions.",
+    "I plan to introduce new legislation to establish clear rights and responsibilities for these emerging AI agents so they can compete fairly while meeting strong standards for privacy, cyber security, and security protection.",
+    "As a matter of fact, I will bet that we will hit 30 percent recent college graduate unemployment in the next 2 years.",
+    "Earlier this year, I introduced the Investing in the American Workers Act because we need to rethink the incentives in our Tax Code.",
+    "I urge my colleagues to take a look at my ideas."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RECOGNITION OF THE MAJORITY LEADER",
+   "title": "RECOGNITION OF THE MAJORITY LEADER",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgS2545-8.htm",
+   "sentences": [
+    "Now, I am going to ask my friends to help me on this.",
+    "And if only half of the Republicans who have expressed private concerns on this will vote, we will get way over 60."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GERALD E. CONNOLLY ESOPHAGEAL CANCER AWARENESS ACT OF 2025",
+   "title": "GERALD E. CONNOLLY ESOPHAGEAL CANCER AWARENESS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-20/html/CREC-2026-05-20-pt1-PgS2397.htm",
+   "sentences": [
+    "In a moment, I am going to ask unanimous consent that we pass this bill here on the Senate floor, but before I make that request, I want to defer and yield my time to the Senator--fellow Senator from Virginia Senator Kaine."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VOTE EXPLANATION",
+   "title": "VOTE EXPLANATION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-30/html/CREC-2026-04-30-pt1-PgS2161-4.htm",
+   "sentences": [
+    "Had I been present, I would have voted yea on the motion to discharge S.J. Res. 114, directing the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUDAN",
+   "title": "SUDAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgS1768.htm",
+   "sentences": [
+    "We have seen the war in Iran dramatically disrupt fuel and fertilizer shipments-- particularly devastating as Sudan enters what should be its planting season in coming months.",
+    "In fact, more people die every day in Sudan than Gaza and Ukraine combined.",
+    "Unfortunately, the current administration dismantled USAID and the broader U.S. foreign assistance infrastructure, so there is no clear and coordinated diplomatic strategy for addressing this conflict, for rallying the international community, for coordinating with local responders and organizations on the ground.",
+    "Now, because of the war with Iran, foreign policy choices risk dramatically worsened conditions.",
+    "When we dismantled USAID and the funding of the administration, we literally had a situation where American food and medicine that we had paid for were sitting on ships in the port of Sudan, and the workers that were literally paid a dollar or two a day to take that food and distribute it, because we shut down USAID, were left without any distribution network."
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026--Motion to Proceed--Resumed",
+   "title": "DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026--Motion to Proceed--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgS1589-8.htm",
+   "sentences": [
+    "Mr. President, I rise today nearly a month into President Trump's ill-advised war of choice in Iran, which has obviously destabilized the region, disrupted global supply chains, degraded our munitions stockpiles, cost the lives of 13 American servicemembers, with more than 200 additional suffering injuries.",
+    "Fortunately, it is clear that even though this was a war of choice and can be decided by the President's own timing, he started this with no clear endgame and without adequately preparing for Iran's very predictable response, which obviously would have included the Strait of Hormuz, which obviously would have included Iran attacking other gulf nation-states.",
+    "As well--and this has gotten some coverage in our country but not enough--Iran has also carried out significant strikes on oil and gas facilities throughout the gulf.",
+    "The truth is, even if the President feels in his bones today or tomorrow that we have won the war and he stops the bombing-- with no guarantee that Israel will stop or that Iran will stop--and the strait starts to get reopened, we are still going to see economic pain across the globe for weeks, months, or, potentially, a year.",
+    "While Americans are struggling at the pump, skyrocketing diesel costs are threatening to increase the pain for households across a series of domains.",
+    "Last week, diesel prices eclipsed $5 per gallon on average.",
+    "That was only the second time in history that diesel got above 5 bucks, and that is about 40 percent higher than before the war began.",
+    "Diesel is the trucking industry's second largest expense, and for most trucking firms, that diesel cost accounts for about 20 percent of the total operating costs.",
+    "For most freight companies, a 40-percent rise in the diesel cost results in about an overall increase of 10 percent on all the items that are shipped.",
+    "Americans can also expect to pay more on air travel due to the war in Iran as the price of jet fuel has more than doubled since the conflict has begun.",
+    "This is all related to oil, natural gas, and jet fuel, but the fact is that the President's war in Iran and the subsequent closure of the Strait of Hormuz is really wreaking havoc on a lot of industries from semiconductors to new cars.",
+    "For example, the current situation is threatening to upend the global semiconductor industry and other advanced technology industries by impacting the availability of a crucial input--helium.",
+    "Even before the war with Iran had started, aluminum prices in our country were at record highs due to the President's tariff policy of putting 50-percent tariffs on aluminum products.",
+    "So, if you add the tariff policy with already high aluminum prices and shut down some of the smelters, this is going to drive up the cost of aluminum not just around the world but in the United States as well.",
+    "The President's war of choice in Iran is also threatening global food production and the livelihood of farmers in the United States and across the world.",
+    "Typically, about one-third of all fertilizer shipped globally passes through the Strait of Hormuz; but not dissimilar to the oil and gas production and transit, that fertilizer exiting the gulf has literally ground to a virtual 100-percent halt just as the spring growing season is starting in America.",
+    "That fertilizer shortage has also been already shortened because we are short on nitrogen, and we are short on potash, which we get from Canada, again, because of the tariff policy.",
+    "In response to rising oil prices, President Trump and his Secretary of the Treasury announced he was lifting sanctions on 140 million barrels of Iranian crude.",
+    "That translates into more than $14 billion to the bad Government of Iran, who is shooting at American soldiers, who is bombing our allies.",
+    "I still remember like back under Obama, where I think there was some payment around the JCPOA with $300-plus million released to Iran.",
+    "Well, now, in the middle of a war--we weren't in a war at that point--in the middle of a war where Iran is attacking us, this President has given a green light to fund $14 billion to the Iranian regime--funding our enemies.",
+    "In another master stroke by the ``king of deals,'' President Trump lifted the sanctions on approximately 130 million barrels of Russian oil, directly helping Vladimir Putin's invasion of Ukraine.",
+    "You know, recent reports indicate that Russia has already earned about $230 million per day on crude oil exports during the first 2 weeks of Iran's war.",
+    "It is going to buy Russian drones, Russian tanks, Russian missiles--maybe call me old-fashioned--that are attacking and killing our allies in Ukraine--the allies that, thank goodness, we have supplied military equipment to, and we are funding their enemy.",
+    "The President says he didn't think they would close the Strait of Hormuz; he didn't think Iran would attack the gulf countries.",
+    "The intelligence community has been absolute not for weeks, months, but for years that if you start a war with Iran--and the Iranians are bad guys.",
+    "Prior Presidents, including President Trump--I remember one time he was going to bomb Iran in his first term, and he pulled back because of all of the implications of starting that war without enough planning.",
+    "Hey, does it really make sense in this war to fund our enemies Iran and Russia?",
+    "Now, we can't fully predict the full, long-term impacts of President Trump's war of choice in Iran, but we can make a pretty damn good conclusion at this point on who is going to get hit the worst: working- class Americans.",
+    "You know, it is hard for a single political figure--even the President--to dramatically bring down prices, but it sure is not hard for a single political figure--in this case, the President of the United States--to raise prices: fertilizer, aluminum, helium, jet fuel, diesel fuel.",
+    "I will take a bet with anybody in this Chamber that we are going to see an average gas price of $4 that will be maintained for some time.",
+    "I am going to stop,'' it will take weeks, not days, to restart the Qatar helium production, meaning that, even in these next couple of weeks, with already the spot pricing doubling, there is going to be a supply chain risk that will take place over the coming weeks and months.",
+    "You might even say, maybe I will quietly tell Saudis and Emiratis and others: Hey, store up some oil and natural gas because this war is going to start.",
+    "We are going to feel the consequences of this war for a long time to come, and everything I talked about here gets exponentially worse--not on a linear timeline but an exponentially long, worse timeline--if the strait remains closed."
+   ]
+  },
+  {
+   "date": "2026-03-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "title": "SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-17/html/CREC-2026-03-17-pt1-PgS1066-5.htm",
+   "sentences": [
+    "Despite officials from his own administration calling the 2020 election the most secure in American history, the President continues to promote unsubstantiated claims of voter fraud, and that is after investigations from multiple courts and the States' attorneys general and election officials from both parties strongly declaring that there was no evidence to support allegations of substantial fraud.",
+    "Tomorrow, we are going to hear from some of the intelligence officials as our committee takes on the worldwide threat assessment where, unfortunately, senior intelligence officials seem to be still focusing on relitigating the 2020 election rather than making us safe for 2026 and 2028 because the truth is, after all of these years, the President and his allies haven't been able to find any evidence of legitimate voter fraud in past elections.",
+    "Now, they are looking forward to the effort that is on the floor right now toward suppressing and wrongfully influencing future elections through this so-called SAVE America Act.",
+    "The Presiding Officer comes from Utah, which has a proud history of States' rights and local control, but in the President's own words, he wants Republicans to ``take over'' election administration, going so far as to say Republicans ought to nationalize the voting.",
+    "Again, I don't know if this comment led to her firing, but before he fired her, the President's DHS Secretary Kristi Noem pushed for the passage of the SAVE America Act while stating that her goal was to have the right people voting so we can elect the right leaders.",
+    "Unfortunately, contrary to the name the SAVE America Act, this legislation undermines the very foundations that it claims to protect.",
+    "That is because, under the SAVE America Act, Americans who have voted for years and have had no question about their citizenship would have to go back and provide documentary proof of citizenship to register to vote in Federal elections.",
+    "Let me say, at the front end, that I support voter ID.",
+    "That means, if this bill passes, half of all American citizens would not be able to provide one of the primary acceptable forms of documentation that would be required to vote under the SAVE Act.",
+    "Additionally, under this bill, States would be barred from accepting online and mail-in voter registrations unless the applicant also presented proof of citizenship in person.",
+    "This effectively, frankly, guts the online and mail-in voter registration processes that are available across many States, which creates, I think, an unnecessary burden for all voters, particularly rural voters, senior citizens, and individuals with disabilities disproportionately.",
+    "My view is that the goal of the SAVE Act is more about cutting out voters and suppressing the vote than it is about saving anything going forward.",
+    "Frankly, I believe we need to fund all of the folks at the Customs and Border Patrol who aren't assigned to interior immigration enforcement.",
+    "The unfortunate thing is, under this administration, ICE has been turned frankly into kind of a secret police that I believe has waged enormous violence against Americans.",
+    "I know in my State, that of the daily quota of people they have to pick up, 80 to 85 percent have never violated any other law other than coming into the country and most of them are going through an amnesty process that was set up.",
+    "So we have got to make meaningful reforms to ICE which I don't think are outrageous, like requiring body cameras, making sure that immigration enforcement officers show their faces and identify themselves, and making sure there is proper training and upholding traditional use-of-force standards.",
+    "These are the same requirements that my local law enforcement has to deal with every day and has had to for years.",
+    "These are commonsense, basic accountability measures that, as I said, our State and local police abide by because that is how you keep communities safe.",
+    "They continue to drag their feet on negotiations at the expense, frankly, of the TSA, FEMA, the Coast Guard, and Customs and Border Patrol--not the folks doing interior enforcement--who are not getting paid.",
+    "We can debate the SAVE Act, which I think is, again, about voter disenfranchisement, not voter safety or integrity, but I do think, while we debate this, why not go ahead and take yes for an answer and fund all of the other components of DHS so those folks who help protect us day in and day out get their paychecks?",
+    "Unfortunately, this SAVE Act cuts back on a whole lot of Americans that will be disenfranchised simply because, oh my gosh, they did the radical thing of changing their name when they got married; or, oh my gosh, they were willing to join our military; or, oh my gosh, they are aged and they don't want to spend 150 bucks to get a passport.",
+    "We are having this debate, and we are going to probably go through lots of procedural antics that most folks won't understand.",
+    "If we are going to spend all night, let's focus on funding the TSA, FEMA, CISA, and the Coast Guard.",
+    "I am going to make sure that the TSA agents at Dulles, at National, and at airports across my Commonwealth get their paychecks."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgS559-6.htm",
+   "sentences": [
+    "You know, 38 percent of DC residents get their healthcare through Medicaid--more than one in every three DC residents.",
+    "Yet the Medicaid cuts that will come, interestingly enough, in November--after the elections--will literally put thousands and thousands of those residents off their healthcare.",
+    "Instead of allowing the District, as the Senator from Virginia said, to put that into child tax credits or other choices--with their own money--instead, the President has taken this money, frankly, for tax cuts for the wealthiest.",
+    "I am going to be relatively brief since I know the floor got backed up today and I am imposing my time on the Senator from North Dakota.",
+    "While I was going to go through all of the same details on decoupling and the 19 issues, I will move away from that and echo everything he said.",
+    "We have seen as well that the President has taken a blowtorch to Washington's cultural treasures when he unlawfully--and I say this as a member of the Kennedy Center board--when he unlawfully put his name on the Kennedy Center and then acted surprised when groups around the country, artists around the country, said ``I am not going to go to the Trump-Kennedy or the Kennedy-Trump Center'' and started canceling their engagements.",
+    "We saw last year, with the big bill--I will not call it by its chosen name--that the President and this administration have done so much to hurt the folks in DC at risk.",
+    "Now I won't go through all the details again, but $658 million of DC residents' money paid in local taxes should not be taken away from the District."
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE CENTERS FOR MEDICARE & MEDICAID SERVICES RELATI",
+   "title": "PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE CENTERS FOR MEDICARE & MEDICAID SERVICES RELATING TO \"PATIENT PROTECTION AND...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgS147.htm",
+   "sentences": [
+    "It is beyond the Medicaid changes.",
+    "This is a rule that the administration set forward last year that adds enormous amounts of regulatory burden for any American who chooses to access the so-called ObamaCare Marketplace.",
+    "The truth is, this administration's attack on the Marketplace, ObamaCare, the Affordable Care Act didn't start with this rule.",
+    "As we all know in this Chamber, this is just another step in a now close to 15-year crusade by many of my Republican colleagues to undermine the ACA, which, at the end of the day, is just going to--as we have seen already--is going to increase healthcare costs for everybody.",
+    "We know that at the end of last year, as the expiration of the ACA enhanced premium tax credits approached, Democrats in Congress worked hard to try to extend them.",
+    "Frankly, I wish all of my Republican colleagues who helped block that solution could have explained to her why blocking that solution, which we offered as a straightforward extension of the ACA premium tax credits--why they blocked that, because Kathleen and so many other families desperately needed it.",
+    "The rule requires increased paperwork for families, reduces open and special enrollment periods, and allows insurers to push more healthcare costs on Americans by allowing plans to cover less care.",
+    "Medicaid cuts, which are going to be enormous, which, frankly, were not scheduled to kick in until after the 2026 elections, interestingly enough--although I can tell you we have already seen rural healthcare clinics close in Virginia because of that expectation--and my colleagues' refusal to extend the enhanced premium tax credits are all weighing down on our healthcare system, and we are seeing rural hospitals and rural healthcare centers really bear the brunt of this.",
+    "We have seen my Republican colleagues stand up to the President on the Epstein files, on war powers, and just in the last day or so, the attack on the independence of the Federal Reserve.",
+    "I am asking my colleagues--and I will be joined by other colleagues to talk about this over the next hour or so--I am asking my colleagues to join me in disapproving a harmful rule that the Trump administration finalized last year that was set to kick in at the end of 2025.",
+    "Now, I will acknowledge that because this administrative burden is so burdensome, the courts have paused its enactment, but at any moment, that pause could be taken away."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026--Motion to Proceed--Resumed",
+   "title": "COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026--Motion to Proceed--Resumed",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-12/html/CREC-2026-01-12-pt1-PgS121-6.htm",
+   "sentences": [
+    "This individual had been doing a lot of work all across Northern Virginia, working with local governments and others, trying to develop affordable housing projects.",
+    "The fact is, this individual has got an extraordinary record of, as I said, producing affordable housing all across the region.",
+    "Now, these decisions build on a travel ban that was put in place by the administration earlier in the year--or last year.",
+    "Muslim Virginians are also patriotic and want to keep this country safe, many of them bravely choosing to serve as police officers, intelligence officers, and servicemembers in our Armed Forces.",
+    "Contrary to the rhetoric of our President and his administration, our country is safer because of Muslim Americans like Captain Khan and the thousands of Muslim American police and Muslim American soldiers, sailors, marines, airmen, and guardians."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump appointees win again. Eight of the ten least partisan judges were nominated by President Trump.",
+   "title": "Trump appointees win again. Eight of the ten least partisan judges were nominated by President Trump.",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-20/html/CREC-2025-11-20-pt1-PgS8250.htm",
+   "sentences": [
+    "I laid out in detail how this administration, led by Director of National Intelligence Gabbard, was dismantling the independence, integrity, and credibility of the very institutions we rely on to keep Americans safe.",
+    "Since Inauguration Day, the President and his handpicked FBI Director--again, Kash Patel--have forced out thousands of experienced agents for reasons that appear more political than professional--for example, for refusing to acknowledge who actually won the 2020 election or FBI agents being thrown out for prosecuting the violent criminals who attacked the Capitol Police on January 6 or being pushed out for simply being friendly with someone critical of the President.",
+    "He was fired not for failing his duties, not for misconduct, and not for political disagreements about law enforcement; he was fired because the American people learned that Director Patel had been using the FBI's $60 million jet at $20,000 a flight to go on dates with his girlfriend.",
+    "Since April, the National Security Agency--the Agency in charge of spying on communications of our adversaries--has been without a permanent Director or Deputy Director after President Trump fired Gen. Tim Haugh and his Deputy, Wendy Noble, at the behest of conspiracy theorist Laura Loomer; the same for the Defense Intelligence Agency, whose Director, Gen. Jeff Kruse, was fired after the DIA provided a fact-based assessment that contradicted the President's false televised claims that the United States had ``obliterated''--President Trump's words ``obliterated''--Iran's nuclear program.",
+    "The irony is stark: Despite persistent efforts by China, Russia, Iran, and other adversaries, the 2020 Presidential election was one of the most secure in history, thanks in large part due to steps taken during the Trump administration's first term to safeguard our critical infrastructure.",
+    "Iran's growing expertise and willingness to conduct aggressive cyber operations make it a major threat to the security of U.S. networks and data.",
+    "I intend to continue making these speeches for as long as it takes because the stakes for our national security are too high to let this pattern go unchallenged.",
+    "All the while, the administration's own intelligence reporting warns--and, again, I am going to go back to a quote: Beijing will continue to expand its coercive and subversive malign influence activities to weaken the United States . . . is likely to feel emboldened to use malign influence more regularly in the coming years, particularly as it fields AI to improve its capabilities.",
+    "If we fail that and don't stand up for these men and women who have put their lives on the line, if we don't stand up for keeping classified information classified, if we don't stand up and say to those who undermine our infrastructure by cyber attacks, if we don't stand up for those terrorists planning, we will bear the cost later--a cost that could be catastrophic."
+   ]
+  },
+  {
+   "date": "2025-10-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-10-23/html/CREC-2025-10-23-pt1-PgS7705-6.htm",
+   "sentences": [
+    "I urge my colleagues to do the right thing."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTHORIZING THE EN BLOC CONSIDERATION IN EXECUTIVE SESSION OF CERTAIN NOMINATIONS ON THE EXECUTIVE CALENDAR",
+   "title": "AUTHORIZING THE EN BLOC CONSIDERATION IN EXECUTIVE SESSION OF CERTAIN NOMINATIONS ON THE EXECUTIVE CALENDAR",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/html/CREC-2025-09-18-pt1-PgS6714.htm",
+   "sentences": [
+    "We have seen career FBI agents, people who have risked their lives for this country, forced out of their positions simply for investigating crimes committed in the January 6 insurrection.",
+    "And again, to be clear, there is no question that Maduro's regime in Venezuela and the TDA are ruthless actors who pose real threats, but punishing officials--punishing intelligence officials in particular-- for telling the truth only weakens our ability to confront them.",
+    "We have seen the three-star general leading the Defense Intelligence Agency pushed out after analysts produced a straightforward, evidence- based assessment showing that Iran's nuclear program had not been obliterated, as President Trump so loudly claimed.",
+    "Cyber attacks, disinformation campaigns, nuclear proliferation, terrorist attacks, transnational criminal organizations--these threats are real, and they are not going to wait for us to get our house in order.",
+    "If analysts who analyze the facts and try to come up with conclusions believe their careers will be destroyed for offering inconvenient assessments, then we will only get intelligence the White House wants.",
+    "That is why, again, I urge my colleagues on both sides of the aisle: Please, for God's sake, take this seriously.",
+    "We can disagree about policy, but we cannot allow the facts themselves to be corrupted."
+   ]
+  },
+  {
+   "date": "2025-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Joseph Kent (Executive Calendar)",
+   "title": "Nomination of Joseph Kent (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-30/html/CREC-2025-07-30-pt1-PgS4880.htm",
+   "sentences": [
+    "Mr. Kent has openly embraced the lie that the 2020 election was ``rigged'' and ``stolen,'' a lie that the Senator from Washington indicated helped fuel an insurrection against our democracy, and he has defended those who violently stormed the Capitol on January 6, referring to them as ``political prisoners,'' and falsely claimed that the FBI and intelligence community were involved in directing the violence that occurred that day.",
+    "I urge my colleagues--particularly those who value the credibility of our intelligence Agencies--to think carefully about what message it sends if Mr. Kent is confirmed."
+   ]
+  },
+  {
+   "date": "2025-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-16/html/CREC-2025-07-16-pt1-PgS4381-6.htm",
+   "sentences": [
+    "Mr. President, I rise today--I know many of us have--with deep concern about the administration shuttering USAID, firing thousands of State Department personnel, and retreating from America's place in the world.",
+    "I urge my colleagues to support my motion."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+   "sentences": [
+    "I urge my colleagues to support the amendment.",
+    "I urge my colleagues to adopt the amendment."
+   ]
+  },
+  {
+   "date": "2025-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: GENIUS ACT",
+   "title": "GENIUS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-17/html/CREC-2025-06-17-pt1-PgS3434.htm",
+   "sentences": [
+    "Mr. President, for too long, stablecoins have operated in a regulatory gray area, putting consumers, markets, and national security at risk.",
+    "The bipartisan GENIUS Act brings much-needed oversight and standards to the $250 billion stablecoin market.",
+    "It also creates guardrails for responsible innovation and will enact sensible consumer protections for payment stablecoins."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+   "sentences": [
+    "I agree with her comments about how we need to not just pay lipservice to our veterans or the fact that for 70 years, America has used soft power through organizations like USAID in ways that have been incredibly important and have kept our country and the world safer.",
+    "But according to press reports, the President is actually taking staffing advice from a person whose rhetoric is steeped in hate, misinformation, and dangerous conspiracy theories.",
+    "Now, this is in addition to firing hundreds of intelligence officers, who have received specialized training and been subjected to extensive security vetting--at, I might add, considerable expense to the taxpayer--so they can actually carry out some of the Nation's most sensitive classified work, often in spite of great personal danger, as the 140 stars carved into the CIA's Memorial Wall attest.",
+    "Israel, one of the best sources of intelligence in the Middle East is, according to public reports, furious that the Signalgate breach exposed a sensitive intelligence source on the ground in Yemen.",
+    "I have got to tell you there is nothing that requires Israel or, for that matter, any of our allies to share this kind of intelligence with the United States.",
+    "Whether it is the President's bellicose threats to annex Greenland, the trade war that he has launched that is melting down the market and robbing people of their retirement funds, or this sloppy, reckless mishandling of America's classified information, the one thing that is true without a doubt is that America's credibility around the world is being severely endangered.",
+    "Already, longstanding allies like Canada, Australia, and Portugal have said they are reconsidering buying American-made F-35 fighters because they no longer feel they can count on the United States or, for that matter, American businesses to stand by our commitments.",
+    "I fear that we will feel the ripples of the erosion of trust from our workforce, American businesses, and from our international partners for many years to come."
+   ]
+  },
+  {
+   "date": "2025-04-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING THE NATIONAL EMERGENCY DECLARED TO IMPOSE DUTIES ON ARTICLES IMPORTED FROM CANADA",
+   "title": "TERMINATING THE NATIONAL EMERGENCY DECLARED TO IMPOSE DUTIES ON ARTICLES IMPORTED FROM CANADA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-02/html/CREC-2025-04-02-pt1-PgS2121-3.htm",
+   "sentences": [
+    "Mr. President, I rise to join my colleagues who are in support of Senator Kaine's, I think, thoughtful approach on how we can put an end to this tariff war with Canada.",
+    "That then brings us to not my words but to Peter Navarro's words, whom I happened to meet with on a Sunday, who said that these groups of tariffs will add $6 trillion in revenues.",
+    "If all the tariffs are off tomorrow, which they will not be, it will be years, if ever, that Canadians will be buying American bourbon.",
+    "So, in dreamland, $6 trillion of tariffs, you know, is the largest tax increase in American history.",
+    "This is at the lifeblood of the Canadian economy, and combined with the so-called reciprocal tariffs around the world, it is the lifeblood of the American economy.",
+    "I would just say to the Presiding Officer again: I know he sells great cars, but I am not sure if even folks in Ohio are going to be able to afford $2,000 or $5,000 more per car just because of ill-suited tariffs.",
+    "So I would hope that folks on both sides of the aisle will actually stand up to ``America First.'' Reject this misguided tariff strategy."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Senate",
+   "title": "Senate",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt2-PgS1961.htm",
+   "sentences": [
+    "So, Senator Booker, as you put down the litanies of all of the challenges that have been raised by this administration, I will ask you a simple question: Do you agree that this pattern--not a one-off--"
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISTRICT OF COLUMBIA LOCAL FUNDS ACT, 2025",
+   "title": "DISTRICT OF COLUMBIA LOCAL FUNDS ACT, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-14/html/CREC-2025-03-14-pt1-PgS1772.htm",
+   "sentences": [
+    "In 2026, we are going to celebrate 250 years."
+   ]
+  },
+  {
+   "date": "2025-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgS1367-3.htm",
+   "sentences": [
+    "Today, China is the world's top supplier of long-duration energy storage batteries, solar panels, and wind turbines.",
+    "Mr. President, I rise today in support of my colleagues'--Senator Heinrich and Senator Kaine--resolution.",
+    "I appreciate their part of the presentations, but I strongly support this resolution.",
+    "If we are going to win the battle for technology and, particularly, in AI, that is going to require enormous amounts of additional energy in the United States.",
+    "We are going to spend about $800 million--hopefully--in some of this legislation.",
+    "I urge all my colleagues to support Senator Kaine and Senator Heinrich's resolution."
+   ]
+  },
+  {
+   "date": "2025-02-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: LEGISLATIVE SESSION",
+   "title": "LEGISLATIVE SESSION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-20/html/CREC-2025-02-20-pt1-PgS1075-2.htm",
+   "sentences": [
+    "Madam President, I rise in support of this amendment, which would prohibit any reconciliation bill that does not decrease the cost of housing for American families.",
+    "We have got to make sure we send a message to the American people that we are going to take on the rising cost of housing."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Tulsi Gabbard (Executive Session)",
+   "title": "Nomination of Tulsi Gabbard (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS875-2.htm",
+   "sentences": [
+    "The DNI must also represent the tens of thousands of intelligence professionals around the world who often toil in anonymity.",
+    "She sought to blame the United States and NATO--the United States and NATO--for Putin's illegal invasion of Ukraine.",
+    "She publicly praised and defended Edward Snowden when he compromised our Nation's most sensitive collection sources and methods and then ran off to hide in China and Russia.",
+    "Just last week, even with repeated inquiries from our Republican colleagues, she refused to call Snowden a traitor.",
+    "Not only have the traditional threats persisted from China, Russia, Iran, and North Korea, but we have seen increased threats from terrorism, cyber actors, and transnational criminal organizations.",
+    "Some of our own senior and experienced law enforcement and intelligence professionals are being asked to take political litmus tests, and those who are seen as insufficiently loyal are being fired or forced to resign."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security (Executive Calendar)",
+   "title": "Border Security (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS881.htm",
+   "sentences": [
+    "We have seen Musk take a hatchet to USAID, ceding soft power and, frankly, 70 years of bipartisan leadership in that domain, to China.",
+    "As folks in my State may remember, earlier this month, the President issued an illegal order to freeze all Federal spending.",
+    "We need someone with the preparedness and experience necessary to safeguard a woman's right to reproductive care; to support healthcare systems in their fight against cyber attacks; that would protect both Medicare and Medicaid, and ensure that American families can count on good health insurance.",
+    "Mr. President, I join my last two colleagues, the Senator from New Hampshire and the Senator from California, in echoing some of their concerns, because I also rise today to oppose President Trump's nomination of Robert Francis Kennedy, Jr., to be Secretary of Health and Human Services.",
+    "We cannot allow this pattern to continue at the Agency tasked with keeping people healthy and safe."
+   ]
+  },
+  {
+   "date": "2025-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Tulsi Gabbard (Executive Session)",
+   "title": "Nomination of Tulsi Gabbard (Executive Session)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-10/html/CREC-2025-02-10-pt1-PgS810-2.htm",
+   "sentences": [
+    "Thousands more may have reason to fear they may be next based on the vindictive list apparently being assembled of every FBI official who was involved in the investigations into the Capitol riot on January 6.",
+    "Reportedly, senior law enforcement and national security officials are being asked to take political litmus tests, such as whether the 2020 Presidential election was stolen and whether the January 6, 2021, attack on the U.S. Capitol was an inside job.",
+    "Across the government, whole Agencies are being eliminated and funding impounded in flagrant defiance of the Constitution and the law, while unvetted, unqualified DOGE bros--one who formally worked for a Russia hacker group and was fired for leaking sensitive company secrets to a competitor and yet another who proudly declared himself a ``racist'' and said he would not mind if ``Gaza and Israel were both wiped off the face of the Earth''--that individual, I understand, has actually been rehired after he initially quit--these DOGE bros are illegally burrowing into classified and other sensitive information, jeopardizing our national security and violating Americans' privacy.",
+    "For example, she blamed NATO for Russia's 2022 invasion of Ukraine.",
+    "Ms. Gabbard has also been publicly outspoken in her praise and defense of Edward Snowden--someone who betrayed the trust and jeopardized the security of our Nation.",
+    "In many ways, we are still paying a price for Snowden's betrayal, and it is beyond dispute that his actions put our men and women in uniform in places like Iraq and Afghanistan at risk.",
+    "Yet Ms. Gabbard has celebrated Snowden as a ``brave whistleblower'' and advocated for his pardon.",
+    "This is someone that my friend Tom Cotton, who is the chairman of the Intelligence Committee, called a ``traitor'' who should ``rot in jail for the rest of his life.'' A week ago, at the hearing, member after member--particularly my Republican friends--gave her chance after chance to just be willing to call out Snowden as a traitor.",
+    "Instead, she said: The DNI has no role in determining whether or not Edward Snowden is a lawful whistleblower.",
+    "Not only does she seem to believe that someone who divulged sensitive national secrets to Russia and China should be celebrated as ``brave'' and not denounced as a ``traitor,'' she also does not seem to understand the DNI's role in whistleblower determinations, because, in fact, the DNI has a significant role in transmitting lawful whistleblower complaints to the Intelligence Committees.",
+    "I oppose her nomination because I question her judgment.",
+    "Make no mistake about it, if our allies stop sharing that intelligence, we will be less safe.",
+    "A vote in favor of her confirmation is an endorsement of President Trump's lawless efforts to hollow out our national security workforce, and her confirmation will further strain the alliances that have kept our country safe for decades; therefore, I urge my colleagues to oppose Ms. Gabbard's nomination."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Chagos Islands (Executive Calendar)",
+   "title": "Chagos Islands (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgS635.htm",
+   "sentences": [
+    "You want to debate about USAID; have at it, if the programs can't be defended.",
+    "I will make it a simple question to ask."
+   ]
+  },
+  {
+   "date": "2025-01-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Executive Orders (Executive Calendar)",
+   "title": "Trump Executive Orders (Executive Calendar)",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-29/html/CREC-2025-01-29-pt1-PgS465.htm",
+   "sentences": [
+    "Two days ago, the Trump administration, without warning to any States, to any Governors, without warning to Congress, late at night, put out an order freezing all Federal spending for 90 days.",
+    "I heard from an affordable housing organization in Northern Virginia that if they go 90 days without Federal dollars, they might have to shut down their organization.",
+    "I heard from law enforcement in the Shenandoah Valley and from the greater Richmond area that a lot of these localities depend on Federal dollars to pay police officers.",
+    "So whether you care about meals for low-income seniors, whether you care about Head Start for vulnerable kids, whether you care about teens who need that mental health support oftentimes coming from Federal dollars, that all is up in the air at this point.",
+    "I have never heard of some kind of arbitrary freeze on all Federal spending.",
+    "As a recent former Governor--I say that as a former Governor myself-- I won't ask you what you are hearing in West Virginia, but I have to tell you, I rise to the floor today amongst a huge amount of confusion.",
+    "Of course, the problem is--and I urge my Federal workers to think about this--unfortunately, this President has a record of not only sticking it to Federal workers, but he has a record of sticking it to all the business contractors he did business with by not paying the bills.",
+    "If air traffic controllers--who, by the way, take about a year to get trained--if 5,000 of them say ``You know what, I am going to take that offer,'' what happens to air traffic safety?",
+    "And we are not going to get people with the same experience.",
+    "From somebody who was a chief executive, I feel like a Governor or the President ought to get most of their choices but for people that I think fall outside the norm and don't have the credibility or judgment, and I will make those decisions."
+   ]
+  }
+ ]
+}

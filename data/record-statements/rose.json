@@ -1,0 +1,294 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "rose",
+ "name": "John W. Rose",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 22,
+  "sentences": 84
+ },
+ "statements": [
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TRIA PROGRAM REAUTHORIZATION ACT OF 2026",
+   "title": "TRIA PROGRAM REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4273.htm",
+   "sentences": [
+    "Viewed that way, characterizing H.R. 7128 as a simple seven-year extension obscures the reality that Congress would be reauthorizing a significant federal program for nearly a decade at once, in tension with our Conference's stated commitment to regular review and reconsideration of federal spending and backstop authorities.",
+    "It also would have evaluated whether a carefully designed opt-out for small insurers from the mandatory availability requirement could work without undermining the long-term health of the program."
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: JANET MELLO FRAUD AMENDMENT",
+   "title": "JANET MELLO FRAUD AMENDMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-25/html/CREC-2026-06-25-pt1-PgH4252-8.htm",
+   "sentences": [
+    "Mr. Speaker, I have introduced an amendment to the National Defense Authorization Act addressing the massive Janet Mello fraud scandal at Fort Sam Houston and the broader pattern of abuse it has exposed.",
+    "Mr. Speaker, I urge the Rules Committee to make my amendment in order for the third year. ____________________"
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "title": "FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3169.htm",
+   "sentences": [
+    "Mr. Chair, as an eighth-generation Tennessee farmer, I rise in strong support of the Farm, Food, and National Security Act of 2026.",
+    "Mr. Chair, I urge my colleagues to stand with America's farmers and rural communities and vote ``yes'' on the Farm, Food, and National Security Act of 2026."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "title": "VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the SAVE America Act because nothing matters more than securing our elections.",
+    "It requires proof of citizenship for voter registration and voter ID for Federal elections.",
+    "Congressional Democrats sat silent as the Biden administration allowed millions of illegal immigrants into the United States.",
+    "The SAVE America Act reinforces that voting is a right only of citizens, not just anyone within our borders.",
+    "I urge my colleagues to pass the SAVE America Act."
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT",
+   "title": "HOUSING FOR THE 21ST CENTURY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-09/html/CREC-2026-02-09-pt1-PgH2050.htm",
+   "sentences": [
+    "I am proud that my bipartisan bill, the Housing Supply Expansion Act of 2025, was included in the Housing for the 21st Century Act.",
+    "The result has been less construction, higher costs, and fewer opportunities for working families to own where they live.",
+    "Yet, manufactured housing is one of the most effective ways to expand housing supply quickly and affordably.",
+    "Mr. Speaker, I rise in strong support of the Housing for the 21st Century Act."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPEAL OF SENATE PAYDAY PROVISION",
+   "title": "REPEAL OF SENATE PAYDAY PROVISION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH1988-2.htm",
+   "sentences": [
+    "Yet, just like the SAVE Act, the bill sat on Leader Thune's desk week after week, month after month.",
+    "Hours before our vote, I introduced the first standalone bill to kill that provision.",
+    "I also cosponsored Representative Austin Scott's legislation, which achieved the same outcome.",
+    "I introduced a resolution that would have enabled Speaker Johnson to argue the unconstitutionality of the Senate payday provision and to ask the courts to strike it down.",
+    "I support real accountability."
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025",
+   "title": "DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2002-2.htm",
+   "sentences": [
+    "Mr. Speaker, I was proud to vote in favor of the Working Families Tax Cut Act to deliver tax relief to millions of Americans that included no tax on tips, no tax on overtime, and support for small businesses, so what does the D.C. Council do?",
+    "This means a waitress working in a Washington, D.C., restaurant gets taxed on her tips on her D.C. tax return while her counterpart in Virginia doesn't get taxed on their Virginia tax return.",
+    "They are squeezing every penny out of working families over less than 1 percent of their budget because they can't spend responsibly.",
+    "Mr. Speaker, I support this resolution disapproving of D.C.'s tax grab."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "title": "IN REMEMBRANCE OF THE HONORABLE DOUG LaMALFA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH231-3.htm",
+   "sentences": [
+    "Long before I served with him on the Ag Committee, I came to consider him a very worthy opponent, and I will miss those days very dearly as I move forward.",
+    "We will be praying for them in the days ahead."
+   ]
+  },
+  {
+   "date": "2026-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STANDING FOR ELECTION INTEGRITY",
+   "title": "STANDING FOR ELECTION INTEGRITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-06/html/CREC-2026-01-06-pt1-PgH5-3.htm",
+   "sentences": [
+    "Mr. Speaker, do we rubberstamp fraudulent election results or stand for election integrity?",
+    "The American people remember that election well, and they remember those Members of Congress who turned their backs on election integrity and principle. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DENOUNCING THE HORRORS OF SOCIALISM",
+   "title": "DENOUNCING THE HORRORS OF SOCIALISM",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4883-2.htm",
+   "sentences": [
+    "From the breadlines of Eastern Europe to the failed Communist regimes of Cuba and Venezuela, socialism promises equality but delivers it selectively.",
+    "Mr. Speaker, I rise today in support of H. Con. Res. 58, titled: ``Denouncing the Horrors of Socialism.'' It is a shame that I have to defend the obvious, but it is necessary because, unfortunately, across the Nation, progressive Democrats are increasingly cozy with the failed, discredited ideology."
+   ]
+  },
+  {
+   "date": "2025-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPEAL OF SENATE NOTIFICATION REQUIREMENTS RELATING TO LEGAL PROCESS ON DISCLOSURES OF SENATE DATA",
+   "title": "REPEAL OF SENATE NOTIFICATION REQUIREMENTS RELATING TO LEGAL PROCESS ON DISCLOSURES OF SENATE DATA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgH4790.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 6019, a bill that I am proud to be an original cosponsor of.",
+    "Today, I have introduced H. Res. 892, a House resolution that empowers Speaker Johnson to bring this issue before the courts and challenge the so-called Senate payday provision as blatantly unconstitutional.",
+    "Mr. Speaker, I urge my colleagues to support Representative Scott's legislation and to support my resolution so we can stand up for the integrity of Congress, uphold the Constitution, and restore public trust in this institution."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4595-3.htm",
+   "sentences": [
+    "Mr. Speaker, the folks I represent are still reeling from historic Bidenflation, the effects of the border crisis, and the regulatory agenda of the last administration.",
+    "Mr. Speaker, I rise today to oppose the Senate's provision that allows Senators to make financial gain off illegal government surveillance.",
+    "I fully support holding those radical agents accountable and the ongoing investigations into their misdeeds, yet no elected officials should profit from the political calculation of leftwing bureaucrats and judges."
+   ]
+  },
+  {
+   "date": "2025-09-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "title": "STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+   "sentences": [
+    "Mr. Chair, I rise in support of my amendment to H.R. 3838, Streamlining Procurement for Effective Execution of Delivery and the National Defense Authorization Act for Fiscal Year 2026.",
+    "Mr. Chair, in closing, I thank Congressman Fulcher for cosponsoring this amendment, and I urge my colleagues to join me in supporting accountability by ensuring that we get answers to how this fraud was able to steal from military families and taxpayers undetected from 2016 through 2023."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "title": "DIGITAL ASSET MARKET CLARITY ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of the CLARITY Act, which provides long-overdue updates aimed at protecting the future of digital assets, encouraging growth, and protecting American consumers.",
+    "The Securities and Exchange Commission under former Chair Gary Gensler went far outside the agency's statutory mandate in many ways, especially with cryptocurrencies.",
+    "The CLARITY Act will strengthen transparency and accountability for consumers.",
+    "Let's pass the CLARITY Act for the good of this country."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ANTI-CBDC SURVEILLANCE STATE ACT",
+   "title": "ANTI-CBDC SURVEILLANCE STATE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3427.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 1919, the Anti-CBDC Surveillance State Act.",
+    "Establishing a central bank digital currency would not only usurp consumers' privacy and individual freedoms, but it would also hinder free market innovation.",
+    "Digital assets are here to stay.",
+    "They wasted no time exploring ways to set up a surveillance state digital currency managed and micromanaged by the Federal Government.",
+    "It is why he issued an executive order prohibiting a CBDC.",
+    "Mr. Speaker, today the House will vote on the GENIUS Act, short for the Guiding and Establishing National Innovation for U.S. Stablecoins Act.",
+    "The bill, which was introduced in the Senate by my friend and fellow Tennessean, Senator Bill Hagerty, provides a clear regulatory framework for the issuance of payment stablecoins.",
+    "By establishing this regulatory clarity, this bill will drive significant demand for stablecoins.",
+    "This bill will ensure issuers back stablecoins with high-quality liquid assets, a major win for the American consumer.",
+    "The GENIUS Act includes consumer protections and enables innovators to do what they do best.",
+    "It also happens to strengthen the U.S. dollar's reserve currency status.",
+    "The vote before the House would make that ban permanent, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING SUPREME COURT RULING ON NATIONWIDE INJUNCTIONS",
+   "title": "SUPPORTING SUPREME COURT RULING ON NATIONWIDE INJUNCTIONS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3026-4.htm",
+   "sentences": [
+    "Mr. Speaker, today, I rise in support of this morning's ruling from the Supreme Court that will greatly reform the ability of rogue district court judges to issue nationwide injunctions.",
+    "According to a Politico article this morning, with this ruling, the Supreme Court said that in most cases, judges can only grant relief to the parties who brought a particular lawsuit and may not extend those decisions to protect other individuals without going through the process of converting a suit into a class action.",
+    "Please join me in congratulating the Supreme Court for this outstanding ruling. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BENEFITS OF THE ONE BIG, BEAUTIFUL BILL",
+   "title": "BENEFITS OF THE ONE BIG, BEAUTIFUL BILL",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2975.htm",
+   "sentences": [
+    "With the One Big Beautiful Bill Act, we are saying yes to opportunity, yes to working families, and yes to an economy that grows from the bottom up.",
+    "Mr. Speaker, it would be hard for me to count the number of job creators I have met in Tennessee's Sixth Congressional District since I came to Congress in 2019, but I can tell you that nearly all of them emphasized to me the need for tax certainty and for tax and regulatory relief.",
+    "It puts many of our law enforcement officers in a tax bracket that costs them more money.",
+    "Fortunately, the One Big Beautiful Bill Act ensures that our brave law enforcement officers won't be taxed on their overtime pay. ____________________",
+    "I urge my colleagues in the Senate to pass this bill without delay."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: BIG, BEAUTIFUL BILL IMPACT ON BORDER SECURITY",
+   "title": "BIG, BEAUTIFUL BILL IMPACT ON BORDER SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2982-9.htm",
+   "sentences": [
+    "The bill delivers for the American people in many ways, not the least of which is border security.",
+    "Under the last administration, 1,504 Iranians were caught crossing the border illegally.",
+    "We still don't know how many of them were on the terrorist watch list.",
+    "Last month, zero illegal immigrants were released into the U.S., compared to 62,000 a year ago in May.",
+    "Indeed, President Trump secured the border in record time, a master class in leadership, without a blank check from Congress.",
+    "Now, it is on the Senate to pass the One Big Beautiful Bill Act and give the President the resources he needs to keep the border secure.",
+    "The bill will fund more boots on the ground, more deportations, and the critical border wall. ____________________"
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HOMEBUYERS PRIVACY PROTECTION ACT",
+   "title": "HOMEBUYERS PRIVACY PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2876.htm",
+   "sentences": [
+    "That information, which is referred to as a trigger lead, is then often sold by the credit bureaus to data brokers and other lenders without the consumer's knowledge or approval."
+   ]
+  },
+  {
+   "date": "2025-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE FIRST 100 DAYS",
+   "title": "THE FIRST 100 DAYS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1764-3.htm",
+   "sentences": [
+    "After 4 years of unprecedented illegal immigration under President Biden, our borders are finally under control.",
+    "He said he would end divisive and anti-American DEI policies in schools across the country.",
+    "The Border Patrol reported a 94 percent drop in illegal immigrant encounters at our southern border compared to the same month last year under Joe Biden.",
+    "We heard the last administration claim time and time again that Congress would need to pass legislation to secure the border.",
+    "We heard a blank check would end the unprecedented illegal immigration happening at our southern border.",
+    "Yet, last month, President Trump's Border Patrol reported only 7,181 illegal crossings compared to 137,473 similar crossings during the same month in 2024.",
+    "In Tennessee specifically, President Trump's tariffs and economic policies have brought about millions of dollars in new investment and countless new jobs.",
+    "I am confident we will pass a reconciliation bill that gets large parts of the President's vision for restoring the greatness of America across the finish line."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "title": "DISAPPROVING THE RULE SUBMITTED BY THE BUREAU OF CONSUMER FINANCIAL PROTECTION RELATING TO \"OVERDRAFT LENDING: VERY LARGE FINANCIAL INSTITUTIONS\"",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1519.htm",
+   "sentences": [
+    "Mr. Speaker, I share with you today a story of a lady in one of the towns in my district, Lafayette, who said to me fairly recently: ``Please don't take away my overdraft protection.'' If the Consumer Financial Protection Bureau requires banks to charge no more than $5 for a $200 overdraft, we will likely see an end to that service altogether.",
+    "Mr. Speaker, I urge my colleagues to vote for this resolution in defense of financial institutions that choose to extend overdraft lifelines to their customers who need them."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 500 DAYS SINCE OCTOBER 7 ATTACK",
+   "title": "500 DAYS SINCE OCTOBER 7 ATTACK",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH826.htm",
+   "sentences": [
+    "It was the deadliest assault on Israel and the Jewish community since the Holocaust.",
+    "I commend President Trump and Israeli Prime Minister Netanyahu for their efforts to secure the recent cease-fire agreement.",
+    "It is imperative that the United States show unwavering support for Israel and the Jewish community so that Hamas terrorists or any other bad actors never attempt another attack on our closest ally in the Middle East, Israel. ____________________",
+    "I urge my colleagues to keep the events of that horrific day top of mind."
+   ]
+  }
+ ]
+}

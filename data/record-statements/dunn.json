@@ -1,0 +1,65 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "dunn",
+ "name": "Neal P. Dunn",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 5,
+  "sentences": 8
+ },
+ "statements": [
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIRST RESPONDER NETWORK AUTHORITY REAUTHORIZATION ACT OF 2026",
+   "title": "FIRST RESPONDER NETWORK AUTHORITY REAUTHORIZATION ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-20/html/CREC-2026-04-20-pt1-PgH2967-6.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues on both sides of the aisle to support this bill."
+   ]
+  },
+  {
+   "date": "2025-09-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-19/html/CREC-2025-09-19-pt1-PgE883-4.htm",
+   "sentences": [
+    "His All-Holiness is a champion of religious liberty, engaging in dialogues with leaders of Judaism, Christianity, and Islam."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "title": "WELCOMING HIS ALL-HOLINESS ECUMENICAL PATRIARCH BARTHOLOMEW",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgE870-3.htm",
+   "sentences": [
+    "His All-Holiness is a champion of religious liberty, engaging in dialogues with leaders of Judaism, Christianity, and Islam."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "title": "SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+   "sentences": [
+    "Mr. Chair, I rise today in support of H.R. 2483, the SUPPORT for Patients and Communities Reauthorization Act."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOURNING THE LOSS OF WALTON COUNTY'S SHERIFF DEPUTY WILLIAM \"WILL\" PAUL THOMAS MAY",
+   "title": "MOURNING THE LOSS OF WALTON COUNTY'S SHERIFF DEPUTY WILLIAM \"WILL\" PAUL THOMAS MAY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgE304-4.htm",
+   "sentences": [
+    "Deputy May's courageous actions underscore the dangers that law enforcement faces every day while protecting our communities.",
+    "Deputy May went above and beyond during his 11-year career in law enforcement.",
+    "On top of his impressive law enforcement career, he was a dedicated husband to his wife, Crystal, and an exemplary father to his four children: Zane, Clarice, Layla, and Tracker.",
+    "May his sacrifice serve as a reminder that this body must always support our law enforcement and ensure that they have all the support necessary to safely protect our communities. ____________________"
+   ]
+  }
+ ]
+}

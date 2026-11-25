@@ -1,0 +1,341 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "stanton",
+ "name": "Greg Stanton",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 27,
+  "sentences": 86
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "title": "WATER RESOURCES DEVELOPMENT ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5850.htm",
+   "sentences": [
+    "Mr. Speaker, I also rise today in support of the Water Resources Development Act, and I personally thank Ranking Member Larsen, Chairman Graves, and the Water Resources and Environment Subcommittee for their important work on this legislation.",
+    "I urge my colleagues to support this critical bill."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STOPPING POLITICAL DISCRIMINATION IN DISASTER ASSISTANCE ACT",
+   "title": "STOPPING POLITICAL DISCRIMINATION IN DISASTER ASSISTANCE ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5893.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1342, the Stopping Political Discrimination in Disaster Assistance Act, introduced by Representative Perry.",
+    "On the campaign trail, while discussing water policy with Governor Newsom, he said, if California did not divert more water to farmers, ``we won't give him money to put out all his fires.'' Announcing aid for Alaska last October, he did not talk about the damage.",
+    "I support H.R. 1342, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: STRONGER ENGAGEMENT FOR INDIAN HEALTH NEEDS ACT OF 2025",
+   "title": "STRONGER ENGAGEMENT FOR INDIAN HEALTH NEEDS ACT OF 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5568.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of my bipartisan bill, H.R. 741, the Stronger Engagement for Indian Health Needs Act.",
+    "Deep disparities exist between the health of American Indian, Alaska Native, and Native Hawaiian communities and the broader American population.",
+    "Access and quality of care are impacted by high vacancies at Indian Health Service facilities.",
+    "It creates the position of Assistant Secretary for Indian Health at HHS, giving Native communities a voice at the highest levels of Department leadership.",
+    "It means faster hiring, better retention, and a direct line to the Secretary on every matter affecting Indian health.",
+    "This is a meaningful step forward, and I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SECURE AMERICA ACT",
+   "title": "SECURE AMERICA ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to this extreme Republican budget bill, an additional $40 billion to ICE, an agency that has already received an unprecedented amount of taxpayer funds with zero reforms, zero accountability, not a single dollar in this bill to lower the cost of living, nothing for families drowning under Trump's tariffs, nothing for skyrocketing grocery bills, nothing for the gas prices that have been driven up by a failing war of choice in Iran."
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: COMMITMENTS TO TAIWAN",
+   "title": "COMMITMENTS TO TAIWAN",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-15/html/CREC-2026-05-15-pt1-PgH3541-3.htm",
+   "sentences": [
+    "Taiwan's legislature has passed a landmark special defense budget, a show of serious commitment to its own self-defense.",
+    "Phoenix has become the epicenter of the semiconductor industry."
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR DISPOSITION OF SENATE AMENDMENT TO H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "title": "PROVIDING FOR DISPOSITION OF SENATE AMENDMENT TO H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-27/html/CREC-2026-03-27-pt2-PgH2793-6.htm",
+   "sentences": [
+    "Let me tell you what is not a joke: Cybersecurity experts going without pay on the same day Iran hacked the Director of the FBI, FEMA being dismantled in real time, or TSA agents launching GoFundMe accounts to pay for gas and groceries.",
+    "I urge my colleagues to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPANDING APPALACHIA'S BROADBAND ACCESS ACT",
+   "title": "EXPANDING APPALACHIA'S BROADBAND ACCESS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2647.htm",
+   "sentences": [
+    "Mr. Speaker, I support H.R. 2474, the Expanding Appalachia's Broadband Access Act, as amended.",
+    "Mr. Speaker, I support H.R. 2474, the Expanding Appalachia's Broadband Access Act, as amended, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: REPORT ON STATE OF REAL ESTATE PORTFOLIO OF GSA",
+   "title": "REPORT ON STATE OF REAL ESTATE PORTFOLIO OF GSA",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2648.htm",
+   "sentences": [
+    "Mr. Speaker, I support H.R. 6480, legislation introduced by me and cosponsored by Representative Scott Perry."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FEDERAL BUILDING THREAT NOTIFICATION ACT",
+   "title": "FEDERAL BUILDING THREAT NOTIFICATION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2649.htm",
+   "sentences": [
+    "Right now, in this political climate, Federal employees are being targeted, online, in person, and in the buildings where they work.",
+    "Mr. Speaker, I support H.R. 6481, the Federal Building Threat Notification Act, and I urge my colleagues to join me in supporting this important bill."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SMART SPACE ACT OF 2026",
+   "title": "SMART SPACE ACT OF 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2650.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 7388, the Smart Space Act, as amended.",
+    "Mr. Speaker, I support this bill and urge my colleagues to do the same.",
+    "Mr. Speaker, I support H.R. 7388, the Smart Space Act, as amended, and urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTHORIZING THE USE OF THE CAPITOL GROUNDS FOR THE NATIONAL PEACE OFFICERS' MEMORIAL SERVICE AND THE NATIONAL HONOR GUARD AND PIPE BAND EXHIBITION",
+   "title": "AUTHORIZING THE USE OF THE CAPITOL GROUNDS FOR THE NATIONAL PEACE OFFICERS' MEMORIAL SERVICE AND THE NATIONAL HONOR GUARD AND PIPE BAND EXHIBITION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgH2651.htm",
+   "sentences": [
+    "The National Fraternal Order of Police will host this event to honor the Federal, State, and local law enforcement officers who lost their lives in the line of duty in the year 2025.",
+    "In my home State of Arizona, we honor Officer Gabriel Facio of the Apache Junction Police Department, who was killed in the line of duty in June 2025.",
+    "Officer Facio served with the Apache Junction Police Department for nearly 4 years and had previously served as an officer in the city of Phoenix.",
+    "He graduated top of his class from the Arizona Law Enforcement Academy after graduating magna cum laude from Arizona State University.",
+    "Their service and sacrifice remind us that the dangers our law enforcement officers face are real and they are ever-present.",
+    "In addition to the families and friends of the deceased, event organizers expect 25,000 police officers from around the country to be in attendance.",
+    "At a time of hyperpartisanship in this body, it is good that we can come together unanimously in a bipartisan way to support the law enforcement officers and their families who have paid the ultimate sacrifice in support of their communities.",
+    "Mr. Speaker, I rise in support of H. Con. Res. 73, legislation introduced by myself and Representative Perry.",
+    "Mr. Speaker, I support this bipartisan resolution and urge my colleagues to do the same.",
+    "Mr. Speaker, I support H. Con. Res. 73."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "title": "RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+   "sentences": [
+    "It is time to end Trump's illegal tariffs on Canada, his tariffs on United States' biggest trading partner, Mexico, and the so-called liberation day tariffs.",
+    "Trump's tariffs have been a massive tax on the American people, costing an average household $1,000 per household just in the last year.",
+    "These tariffs have led to slower job growth, a declining manufacturing industry, and less investment.",
+    "These tariffs have inflicted real damage on our relationship with Canada.",
+    "Trump's constant insults, threats, and these punishing tariffs have turned one of our best friends away from us and toward the People's Republic of China.",
+    "I urge my colleagues, Republicans and Democrats alike, send Trump a clear message that he can't unilaterally wage a trade war against one of our strongest allies and biggest trading partners.",
+    "Mr. Speaker, I rise in support of H.J. Res. 72."
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 202",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 2025; PROVIDING FOR CONSIDERATION OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2107-7.htm",
+   "sentences": [
+    "Mr. Speaker, my Republican colleagues are trying to use today's procedural rule vote to sneak in a provision that would block a vote on Trump's tariffs for the next 6 months.",
+    "I have a bill to end Trump's tariffs on Mexico, the United States' number one trading partner, that Republicans have been stalling for months.",
+    "They have also blocked our bills to end the tariffs on Canada and the so-called liberation day tariffs.",
+    "These tariffs have been a disaster for American families and businesses.",
+    "Domestic manufacturing is in a downturn.",
+    "Farmers are suffering, and the tariffs cost the average American household over $1,000 per household in the last year alone, according to the nonpartisan Tax Foundation.",
+    "They would rather cross their fingers or pray that the Supreme Court settles this.",
+    "A vote for this rule is a vote in favor of Trump's illegal tariffs.",
+    "I urge my colleagues, Republican and Democratic alike, to vote ``no.''"
+   ]
+  },
+  {
+   "date": "2026-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CHAOS AT DEPARTMENT OF HOMELAND SECURITY",
+   "title": "CHAOS AT DEPARTMENT OF HOMELAND SECURITY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2015-4.htm",
+   "sentences": [
+    "I won't stop until that happens. ____________________"
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FIFTEENTH ANNIVERSARY OF ARIZONA MASS SHOOTING",
+   "title": "FIFTEENTH ANNIVERSARY OF ARIZONA MASS SHOOTING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH140.htm",
+   "sentences": [
+    "Through GIFFORDS, the organization she cofounded with Mark Kelly, she leads the fight for a future free from gun violence, not with bitterness, but with courage, determination, and with hope."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRESIDENT TRUMP'S ILLEGAL TARIFFS",
+   "title": "PRESIDENT TRUMP'S ILLEGAL TARIFFS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5945-8.htm",
+   "sentences": [
+    "Mr. Speaker, no matter who you are shopping for this holiday season, you will be paying a lot more due to Trump's illegal tariffs.",
+    "Until Congress stands up to Trump and his illegal, reckless tariffs, things won't get better.",
+    "Arizona families will continue to face uncertainty, but the Speaker of this House is about to send Congress home for the holidays without a single vote to rein in the President's abuse of tariff power, not one vote."
+   ]
+  },
+  {
+   "date": "2025-11-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ADDRESSING THE HOUSING CRISIS",
+   "title": "ADDRESSING THE HOUSING CRISIS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-21/html/CREC-2025-11-21-pt1-PgH4891-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today with deep concerns about the Trump administration's policies that will increase homelessness in America.",
+    "Last week, in the middle of the funding cycle, HUD changed their Continuum of Care grant criteria, cutting funding for permanent support of housing by over 50 percent.",
+    "Mr. Speaker, 170,000 of our fellow Americans will risk falling back into homelessness.",
+    "Before I served as mayor of Phoenix, I chaired Maricopa County's Continuum of Care."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: WELCOMING THE HONORABLE ADELITA S. GRIJALVA TO THE HOUSE OF REPRESENTATIVES",
+   "title": "WELCOMING THE HONORABLE ADELITA S. GRIJALVA TO THE HOUSE OF REPRESENTATIVES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4594-2.htm",
+   "sentences": [
+    "She is the youngest woman ever elected to the Tucson Unified School Board, serving 20 years, then a Pima County supervisor, fighting for working families, affordable housing, and early childhood education.",
+    "She will be the 218th and final signature on the discharge petition to force the Trump administration to release the Epstein files, delivering long overdue justice and accountability for hundreds of victims abused by rich and powerful men."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXTREME HEAT CAUCUS",
+   "title": "EXTREME HEAT CAUCUS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4405-2.htm",
+   "sentences": [
+    "Their work is critical to combat extreme heat and the greater climate crisis.",
+    "Members of the Extreme Heat Caucus and I are fighting for the Federal workforce that handles extreme heat to be reinstated.",
+    "I am glad to see the study one step closer to law, and I will keep working to get the Extreme Weather and Heat Response Modernization Act across the finish line, as well."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: TERMINATING TOMATO SUSPENSION AGREEMENT",
+   "title": "TERMINATING TOMATO SUSPENSION AGREEMENT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-22/html/CREC-2025-07-22-pt1-PgH3546-4.htm",
+   "sentences": [
+    "Madam Speaker, I rise today in strong opposition to the Department of Commerce's decision to terminate the Tomato Suspension Agreement and slap a 20 percent tariff on tomatoes imported from Mexico.",
+    "I urge the Commerce Department to reverse course. ____________________"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid or SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MOURNING LOSS OF OFFICER GABRIEL FACIO",
+   "title": "MOURNING LOSS OF OFFICER GABRIEL FACIO",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-10/html/CREC-2025-06-10-pt1-PgH2603.htm",
+   "sentences": [
+    "Mr. Speaker, I rise today to mourn the tragic loss of Officer Gabriel Facio of the Apache Junction Police Department.",
+    "He began his law enforcement career with the Phoenix Police Department, and nearly 4 years ago joined the Apache Junction Police Department."
+   ]
+  },
+  {
+   "date": "2025-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: EXPRESSION OF OUTRAGE ON NATIONAL DAY OF AWARENESS FOR MISSING AND MURDERED INDIGENOUS WOMEN AND GIRLS",
+   "title": "EXPRESSION OF OUTRAGE ON NATIONAL DAY OF AWARENESS FOR MISSING AND MURDERED INDIGENOUS WOMEN AND GIRLS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgH1841-5.htm",
+   "sentences": [
+    "Despite some progress towards justice for victims and their families, Trump's budget announced Friday strips millions of dollars from public safety and criminal justice programs across Indian Country."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENOUGH OF TRUMP'S CHAOS",
+   "title": "ENOUGH OF TRUMP'S CHAOS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1553-6.htm",
+   "sentences": [
+    "My colleagues and I introduced a resolution to this body yesterday reasserting that critical authority."
+   ]
+  },
+  {
+   "date": "2025-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: AUTHORIZING THE USE OF THE CAPITOL GROUNDS FOR THE NATIONAL PEACE OFFICERS MEMORIAL SERVICE AND THE NATIONAL HONOR GUARD AND PIPE BAND EXHIBITION",
+   "title": "AUTHORIZING THE USE OF THE CAPITOL GROUNDS FOR THE NATIONAL PEACE OFFICERS MEMORIAL SERVICE AND THE NATIONAL HONOR GUARD AND PIPE BAND EXHIBITION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1429-5.htm",
+   "sentences": [
+    "This incredibly important event, which is hosted by the National Fraternal Order of Police, will honor Federal, State, and local law enforcement officers who lost their lives performing their duties in the year 2024.",
+    "In addition to the family and friends of the deceased, event organizers expect up to 25,000 police officers from around the country to be in attendance.",
+    "Among those honored and remembered will be Officer Adam R. Buckner of the Tucson Police Department, Officer Joshua Briese of the Gila River Police Department, Detective Ryan So of the Scottsdale Police Department, and Officer Zane Tristan Coolidge of the Phoenix Police Department.",
+    "Police Officer Zane Coolidge was shot in the line of duty while responding to reports of larceny, passing away at the hospital.",
+    "He served with the Phoenix Police Department for 5 years and is survived by his wife and infant daughter.",
+    "Mr. Speaker, 23-year-old Joshua Briese was shot and killed while responding to a disturbance call in the Gila River Indian Community.",
+    "He had served with the Gila River Police Department for less than 1 year and was still completing field training.",
+    "We owe a special debt of gratitude to this family that has lost two of their family members, police officers who died in the line of duty.",
+    "A United States Navy veteran who served with the Scottsdale Police Department for 9 years, Detective So is survived by his wife and three daughters.",
+    "This is an important event to honor police officers who died in the line of duty and also to honor those living who are willing to die in the line of duty to serve their community.",
+    "I rise in support of H. Con. Res. 9, which authorizes the use of the Capitol Grounds for the 44th Annual National Peace Officers' Memorial Service on May 15, 2025.",
+    "Therefore, I support this resolution, and I urge my colleagues to do the same."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "title": "HALT ALL LETHAL TRAFFICKING OF FENTANYL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-06/html/CREC-2025-02-06-pt1-PgH533-4.htm",
+   "sentences": [
+    "Had I been present, I would have voted YEA on Roll Call No. 32, Amendment No. 2 to H.R. 27, and YEA on Roll Call No. 33, Final Passage of H.R. 27, HALT Fentanyl Act. ____________________"
+   ]
+  },
+  {
+   "date": "2025-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PASSING AID TO ASSIST CALIFORNIA WILDFIRES",
+   "title": "PASSING AID TO ASSIST CALIFORNIA WILDFIRES",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH205-3.htm",
+   "sentences": [
+    "Anyone in the West will tell you that climate change is making wildfires more frequent and more dangerous, not just in California but everywhere.",
+    "This body has a real immediate duty to address the threat of worsening wildfires, and I have introduced legislation to get State and local governments emergency FEMA resources to fight wildfires and protect people and property."
+   ]
+  }
+ ]
+}

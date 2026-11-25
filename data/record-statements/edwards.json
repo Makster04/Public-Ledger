@@ -1,0 +1,256 @@
+{
+ "about": "What this member said on the floor, from the Congressional Record: their own words only, and of those the sentences that name an alignment question's phrases or make a commitment. Written by npm run record:collect (scripts/collect-record.mjs).",
+ "person": "edwards",
+ "name": "Chuck Edwards",
+ "built": "2026-11-25",
+ "counts": {
+  "speeches": 21,
+  "sentences": 55
+ },
+ "statements": [
+  {
+   "date": "2026-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PREVENTIVE HEALTH SAVINGS ACT",
+   "title": "PREVENTIVE HEALTH SAVINGS ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-11-18/html/CREC-2026-11-18-pt1-PgH6266.htm",
+   "sentences": [
+    "This bill directs the Congressional Budget Office to look further ahead when evidence shows preventive care could reduce Federal spending.",
+    "Mr. Speaker, I rise in support of the Preventive Health Savings Act, and I sincerely thank my colleague Congressman Jay Obernolte for his work on this legislation.",
+    "The Preventive Health Savings Act is a commonsense step toward improving how Congress evaluates preventive health policies, and I urge my colleagues to support it."
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: IN THE MATTER OF ALLEGATIONS RELATING TO REPRESENTATIVE CHUCK EDWARDS",
+   "title": "IN THE MATTER OF ALLEGATIONS RELATING TO REPRESENTATIVE CHUCK EDWARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-01/html/CREC-2026-09-01-pt1-PgH5389-2.htm",
+   "sentences": [
+    "Even the communications selected by the committee showed reciprocity: staff initiating dinners and activities, expressing affection, complimenting me, making future plans, and maintaining relationships after their employment ended.",
+    "I am going to spare this body the time to review all of those details, but a few points bear discussing.",
+    "I am asking you to distinguish between conduct that you might personally have handled differently and conduct that warrants the solemn judgment of censure by the United States House of Representatives.",
+    "I am asking for fair treatment.",
+    "I am asking you to decide whether the punishment before you is supported by the evidence, proportional to the conduct actually established, and consistent with the standards that this House should apply to every Member, regardless of party or circumstance."
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PRIORITIZING REINING IN OUR NATIONAL DEBT",
+   "title": "PRIORITIZING REINING IN OUR NATIONAL DEBT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4534.htm",
+   "sentences": [
+    "Mr. Speaker, our national debt has now surpassed $39 trillion, and every second that we fail to address it, that number continues to grow, placing an even greater burden on future generations.",
+    "That means supporting our national defense, strengthening border security, helping communities recover from disasters like Hurricane Helene, and funding the essential functions of government while still looking for every opportunity to eliminate waste, fraud, and abuse.",
+    "We didn't create a $39 trillion debt overnight, and we are not going to solve it overnight, but every responsible spending decision moves us in the right direction.",
+    "It is time to restore fiscal responsibility, reduce the deficit, and leave the next generation with a far stronger financial future."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: VETERANS 2ND AMENDMENT PROTECTION ACT",
+   "title": "VETERANS 2ND AMENDMENT PROTECTION ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3684-5.htm",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of H.R. 1041, the Veterans 2nd Amendment Protection Act.",
+    "Under current practice, a veteran who simply needs help managing their VA benefits can be reported to the FBI's background check system and lose their Second Amendment rights without ever appearing before a judge.",
+    "Mr. Speaker, I urge my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CASHLESS BAIL REPORTING ACT",
+   "title": "CASHLESS BAIL REPORTING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3471-3.htm",
+   "sentences": [
+    "We must stand with victims, support law enforcement, and put public safety first.",
+    "That is why I rise today in support of the Cashless Bail Reporting Act."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FUNDING DISASTER RELIEF",
+   "title": "FUNDING DISASTER RELIEF",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-04-30/html/CREC-2026-04-30-pt1-PgH3298.htm",
+   "sentences": [
+    "We cannot allow Washington to continue this dysfunction and derail disaster recovery or let the Disaster Relief Fund run dry.",
+    "Mr. Speaker, I urge my colleagues to act immediately, end the political games, reopen the Department of Homeland Security operations, and fully replenish the Disaster Relief Fund so that western North Carolina can continue rebuilding without interruption. ____________________"
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8029, PAY OUR HOMELAND DEFENDERS ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1128, EXPRESSING THE SUPPORT OF THE HOUSE OF REPRES",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 8029, PAY OUR HOMELAND DEFENDERS ACT; PROVIDING FOR CONSIDERATION OF H. RES. 1128, EXPRESSING THE SUPPORT OF THE HOUSE OF REPRESENTATIVES FOR THE DEPARTMENT OF...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/html/CREC-2026-03-25-pt1-PgH2688-2.htm",
+   "sentences": [
+    "Mr. Speaker, I urge my colleagues, please, fund DHS now."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; AND PROVIDING FOR CONSIDERATION OF H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPRO",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; AND PROVIDING FOR CONSIDERATION OF H.R. 7147, DEPARTMENT OF HOMELAND SECURITY APPROPRIATIONS ACT, 2026; AND FOR...",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1177-2.htm",
+   "sentences": [
+    "This package delivers through critical investments in border security, national infrastructure, and stronger support for our servicemembers and their families.",
+    "Mr. Speaker, I rise today in support of the rule.",
+    "This is a return to responsible governance, and I am proud to support it."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "title": "FINANCIAL SERVICES AND GENERAL GOVERNMENT AND NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2026",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgH734.htm",
+   "sentences": [
+    "Just as important, this bill cuts off funding pathways that could benefit the Taliban and other terrorist organizations, and it continues to shine a light on Russian atrocities in Ukraine, including the abduction of Ukrainian children.",
+    "This legislation reflects American leadership, strength, and moral clarity, and I urge my colleagues to support it.",
+    "Mr. Chairman, I urge all of my colleagues to support this bill."
+   ]
+  },
+  {
+   "date": "2026-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: SUPPORTING AFFORDABLE HOUSING",
+   "title": "SUPPORTING AFFORDABLE HOUSING",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2026-01-09/html/CREC-2026-01-09-pt1-PgH594-3.htm",
+   "sentences": [
+    "Housing affordability is one of the top issues that I hear about in western North Carolina.",
+    "Working families, seniors on fixed incomes, first responders, and young people are often priced out of the communities where they live and work because housing supply just hasn't kept up with demand.",
+    "Mr. Speaker, I rise today in support of H.R. 5184, the Affordable HOMES Act.",
+    "Mr. Speaker, this legislation focuses on solutions and not bureaucracy, and I urge my colleagues to support H.R. 5184. ____________________"
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ENSURING FAIRNESS AND INTEGRITY IN FEDERAL TRIBAL RECOGNITION",
+   "title": "ENSURING FAIRNESS AND INTEGRITY IN FEDERAL TRIBAL RECOGNITION",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5118.htm",
+   "sentences": [
+    "That undermines the integrity of the recognition process, and it threatens the credibility of Indian Country as a whole.",
+    "In the case of the Lumbee, this amendment would in one stroke create the largest Tribe in the country, granting immediate access to already overstretched Bureau of Indian Affairs and Indian Health Service resources.",
+    "As a member of the House Appropriations Committee, I am proud of the work that we have done to provide robust funding for the Indian Health Service and other critical priorities for federally recognized Tribes in the fiscal year 2026 Interior appropriations bill.",
+    "Mr. Speaker, I urge my colleagues to oppose this provision and uphold the process put in place by Congress decades ago to ensure fairness and integrity in Federal Tribal recognition. ____________________"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MODERNIZING ALL VETERANS AND SURVIVORS CLAIMS PROCESSING ACT",
+   "title": "MODERNIZING ALL VETERANS AND SURVIVORS CLAIMS PROCESSING ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-09-15/html/CREC-2025-09-15-pt1-PgH4290.htm",
+   "sentences": [
+    "The mental health crisis among America's veterans has reached an alarming level.",
+    "Mr. Speaker, I urge a ``yes'' vote on this legislation."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: MEDICAID SHOULD SERVE THE TRULY NEEDY",
+   "title": "MEDICAID SHOULD SERVE THE TRULY NEEDY",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2936-2.htm",
+   "sentences": [
+    "Mr. Speaker, there is a lot of noise coming from the other side claiming that House Republicans are cutting Medicaid with our commonsense work requirements.",
+    "Medicaid should serve the truly needy, not those who refuse to help themselves.",
+    "House Republicans don't cut Medicaid.",
+    "We restore its integrity because work requirements are not a punishment."
+   ]
+  },
+  {
+   "date": "2025-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEWSLETTER FROM CONGRESSMAN CHUCK EDWARDS",
+   "title": "NEWSLETTER FROM CONGRESSMAN CHUCK EDWARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgE605-2.htm",
+   "sentences": [
+    "Mr. Speaker, I include in the Record the following newsletter to give an update to my constituents on the One Big Beautiful Bill Act, post office disruptions, National Police Week, and Helene recovery."
+   ]
+  },
+  {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEWSLETTER FROM CONGRESSMAN CHUCK EDWARDS",
+   "title": "NEWSLETTER FROM CONGRESSMAN CHUCK EDWARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgE567-2.htm",
+   "sentences": [
+    "Mr. Speaker, I include in the Record the following newsletter to give an update to my constituents on the One Big Beautiful Bill Act, post office disruptions, National Police Week, and Helene recovery."
+   ]
+  },
+  {
+   "date": "2025-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: NEWSLETTER FROM CONGRESSMAN CHUCK EDWARDS",
+   "title": "NEWSLETTER FROM CONGRESSMAN CHUCK EDWARDS",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgE515.htm",
+   "sentences": [
+    "Mr. Speaker, I include in the Record the following newsletter to give an update to my constituents on the SAVE Act, No Rogue Rulings Act, and reforming U.S. foreign assistance."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "title": "PROVIDING FOR CONSIDERATION OF H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2220-2.htm",
+   "sentences": [
+    "They scream: Tax cuts for billionaires.",
+    "We are strengthening the child tax credit, making the paid leave credit permanent, and repealing the Democrats' IRS overreach targeting gig workers with their $600 rule.",
+    "This bill stands for working families, economic freedom, and common sense."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT",
+   "title": "ONE BIG BEAUTIFUL BILL ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+   "sentences": [
+    "It secures our southern border and unleashes American energy independence.",
+    "It invests nearly $70 billion to finish the border wall, expand surveillance technology, and hire thousands of new border agents.",
+    "It gives Customs and Border Protection the tools they finally need to stop illegal crossings, combat drug trafficking, and protect our communities.",
+    "Secure the border and power America with American energy."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "title": "PANDEMIC UNEMPLOYMENT FRAUD ENFORCEMENT ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1093-2.htm",
+   "sentences": [
+    "Mr. Speaker, I strongly urge support of this bill."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "title": "CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+   "sentences": [
+    "Those demands include fixing our border crisis once and for all.",
+    "I plan to help deliver on those demands by fixing how Washington works and implementing President Trump's agenda to make America first.",
+    "Mr. Chair, I urge strong support for this resolution."
+   ]
+  },
+  {
+   "date": "2025-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: THE CONSTITUTIONAL CONCEALED CARRY RECIPROCITY ACT",
+   "title": "THE CONSTITUTIONAL CONCEALED CARRY RECIPROCITY ACT",
+   "url": "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgE57.htm",
+   "sentences": [
+    "Mr. Speaker, I include in the Record the following newsletter to give an update to my constituents on the Constitutional Concealed Carry Reciprocity Act."
+   ]
+  }
+ ]
+}
