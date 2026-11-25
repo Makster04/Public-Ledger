@@ -24,6 +24,20 @@ export const QPOINTS={statement:3,statementWithRecord:1,ratingMax:3,s:1.5,act:1.
 export const MIN_POINTS=3;
 export const IDEOLOGY_MIN_CATEGORIES=3;
 export const IMPORTANCE=[[1,'Least'],[2,'Less'],[3,'Somewhat'],[4,'More'],[5,'Most']];
+// My alignment's key questions (approved Nov. 25, 2026): in a category with more than KEY_PER_CATEGORY questions, the ones
+// with the most bills, amendments and roll calls coded to them (coded: public/question-stances.json "coded"), ties in the
+// file's order; the rest are under "Other". A smaller category's questions are all key. Which questions are shown first only;
+// an answer to any question counts the same.
+export const KEY_PER_CATEGORY=10;
+export function keyQuestions(questions,coded={},n=KEY_PER_CATEGORY){
+  const byCat=new Map();(questions||[]).forEach((q,i)=>(byCat.get(q.cat)||byCat.set(q.cat,[]).get(q.cat)).push({q,i}));
+  const key=new Set();
+  for(const list of byCat.values()){
+    const top=list.length>n?[...list].sort((a,b)=>(coded?.[b.q.id]||0)-(coded?.[a.q.id]||0)||a.i-b.i).slice(0,n):list;
+    for(const x of top)key.add(x.q.id);
+  }
+  return key;
+}
 const VOTE_KINDS=new Set(['y','n','vote','state']);
 export const isVoteKind=k=>VOTE_KINDS.has(k);
 const day=d=>String(d||'').slice(0,10);

@@ -33,3 +33,19 @@ test('the questions we added for votes the quiz has no question for, and what wa
   const sides=id=>Q.questions.find(q=>q.id===id).sides;
   assert.deepEqual(sides('abortion'),['Pro-life','Pro-choice']);assert.deepEqual(sides('corporate-tax'),['Raise','Lower']);assert.deepEqual(sides('military-spending'),['Increase','Decrease']);
 });
+
+// My alignment's key questions (approved Nov. 25, 2026): the ten with the most coded bills and votes in a bigger category.
+import {keyQuestions,KEY_PER_CATEGORY} from '../public/question-scores.js';
+import fsK from 'node:fs';
+test('each category\'s key questions: at most ten, the most coded first, ties in file order; small categories whole',()=>{
+  const qs=[...Array(12)].map((_,i)=>({id:`a${i}`,cat:'a'})).concat([{id:'b0',cat:'b'},{id:'b1',cat:'b'}]);
+  const coded={a11:50,a3:9,a5:9};
+  const key=keyQuestions(qs,coded);
+  assert.equal([...key].filter(x=>x.startsWith('a')).length,10);
+  assert.ok(key.has('a11')&&key.has('a3')&&key.has('a5'),'the most coded');
+  assert.ok(!key.has('a10')&&!key.has('a9'),'uncoded ties go by file order, so the last ones drop');
+  assert.ok(key.has('b0')&&key.has('b1'),'a small category is all key');
+  const S=JSON.parse(fsK.readFileSync(new URL('../public/question-stances.json',import.meta.url),'utf8'));
+  const real=keyQuestions(Q.questions,S.coded);
+  for(const c of Q.categories){const n=Q.questions.filter(q=>q.cat===c.id).length,k=Q.questions.filter(q=>q.cat===c.id&&real.has(q.id)).length;assert.equal(k,Math.min(n,KEY_PER_CATEGORY),c.id);}
+});
