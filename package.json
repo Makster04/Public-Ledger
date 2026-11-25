@@ -60,6 +60,7 @@
     "consistency:evaluate": "python3 scripts/consistency/evaluate.py",
     "test:consistency": "python3 -m unittest discover -s test/consistency -v",
     "bills:index": "node scripts/build-bill-index.mjs",
+    "bills:issues": "node scripts/build-bill-issues.mjs",
     "bills:candidates": "node scripts/question-bills.mjs",
     "bills:record": "node scripts/build-question-record.mjs && node scripts/build-promises.mjs",
     "statements:find": "node scripts/question-statements.mjs --find",

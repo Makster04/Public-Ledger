@@ -13,7 +13,8 @@ import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRo
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {npOf,npLine,npDetails,npChip} from './nonprofits.js';
-import {legislationModel,gridHTML,cardHTML as lgCardHTML,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote,leanTag as groupLeanTag,leanLegendHTML} from './legislation-page.js';
+import BILL_QUESTIONS from './bill-questions.js';
+import {legislationModel,gridHTML,cardHTML as lgCardHTML,issueChips,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote,leanTag as groupLeanTag,leanLegendHTML} from './legislation-page.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
@@ -3998,21 +3999,25 @@ function resultsLine(){
 // lawmakers on each side, the groups that wanted it passed or opposed it with their records and the money they put into
 // the races tracked here, whether the lawmakers each group helped voted its way, who gains, its sponsors here and the
 // lobbying on it. It replaces the Bills page (#bills links open it).
-let lgState={q:'',area:'',status:'',sort:'money'},LG_BILLS=null;
-const lgBills=()=>LG_BILLS||(LG_BILLS=legislationModel(DATA,{scored:PVP_BILLS,voteParty:window.VOTE_PARTY,orgOf:k=>groupInfo(DATA,k).org}));
+let lgState={q:'',issue:'',status:'',sort:'money'},LG_BILLS=null;
+const lgBills=()=>LG_BILLS||(LG_BILLS=legislationModel(DATA,{scored:PVP_BILLS,voteParty:window.VOTE_PARTY,orgOf:k=>groupInfo(DATA,k).org,
+  billQuestions:BILL_QUESTIONS,questions:QUESTIONS.questions,categories:QUESTIONS.categories}));
 const LG_DIR=new Map([...SENATE,...HOUSE].map(x=>[x.id,x]));
 const lgName=id=>byId[id]?.name||BASIC[id]?.name||LG_DIR.get(id)?.name||id;
 function renderLegislation(init){
   if(init)lgState={...lgState,...init};
-  const bills=lgBills(),areas=[...new Set(bills.map(b=>b.area).filter(Boolean))].sort();
-  app.innerHTML=gridHTML(bills,lgState,{areas});
+  const bills=lgBills();
+  app.innerHTML=gridHTML(bills,lgState);
   const page=app.querySelector('.lg-page');
   const redraw=()=>{const list=filterBills(bills,lgState);$('#lg-cards').innerHTML=list.length?list.map(lgCardHTML).join(''):'<p class="muted">No bill matches.</p>';
     $('#lg-count').textContent=list.length===bills.length?`${bills.length} bills · ${bills.filter(b=>b.st.key==='law').length} became law`:`${list.length} of ${bills.length} bills`;};
   $('#lg-q').addEventListener('input',e=>{lgState.q=e.target.value;redraw();});
   page.addEventListener('change',e=>{const k=e.target.dataset.lg;if(k){lgState[k]=e.target.value;redraw();}});
   const open=c=>{location.hash=`#legislation-${c.dataset.bill}`;};
-  page.addEventListener('click',e=>{const c=e.target.closest('[data-bill]');if(c&&!e.target.closest('a'))open(c);});
+  // An issue chip on a card shows the bills under that issue, in place of opening the bill.
+  page.addEventListener('click',e=>{const i=e.target.closest('[data-issue]');
+    if(i){lgState.issue=i.dataset.issue;const sel=page.querySelector('[data-lg="issue"]');if(sel)sel.value=lgState.issue;redraw();page.scrollIntoView({block:'start',behavior:'smooth'});return;}
+    const c=e.target.closest('[data-bill]');if(c&&!e.target.closest('a'))open(c);});
   page.addEventListener('keydown',e=>{const c=e.target.closest('[data-bill]');if(c&&e.target===c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();open(c);}});
 }
 // Colors each group name marked data-group by its lean (public/group-lean.json), and adds the reason to its hover text.
@@ -4061,6 +4066,7 @@ function renderBill(id){
     <header class="lg-bh"><div class="page-eyebrow">${esc(b.num)}${b.congress?` · ${ordinal(b.congress).toUpperCase()} CONGRESS`:''}${b.law?` · ${esc(String(b.law).toUpperCase())}`:''}</div>
       <h1 class="lg-h1">${esc(b.title)}</h1>
       <div class="row lg-chips"><span class="chip lg-st lg-${b.st.key}">${esc(b.st.label)}${b.status==='law'&&b.date?` · ${fmtDate(b.date)}`:''}</span>${b.area?`<span class="chip">${esc(b.area)}</span>`:''}${pfText(b.pf)?`<span class="chip">People First: ${esc(pfText(b.pf))}</span>`:''}${u?`<a class="chip" href="${u}" target="_blank" rel="noopener">Congress.gov ↗</a>`:''}</div>
+      ${issueChips(b)}
       ${b.summary?`<p class="lg-lede">${esc(b.summary)}${b.summarySrc?.u?` <a class="lg-src" href="${esc(b.summarySrc.u)}" target="_blank" rel="noopener" title="${esc(b.summarySrc.t||'')}">Summary source ↗</a>`:''}</p>`:''}
       ${b.note?`<p class="small muted">${esc(b.note)}</p>`:''}</header>
     <nav class="lg-tabs" aria-label="On this page">${jump.map(([k,l],n)=>`<button type="button" data-jump="${k}"${n===0?' class="active"':''}>${esc(l)}</button>`).join('')}</nav>
@@ -4079,6 +4085,8 @@ function renderBill(id){
       ${b.issue?`<p class="small muted" style="margin:6px 0 0"><b>Counts in Your match</b> under "${esc(ISSBY[b.issue]?.label||b.issue)}": sponsoring or cosponsoring it counts toward "${esc(ISSBY[b.issue]?.[b.side]||b.side)}".</p>`:''}
       <div class="small" style="margin-top:6px" data-lob="${esc(b.id)}"></div></div>
     <p class="small muted">Sources: Senate and House roll calls; the bill's summary and status sources (linked); groups' own records (linked); FEC records of the money in the races tracked here. People who give are added up, never named.</p></section>`;
+  // An issue chip on a bill's page opens the tab with that issue's bills.
+  app.querySelector('.lg-bh')?.addEventListener('click',e=>{const i=e.target.closest('[data-issue]');if(!i)return;lgState={...lgState,q:'',status:'',issue:i.dataset.issue};location.hash='#legislation';});
   app.querySelector('.lg-tabs').addEventListener('click',e=>{const t=e.target.closest('[data-jump]');if(!t)return;app.querySelectorAll('.lg-tabs button').forEach(x=>x.classList.toggle('active',x===t));document.getElementById(t.dataset.jump)?.scrollIntoView({block:'start',behavior:'smooth'});});
   mountBillLobbying(app);bindTips(app);hoverTips(app);paintLean(app);
 }

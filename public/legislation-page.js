@@ -6,8 +6,42 @@
 // profile's funder records), whether any of them lists few donors, its People First score, and whether the lawmakers a
 // group helped voted its way. Money in a race isn't proof it changed a vote; the pages say so.
 import {billFamilies} from './bills.js';
+import {ISSUE_ICON,topicCategory} from './issue-icons.js';
 
 export const LEG={summaryLines:3};
+// ---------- Each bill's issues (since Nov. 25, 2026): the site's issue categories (public/questions.json) ----------
+// First, the categories of the alignment questions the bill is coded to (public/bill-questions.js, from
+// data/question-bills.json), each with those questions. Then its subject area's categories (below). A bill with neither
+// gets the category its title, then its area, names (issue-icons.js topicCategory), if any. Shown and filtered by only;
+// nothing here is used in a grade.
+export const AREA_ISSUES={'Government ethics':['governance'],'Government oversight & accountability':['governance'],'Ethics & money in politics':[],
+  'Finance & crypto':['economic'],'Banking & finance':['economic'],'Labor & workers':['economic'],'Trade & tariffs':['economic'],'Budget & fiscal policy':['economic'],
+  'Budget, taxes & health':['economic','healthcare'],'Economy & public health':['economic','healthcare'],'Climate, health & taxes':['environmental','healthcare','economic'],
+  'Health care':['healthcare'],'Social Security & Medicare':['domestic'],'Foreign policy & defense':['foreign'],'Elections & voting':['electoral'],
+  'Immigration & border':['immigration'],'Reproductive rights':['social'],'Civil rights':['social'],'Civil liberties':[],
+  'Technology & industrial policy':['technology','economic'],'Guns & public safety':['domestic'],'Infrastructure & transportation':['infrastructure','transportation'],
+  'Criminal justice & policing':['criminal'],Housing:['housing']};
+// (crypto is Technology, where the alignment questions put it)
+const CRYPTO=/crypto|stablecoin|digital asset/i;
+// [{id, name, icon, questions: [question text]}]. billQuestions: public/bill-questions.js; questions and categories:
+// public/questions.json's.
+export function billIssues(b,{billQuestions={},questions=[],categories=[]}={}){
+  const qById=new Map(questions.map(q=>[q.id,q])),name=new Map(categories.map(c=>[c.id,c.name])),out=new Map();
+  const add=(c,q)=>{if(!c||!name.has(c))return;if(!out.has(c))out.set(c,[]);if(q&&!out.get(c).includes(q))out.get(c).push(q);};
+  for(const id of billQuestions[b.id]||[]){const q=qById.get(id);if(q)add(q.cat,q.q);}
+  for(const c of AREA_ISSUES[b.area]||[])add(c);
+  if(CRYPTO.test(b.title||''))add('technology');
+  if(!out.size)add(topicCategory(b.title||'')||topicCategory(b.area||''));
+  return [...out].map(([id,qs])=>({id,name:name.get(id),icon:ISSUE_ICON[id]||'',questions:qs}));
+}
+// The issues the bills fall under, with how many bills each: the filter's choices.
+export function issueChoices(bills){
+  const m=new Map();for(const b of bills)for(const i of b.issues||[]){const x=m.get(i.id)||{...i,n:0};x.n++;m.set(i.id,x);}
+  return [...m.values()].sort((a,b)=>a.name.localeCompare(b.name));
+}
+const issueTip=i=>i.questions.length?`Coded to the question${i.questions.length===1?'':'s'}: ${i.questions.join(' · ')}`:`From the bill's subject`;
+// A bill's issue chips; clicking one shows the bills under that issue (app.js).
+export const issueChips=b=>(b.issues||[]).length?`<div class="lg-issues">${b.issues.map(i=>`<button type="button" class="lg-issue" data-issue="${esc(i.id)}" title="${esc(issueTip(i))}" aria-label="${esc(`Show ${i.name} bills. ${issueTip(i)}`)}"><span aria-hidden="true">${i.icon}</span> ${esc(i.name)}</button>`).join('')}</div>`:'';
 export const STATUS=[['','Any status'],['law','Became law'],['passed','Passed one chamber'],['not','Didn\'t pass']];
 export const SORTS=[['money','Most money behind it'],['newest','Newest'],['pf','People First score']];
 const TYPE={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.',hres:'H.Res.',sres:'S.Res.',hconres:'H.Con.Res.',sconres:'S.Con.Res.',samdt:'S.Amdt.',hamdt:'H.Amdt.'};
@@ -67,7 +101,7 @@ export const moneyTotal=m=>m?m.for+m.against+m.routed+m.pac:0;
 
 // Every bill with what its card and page show. data: research.json; scored: the People First bills with their scores
 // (app.js PVP_BILLS); voteParty: public/vote-party.json "votes"; orgOf(key): a group's name.
-export function legislationModel(data,{scored=data?.bills||[],voteParty=null,orgOf=k=>k}={}){
+export function legislationModel(data,{scored=data?.bills||[],voteParty=null,orgOf=k=>k,billQuestions={},questions=[],categories=[]}={}){
   const gm=groupMoney(data||{});
   return billFamilies(data||{},scored).map(e=>{
     const n=billNumber(e.id),st=billStatus(e);
@@ -77,7 +111,7 @@ export function legislationModel(data,{scored=data?.bills||[],voteParty=null,org
     const byMoney=(a,b)=>moneyTotal(b.money)-moneyTotal(a.money)||String(a.org).localeCompare(String(b.org));
     sides.for.sort(byMoney);sides.against.sort(byMoney);
     const pf=e.work&&(e.work.status==='scored'||e.work.status==='even')?e.work.score:null;
-    return {...e,num:n.num,congress:n.congress,st,votes,sides,pf,
+    return {...e,num:n.num,congress:n.congress,st,votes,sides,pf,issues:billIssues(e,{billQuestions,questions,categories}),
       moneyFor:sides.for.reduce((t,g)=>t+moneyTotal(g.money),0),moneyAgainst:sides.against.reduce((t,g)=>t+moneyTotal(g.money),0),
       fewDonors:[...sides.for,...sides.against].filter(g=>g.money?.fewDonors).length};
   });
@@ -93,10 +127,10 @@ export function helpedVoted(bill,g){
   return {n,ok};
 }
 // The bills a search, issue, status and sort pick out. bills: legislationModel().
-export function filterBills(bills,{q='',area='',status='',sort='money'}={}){
+export function filterBills(bills,{q='',area='',issue='',status='',sort='money'}={}){
   const words=String(q).toLowerCase().split(/\s+/).filter(Boolean);
-  const text=b=>[b.title,b.num,...(b.keys||[]),b.area,b.summary,...b.sides.for.map(g=>g.org),...b.sides.against.map(g=>g.org)].join(' ').toLowerCase();
-  const list=bills.filter(b=>(!area||b.area===area)&&(!status||b.st.key===status)&&words.every(w=>text(b).includes(w)));
+  const text=b=>[b.title,b.num,...(b.keys||[]),b.area,...(b.issues||[]).map(i=>i.name),b.summary,...b.sides.for.map(g=>g.org),...b.sides.against.map(g=>g.org)].join(' ').toLowerCase();
+  const list=bills.filter(b=>(!area||b.area===area)&&(!issue||(b.issues||[]).some(i=>i.id===issue))&&(!status||b.st.key===status)&&words.every(w=>text(b).includes(w)));
   const when=b=>String(b.when||b.date||'');
   const cmp={money:(a,b)=>(b.moneyFor+b.moneyAgainst)-(a.moneyFor+a.moneyAgainst)||when(b).localeCompare(when(a)),
     newest:(a,b)=>when(b).localeCompare(when(a)),pf:(a,b)=>(b.pf??-999)-(a.pf??-999)||when(b).localeCompare(when(a))}[sort]||((a,b)=>0);
@@ -111,7 +145,7 @@ export function cardHTML(b){
   const signed=b.status==='law'&&b.date?`Signed ${day(b.date)}`:null;
   return `<article class="card sen-card hc lg-card" tabindex="0" role="link" data-bill="${esc(b.id)}" aria-label="Open ${esc(b.title)}">
     <div class="lg-top"><div class="row" style="gap:5px"><span class="chip">${esc(b.num)}${b.congress?` · ${ordinal(b.congress)} Congress`:''}</span><span class="chip lg-st lg-${b.st.key}">${esc(b.st.label)}</span></div>
-      <a class="name lg-name" href="#legislation-${esc(b.id)}">${esc(b.title)}</a><div class="hc-sub">${esc([b.area,signed].filter(Boolean).join(' · '))}</div></div>
+      <a class="name lg-name" href="#legislation-${esc(b.id)}">${esc(b.title)}</a><div class="hc-sub">${esc([b.area,signed].filter(Boolean).join(' · '))}</div>${issueChips(b)}</div>
     ${b.summary?`<p class="lg-sum">${esc(b.summary)}</p>`:''}
     ${head('🗳','Votes','The roll calls on record, and how each party voted')}
     <div class="lg-votes">${last.length?last.map(v=>`<div class="lg-v"><b>${esc(v.chamber)} · ${esc(v.result||'')}</b><span>${esc([day(v.date),partySplit(v.party)].filter(Boolean).join(' · '))}</span></div>`).join(''):'<div class="lg-v"><span>No roll call on record</span></div>'}</div>
@@ -124,14 +158,14 @@ export function cardHTML(b){
     <div class="hc-ft"><span>${esc(b.status==='law'?(b.law||'Public law'):stageLine(b))}</span><span>Open →</span></div>
   </article>`;
 }
-// The tab's main page: heading, search and filters, and the cards. state: {q, area, status, sort}.
-export function gridHTML(bills,state={},{areas=[]}={}){
+// The tab's main page: heading, search and filters, and the cards. state: {q, issue, status, sort}.
+export function gridHTML(bills,state={},{issues=issueChoices(bills)}={}){
   const list=filterBills(bills,state),law=bills.filter(b=>b.st.key==='law').length;
   return `<section class="lg-page"><div class="directory-heading"><div><div class="page-eyebrow">THE BILLS BEHIND THE RECORD</div><h1 class="lg-h1">Legislation</h1>
     <p class="lg-lede">Every bill the site follows: where it stands, how each party voted, which groups took sides, and the money those groups put into the races tracked here. Money in a race isn't proof it changed a vote.</p></div>
     <span class="small muted" id="lg-count">${list.length===bills.length?`${bills.length} bills · ${law} became law`:`${list.length} of ${bills.length} bills`}</span></div>
     <div class="lg-filters"><input class="lg-in" id="lg-q" type="search" placeholder="Search by bill name, number, issue or group" aria-label="Search bills" value="${esc(state.q||'')}">
-      <select class="lg-sel" data-lg="area" aria-label="Issue"><option value="">All issues</option>${areas.map(a=>`<option value="${esc(a)}"${a===state.area?' selected':''}>${esc(a)}</option>`).join('')}</select>
+      <select class="lg-sel" data-lg="issue" aria-label="Issue"><option value="">All issues</option>${issues.map(i=>`<option value="${esc(i.id)}"${i.id===state.issue?' selected':''}>${i.icon} ${esc(i.name)} (${i.n})</option>`).join('')}</select>
       <select class="lg-sel" data-lg="status" aria-label="Status">${STATUS.map(([k,l])=>`<option value="${k}"${k===(state.status||'')?' selected':''}>${esc(l)}</option>`).join('')}</select>
       <select class="lg-sel" data-lg="sort" aria-label="Sort">${SORTS.map(([k,l])=>`<option value="${k}"${k===(state.sort||'money')?' selected':''}>${esc(l)}</option>`).join('')}</select></div>
     <div class="grid hc-grid" id="lg-cards">${list.length?list.map(cardHTML).join(''):'<p class="muted">No bill matches.</p>'}</div></section>`;

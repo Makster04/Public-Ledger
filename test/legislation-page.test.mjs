@@ -76,3 +76,40 @@ test('the site\'s own research: every bill has a number and status, and its roll
   const ob=bills.find(b=>b.id==='119-hr-1');assert.ok(ob.votes.length>=3,'the One Big Beautiful Bill Act\'s House and Senate roll calls');
   assert.ok(ob.sides.for.length&&ob.sides.against.length);
 });
+
+// Each bill's issues (since Nov. 25, 2026): the site's issue categories, from the questions it's coded to, then its area.
+import {billIssues,issueChoices,issueChips,AREA_ISSUES} from '../public/legislation-page.js';
+import BILL_QUESTIONS from '../public/bill-questions.js';
+import QUESTIONS from '../public/questions.json' with {type:'json'};
+import {current as billQuestionsNow} from '../scripts/build-bill-issues.mjs';
+import fsIssues from 'node:fs';
+
+const QX={questions:QUESTIONS.questions,categories:QUESTIONS.categories};
+test('a bill\'s issues: its questions\' categories with the questions, then its area\'s, then what its title names',()=>{
+  const coded=billIssues({id:'x',title:'Big Bill',area:'Climate, health & taxes'},{billQuestions:{x:['drug-prices','corporate-tax']},...QX});
+  assert.deepEqual(coded.map(i=>i.id),['healthcare','economic','environmental'],'the questions first, then the area adds Environmental');
+  assert.match(coded[0].questions[0],/drug/i);assert.deepEqual(coded[2].questions,[]);assert.equal(coded[0].icon,'🏥');assert.equal(coded[0].name,'Healthcare');
+  assert.deepEqual(billIssues({id:'y',title:'GENIUS Act (stablecoin rules)',area:'Finance & crypto'},QX).map(i=>i.id),['economic','technology'],'crypto is Technology, as the questions have it');
+  assert.deepEqual(billIssues({id:'z',title:'Restore Trust in Congress Act (ban on members\' stock ownership and trading)',area:'Ethics & money in politics'},QX).map(i=>i.id),['domestic'],'from its title, where stock trading sits');
+  assert.deepEqual(billIssues({id:'w',title:'Something',area:null},QX),[]);
+  const cats=new Set(QUESTIONS.categories.map(c=>c.id));
+  for(const [area,list] of Object.entries(AREA_ISSUES))for(const c of list)assert.ok(cats.has(c),`${area}: ${c} is a category`);
+});
+
+test('the tab: every bill it follows has an issue, the filter lists them with counts, and a chip filters',()=>{
+  const data=JSON.parse(fsIssues.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+  const bills=legislationModel(data,{scored:[],billQuestions:BILL_QUESTIONS,...QX});
+  assert.deepEqual(bills.filter(b=>!b.issues.length).map(b=>b.id),[],'no bill without an issue');
+  const aca=bills.find(b=>b.id==='119-hr-1834');assert.equal(aca.issues[0].id,'healthcare');
+  const choices=issueChoices(bills);assert.ok(choices.length>=10);assert.equal(choices.reduce((t,c)=>t+c.n,0),bills.reduce((t,b)=>t+b.issues.length,0));
+  const hc=filterBills(bills,{issue:'healthcare'});assert.ok(hc.length>=3&&hc.every(b=>b.issues.some(i=>i.id==='healthcare')));
+  assert.ok(filterBills(bills,{q:'healthcare'}).some(b=>b.id==='119-hr-1834'),'an issue\'s name finds its bills in the search');
+  const h=gridHTML(bills,{issue:'healthcare'});
+  assert.match(h,/<option value="healthcare" selected>🏥 Healthcare \(\d+\)<\/option>/);assert.match(h,/data-lg="issue"/);
+  assert.match(cardHTML(aca),/<button type="button" class="lg-issue" data-issue="healthcare" title="Coded to the question: [^"]*Affordable Care Act/);
+  assert.equal(issueChips({issues:[]}),'');
+});
+
+test('public/bill-questions.js is up to date with the coding (npm run bills:issues)',()=>{
+  assert.equal(fsIssues.readFileSync(new URL('../public/bill-questions.js',import.meta.url),'utf8'),billQuestionsNow());
+});
