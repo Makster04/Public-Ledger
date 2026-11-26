@@ -2531,7 +2531,8 @@ function midtermCardsHTML(d,year){
   const bar=(side,tot,won,lost)=>{const unk=Math.max(0,tot-won-lost);
     const seg=(cls,v,what)=>v>0?`<i class="mt-seg ${cls}" style="width:${100*v/tot}%" data-tip="${esc(`${side}, ${what}: ${shortMoney(v)} (${pct(v,tot)})`)}"></i>`:'';
     return `<span class="mt-track">${tot>0?`<span class="mt-bar" style="width:${Math.max(1.5,100*tot/most)}%">${seg('won',won,'candidate won')}${seg('lost',lost,'candidate lost')}${seg('open',unk,'result not known yet')}</span>`:''}</span>`;};
-  const order=[...TRACKERS].sort((a,b)=>{const x=Y[a.key],z=Y[b.key];return (z?z.for+z.against:-1)-(x?x.for+x.against:-1);});
+  // Alphabetical, the same in every midterm, so a tracker's card stays in its place when the year changes.
+  const order=[...TRACKERS].sort((a,b)=>a.name.localeCompare(b.name));
   return order.map(t=>{
     const x=Y[t.key],head=`<h3><span aria-hidden="true">${t.emoji}</span> ${esc(t.name)}</h3>`;
     if(!x)return `<article class="mt-card empty">${head}<p class="mt-who">${t.superPacs.length?'No super PAC spending':'No super PAC of its own'}</p>
