@@ -19,6 +19,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES,SUPER_PACS} from './industries.js';
+import {winShare,versus,midtermYears,prevMidterm} from './midterm-trackers.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {CLUB_KEYS,CLUB_LABEL,CLUB_RANGE,chamberCareer,routedStatus} from './career.js';
 import {trackerAboutHTML,trackerPanel as aboutPanel} from './tracker-about.js';
@@ -2515,6 +2516,55 @@ function renderTrackers(key){
     ${waiting.length?`<p class="small muted">Not read yet for ${waiting.length}: ${waiting.map(r=>esc(r.s.name)).join(', ')}.</p>`:''}
     <p class="small muted">From the FEC: the PAC lines in each reviewed profile's reports (the dates are under their name)${t.groupPacs?`, ${esc(Object.keys(t.groupPacs).map(g=>g.toUpperCase()).join(', '))}'s own PAC checks for the whole cycle from its reports,`:''}${t.routed.length?' the gifts routed to them':''}${dCol?`, and the ${t.donors.length} named donors' own checks this cycle (sitting members only, from the FEC's itemized gifts)`:''}. Each person's Big Money Independence tab adds the refresh's whole-cycle PAC list, so its amount can be larger. Senators and House members with basic profiles show theirs on their own Big Money Independence tab once the refresh has read them.</p></section>`;
 }
+// ---------- The trackers' super PACs in the midterms (approved 2026-11-26) ----------
+// One card a tracker for the midterm picked: what its own super PACs spent for and against House and Senate candidates
+// (primaries and generals), with bars of the part that went to candidates who won and who lost, on one scale for every
+// card; on the right, the share of the candidates they backed who won, with an arrow against the midterm before; under
+// Open, each of its super PACs. A tracker without a super PAC of its own says where its money shows instead.
+// public/midterm-trackers.json (npm run superpacs:midterms).
+let mtYear=null,mtCache=null;
+const loadMidterms=()=>mtCache||(mtCache=fetch('/midterm-trackers.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>{if(!d)mtCache=null;return d;}));
+function midtermCardsHTML(d,year){
+  const y=Number(year),Y=d.years[y]?.trackers||{},prev=prevMidterm(d,y),P=prev?d.years[prev]?.trackers||{}:null;
+  const most=Math.max(1,...Object.values(Y).flatMap(x=>[x.for,x.against]));
+  const pct=(v,t)=>t?Math.round(100*v/t)+'%':'—';
+  const bar=(side,tot,won,lost)=>{const unk=Math.max(0,tot-won-lost);
+    const seg=(cls,v,what)=>v>0?`<i class="mt-seg ${cls}" style="width:${100*v/tot}%" data-tip="${esc(`${side}, ${what}: ${shortMoney(v)} (${pct(v,tot)})`)}"></i>`:'';
+    return `<span class="mt-track">${tot>0?`<span class="mt-bar" style="width:${Math.max(1.5,100*tot/most)}%">${seg('won',won,'candidate won')}${seg('lost',lost,'candidate lost')}${seg('open',unk,'result not known yet')}</span>`:''}</span>`;};
+  const order=[...TRACKERS].sort((a,b)=>{const x=Y[a.key],z=Y[b.key];return (z?z.for+z.against:-1)-(x?x.for+x.against:-1);});
+  return order.map(t=>{
+    const x=Y[t.key],head=`<h3><span aria-hidden="true">${t.emoji}</span> ${esc(t.name)}</h3>`;
+    if(!x)return `<article class="mt-card empty">${head}<p class="mt-who">${t.superPacs.length?'No super PAC spending':'No super PAC of its own'}</p>
+      <p class="mt-why">${t.superPacs.length?`Its super PACs didn't spend in the ${y} midterms.`:'Its money reaches campaigns as PAC checks and routed gifts, shown under Tracking Lobby Money on each profile.'}</p></article>`;
+    const w=winShare(x),vs=versus(w,P?winShare(P[t.key]):null,prev);
+    const arrow=vs?.dir==='up'?'<span class="mt-arrow" aria-label="up">▲</span>':vs?.dir==='down'?'<span class="mt-arrow" aria-label="down">▼</span>':'';
+    const cmp=vs?.text||'';
+    const who=x.pacs.length===1?spName(x.pacs[0].id,x.pacs[0].name):`${x.pacs.length} super PACs`;
+    return `<article class="mt-card"><div class="mt-top"><div class="mt-l">${head}<p class="mt-who">${esc(who)}</p>
+        <div class="mt-money"><div class="mt-line"><span class="mt-amt"><span class="mt-for">+${shortMoney(x.for)}</span> supporting</span>${bar('Supporting',x.for,x.forWon,x.forLost)}</div>
+          <div class="mt-line"><span class="mt-amt"><span class="mt-against">−${shortMoney(x.against)}</span> opposing</span>${bar('Opposing',x.against,x.againstWon,x.againstLost)}</div></div></div>
+      <div class="mt-r">${w?`<div class="mt-pct">${w.pct}%${arrow}</div><div class="mt-cap">of the ${w.n} candidate${w.n===1?'':'s'} they backed won${w.open?` (${w.open} not called yet)`:''}</div>`:'<div class="mt-pct none">—</div><div class="mt-cap">backed no candidate</div>'}${cmp?`<div class="mt-cmp">${cmp}</div>`:''}</div></div>
+      <details class="mt-more"><summary><span class="kw-open"></span></summary><h4>Biggest spenders</h4><ol>${x.pacs.map((p,i)=>`<li><span class="mt-rk">${i+1}</span><span class="mt-nm">${esc(spName(p.id,p.name))}</span>
+        <span class="mt-c mt-for">${p.for?'+'+shortMoney(p.for):'—'}<small>supporting</small></span><span class="mt-c mt-against">${p.against?'−'+shortMoney(p.against):'—'}<small>opposing</small></span>
+        <span class="mt-c">${p.supported.n?`${p.supported.won} of ${p.supported.n-p.supported.open}`:'—'}<small>backed won</small></span></li>`).join('')}</ol></details></article>`;}).join('');
+}
+async function renderMidtermTrackers(){
+  const el=$('#sp-midterms');if(!el)return;
+  const d=await loadMidterms();if(!el.isConnected)return;
+  const years=midtermYears(d);
+  if(!years.length){el.innerHTML='';return;}
+  if(!years.includes(mtYear))mtYear=years[0];
+  const Y=d.years[mtYear],prev=prevMidterm(d,mtYear);
+  el.innerHTML=`<section class="mt-sec" aria-labelledby="mt-h">
+    <div class="mt-head"><div><h2 id="mt-h">The trackers' super PACs in the ${mtYear} midterms</h2><p class="small muted">One card a tracker: what its own super PACs spent, and how many of the candidates they backed won.</p></div>
+      ${years.length>1?`<div class="seg mt-years" role="group" aria-label="Midterm">${years.map(y=>`<button type="button" data-y="${y}" class="${y===mtYear?'active':''}" aria-pressed="${y===mtYear}">${y}</button>`).join('')}</div>`:''}</div>
+    <div class="mt-legend" aria-hidden="true"><span><i class="mt-sw won"></i>Candidate won</span><span><i class="mt-sw lost"></i>Candidate lost</span></div>
+    <div class="mt-grid">${midtermCardsHTML(d,mtYear)}</div>
+    <p class="small muted mt-note">Each tracker's own super PACs, as listed on the Trackers page: their spending for and against House and Senate candidates in ${mtYear-1}–${mtYear}, primaries and generals together, from the FEC's file of independent expenditures${Y.through?` (through ${fmtDate(Y.through)})`:''}. A candidate they backed counts once, however much was spent; someone they backed in a primary who lost it counts as lost. Who won: ${Y.results==='fec'?'the FEC\'s official results':'the site\'s race calls (the FEC publishes official results about a year after the election)'}.${prev?` The arrow compares with the ${prev} midterm.`:''}</p>
+  </section>`;
+  el.querySelectorAll('.mt-years button').forEach(b=>b.addEventListener('click',()=>{mtYear=Number(b.dataset.y);renderMidtermTrackers();}));
+  bindTips(el);
+}
 // ---------- Super PACs: every super PAC's spending this cycle (refresh "super-pacs", public/super-pacs.js) ----------
 let spQ='',spSort='total';
 // A candidate's profile on this site, from their FEC candidate ID.
@@ -2522,7 +2572,8 @@ const PROFILE_BY_FEC=(()=>{const m=new Map();for(const s of [...ALL,...BASIC_LIS
 const officeOfCand=id=>({H:'House',S:'Senate',P:'President'})[String(id||'')[0]]||'';
 async function renderSuperPacs(){
   app.innerHTML=`<section class="section"><div class="kicker">Outside money</div><h1>Super PACs</h1>
-    <p class="intro">Every super PAC that has reported spending for or against a federal candidate this cycle, from the FEC's own totals of independent expenditures.</p><div id="sp-body"><p class="small muted">Loading…</p></div></section>`;
+    <p class="intro">Every super PAC that has reported spending for or against a federal candidate this cycle, from the FEC's own totals of independent expenditures.</p><div id="sp-midterms"></div><div id="sp-body"><p class="small muted">Loading…</p></div></section>`;
+  renderMidtermTrackers();
   let d=null;try{const r=await fetch('/api/superpacs',{cache:'no-store'});d=r.ok?await r.json():null;}catch{}
   if(location.hash.slice(1).split('-')[0]!=='superpacs')return;
   const body=$('#sp-body');

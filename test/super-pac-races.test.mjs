@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {TRACKER,helpToWin,fecName,ELECTION_LABEL} from '../public/trackers.js';
-import {parseCsv,isoDate,seatOf,partyOf,trackerOfSpender,superPacRaces} from '../scripts/build-super-pac-races.mjs';
+import {parseCsv,isoDate,seatOf,partyOf,trackerOfSpender,superPacRaces,latestVersions} from '../scripts/build-super-pac-races.mjs';
 
 const races=JSON.parse(fs.readFileSync(new URL('../public/super-pac-races.json',import.meta.url),'utf8'));
 
@@ -64,7 +64,7 @@ test('the builder: CSV fields, dates, seats, parties, the latest version of each
   assert.deepEqual(['DEMOCRATIC PARTY','Republican Party','INDEPENDENT','LIBERTARIAN',''].map(partyOf),['D','R','I','L','']);
   assert.equal(trackerOfSpender('C1','UNITED DEMOCRACY PROJECT (UDP)'),'aipac');assert.equal(trackerOfSpender('C00836221','x'),'crypto','by committee ID');assert.equal(trackerOfSpender('C1','Fairshake'),'crypto');assert.equal(trackerOfSpender('C1','Some PAC'),null);
   const r=(o)=>({spe_id:UDP,spe_nam:'UNITED DEMOCRACY PROJECT (UDP)',cand_id:'H1',cand_name:'ALPHA, ANN',can_office:'H',can_office_state:'KY',can_office_dis:'04',cand_pty_aff:'REPUBLICAN PARTY',sup_opp:'S',ele_type:'P2026',exp_amo:'100',exp_date:'01-MAY-26',file_num:'1',tran_id:'t1',...o});
-  const out=superPacRaces([r({}),r({file_num:'2',exp_amo:'150'}),r({tran_id:'t2',sup_opp:'O',cand_id:'H2',cand_name:'BETA, BOB',exp_amo:'50',exp_date:'20-JUN-26'}),
+  const out=superPacRaces([r({}),r({file_num:'2',prev_file_num:'1',amndt_ind:'A1',exp_amo:'150'}),r({file_num:'3',tran_id:'t2',sup_opp:'O',cand_id:'H2',cand_name:'BETA, BOB',exp_amo:'50',exp_date:'20-JUN-26'}),
     r({spe_id:'C9',spe_nam:'OTHER PAC',tran_id:'t3',cand_id:'H3',cand_name:'GAMMA, CY',cand_pty_aff:'DEMOCRATIC PARTY',ele_type:'G2026',exp_amo:'7'}),
     r({spe_id:'C9',spe_nam:'OTHER PAC',tran_id:'t4',cand_id:'H4',cand_name:'DELTA, DEE',can_office_state:'OH',exp_amo:'7'})]);
   assert.deepEqual(out.rows,[[UDP,'H1','S','P',150],[UDP,'H2','O','P',50]],'the amendment replaces the original; another spender\'s lines are left out');
@@ -75,4 +75,17 @@ test('the builder: CSV fields, dates, seats, parties, the latest version of each
 
 test('FEC names as people write them',()=>{
   assert.equal(fecName('EL-SAYED, ABDUL'),'Abdul El-Sayed');assert.equal(fecName("O'ROURKE, BETO"),"Beto O'Rourke");assert.equal(fecName('Lasher, Micah'),'Micah Lasher');
+});
+
+test('each transaction once: an amended filing replaces the one it amends; separate reports that reuse line numbers all count (Nov. 26, 2026)',()=>{
+  const r=o=>({spe_id:'C1',file_num:'10',tran_id:'001',image_num:'i1',cand_id:'H1',cand_name:'A, B',sup_opp:'S',exp_amo:'100',exp_date:'01-OCT-22',...o});
+  // Congressional Leadership Fund numbers every 24-hour report's line 001: three reports are three expenditures.
+  assert.equal(latestVersions([r({}),r({file_num:'11',image_num:'i2',exp_amo:'200'}),r({file_num:'12',image_num:'i3',exp_amo:'300'})]).length,3);
+  // An amendment (prev_file_num) replaces the whole filing, even when it numbers its lines differently.
+  const amended=latestVersions([r({tran_id:'SE.1'}),r({tran_id:'SE.2',cand_id:'H2'}),r({file_num:'20',prev_file_num:'10',tran_id:'X9',exp_amo:'120'})]);
+  assert.deepEqual(amended.map(x=>[x.file_num,x.exp_amo]),[['20','120']]);
+  // A second amendment replaces the first.
+  assert.deepEqual(latestVersions([r({}),r({file_num:'20',prev_file_num:'10',exp_amo:'120'}),r({file_num:'30',prev_file_num:'20',exp_amo:'130'})]).map(x=>x.exp_amo),['130']);
+  // The same line twice in one filing counts once.
+  assert.equal(latestVersions([r({}),r({})]).length,1);
 });

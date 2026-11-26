@@ -3,8 +3,8 @@
 // cycle's races, primaries and generals: for and against each candidate, with every other candidate in those races, so
 // each profile can show what a tracker's super PACs spent to help them win (for them, and against their opponents in
 // the same election). From the FEC's bulk file of independent expenditures (independent_expenditure_<cycle>.csv, every
-// filing, the 24- and 48-hour notices included): each transaction once, in its latest version (the highest file number
-// for a spender's transaction ID); a tracker's super PACs by committee ID or name (public/trackers.js isOwnSuperPac).
+// filing, the 24- and 48-hour notices included): each transaction once, in its latest version (latestVersions: a filing
+// an amendment replaces is left out); a tracker's super PACs by committee ID or name (public/trackers.js isOwnSuperPac).
 // Writes public/super-pac-races.json:
 //   {about, built, cycle, through, spenders: {committee id: [name, tracker key]},
 //    cands: {candidate id: [name, seat ("H-KY-04", "S-MI"), party ("D", "R", …), elections ("PG": primary, general)]}
@@ -45,14 +45,20 @@ export const partyOf=aff=>{const a=String(aff||'').toUpperCase();return /^DEMOCR
 // The tracker whose own super PAC a spender is, or null.
 export const trackerOfSpender=(id,name)=>TRACKERS.find(t=>t.superPacs.length&&isOwnSuperPac(t,{id,name}))?.key||null;
 
-// Each transaction once: a spender's transaction ID, at its highest file number (an amendment replaces the original).
+// Each transaction once: a filing an amendment replaces (the amendment's prev_file_num) is left out, then a line repeated
+// in the same filing. Until Nov. 26, 2026 the key was a spender's transaction ID at its highest file number, which merged
+// the separate reports of a spender that numbers every report's lines from 001 (Congressional Leadership Fund's 2022
+// spending read as one line) and kept both versions of a line the amendment renumbered (Fellowship PAC's 2026 total read
+// $6.5M, not $4.8M).
 export function latestVersions(records){
-  const latest=new Map();
+  const replaced=new Set();for(const r of records)if(r.prev_file_num)replaced.add(`${r.spe_id}|${r.prev_file_num}`);
+  const seen=new Set(),out=[];
   for(const r of records){
-    const k=`${r.spe_id}|${r.tran_id}`,f=Number(r.file_num)||0,o=latest.get(k);
-    if(!o||f>=o.f)latest.set(k,{f,r});
+    if(replaced.has(`${r.spe_id}|${r.file_num}`))continue;
+    const k=[r.spe_id,r.file_num,r.tran_id,r.image_num,r.cand_id,r.cand_name,r.sup_opp,r.exp_amo,r.exp_date].join('|');
+    if(seen.has(k))continue;seen.add(k);out.push(r);
   }
-  return [...latest.values()].map(({r})=>r);
+  return out;
 }
 // The independent-expenditure file's records (objects by its header).
 export async function readIeRecords(file){
@@ -79,7 +85,7 @@ export function superPacRaces(records,{cycle=2026}={}){
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,spenders,cands,rows};
 }
 
-async function download(file,url,refresh){
+export async function download(file,url,refresh){
   const old=fs.existsSync(file)&&Date.now()-fs.statSync(file).mtimeMs>WEEK;
   if((refresh||old)&&fs.existsSync(file))fs.rmSync(file);
   if(!fs.existsSync(file)){
