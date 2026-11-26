@@ -5,8 +5,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
 import {Readable} from 'node:stream';
-import {lastName,fecResults,siteResults,midtermTrackers,superPacSpending,giftOf,giftTracker,fundedMatchers,fundedTrackers,zipFirstEntry,MIDTERMS} from '../scripts/build-midterm-trackers.mjs';
-import {winShare,versus,midtermYears,prevMidterm,hadMoney,MIN_CANDIDATES,FUNDED_CUTOFF,trendColor,trendPoints,TREND_FULL} from '../public/midterm-trackers.js';
+import {lastName,fecResults,siteResults,midtermTrackers,superPacSpending,giftOf,giftTracker,fundedMatchers,fundedTrackers,zipFirstEntry,legislatorResults,ELECTIONS} from '../scripts/build-midterm-trackers.mjs';
+import {winShare,versus,electionYears,prevElection,hadMoney,MIN_CANDIDATES,FUNDED_CUTOFF,trendColor,trendPoints,TREND_FULL} from '../public/midterm-trackers.js';
 import {TRACKER} from '../public/trackers.js';
 
 const read=f=>fs.readFileSync(new URL('../'+f,import.meta.url),'utf8');
@@ -57,6 +57,14 @@ test('a tracker\'s midterm: spending by side and result, each backed candidate o
   assert.deepEqual(t.pacs.map(p=>[p.id,p.for,p.against]),[[UDP,515,80]]);
 });
 
+test('the winners of an earlier election before the FEC\'s results are out: a House or Senate term starting the January 3 after it',()=>{
+  const people=[{id:{fec:['H4NY16087']},terms:[{type:'rep',start:'2023-01-03'},{type:'rep',start:'2025-01-03'}]},
+    {id:{fec:['H8CA28111','S4CA00694']},terms:[{type:'rep',start:'2023-01-03'},{type:'sen',start:'2025-01-03'}]},
+    {id:{fec:['H2NY99999']},terms:[{type:'rep',start:'2023-01-03'}]},{id:{},terms:[{type:'rep',start:'2025-01-03'}]}];
+  assert.deepEqual([...legislatorResults(2024,people).won].sort(),['H4NY16087','H8CA28111','S4CA00694'],'every FEC ID of a winner; someone who left in 2024 isn\'t one');
+  assert.equal(legislatorResults(2022,people).won.size,4,'2022: the terms starting Jan. 3, 2023');assert.equal(legislatorResults(2020,people).won.size,0);
+});
+
 test('the card: the share who won of the called races, at least 5 candidates, and the arrow against the midterm before',()=>{
   assert.equal(MIN_CANDIDATES,5);
   assert.deepEqual(winShare({supported:{n:9,won:7,open:0}}),{pct:78,n:9,open:0,few:false});
@@ -76,11 +84,11 @@ test('the card: the share who won of the called races, at least 5 candidates, an
   assert.equal(trendColor(0),null);
   assert.deepEqual([trendPoints(-35),trendPoints(12),trendPoints(1)],['−35 pts','+12 pts','+1 pt']);
   assert.equal(versus(before,now,2022).dir,'up');assert.equal(versus(now,now,2022).dir,'same');
-  assert.deepEqual(versus(now,null,2022),{dir:'new',text:'New this midterm: none in 2022'});
+  assert.deepEqual(versus(now,null,2022),{dir:'new',text:'New this election: none in 2022'});
   assert.equal(versus(now,before,null),null);
   const d={years:{2018:{trackers:{}},2022:{trackers:{aipac:{}}},2026:{trackers:{aipac:{},crypto:{}}}}};
-  assert.deepEqual(midtermYears(d),[2026,2022],'2018 has no tracker super PAC spending, so it isn\'t offered');
-  assert.deepEqual([prevMidterm(d,2026),prevMidterm(d,2022),prevMidterm(d,2018)],[2022,2018,null]);
+  assert.deepEqual(electionYears(d),[2026,2022],'a year with no tracker super PAC money isn\'t offered');
+  assert.deepEqual([prevElection(d,2026),prevElection(d,2022),prevElection(d,2018)],[2022,2018,null]);
 });
 
 test('the five lobbies without their own super PACs: gifts matched by company, PAC and employer, and their share of what those super PACs spent',()=>{
@@ -116,12 +124,14 @@ test('the donor files are read as they download: the first file in a zip, past i
   assert.equal(Buffer.concat(chunks).toString(),text);
 });
 
-test('the file the page reads: 2026, 2022 and 2018, with the numbers checked against the FEC files',()=>{
+test('the file the page reads: every House and Senate election from 2018 to 2026, with the numbers checked against the FEC files',()=>{
   const d=JSON.parse(read('public/midterm-trackers.json'));
-  assert.deepEqual(MIDTERMS,[2026,2022,2018]);
-  assert.deepEqual(Object.keys(d.years).sort(),['2018','2022','2026']);
-  assert.ok(Object.values(d.years['2018'].trackers).every(t=>t.kind==='funded'),'no tracker had its own super PAC in 2018; the five funded others');
-  assert.equal(d.years['2022'].results,'fec');
+  assert.deepEqual(ELECTIONS,[2026,2024,2022,2020,2018],'presidential years included (approved 2026-11-26)');
+  assert.deepEqual(Object.keys(d.years).sort(),['2018','2020','2022','2024','2026']);
+  for(const y of ['2018','2020'])assert.ok(Object.values(d.years[y].trackers).every(t=>t.kind==='funded'),`no tracker had its own super PAC in ${y}; the five funded others`);
+  assert.equal(d.years['2022'].results,'fec');assert.equal(d.years['2020'].results,'fec');
+  assert.ok(['fec','legislators'].includes(d.years['2024'].results),'2024: the FEC\'s results, or who took office in January 2025');
+  for(const k of ['aipac','crypto'])assert.equal(d.years['2024'].trackers[k]?.kind,'own',`2024 ${k}: United Democracy Project and Fairshake spent`);
   const u=d.years['2022'].trackers.aipac;assert.deepEqual(u.supported,{n:9,won:7,open:0});assert.ok(Math.abs(u.for+u.against-26.1e6)<0.2e6,`UDP 2022: ${u.for+u.against}`);
   for(const k of ['aipac','crypto','tech'])assert.equal(d.years['2026'].trackers[k]?.kind,'own',`2026 ${k}`);
   for(const k of ['pharma','insurers','oil','defense','wallstreet'])assert.equal(d.years['2026'].trackers[k]?.kind,'funded',`2026 ${k}: the super PACs its companies gave to`);
@@ -135,6 +145,7 @@ test('where the cards show: the top of the Super PACs page, before the cycle\'s 
   const app=read('public/app.js'),css=read('public/remake.css'),pkg=JSON.parse(read('package.json'));
   assert.match(app,/<div id="sp-midterms"><\/div><div id="sp-body">/);
   assert.match(app,/renderMidtermTrackers\(\);/);
+  assert.match(app,/role="group" aria-label="Election"/);assert.match(app,/The trackers' super PACs in the \$\{mtYear\} elections/);
   assert.match(app,/const order=\[\.\.\.TRACKERS\]\.sort\(\(a,b\)=>a\.name\.localeCompare\(b\.name\)\);/,'alphabetical, the same every midterm');
   assert.match(app,/from '\.\/midterm-trackers\.js'/);
   assert.match(app,/<details class="mt-more"><summary><span class="kw-open"><\/span><\/summary>\$\{list\}<\/details>/,'Open at the bottom of each card lists its super PACs');
