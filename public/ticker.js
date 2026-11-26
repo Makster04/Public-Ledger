@@ -10,8 +10,8 @@
 //   lobby money a tracker's PAC checks to sitting members (news.json, from the FEC bulk files)
 //   super PACs  a tracker's own super PAC's spending for or against a candidate (news.json, from the FEC's filings)
 //   FEC reports the campaign reports read (research.json "camp")
-//   site        site updates (score-presentation-log.json headlines, not rule changes; since Nov. 25, 2026 the README's
-//               "What's new" lines, through news.json) and the interest-group ratings read
+//   site        site updates (score-presentation-log.json headlines, not rule changes; since Nov. 25, 2026 the dated lines of
+//               data/site-updates.md, the README's "What's new" until Nov. 26, through news.json) and the interest-group ratings read
 // The strip (approved Nov. 14, 2026, from the mockup) has two parts: TRADES, the newest stock trades (▲ bought, ▼ sold,
 // the company, who, the amount as reported, and how late it was filed), and PAC MONEY, the trackers' newest PAC checks.
 // The cards show the rest (and the PAC checks too): races still counting first, then each kind in turn, so one kind can't
