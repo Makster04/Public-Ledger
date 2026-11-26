@@ -1519,7 +1519,7 @@ function promiseCard(s,it,meta,open){
   const cat=qs[0]?(QUESTIONS.categories.find(c=>c.id===qs[0].cat)?.name||''):'',catId=qs[0]?.cat||null;
   const quote=p.sentence?`…${esc(p.quote)}…`:esc(p.quote),from=p.sentence?`<p class="kw-from">From the sentence: “${esc(p.sentence).replace(esc(p.quote),`<mark>${esc(p.quote)}</mark>`)}”</p>`:'';
   const acts=[...p.acts].sort((a,b)=>b[3].localeCompare(a[3])),shown=4,sideOf=a=>sides.get(a[0]);
-  const actsHTML=acts.length?`<div class="kw-acts"><h6>What ${esc(s.short)} did after the promise (${acts.length})</h6>${acts.map((a,i)=>i<shown?pActRow(a,sideOf(a),meta):`<div class="kw-extra" hidden>${pActRow(a,sideOf(a),meta)}</div>`).join('')}${acts.length>shown?`<button type="button" class="qt-more kw-more" data-n="${acts.length}">Show all ${acts.length} →</button>`:''}</div>`:'';
+  const actsHTML=acts.length?`<details class="kw-acts kw-after"><summary><h6>What ${esc(s.short)} did after the promise (${acts.length})</h6><span class="kw-open" aria-hidden="true"></span></summary>${acts.map((a,i)=>i<shown?pActRow(a,sideOf(a),meta):`<div class="kw-extra" hidden>${pActRow(a,sideOf(a),meta)}</div>`).join('')}${acts.length>shown?`<button type="button" class="qt-more kw-more" data-n="${acts.length}">Show all ${acts.length} →</button>`:''}</details>`:'';
   const before=p.beforeN?`<details class="kw-bg"><summary>Before the promise: ${p.beforeN} action${p.beforeN===1?'':'s'} (background, not counted)</summary>${p.before.map(a=>pActRow(a,sideOf(a),meta)).join('')}${p.beforeN>p.before.length?`<p class="small muted">The latest ${p.before.length} shown.</p>`:''}</details>`:'';
   const label=PSTAT[it.status]?.[2]||it.status,why=(it.status==='alleged'||it.status==='alleged-review')&&p.status==='no-action'?`No bill or vote on it by ${fmtDate(p.deadline)}, ${GRACE_TEXT} after the promise.`:p.why;
   return `<details class="kw-p ${PSTAT[it.status]?.[0]||'t'}" data-status="${it.status}" data-kind="${p.kind}"${open?' open':''}><summary>
@@ -1542,7 +1542,12 @@ function checkCard(s,it,open){
     <div class="kw-acts"><h6>What the record shows</h6><p class="small" style="margin:0">${esc(x.did?.text||'')}</p><p class="kw-meta" style="margin:6px 0 0">${esc(String(x.did?.date||''))}${src(x.did?.src)}</p>${x.record?`<p class="small muted" style="margin:6px 0 0">Context: ${esc(x.record)}${src(x.recordSrc)}</p>`:''}${x.pledge?pledgeBlock(s,x):''}</div></details>`;
 }
 const GRACE_TEXT=`${window.PROMISES?.graceMonths||6} months in office`;
+// A senator's or House member's promises without a full profile come in short in public/promises.json (what the grade
+// needs); the quotes and the record behind them are read from public/promises/<id>.json when this tab opens.
+const fullPromises=s=>s.promises?.length&&!s.promises.some(p=>p.quote)?(s.promisesLoad||=fetch(`/promises/${encodeURIComponent(s.id)}.json`,{cache:'no-cache'})
+  .then(r=>r.ok?r.json():null).then(j=>{if(j?.promises)s.promises=j.promises;}).catch(()=>{})):null;
 function paneWord(s,pane){
+  const loading=fullPromises(s);if(loading){pane.innerHTML='<p class="small muted">Loading their promises…</p>';loading.then(()=>{if(pane.isConnected)paneWord(s,pane);});return;}
   const x=sixOf(s).word,p=x.score,items=wordItems(s),n={};for(const it of items)n[it.status]=(n[it.status]||0)+1;
   // A president's PolitiFact ratings count too (shown in their own block below): Kept, Compromise, Broken; Stalled and In
   // the Works wait.
@@ -1564,7 +1569,7 @@ function paneWord(s,pane){
   const filters=items.length>1?`<div class="kw-filters" role="group" aria-label="Show promises"><button type="button" class="kw-chip on" data-f="all" aria-pressed="true">All ${items.length}</button>${PORDER.filter(k=>m[k]).map(k=>`<button type="button" class="kw-chip" data-f="${k}" aria-pressed="false">${PSTAT[k][1]} ${esc(PSTAT[k][2].replace(/ · needs review/,''))} ${m[k]}</button>`).join('')}${kinds.length>1?`<span class="kw-sep" aria-hidden="true"></span>${kinds.map(([k,c])=>`<button type="button" class="kw-chip" data-k="${k}" aria-pressed="false">${esc(PKIND[k])} ${c}</button>`).join('')}`:''}</div>`:'';
   pane.innerHTML=stFrame(s,'word',{
     res:x,breakdown,
-    sources:['<b>Promises:</b> campaign websites (archived copies, dated), campaign posts, speeches, press releases and signed pledges.','<b>Checked against:</b> roll-call votes, and the bills and amendments they sponsored or cosponsored.','<b>Money pledges:</b> FEC filings.',s.office?'<b>A president:</b> PolitiFact\'s promise tracker.':null].filter(Boolean),
+    sources:[s.basic?'<b>Promises:</b> their own words on the Senate or House floor (the Congressional Record, 2025–26), each tagged by hand to the question it\'s about. Their campaign websites and posts aren\'t read yet.':'<b>Promises:</b> campaign websites (archived copies, dated), campaign posts, speeches, press releases and signed pledges.','<b>Checked against:</b> roll-call votes, and the bills and amendments they sponsored or cosponsored.','<b>Money pledges:</b> FEC filings.',s.office?'<b>A president:</b> PolitiFact\'s promise tracker.':null].filter(Boolean),
     needs:x.needs,
     notes:[['A bill failing','doesn\'t count against them; only their own vote or (co)sponsorship does.'],['Doing nothing','on a promise to act, while others acted on it, reads "Allegedly broken" after '+GRACE_TEXT+' and counts the same as broken. A promise to oppose something waits until something comes up to oppose.'],['Not in Congress yet?','Their promises read "Not tested yet" until they take office.'],['One bill isn\'t enough','to call a promise kept or broken: it reads "Not tested yet" until a second bill on it comes up, unless a reviewer settles it.']],
     evidenceTitle:`Every promise, and what ${esc(s.short||s.name)} did afterward`,

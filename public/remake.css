@@ -1806,3 +1806,17 @@ input, select { accent-color: var(--accent); }
   .al-lk { gap: 4px; }
   .al-lk button { font-size: .72rem; padding: 6px 2px; min-height: 58px; }
 }
+/* Keeps Their Word: what they did after a promise, closed until opened (Nov. 26, 2026). */
+.kw-after > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.kw-after > summary::-webkit-details-marker { display: none; }
+.kw-after > summary h6 { margin: 2px 0; }
+.kw-after[open] > summary { margin-bottom: 8px; }
+.kw-after > summary + .kw-a { border-top: 0; }
+.kw-open { flex: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: .78rem; font-weight: 700; color: var(--ink); background: var(--surface); white-space: nowrap; }
+.kw-open::before { content: "Open ▾"; }
+.kw-after[open] > summary .kw-open::before { content: "Close ▴"; }
+.kw-after > summary:hover .kw-open, .kw-after > summary:focus-visible .kw-open { border-color: var(--ink-2); }
+/* The big score fits its box: "100.0%" ran into the counts beside it (Nov. 26, 2026). */
+.st-score { container-type: inline-size; }
+.st-big b { font-size: min(4.2rem, calc((100cqi - 2.2rem) / 2.75)); }
+@media (max-width: 560px) { .st-big b { font-size: min(3.4rem, calc((100cqi - 2.2rem) / 2.75)); } }

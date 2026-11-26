@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {promiseWords,fullSentence,officeWindow,judge,buildPromises,addMonths,activityIndex,chamberOfRef,GRACE_MONTHS,STATUSES} from '../scripts/build-promises.mjs';
+import {promiseWords,fullSentence,officeWindow,judge,buildPromises,addMonths,activityIndex,chamberOfRef,GRACE_MONTHS,STATUSES,compactPromise} from '../scripts/build-promises.mjs';
 import {promiseScore,promiseStatus,PROMISE_WEIGHT} from '../public/grades.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(`../${f}`,import.meta.url),'utf8'));
@@ -130,9 +130,14 @@ test('the grade, four verdicts: kept 1, partially kept 1/2, broken and allegedly
 test('public/promises.json: every promise has a known status, a reason, a dated source and its questions',()=>{
   const P=read('public/promises.json'),Q=new Set(read('public/questions.json').questions.map(q=>q.id));
   const R=read('public/research.json'),ids=new Set([...R.members,...R.cands,...(R.featured||[])].map(p=>p.id));
+  // Since Nov. 26, 2026 every sitting senator and House member too: in short here, in full in public/promises/<id>.json.
+  const seats=new Set([...read('public/senate.json').senators,...read('public/house.json').members].map(p=>p.id));
   assert.equal(P.graceMonths,GRACE_MONTHS);
-  for(const [id,list] of Object.entries(P.people)){
-    assert.ok(ids.has(id),`${id} has a profile`);
+  for(const [id,short] of Object.entries(P.people)){
+    assert.ok(ids.has(id)||seats.has(id),`${id} has a profile or a seat`);
+    let list=short;
+    if(!ids.has(id)){list=read(`public/promises/${id}.json`).promises;
+      assert.deepEqual(short,list.map(compactPromise),`${id}: the short list matches the full one`);}
     for(const p of list){
       assert.ok(STATUSES.includes(p.status),`${id} ${p.key}: ${p.status}`);
       assert.ok(p.why&&/^\d{4}-\d{2}-\d{2}$/.test(p.date)&&p.quote&&p.where,`${id} ${p.key}`);
@@ -155,4 +160,10 @@ test('buildPromises: one promise per quote and date, tagged to several questions
     evidence:()=>({'minimum-wage':[['117-s-53','c','2021-01-26',0],['118-s-2','c','2023-05-01',0]]}),campaign:()=>null,elect:()=>null,reviews:{x:{'tariffs@2020-11-03':{status:'not-a-promise',why:'x'}}}});
   const l=out.people.x;
   assert.equal(l.length,1);assert.deepEqual(l[0].qs,[['minimum-wage',0],['paid-leave',0]]);assert.equal(l[0].status,'kept');assert.equal(l[0].kind,'campaign');
+});
+
+test('a basic profile\'s promise in short keeps what the grade needs and nothing else',()=>{
+  const p={key:'tariffs@2026-02-23',qs:[['tariffs',1]],quote:'we will do everything we can to stop these odious tariffs',date:'2026-02-23',kind:'statement',status:'no-action',deadline:'2026-08-23',why:'x',acts:[[1]],before:[],url:'u'};
+  assert.deepEqual(compactPromise(p),{key:'tariffs@2026-02-23',qs:[['tariffs',1]],status:'no-action',date:'2026-02-23',kind:'statement',deadline:'2026-08-23'});
+  assert.equal(promiseStatus(compactPromise(p),'2026-11-26'),promiseStatus(p,'2026-11-26'));
 });
