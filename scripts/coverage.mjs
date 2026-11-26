@@ -5,7 +5,8 @@
 //   promises  public/promises.json: the promises found for Keeps Their Word
 //   quotes    public/question-statements.json: what they said, tagged to a question with its side
 //   stances   the questions with evidence of where they stand: a vote, bill or official act
-//             (public/question-stances.json, by bioguide ID) or a tagged quote
+//             (public/question-stances.json, by bioguide ID), a tagged quote, or a tagged state bill they sponsored or
+//             voted on (public/question-state.json)
 // Sources on hand for each: the Congressional Record (anyone sitting, by bioguide ID), their campaign sites
 // (data/campaign-text/), the refresh's export (data/collected-statements/) and the Record collector's
 // (data/record-statements/, npm run record:collect).
@@ -32,11 +33,11 @@ export function everyone({research,senate,house,elect}){
   return [...by.values()];
 }
 // One person's counts and what they're short of.
-export function personCoverage(p,{promises,statements,stances,files=()=>false,speeches={},goal=GOAL}){
+export function personCoverage(p,{promises,statements,stances,state={},files=()=>false,speeches={},goal=GOAL}){
   const prom=promises?.[p.id]||[],tagged=statements?.[p.id]||{},voted=p.bioguide?stances?.[p.bioguide]||{}:{};
   const quotes=Object.values(tagged).reduce((n,list)=>n+(list?.length||0),0);
   const voteQs=Object.entries(voted).filter(([,c])=>Array.isArray(c)&&c.some(n=>n>0)).map(([q])=>q);
-  const stanceQs=new Set([...voteQs,...Object.keys(tagged).filter(q=>tagged[q]?.length)]);
+  const stanceQs=new Set([...voteQs,...Object.keys(tagged).filter(q=>tagged[q]?.length),...Object.keys(state[p.id]||{}).filter(q=>state[p.id][q]?.length)]);
   const sources={record:!!p.bioguide&&p.sitting,campaignText:files('data/campaign-text',p.id),collected:files('data/collected-statements',p.id),recordStatements:files('data/record-statements',p.id)};
   const short={promises:Math.max(0,goal-prom.length),quotes:Math.max(0,goal-quotes),stances:Math.max(0,goal-stanceQs.size)};
   const next=[];
@@ -47,7 +48,7 @@ export function personCoverage(p,{promises,statements,stances,files=()=>false,sp
     voteQuestions:voteQs.length,stances:stanceQs.size,speeches:speeches[p.id]||0,short,sources,next};
 }
 export function coverage(files,{goal=GOAL}={}){
-  const people=everyone(files).map(p=>personCoverage(p,{promises:files.promises?.people,statements:files.statements?.people,stances:files.stances?.people,files:files.has,speeches:files.speeches||{},goal}));
+  const people=everyone(files).map(p=>personCoverage(p,{promises:files.promises?.people,statements:files.statements?.people,stances:files.stances?.people,files:files.has,speeches:files.speeches||{},state:files.state?.people||{},goal}));
   const count=(k,kind)=>{const list=kind?people.filter(x=>x.kind===kind):people;return {met:list.filter(x=>x[k]>=goal).length,some:list.filter(x=>x[k]>0&&x[k]<goal).length,none:list.filter(x=>!x[k]).length,of:list.length};};
   const kinds=['full','senate','house','elect'];
   const totals=Object.fromEntries(['promises','quotes','stances'].map(k=>[k,{all:count(k),...Object.fromEntries(kinds.map(kd=>[kd,count(k,kd)]))}]));
@@ -61,7 +62,7 @@ function recordSpeeches(){
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const c=coverage({research:readIf('public/research.json'),senate:readIf('public/senate.json'),house:readIf('public/house.json'),elect:readIf('public/members-elect.json'),
-    promises:readIf('public/promises.json'),statements:readIf('public/question-statements.json'),stances:readIf('public/question-stances.json'),has,speeches:recordSpeeches()});
+    promises:readIf('public/promises.json'),statements:readIf('public/question-statements.json'),stances:readIf('public/question-stances.json'),has,speeches:recordSpeeches(),state:readIf('public/question-state.json')});
   const out={about:'How much evidence each person has toward 10 or more promises, tagged quotes and issue stances, what they\'re short of and the source most likely to fill it. Written by npm run coverage (scripts/coverage.mjs).',
     built:new Date().toISOString().slice(0,10),...c,people:Object.fromEntries(c.people.map(({id,...x})=>[id,x]))};
   fs.writeFileSync(path.join(ROOT,OUT),JSON.stringify(out,null,1)+'\n');

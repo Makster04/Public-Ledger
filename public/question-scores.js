@@ -231,16 +231,25 @@ export function taggedStatements(said){
     title:where||'Statement',why:`"${String(quote).replace(/^[\s"“”]+|[\s"“”]+$/g,'')}"`,src:url?{u:url,t:/^Campaign website/.test(where||'')?'The saved campaign page':/post/i.test(where||'')?'The post':'Source'}:null,tagged:true}));
   return out;
 }
+// What they did in a state legislature, tagged to the questions (public/question-state.json: {question: [[side, kind,
+// date, bill, link, what they did]]}, since Nov. 26, 2026), as record items counted like Congress's (QPOINTS: sponsored
+// 1.5, cosponsored 1, a state vote 1; one credit per bill).
+export function stateItems(state){
+  const out={};
+  for(const [qid,list] of Object.entries(state||{}))out[qid]=(list||[]).filter(x=>(x?.[0]===0||x?.[0]===1)&&QPOINTS[x[1]]).map(([side,kind,date,title,url,why])=>({
+    ref:`state:${title}${kind==='state'?`#${date||''}`:''}`,kind,date:date||null,side,title,why,src:url?{u:url,t:'The bill'}:null}));
+  return out;
+}
 // One person's stance on every question: their row in public/question-stances.json (rec: {question: [a, b, firstA,
 // lastA, firstB, lastB]}), their carried-over evidence, what they said (said: their rows in
 // public/question-statements.json; statements fall under the contradiction rule) and the group ratings on each question
 // (ratings: their rows in public/group-ratings.json; questions: public/questions.json's list). A carried-over statement
 // with the same link as a tagged one on the question counts once.
-export function personStances(rec,evidence,{ratings=null,questions=null,said=null}={}){
-  const legacy=legacyEvidence(evidence,{hasRecord:!!rec}),rated=ratingItems(ratings,questions),tagged=taggedStatements(said),out={};
-  for(const qid of new Set([...Object.keys(rec||{}),...Object.keys(legacy),...Object.keys(rated),...Object.keys(tagged)])){
+export function personStances(rec,evidence,{ratings=null,questions=null,said=null,state=null}={}){
+  const legacy=legacyEvidence(evidence,{hasRecord:!!rec}),rated=ratingItems(ratings,questions),tagged=taggedStatements(said),inState=stateItems(state),out={};
+  for(const qid of new Set([...Object.keys(rec||{}),...Object.keys(legacy),...Object.keys(rated),...Object.keys(tagged),...Object.keys(inState)])){
     const r=rec?.[qid],L0=legacy[qid]||{items:[],statements:[]},T=tagged[qid]||[],links=new Set(T.map(x=>x.src?.u).filter(Boolean));
-    const L={items:L0.items,statements:[...T,...L0.statements.filter(x=>!x.src?.u||!links.has(x.src.u))]};
+    const L={items:[...L0.items,...(inState[qid]||[])],statements:[...T,...L0.statements.filter(x=>!x.src?.u||!links.has(x.src.u))]};
     const base=r?{a:r[0],b:r[1],firstA:r[2]||'',lastA:r[3]||'',firstB:r[4]||'',lastB:r[5]||''}:{a:0,b:0,firstA:'',lastA:'',firstB:'',lastB:''};
     const lp=recordPoints(L.items),dates={firstA:[base.firstA,lp.firstA].filter(Boolean).sort()[0]||'',lastA:[base.lastA,lp.lastA].filter(Boolean).sort().at(-1)||'',
       firstB:[base.firstB,lp.firstB].filter(Boolean).sort()[0]||'',lastB:[base.lastB,lp.lastB].filter(Boolean).sort().at(-1)||''};

@@ -1,0 +1,4 @@
+{
+ "about": "State legislature bills tagged to the alignment questions: {person: {question: [[the side passing the bill takes, bill key from data/state-records/<id>.json]]}}. What the person did on it (sponsored, cosponsored, voted) gives their side. Read by npm run state:acts (scripts/state-acts.mjs), which writes public/question-state.json.",
+ "people": {}
+}

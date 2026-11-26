@@ -25,6 +25,8 @@ try {
   const questionStances=fetch('/question-stances.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   // What the reviewed profiles said, tagged to the questions (scripts/question-statements.mjs).
   const questionStatements=fetch('/question-statements.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // What members-elect and others did in a state legislature, tagged to the questions (scripts/state-acts.mjs).
+  const questionState=fetch('/question-state.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   // Each profile's promises to voters and whether they kept them (scripts/build-promises.mjs), for Keeps Their Word.
   const promises=fetch('/promises.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const corporatePacs=fetch('/corporate-pacs.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
@@ -63,6 +65,7 @@ try {
   window.QUESTIONS=(await questions)||{questions:[],categories:[]};
   window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   window.QSTATEMENTS=(await questionStatements)||{people:{}};
+  window.QSTATE=(await questionState)||{people:{}};
   window.PROMISES=(await promises)||{people:{}};
   for(const p of [...(DATA.members||[]),...(DATA.cands||[]),...(DATA.featured||[])])p.promises=window.PROMISES.people?.[p.id]||[];
   const sen=await senate;window.SENATE=sen?.senators||[];for(const p of window.SENATE)p.promises||=window.PROMISES.people?.[p.id]||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress,lost:sen.lostSeats||[]}:null;
