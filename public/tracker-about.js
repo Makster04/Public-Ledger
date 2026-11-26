@@ -260,7 +260,7 @@ export function trackerPanel(t,counts={}){
     </div>
     <div class="ta-grid2">
       ${lc.length?block('Companies whose employees\' gifts are read',chips(lc.map(c=>`${c.name} · ${INDUSTRY_LABEL[c.industry]||c.industry}`))):''}
-      ${block('Its own super PACs',t.superPacs?.length?`${chips(t.superPacs.map(n=>{const s=net(n);return s&&s.network&&s.network!==n?`${n} · ${s.network} network`:n;}))}<p class="small muted">Shown under "Spent to help them win" and "Tracking Major Super PACs". It never changes the ✕: the campaign doesn't take it.</p>`:'<p class="small muted">None.</p>')}
+      ${block('Its own super PACs',t.superPacs?.length?`${chips(t.superPacs.map(n=>{const s=net(n);return s&&s.network&&s.network!==n?`${n} · ${s.network} network`:n;}))}<p class="small muted">Shown under "Spent to help them win" and "Tracking Lobby Money". It never changes the ✕: the campaign doesn't take it.</p>`:'<p class="small muted">None.</p>')}
     </div>
     <div class="ta-grid2">
       ${block('Left out',`<ul class="ta-list">${(LEFT_OUT[t.key]||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}

@@ -51,13 +51,13 @@ function arc(cx,cy,ro,ri,a0,a1){
   return `M${pt(ro,a0)}A${ro} ${ro} 0 ${large} 1 ${pt(ro,a1)}L${pt(ri,a1)}A${ri} ${ri} 0 ${large} 0 ${pt(ri,a0)}Z`;
 }
 
-// Tracking Major Super PACs under the funding overview: each tracker's PAC checks and gifts routed through it this cycle
+// Tracking Lobby Money under the funding overview: each tracker's PAC checks and gifts routed through it this cycle
 // (✕ took some, ✓ none, ? not read yet), and its super PACs' spending for or against them when there is some.
 const money=n=>n>=1e6?'$'+(n/1e6).toFixed(n>=1e7?1:2).replace(/\.0+$/,'')+'M':'$'+Math.round(n).toLocaleString('en-US');
 function lookoutRow(items,fx,y0,fw){
   const MARK={took:['#e0535f','M-3.5-3.5l7 7M3.5-3.5l-7 7'],none:['#18a35f','M-4 0l3 3L4-3.5'],waiting:['#8b95a5','']},cw=(fw-52)/items.length,spW=items.length>6?18:items.length>5?23:28;
   return `<path d="M${fx+1.5} ${y0}H${fx+fw-1.5}" stroke="#3a4250" stroke-width="1.5"/>
-    ${text('TRACKING MAJOR SUPER PACS · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE',fx+26,y0+22,{size:11,color:SUB_DARK,width:90,max:1,family:MONO})}
+    ${text('TRACKING LOBBY MONEY · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE',fx+26,y0+22,{size:11,color:SUB_DARK,width:90,max:1,family:MONO})}
     ${items.map((x,i)=>{const X=fx+26+i*cw,[c,d]=MARK[x.status]||MARK.waiting,o=x.superPac;
       const sp=o&&(o.for>0||o.against>0)?['SUPER PAC:',o.for>0?money(o.for)+' FOR':'',o.against>0?money(o.against)+' AGAINST':''].filter(Boolean).join(' '):'';
       const e=x.emoji,tx=X+(e?26:22);
@@ -72,7 +72,7 @@ function lookoutRow(items,fx,y0,fw){
  * post's 4:5) on the party's color, in boxes. Row 1: the photo; the name with state, party and chamber; the five grades
  * with bars. Row 2: Big Money Independence's Bonuses and Pledges and bills as a checklist; six money boxes (Raised, Cash
  * on hand, Spent; Net worth, Stocks held, Stock trades). Row 3, the funding overview: each source's share of what they
- * raised, the individuals' money by gift size, a donut, and Tracking Major Super PACs (each tracker's PAC checks and routed
+ * raised, the individuals' money by gift size, a donut, and Tracking Lobby Money (each tracker's PAC checks and routed
  * gifts this cycle). The research date and the reminder go in the bottom strip; without a campaign total, the evidence
  * note takes row 3's place. A card without a checklist (basic profiles) or without net worth (a president) closes up
  * around what it has.
