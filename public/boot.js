@@ -65,8 +65,8 @@ try {
   window.QSTATEMENTS=(await questionStatements)||{people:{}};
   window.PROMISES=(await promises)||{people:{}};
   for(const p of [...(DATA.members||[]),...(DATA.cands||[]),...(DATA.featured||[])])p.promises=window.PROMISES.people?.[p.id]||[];
-  const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress,lost:sen.lostSeats||[]}:null;
-  const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress,lost:hs.lostSeats||[]}:null;
+  const sen=await senate;window.SENATE=sen?.senators||[];for(const p of window.SENATE)p.promises||=window.PROMISES.people?.[p.id]||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress,lost:sen.lostSeats||[]}:null;
+  const hs=await house;window.HOUSE=hs?.members||[];for(const p of window.HOUSE)p.promises||=window.PROMISES.people?.[p.id]||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress,lost:hs.lostSeats||[]}:null;
   // The House members-elect without a profile, and the races they won (public/members-elect.json, npm run house:elect).
   const el=await elect;window.MEMBERS_ELECT=el?.members||[];window.ELECT_RACES=el?.races||[];window.ELECT_INFO=el?{built:el.built,source:el.source}:null;
   window.HOUSE_SEATS=await houseSeats;

@@ -25,6 +25,9 @@
 //   compromised version; "step" and "compromise" from before are read as partly), broken, alleged, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed);
 //   each with "why", shown on the profile, and the date it was reviewed.
 // Writes public/promises.json. Run after npm run statements:record and npm run bills:record.
+// Since Nov. 26, 2026 every sitting senator and House member is judged too, from their tagged floor speeches. Their
+// promises are in public/promises.json only as what the grade needs (compactPromise), and in full in
+// public/promises/<id>.json, which their profile reads when Keeps Their Word opens, so the home page stays quick.
 //   npm run promises:build
 //   npm run promises:build -- --today 2026-11-13   judge as of a given day
 import fs from 'node:fs';
@@ -144,6 +147,10 @@ const kindOf=where=>/campaign|candidate questionnaire/i.test(where||'')?'campaig
 // Every profiled person's promises. statements: data/question-statements.json; people: the profiles; evidence(bioguide)
 // -> their question evidence; campaign(id) -> their campaign text; activity(questions, chamber, from, to, except bioguide)
 // -> how many actions other members took on them (activityIndex).
+// What a grade needs from a promise (public/grades.js promiseScore): its key, questions, status, date and kind, and the
+// deadline and review that can change its status.
+export const compactPromise=p=>({key:p.key,qs:p.qs,status:p.status,date:p.date,kind:p.kind,...(p.deadline?{deadline:p.deadline}:{}),...(p.reviewed?{reviewed:p.reviewed}:{})});
+export const PROMISE_DIR='public/promises';
 export function buildPromises({statements,people,evidence,campaign,dirs,elect,reviews={},activity=null,today}){
   const out={},queue=[];
   for(const person of people){
@@ -179,7 +186,9 @@ function main(){
   const args=process.argv.slice(2),at=args.indexOf('--today'),today=at>=0?args[at+1]:new Date().toISOString().slice(0,10);
   const read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8')),has=f=>fs.existsSync(path.join(ROOT,f));
   const R=read('public/research.json'),statements=read('data/question-statements.json');delete statements.about;
-  const people=[...R.members,...(R.cands||[]),...(R.featured||[])];
+  const full=[...R.members,...(R.cands||[]),...(R.featured||[])],fullIds=new Set(full.map(p=>p.id));
+  const S=read('public/senate.json').senators,H=read('public/house.json').members;
+  const basic=[...S,...H].filter(p=>!fullIds.has(p.id)),people=[...full,...basic],basicIds=new Set(basic.map(p=>p.id));
   const dirs=new Map([...read('public/senate.json').senators.map(m=>({...m,chamber:'S'})),...read('public/house.json').members.map(m=>({...m,chamber:'H'}))].filter(m=>m.bioguide&&m.since).map(m=>[m.bioguide,{since:m.since,chamber:m.chamber}]));
   // Who won a 2026 race and takes office in January: the race's winner, by profile.
   const winners=new Set();
@@ -190,6 +199,10 @@ function main(){
     evidence:bg=>has(`public/question-evidence/${bg}.json`)?read(`public/question-evidence/${bg}.json`):null,
     campaign:id=>has(`data/campaign-text/${id}.json`)?read(`data/campaign-text/${id}.json`):null,
     elect:p=>!dirs.has(p.bioguide)&&winners.has(p.id)});
+  // The basic profiles' promises in full, one file each (old files cleared), and in public/promises.json what the grade needs.
+  const dir=path.join(ROOT,PROMISE_DIR);fs.rmSync(dir,{recursive:true,force:true});fs.mkdirSync(dir,{recursive:true});
+  for(const id of Object.keys(out))if(basicIds.has(id)){
+    fs.writeFileSync(path.join(dir,`${id}.json`),JSON.stringify({person:id,built:today,promises:out[id]}));out[id]=out[id].map(compactPromise);}
   fs.writeFileSync(path.join(ROOT,'public','promises.json'),JSON.stringify({about:'Each profiled politician\'s promises to voters and whether they kept them: {person id: [{key, qs: [[question, side]], quote, sentence (the full sentence a short quote was cut from), date, url, where, kind (campaign or office), status (kept, partly (partially kept), broken, alleged (allegedly broken: no action while others acted), unclear, no-action, not-tested), rule (all-for, all-against, reversal, mixed, one-bill, no-action, grace, not-in-office, left-office, reviewed), why, deadline, forN, againstN, acts: [[question, bill, kind, date, side]] after the promise, before: the latest 3 earlier ones, beforeN}]}. Written by scripts/build-promises.mjs from data/question-statements.json, public/question-evidence/ and data/promise-reviews.json.',
     built:today,graceMonths:GRACE_MONTHS,people:out}));
   const all=Object.values(out).flat(),n={};for(const p of all)n[p.status]=(n[p.status]||0)+1;
