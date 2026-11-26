@@ -44,6 +44,7 @@ Individual donors' names are never shown (FEC rules restrict reusing them), exce
 
 <!-- Each dated line here becomes a "Site update" card on the home page and the Latest updates page, its bold title as the headline (scripts/build-news.mjs). Write the title as a headline; end a maintenance-only line with an HTML comment that says not news. -->
 
+- **Nov. 26: An upkeep checklist.** The README's new "Upkeep: what to run, and when" lists the commands to run by hand, monthly and otherwise, in order, and which ones `npm start` already runs by itself. <!-- not news -->
 - **Nov. 26: Campaign websites for everyone.** `npm run campaign:collect -- --everyone` reads the campaign sites of every sitting senator and House member and every member-elect (616 people, 587 with none read yet), not just the 45 full profiles, as the Wayback Machine saved them before each election day; each person's site comes from their campaign committee's FEC filing (a sample of 12 found 11). The pages feed the same tagging queue as the floor speeches, toward 10 or more promises and stances for everyone; members-elect can be tagged too, and their promises wait as not tested until they take office. <!-- not news -->
 - **Nov. 26: Senators and House members get Keeps Their Word from their floor speeches** (approved from the mockup). Every sitting senator and House member, not just the full profiles, now has their promises judged: their own words on the floor, tagged by hand to a question, checked against their votes and bills afterward. 8 senators so far (Durbin is graded: 3 kept), the rest as their tags are approved. On every profile, what they did after a promise is now closed behind an Open button, and the big score no longer runs into the counts beside it.
 - **Nov. 25: Floor speeches for every senator and House member, and a coverage report.** Toward 10 or more quotes, stances and promises for everyone: `npm run coverage` counts each person's promises, tagged quotes and issue stances and says what they're short of (today: promises 3 of 617 people have 10 or more, tagged quotes 15, stances 501), and `npm run record:collect` reads the Congressional Record for every sitting member, without a key, keeping their own sentences on the alignment questions' topics and their commitments for tagging. The Record reader also finds members the Record names in mixed case (McCONNELL, DeLAURO, LaHOOD), whose words it had missed. <!-- not news -->
@@ -314,6 +315,42 @@ These judgments are made by people and stored in `public/research.json` (and two
 - **Committee sectors:** which industries each committee oversees, for committee-conflict trades, in `public/committee-sectors.json` (a draft to review). Committee seats themselves are in `public/committees.json`, written by `scripts/build-ids.mjs`.
 
 Who assigns People/Profit and liberal/conservative marks, and how disagreements are settled, is an open decision in the methodology.
+
+## Upkeep: what to run, and when
+
+`npm start` keeps most things current by itself while it runs: the official records refresh, Latest updates is rebuilt daily (`news:build`) and the links are checked monthly (`links:check`). The commands below need the computer that runs it (its keys in `.dev.vars`, its local database or a large download). Run them in a separate terminal window while `npm start` keeps running, one FEC-heavy command at a time (they share the FEC key's hourly limit), then commit and push what they changed.
+
+**Monthly, in the first week, in this order**
+
+| Command | What it updates |
+|---|---|
+| `npm run attendance:build` | Shows Up (missed votes) |
+| `npm run getitdone:build` | Get It Done (bills advanced) |
+| `npm run corporate:pacs` | PAC checks: seating charts, trackers, the PAC cards in Latest updates (downloads the FEC's bulk files) |
+| `npm run groups:lean` | Which way each group leans (reads the files `corporate:pacs` downloaded) |
+| `npm run superpacs:races` | Super PAC spending for and against each candidate |
+| `npm run outside:update` | Outside spending on the profiles |
+| `npm run disclosures:export` | The annual reports the refresh has read, for net worth and Conflicts of Interest (then rerun the conflict matching: `npm run conflicts:lookup`, review, `npm run conflicts:build`) |
+| `npm run statements:export` | Press releases and posts of the full profiles, for tagging |
+| `npm run promises:find` | New promises in those |
+| `npm run scores:monthly` | Last: recalculates the grades and logs what moved |
+| `npm run integrity:monthly` | The separate Integrity preview log |
+
+Then `git add data public && git commit -m "Monthly refresh" && git push`.
+
+**Every week or two:** the Senate's disclosure site can't be read by the refresh, so `npm run efd:fetch`, then `npm run efd:import`.
+
+**After the FEC's filing deadlines** (the post-election report 30 days after election day, the year-end report on Jan. 31, then quarterly): `npm run money:update` (campaign totals; with `npm start` stopped, or an hour after other FEC commands) and `npm run funders:bundled` (money routed through groups); `npm run pacs:lines` once the post-election reports are processed (mid-December in an election year).
+
+**Quarterly:** `npm run lobbying:bills` after the lobbying deadlines (Jan. 20, Apr. 20, Jul. 20, Oct. 20); `npm run bills:index`, then `npm run bills:record` (new bills for the alignment questions); `npm run nonprofits:990`.
+
+**Once a year, or when a group publishes a new scorecard:** `npm run ratings:collect`.
+
+**Each election season:** `npm run campaign:collect -- --everyone --from <the last election year>` (campaign websites as the Wayback Machine saved them before each election day; many hours; Ctrl+C anytime and run it again to go on, and run it once more at the end to retry what was skipped), then `git add data/campaign-text && git commit -m "Campaign text" && git push`.
+
+**When a new Congress starts (Jan. 3 of an odd year):** `npm run house:build` and `npm run senate:build`.
+
+**No need to run by hand:** `news:build` and `links:check` (`npm start` runs them); `record:collect`, `coverage`, `conflicts:*`, `bills:issues`, `statements:find`, `statements:record` and `promises:build` run where the tagging and reviews are done; `test`, `check`, `consistency:*`, `cloudflare:*` and `review:*` are for development and reviews.
 
 ## Update process
 
