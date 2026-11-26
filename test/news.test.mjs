@@ -39,8 +39,8 @@ test('the trackers\' PAC checks: one item per PAC, date and amount, with every m
 
 test('the trackers\' super PACs: a day\'s spending for or against a candidate, at its latest amendment, $10,000 or more',()=>{
   const r=(o)=>({spe_id:'C00836221',spe_nam:'DEFEND AMERICAN JOBS',cand_id:'S4NE00207',cand_name:'OSBORN, DAN',can_office:'S',can_office_state:'NE',can_office_dis:'00',cand_pty_aff:'INDEPENDENT',sup_opp:'O',ele_type:'G2026',exp_amo:'1000000',exp_date:'27-OCT-26',file_num:'1',tran_id:'t1',...o});
-  const s=superPacNews([r({}),r({file_num:'2',exp_amo:'2000000'}),r({tran_id:'t2',exp_amo:'650335.68'}),r({tran_id:'t3',exp_amo:'5000',exp_date:'28-OCT-26'}),
-    r({tran_id:'t4',spe_id:'C9',spe_nam:'SOME OTHER PAC',exp_amo:'9000000'})]);
+  const s=superPacNews([r({}),r({file_num:'2',prev_file_num:'1',exp_amo:'2000000'}),r({file_num:'3',tran_id:'t2',exp_amo:'650335.68'}),r({file_num:'3',tran_id:'t3',exp_amo:'5000',exp_date:'28-OCT-26'}),
+    r({file_num:'3',tran_id:'t4',spe_id:'C9',spe_nam:'SOME OTHER PAC',exp_amo:'9000000'})]);
   assert.deepEqual(s.map(x=>[x.tracker,x.cand,x.so,x.seat,x.party,x.ele,x.amount,x.date]),[['crypto','S4NE00207','O','S-NE','I','G',2650335.68,'2026-10-27']],
     'the amendment replaces the original and the day adds up; under $10,000 and another spender left out');
 });

@@ -31,6 +31,7 @@
     "disclosures:export": "node --no-warnings=ExperimentalWarning scripts/export-disclosures.mjs",
     "corporate:pacs": "node --env-file-if-exists=.dev.vars scripts/build-corporate-pacs.mjs",
     "superpacs:races": "node scripts/build-super-pac-races.mjs",
+    "superpacs:midterms": "node scripts/build-midterm-trackers.mjs",
     "outside:update": "node scripts/build-outside-spending.mjs",
     "links:check": "node scripts/check-links.mjs",
     "news:build": "node scripts/build-news.mjs",
