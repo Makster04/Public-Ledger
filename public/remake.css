@@ -1840,6 +1840,11 @@ input, select { accent-color: var(--accent); }
 .mt-card h3 { margin: 0 0 4px; font-size: 1.05rem; display: flex; gap: 8px; align-items: center; }
 .mt-top { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 14px; }
 .mt-who { margin: 0 0 8px; color: var(--ink-2); font-size: .88rem; }
+.mt-kind { display: inline-block; font: 500 .66rem var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line-2); border-radius: 999px; padding: 1px 7px; margin: 0 0 8px; }
+.mt-gave { margin: 0 0 8px; font-size: .85rem; color: var(--ink-2); }
+.mt-gave b { font-family: var(--font-mono); color: var(--ink); }
+.mt-sharecap { margin: 0 0 4px; font: 500 .66rem var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.mt-emp { margin: 8px 0 0; font-size: .75rem; color: var(--muted); }
 .mt-why { margin: 0; color: var(--muted); font-size: .82rem; max-width: 46ch; }
 .mt-money { display: grid; gap: 8px; font-size: .85rem; color: var(--muted); }
 .mt-line { display: grid; grid-template-columns: 150px minmax(0, 1fr); align-items: center; gap: 10px; }
@@ -1864,6 +1869,8 @@ input, select { accent-color: var(--accent); }
 .mt-more h4 { margin: 10px 0 4px; font-size: .85rem; }
 .mt-more ol { list-style: none; margin: 0; padding: 0; }
 .mt-more li { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto auto auto; gap: 4px 12px; align-items: center; padding: 7px 0; border-top: 1px solid var(--line); font-size: .85rem; }
+.mt-more .mt-funded li { grid-template-columns: 18px minmax(0, 1fr) auto auto auto auto; }
+.mt-nm small { display: block; color: var(--muted); font-size: .7rem; }
 .mt-rk { color: var(--muted); font-family: var(--font-mono); }
 .mt-c { text-align: right; white-space: nowrap; font-family: var(--font-mono); }
 .mt-c small { display: block; font-family: var(--font-body); color: var(--muted); font-size: .68rem; }
@@ -1875,4 +1882,5 @@ input, select { accent-color: var(--accent); }
   .mt-line { grid-template-columns: 1fr; gap: 4px; }
   .mt-more li { grid-template-columns: 18px minmax(0, 1fr) auto; }
   .mt-more li .mt-for, .mt-more li .mt-against { display: none; }
+  .mt-more .mt-funded li { grid-template-columns: 18px minmax(0, 1fr) auto auto; }
 }
