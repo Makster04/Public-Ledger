@@ -1,5 +1,5 @@
 // The trackers (public/trackers.js): the seven approved lobbies, how a campaign's money from each is counted for the
-// Tracking Major Super PACs box (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
+// Tracking Lobby Money box (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
 import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -163,7 +163,7 @@ test('super PACs: its own by name, and those its companies gave to, with spendin
 test('where they show: the lookouts beside the score, the tracker tabs, the Trackers page, and the bundled box keeps AIPAC',()=>{
   const app=read('../public/app.js'),html=read('../public/index.html'),css=read('../public/remake.css');
   assert.match(app,/from '\.\/trackers\.js'/);
-  assert.match(app,/<h3>Tracking Major Super PACs<\/h3>/);
+  assert.match(app,/<h3>Tracking Lobby Money<\/h3>/);
   assert.ok(!/Summary of Major Lookouts<\/h3>/.test(app),'the old name is gone from the page');
   assert.match(app,/No PAC money or gifts from \$\{esc\(x\.name\)\}/);
   assert.match(app,/bundledBox\(s,mm\)\+lookoutsBox\(/,'the lookouts go right under "Bundled through groups"');

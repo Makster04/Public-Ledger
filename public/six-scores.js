@@ -114,22 +114,23 @@ export const UNBOUGHT={
   pacCoverage:0.8,                        // reviewed PAC lines must cover 80% of the cycle's PAC money (Nov. 20, 2026 audit)
   stocks:{max:20,midpoint:400000},
   trades:{countMax:20,countMidpoint:50,valueMax:0.00001,valueMidpoint:8000},   // the value maximum is copied as published
-  bonus:{noCorporatePac:5,corporatePacPledge:1,noStocks:1},
+  bonus:{noCorporatePac:5,noLobby:5,corporatePacPledge:1,noStocks:1},   // noLobby since Nov. 26, 2026
   pledge:1,
 };
 // The FEC's PAC types (public/pac-types.js) in their formula's groups.
 export const UNBOUGHT_PAC_GROUP={corporate:'corporate',lobbyist:'lobbyist',trade:'trade',membership:'trade',cooperative:'trade',
   leadership:'political',party:'political',candidate:'political',unconnected:'ideological',labor:'union',joint:'other',other:'other'};
 export const UNBOUGHT_PAC_LABEL={corporate:'Corporate',lobbyist:'Lobbyist',trade:'Trade, membership and cooperative',political:'Political (leadership, party, candidate)',ideological:'Ideological',union:'Union and labor',other:'Other and unclassified'};
-const PLEDGE_KINDS=[['corporate-pac','No corporate PAC money'],['lobbying','Ban lobbying by former members'],['stock-trading','Ban congressional stock trading'],['citizens-united','Overturn Citizens United']];
+const PLEDGE_KINDS=[['corporate-pac','Take no corporate PAC money'],['lobbying','Ban lobbying by former members'],['stock-trading','Ban congressional stock trading'],['citizens-united','Overturn Citizens United']];
 // Their pledge and bill points: per category, a pledge counts (one reviewed as broken doesn't; it counts as broken in
-// Keeps Their Word), otherwise a bill on it they sponsored or cosponsored, otherwise nothing. The corporate-PAC pledge is its own +1 bonus.
+// Keeps Their Word), otherwise a bill on it they sponsored or cosponsored, otherwise nothing. The corporate-PAC pledge
+// (UNBOUGHT.bonus.corporatePacPledge) has no bill; it was listed under Bonuses until Nov. 26, 2026, for the same +1.
 export function unboughtPledges(person,billIndex=[]){
   return PLEDGE_KINDS.map(([kind,label])=>{
     const items=(person?.statements||[]).filter(s=>s.pledge?.kind===kind),broken=items.some(s=>s.assessment==='contradiction'),took=items.some(s=>s.assessment!=='contradiction');
     const onBill=b=>(b.cosponsors||[]).find(c=>c.person===person?.id)||(ownSponsorship(person,[b.id,...(b.versions||[])])?{sponsor:true}:null);
     const bill=kind==='corporate-pac'?null:(billIndex||[]).find(b=>(b.reform||[]).includes(kind)&&onBill(b));
-    const points=took?1:bill?1:0;
+    const points=took?(kind==='corporate-pac'?UNBOUGHT.bonus.corporatePacPledge:UNBOUGHT.pledge):bill?UNBOUGHT.pledge:0;
     return {kind,label,points,via:took?'pledge':bill?'bill':broken?'broken':null,bill:bill?.id||null,title:bill?.title||null,how:bill?(onBill(bill).sponsor?'sponsored':'cosponsored'):null};
   });
 }
@@ -179,7 +180,14 @@ export function tradesIn(trades,start,end){
 // than UNBOUGHT.pacCoverage of the PAC money, with no whole-cycle total by type to use instead: the PAC part waits rather
 // than spread a few reports' mix over the whole cycle (from the Nov. 20, 2026 audit: a candidate with $15,000 of
 // $245,500 read got the no-corporate-PAC bonus).
-export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false,inCongress=true,pacSampled=null}={}){
+// lobby: the tracked lobbies' money to them this cycle, as Tracking Lobby Money shows it ({status: 'took', 'none' or
+// 'waiting', total, took: [{name, total}]}, lobbySummary), for the No lobby money bonus (Nov. 26, 2026).
+export function lobbySummary(list){
+  if(!Array.isArray(list)||!list.length)return null;
+  const took=list.filter(x=>x.status==='took').map(x=>({name:x.name,total:Number(x.total)||0})).sort((a,b)=>b.total-a.total);
+  return {status:took.length?'took':list.some(x=>x.status==='waiting')?'waiting':'none',total:took.reduce((t,x)=>t+x.total,0),took};
+}
+export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false,inCongress=true,pacSampled=null,lobby=null}={}){
   const c=person?.camp||{},R=c.receipts,W=UNBOUGHT[person?.chamber==='S'?'S':'H'];
   const needs=[['The cycle\'s FEC report',R>0&&!c.missing],[inCongress?'Their financial disclosure read (holdings and trades)':'Their candidate financial report read (holdings)',false]];
   if(person?.office)return {pct:null,why:'Not graded for a president: there is no 2026 campaign to compare',parts:[],needs};
@@ -228,18 +236,20 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   const stocks=held.value==null?null:held.blindTrust?0:UNBOUGHT.stocks.max*(hill(held.value,UNBOUGHT.stocks.midpoint)||0);
   const tradePts=traded.count==null?null:UNBOUGHT.trades.countMax*(hill(traded.count,UNBOUGHT.trades.countMidpoint)||0)+UNBOUGHT.trades.valueMax*(hill(traded.value,UNBOUGHT.trades.valueMidpoint)||0);
   const corporate=pacBy.corporate||0;
-  const pl=pledges||[],corp=pl.find(p=>p.kind==='corporate-pac');
+  const pl=pledges||[];
   // Every bonus is listed, earned or not, with why: status 'yes', 'no' or 'waiting' (on a record not read yet).
   const bonusItems=[
     {label:'No corporate PAC money',max:UNBOUGHT.bonus.noCorporatePac,status:!pacKnown?'waiting':corporate===0?'yes':'no',
       why:thin?'not enough of their PAC money read yet':!pacKnown?'their PAC money isn\'t sorted by type yet':corporate===0?(pacTotal?'none of their PAC money is from corporate PACs':'no PAC money at all'):`about $${Math.round(corporate).toLocaleString('en-US')} from corporate PACs`},
-    {label:'Pledged not to take corporate PAC money',max:UNBOUGHT.bonus.corporatePacPledge,status:corp?.via==='pledge'?'yes':'no',
-      why:corp?.via==='pledge'?'signed the pledge':corp?.via==='broken'?'pledge reviewed as broken':'no pledge on file'},
+    // No lobby money (Nov. 26, 2026): none from any tracked lobby this cycle, neither a PAC check nor a gift routed through
+    // one; the corporate PAC pledge moved to Pledges and bills.
+    {label:'No lobby money',max:UNBOUGHT.bonus.noLobby,status:!lobby||lobby.status==='waiting'?'waiting':lobby.status==='took'?'no':'yes',
+      why:!lobby||lobby.status==='waiting'?'not every lobby tracker read yet':lobby.status==='took'?`$${Math.round(lobby.total).toLocaleString('en-US')} from ${lobby.took.map(x=>`the ${x.name}`).join(', ')} this cycle`:'none from any tracked lobby this cycle'},
     {label:'Holds no individual stocks',max:UNBOUGHT.bonus.noStocks,status:held.value==null?'waiting':!held.blindTrust&&held.count===0?'yes':'no',
       why:held.value==null?'their annual disclosure isn\'t read yet':held.blindTrust?'holdings are in a blind trust':held.count===0?'none on their latest report':`${held.count} on their latest report`}];
   for(const b of bonusItems)b.points=b.status==='yes'?b.max:0;
   const bonus=bonusItems.reduce((t,b)=>t+b.points,0);
-  const pledgeItems=pl.filter(p=>p.kind!=='corporate-pac').map(p=>({...p,status:p.points?'yes':'no',why:p.via==='pledge'?'signed the pledge':p.via==='bill'?`${p.how||'cosponsored'} ${p.title||p.bill}`:p.via==='broken'?'pledge reviewed as broken, and no bill':'no pledge or (co)sponsored bill on file'}));
+  const pledgeItems=pl.map(p=>({...p,status:p.points?'yes':'no',why:p.via==='pledge'?'signed the pledge':p.via==='bill'?`${p.how||'cosponsored'} ${p.title||p.bill}`:p.via==='broken'?'pledge reviewed as broken, and no bill':'no pledge or (co)sponsored bill on file'}));
   const pledgePts=pledgeItems.reduce((t,p)=>t+p.points,0);
   const list=items=>items.map(b=>`${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'} ${b.label}${b.status==='yes'?` +${b.points}`:''} (${b.why})`).join(' · ');
   const parts=[

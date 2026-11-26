@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {leanLabel,issueLeans,ideology,ratingsLean,dwLean,keepsTheirWord,showsUp,unbought,unboughtPledges,stockHoldings,aboveBoard,tradeConflicts,behaviorCci,peopleFirst,SIX,UNBOUGHT,tradeCoverage,tradesIn,TRADES_FRESH_DAYS} from '../public/six-scores.js';
+import {leanLabel,issueLeans,ideology,ratingsLean,dwLean,keepsTheirWord,showsUp,unbought,unboughtPledges,stockHoldings,aboveBoard,tradeConflicts,behaviorCci,peopleFirst,SIX,UNBOUGHT,lobbySummary,tradeCoverage,tradesIn,TRADES_FRESH_DAYS} from '../public/six-scores.js';
 import {makeScorer} from '../public/scoring.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(`../${f}`,import.meta.url),'utf8'));
@@ -88,6 +88,31 @@ test('Big Money Independence: their published formula, with the House weights',(
   const rich={...member,camp:{...member.camp,pac:0,itemized:0,unitemized:member.camp.receipts,indiv:member.camp.receipts}};
   const top=unbought(rich,{sizes:null,pacRows:[],earmarks:[],snapshot:{assets:[]},trades:{covered:true,rows:[]},pledges:pledges.map(p=>({...p,points:1,via:'pledge'}))});
   assert.ok(top.raw>100,`raw ${top.raw}`);assert.deepEqual([top.pct,top.letter,top.capped],[100,'A',true]);
+});
+
+test('No lobby money (Nov. 26, 2026): +5 for nothing from any tracked lobby, apart from no corporate PAC money; the corporate PAC pledge moves to Pledges and bills',()=>{
+  // Tracking Lobby Money's lines, summed up: took from any one, else waiting while one isn't read, else none.
+  const took=lobbySummary([{key:'oil',name:'Big Oil',status:'none',total:0},{key:'aipac',name:'Pro-Israel Lobby',status:'took',total:711_891},{key:'aipac2',name:'Wall Street',status:'took',total:5_000}]);
+  assert.deepEqual([took.status,took.total,took.took.map(x=>x.name)],['took',716_891,['Pro-Israel Lobby','Wall Street']]);
+  assert.equal(lobbySummary([{name:'Big Oil',status:'none'},{name:'Crypto',status:'waiting'}]).status,'waiting');
+  assert.deepEqual(lobbySummary([{name:'Big Oil',status:'none',total:0}]),{status:'none',total:0,took:[]});
+  assert.equal(lobbySummary([]),null);
+  // No corporate PAC checks but lobby money routed through a group: one bonus, not the other, with the amount.
+  const base=[sizes,{assets:[{name:'Fund',type:'Mutual fund',value:'$1,001 - $15,000'}]}];
+  const one=unbought(member,{sizes:base[0],pacRows:[{kind:'labor',amount:100_000}],snapshot:base[1],trades:{covered:true,rows:[]},pledges:[],lobby:{status:'took',total:716_891,took:[{name:'Pro-Israel Lobby',total:716_891}]}});
+  const b=Object.fromEntries(one.bonusItems.map(x=>[x.label,[x.status,x.points]]));
+  assert.deepEqual(b,{'No corporate PAC money':['yes',5],'No lobby money':['no',0],'Holds no individual stocks':['yes',1]});
+  assert.match(one.bonusItems[1].why,/^\$716,891 from the Pro-Israel Lobby this cycle$/);
+  // None from any of them: both, with no stocks 11 points; a tracker not read yet leaves it waiting, worth nothing yet.
+  const clean=unbought({...member,camp:{...member.camp,pac:0}},{sizes,pacRows:[],snapshot:base[1],trades:{covered:true,rows:[]},pledges:[],lobby:{status:'none',total:0,took:[]}});
+  assert.equal(clean.parts.find(p=>p.key==='bonuses').points,UNBOUGHT.bonus.noCorporatePac+UNBOUGHT.bonus.noLobby+UNBOUGHT.bonus.noStocks);
+  const wait=unbought({...member,camp:{...member.camp,pac:0}},{sizes,pacRows:[],snapshot:base[1],trades:{covered:true,rows:[]},pledges:[]});
+  assert.deepEqual(['status','points'].map(k=>wait.bonusItems[1][k]),['waiting',0]);assert.ok(wait.pct!=null,'the grade doesn\'t wait on it');
+  // The pledge: under Pledges and bills now, for the same +1, and no longer a bonus.
+  const pl=unboughtPledges({...member,statements:[{pledge:{kind:'corporate-pac'},assessment:'consistent'}]},[]);
+  const p=unbought(member,{sizes,pacRows:[{kind:'labor',amount:100_000}],snapshot:base[1],trades:{covered:true,rows:[]},pledges:pl,lobby:null});
+  assert.deepEqual(p.pledgeItems.map(x=>[x.label,x.points]),[['Take no corporate PAC money',UNBOUGHT.bonus.corporatePacPledge],['Ban lobbying by former members',0],['Ban congressional stock trading',0],['Overturn Citizens United',0]]);
+  assert.ok(!p.bonusItems.some(x=>/pledge/i.test(x.label)));assert.equal(p.parts.find(x=>x.key==='pledges').points,1);
 });
 
 test('trade reports read in full count for two weeks while the daily re-read waits its turn, runs or fails (Nov. 19, 2026)',()=>{

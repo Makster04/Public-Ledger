@@ -27,7 +27,7 @@ import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
-import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel,PEOPLE_FIRST,tradeCoverage} from './six-scores.js';
+import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,lobbySummary,aboveBoard,leanLabel,PEOPLE_FIRST,tradeCoverage} from './six-scores.js';
 import {METHOD_TREE,BUILT_SECTIONS,topicOf,blurbOf} from './method-tree.js';
 import {keyQuestions,QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from './results.js';
@@ -855,7 +855,7 @@ function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all
 // Who takes corporate PAC money, or money from one of the Trackers' groups, as seating charts of the House and the
 // Senate (public/seats.js), with a filter by the title. Each member's status from public/corporate-pacs.json (npm run
 // corporate:pacs: every member read from the FEC's bulk files); for a member it doesn't cover, from their profile (the
-// reviewed PAC lines, and for a tracker its Tracking Major Super PACs box), else not read yet.
+// reviewed PAC lines, and for a tracker its Tracking Lobby Money box), else not read yet.
 const SEAT_BY=[['corporate','Corporate PACs'],...TRACKERS.map(t=>[t.key,t.name])];
 let seatBy='corporate';
 function corporateOf(m){
@@ -1155,8 +1155,8 @@ function bindProfileActions(s,pane){
     // Their disclosures, as the top of the profile reads them (5 seconds at most; the card says when they couldn't be
     // read), for their net worth and stocks, and Big Money Independence's bonuses and pledges, each with why.
     const d=s.office?null:await Promise.race([window.RecordLive.disclosure(s.id,s.chamber).catch(()=>null),new Promise(r=>setTimeout(()=>r(null),5000))]);
-    const u=s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
-    // The funding overview: where the money came from, and the eight trackers as the profile's Tracking Major Super PACs box
+    const u=s.office?unbought(s):unbought(s,{...unboughtInputs(s,d),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
+    // The funding overview: where the money came from, and the eight trackers as the profile's Tracking Lobby Money box
     // shows them this cycle, with their super PACs' spending (the refresh's records, else the file's).
     const sp=s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
     const inp=s.office?null:lookoutInputs(s,d,'this',sp||undefined);
@@ -1636,7 +1636,9 @@ function earmarkRows(s){
   const hand=(s.conduit?.rows||[]).filter(r=>!read.has(r.id)).map((r,i)=>({id:`conduit:${i}`,group:r.conduit,amount:r.amount,src:r.srcs?.[0],period:r.period}));
   return bundled.concat(hand).filter(r=>Number.isFinite(r.amount));
 }
-function unboughtInputs(s){
+// d: the refresh's records for them (RecordLive.disclosure), when the page has them: the No lobby money bonus then reads
+// the FEC's latest PAC checks too, as Tracking Lobby Money does beside it, so both give the same figure.
+function unboughtInputs(s,d=null){
   let pacRows=[];for(const [i,amount] of (s.pac?.rows||[])){const t=pacTypeOf(DATA,i);if(t&&amount>0)pacRows.push({kind:t.kind,amount});}
   // Each kind's whole-cycle total from the FEC bulk files (public/corporate-pacs.json): a basic profile's PAC mix, and a
   // reviewed profile's when its reviewed lines cover under UNBOUGHT.pacCoverage of its PAC money (some reports not
@@ -1648,7 +1650,7 @@ function unboughtInputs(s){
     // the bulk mix only when it is this campaign's money: 80–120% of its PAC total (a House member's Senate run can carry
     // both campaigns' totals, and a campaign whose committees aren't matched carries too little)
     const bs=bulk.reduce((t,r)=>t+r.amount,0);if(bs>=UNBOUGHT.pacCoverage*total&&bs<=1.2*total)pacRows=bulk;else pacSampled={read,window:s.pac?.window||null};}
-  return {pacRows,pacSampled,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[]),inCongress:inCongressNow(s)};
+  return {pacRows,pacSampled,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[]),inCongress:inCongressNow(s),lobby:lobbyOf(s,d)};
 }
 // Sitting in Congress now (the Senate and House directories), so filing stock trade reports. A candidate, a member-elect
 // or a former member isn't, and Big Money Independence doesn't wait on trade reports for them.
@@ -1682,7 +1684,7 @@ function unboughtCalc(s,x){
     ${f('Donor','Σ (share of receipts × size weight)',`up to ${H.donorCap} (House), ${S.donorCap} (Senate)`)}${f('PAC Penalty','Σ (PAC $ × type rate)',`at most ${UNBOUGHT.pacFloor}`)}
     ${f('PAC Reliance',`${R.max} × Hill(PAC share of receipts, ${R.midpoint*100}%)`)}${f('Earmark Penalty',`earmarked $ × ${rateText(UNBOUGHT.earmark)}`,'[not ActBlue or WinRed]')}
     ${f('Stock Penalty',`${K.max} × Hill(individual-stock value, $${K.midpoint.toLocaleString('en-US')})`)}${f('Trade Penalty',`${T.countMax} × Hill(trade count, ${T.countMidpoint}) + ${rateText(T.valueMax)} × Hill(trade value, $${T.valueMidpoint.toLocaleString('en-US')})`)}
-    ${f('Bonuses',`+${B.noCorporatePac} no corporate PAC money · +${B.corporatePacPledge} pledged not to take it · +${B.noStocks} no individual stocks`)}${f('Pledges',`each reform: pledge → +${UNBOUGHT.pledge} · (co)sponsored bill → +${UNBOUGHT.pledge} · neither → 0`)}<hr>
+    ${f('Bonuses',`+${B.noCorporatePac} no corporate PAC money · +${B.noLobby} no lobby money · +${B.noStocks} no individual stocks`)}${f('Pledges',`no corporate PAC money: pledge → +${B.corporatePacPledge} · each reform: pledge → +${UNBOUGHT.pledge} · (co)sponsored bill → +${UNBOUGHT.pledge} · neither → 0`)}<hr>
     <span class="k">Hill(x, m)</span><span>= x<sup>${HILL_POWER}</sup> ÷ (m<sup>${HILL_POWER}</sup> + x<sup>${HILL_POWER}</sup>) <span class="c">half the maximum at m</span></span></div>
   <h4>What goes in</h4>
   <ul><li>Individual stocks held, and the value of each</li><li>Number of stock trades, and their value</li><li>Share of receipts from PACs</li>
@@ -1703,7 +1705,7 @@ function unboughtCalc(s,x){
     <div class="st-calc-card"><b class="t">Stock trading</b>${two([one('Maximum count penalty',`−${T.countMax}`),one('Trade count midpoint',T.countMidpoint),one('Maximum value penalty',`−${rateText(T.valueMax)}`),one('Trade value midpoint',`$${T.valueMidpoint.toLocaleString('en-US')}`),one('Hill exponent (both)',HILL_POWER)],false)}</div>
   </div>
   <h4>Bonuses</h4>
-  <ul><li>+${B.noCorporatePac} for taking no corporate PAC money</li><li>+${B.corporatePacPledge} for pledging not to take corporate PAC money</li><li>+${B.noStocks} for holding no individual stocks</li>
+  <ul><li>+${B.noCorporatePac} for taking no corporate PAC money</li><li>+${B.noLobby} for taking no lobby money: nothing this cycle from any tracked lobby, neither a PAC check nor a gift routed through one</li><li>+${B.corporatePacPledge} for pledging not to take corporate PAC money (under Pledges and bills)</li><li>+${B.noStocks} for holding no individual stocks</li>
     <li>+${UNBOUGHT.pledge} for pledging, or sponsoring or cosponsoring a bill, to ban lobbying by former members</li><li>+${UNBOUGHT.pledge} for pledging, or sponsoring or cosponsoring a bill, to ban congressional stock trading</li><li>+${UNBOUGHT.pledge} for pledging, or sponsoring or cosponsoring a bill, to overturn Citizens United</li></ul>
   <h4>Notes</h4>
   <ul><li>Selling off all individual stocks, or holding them in a qualified blind trust, removes the stock penalties.</li>
@@ -1808,7 +1810,7 @@ function holdingsEvidence(s,d,x){
     <p class="small">${tr?.count!=null?`${tr.count} trade${tr.count===1?'':'s'} in the campaign's reporting period, worth ${fmtFull(Math.round(tr.value))} in all (the middle of each range).`:esc(tr?.why||'Their stock trade reports haven\'t been read yet.')} The full list of their trades, with filing dates and conflict checks, is on the <a href="#${s.id}-aboveboard">Plays by the Rules</a> tab.</p></section>`;
 }
 function pledgesEvidence(s,pl){
-  return `<section class="st-sec" id="u-pledges"><h4 class="st-sub">Pledges and reform bills</h4>${stTable(['Category','Points','How'],pl.map(p=>[esc(p.label),p.points?`+${p.points}`:'0',p.via==='pledge'?'Signed the pledge':p.via==='bill'?`${p.how==='sponsored'?'Sponsored':'Cosponsored'} ${esc(p.title||p.bill||'a reform bill')}`:p.via==='broken'?'Pledge reviewed as broken: no point':'No pledge or (co)sponsored bill on file']),'',[1])}<p class="small muted">The corporate-PAC pledge counts as its own +1 bonus. A broken pledge also counts as broken in Keeps Their Word.</p></section>`;
+  return `<section class="st-sec" id="u-pledges"><h4 class="st-sub">Pledges and reform bills</h4>${stTable(['Category','Points','How'],pl.map(p=>[esc(p.label),p.points?`+${p.points}`:'0',p.via==='pledge'?'Signed the pledge':p.via==='bill'?`${p.how==='sponsored'?'Sponsored':'Cosponsored'} ${esc(p.title||p.bill||'a reform bill')}`:p.via==='broken'?'Pledge reviewed as broken: no point':'No pledge or (co)sponsored bill on file']),'',[1])}<p class="small muted">The corporate-PAC pledge has no bill, so only signing it counts. A broken pledge also counts as broken in Keeps Their Word.</p></section>`;
 }
 // The cycle the campaign's current totals are in (an election year).
 const curCycle=s=>{const y=Number(String(s.camp?.end||'').slice(0,4))||new Date().getFullYear();return y%2?y+1:y;};
@@ -1832,11 +1834,18 @@ function unboughtPast(s,d){
 const earmarksSearched=s=>!s.basic&&!!(DATA.bundled?.listed?.[s.id]||DATA.bundled?.discovered);
 const pacKindOf=cid=>{const c=(DATA.pacCommittees||{})[cid];return c?pacKind(c):null;};
 // The Big Money Independence result for a period: 'this' (the current cycle, as the grade is shown everywhere) or a span of cycles.
+// The tracked lobbies' money in a period, as Tracking Lobby Money shows it, for the No lobby money bonus. Without the
+// refresh's records (home cards, rankings), this cycle's is kept on the profile.
+function lobbyOf(s,d=null,period='this'){
+  if(d?.money||period!=='this')return lobbySummary(lookouts(lookoutInputs(s,d,period)));
+  if(s._lobby===undefined)s._lobby=lobbySummary(lookouts(lookoutInputs(s,null,'this')));
+  return s._lobby;
+}
 function unboughtFor(s,inputs,d,period){
   const current=curCycle(s),m=d?.money||{};
   const curPacs=inputs.pacRows.length?inputs.pacRows:(m.pacs?.cycles?.[current]?.committees||[]).map(c=>({kind:c.kind||pacKindOf(c.cid),amount:c.amount})).filter(r=>r.kind);
   const curJfc=m.jfc?.cycles?.[current]&&!m.jfc.cycles[current].partial?m.jfc.cycles[current]:null;
-  const common={pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:earmarksSearched(s),inCongress:inputs.inCongress,pacSampled:inputs.pacSampled||null};
+  const common={lobby:lobbyOf(s,d,period),pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:earmarksSearched(s),inCongress:inputs.inCongress,pacSampled:inputs.pacSampled||null};
   const past=unboughtPast(s,d),cycles=periodCycles(period,current,Object.keys(past.camp));
   if(cycles.length===1&&cycles[0]===current)return unbought(s,{...common,pacRows:curPacs,earmarks:inputs.earmarks,sizes:d?.sizes||null,jfc:curJfc});
   const label=periodLabel(period,current);
@@ -1942,7 +1951,7 @@ function namedDonorsOf(s,cycles){
   for(const t of TRACKERS.filter(x=>x.donors?.length)){if(!h?.people?.[s.id])return null;const a=donorAmounts(h,t,s.id,cycles);if(a===null)return null;Object.assign(out,a);}
   return out;
 }
-// "Tracking Major Super PACs" (called the Summary of Major Lookouts until Nov. 18, 2026): one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
+// "Tracking Lobby Money" (called the Summary of Major Lookouts until Nov. 18, 2026, and Tracking Major Super PACs until Nov. 26): one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
 // period, ✓ when it took none (with every record needed read), … while a record is waiting; the amount on the right, and
 // the employees' own gifts as a smaller number under it. For AIPAC, Crypto and Big Tech + AI, which spend heavily through
 // super PACs, a line under it gives their super PACs' spending for and against them this cycle; it never changes the
@@ -1973,7 +1982,7 @@ function lookoutsBox(s,inp){
   const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
-  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Tracking Major Super PACs</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
+  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Tracking Lobby Money</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
     <div class="lk-key"><h4>How to read this</h4><p class="small muted">What each lobby gave the campaign, ${esc(inp.label)}, and what three of them spent through their super PACs.</p>
       <ul class="list small">
         <li><b><span class="lk-mark lk-took">✕</span> took some · <span class="lk-mark lk-none">✓</span> none · <span class="lk-mark lk-waiting">…</span> not read yet</b><br>PAC checks and gifts the group collected and passed on. For the Pro-Israel Lobby, its named donors' own checks too.</li>
@@ -2070,7 +2079,7 @@ function paneUnbought(s,pane){
   // The money map here: the pie of where the itemized gifts come from goes under its numbers (filled once the refresh's
   // records arrive), and the bundled gifts' box sits under the Sources, beside the score card.
   const mm={bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)};
-  // Under the Sources: the bundled gifts, then Tracking Major Super PACs for the period picked.
+  // Under the Sources: the bundled gifts, then Tracking Lobby Money for the period picked.
   let period='this',live=undefined,sp=undefined;
   const sideFor=d=>s.office?'':bundledBox(s,mm)+lookoutsBox(s,lookoutInputs(s,d,period,sp));
   const fillLookouts=()=>{const el=pane.querySelector('#u-lookouts');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=lookoutsBox(s,lookoutInputs(s,live,period,sp));el.replaceWith(tmp.firstElementChild);};
@@ -2235,7 +2244,7 @@ function fillProfileTiles(s){
   window.RecordLive.disclosure(s.id,s.chamber).then(d=>{
     if(!location.hash.startsWith('#'+s.id))return;
     const u=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);
-    if(u){const x=unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});if(!d)x.why='The update service is offline';fillSixTile(u,x);}
+    if(u){const x=unbought(s,{...unboughtInputs(s,d),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});if(!d)x.why='The update service is offline';fillSixTile(u,x);}
     const a=document.querySelector(`[data-six-tile="aboveboard"][href="#${s.id}-aboveboard"]`);
     if(a&&d)fillSixTile(a,aboveBoard(s,{trades:aboveBoardInputs(s,d),conflicts:SIX_CTX.conflicts,asOfYear:SCORER.asOfYear}));
   });
@@ -4861,7 +4870,7 @@ function methodTrackers(){
     <ul class="list">
       <li><b>What counts toward the mark</b> (<span class="lk-mark lk-took">✕</span> took some, <span class="lk-mark lk-none">✓</span> none, <span class="lk-mark lk-waiting">…</span> not read yet): checks from the tracker's PACs to the campaign, found by FEC committee ID or by name, refunds taken off; the gifts a group collected from donors and passed on (the Pro-Israel Lobby's AIPAC, NORPAC, JACPAC and the RJC); and, for the Pro-Israel Lobby, its named donors' own checks.</li>
       <li><b>Shown beside it, never counted:</b> gifts from people who work for the companies on the crypto and AI list (Big Tech + AI and Crypto), and super PAC spending, which no campaign takes.</li>
-      <li><b>Tracking Major Super PACs:</b> on each profile's Big Money Independence tab, one line a tracker with its mark and amount for the period picked. Under the Pro-Israel Lobby, Crypto and Big Tech + AI, "Spent to help them win" adds what their own super PACs spent for the person and against their opponents in a race they were in, and "Spent against them".</li>
+      <li><b>Tracking Lobby Money:</b> on each profile's Big Money Independence tab, one line a tracker with its mark and amount for the period picked. A ✓ on all eight this cycle earns Big Money Independence's No lobby money bonus (+5, since Nov. 26, 2026). Under the Pro-Israel Lobby, Crypto and Big Tech + AI, "Spent to help them win" adds what their own super PACs spent for the person and against their opponents in a race they were in, and "Spent against them".</li>
       <li><b>Career Totals:</b> every sitting member ranked by what their campaigns have taken from a tracker over their whole career (every FEC cycle since 1979–80), in five clubs, from the Million Dollar Club to None, ever.</li>
       <li><b>The Trackers page and the seating charts:</b> every reviewed profile ranked by this cycle's money from each tracker, and every seat in the House and Senate colored by whether its member took any.</li>
       <li><b>Sources:</b> the FEC's bulk files of PAC checks (pas2) and committees (cm) for every cycle and its independent-expenditure file, and, with the FEC key, the payments that show gifts passed on and the named donors' gifts. <span class="mono">npm run corporate:pacs</span> builds them.</li>
