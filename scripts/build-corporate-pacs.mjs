@@ -65,7 +65,7 @@ import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {pacKind} from '../public/pac-types.js';
 import {writeSuperPacRaces} from './build-super-pac-races.mjs';
-import {writeMidtermTrackers,MIDTERMS} from './build-midterm-trackers.mjs';
+import {writeMidtermTrackers,ELECTIONS} from './build-midterm-trackers.mjs';
 import {TRACKERS,TRACKER,isTrackerPac,isNamedDonor} from '../public/trackers.js';
 import {requestSource,fecNext} from '../src/sources.mjs';
 import {conduitTotals} from './build-bundled.mjs';
@@ -490,9 +490,9 @@ async function main(argv){
   // download keeps the last file and doesn't stop the rest.
   try{await writeSuperPacRaces({cycle,dir,refresh});}
   catch(e){console.warn(`Couldn't build public/super-pac-races.json (${e.message}); the last file is kept. Try again with npm run superpacs:races.`);}
-  // In a midterm, this cycle's tracker cards on the Super PACs page (scripts/build-midterm-trackers.mjs); the other
-  // midterms are kept from the last file.
-  if(MIDTERMS.includes(Number(cycle))){try{await writeMidtermTrackers({years:[Number(cycle)],dir,refresh});}
+  // This cycle's tracker cards on the Super PACs page (scripts/build-midterm-trackers.mjs); the other elections are
+  // kept from the last file.
+  if(ELECTIONS.includes(Number(cycle))){try{await writeMidtermTrackers({years:[Number(cycle)],dir,refresh});}
     catch(e){console.warn(`Couldn't build public/midterm-trackers.json (${e.message}); the last file is kept. Try again with npm run superpacs:midterms.`);}}
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,

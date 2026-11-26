@@ -19,7 +19,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES,SUPER_PACS} from './industries.js';
-import {winShare,versus,midtermYears,prevMidterm,hadMoney,SUPER_PAC_NAMES,FUNDED_CUTOFF,MIN_CANDIDATES,trendColor,trendPoints} from './midterm-trackers.js';
+import {winShare,versus,electionYears,prevElection,hadMoney,SUPER_PAC_NAMES,FUNDED_CUTOFF,MIN_CANDIDATES,trendColor,trendPoints} from './midterm-trackers.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {CLUB_KEYS,CLUB_LABEL,CLUB_RANGE,chamberCareer,routedStatus} from './career.js';
 import {trackerAboutHTML,trackerPanel as aboutPanel} from './tracker-about.js';
@@ -2516,28 +2516,28 @@ function renderTrackers(key){
     ${waiting.length?`<p class="small muted">Not read yet for ${waiting.length}: ${waiting.map(r=>esc(r.s.name)).join(', ')}.</p>`:''}
     <p class="small muted">From the FEC: the PAC lines in each reviewed profile's reports (the dates are under their name)${t.groupPacs?`, ${esc(Object.keys(t.groupPacs).map(g=>g.toUpperCase()).join(', '))}'s own PAC checks for the whole cycle from its reports,`:''}${t.routed.length?' the gifts routed to them':''}${dCol?`, and the ${t.donors.length} named donors' own checks this cycle (sitting members only, from the FEC's itemized gifts)`:''}. Each person's Big Money Independence tab adds the refresh's whole-cycle PAC list, so its amount can be larger. Senators and House members with basic profiles show theirs on their own Big Money Independence tab once the refresh has read them.</p></section>`;
 }
-// ---------- The trackers' super PACs in the midterms (approved 2026-11-26) ----------
-// One card a tracker for the midterm picked: what its own super PACs spent for and against House and Senate candidates
+// ---------- The trackers' super PACs in each election (approved 2026-11-26) ----------
+// One card a tracker for the election picked (2018 on, presidential years included): what its own super PACs spent for and against House and Senate candidates
 // (primaries and generals), with bars of the part that went to candidates who won and who lost, on one scale for every
-// card; on the right, the share of the candidates they backed who won, with an arrow against the midterm before; under
+// card; on the right, the share of the candidates they backed who won, with an arrow against the election before; under
 // Open, each of its super PACs. A tracker without a super PAC of its own says where its money shows instead.
 // public/midterm-trackers.json (npm run superpacs:midterms).
 let mtYear=null,mtCache=null;
 const loadMidterms=()=>mtCache||(mtCache=fetch('/midterm-trackers.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>{if(!d)mtCache=null;return d;}));
 function midtermCardsHTML(d,year){
-  const y=Number(year),Y=d.years[y]?.trackers||{},prev=prevMidterm(d,y),P=prev?d.years[prev]?.trackers||{}:null;
+  const y=Number(year),Y=d.years[y]?.trackers||{},prev=prevElection(d,y),P=prev?d.years[prev]?.trackers||{}:null;
   const most=Math.max(1,...Object.values(Y).flatMap(x=>[x.for||0,x.against||0]));
   const pct=(v,t)=>t?Math.round(100*v/t)+'%':'—',cut=shortMoney(FUNDED_CUTOFF);
   const pacName=p=>SUPER_PAC_NAMES[p.id]||spName(p.id,p.name);
   const bar=(side,tot,won,lost)=>{const unk=Math.max(0,tot-won-lost);
     const seg=(cls,v,what)=>v>0?`<i class="mt-seg ${cls}" style="width:${100*v/tot}%" data-tip="${esc(`${side}, ${what}: ${shortMoney(v)} (${pct(v,tot)})`)}"></i>`:'';
     return `<span class="mt-track">${tot>0?`<span class="mt-bar" style="width:${Math.max(1.5,100*tot/most)}%">${seg('won',won,'candidate won')}${seg('lost',lost,'candidate lost')}${seg('open',unk,'result not known yet')}</span>`:''}</span>`;};
-  // Alphabetical, the same in every midterm, so a tracker's card stays in its place when the year changes.
+  // Alphabetical, the same in every election, so a tracker's card stays in its place when the year changes.
   const order=[...TRACKERS].sort((a,b)=>a.name.localeCompare(b.name));
   return order.map(t=>{
     const x=Y[t.key],funded=!t.superPacs.length;
     const head=`<h3><span aria-hidden="true">${t.emoji}</span> ${esc(t.name)}</h3><span class="mt-kind">${funded?'Super PACs it funds':'Its own super PACs'}</span>`;
-    if(!hadMoney(x))return `<article class="mt-card empty">${head}<p class="mt-why">${funded?`Its companies, their PACs and its trade groups gave nothing to a super PAC that spent in the ${y} midterms.`:`Its super PACs didn't spend in the ${y} midterms.`}</p></article>`;
+    if(!hadMoney(x))return `<article class="mt-card empty">${head}<p class="mt-why">${funded?`Its companies, their PACs and its trade groups gave nothing to a super PAC that spent in the ${y} elections.`:`Its super PACs didn't spend in the ${y} elections.`}</p></article>`;
     const w=winShare(x),vs=versus(w,P?winShare(P[t.key]):null,prev,hadMoney(P?.[t.key]));
     // The arrow, greener or redder the more the share moved, with the points under it (approved 2026-11-26).
     const arrow=vs?.dir==='up'||vs?.dir==='down'?`<span class="mt-trend" style="--mt-trend:${trendColor(vs.delta)}" role="img" aria-label="${vs.dir} ${Math.abs(vs.delta)} points from ${prev}"><span class="mt-arrow" aria-hidden="true">${vs.dir==='up'?'▲':'▼'}</span><small aria-hidden="true">${trendPoints(vs.delta)}</small></span>`:'';
@@ -2563,16 +2563,16 @@ function midtermCardsHTML(d,year){
 async function renderMidtermTrackers(){
   const el=$('#sp-midterms');if(!el)return;
   const d=await loadMidterms();if(!el.isConnected)return;
-  const years=midtermYears(d);
+  const years=electionYears(d);
   if(!years.length){el.innerHTML='';return;}
   if(!years.includes(mtYear))mtYear=years[0];
-  const Y=d.years[mtYear],prev=prevMidterm(d,mtYear);
+  const Y=d.years[mtYear],prev=prevElection(d,mtYear);
   el.innerHTML=`<section class="mt-sec" aria-labelledby="mt-h">
-    <div class="mt-head"><div><h2 id="mt-h">The trackers' super PACs in the ${mtYear} midterms</h2><p class="small muted">One card a tracker: what its super PACs spent, and how many of the candidates they backed won.</p></div>
-      ${years.length>1?`<div class="seg mt-years" role="group" aria-label="Midterm">${years.map(y=>`<button type="button" data-y="${y}" class="${y===mtYear?'active':''}" aria-pressed="${y===mtYear}">${y}</button>`).join('')}</div>`:''}</div>
+    <div class="mt-head"><div><h2 id="mt-h">The trackers' super PACs in the ${mtYear} elections</h2><p class="small muted">One card a tracker: what its super PACs spent, and how many of the candidates they backed won.</p></div>
+      ${years.length>1?`<div class="seg mt-years" role="group" aria-label="Election">${years.map(y=>`<button type="button" data-y="${y}" class="${y===mtYear?'active':''}" aria-pressed="${y===mtYear}">${y}</button>`).join('')}</div>`:''}</div>
     <div class="mt-legend" aria-hidden="true"><span><i class="mt-sw won"></i>Candidate won</span><span><i class="mt-sw lost"></i>Candidate lost</span></div>
     <div class="mt-grid">${midtermCardsHTML(d,mtYear)}</div>
-    <p class="small muted mt-note"><b>Its own super PACs:</b> the ones the tracker runs, as listed on the Trackers page. <b>Super PACs it funds:</b> for the five lobbies that run none, the super PACs their companies, those companies' PACs and their trade groups gave to; the lobby's share of each one's spending is what it gave ÷ everything that super PAC raised, and the candidates counted are those backed by a super PAC it gave ${shortMoney(FUNDED_CUTOFF)} or more. People who work for its companies give on their own too; that's shown, not counted. Money given through nonprofits that don't name their donors can't be traced, so these are floors. Spending for and against House and Senate candidates in ${mtYear-1}–${mtYear}, primaries and generals together, from the FEC's files${Y.through?` (through ${fmtDate(Y.through)})`:''}. A candidate counts once, however much was spent; someone backed in a primary who lost it counts as lost. A share from fewer than ${MIN_CANDIDATES} candidates isn't shown. Who won: ${Y.results==='fec'?'the FEC\'s official results':'the site\'s race calls (the FEC publishes official results about a year after the election)'}.${prev?` The arrow compares with the ${prev} midterm.`:''}</p>
+    <p class="small muted mt-note"><b>Its own super PACs:</b> the ones the tracker runs, as listed on the Trackers page. <b>Super PACs it funds:</b> for the five lobbies that run none, the super PACs their companies, those companies' PACs and their trade groups gave to; the lobby's share of each one's spending is what it gave ÷ everything that super PAC raised, and the candidates counted are those backed by a super PAC it gave ${shortMoney(FUNDED_CUTOFF)} or more. People who work for its companies give on their own too; that's shown, not counted. Money given through nonprofits that don't name their donors can't be traced, so these are floors. Spending for and against House and Senate candidates in ${mtYear-1}–${mtYear}, primaries and generals together, from the FEC's files${Y.through?` (through ${fmtDate(Y.through)})`:''}. A candidate counts once, however much was spent; someone backed in a primary who lost it counts as lost. A share from fewer than ${MIN_CANDIDATES} candidates isn't shown. Who won: ${Y.results==='fec'?'the FEC\'s official results':Y.results==='legislators'?'who took office the following January, from congress-legislators (the FEC hasn\'t published official results yet)':'the site\'s race calls (the FEC publishes official results a year or more after the election)'}.${prev?` House and Senate races only, presidential years included. The arrow compares with the ${prev} elections.`:''}</p>
   </section>`;
   el.querySelectorAll('.mt-years button').forEach(b=>b.addEventListener('click',()=>{mtYear=Number(b.dataset.y);renderMidtermTrackers();}));
   bindTips(el);

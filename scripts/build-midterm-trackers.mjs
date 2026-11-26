@@ -1,9 +1,10 @@
-// The trackers' super PACs in each midterm (approved 2026-11-26), for the tracker cards on the Super PACs page: what
+// The trackers' super PACs in each House and Senate election, 2018 on, presidential years included (approved
+// 2026-11-26; the file and script keep their first name, midterm), for the tracker cards on the Super PACs page: what
 // they spent for and against House and Senate candidates, primaries and generals together, how much of it went to
 // candidates who won in November, and how many of the candidates they backed won. Two kinds of card:
 //   own     Crypto, Big Tech + AI and the Pro-Israel Lobby run super PACs of their own: their spending as filed.
 //   funded  The other five run none (approved 2026-11-26): what their companies, those companies' PACs and their trade
-//           groups gave to super PACs that spent in the midterm (the FEC's itemized receipts: itoth for PACs' checks,
+//           groups gave to super PACs that spent in the election (the FEC's itemized receipts: itoth for PACs' checks,
 //           itcont for companies' and groups' gifts, read as they download and never saved), and the tracker's share of
 //           each one's spending: what it gave ÷ everything that super PAC raised (webk), times each of its
 //           expenditures. The candidates counted are those a super PAC it gave FUNDED_CUTOFF or more backed. Gifts from
@@ -14,7 +15,9 @@
 //     (public/trackers.js isOwnSuperPac). A record without a candidate ID takes the one the file's other records give
 //     the same seat and last name, else the results file's candidate, else the site's nominee.
 //   Who won: the FEC's official results (federalelections<year>.xlsx, its general-election winner column), which come
-//     out about a year after the election. Until then, the site's own race calls: public/research.json's races and
+//     out a year or more after the election. Until then, for an earlier election, everyone congress-legislators lists
+//     with a House or Senate term starting the January 3 after it (current and former members, by their FEC IDs); for
+//     the current one, the site's own race calls: public/research.json's races and
 //     liteRaces and public/members-elect.json's races, and a sitting House member whose seat nobody else won was
 //     re-elected. The candidates of a race not called yet count as open: their money shows apart, and they're left out
 //     of the share who won.
@@ -23,10 +26,10 @@
 //    against, forWon, forLost, againstWon, againstLost, supported: {n, won, open}, pacs: [{id, name, for, against,
 //    supported}], and for a funded one: gave, employees, funded (super PACs given FUNDED_CUTOFF or more), each pac's
 //    gave and share (% of its money)}}}}}
-// 2018 has no tracker's own super PAC spending (the first, United Democracy Project, began in 2021), only the five
-// funded cards. Run by npm run corporate:pacs for the current cycle when it's a midterm, or on its own:
-//   npm run superpacs:midterms                every midterm in MIDTERMS (files kept in .local/fec-bulk/)
-//   npm run superpacs:midterms -- 2026        one midterm, the others kept from the last file
+// No tracker ran its own super PAC before 2021 (United Democracy Project), so 2018 and 2020 have only the five funded
+// cards. Run by npm run corporate:pacs for the current cycle, or on its own:
+//   npm run superpacs:midterms                every election in ELECTIONS (files kept in .local/fec-bulk/)
+//   npm run superpacs:midterms -- 2026        one election, the others kept from the last file
 //   npm run superpacs:midterms -- --refresh   downloads the files again now
 //   npm run superpacs:midterms -- --own       only the trackers' own super PACs (skips the donor files, several GB each)
 import fs from 'node:fs';
@@ -43,7 +46,10 @@ import {FUNDED_CUTOFF} from '../public/midterm-trackers.js';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const BASE=process.env.FEC_BULK_BASE||'https://www.fec.gov/files/bulk-downloads';
 const RESULTS_BASE='https://www.fec.gov/resources/cms-content/documents';
-export const MIDTERMS=[2026,2022,2018],OUT='public/midterm-trackers.json';
+// Every House and Senate election from 2018 to the current cycle (data/config.json).
+const CYCLE=(()=>{try{return Number(JSON.parse(fs.readFileSync(path.join(ROOT,'data','config.json'),'utf8')).cycle)||2026;}catch{return 2026;}})();
+export const ELECTIONS=Array.from({length:(CYCLE-2018)/2+1},(_,i)=>CYCLE-2*i),OUT='public/midterm-trackers.json';
+const LEGISLATORS_BASE='https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages';
 export {FUNDED_CUTOFF};
 export const SUPER_PAC_TYPES=new Set(['O','V','W']);
 const STATES={Alabama:'AL',Alaska:'AK',Arizona:'AZ',Arkansas:'AR',California:'CA',Colorado:'CO',Connecticut:'CT',Delaware:'DE',Florida:'FL',Georgia:'GA',Hawaii:'HI',Idaho:'ID',Illinois:'IL',Indiana:'IN',Iowa:'IA',Kansas:'KS',Kentucky:'KY',Louisiana:'LA',Maine:'ME',Maryland:'MD',Massachusetts:'MA',Michigan:'MI',Minnesota:'MN',Mississippi:'MS',Missouri:'MO',Montana:'MT',Nebraska:'NE',Nevada:'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM','New York':'NY','North Carolina':'NC','North Dakota':'ND',Ohio:'OH',Oklahoma:'OK',Oregon:'OR',Pennsylvania:'PA','Rhode Island':'RI','South Carolina':'SC','South Dakota':'SD',Tennessee:'TN',Texas:'TX',Utah:'UT',Vermont:'VT',Virginia:'VA',Washington:'WA','West Virginia':'WV',Wisconsin:'WI',Wyoming:'WY'};
@@ -75,7 +81,14 @@ export function fecResults(sheets){
   return {won,seats};
 }
 
-// The site's own race calls, for a midterm the FEC hasn't published results for yet: {won, open (candidates of races
+// The winners of an earlier election the FEC hasn't published results for yet: everyone with a House or Senate term
+// starting the January 3 after it, from congress-legislators' current and former members, by every FEC ID they list.
+export function legislatorResults(year,people){
+  const start=`${Number(year)+1}-01-03`,won=new Set();
+  for(const p of people||[])if((p.terms||[]).some(t=>(t.type==='rep'||t.type==='sen')&&t.start===start))for(const id of p.id?.fec||[])won.add(id);
+  return {won,open:new Set(),seats:new Map(),nominees:[]};
+}
+// The site's own race calls, for the current election, which the FEC hasn't published results for yet: {won, open (candidates of races
 // not called yet), nominees: [[seat, last name, candidate ID]]}.
 export function siteResults({research={},elect={},house={},senate={}}){
   const listOf=x=>Array.isArray(x)?x:x?.members||x?.senators||[];
@@ -231,18 +244,25 @@ async function buildFunded(year,records,results,{dir,refresh,log}){
 }
 
 const readJson=f=>{try{return JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8'));}catch{return null;}};
-// One midterm: its spending file and its results (the FEC's, else the site's race calls).
+// One election: its spending file and its results (the FEC's; else congress-legislators' for an earlier one, the site's
+// race calls for the current one).
 export async function buildMidterm(year,{dir,refresh=false,log=console.log,own=false,last=null}){
   const ie=await download(path.join(dir,`independent_expenditure_${year}.csv`),`${BASE}/${year}/independent_expenditure_${year}.csv`,refresh);
   let results=null;
   try{const f=await download(path.join(dir,`federalelections${year}.xlsx`),`${RESULTS_BASE}/federalelections${year}.xlsx`,refresh);results={...fecResults(xlsxSheets(fs.readFileSync(f))),open:new Set(),nominees:[],kind:'fec'};}
   catch(e){log(`  ${year}: no FEC results file yet (${e.message}); using the site's race calls.`);}
+  if((!results||!results.won.size)&&Number(year)<CYCLE){
+    const people=[];
+    for(const f of ['legislators-current.json','legislators-historical.json']){const file=await download(path.join(dir,f),`${LEGISLATORS_BASE}/${f}`,refresh);people.push(...JSON.parse(fs.readFileSync(file,'utf8')));}
+    results={...legislatorResults(year,people),kind:'legislators'};
+    log(`  ${year}: winners from congress-legislators (${results.won.size} FEC IDs with a term starting Jan. 3, ${Number(year)+1}).`);
+  }
   if(!results||!results.won.size){
     const site=siteResults({research:readJson('public/research.json')||{},elect:readJson('public/members-elect.json')||{},house:readJson('public/house.json')||{},senate:readJson('public/senate.json')||{}});
     results={...site,seats:new Map(),kind:'site'};
   }
   const records=await readIeRecords(ie),out=midtermTrackers(records,results);
-  log(`  ${year}: ${Object.keys(out.trackers).length} trackers with their own super PAC spending, results from ${results.kind==='fec'?'the FEC':'the site\'s race calls'}, through ${out.through||'—'}.`);
+  log(`  ${year}: ${Object.keys(out.trackers).length} trackers with their own super PAC spending, results from ${results.kind==='fec'?'the FEC':results.kind==='legislators'?'congress-legislators':'the site\'s race calls'}, through ${out.through||'—'}.`);
   // The five without their own: from the donor files, or the last file's when skipped or when a download fails.
   const kept=Object.fromEntries(Object.entries(last?.trackers||{}).filter(([,x])=>x.kind==='funded'));
   if(own)Object.assign(out.trackers,kept);
@@ -251,11 +271,11 @@ export async function buildMidterm(year,{dir,refresh=false,log=console.log,own=f
   catch(e){log(`  ${year}: couldn't read the donor files (${e.message}); the last file's cards for the five lobbies without their own super PACs are kept.`);Object.assign(out.trackers,kept);}
   return {results:results.kind,...out};
 }
-export async function writeMidtermTrackers({years=MIDTERMS,dir,refresh=false,own=false,log=console.log}={}){
-  const last=readJson(OUT),out={about:'Each tracker\'s super PACs in each midterm: spending for and against House and Senate candidates (primaries and generals), the part that went to candidates who won in November, and how many of the candidates they backed won. Its own super PACs (kind own), or, for the lobbies that run none, its share of the super PACs its companies, PACs and trade groups gave to (kind funded). From the FEC\'s independent-expenditure, receipts and committee files and its official results (until those are out, the site\'s race calls). Written by npm run superpacs:midterms (scripts/build-midterm-trackers.mjs).',
+export async function writeMidtermTrackers({years=ELECTIONS,dir,refresh=false,own=false,log=console.log}={}){
+  const last=readJson(OUT),out={about:'Each tracker\'s super PACs in each House and Senate election, 2018 on: spending for and against House and Senate candidates (primaries and generals), the part that went to candidates who won in November, and how many of the candidates they backed won. Its own super PACs (kind own), or, for the lobbies that run none, its share of the super PACs its companies, PACs and trade groups gave to (kind funded). From the FEC\'s independent-expenditure, receipts and committee files and its official results (until those are out, the site\'s race calls). Written by npm run superpacs:midterms (scripts/build-midterm-trackers.mjs).',
     built:new Date().toISOString().slice(0,10),years:{...(last?.years||{})}};
   for(const y of years)out.years[y]=await buildMidterm(y,{dir,refresh,log,own,last:last?.years?.[y]});
-  out.years=Object.fromEntries(Object.entries(out.years).filter(([y])=>MIDTERMS.includes(Number(y))).sort(([a],[b])=>b-a));
+  out.years=Object.fromEntries(Object.entries(out.years).filter(([y])=>ELECTIONS.includes(Number(y))).sort(([a],[b])=>b-a));
   fs.writeFileSync(path.join(ROOT,OUT),JSON.stringify(out)+'\n');
   log(`Wrote ${OUT} (${Object.keys(out.years).join(', ')}).`);
   return out;
@@ -263,7 +283,7 @@ export async function writeMidtermTrackers({years=MIDTERMS,dir,refresh=false,own
 
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const dir=process.env.FEC_BULK_DIR||path.join(ROOT,'.local','fec-bulk');fs.mkdirSync(dir,{recursive:true});
-  const asked=process.argv.slice(2).filter(a=>/^\d{4}$/.test(a)).map(Number),bad=asked.filter(y=>!MIDTERMS.includes(y));
-  if(bad.length){console.error(`Not a midterm here: ${bad.join(', ')} (${MIDTERMS.join(', ')}).`);process.exit(1);}
-  writeMidtermTrackers({years:asked.length?asked:MIDTERMS,dir,refresh:process.argv.includes('--refresh'),own:process.argv.includes('--own')}).catch(e=>{console.error(e.message);process.exit(1);});
+  const asked=process.argv.slice(2).filter(a=>/^\d{4}$/.test(a)).map(Number),bad=asked.filter(y=>!ELECTIONS.includes(y));
+  if(bad.length){console.error(`Not an election here: ${bad.join(', ')} (${ELECTIONS.join(', ')}).`);process.exit(1);}
+  writeMidtermTrackers({years:asked.length?asked:ELECTIONS,dir,refresh:process.argv.includes('--refresh'),own:process.argv.includes('--own')}).catch(e=>{console.error(e.message);process.exit(1);});
 }
