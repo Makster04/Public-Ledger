@@ -188,7 +188,9 @@ function main(){
   const R=read('public/research.json'),statements=read('data/question-statements.json');delete statements.about;
   const full=[...R.members,...(R.cands||[]),...(R.featured||[])],fullIds=new Set(full.map(p=>p.id));
   const S=read('public/senate.json').senators,H=read('public/house.json').members;
-  const basic=[...S,...H].filter(p=>!fullIds.has(p.id)),people=[...full,...basic],basicIds=new Set(basic.map(p=>p.id));
+  // and since Nov. 26, 2026 every member-elect: their campaign promises wait, not tested, until they take office.
+  const E=fs.existsSync(path.join(ROOT,'public/members-elect.json'))?read('public/members-elect.json').members||[]:[],electIds=new Set(E.map(p=>p.id));
+  const basic=[...S,...H,...E].filter((p,i,a)=>!fullIds.has(p.id)&&a.findIndex(x=>x.id===p.id)===i),people=[...full,...basic],basicIds=new Set(basic.map(p=>p.id));
   const dirs=new Map([...read('public/senate.json').senators.map(m=>({...m,chamber:'S'})),...read('public/house.json').members.map(m=>({...m,chamber:'H'}))].filter(m=>m.bioguide&&m.since).map(m=>[m.bioguide,{since:m.since,chamber:m.chamber}]));
   // Who won a 2026 race and takes office in January: the race's winner, by profile.
   const winners=new Set();
@@ -198,7 +200,7 @@ function main(){
   const {people:out,queue}=buildPromises({statements,people,dirs,reviews,today,activity:activityIndex(everyone),
     evidence:bg=>has(`public/question-evidence/${bg}.json`)?read(`public/question-evidence/${bg}.json`):null,
     campaign:id=>has(`data/campaign-text/${id}.json`)?read(`data/campaign-text/${id}.json`):null,
-    elect:p=>!dirs.has(p.bioguide)&&winners.has(p.id)});
+    elect:p=>electIds.has(p.id)||(!dirs.has(p.bioguide)&&winners.has(p.id))});
   // The basic profiles' promises in full, one file each (old files cleared), and in public/promises.json what the grade needs.
   const dir=path.join(ROOT,PROMISE_DIR);fs.rmSync(dir,{recursive:true,force:true});fs.mkdirSync(dir,{recursive:true});
   for(const id of Object.keys(out))if(basicIds.has(id)){

@@ -123,8 +123,9 @@ export function checkStatements(coded,{people,questions}){
 function main(){
   const args=process.argv.slice(2),find=args.includes('--find')||args.includes('--queue'),queue=args.includes('--queue'),print=args.includes('--print'),only=args.filter((a,i)=>!a.startsWith('--')&&args[i-1]!=='--top');
   const Q=read('public/questions.json').questions,R=read('public/research.json');
-  // The full profiles, and since Nov. 25, 2026 every sitting senator and House member (their floor speeches).
-  const people=new Set([...R.members,...(R.cands||[]),...(R.featured||[]),...(read('public/senate.json').senators||[]),...(read('public/house.json').members||[])].map(p=>p.id));
+  // The full profiles, since Nov. 25, 2026 every sitting senator and House member (their floor speeches), and since
+  // Nov. 26 every member-elect (their campaign sites).
+  const people=new Set([...R.members,...(R.cands||[]),...(R.featured||[]),...(read('public/senate.json').senators||[]),...(read('public/house.json').members||[]),...(read('public/members-elect.json').members||[])].map(p=>p.id));
   if(find){
     const searches=read('data/question-search.json');delete searches.about;
     const dir=path.join(ROOT,'.local','statement-candidates');fs.mkdirSync(dir,{recursive:true});

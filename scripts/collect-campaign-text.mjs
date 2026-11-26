@@ -6,6 +6,10 @@
 //   npm run campaign:collect -- --only collins  one person
 //   npm run campaign:collect -- --pages 20      issue pages read for each campaign (default 12)
 //   npm run campaign:collect -- --redo          read every campaign again (otherwise only the ones that failed)
+//   npm run campaign:collect -- --everyone      since Nov. 26, 2026: every sitting senator and House member and every
+//                                               member-elect too, not just the full profiles; whoever has no campaign
+//                                               text yet goes first (toward 10 or more promises for everyone)
+//   npm run campaign:collect -- --from 2022     only the elections from this year on (default: config historyFrom)
 // Which website: the campaign site in data/config.json ("campaignSite", and "campaignSites" for earlier addresses),
 // and the website the person's campaign committee gave the FEC (with FEC_API_KEY in .dev.vars). Official .gov sites
 // and social media pages aren't campaign sites, so they are left out. Which elections: the years the FEC lists the
@@ -251,6 +255,22 @@ export function campaignPosts(db,person,year){
   return [...out.values()].sort((a,b)=>a.date.localeCompare(b.date));
 }
 
+// Everyone whose campaigns are read: the full profiles, and with everyone also every senator, House member and
+// member-elect, once each, with what campaignYears needs (chamber, seat, in office, since). Whoever has no campaign text
+// yet (has(id) false) goes first. config: data/config.json's people, for their campaign sites.
+export function campaignPeople({research,senate,house,elect,config},{everyone=false,only=null,has=()=>false}={}){
+  const cfg=new Map((config?.people||[]).map(p=>[p.id,p])),seen=new Set(),out=[];
+  const add=p=>{if(!p?.id||seen.has(p.id))return;seen.add(p.id);out.push({...p,...(cfg.get(p.id)||{}),seat:p.seat,since:p.since});};
+  for(const p of [...(research?.members||[]),...(research?.cands||[])])add(p);
+  if(everyone){
+    for(const p of senate?.senators||[])add({...p,chamber:'S',seat:p.class?`Class ${p.class}`:p.seat,inOffice:true});
+    for(const p of house?.members||[])add({...p,chamber:'H',inOffice:true});
+    for(const p of elect?.members||[])add({...p,chamber:p.district==null&&!/-\d+$/.test(p.seat||'')?'S':'H',inOffice:false});
+  }
+  const list=out.filter(p=>!only||p.id===only);
+  return [...list.filter(p=>!has(p.id)),...list.filter(p=>has(p.id))];
+}
+
 // ---------- Where the FEC says their campaign is ----------
 // Every campaign the FEC lists for the person (their candidacy on file, and others of theirs in the same state: a
 // House member now running for the Senate has a House candidacy too), with the years on the ballot and each principal
@@ -274,10 +294,12 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const arg=(name,d)=>{const i=process.argv.indexOf(name);return i>=0?process.argv[i+1]:d;};
   const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
   const config=read('data/config.json'),research=read('public/research.json'),env=process.env;
-  const from=Number(config.historyFrom)||2016,to=Number(config.year)||new Date().getFullYear(),max=Number(arg('--pages',12)),only=arg('--only',null);
-  const cfg=new Map(config.people.map(p=>[p.id,p]));
-  // The people with a profile (the president's promises come from PolitiFact's tracker instead).
-  const people=[...research.members,...research.cands].filter(p=>!only||p.id===only).map(p=>({...p,...(cfg.get(p.id)||{}),seat:p.seat,since:p.since}));
+  const from=Number(arg('--from',null))||Number(config.historyFrom)||2016,to=Number(config.year)||new Date().getFullYear(),max=Number(arg('--pages',12)),only=arg('--only',null);
+  // The people with a profile (the president's promises come from PolitiFact's tracker instead), and with --everyone
+  // every senator, House member and member-elect.
+  const opt=f=>fs.existsSync(path.join(root,f))?read(f):null;
+  const people=campaignPeople({research,senate:opt('public/senate.json'),house:opt('public/house.json'),elect:opt('public/members-elect.json'),config},
+    {everyone:process.argv.includes('--everyone'),only,has:id=>fs.existsSync(path.join(OUT,`${id}.json`))});
   if(!people.length){console.log(only?`No profile with the id "${only}".`:'No profiles in public/research.json.');process.exit(1);}
   const dbFile=path.join(root,'.local','records.sqlite'),db=fs.existsSync(dbFile)?new DatabaseSync(dbFile,{readOnly:true}):null;
   if(!env.FEC_API_KEY)console.log('No FEC_API_KEY in .dev.vars: only the campaign sites in data/config.json are read, and the election years are estimated.');
@@ -288,7 +310,9 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // failed or left pages unread is read again. --redo reads everything again.
   const redo=process.argv.includes('--redo'),tally={read:0,kept:0,failed:0,partial:0},failed=[];
   let down=null;
+  let n=0;
   people: for(const p of people){
+    n++;if(people.length>50&&n%25===0)console.log(`  … ${n} of ${people.length}`);
     const fec=await fecFacts(p,env);
     const given=[p.campaignSite,...(p.campaignSites||[])].filter(Boolean),sites=new Map();
     for(const u of [...given,...(fec?.websites||[])]){const s=campaignSite(u);if(s&&!sites.has(s.host))sites.set(s.host,s);}
