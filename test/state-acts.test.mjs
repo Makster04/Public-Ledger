@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {DatabaseSync} from 'node:sqlite';
-import {mergeBills,billNumber,stateBillKey,exportStateRecords} from '../scripts/export-state-records.mjs';
+import {mergeBills,billNumber,stateBillKey,exportStateRecords,datasetBills,fillFromDataset,legiscanFill} from '../scripts/export-state-records.mjs';
 import {billQuestions,billActions,buildStateActs} from '../scripts/state-acts.mjs';
 import {searchTests} from '../scripts/question-statements.mjs';
 import {personStances,stateItems} from '../public/question-scores.js';
@@ -24,7 +24,7 @@ test('bills from both sources are merged once, Open States first, markers left o
   assert.equal(stateBillKey({state:'az',identifier:'SB 1001',year:'2023'}),'AZ-SB1001-2023');
 });
 
-test('the export reads the published records of both feeds into one file a person',()=>{
+test('the export reads the published records of both feeds into one file a person',async()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'state-')),db=new DatabaseSync(path.join(dir,'r.sqlite'));
   db.exec(fs.readFileSync(new URL('migrations/0001_initial.sql',root),'utf8'));
   db.prepare("INSERT INTO jobs (id,kind,subject,args,published_run) VALUES (?,?,?,?,?)").run('state-openstates:shah','state-openstates','shah','{}','r1');
@@ -32,7 +32,7 @@ test('the export reads the published records of both feeds into one file a perso
   db.prepare("INSERT INTO records (run_id,id,payload) VALUES (?,?,?)").run('r1','a',JSON.stringify(os1));
   db.prepare("INSERT INTO records (run_id,id,payload) VALUES (?,?,?)").run('r2','b',JSON.stringify(ls1));
   db.prepare("INSERT INTO records (run_id,id,payload) VALUES (?,?,?)").run('r2','c',JSON.stringify(ls2));
-  const out=path.join(dir,'out'),written=exportStateRecords({db,names:{shah:'Amish Shah'},out,today:'2026-11-26'});
+  const out=path.join(dir,'out'),written=await exportStateRecords({db,names:{shah:'Amish Shah'},out,today:'2026-11-26'});
   assert.deepEqual(written,[['shah',2]]);
   const f=JSON.parse(fs.readFileSync(path.join(out,'shah.json'),'utf8'));
   assert.equal(f.name,'Amish Shah');assert.deepEqual(f.counts,{bills:2,votes:1});
@@ -66,4 +66,33 @@ test('state actions count like Congress\'s bills and votes, one credit per bill'
   assert.equal(p['minimum-wage'].carried.items[0].kind,'s');
   const two=personStances(null,null,{state:{'minimum-wage':[...state['minimum-wage'],[1,'state','2023-02-10','AZ SB 9 (2023): Freeze the wage','u2','Voted yes.']]}});
   assert.deepEqual([two['minimum-wage'].a,two['minimum-wage'].b],[1.5,1]);
+});
+
+// A zip of stored (uncompressed) files, laid out as LegiScan's datasets are: <state>/<session>/bill|vote/<n>.json.
+function zipOf(files){
+  const parts=[],central=[];let at=0;
+  for(const [name,text] of Object.entries(files)){const n=Buffer.from(name),d=Buffer.from(text),h=Buffer.alloc(30);
+    h.writeUInt32LE(0x04034b50,0);h.writeUInt32LE(d.length,18);h.writeUInt32LE(d.length,22);h.writeUInt16LE(n.length,26);
+    const c=Buffer.alloc(46);c.writeUInt32LE(0x02014b50,0);c.writeUInt32LE(d.length,20);c.writeUInt32LE(d.length,24);c.writeUInt16LE(n.length,28);c.writeUInt32LE(at,42);
+    parts.push(h,n,d);central.push(c,n);at+=30+n.length+d.length;}
+  const cd=Buffer.concat(central),e=Buffer.alloc(22),k=Object.keys(files).length;e.writeUInt32LE(0x06054b50,0);e.writeUInt16LE(k,8);e.writeUInt16LE(k,10);e.writeUInt32LE(cd.length,12);e.writeUInt32LE(at,16);
+  return Buffer.concat([...parts,cd,e]);
+}
+const DS=zipOf({'IL/2017-2018_100th/bill/HB0040.json':JSON.stringify({bill:{bill_number:'HB0040',title:'Minimum wage; raise to $15',sponsors:[{people_id:77,sponsor_type_id:1}],votes:[{roll_call_id:5,date:'2017-04-01',desc:'Third Reading'}]}}),
+  'IL/2017-2018_100th/bill/SB0002.json':JSON.stringify({bill:{bill_number:'SB0002',title:'Border security; funding',sponsors:[{people_id:77,sponsor_type_id:2}],votes:[]}}),
+  'IL/2017-2018_100th/vote/5.json':JSON.stringify({roll_call:{roll_call_id:5,date:'2017-04-01',desc:'Third Reading',passed:1,votes:[{people_id:77,vote_text:'Yea'},{people_id:8,vote_text:'Nay'}]}})});
+
+test("LegiScan's datasets fill in a bill listed by number: its title, their role and their votes",async()=>{
+  const ds=datasetBills(DS);assert.deepEqual([...ds.bills.keys()].sort(),['HB0040','SB0002']);
+  const b={key:'IL-HB0040-2017',state:'IL',session:'100th General Assembly',year:'2017',identifier:'HB0040',title:null,role:null,date:null,url:'https://legiscan.com/IL/bill/HB0040/2017',source:'LegiScan',votes:[]};
+  const f=fillFromDataset(b,ds,77);
+  assert.deepEqual([f.title,f.role,f.votes.map(v=>[v.option,v.result])],['Minimum wage; raise to $15','sponsor',[['yes','pass']]]);
+  assert.equal(fillFromDataset({...b,identifier:'SB0002'},ds,77).role,'cosponsor');
+  const asked=[];
+  const get=async url=>{asked.push(url.replace(/.*op=/,''));return /getDatasetList/.test(url)?{datasetlist:[{session_id:1413,session_name:'100th General Assembly',dataset_hash:'abc',access_key:'k'}]}:{dataset:{zip:DS.toString('base64')}};};
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'ls-'));
+  const out=await legiscanFill([b,{...b,key:'IL-SB0002-2017',identifier:'SB0002'}],{personId:77,get,cacheDir:dir});
+  assert.deepEqual(out.map(x=>[x.title,x.role]),[['Minimum wage; raise to $15','sponsor'],['Border security; funding','cosponsor']]);
+  assert.equal(asked.length,2,'one dataset list and one dataset');
+  await legiscanFill([b],{personId:77,get,cacheDir:dir});assert.equal(asked.length,3,'the dataset is kept: only the list is asked again');
 });
