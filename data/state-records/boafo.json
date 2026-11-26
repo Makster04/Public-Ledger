@@ -1,0 +1,4872 @@
+{
+ "about": "The state legislature bills this person sponsored or cosponsored, with their votes on them, from Open States and LegiScan as the local refresh collected them. Written by npm run state:export (scripts/export-state-records.mjs); matched to the alignment questions with npm run state:acts.",
+ "person": "boafo",
+ "name": "Adrian Boafo",
+ "built": "2026-11-26",
+ "counts": {
+  "bills": 283,
+  "votes": 181
+ },
+ "bills": [
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 525",
+   "title": "County Boards of Education - Student Electronic Communication Device Use Policy - Establishment (Joanne C. Benson Maryland Phone-Free Schools Act)",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB525/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-11",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "absent",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB525-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 548",
+   "title": "Land Use - Permitting - Development Rights (Maryland Housing Certainty Act)",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB548/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "absent",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB548-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 552",
+   "title": "Commission on the House of Reformation and Instruction for Colored Children - Establishment",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB552/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "absent",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB552-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 623",
+   "title": "Education - Purple Star Schools Program and Purple Star Colleges Program",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB623/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-20",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB623-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 634",
+   "title": "Police Training - Autism and Dementia (LEAD Act of 2026)",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB634/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-05",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB634-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 680",
+   "title": "Children's Cabinet Fund - Renaming and Funding for Grants to Local Management Boards",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB680/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-25",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB680-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 738",
+   "title": "Real Property - Transfer-on-Death Deed - Establishment",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB738/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-24",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB738-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 810",
+   "title": "Study to Evaluate Blockchain-Based Real Property Lease and Title Recordation and Verification",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB810/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-23",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB810-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 816",
+   "title": "Maryland Automobile Insurance Fund - Affordability Program and Industry Automobile Insurance Association Assessments",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB816/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-11",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB816-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 842",
+   "title": "Property Tax Credit - Surviving Spouse of Military Service Member",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB842/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-08",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB842-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 849",
+   "title": "Child Care Scholarship Program - Freeze in Enrollment - Exceptions and Waitlist",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB849/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-27",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB849-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 894",
+   "title": "Land Use - Transit-Oriented Development - Alterations (Maryland Transit and Housing Opportunity Act)",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB894/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-08",
+     "motion": "FLA Del. Buckel /573529/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-04-01",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB894-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 994",
+   "title": "Business Regulation - Travel Services - Special Fund, Fees, and Surety Requirement (Don't You Worry (Wurie) Act)",
+   "role": "sponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/md/bills/2026/HB994/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-26",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-11",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB994-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1267",
+   "title": "Patuxent Research Refuge and Beltsville Agricultural Research Center - Zoning Classification (Protecting Patuxent Research Refuge Act)",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/md/bills/2026/HB1267/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1267-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 470",
+   "title": "Digital Asset and Blockchain Technology Task Force - Establishment",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/md/bills/2026/HB470/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-11",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB470-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 721",
+   "title": "Uniformed Services Spouses Act",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/md/bills/2026/HB721/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-28",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB721-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 864",
+   "title": "Public Works Contracts - Apprenticeship Requirements (Maryland Workforce Apprenticeship Utilization Act)",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/md/bills/2026/HB864/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "absent",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB864-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 870",
+   "title": "Environment - Permit Applications for New Buildings - Notice (Large Buildings for Tomorrow Act)",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/md/bills/2026/HB870/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-07",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB870-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 898",
+   "title": "Economic Development - Delivering Economic Competitiveness and Advancing Development Efforts (DECADE) Act",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/md/bills/2026/HB898/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-04-01",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB898-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 557",
+   "title": "Occupational Licensing and Certification - Criminal History - Predetermination Review Process",
+   "role": "sponsor",
+   "date": "2026-04-28",
+   "url": "https://openstates.org/md/bills/2026/HB557/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-24",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB557-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 624",
+   "title": "Hospitals - Clinical Staffing Committees and Plans - Establishment (Safe Staffing Act of 2026)",
+   "role": "sponsor",
+   "date": "2026-04-28",
+   "url": "https://openstates.org/md/bills/2026/HB624/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "absent",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB624-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 895",
+   "title": "Food Retailers and Third-Party Delivery Service Providers - Dynamic Pricing and Personal Data (Protection From Predatory Pricing Act)",
+   "role": "sponsor",
+   "date": "2026-04-28",
+   "url": "https://openstates.org/md/bills/2026/HB895/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "absent",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-08",
+     "motion": "FLA Del. Chisholm /473426/1",
+     "option": "not voting",
+     "result": "fail"
+    },
+    {
+     "date": "2026-03-08",
+     "motion": "FLA Del. Hartman /373526/1",
+     "option": "not voting",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB895-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1389",
+   "title": "Public Health - Female Genital Mutilation",
+   "role": "sponsor",
+   "date": "2026-04-14",
+   "url": "https://openstates.org/md/bills/2026/HB1389/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-05",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1389-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 637",
+   "title": "Public Health - Recommendations for Immunizations, Screenings, and Preventive Services - Pharmacist Administration and Required Health Insurance Coverage (The Vax Act)",
+   "role": "sponsor",
+   "date": "2026-04-14",
+   "url": "https://openstates.org/md/bills/2026/HB637/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-08",
+     "motion": "FLA Del. Miller /203925/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-03-08",
+     "motion": "FLA Del. Arikan /863029/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB637-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 479",
+   "title": "Southern Maryland Early College Teacher Pathway Program Workgroup - Establishment",
+   "role": "sponsor",
+   "date": "2026-04-13",
+   "url": "https://openstates.org/md/bills/2026/HB479/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-31",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB479-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 653",
+   "title": "Income Tax - Subtraction Modification for Public Safety Retirement Income - Amount",
+   "role": "sponsor",
+   "date": "2026-04-13",
+   "url": "https://openstates.org/md/bills/2026/HB653/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-30",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB653-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 797",
+   "title": "Employment Discrimination - Fire and Rescue Public Safety Employees - Use of Medical Cannabis",
+   "role": "sponsor",
+   "date": "2026-04-13",
+   "url": "https://openstates.org/md/bills/2026/HB797/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-17",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB797-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 687",
+   "title": "Criminal Procedure - Evidence - Protecting Artists' Creative Expression (PACE Act)",
+   "role": "sponsor",
+   "date": "2026-04-09",
+   "url": "https://openstates.org/md/bills/2026/HB687/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-20",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB687-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1479",
+   "title": "Labor and Employment - Minimum Wage - Increase (Maryland Raise the Wage Act)",
+   "role": "sponsor",
+   "date": "2026-04-02",
+   "url": "https://openstates.org/md/bills/2026/HB1479/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1479-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 386",
+   "title": "Metro Funding Modification Act of 2026",
+   "role": "sponsor",
+   "date": "2026-03-25",
+   "url": "https://openstates.org/md/bills/2026/HB386/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-24",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-02-23",
+     "motion": "FLA Del. Buckel /633026/1",
+     "option": "not voting",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB386-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 883",
+   "title": "Consumer Protection - Artificial Intelligence - Behavioral Health Care Prohibitions",
+   "role": "sponsor",
+   "date": "2026-03-25",
+   "url": "https://openstates.org/md/bills/2026/HB883/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-11",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB883-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1056",
+   "title": "General Provisions - Commemorative Days - Purple Lights Night",
+   "role": "sponsor",
+   "date": "2026-03-24",
+   "url": "https://openstates.org/md/bills/2026/HB1056/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-11",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1056-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 844",
+   "title": "Motor Vehicle Registration - Fee Exemption - Unemployable Disabled Veterans",
+   "role": "sponsor",
+   "date": "2026-03-24",
+   "url": "https://openstates.org/md/bills/2026/HB844/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-07",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB844-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1191",
+   "title": "Secondhand Precious Metal Object Dealers - Temporary Event-Based Dealer Limited License - Establishment",
+   "role": "sponsor",
+   "date": "2026-03-23",
+   "url": "https://openstates.org/md/bills/2026/HB1191/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-06",
+     "motion": "Committee Amendments",
+     "option": "not voting",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1191-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 952",
+   "title": "Consumer Protection - Companion Chatbots - Regulation",
+   "role": "sponsor",
+   "date": "2026-03-23",
+   "url": "https://openstates.org/md/bills/2026/HB952/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-09",
+     "motion": "On Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB952-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1268",
+   "title": "Environmental Permits - Requirements for Burden Analysis, Issuance and Renewal, and Public Participation (Cumulative Harms for Environmental Restoration for Improving Shared Health - CHERISH Our Communities Act)",
+   "role": "sponsor",
+   "date": "2026-03-13",
+   "url": "https://openstates.org/md/bills/2026/HB1268/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1268-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1205",
+   "title": "Education - Minimum Wage for Education Support Professionals",
+   "role": "sponsor",
+   "date": "2026-03-11",
+   "url": "https://openstates.org/md/bills/2026/HB1205/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1205-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1329",
+   "title": "Education - Public School Construction - Funding",
+   "role": "sponsor",
+   "date": "2026-03-11",
+   "url": "https://openstates.org/md/bills/2026/HB1329/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1329-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1492",
+   "title": "Collective Bargaining - Public Employees - Revocation of Certification and School and Library Employees' Right to Strike",
+   "role": "sponsor",
+   "date": "2026-03-11",
+   "url": "https://openstates.org/md/bills/2026/HB1492/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1492-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1536",
+   "title": "Maryland Enforcement Limits and Transparency (MELT) Act",
+   "role": "sponsor",
+   "date": "2026-03-11",
+   "url": "https://openstates.org/md/bills/2026/HB1536/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1536-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 832",
+   "title": "Public Safety - State Law Enforcement Agencies - Hiring Restriction (ICE Breaker Act)",
+   "role": "sponsor",
+   "date": "2026-03-11",
+   "url": "https://openstates.org/md/bills/2026/HB832/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB832-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HJ 8",
+   "title": "Apology and Acknowledgement of the State's Responsibility in Racial Terror Lynchings",
+   "role": "sponsor",
+   "date": "2026-03-11",
+   "url": "https://openstates.org/md/bills/2026/HJ8/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HJ8-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HJ 7",
+   "title": "Anti-Nuclear Proliferation Resolution (Back from the Brink Act)",
+   "role": "sponsor",
+   "date": "2026-03-04",
+   "url": "https://openstates.org/md/bills/2026/HJ7/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HJ7-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1303",
+   "title": "Alcoholic Beverages - Class A License - Retail Establishments (Alcoholic Beverages Modernization Act of 2026)",
+   "role": "sponsor",
+   "date": "2026-03-03",
+   "url": "https://openstates.org/md/bills/2026/HB1303/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1303-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1519",
+   "title": "Cannabis - Management Service Agreements, Advertising, and Penalties - Alterations (Cannabis Reform and Opportunity Act)",
+   "role": "sponsor",
+   "date": "2026-03-03",
+   "url": "https://openstates.org/md/bills/2026/HB1519/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1519-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 981",
+   "title": "Investor-Owned Public Service Companies - Base Rate Proceeding - Equity Market Return",
+   "role": "sponsor",
+   "date": "2026-03-02",
+   "url": "https://openstates.org/md/bills/2026/HB981/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB981-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1491",
+   "title": "Education - Interjurisdictional Safe Pathways Commission - Establishment",
+   "role": "sponsor",
+   "date": "2026-02-26",
+   "url": "https://openstates.org/md/bills/2026/HB1491/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1491-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1629",
+   "title": "Drug and Alcohol Treatment Programs - Discharge of Patients and Referral Services - Standards",
+   "role": "sponsor",
+   "date": "2026-02-25",
+   "url": "https://openstates.org/md/bills/2026/HB1629/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1629-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 884",
+   "title": "University of Maryland Eastern Shore - Land-Grant Institution - Funding (Land-Grant Equity and Accountability Act)",
+   "role": "sponsor",
+   "date": "2026-02-20",
+   "url": "https://openstates.org/md/bills/2026/HB884/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB884-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1235",
+   "title": "State Procurement - Competitive Sealed Bids and Proposals - In-State Evaluation Preference",
+   "role": "sponsor",
+   "date": "2026-02-19",
+   "url": "https://openstates.org/md/bills/2026/HB1235/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1235-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 859",
+   "title": "Financial Institutions - Digital Assets and Digital Asset Staking - Regulation (Maryland Financial Innovation Act of 2026)",
+   "role": "sponsor",
+   "date": "2026-02-18",
+   "url": "https://openstates.org/md/bills/2026/HB859/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB859-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 444",
+   "title": "Public Safety - Immigration Enforcement Agreements - Prohibition",
+   "role": "sponsor",
+   "date": "2026-02-17",
+   "url": "https://openstates.org/md/bills/2026/HB444/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Buckel /693221/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Hartman /893521/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-02",
+     "motion": "FLA Del. Grammer /113223/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Rose /403026/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-03",
+     "motion": "On Third Reading                                                                                          (Emerg)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-02-02",
+     "motion": "FLA Del. Grammer /843624/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Pippy /483626/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Griffith /523628/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB444-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1309",
+   "title": "Commission to Review and Assess Racial Disparities in the State Criminal Justice System - Establishment",
+   "role": "sponsor",
+   "date": "2026-02-16",
+   "url": "https://openstates.org/md/bills/2026/HB1309/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1309-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 524",
+   "title": "General Provisions - Commemorative Months - African Heritage Month",
+   "role": "sponsor",
+   "date": "2026-02-16",
+   "url": "https://openstates.org/md/bills/2026/HB524/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB524-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1253",
+   "title": "Gas Companies - Infrastructure Investments - Cost Recovery and Customer Notification (Break STRIDE Act)",
+   "role": "sponsor",
+   "date": "2026-02-13",
+   "url": "https://openstates.org/md/bills/2026/HB1253/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1253-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1477",
+   "title": "Public Health - Ibogaine Clinical Research Grant Program - Establishment (Veterans Mental Health Innovations Act)",
+   "role": "sponsor",
+   "date": "2026-02-13",
+   "url": "https://openstates.org/md/bills/2026/HB1477/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1477-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1522",
+   "title": "Traffic Control Signal Monitoring and Speed Monitoring Systems - Exemptions From Liability - Vehicle Rental Companies",
+   "role": "sponsor",
+   "date": "2026-02-13",
+   "url": "https://openstates.org/md/bills/2026/HB1522/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1522-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1188",
+   "title": "Excess Ownership of Single-Family Residences Excise Tax (End Hedge Fund Control of Maryland Homes Act of 2026)",
+   "role": "sponsor",
+   "date": "2026-02-12",
+   "url": "https://openstates.org/md/bills/2026/HB1188/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1188-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 704",
+   "title": "Community Eligibility Provision Expansion Program - Establishment",
+   "role": "sponsor",
+   "date": "2026-02-11",
+   "url": "https://openstates.org/md/bills/2026/HB704/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB704-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 1",
+   "title": "Investor-Owned Electric, Gas, and Gas and Electric Companies - Cost Recovery - Limitations",
+   "role": "sponsor",
+   "date": "2026-02-10",
+   "url": "https://openstates.org/md/bills/2026/HB1/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-05",
+     "motion": "Motion to Recommit",
+     "option": "absent",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-06",
+     "motion": "On Third Reading",
+     "option": "absent",
+     "result": "pass"
+    },
+    {
+     "date": "2026-02-04",
+     "motion": "FLA Del. Chisholm /543121/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-05",
+     "motion": "FLA Del. Fisher /683123/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-04",
+     "motion": "FLA Del. Chisholm /863621/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-05",
+     "motion": "FLA Del. Arentz /753025/1",
+     "option": "absent",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB1-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 897",
+   "title": "Electricity Transmission and Distribution, Energy Storage, and Maryland Strategic Energy Investment Fund (Lower Bills and Local Power Act of 2026)",
+   "role": "sponsor",
+   "date": "2026-02-10",
+   "url": "https://openstates.org/md/bills/2026/HB897/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB897-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 853",
+   "title": "Real Property - Regulation of Common Ownership Community Managers",
+   "role": "sponsor",
+   "date": "2026-02-09",
+   "url": "https://openstates.org/md/bills/2026/HB853/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB853-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 920",
+   "title": "Real Property - New Home Sales - Entry of Final Sale Price in Multiple Listing Service",
+   "role": "sponsor",
+   "date": "2026-02-09",
+   "url": "https://openstates.org/md/bills/2026/HB920/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB920-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 509",
+   "title": "Campaign Finance - Contributions by Gas and Electric Utility Companies - Prohibition",
+   "role": "sponsor",
+   "date": "2026-02-06",
+   "url": "https://openstates.org/md/bills/2026/HB509/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB509-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 905",
+   "title": "Recipients of State and Local Government Funding - Reporting (Buy Maryland Reporting Requirements)",
+   "role": "sponsor",
+   "date": "2026-02-06",
+   "url": "https://openstates.org/md/bills/2026/HB905/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB905-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 632",
+   "title": "Certificate of Need - Psychiatric Health Care Facilities and Psychiatric and Mental Health Services - Exemption",
+   "role": "sponsor",
+   "date": "2026-02-05",
+   "url": "https://openstates.org/md/bills/2026/HB632/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB632-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 761",
+   "title": "Income Tax - Subtraction Modification for Military Retirement Income (Keep Our Heroes Home Act)",
+   "role": "sponsor",
+   "date": "2026-02-05",
+   "url": "https://openstates.org/md/bills/2026/HB761/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB761-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 857",
+   "title": "Income Tax - Subtraction Modification for Military Retirement Income - Individuals Under the Age of 55",
+   "role": "sponsor",
+   "date": "2026-02-05",
+   "url": "https://openstates.org/md/bills/2026/HB857/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB857-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 902",
+   "title": "Retire in Maryland Tax Relief Act",
+   "role": "sponsor",
+   "date": "2026-02-05",
+   "url": "https://openstates.org/md/bills/2026/HB902/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB902-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 935",
+   "title": "Correctional Services - Comprehensive Rehabilitative Prerelease Services - Female Incarcerated Individuals",
+   "role": "sponsor",
+   "date": "2026-02-05",
+   "url": "https://openstates.org/md/bills/2026/HB935/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB935-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 488",
+   "title": "Election Districts - General Assembly and Representatives in Congress",
+   "role": "sponsor",
+   "date": "2026-02-04",
+   "url": "https://openstates.org/md/bills/2026/HB488/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Morgan, M. /313921/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-01-29",
+     "motion": "FLA Del. Buckel /613520/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Schmidt /543224/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2026-02-02",
+     "motion": "On Third Reading                                                                                       (Const)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-01-30",
+     "motion": "FLA Del. Griffith /273020/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB488-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 869",
+   "title": "Vehicle Laws - Electric Vehicle Dealer Licenses - City of Bowie",
+   "role": "sponsor",
+   "date": "2026-02-04",
+   "url": "https://openstates.org/md/bills/2026/HB869/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB869-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 331",
+   "title": "Maryland Beverage Container Recycling Refund and Litter Reduction Program",
+   "role": "sponsor",
+   "date": "2026-02-03",
+   "url": "https://openstates.org/md/bills/2026/HB331/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB331-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 572",
+   "title": "Attorney General Actions and Climate Crimes Accountability Fund (Climate Crimes Accountability Act)",
+   "role": "sponsor",
+   "date": "2026-01-30",
+   "url": "https://openstates.org/md/bills/2026/HB572/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB572-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 155",
+   "title": "Public Safety - Law Enforcement Officers - Prohibition on Face Coverings",
+   "role": "sponsor",
+   "date": "2026-01-29",
+   "url": "https://openstates.org/md/bills/2026/HB155/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB155-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2026",
+   "year": "2026",
+   "identifier": "HB 345",
+   "title": "Public Utilities - Solar Energy Generating Systems and Solar Renewable Energy Credits (Affordable Solar Act)",
+   "role": "sponsor",
+   "date": "2026-01-22",
+   "url": "https://openstates.org/md/bills/2026/HB345/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB345-2026"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1083",
+   "title": "Behavioral Health Advisory Council and the Commission on Behavioral Health Care Treatment and Access - Plan to Implement Early and Periodic Screening, Diagnostic, and Treatment Requirements",
+   "role": "sponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/md/bills/2025/HB1083/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-04",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1083-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1222",
+   "title": "Public Safety - Immigration Enforcement (Maryland Values Act)",
+   "role": "sponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/md/bills/2025/HB1222/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-26",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Buckel /593621/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Hornberger /773124/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB1222-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1251",
+   "title": "Hospitals and Medical Professional Liability Insurers - Obstetric Services Policies (Doula and Birth Policy Transparency Act)",
+   "role": "sponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/md/bills/2025/HB1251/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1251-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 500",
+   "title": "Procurement Reform Act of 2025",
+   "role": "sponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/md/bills/2025/HB500/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-26",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB500-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 553",
+   "title": "Maryland Medical Assistance Program - Maternal Health Self-Measured Blood Pressure Monitoring",
+   "role": "sponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/md/bills/2025/HB553/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-24",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB553-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 593",
+   "title": "Public Libraries - Automated External Defibrillator Program (Raymono A. Russell Act)",
+   "role": "sponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/md/bills/2025/HB593/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-22",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB593-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 428",
+   "title": "Medical Debt - Complaints for Money Judgment and Real Property Liens",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/md/bills/2025/HB428/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-24",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB428-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 506",
+   "title": "Chesapeake Bay Legacy Act",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/md/bills/2025/HB506/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-20",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB506-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 707",
+   "title": "Vehicle Laws - Licenses, Identification Cards, and Moped Operator's Permits - Notation of Nonapparent Disability (Eric's ID Law)",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/md/bills/2025/HB707/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-24",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-02-27",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB707-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 930",
+   "title": "Public Health Abortion Grant Program - Establishment",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/md/bills/2025/HB930/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-02",
+     "motion": "FLA Del. Tomlinson /813223/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-02",
+     "motion": "FLA Del. Wivell /193224/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-02",
+     "motion": "FLA Del. Miller /763328/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-03",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-02",
+     "motion": "FLA Del. Wivell /773822/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-02",
+     "motion": "FLA Del. Wivell /173227/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB930-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 541",
+   "title": "Department of Commerce - Nonprofit Organizations Navigator - Established",
+   "role": "sponsor",
+   "date": "2025-05-06",
+   "url": "https://openstates.org/md/bills/2025/HB541/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-20",
+     "motion": "FLA Del. Fisher /833420/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-23",
+     "motion": "On Third Reading                                                                                           (Emerg)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB541-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1424",
+   "title": "Support and Protections for Individuals Affected by Federal Actions (Protect Our Federal Workers Act)",
+   "role": "sponsor",
+   "date": "2025-04-22",
+   "url": "https://openstates.org/md/bills/2025/HB1424/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-28",
+     "motion": "On Third Reading                                                                                           (Emerg)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-25",
+     "motion": "On Third Reading and Final Passage (CCR Adp)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-02-26",
+     "motion": "FLA Del. Buckel /883624/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB1424-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 853",
+   "title": "Postconviction Review - Procedure to Reduce Duration of Sentence (Maryland Second Look Act)",
+   "role": "sponsor",
+   "date": "2025-04-22",
+   "url": "https://openstates.org/md/bills/2025/HB853/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Griffith /893422/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Buckel /913128/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Pippy /493028/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Miller /513728/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-20",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Pippy /123428/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Buckel /713626/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Kipke /823623/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Hartman /683627/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Rose /293228/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Hornberger /553722/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "FLA Del. Hutchinson /473222/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB853-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 147",
+   "title": "County Boards of Education - Student Technology Use Policy - Requirements",
+   "role": "sponsor",
+   "date": "2025-04-07",
+   "url": "https://openstates.org/md/bills/2025/HB147/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-03",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB147-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1057",
+   "title": "Department of Human Services - Study on Private Treatment Foster Care Homes",
+   "role": "sponsor",
+   "date": "2025-04-05",
+   "url": "https://openstates.org/md/bills/2025/HB1057/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1057-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 503",
+   "title": "Housing Development Act",
+   "role": "sponsor",
+   "date": "2025-04-03",
+   "url": "https://openstates.org/md/bills/2025/HB503/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-16",
+     "motion": "On Third Reading",
+     "option": "absent",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-15",
+     "motion": "FLA Del. Szeliga /633325/1",
+     "option": "absent",
+     "result": "fail"
+    },
+    {
+     "date": "2025-03-15",
+     "motion": "FLA Del. Morgan, M. /753625/1",
+     "option": "absent",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB503-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1127",
+   "title": "Public Schools - Water Safety - Instructional Content",
+   "role": "sponsor",
+   "date": "2025-04-02",
+   "url": "https://openstates.org/md/bills/2025/HB1127/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-05",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1127-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 662",
+   "title": "Procurement - Indefinite Quantity Contracts - Authorization",
+   "role": "sponsor",
+   "date": "2025-03-20",
+   "url": "https://openstates.org/md/bills/2025/HB662/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-01",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB662-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1151",
+   "title": "Residential Real Property Sales – Appraisals",
+   "role": "sponsor",
+   "date": "2025-03-19",
+   "url": "https://openstates.org/md/bills/2025/HB1151/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1151-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1352",
+   "title": "Sickle Cell Disease - Institutions of Higher Education - Policies, Procedures, and Educational Campaigns",
+   "role": "sponsor",
+   "date": "2025-03-18",
+   "url": "https://openstates.org/md/bills/2025/HB1352/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-03",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1352-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1106",
+   "title": "Business Regulation - Travel Services - Special Fund, Fees, and Surety Requirement (Don't You Worry (Wurie) Act)",
+   "role": "sponsor",
+   "date": "2025-03-17",
+   "url": "https://openstates.org/md/bills/2025/HB1106/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1106-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 769",
+   "title": "Real Property - Residential Foreclosures - Commencement Restrictions",
+   "role": "sponsor",
+   "date": "2025-03-17",
+   "url": "https://openstates.org/md/bills/2025/HB769/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB769-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 763",
+   "title": "Education - Sexual Abuse and Assault Awareness and Prevention Program - Human and Sex Trafficking",
+   "role": "sponsor",
+   "date": "2025-03-14",
+   "url": "https://openstates.org/md/bills/2025/HB763/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB763-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1306",
+   "title": "Public Health - Sickle Cell Disease - Specialized Clinics and Scholarship Program for Medical Residents",
+   "role": "sponsor",
+   "date": "2025-03-08",
+   "url": "https://openstates.org/md/bills/2025/HB1306/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1306-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1449",
+   "title": "Public Health - Milk Products - Direct-to-Consumer Sale of Raw Milk for Human Consumption",
+   "role": "sponsor",
+   "date": "2025-03-08",
+   "url": "https://openstates.org/md/bills/2025/HB1449/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1449-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 609",
+   "title": "Legislative Scholarship Programs - Eligibility and Use - Real Estate Appraisal Program",
+   "role": "sponsor",
+   "date": "2025-03-07",
+   "url": "https://openstates.org/md/bills/2025/HB609/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-27",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB609-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 419",
+   "title": "Natural Gas - Strategic Infrastructure Development and Enhancement (Ratepayer Protection Act)",
+   "role": "sponsor",
+   "date": "2025-03-06",
+   "url": "https://openstates.org/md/bills/2025/HB419/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB419-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1254",
+   "title": "Community Eligibility Provision Expansion Program - Establishment",
+   "role": "sponsor",
+   "date": "2025-03-05",
+   "url": "https://openstates.org/md/bills/2025/HB1254/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1254-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1462",
+   "title": "Higher Education - Antihate and Antidiscrimination Policies and Workgroup (Maryland Campus Accountability and Modernization to Protect University Students Act)",
+   "role": "sponsor",
+   "date": "2025-03-05",
+   "url": "https://openstates.org/md/bills/2025/HB1462/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1462-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1287",
+   "title": "Criminal Law - Firearm Crimes - Convertible Pistols",
+   "role": "sponsor",
+   "date": "2025-03-04",
+   "url": "https://openstates.org/md/bills/2025/HB1287/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1287-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1353",
+   "title": "Commercial Law - Uniform Commercial Code - Controllable Electronic Records",
+   "role": "sponsor",
+   "date": "2025-03-03",
+   "url": "https://openstates.org/md/bills/2025/HB1353/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1353-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1346",
+   "title": "Criminal Procedure - Evidence - Protecting the Admissibility of Creative Expression (PACE Act)",
+   "role": "sponsor",
+   "date": "2025-02-27",
+   "url": "https://openstates.org/md/bills/2025/HB1346/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1346-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HJ 6",
+   "title": "Use of Nuclear Weapons",
+   "role": "sponsor",
+   "date": "2025-02-26",
+   "url": "https://openstates.org/md/bills/2025/HJ6/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HJ6-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 582",
+   "title": "Labor and Employment - Exemptions From Overtime Pay - Administrative, Executive, or Professional Capacity",
+   "role": "sponsor",
+   "date": "2025-02-25",
+   "url": "https://openstates.org/md/bills/2025/HB582/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB582-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1458",
+   "title": "Declaration of Rights - Right to Minimum Wage for Tipped Workers",
+   "role": "sponsor",
+   "date": "2025-02-24",
+   "url": "https://openstates.org/md/bills/2025/HB1458/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1458-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 733",
+   "title": "Elections for County Boards of Education - Party Designation or Affiliation - Certificates of Candidacy and Ballots",
+   "role": "sponsor",
+   "date": "2025-02-24",
+   "url": "https://openstates.org/md/bills/2025/HB733/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB733-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1081",
+   "title": "Criminal Law - Masked Intimidation - Prohibition (Unmask Hate Act)",
+   "role": "sponsor",
+   "date": "2025-02-17",
+   "url": "https://openstates.org/md/bills/2025/HB1081/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1081-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 626",
+   "title": "Real Estate Development and Highway Rights-of-Way - Installation of Broadband Micro Conduits and Microducts",
+   "role": "sponsor",
+   "date": "2025-02-17",
+   "url": "https://openstates.org/md/bills/2025/HB626/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB626-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1370",
+   "title": "Transportation - Regional Transportation Authorities",
+   "role": "sponsor",
+   "date": "2025-02-14",
+   "url": "https://openstates.org/md/bills/2025/HB1370/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1370-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 941",
+   "title": "University of Maryland Eastern Shore - Land-Grant Institution - Funding (Land-Grant Equity and Accountability Act)",
+   "role": "sponsor",
+   "date": "2025-02-13",
+   "url": "https://openstates.org/md/bills/2025/HB941/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB941-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1006",
+   "title": "Immigration Enforcement - Sensitive Locations - Guidelines and Policies (Protecting Sensitive Locations Act)",
+   "role": "sponsor",
+   "date": "2025-02-10",
+   "url": "https://openstates.org/md/bills/2025/HB1006/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1006-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1431",
+   "title": "State and Local Agencies - Enforcement of Federal Immigration Law - Restrictions on Access to Information (Maryland Data Privacy Act)",
+   "role": "sponsor",
+   "date": "2025-02-10",
+   "url": "https://openstates.org/md/bills/2025/HB1431/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1431-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 499",
+   "title": "Criminal Records - Expungement and Maryland Judiciary Case Search (Expungement Reform Act of 2025)",
+   "role": "sponsor",
+   "date": "2025-02-10",
+   "url": "https://openstates.org/md/bills/2025/HB499/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB499-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 536",
+   "title": "Education and Health - Emergency Use Epinephrine - Alterations",
+   "role": "sponsor",
+   "date": "2025-02-10",
+   "url": "https://openstates.org/md/bills/2025/HB536/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB536-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 985",
+   "title": "Police Discipline - Administrative Charging Committees - Additional Charging Committee",
+   "role": "sponsor",
+   "date": "2025-02-10",
+   "url": "https://openstates.org/md/bills/2025/HB985/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB985-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1015",
+   "title": "Public Middle, High, and Charter Schools - Start Time for Instruction",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1015/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1015-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1261",
+   "title": "Employment Discrimination - Intent",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1261/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1261-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1318",
+   "title": "Alcoholic Beverages - Premium Cigar Lounge License - Establishment (Maryland Premium Cigar Lounge Act of 2025)",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1318/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1318-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1400",
+   "title": "No Tax on Tips Act",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1400/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1400-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1407",
+   "title": "Commercial Law - Voice and Visual Likeness - Digital Replication Rights (Nurture Originals, Foster Art, and Keep Entertainment Safe Act - NO FAKES Act)",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1407/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1407-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1408",
+   "title": "Employment Discrimination - Fire and Rescue Public Safety Employees - Use of Medical Cannabis",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1408/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1408-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1428",
+   "title": "Sale of Residential Property - Taxes and Offers to Purchase (End Hedge Fund Control of Maryland Homes Act of 2025)",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1428/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1428-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1441",
+   "title": "Business Regulation - Electronic Smoking Devices Manufacturers - Certifications",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB1441/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1441-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 947",
+   "title": "Local Government - Charges for Paper Carryout Bags - Limitation",
+   "role": "sponsor",
+   "date": "2025-02-07",
+   "url": "https://openstates.org/md/bills/2025/HB947/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB947-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1077",
+   "title": "Landlord and Tenant - Residential Leases - Prospective Tenant Criminal History Records Check (Maryland Fair Chance Housing Act)",
+   "role": "sponsor",
+   "date": "2025-02-05",
+   "url": "https://openstates.org/md/bills/2025/HB1077/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1077-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 1014",
+   "title": "Fair Share for Maryland Act of 2025",
+   "role": "sponsor",
+   "date": "2025-02-04",
+   "url": "https://openstates.org/md/bills/2025/HB1014/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1014-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 501",
+   "title": "Registered Apprenticeship Investments for a Stronger Economy (RAISE) Act",
+   "role": "sponsor",
+   "date": "2025-02-04",
+   "url": "https://openstates.org/md/bills/2025/HB501/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB501-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 973",
+   "title": "Maryland Building Performance Standards - Fossil Fuel Use, Energy Conservation, and Electric- and Solar-Ready Standards (Better Buildings Act of 2025)",
+   "role": "sponsor",
+   "date": "2025-02-03",
+   "url": "https://openstates.org/md/bills/2025/HB973/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB973-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 387",
+   "title": "Comprehensive Community Safety Funding Act",
+   "role": "sponsor",
+   "date": "2025-01-31",
+   "url": "https://openstates.org/md/bills/2025/HB387/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB387-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 524",
+   "title": "State Board of Education - Membership - Early Childhood Development Professional",
+   "role": "sponsor",
+   "date": "2025-01-29",
+   "url": "https://openstates.org/md/bills/2025/HB524/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB524-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 608",
+   "title": "Primary and Secondary Education - Student Immunization - Temporary Admission Period",
+   "role": "sponsor",
+   "date": "2025-01-29",
+   "url": "https://openstates.org/md/bills/2025/HB608/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB608-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 630",
+   "title": "County Boards of Education - Student Cellular Phone Use Policy - Establishment (Maryland Phone-Free Schools Act)",
+   "role": "sponsor",
+   "date": "2025-01-29",
+   "url": "https://openstates.org/md/bills/2025/HB630/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB630-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 456",
+   "title": "Civil Actions - Child Nonsexual Abuse and Neglect - Damages and Statute of Limitations",
+   "role": "sponsor",
+   "date": "2025-01-27",
+   "url": "https://openstates.org/md/bills/2025/HB456/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB456-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 606",
+   "title": "Real Property - New Home Sales - Entry of Final Sale Price in Multiple Listing Service",
+   "role": "sponsor",
+   "date": "2025-01-27",
+   "url": "https://openstates.org/md/bills/2025/HB606/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB606-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 534",
+   "title": "Interstate Dental and Dental Hygiene Licensure Compact",
+   "role": "sponsor",
+   "date": "2025-01-22",
+   "url": "https://openstates.org/md/bills/2025/HB534/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB534-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 340",
+   "title": "Climate Change - Attorney General Actions, Climate Change Restitution Fund, and Climate Change Restitution Fund Advisory Council",
+   "role": "sponsor",
+   "date": "2025-01-21",
+   "url": "https://openstates.org/md/bills/2025/HB340/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB340-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 451",
+   "title": "State and Private Construction Contracts - Prompt Payment Requirements",
+   "role": "sponsor",
+   "date": "2025-01-16",
+   "url": "https://openstates.org/md/bills/2025/HB451/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB451-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 454",
+   "title": "Digital Asset and Blockchain Technology Task Force - Establishment",
+   "role": "sponsor",
+   "date": "2025-01-16",
+   "url": "https://openstates.org/md/bills/2025/HB454/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB454-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2025",
+   "year": "2025",
+   "identifier": "HB 145",
+   "title": "Green and Renewable Energy for Nonprofit Organizations Loan Program and Fund",
+   "role": "sponsor",
+   "date": "2025-01-08",
+   "url": "https://openstates.org/md/bills/2025/HB145/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB145-2025"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1076",
+   "title": "Education - Blind and Visually Impaired Students - Textbook Equity",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB1076/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-26",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1076-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1244",
+   "title": "Maryland Higher Education Commission - Academic Program Approval and Institutional Mission Statements - Requirements",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB1244/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-29",
+     "motion": "On Third Reading and Final Passage (CCR Adp)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-02",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1244-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 300",
+   "title": "Family Law - Marriage Ceremony - Designation of Deputy Clerk",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB300/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB300-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 328",
+   "title": "Hospitals - Financial Assistance Policies - Revisions",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB328/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-25",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB328-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 404",
+   "title": "Public Safety - Wellness Checks - Requirements (Gabriel's Law)",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB404/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-10",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-28",
+     "motion": "On Third Reading and Final Passage (CCR Adp)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB404-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 490",
+   "title": "Income Tax - Subtraction Modification for Donations to Diaper Banks and Other Charitable Entities - Sunset Extension",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB490/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-02",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB490-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 496",
+   "title": "Criminal Law - Sexual Crimes - Definition of Consent and Repeal of Force",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB496/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-25",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB496-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 576",
+   "title": "Mental Health - Assisted Outpatient Treatment Programs",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB576/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-25",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-02-25",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB576-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 582",
+   "title": "Economic Development - Entrepreneurial Innovation Programs - Establishment (Pava LaPere Legacy of Innovation Act of 2024)",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB582/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-02",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB582-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 583",
+   "title": "Center for Firearm Violence Prevention and Intervention - Establishment",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB583/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-25",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB583-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 597",
+   "title": "Growing Apprenticeships and the Public Safety Workforce (GAPS) Act",
+   "role": "sponsor",
+   "date": "2024-05-16",
+   "url": "https://openstates.org/md/bills/2024/HB597/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB597-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 432",
+   "title": "Courts and Judicial Proceedings and Criminal Procedure - Technical Corrections - References to Intellectual Disability",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB432/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB432-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 457",
+   "title": "Environment - Synthetic Turf - Disclosure and Study",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB457/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-25",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-28",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB457-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 567",
+   "title": "Maryland Online Data Privacy Act of 2024",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB567/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-03",
+     "motion": "FLA Del. Buckel /113026/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-03",
+     "motion": "FLA Del. Buckel /433229/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-03-03",
+     "motion": "FLA Del. Buckel /603129/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-03-27",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB567-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 581",
+   "title": "State Government - Permits, Licenses, and Certificates - Processing (Transparent Government Act of 2024)",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB581/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-25",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB581-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 601",
+   "title": "Street Racing and Exhibition Driving – Prohibited Acts, Enforcement, and Penalties",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB601/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-24",
+     "motion": "FLA Del. Long, R. /673427/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-02-26",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-19",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB601-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 877",
+   "title": "Board of Public Works - Transparency Data Dashboard",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB877/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB877-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 962",
+   "title": "State Procurement - Small Business Reserve Program - Goals and Outreach Program",
+   "role": "sponsor",
+   "date": "2024-05-09",
+   "url": "https://openstates.org/md/bills/2024/HB962/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB962-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1281",
+   "title": "Economic Development - Tourism Zones - Designation and Benefits",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB1281/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-10",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1281-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 285",
+   "title": "Task Force on Property Appraisal and Valuation Equity - Alterations",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB285/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB285-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 385",
+   "title": "Wage Payment and Collection - Pay Stubs and Pay Statements - Required Information",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB385/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-01",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB385-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 465",
+   "title": "Workplace Fraud and Prevailing Wage - Violations - Civil Penalty and Referrals",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB465/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-08",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB465-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 538",
+   "title": "Land Use – Affordable Housing – Zoning Density and Permitting (Housing Expansion and Affordability Act of 2024)",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB538/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-14",
+     "motion": "FLA Del. Morgan, M. /173626/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-03-15",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-27",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-14",
+     "motion": "FLA Del. Pippy /933128/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-03-14",
+     "motion": "FLA Del. Schmidt /133429/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB538-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 571",
+   "title": "Family and Medical Leave Insurance Program - Modifications",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB571/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-01",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB571-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 598",
+   "title": "Discrimination - Military Status - Prohibition",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB598/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB598-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 860",
+   "title": "Housing and Community Development - Community Action Boards",
+   "role": "sponsor",
+   "date": "2024-04-25",
+   "url": "https://openstates.org/md/bills/2024/HB860/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-02",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB860-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 584",
+   "title": "Workers' Compensation - Occupational Disease Presumptions - First Responders (Caring for Public Employees in the Safety Professions - CAPES Act)",
+   "role": "sponsor",
+   "date": "2024-04-09",
+   "url": "https://openstates.org/md/bills/2024/HB584/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB584-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 585",
+   "title": "Protecting Election Officials Act of 2024",
+   "role": "sponsor",
+   "date": "2024-04-09",
+   "url": "https://openstates.org/md/bills/2024/HB585/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-27",
+     "motion": "On Third Reading and Final Passage (Hse concurred)",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-04",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB585-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 678",
+   "title": "Public Higher Education - Communities of Interest - Targeted Recruitment and Outreach Efforts",
+   "role": "sponsor",
+   "date": "2024-04-09",
+   "url": "https://openstates.org/md/bills/2024/HB678/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-25",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB678-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1239",
+   "title": "Real Estate Brokers - Brokerage Agreements - Requirements",
+   "role": "sponsor",
+   "date": "2024-04-05",
+   "url": "https://openstates.org/md/bills/2024/HB1239/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-23",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB1239-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 696",
+   "title": "Primary and Secondary Education - Breakfast and Lunch Programs - Universal Expansion Report",
+   "role": "sponsor",
+   "date": "2024-04-05",
+   "url": "https://openstates.org/md/bills/2024/HB696/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-24",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB696-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 961",
+   "title": "State Government - Commission on New Americans - Established",
+   "role": "sponsor",
+   "date": "2024-03-22",
+   "url": "https://openstates.org/md/bills/2024/HB961/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-10",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-07",
+     "motion": "FLA Del. Tomlinson /453628/1",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2024-03-07",
+     "motion": "FLA Del. Arikan /773121/1",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "MD-HB961-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 491",
+   "title": "State Department of Assessments and Taxation and Department of General Services - Property Appraisal Aids - Geographic Images",
+   "role": "sponsor",
+   "date": "2024-03-21",
+   "url": "https://openstates.org/md/bills/2024/HB491/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-09",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB491-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1522",
+   "title": "University of Maryland Eastern Shore - Land-Grant Institution - Funding (Land-Grant Equity and Accountability Act)",
+   "role": "sponsor",
+   "date": "2024-03-20",
+   "url": "https://openstates.org/md/bills/2024/HB1522/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1522-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 419",
+   "title": "Consumer Protection - Automatic Tip Prompt Screen - Requirements",
+   "role": "sponsor",
+   "date": "2024-03-19",
+   "url": "https://openstates.org/md/bills/2024/HB419/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-10",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB419-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 673",
+   "title": "Real Property - Contract Liens - Medical Debt",
+   "role": "sponsor",
+   "date": "2024-03-08",
+   "url": "https://openstates.org/md/bills/2024/HB673/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-28",
+     "motion": "On Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "MD-HB673-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1136",
+   "title": "Human Services - Youth Services Bureaus - Funding (Youth Services Bureau Restoration Act)",
+   "role": "sponsor",
+   "date": "2024-03-06",
+   "url": "https://openstates.org/md/bills/2024/HB1136/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1136-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HJ 1",
+   "title": "Affirming the Federal Equal Rights Amendment",
+   "role": "sponsor",
+   "date": "2024-03-06",
+   "url": "https://openstates.org/md/bills/2024/HJ1/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HJ1-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HJ 9",
+   "title": "United States of America - District of Columbia - Statehood",
+   "role": "sponsor",
+   "date": "2024-03-06",
+   "url": "https://openstates.org/md/bills/2024/HJ9/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HJ9-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1365",
+   "title": "State and Private Construction Contracts and State Procurement Contracts - Prompt Payment and Interest Requirements",
+   "role": "sponsor",
+   "date": "2024-02-27",
+   "url": "https://openstates.org/md/bills/2024/HB1365/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1365-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 694",
+   "title": "Governor's Office for Children - Engaging Neighborhoods, Organizations, Unions, Governments, and Households (ENOUGH) Grant Program (ENOUGH Act of 2024)",
+   "role": "sponsor",
+   "date": "2024-02-27",
+   "url": "https://openstates.org/md/bills/2024/HB694/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB694-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 736",
+   "title": "Health Insurance and Maryland Medical Assistance Program - Coverage - Opioid Reversal Drugs and Products (NARCAN Price Cap Act)",
+   "role": "sponsor",
+   "date": "2024-02-26",
+   "url": "https://openstates.org/md/bills/2024/HB736/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB736-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1429",
+   "title": "Criminal Procedure - Evidence - Protecting the Admissibility of Creative Expression (PACE Act)",
+   "role": "sponsor",
+   "date": "2024-02-13",
+   "url": "https://openstates.org/md/bills/2024/HB1429/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1429-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 467",
+   "title": "Food Service Facilities and Tipped Workers - Service Fees and Tip Credits (One Fair Wage Act of 2024)",
+   "role": "sponsor",
+   "date": "2024-02-12",
+   "url": "https://openstates.org/md/bills/2024/HB467/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB467-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1145",
+   "title": "Workers' Compensation - Occupational Disease Presumptions - Hypertension",
+   "role": "sponsor",
+   "date": "2024-02-09",
+   "url": "https://openstates.org/md/bills/2024/HB1145/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1145-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1314",
+   "title": "Corporations and Associations - Annual Reports - Filing Fees (Right to Start Act)",
+   "role": "sponsor",
+   "date": "2024-02-09",
+   "url": "https://openstates.org/md/bills/2024/HB1314/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1314-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1438",
+   "title": "Responding to Emergency Needs From Extreme Weather (RENEW) Act of 2024",
+   "role": "sponsor",
+   "date": "2024-02-09",
+   "url": "https://openstates.org/md/bills/2024/HB1438/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1438-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 166",
+   "title": "Renewable Energy Portfolio Standard - Eligible Sources - Alterations (Reclaim Renewable Energy Act of 2024)",
+   "role": "sponsor",
+   "date": "2024-02-09",
+   "url": "https://openstates.org/md/bills/2024/HB166/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB166-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 735",
+   "title": "Maryland Beverage Container Recycling Refund and Litter Reduction Program",
+   "role": "sponsor",
+   "date": "2024-02-07",
+   "url": "https://openstates.org/md/bills/2024/HB735/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB735-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 1007",
+   "title": "Fair Share for Maryland Act of 2024",
+   "role": "sponsor",
+   "date": "2024-02-06",
+   "url": "https://openstates.org/md/bills/2024/HB1007/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB1007-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 525",
+   "title": "Employment Discrimination - Use of Cannabis Products",
+   "role": "sponsor",
+   "date": "2024-02-02",
+   "url": "https://openstates.org/md/bills/2024/HB525/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB525-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 547",
+   "title": "Crime of Violence - Educational Facilities, Medical Facilities, and Places of Worship - Penalty (Sacred Places Safety Act)",
+   "role": "sponsor",
+   "date": "2024-01-30",
+   "url": "https://openstates.org/md/bills/2024/HB547/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB547-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 555",
+   "title": "Criminal Law - Unauthorized Dissemination of Personal Identifying Information - Prohibition",
+   "role": "sponsor",
+   "date": "2024-01-30",
+   "url": "https://openstates.org/md/bills/2024/HB555/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB555-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 645",
+   "title": "Social Media Platforms - Vloggers and Video Content Featuring Minors",
+   "role": "sponsor",
+   "date": "2024-01-29",
+   "url": "https://openstates.org/md/bills/2024/HB645/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB645-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024",
+   "year": "2024",
+   "identifier": "HB 502",
+   "title": "Public Safety - Fire Dampers, Smoke Dampers, Combination Fire Smoke Dampers, and Smoke Control Systems",
+   "role": "sponsor",
+   "date": "2024-01-25",
+   "url": "https://openstates.org/md/bills/2024/HB502/",
+   "source": "Open States",
+   "votes": [],
+   "key": "MD-HB502-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB1037",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1037/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1037-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB1051",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1051/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1051-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB1279",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1279/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1279-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB1304",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1304/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1304-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB391",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB391/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB391-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB409",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB409/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB409-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB431",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB431/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB431-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB493",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB493/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB493-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB513",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB513/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB513-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB531",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB531/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB531-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB580",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB580/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB580-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB604",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB604/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB604-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB649",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB649/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB649-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB650",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB650/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB650-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB692",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB692/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB692-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB693",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB693/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB693-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB710",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB710/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB710-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB724",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB724/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB724-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB728",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB728/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB728-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB731",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB731/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB731-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB844",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB844/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB844-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB935",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB935/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB935-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2024 Regular Session",
+   "year": "2024",
+   "identifier": "HB964",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB964/2024",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB964-2024"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1066",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1066/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1066-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1071",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1071/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1071-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1105",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1105/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1105-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1114",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1114/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1114-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1198",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1198/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1198-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1219",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1219/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1219-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB1245",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB1245/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB1245-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB192",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB192/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB192-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB208",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB208/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB208-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB238",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB238/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB238-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB245",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB245/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB245-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB275",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB275/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB275-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB292",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB292/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB292-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB295",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB295/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB295-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB299",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB299/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB299-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB329",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB329/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB329-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB332",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB332/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB332-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB341",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB341/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB341-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB347",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB347/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB347-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB391",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB391/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB391-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB405",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB405/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB405-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB411",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB411/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB411-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB417",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB417/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB417-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB424",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB424/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB424-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB427",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB427/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB427-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB452",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB452/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB452-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB459",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB459/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB459-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB463",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB463/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB463-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB488",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB488/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB488-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB505",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB505/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB505-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB509",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB509/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB509-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB546",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB546/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB546-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB548",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB548/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB548-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB549",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB549/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB549-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB550",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB550/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB550-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB551",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB551/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB551-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB552",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB552/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB552-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB553",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB553/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB553-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB554",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB554/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB554-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB573",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB573/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB573-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB588",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB588/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB588-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB605",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB605/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB605-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB608",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB608/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB608-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB620",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB620/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB620-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB628",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB628/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB628-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB634",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB634/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB634-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB662",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB662/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB662-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB669",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB669/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB669-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB680",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB680/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB680-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB705",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB705/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB705-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB718",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB718/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB718-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB769",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB769/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB769-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB791",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB791/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB791-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB793",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB793/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB793-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB809",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB809/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB809-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB811",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB811/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB811-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB908",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB908/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB908-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB919",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB919/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB919-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB980",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB980/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB980-2023"
+  },
+  {
+   "state": "MD",
+   "session": "2023 Regular Session",
+   "year": "2023",
+   "identifier": "HB992",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/MD/bill/HB992/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "MD-HB992-2023"
+  }
+ ]
+}

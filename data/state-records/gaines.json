@@ -1,0 +1,5800 @@
+{
+ "about": "The state legislature bills this person sponsored or cosponsored, with their votes on them, from Open States and LegiScan as the local refresh collected them. Written by npm run state:export (scripts/export-state-records.mjs); matched to the alignment questions with npm run state:acts.",
+ "person": "gaines",
+ "name": "Houston Gaines",
+ "built": "2026-11-26",
+ "counts": {
+  "bills": 392,
+  "votes": 101
+ },
+ "bills": [
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1328",
+   "title": "University of North Georgia military scholarships; authorize selection committee to select additional scholarship recipients",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1328/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1328-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1379",
+   "title": "Foreign Funding Transparency and Accountability Act; enact",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1379/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-04",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1379-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 295",
+   "title": "Local government; procedures for real property owners to make claims for compensation for loss of property value or expenses incurred; provisions",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB295/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-02",
+     "motion": "Agree to Senate Amend as HAm",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-04",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB295-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 328",
+   "title": "Revenue and taxation; increase annual aggregate limit for tax credits available for certain contributions to student scholarship organizations",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB328/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-31",
+     "motion": "Agree to Senate Sub as Am",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB328-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1573",
+   "title": "Statham, City of; ad valorem tax for municipal purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1573/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-27",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1573-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1595",
+   "title": "Clarke County; school district ad valorem tax; revise how income cap is calculated",
+   "role": "sponsor",
+   "date": "2026-05-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1595/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-27",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1595-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1209",
+   "title": "Sales and use tax; purchases of tangible property and construction materials used for or in the construction and furnishing of certain buildings; provide exemption",
+   "role": "sponsor",
+   "date": "2026-05-11",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1209/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-03",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1209-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1578",
+   "title": "Arcade, Town of; municipality; clarify name",
+   "role": "sponsor",
+   "date": "2026-05-11",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1578/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-25",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1578-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1606",
+   "title": "Crimes; offense of disruption of a worship service; provide",
+   "role": "sponsor",
+   "date": "2026-04-02",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1606/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1606-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 309",
+   "title": "Local government; require adoption of a resolution or ordinance and voter approval prior to abolishment of a police force that was created by such method",
+   "role": "sponsor",
+   "date": "2026-04-02",
+   "url": "https://openstates.org/ga/bills/2025_26/HB309/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-04",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB309-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1942",
+   "title": "Dan Magill Memorial Intersection; Clarke County; dedicate",
+   "role": "sponsor",
+   "date": "2026-03-31",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1942/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1942-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1943",
+   "title": "Mayor Nancy Denson Interchange; Clarke County; dedicate",
+   "role": "sponsor",
+   "date": "2026-03-31",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1943/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1943-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 2080",
+   "title": "ODYSSEY Media Group, the iliad Literary-Art Magazine, and David A. Ragsdale for over 23 years of journalistic excellence, student creativity, and outstanding service to the people of Athens, Georgia, and beyond; commend",
+   "role": "sponsor",
+   "date": "2026-03-31",
+   "url": "https://openstates.org/ga/bills/2025_26/HR2080/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR2080-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1586",
+   "title": "Bogart, Town of; provide new charter",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1586/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-25",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1586-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1988",
+   "title": "Chronic federal deficit spending as a root cause of inflation and long-term economic instability; recognize",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1988/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1988-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1792",
+   "title": "Georgia Department of Community Affairs; refrain from adopting the 2024 International Energy Conservation Code for residential construction; urge",
+   "role": "sponsor",
+   "date": "2026-03-25",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1792/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1792-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1752",
+   "title": "Honorable Terry England Intersection; Barrow County; dedicate",
+   "role": "sponsor",
+   "date": "2026-03-20",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1752/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1752-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1804",
+   "title": "Whittenburg, George Allen, III; honoring the life and memory; condolences",
+   "role": "sponsor",
+   "date": "2026-03-19",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1804/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1804-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1662",
+   "title": "Trump, President Donald J.; recognize leadership; commend the courage and professionalism of the United States Armed Forces",
+   "role": "sponsor",
+   "date": "2026-03-18",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1662/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1662-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1224",
+   "title": "Contracts; termination of certain automatic renewal provisions; reduce applicable period",
+   "role": "sponsor",
+   "date": "2026-03-06",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1224/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1224-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1446",
+   "title": "Health; transfer responsibility for oversight of emergency medical services from Department of Public Health to Georgia Emergency Medical Services and Trauma Council",
+   "role": "sponsor",
+   "date": "2026-03-06",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1446/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "fail"
+    },
+    {
+     "date": "2026-03-06",
+     "motion": "Reconsider",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1446-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1618",
+   "title": "Wrestling programs of Jackson County High School, Jefferson High School, Commerce High School, and East Jackson High School for their outstanding accomplishments during the 2026 GHSA wrestling season; commend",
+   "role": "sponsor",
+   "date": "2026-03-06",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1618/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1618-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1437",
+   "title": "Notaries public; notarial acts to be performed using electronic means when certain requirements are satisfied; provide",
+   "role": "sponsor",
+   "date": "2026-03-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1437/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1437-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1587",
+   "title": "Licensed Professional Counselors Appreciation Day at the state capitol; 3/5/26; recognize",
+   "role": "sponsor",
+   "date": "2026-03-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1587/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1587-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1598",
+   "title": "Crosby, Logan; professional achievements and contributions to Georgia and the arts; commend",
+   "role": "sponsor",
+   "date": "2026-03-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1598/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1598-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1135",
+   "title": "Education; participate in federal tax credit program for contributions of individuals to scholarship granting organizations; provide",
+   "role": "sponsor",
+   "date": "2026-03-03",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1135/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1135-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1436",
+   "title": "Georgia Keep Violent Criminals Off Our Streets Act; enact",
+   "role": "sponsor",
+   "date": "2026-03-03",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1436/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1436-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 955",
+   "title": "Holidays and observances; April of each year as Georgia Native Plant Month; designate",
+   "role": "sponsor",
+   "date": "2026-02-25",
+   "url": "https://openstates.org/ga/bills/2025_26/HB955/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB955-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1417",
+   "title": "Dale Murphy Day; February 26, 2026; recognize; urge the Major League Baseball Hall of Fame Committee to induct Dale Murphy into the National Baseball Hall of Fame",
+   "role": "sponsor",
+   "date": "2026-02-24",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1417/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1417-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1299",
+   "title": "United States Department of Education; dissolve and restore educational authority to the states; express support",
+   "role": "sponsor",
+   "date": "2026-02-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1299/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1299-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1360",
+   "title": "Barrow County's 2026 STAR Students and STAR Teachers; commend",
+   "role": "sponsor",
+   "date": "2026-02-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1360/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1360-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1113",
+   "title": "Congress; recognize chronic federal deficit spending as the root cause of inflation and long-term economic instability; urge",
+   "role": "sponsor",
+   "date": "2026-02-11",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1113/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1113-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 585",
+   "title": "Insurance; motor vehicle policy; provide excluded driver",
+   "role": "sponsor",
+   "date": "2026-02-10",
+   "url": "https://openstates.org/ga/bills/2025_26/HB585/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB585-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HR 1326",
+   "title": "Family and Consumer Sciences; commend",
+   "role": "sponsor",
+   "date": "2026-02-10",
+   "url": "https://openstates.org/ga/bills/2025_26/HR1326/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1326-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 1225",
+   "title": "Contracts; automatic renewal provisions; provide certain consumers a pro rata refund relative to a canceled service contract in the event of a price increase",
+   "role": "sponsor",
+   "date": "2026-02-09",
+   "url": "https://openstates.org/ga/bills/2025_26/HB1225/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1225-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 965",
+   "title": "Health; copies of certain patient records to parents or legal guardians of unemancipated minors; provide",
+   "role": "sponsor",
+   "date": "2026-01-16",
+   "url": "https://openstates.org/ga/bills/2025_26/HB965/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB965-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 384",
+   "title": "Crimes and offenses; uniform oaths to be sworn by all peace officers; provide",
+   "role": "sponsor",
+   "date": "2026-01-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HB384/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB384-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2026",
+   "identifier": "HB 444",
+   "title": "Holidays; April of each year as Georgia Native Plant Month; designate",
+   "role": "sponsor",
+   "date": "2026-01-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HB444/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-26",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB444-2026"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 150",
+   "title": "Combating Threats from China Act of 2025 - Higher Education; enact",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB150/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-04",
+     "motion": "Agree to Senate Substitute",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB150-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 296",
+   "title": "Motor vehicles; presentation of a driver's license in a certain electronic format; provisions",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB296/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-04",
+     "motion": "Agree to Senate Amendment",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-03",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB296-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 339",
+   "title": "Motor vehicles; exempt ride share drivers or ride share network services from definition of motor carrier",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB339/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-04",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB339-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 340",
+   "title": "Distraction-Free Education Act; enact",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB340/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-04",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB340-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 398",
+   "title": "Food, drugs, and cosmetics; authorize production and sale of cottage food items with certain exemptions, requirements, and disclosures",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB398/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-03",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB398-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 454",
+   "title": "Vince Dooley Battlefield Trust Fund Act; enact",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/ga/bills/2025_26/HB454/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-03",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB454-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 157",
+   "title": "Braselton, Town of; annex certain properties",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/ga/bills/2025_26/HB157/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-10",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB157-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 572",
+   "title": "Braselton, Town of; annex certain properties",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/ga/bills/2025_26/HB572/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-04",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB572-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 839",
+   "title": "Jackson County; board of commissioners; filling vacancies; revise provisions",
+   "role": "sponsor",
+   "date": "2025-05-13",
+   "url": "https://openstates.org/ga/bills/2025_26/HB839/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-31",
+     "motion": "Local Calendar Without HBs 851 & 852",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB839-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 288",
+   "title": "Appeal and error; declaratory judgments in instances involving accusations made by a prosecuting attorney regarding credibility of a peace officer; provide",
+   "role": "sponsor",
+   "date": "2025-05-12",
+   "url": "https://openstates.org/ga/bills/2025_26/HB288/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-31",
+     "motion": "Agree to Senate Substitute",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB288-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 268",
+   "title": "Education; safety, health, and well-being of students and school communities; provide",
+   "role": "sponsor",
+   "date": "2025-04-28",
+   "url": "https://openstates.org/ga/bills/2025_26/HB268/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-31",
+     "motion": "Agree to Senate Substitute",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-04",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB268-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 246",
+   "title": "Courts; office of sheriff and training of peace officers; revise qualification requirements",
+   "role": "sponsor",
+   "date": "2025-04-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HB246/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB246-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 253",
+   "title": "Ethan's Law; enact",
+   "role": "sponsor",
+   "date": "2025-04-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HB253/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-04",
+     "motion": "Agree to Senate Sub as Amended by House",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-02-26",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB253-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 315",
+   "title": "Law Enforcement Partners Act; enact",
+   "role": "sponsor",
+   "date": "2025-04-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HB315/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB315-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 330",
+   "title": "Income tax; credits for contributions to law enforcement foundations; revise provisions",
+   "role": "sponsor",
+   "date": "2025-04-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HB330/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB330-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 370",
+   "title": "Ad valorem tax; school districts; state-wide base year homestead exemption; provisions",
+   "role": "sponsor",
+   "date": "2025-04-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HB370/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-04",
+     "motion": "Agree to Senate Sub as Amended by House",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB370-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 884",
+   "title": "President of the United States and Congress; increased state autonomy to allow for creation of innovative solutions to work disincentives and reform of social safety net programs; urge",
+   "role": "sponsor",
+   "date": "2025-04-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR884/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR884-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 851",
+   "title": "Athens-Clarke County; Board of Elections and Registration; provide for abolition on a date certain",
+   "role": "sponsor",
+   "date": "2025-03-31",
+   "url": "https://openstates.org/ga/bills/2025_26/HB851/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB851-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 852",
+   "title": "Athens-Clarke County; Board of Elections and Registration; reconstitute and reestablish",
+   "role": "sponsor",
+   "date": "2025-03-31",
+   "url": "https://openstates.org/ga/bills/2025_26/HB852/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB852-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 899",
+   "title": "Stevens, Joyce Carter; commend",
+   "role": "sponsor",
+   "date": "2025-03-31",
+   "url": "https://openstates.org/ga/bills/2025_26/HR899/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR899-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 758",
+   "title": "North Oconee High School boys basketball team; winning the 2025 GHSA Class 4A State Basketball Championship; commend",
+   "role": "sponsor",
+   "date": "2025-03-27",
+   "url": "https://openstates.org/ga/bills/2025_26/HR758/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR758-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 762",
+   "title": "Atlanta Apartment Association; 50th anniversary; recognize",
+   "role": "sponsor",
+   "date": "2025-03-27",
+   "url": "https://openstates.org/ga/bills/2025_26/HR762/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR762-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 743",
+   "title": "State Government Affairs Council; 50th anniversary; recognize",
+   "role": "sponsor",
+   "date": "2025-03-25",
+   "url": "https://openstates.org/ga/bills/2025_26/HR743/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR743-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 709",
+   "title": "Bridges, Kenneth Rogers; commend",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/ga/bills/2025_26/HR709/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR709-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 623",
+   "title": "Lay, Tony; commend",
+   "role": "sponsor",
+   "date": "2025-03-18",
+   "url": "https://openstates.org/ga/bills/2025_26/HR623/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR623-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 652",
+   "title": "Georgia Community Service Boards; Community Service Boards' Day at the state capitol; February 16, 2025; recognize",
+   "role": "sponsor",
+   "date": "2025-03-18",
+   "url": "https://openstates.org/ga/bills/2025_26/HR652/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR652-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 610",
+   "title": "Roberts, Delane; occasion of her retirement; commend",
+   "role": "sponsor",
+   "date": "2025-03-13",
+   "url": "https://openstates.org/ga/bills/2025_26/HR610/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR610-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 529",
+   "title": "Georgia Online Automatic Renewal Transparency Act; enact",
+   "role": "sponsor",
+   "date": "2025-03-10",
+   "url": "https://openstates.org/ga/bills/2025_26/HB529/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB529-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 577",
+   "title": "Georgia Nicotine Vapor Products Directory Act; enact",
+   "role": "sponsor",
+   "date": "2025-03-10",
+   "url": "https://openstates.org/ga/bills/2025_26/HB577/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-06",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB577-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 727",
+   "title": "Administrative Services, Department of; post-employment restriction for state employees involved in state purchasing; provide",
+   "role": "sponsor",
+   "date": "2025-03-10",
+   "url": "https://openstates.org/ga/bills/2025_26/HB727/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB727-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 552",
+   "title": "Sumner, Michael Ernest; condolences",
+   "role": "sponsor",
+   "date": "2025-03-06",
+   "url": "https://openstates.org/ga/bills/2025_26/HR552/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR552-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 503",
+   "title": "Roberts, Delane; occasion of her retirement; recognize",
+   "role": "sponsor",
+   "date": "2025-03-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR503/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR503-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 639",
+   "title": "Courts; expedite and prioritize processes for termination of parental rights in certain cases involving parental incapacity and child maltreatment",
+   "role": "sponsor",
+   "date": "2025-02-28",
+   "url": "https://openstates.org/ga/bills/2025_26/HB639/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB639-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 451",
+   "title": "Caterpillar Inc.; 100th anniversary; recognize",
+   "role": "sponsor",
+   "date": "2025-02-28",
+   "url": "https://openstates.org/ga/bills/2025_26/HR451/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR451-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 461",
+   "title": "Food Bank of Northeast Georgia; mission of connecting neighbors with nourishing food, its expansion to better serve communities across Northeast Georgia & ongoing contributions to economic stability, workforce development & community well-being; commend",
+   "role": "sponsor",
+   "date": "2025-02-28",
+   "url": "https://openstates.org/ga/bills/2025_26/HR461/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR461-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 205",
+   "title": "Board of Homeland Security; development of a list of approved unmanned aircraft systems; provide",
+   "role": "sponsor",
+   "date": "2025-02-24",
+   "url": "https://openstates.org/ga/bills/2025_26/HB205/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-02-21",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB205-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 558",
+   "title": "State Board of the Technical College System of Georgia; establish adult workforce high school diploma program",
+   "role": "sponsor",
+   "date": "2025-02-24",
+   "url": "https://openstates.org/ga/bills/2025_26/HB558/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB558-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 373",
+   "title": "University of Georgia Block and Bridle Club; occasion of its 50th Great Southland Stampede Rodeo; recognize",
+   "role": "sponsor",
+   "date": "2025-02-24",
+   "url": "https://openstates.org/ga/bills/2025_26/HR373/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR373-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 377",
+   "title": "Wright, William; outstanding public service; commend",
+   "role": "sponsor",
+   "date": "2025-02-24",
+   "url": "https://openstates.org/ga/bills/2025_26/HR377/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR377-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 365",
+   "title": "Georgia Association of Manufacturers; 125th anniversary of its formation; recognize",
+   "role": "sponsor",
+   "date": "2025-02-21",
+   "url": "https://openstates.org/ga/bills/2025_26/HR365/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR365-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 417",
+   "title": "Education; tuition equalization grants at private colleges and universities; revise definition of approved school",
+   "role": "sponsor",
+   "date": "2025-02-18",
+   "url": "https://openstates.org/ga/bills/2025_26/HB417/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB417-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 301",
+   "title": "Barrow County's 2025 STAR Students and STAR Teachers; commend",
+   "role": "sponsor",
+   "date": "2025-02-18",
+   "url": "https://openstates.org/ga/bills/2025_26/HR301/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR301-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HB 319",
+   "title": "Crimes and offenses; illegal aliens; penalties for state and local officials and employees for noncompliance; provide",
+   "role": "sponsor",
+   "date": "2025-02-11",
+   "url": "https://openstates.org/ga/bills/2025_26/HB319/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB319-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 181",
+   "title": "Georgia Hearing Day at the state capitol; February 10, 2025; recognize",
+   "role": "sponsor",
+   "date": "2025-02-05",
+   "url": "https://openstates.org/ga/bills/2025_26/HR181/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR181-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 162",
+   "title": "Athens Academy boys varsity basketball team; winning the Region 8-AA Championship; commend",
+   "role": "sponsor",
+   "date": "2025-02-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR162/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR162-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 163",
+   "title": "North Oconee High School football team; winning the 2024 GHSA Class 4A State Football Championship; commend",
+   "role": "sponsor",
+   "date": "2025-02-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR163/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR163-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 164",
+   "title": "Family and Consumer Sciences; commend",
+   "role": "sponsor",
+   "date": "2025-02-04",
+   "url": "https://openstates.org/ga/bills/2025_26/HR164/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR164-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 70",
+   "title": "Christopher Lee Ruse Memorial Intersection; Jackson County; dedicate",
+   "role": "sponsor",
+   "date": "2025-01-30",
+   "url": "https://openstates.org/ga/bills/2025_26/HR70/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR70-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025_26",
+   "year": "2025",
+   "identifier": "HR 30",
+   "title": "Tax Cuts and Jobs Act of 2017; permanent extension; express support",
+   "role": "sponsor",
+   "date": "2025-01-17",
+   "url": "https://openstates.org/ga/bills/2025_26/HR30/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR30-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2025",
+   "identifier": "HB 451",
+   "title": "Public officers and employees; supplemental, illness-specific insurance for certain first responders with occupational post-traumatic stress disorder; require provision",
+   "role": "sponsor",
+   "date": "2025-01-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB451/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-27",
+     "motion": "House Vote #562 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-03-28",
+     "motion": "House Vote #836 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB451-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025-2026 Regular Session",
+   "year": "2025",
+   "identifier": "SB149",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB149/2025",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB149-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2025-2026 Regular Session",
+   "year": "2025",
+   "identifier": "SB193",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB193/2025",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB193-2025"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1335",
+   "title": "Health; personal care homes, assisted living communities, and memory care centers; revise staffing requirements",
+   "role": "sponsor",
+   "date": "2024-07-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1335/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-29",
+     "motion": "House Vote #600 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1335-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1068",
+   "title": "Jefferson, City of; homestead exemption; revise existing exemptions and add new exemption",
+   "role": "sponsor",
+   "date": "2024-05-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1068/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-01",
+     "motion": "House Vote #423 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1068-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1446",
+   "title": "Barrow County; Board of Commissioners; revise power of county manager",
+   "role": "sponsor",
+   "date": "2024-05-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1446/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-08",
+     "motion": "House Vote #674 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1446-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1447",
+   "title": "Statham, City of; provide new charter",
+   "role": "sponsor",
+   "date": "2024-05-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1447/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-08",
+     "motion": "House Vote #674 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1447-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1460",
+   "title": "Commerce, City of; ad valorem tax for educational purposes; homestead exemption; revise",
+   "role": "sponsor",
+   "date": "2024-05-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1460/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-13",
+     "motion": "House Vote #687 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1460-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1461",
+   "title": "Jackson County; ad valorem tax; homestead exemption; provisions",
+   "role": "sponsor",
+   "date": "2024-05-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1461/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-13",
+     "motion": "House Vote #687 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1461-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1496",
+   "title": "Oconee County; Board of Education; reconstitute",
+   "role": "sponsor",
+   "date": "2024-05-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1496/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-21",
+     "motion": "House Vote #728 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1496-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1086",
+   "title": "Barrow County; ad valorem tax for educational purposes for certain senior citizens with certain maximum incomes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2024-05-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1086/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-08",
+     "motion": "House Vote #440 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1086-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1087",
+   "title": "Barrow County; ad valorem tax for educational purposes for certain senior citizens with certain maximum incomes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2024-05-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1087/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-08",
+     "motion": "House Vote #440 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1087-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1088",
+   "title": "Barrow County; ad valorem tax for educational purposes for certain senior citizens with certain maximum incomes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2024-05-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1088/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-08",
+     "motion": "House Vote #440 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1088-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1201",
+   "title": "Criminal procedure; vacating of sentences of victims of trafficking; provisions",
+   "role": "sponsor",
+   "date": "2024-04-24",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1201/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-03-26",
+     "motion": "House Vote #796 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2024-02-29",
+     "motion": "House Vote #595 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1201-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1003",
+   "title": "Jackson County; school district ad valorem tax for educational purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2024-04-22",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1003/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-01",
+     "motion": "House Vote #423 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1003-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1004",
+   "title": "Jackson County; school district ad valorem tax for educational purposes in the amount of $10,000.00; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2024-04-22",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1004/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-01",
+     "motion": "House Vote #423 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1004-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1170",
+   "title": "Public Health, Department of; require certain state government buildings, courthouses, and university buildings maintain and make accessible opioid antagonists",
+   "role": "sponsor",
+   "date": "2024-03-28",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1170/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-22",
+     "motion": "House Vote #525 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1170-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1686",
+   "title": "Diaz, Manuel; commend",
+   "role": "sponsor",
+   "date": "2024-03-28",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1686/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1686-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1713",
+   "title": "North Oconee High School boys basketball team; winning the 2024 GHSA Class 4A State Basketball Championship; commend",
+   "role": "sponsor",
+   "date": "2024-03-28",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1713/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1713-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1714",
+   "title": "Herrington, Dr. William T.; commend",
+   "role": "sponsor",
+   "date": "2024-03-28",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1714/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1714-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1260",
+   "title": "Georgia Nicotine Vapor Products Directory Act; enact",
+   "role": "sponsor",
+   "date": "2024-03-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1260/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-29",
+     "motion": "House Vote #652 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1260-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 231",
+   "title": "Prosecuting Attorneys Oversight Commission; create",
+   "role": "sponsor",
+   "date": "2024-03-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HB231/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-06",
+     "motion": "House Vote #196 - 2023-2024 Regular Session",
+     "option": "no",
+     "result": "fail"
+    },
+    {
+     "date": "2023-03-06",
+     "motion": "House Vote #195 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB231-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 881",
+   "title": "Prosecuting Attorneys Qualifications Commission; standards of conduct and rules; provisions",
+   "role": "sponsor",
+   "date": "2024-03-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HB881/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-01-29",
+     "motion": "House Vote #415 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB881-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 185",
+   "title": "Education; provide for HOPE Inclusive Postsecondary Education (IPSE) grants",
+   "role": "sponsor",
+   "date": "2024-03-21",
+   "url": "https://openstates.org/ga/bills/2023_24/HB185/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-01",
+     "motion": "House Vote #121 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB185-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1583",
+   "title": "McArdle, Jane, Molly McCollum, Eleanor Cart, Clarke Jones, and Kaitlyn Iannace; commend",
+   "role": "sponsor",
+   "date": "2024-03-21",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1583/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1583-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1587",
+   "title": "World Down Syndrome Day at the state capitol; March 21, 2024; recognize",
+   "role": "sponsor",
+   "date": "2024-03-21",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1587/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1587-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 583",
+   "title": "Food, drugs, and cosmetics; authorize production and sale of homemade food items with certain exemptions, requirements, and disclosures",
+   "role": "sponsor",
+   "date": "2024-03-20",
+   "url": "https://openstates.org/ga/bills/2023_24/HB583/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-29",
+     "motion": "House Vote #647 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB583-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1558",
+   "title": "Mosley, Reverend Abraham; occasion of his 50th pastoral anniversary; recognize",
+   "role": "sponsor",
+   "date": "2024-03-20",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1558/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1558-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1190",
+   "title": "Secretary of State; division director to issue licenses in certain instances; authorize",
+   "role": "sponsor",
+   "date": "2024-03-14",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1190/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-29",
+     "motion": "House Vote #594 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1190-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 804",
+   "title": "Motor vehicles; issuance of a distinctive license plate for owners of ambulances; provide",
+   "role": "sponsor",
+   "date": "2024-03-14",
+   "url": "https://openstates.org/ga/bills/2023_24/HB804/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-01-26",
+     "motion": "House Vote #410 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB804-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1422",
+   "title": "Hollifield, Terry; 53 years of outstanding service as executive director of the Georgia Crop Improvement Association; retirement on 12/31/23; recognize",
+   "role": "sponsor",
+   "date": "2024-03-11",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1422/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1422-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1124",
+   "title": "Education; needs based financial aid program; provide for a definition",
+   "role": "sponsor",
+   "date": "2024-03-08",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1124/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-22",
+     "motion": "House Vote #522 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1124-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1452",
+   "title": "Education; annually increasing maximum age of eligibility for certain state funded special education programs to 30 years; provisions",
+   "role": "sponsor",
+   "date": "2024-03-08",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1452/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1452-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1328",
+   "title": "Douglas \"Doug\" H. Garrison Memorial Interchange; Barrow County; dedicate",
+   "role": "sponsor",
+   "date": "2024-03-07",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1328/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1328-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1420",
+   "title": "Crimes and offenses; unlawfully possessing a pill press or other controlled substance counterfeiting materials; provide",
+   "role": "sponsor",
+   "date": "2024-03-04",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1420/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1420-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1383",
+   "title": "Law enforcement officers; arrests without warrant; revise authority",
+   "role": "sponsor",
+   "date": "2024-02-29",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1383/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1383-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1415",
+   "title": "Law enforcement officers; cooperate with federal authorities on enforcement of immigration laws; provisions",
+   "role": "sponsor",
+   "date": "2024-02-29",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1415/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1415-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1308",
+   "title": "Dooley, Barbara; commend",
+   "role": "sponsor",
+   "date": "2024-02-29",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1308/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1308-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 780",
+   "title": "Only citizens of the United States have right to vote in elections in Georgia; clarify - CA",
+   "role": "sponsor",
+   "date": "2024-02-29",
+   "url": "https://openstates.org/ga/bills/2023_24/HR780/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2024-02-29",
+     "motion": "House Vote #658 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HR780-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1359",
+   "title": "Ad valorem tax; refund for loss of property value or expenses due to failure of local governments to enforce certain laws; provisions",
+   "role": "sponsor",
+   "date": "2024-02-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1359/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1359-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1280",
+   "title": "Colorectal Cancer Awareness Month; March 2024; recognize; the Georgia Colorectal Cancer Control program; impact on increasing screenings in Federal Qualified Health Clinics in Southwest and Southeast Georgia; commend",
+   "role": "sponsor",
+   "date": "2024-02-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1280/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1280-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1325",
+   "title": "Ad valorem tax; certain senior citizens who volunteer with local governments; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2024-02-22",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1325/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1325-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1096",
+   "title": "Law Enforcement Appreciation Day at the Capitol; February 22, 2024; recognize; law enforcement officers in Georgia; commend",
+   "role": "sponsor",
+   "date": "2024-02-12",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1096/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1096-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1106",
+   "title": "Barrow County's 2024 STAR Students and STAR Teachers; commend",
+   "role": "sponsor",
+   "date": "2024-02-12",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1106/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1106-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 269",
+   "title": "Workforce Innovation and Opportunity Act; authorize local workforce development boards to conduct meetings via teleconference",
+   "role": "sponsor",
+   "date": "2024-02-08",
+   "url": "https://openstates.org/ga/bills/2023_24/HB269/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-02-28",
+     "motion": "House Vote #100 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB269-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1050",
+   "title": "Engineers Day at the state capitol; February 13, 2024; recognize",
+   "role": "sponsor",
+   "date": "2024-02-08",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1050/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1050-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1064",
+   "title": "Georgia Center for Civic Engagement and Engage Club programs; sponsor Youth Assembly among other programs that cultivate youth civic engagement; commend",
+   "role": "sponsor",
+   "date": "2024-02-08",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1064/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1064-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 1108",
+   "title": "Housing authorities; deemed to be political subdivisions of this state; provide",
+   "role": "sponsor",
+   "date": "2024-02-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB1108/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB1108-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1006",
+   "title": "Family and Consumer Sciences; commend",
+   "role": "sponsor",
+   "date": "2024-02-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1006/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1006-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 1007",
+   "title": "University of Georgia Women's Soccer team; outstanding 2023 season; commend",
+   "role": "sponsor",
+   "date": "2024-02-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HR1007/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR1007-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 983",
+   "title": "Georgia Hearing Day at the state capitol; February 20, 2024; recognize",
+   "role": "sponsor",
+   "date": "2024-02-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HR983/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR983-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 985",
+   "title": "Jackson County EMS's operation; 50th anniversary; recognize",
+   "role": "sponsor",
+   "date": "2024-02-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HR985/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR985-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 937",
+   "title": "Georgia Grown Trail: 98; Banks, Jackson, and Madison counties; dedicate",
+   "role": "sponsor",
+   "date": "2024-01-31",
+   "url": "https://openstates.org/ga/bills/2023_24/HR937/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR937-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 955",
+   "title": "Georgia Master Gardener Extension Volunteers; 45th anniversary of the program in Georgia; recognize",
+   "role": "sponsor",
+   "date": "2024-01-31",
+   "url": "https://openstates.org/ga/bills/2023_24/HR955/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR955-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 896",
+   "title": "Blanks, Graham; commend",
+   "role": "sponsor",
+   "date": "2024-01-25",
+   "url": "https://openstates.org/ga/bills/2023_24/HR896/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR896-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 897",
+   "title": "Prince Avenue Fastpitch Softball Team; winning the 2023 GHSA Class A Division One State Softball Championship; commend",
+   "role": "sponsor",
+   "date": "2024-01-25",
+   "url": "https://openstates.org/ga/bills/2023_24/HR897/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR897-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 898",
+   "title": "Prince Avenue Christian School football team; winning the GHSA Single A-Division I Varsity Football State Championship; commend",
+   "role": "sponsor",
+   "date": "2024-01-25",
+   "url": "https://openstates.org/ga/bills/2023_24/HR898/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR898-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HR 828",
+   "title": "Easterseals and all its Georgia chapters; commend",
+   "role": "sponsor",
+   "date": "2024-01-22",
+   "url": "https://openstates.org/ga/bills/2023_24/HR828/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR828-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2024",
+   "identifier": "HB 528",
+   "title": "Georgia Online Automatic Renewal Transparency Act; enact",
+   "role": "sponsor",
+   "date": "2024-01-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB528/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-29",
+     "motion": "House Vote #379 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2023-03-06",
+     "motion": "House Vote #188 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB528-2024"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 88",
+   "title": "Coleman-Baker Act; enact",
+   "role": "sponsor",
+   "date": "2023-07-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB88/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-29",
+     "motion": "House Vote #386 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2023-02-28",
+     "motion": "House Vote #97 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB88-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 249",
+   "title": "Education; needs based financial aid program; provide definition",
+   "role": "sponsor",
+   "date": "2023-05-05",
+   "url": "https://openstates.org/ga/bills/2023_24/HB249/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-06",
+     "motion": "House Vote #160 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2023-03-29",
+     "motion": "House Vote #381 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB249-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 752",
+   "title": "Oconee County; ad valorem tax; repeal a homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB752/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB752-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 763",
+   "title": "Oconee County; ad valorem tax; county purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB763/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB763-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 764",
+   "title": "Oconee County; ad valorem tax; county purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB764/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB764-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 765",
+   "title": "Oconee County; ad valorem tax; county purposes; repeal homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB765/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB765-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 766",
+   "title": "Oconee County; ad valorem tax; educational purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB766/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB766-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 767",
+   "title": "Oconee County; ad valorem tax; educational purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB767/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB767-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 768",
+   "title": "Oconee County; ad valorem tax; close certain homestead exemption to new applicants",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB768/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB768-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 769",
+   "title": "Oconee County; ad valorem tax; county purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB769/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB769-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 770",
+   "title": "Oconee County; ad valorem tax; educational purposes; provide homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB770/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB770-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 791",
+   "title": "Oconee County; ad valorem tax for educational purposes; repeal a homestead exemption",
+   "role": "sponsor",
+   "date": "2023-04-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HB791/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-23",
+     "motion": "House Vote #271 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB791-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 92",
+   "title": "Public utilities and public transportation; percentage limitation as to amount of investments an electric membership corporation may make and maintain in a gas affiliate; modify",
+   "role": "sponsor",
+   "date": "2023-03-29",
+   "url": "https://openstates.org/ga/bills/2023_24/HB92/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB92-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 696",
+   "title": "Wilson, Victor; outstanding service; commend",
+   "role": "sponsor",
+   "date": "2023-03-27",
+   "url": "https://openstates.org/ga/bills/2023_24/HR696/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR696-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 608",
+   "title": "EC Bullets-Gravley 14U Fast-pitch Softball Team; commend",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR608/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR608-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 610",
+   "title": "Bauerle, Jack; proud native of Glenside, Pennsylvania, but a Georgia Bulldog through and through - for his unprecedented tenure and success in leading the University of Georgia's swimming and diving programs to worldwide acclaim; commend",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR610/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR610-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 628",
+   "title": "University of Georgia Student Government Leadership Day at the state capitol; 03/23/23; commending the student leaders of the Student Government Association of the University of Georgia; recognize",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR628/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR628-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 629",
+   "title": "Flynt, Fabersha; commend",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR629/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR629-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 630",
+   "title": "Crooked Creek Baptist Church; occasion of its 220th anniversary; recognize",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR630/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR630-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 631",
+   "title": "Newland, James; commend",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR631/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR631-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 632",
+   "title": "Atlanta Humane Society, Athens Area Humane Society, and Atlanta Beagle Rescue; efforts to help rescue beagles from animal testing; commend",
+   "role": "sponsor",
+   "date": "2023-03-23",
+   "url": "https://openstates.org/ga/bills/2023_24/HR632/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR632-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 522",
+   "title": "Vince Dooley Memorial Intersection; Clarke County; dedicate",
+   "role": "sponsor",
+   "date": "2023-03-21",
+   "url": "https://openstates.org/ga/bills/2023_24/HR522/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR522-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 532",
+   "title": "World Down Syndrome Day at the state capitol; March 21, 2023; recognize",
+   "role": "sponsor",
+   "date": "2023-03-16",
+   "url": "https://openstates.org/ga/bills/2023_24/HR532/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR532-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 392",
+   "title": "Georgia Endowment for Teaching Professionals; create",
+   "role": "sponsor",
+   "date": "2023-03-07",
+   "url": "https://openstates.org/ga/bills/2023_24/HB392/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2023-03-06",
+     "motion": "House Vote #202 - 2023-2024 Regular Session",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB392-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 402",
+   "title": "Gravley, Micah; outstanding public service; commend",
+   "role": "sponsor",
+   "date": "2023-03-02",
+   "url": "https://openstates.org/ga/bills/2023_24/HR402/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR402-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 603",
+   "title": "Juvenile Code; termination of parental rights involving parental incapacity and child maltreatment; expedite and prioritize processes",
+   "role": "sponsor",
+   "date": "2023-03-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HB603/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB603-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 286",
+   "title": "Dooley, Vincent Joseph; condolences",
+   "role": "sponsor",
+   "date": "2023-02-22",
+   "url": "https://openstates.org/ga/bills/2023_24/HR286/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR286-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 198",
+   "title": "Stand with Survivors Day at the state capitol; February 14, 2023; recognize",
+   "role": "sponsor",
+   "date": "2023-02-14",
+   "url": "https://openstates.org/ga/bills/2023_24/HR198/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR198-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 211",
+   "title": "Sales and use tax; certain absorbent diapers, undergarments, and pads; exempt",
+   "role": "sponsor",
+   "date": "2023-02-07",
+   "url": "https://openstates.org/ga/bills/2023_24/HB211/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB211-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 229",
+   "title": "Courts; grounds for recall of district attorneys of judicial circuits and solicitors-general of state courts; revise provisions",
+   "role": "sponsor",
+   "date": "2023-02-07",
+   "url": "https://openstates.org/ga/bills/2023_24/HB229/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB229-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HB 197",
+   "title": "Wesley's Law; enact",
+   "role": "sponsor",
+   "date": "2023-02-06",
+   "url": "https://openstates.org/ga/bills/2023_24/HB197/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HB197-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 111",
+   "title": "Firefighters Recognition Day at the state capitol; February 7, 2023; honoring and commending the firefighters of Georgia; recognize",
+   "role": "sponsor",
+   "date": "2023-02-02",
+   "url": "https://openstates.org/ga/bills/2023_24/HR111/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR111-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 108",
+   "title": "Law Enforcement Appreciation Day at the Capitol; February 8, 2023; commending law enforcement officers in Georgia; recognize",
+   "role": "sponsor",
+   "date": "2023-02-01",
+   "url": "https://openstates.org/ga/bills/2023_24/HR108/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR108-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 85",
+   "title": "Georgia Museum of Art; grand occasion of its 75th anniversary; recognize",
+   "role": "sponsor",
+   "date": "2023-01-31",
+   "url": "https://openstates.org/ga/bills/2023_24/HR85/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR85-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 63",
+   "title": "Barrow County's 2023 STAR Students and STAR Teachers; commend",
+   "role": "sponsor",
+   "date": "2023-01-30",
+   "url": "https://openstates.org/ga/bills/2023_24/HR63/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR63-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 51",
+   "title": "University of Georgia Bulldogs; winning the 2023 College Football National Championship; commend",
+   "role": "sponsor",
+   "date": "2023-01-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HR51/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR51-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 52",
+   "title": "Family and Consumer Sciences; commend",
+   "role": "sponsor",
+   "date": "2023-01-26",
+   "url": "https://openstates.org/ga/bills/2023_24/HR52/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR52-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023_24",
+   "year": "2023",
+   "identifier": "HR 13",
+   "title": "Bennett, Stetson; lead University of Georgia Bulldogs to first back-to-back national championships in College Football Playoff's history and a perfect 15-0 mark in 2022; commend",
+   "role": "sponsor",
+   "date": "2023-01-25",
+   "url": "https://openstates.org/ga/bills/2023_24/HR13/",
+   "source": "Open States",
+   "votes": [],
+   "key": "GA-HR13-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2023",
+   "identifier": "HB 1443",
+   "title": "Mobile food service establishments; operate in county of origin or other counties without an additional permit; provide",
+   "role": "sponsor",
+   "date": "2023-01-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1443/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-15",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1443-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023 Special Session",
+   "year": "2023",
+   "identifier": "HB2",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB2/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB2-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "HB451",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB451/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB451-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023 Special Session",
+   "year": "2023",
+   "identifier": "HR17",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR17/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR17-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023 Special Session",
+   "year": "2023",
+   "identifier": "HR18",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR18/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR18-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB215",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB215/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB215-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB222",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB222/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB222-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB324",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB324/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB324-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB454",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB454/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB454-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB472",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB472/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB472-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB63",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB63/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB63-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2023-2024 Regular Session",
+   "year": "2023",
+   "identifier": "SB91",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB91/2023",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB91-2023"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1034",
+   "title": "Sales and use tax; exemption for sales of admissions to nonrecurring major sporting events; revise",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1034/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-15",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1034-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1304",
+   "title": "Georgia Caregivers Act; create",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1304/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-08",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1304-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1385",
+   "title": "Legislative and Congressional Reapportionment Office; revise annexation reporting requirements",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1385/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-09",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1385-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1435",
+   "title": "Education; needs based financial aid program; include eligibility for students with a financial aid gap",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1435/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-15",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1435-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1441",
+   "title": "Professions and businesses; exempt a certified peace officer employed as an independent contractor from certain requirements",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1441/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-11",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1441-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1452",
+   "title": "Domestic relations; dating violence protective orders; revise a definition",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1452/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-11",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1452-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1516",
+   "title": "Georgia Music Hall of Fame Authority; provide for definitions; provisions",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1516/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-15",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1516-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 508",
+   "title": "Commerce and trade; commercial recordings, musical performances, and audiovisual works; provide protections",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB508/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-03-03",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB508-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 969",
+   "title": "Insurance; update regulation of company holding systems",
+   "role": "sponsor",
+   "date": "2022-07-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB969/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-02-15",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB969-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 796",
+   "title": "Clarke County; Classic Center Authority; change certain provisions relative to the purpose and powers",
+   "role": "sponsor",
+   "date": "2022-04-18",
+   "url": "https://openstates.org/ga/bills/2021_22/HB796/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2021-03-25",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB796-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 797",
+   "title": "Clarke County; ad valorem tax; increase existing general and senior homestead exemptions",
+   "role": "sponsor",
+   "date": "2022-04-18",
+   "url": "https://openstates.org/ga/bills/2021_22/HB797/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2021-03-25",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB797-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1045",
+   "title": "Workers compensation; dissolution of Subsequent Injury Trust Fund; extend time period",
+   "role": "sponsor",
+   "date": "2022-04-04",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1045/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-02-08",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1045-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 322",
+   "title": "Juvenile Code; revise definition of sexual exploitation",
+   "role": "sponsor",
+   "date": "2022-04-01",
+   "url": "https://openstates.org/ga/bills/2021_22/HB322/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2021-03-03",
+     "motion": "PASSAGE",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB322-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1116",
+   "title": "Jackson County; Board of Commissioners; change description of districts",
+   "role": "sponsor",
+   "date": "2022-03-02",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1116/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-02-07",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1116-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1142",
+   "title": "Athens, City of; Clarke County; Board of Education; change description of districts",
+   "role": "sponsor",
+   "date": "2022-03-02",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1142/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-02-07",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1142-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 1114",
+   "title": "Jackson County; School System; change description of districts",
+   "role": "sponsor",
+   "date": "2022-02-17",
+   "url": "https://openstates.org/ga/bills/2021_22/HB1114/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-02-07",
+     "motion": "Local Calendar",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "GA-HB1114-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021_22",
+   "year": "2022",
+   "identifier": "HB 890",
+   "title": "Athens-Clarke County; commission members; change description of districts",
+   "role": "sponsor",
+   "date": "2022-02-17",
+   "url": "https://openstates.org/ga/bills/2021_22/HB890/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2022-01-27",
+     "motion": "Remove from Local Cal/Vote Separately",
+     "option": "no",
+     "result": "fail"
+    }
+   ],
+   "key": "GA-HB890-2022"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1010",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1010/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1010-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1133",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1133/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1133-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1184",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1184/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1184-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1192",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1192/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1192-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB129",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB129/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB129-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1319",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1319/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1319-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB141",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB141/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB141-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1434",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1434/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1434-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1443",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1443/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1443-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB146",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB146/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB146-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1496",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1496/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1496-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1502",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1502/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1502-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB1508",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1508/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1508-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB152",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB152/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB152-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB153",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB153/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB153-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB163",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB163/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB163-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB174",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB174/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB174-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB178",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB178/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB178-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB223",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB223/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB223-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB229",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB229/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB229-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB231",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB231/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB231-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB241",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB241/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB241-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB245",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB245/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB245-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB272",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB272/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB272-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB286",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB286/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB286-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB307",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB307/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB307-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB316",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB316/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB316-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB323",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB323/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB323-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB324",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB324/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB324-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB330",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB330/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB330-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB355",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB355/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB355-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB374",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB374/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB374-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB403",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB403/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB403-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB450",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB450/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB450-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB454",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB454/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB454-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB458",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB458/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB458-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB509",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB509/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB509-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB510",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB510/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB510-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB561",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB561/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB561-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB64",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB64/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB64-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB65",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB65/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB65-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB689",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB689/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB689-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB821",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB821/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB821-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB876",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB876/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB876-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HB877",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB877/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB877-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR1042",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1042/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1042-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR1059",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1059/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1059-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR113",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR113/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR113-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR114",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR114/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR114-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR1210",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1210/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1210-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR134",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR134/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR134-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR155",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR155/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR155-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR175",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR175/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR175-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR177",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR177/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR177-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR178",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR178/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR178-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021 Special Session",
+   "year": "2021",
+   "identifier": "HR18",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR18/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR18-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR22",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR22/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR22-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR347",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR347/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR347-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR428",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR428/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR428-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR466",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR466/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR466-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR497",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR497/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR497-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR498",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR498/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR498-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR534",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR534/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR534-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR535",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR535/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR535-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR553",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR553/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR553-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR707",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR707/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR707-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR716",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR716/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR716-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR717",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR717/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR717-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR718",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR718/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR718-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR726",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR726/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR726-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR754",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR754/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR754-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR809",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR809/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR809-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR811",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR811/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR811-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR812",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR812/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR812-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR813",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR813/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR813-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR814",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR814/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR814-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR825",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR825/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR825-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR852",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR852/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR852-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR869",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR869/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR869-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "HR977",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR977/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR977-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "SB117",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB117/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB117-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "SB332",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB332/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB332-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "SB361",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB361/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB361-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "SB505",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB505/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB505-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "SB534",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB534/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB534-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2021-2022 Regular Session",
+   "year": "2021",
+   "identifier": "SB75",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB75/2021",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB75-2021"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB1015",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1015/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1015-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB1070",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1070/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1070-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB1094",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1094/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1094-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB1157",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1157/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1157-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB1179",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB1179/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB1179-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB161",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB161/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB161-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB164",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB164/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB164-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB209",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB209/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB209-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB217",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB217/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB217-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB225",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB225/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB225-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB260",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB260/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB260-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB266",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB266/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB266-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB290",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB290/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB290-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB331",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB331/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB331-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB340",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB340/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB340-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB346",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB346/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB346-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB376",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB376/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB376-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB382",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB382/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB382-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB392",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB392/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB392-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB401",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB401/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB401-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB402",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB402/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB402-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB440",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB440/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB440-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB451",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB451/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB451-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB454",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB454/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB454-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB459",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB459/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB459-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB497",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB497/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB497-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB520",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB520/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB520-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB521",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB521/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB521-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB528",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB528/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB528-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB537",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB537/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB537-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB588",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB588/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB588-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB589",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB589/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB589-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB601",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB601/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB601-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB62",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB62/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB62-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB706",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB706/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB706-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB725",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB725/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB725-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB789",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB789/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB789-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB815",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB815/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB815-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB823",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB823/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB823-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB825",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB825/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB825-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB840",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB840/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB840-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB855",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB855/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB855-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB861",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB861/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB861-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB928",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB928/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB928-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB932",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB932/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB932-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB939",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB939/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB939-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB958",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB958/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB958-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HB996",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HB996/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HB996-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1007",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1007/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1007-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1011",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1011/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1011-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1013",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1013/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1013-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1045",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1045/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1045-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1125",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1125/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1125-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1142",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1142/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1142-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1143",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1143/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1143-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1161",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1161/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1161-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1171",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1171/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1171-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1186",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1186/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1186-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1219",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1219/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1219-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR122",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR122/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR122-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1239",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1239/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1239-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1256",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1256/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1256-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1343",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1343/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1343-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1372",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1372/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1372-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1373",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1373/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1373-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1401",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1401/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1401-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1404",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1404/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1404-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1411",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1411/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1411-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1458",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1458/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1458-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR153",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR153/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR153-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1538",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1538/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1538-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1539",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1539/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1539-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1540",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1540/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1540-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR1606",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR1606/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR1606-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR218",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR218/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR218-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR222",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR222/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR222-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR254",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR254/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR254-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR409",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR409/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR409-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR492",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR492/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR492-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR536",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR536/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR536-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR600",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR600/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR600-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR655",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR655/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR655-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR751",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR751/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR751-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR77",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR77/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR77-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR784",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR784/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR784-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR785",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR785/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR785-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR831",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR831/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR831-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR884",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR884/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR884-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR967",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR967/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR967-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR972",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR972/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR972-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "HR988",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/HR988/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-HR988-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "SB288",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB288/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB288-2019"
+  },
+  {
+   "state": "GA",
+   "session": "2019-2020 Regular Session",
+   "year": "2019",
+   "identifier": "SB322",
+   "title": null,
+   "role": null,
+   "date": null,
+   "url": "https://legiscan.com/GA/bill/SB322/2019",
+   "source": "LegiScan",
+   "votes": [],
+   "key": "GA-SB322-2019"
+  }
+ ]
+}

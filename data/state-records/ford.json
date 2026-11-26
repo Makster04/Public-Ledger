@@ -1,0 +1,3391 @@
+{
+ "about": "The state legislature bills this person sponsored or cosponsored, with their votes on them, from Open States and LegiScan as the local refresh collected them. Written by npm run state:export (scripts/export-state-records.mjs); matched to the alignment questions with npm run state:acts.",
+ "person": "ford",
+ "name": "La Shawn Ford",
+ "built": "2026-11-26",
+ "counts": {
+  "bills": 200,
+  "votes": 116
+ },
+ "bills": [
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3526",
+   "title": "MOBILE HOME RENT CAP",
+   "role": "cosponsor",
+   "date": "2026-11-24",
+   "url": "https://openstates.org/il/bills/104th/HB3526/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3526-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 1107",
+   "title": "CONGRATS-RUBY LEE GLASS",
+   "role": "sponsor",
+   "date": "2026-11-24",
+   "url": "https://openstates.org/il/bills/104th/HR1107/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR1107-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5513",
+   "title": "HYPERSCALE DATA CENTERS",
+   "role": "cosponsor",
+   "date": "2026-11-23",
+   "url": "https://openstates.org/il/bills/104th/HB5513/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5513-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2565",
+   "title": "UNEMPLOYMENT INS-LABOR DISPUTE",
+   "role": "cosponsor",
+   "date": "2026-11-20",
+   "url": "https://openstates.org/il/bills/104th/HB2565/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2565-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 895",
+   "title": "U OF I MEMORIAL STADIUM NAME",
+   "role": "cosponsor",
+   "date": "2026-11-20",
+   "url": "https://openstates.org/il/bills/104th/HR895/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR895-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5198",
+   "title": "AFFORDABLE HOUSING-CILAS",
+   "role": "cosponsor",
+   "date": "2026-11-19",
+   "url": "https://openstates.org/il/bills/104th/HB5198/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-15",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5198-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 1093",
+   "title": "URGES-HAROLD WASHINGTON STATUE",
+   "role": "sponsor",
+   "date": "2026-11-18",
+   "url": "https://openstates.org/il/bills/104th/HR1093/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR1093-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1927",
+   "title": "CONSERVATION-OPEN SPACE FUND",
+   "role": "cosponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HB1927/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1927-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3462",
+   "title": "DFPR-CRIMINAL CONVICTIONS",
+   "role": "cosponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HB3462/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3462-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5812",
+   "title": "$SOS-COSMETOLOGY CIVICS",
+   "role": "sponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HB5812/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5812-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5815",
+   "title": "CANNABIS-IL FREEDOM FUND",
+   "role": "sponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HB5815/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5815-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 1022",
+   "title": "MEMORIAL-JACQUELINE CHAPPELL",
+   "role": "sponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HR1022/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR1022-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 1053",
+   "title": "COMMENDS-ENOCH MUHAMMAD",
+   "role": "sponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HR1053/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR1053-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 1054",
+   "title": "CELEBRATE-WORLD POLIO DAY",
+   "role": "sponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HR1054/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR1054-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 1069",
+   "title": "MEMORIAL-DJ SAM CHATMAN",
+   "role": "sponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HR1069/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR1069-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 972",
+   "title": "MEMORIAL-SPENCER LEAK JR.",
+   "role": "cosponsor",
+   "date": "2026-11-17",
+   "url": "https://openstates.org/il/bills/104th/HR972/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR972-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4443",
+   "title": "ILLINOIS FUTURE FUND",
+   "role": "sponsor",
+   "date": "2026-11-05",
+   "url": "https://openstates.org/il/bills/104th/HB4443/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4443-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4773",
+   "title": "CLIMATE CHANGE SUPERFUND",
+   "role": "cosponsor",
+   "date": "2026-10-23",
+   "url": "https://openstates.org/il/bills/104th/HB4773/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4773-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 1937",
+   "title": "PENSION CODE-VARIOUS",
+   "role": "cosponsor",
+   "date": "2026-10-20",
+   "url": "https://openstates.org/il/bills/104th/SB1937/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-SB1937-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4279",
+   "title": "PASSENGER RAIL PLANNING ACT",
+   "role": "cosponsor",
+   "date": "2026-10-06",
+   "url": "https://openstates.org/il/bills/104th/HB4279/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4279-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1303",
+   "title": "KRATOM CONSUMER PROTECTION",
+   "role": "cosponsor",
+   "date": "2026-09-30",
+   "url": "https://openstates.org/il/bills/104th/HB1303/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1303-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3320",
+   "title": "RIFL ACT",
+   "role": "cosponsor",
+   "date": "2026-09-30",
+   "url": "https://openstates.org/il/bills/104th/HB3320/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3320-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4701",
+   "title": "LIMITATIONS FACILITY FEES ACT",
+   "role": "cosponsor",
+   "date": "2026-09-03",
+   "url": "https://openstates.org/il/bills/104th/HB4701/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4701-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 3048",
+   "title": "DOMESTIC VIOLENCE-LETHALITY",
+   "role": "cosponsor",
+   "date": "2026-08-18",
+   "url": "https://openstates.org/il/bills/104th/SB3048/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-21",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB3048-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2371",
+   "title": "DENTAL INSURANCE ASSIGNABILITY",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/HB2371/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-31",
+     "motion": "Concurrence, Amendment 2",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-05-31",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2371-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3751",
+   "title": "DCEO-EMPLOY SOCIAL ENTERPRISE",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/HB3751/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-09",
+     "motion": "Motion",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3751-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4327",
+   "title": "AUDITOR GENERAL-340B AUDIT",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/HB4327/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-28",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-05-31",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4327-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5090",
+   "title": "PROCUREMENT-CONSTRUCTION",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/HB5090/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-06-01",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-06-01",
+     "motion": "Concurrence, Amendment 2",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-04-17",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5090-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 3325",
+   "title": "MENOPAUSE CONTINUING ED COURSE",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/SB3325/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-21",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB3325-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 3565",
+   "title": "PUB AID-TOWNSHIPS",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/SB3565/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-29",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB3565-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 3772",
+   "title": "EPA-ENVIRONMENTAL JUSTICE",
+   "role": "cosponsor",
+   "date": "2026-08-07",
+   "url": "https://openstates.org/il/bills/104th/SB3772/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-30",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB3772-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4687",
+   "title": "REPEAL-LOAN DEFAULT ACT",
+   "role": "sponsor",
+   "date": "2026-07-31",
+   "url": "https://openstates.org/il/bills/104th/HB4687/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-14",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4687-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 3291",
+   "title": "WILL DEPOSITORY-CIRCUIT CLERK",
+   "role": "cosponsor",
+   "date": "2026-07-31",
+   "url": "https://openstates.org/il/bills/104th/SB3291/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-22",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB3291-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4323",
+   "title": "COMMEMORATIVE DAY-EMMETT TILL",
+   "role": "cosponsor",
+   "date": "2026-07-23",
+   "url": "https://openstates.org/il/bills/104th/HB4323/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4323-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4339",
+   "title": "SCH CD-HIGH SCH-REGISTER VOTER",
+   "role": "cosponsor",
+   "date": "2026-07-20",
+   "url": "https://openstates.org/il/bills/104th/HB4339/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4339-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3409",
+   "title": "COSMETIC PRODUCTS ACT",
+   "role": "cosponsor",
+   "date": "2026-07-10",
+   "url": "https://openstates.org/il/bills/104th/HB3409/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-29",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3409-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3772",
+   "title": "SCH CD-SUSPENSION/EXPULSION",
+   "role": "cosponsor",
+   "date": "2026-07-10",
+   "url": "https://openstates.org/il/bills/104th/HB3772/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-30",
+     "motion": "Concurrence, Amendment 2",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-05-30",
+     "motion": "Concurrence, Amendment 4",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3772-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5225",
+   "title": "AUTISM SPECTRUM-DIAGNOSIS",
+   "role": "cosponsor",
+   "date": "2026-07-10",
+   "url": "https://openstates.org/il/bills/104th/HB5225/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-16",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    },
+    {
+     "date": "2026-05-27",
+     "motion": "Concurrence, Amendment 1",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5225-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 315",
+   "title": "BUSINESS-TECH",
+   "role": "cosponsor",
+   "date": "2026-07-06",
+   "url": "https://openstates.org/il/bills/104th/SB315/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-27",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB315-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3798",
+   "title": "$ICJIA-GRANT CHRC",
+   "role": "cosponsor",
+   "date": "2026-07-02",
+   "url": "https://openstates.org/il/bills/104th/HB3798/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3798-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 1486",
+   "title": "CONSUMER FRAUD-FEE DISCLOSURE",
+   "role": "cosponsor",
+   "date": "2026-07-02",
+   "url": "https://openstates.org/il/bills/104th/SB1486/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-19",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB1486-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 3229",
+   "title": "EPA-REPEAL ENVIR LAB CERT COMM",
+   "role": "cosponsor",
+   "date": "2026-07-02",
+   "url": "https://openstates.org/il/bills/104th/SB3229/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-06-01",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB3229-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4248",
+   "title": "ALGORITHMIC PRICE TRANSPARENCY",
+   "role": "cosponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HB4248/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-22",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4248-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4484",
+   "title": "$DCEO-NEIGHBORHOOD HOUSING",
+   "role": "cosponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HB4484/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4484-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4568",
+   "title": "$DHS-HOME ILLINOIS PROGRAM",
+   "role": "cosponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HB4568/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4568-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5094",
+   "title": "$DHS-PRETRIAL SUCCESS",
+   "role": "cosponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HB5094/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5094-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5573",
+   "title": "$ICCB-COM COL ECONOMIC EMPOWER",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HB5573/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5573-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HJRCA 21",
+   "title": "CONAMEND-REVENUE",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HJRCA21/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-21",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HJRCA21-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 158",
+   "title": "AUDIT-340B PROGRAM",
+   "role": "cosponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR158/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR158-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 565",
+   "title": "IEMA-OHS ERPS REGULATIONS",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR565/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR565-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 929",
+   "title": "IDR-PROPERTY TAX STUDY",
+   "role": "sponsor",
+   "date": "2026-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR929/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR929-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3460",
+   "title": "COSMETOLOGY/BARBER-APPRENTICES",
+   "role": "cosponsor",
+   "date": "2026-06-26",
+   "url": "https://openstates.org/il/bills/104th/HB3460/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-16",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3460-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4277",
+   "title": "NOTARIES-APPLICATION BY FELON",
+   "role": "cosponsor",
+   "date": "2026-06-26",
+   "url": "https://openstates.org/il/bills/104th/HB4277/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-14",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4277-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 1531",
+   "title": "DISPOSABLE FOOD CONTAINER ACT",
+   "role": "cosponsor",
+   "date": "2026-06-02",
+   "url": "https://openstates.org/il/bills/104th/SB1531/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-SB1531-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4283",
+   "title": "1ST-GENERATION HOMEBUYER LOANS",
+   "role": "cosponsor",
+   "date": "2026-05-31",
+   "url": "https://openstates.org/il/bills/104th/HB4283/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4283-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4894",
+   "title": "DIGITAL AD TAX ACT",
+   "role": "cosponsor",
+   "date": "2026-05-30",
+   "url": "https://openstates.org/il/bills/104th/HB4894/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4894-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5011",
+   "title": "MUNI CD-POLICE EVALUATION",
+   "role": "cosponsor",
+   "date": "2026-05-30",
+   "url": "https://openstates.org/il/bills/104th/HB5011/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5011-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5125",
+   "title": "REVENUE-CREDITS-DEDUCTIONS",
+   "role": "cosponsor",
+   "date": "2026-05-30",
+   "url": "https://openstates.org/il/bills/104th/HB5125/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5125-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 551",
+   "title": "GUN VIOLENCE-PREVENT",
+   "role": "sponsor",
+   "date": "2026-05-30",
+   "url": "https://openstates.org/il/bills/104th/HR551/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR551-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5091",
+   "title": "PERMANENT PUNISHMENT REVIEW",
+   "role": "cosponsor",
+   "date": "2026-05-29",
+   "url": "https://openstates.org/il/bills/104th/HB5091/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-15",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5091-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 744",
+   "title": "REGULATION-TECH",
+   "role": "cosponsor",
+   "date": "2026-05-29",
+   "url": "https://openstates.org/il/bills/104th/HB744/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-26",
+     "motion": "Third Reading, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB744-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 713",
+   "title": "PREVENTION WEEK",
+   "role": "cosponsor",
+   "date": "2026-05-29",
+   "url": "https://openstates.org/il/bills/104th/HR713/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-21",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR713-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4662",
+   "title": "AGING-IN-HOME SERVICES-RATES",
+   "role": "cosponsor",
+   "date": "2026-05-28",
+   "url": "https://openstates.org/il/bills/104th/HB4662/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4662-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4743",
+   "title": "TRANSPORT NETWORK LABOR",
+   "role": "cosponsor",
+   "date": "2026-05-28",
+   "url": "https://openstates.org/il/bills/104th/HB4743/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4743-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4838",
+   "title": "RENEWABLE FUELS PROGRAM",
+   "role": "cosponsor",
+   "date": "2026-05-28",
+   "url": "https://openstates.org/il/bills/104th/HB4838/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4838-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5060",
+   "title": "MEDICAID ACCESS ADJUSTMENT",
+   "role": "cosponsor",
+   "date": "2026-05-27",
+   "url": "https://openstates.org/il/bills/104th/HB5060/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5060-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 624",
+   "title": "HOUSING-TECH",
+   "role": "cosponsor",
+   "date": "2026-05-27",
+   "url": "https://openstates.org/il/bills/104th/HB624/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-17",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB624-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4922",
+   "title": "EMERGING FARMER GRANT PROGRAM",
+   "role": "cosponsor",
+   "date": "2026-05-26",
+   "url": "https://openstates.org/il/bills/104th/HB4922/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-17",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4922-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5318",
+   "title": "INC TAX-COMBINED REPORTING",
+   "role": "cosponsor",
+   "date": "2026-05-25",
+   "url": "https://openstates.org/il/bills/104th/HB5318/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5318-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5745",
+   "title": "$DCEO-COMMUNITY DESK",
+   "role": "cosponsor",
+   "date": "2026-05-25",
+   "url": "https://openstates.org/il/bills/104th/HB5745/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5745-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5748",
+   "title": "$DCEO-CLEAN ENERGY JOBS",
+   "role": "cosponsor",
+   "date": "2026-05-25",
+   "url": "https://openstates.org/il/bills/104th/HB5748/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5748-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 211",
+   "title": "BENIN BRONZES-REPATRIATION",
+   "role": "cosponsor",
+   "date": "2026-05-25",
+   "url": "https://openstates.org/il/bills/104th/HR211/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR211-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3652",
+   "title": "FUEL GAS DETECTOR ACT",
+   "role": "cosponsor",
+   "date": "2026-05-22",
+   "url": "https://openstates.org/il/bills/104th/HB3652/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3652-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4261",
+   "title": "LIBRARIES-GRANTS",
+   "role": "cosponsor",
+   "date": "2026-05-22",
+   "url": "https://openstates.org/il/bills/104th/HB4261/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4261-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5215",
+   "title": "MARK-TO-MARKET TAX ACT",
+   "role": "cosponsor",
+   "date": "2026-05-22",
+   "url": "https://openstates.org/il/bills/104th/HB5215/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5215-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5486",
+   "title": "STUDY-GENEALOGIC AFFAIR OFFICE",
+   "role": "cosponsor",
+   "date": "2026-05-22",
+   "url": "https://openstates.org/il/bills/104th/HB5486/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-05-06",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5486-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1819",
+   "title": "SMALL BUSINESS TAX CREDIT",
+   "role": "cosponsor",
+   "date": "2026-05-21",
+   "url": "https://openstates.org/il/bills/104th/HB1819/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1819-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5425",
+   "title": "NATURAL ORG REDUCE REG-ACT",
+   "role": "cosponsor",
+   "date": "2026-05-21",
+   "url": "https://openstates.org/il/bills/104th/HB5425/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-17",
+     "motion": "Third Reading",
+     "option": "excused",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB5425-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5037",
+   "title": "FIXING HIGHER ED FUNDING ACT",
+   "role": "cosponsor",
+   "date": "2026-05-20",
+   "url": "https://openstates.org/il/bills/104th/HB5037/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5037-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4207",
+   "title": "INS-HEALTH/CORONARY SCAN",
+   "role": "cosponsor",
+   "date": "2026-05-19",
+   "url": "https://openstates.org/il/bills/104th/HB4207/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-14",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4207-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5188",
+   "title": "IDPH-COMMUNITY HOSPITAL",
+   "role": "cosponsor",
+   "date": "2026-05-18",
+   "url": "https://openstates.org/il/bills/104th/HB5188/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5188-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3596",
+   "title": "WETLANDS PROTECTION ACT",
+   "role": "cosponsor",
+   "date": "2026-05-15",
+   "url": "https://openstates.org/il/bills/104th/HB3596/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3596-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "SB 2772",
+   "title": "PSILOCYBIN ADVISORY BOARD",
+   "role": "cosponsor",
+   "date": "2026-05-15",
+   "url": "https://openstates.org/il/bills/104th/SB2772/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-SB2772-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 679",
+   "title": "MARQUETTE PARK MARCH 60TH",
+   "role": "cosponsor",
+   "date": "2026-05-14",
+   "url": "https://openstates.org/il/bills/104th/HR679/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR679-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3512",
+   "title": "HOSPITAL WORKER STAFF & SAFETY",
+   "role": "cosponsor",
+   "date": "2026-05-13",
+   "url": "https://openstates.org/il/bills/104th/HB3512/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3512-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5154",
+   "title": "ELEC CD-FINANCIAL DISCLOSURES",
+   "role": "cosponsor",
+   "date": "2026-05-06",
+   "url": "https://openstates.org/il/bills/104th/HB5154/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5154-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1429",
+   "title": "BILL OF RIGHTS-HOMELESS",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB1429/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1429-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1443",
+   "title": "HEALTH CARE AVAILABILITY",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB1443/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1443-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1611",
+   "title": "CRIM PRO-WARRANT REQUIREMENTS",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB1611/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1611-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1811",
+   "title": "CONTROLLED SUB-PMP-INTERSTATE",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB1811/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1811-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2929",
+   "title": "DHS-OVERDOSE PREVENTION SITES",
+   "role": "sponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB2929/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-08",
+     "motion": "Do Pass, Amendment 2",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-13",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2026-03-26",
+     "motion": "Do Pass, Amendment 4",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2929-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3773",
+   "title": "CD CORR-FREE PHONE CALLS",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB3773/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3773-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4039",
+   "title": "HOPE ACT",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB4039/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-03-26",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4039-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5503",
+   "title": "SCH CD-ADULT WORKFORCE DIPLOMA",
+   "role": "cosponsor",
+   "date": "2026-04-17",
+   "url": "https://openstates.org/il/bills/104th/HB5503/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5503-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4427",
+   "title": "FINANCE-CANNABIS REGULATION",
+   "role": "cosponsor",
+   "date": "2026-04-14",
+   "url": "https://openstates.org/il/bills/104th/HB4427/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4427-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4722",
+   "title": "WILL DEPOSITORY-CIRCUIT CLERK",
+   "role": "cosponsor",
+   "date": "2026-04-14",
+   "url": "https://openstates.org/il/bills/104th/HB4722/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-04-14",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB4722-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4236",
+   "title": "FELONY CONVICTION-PUB OFFICE",
+   "role": "cosponsor",
+   "date": "2026-04-09",
+   "url": "https://openstates.org/il/bills/104th/HB4236/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4236-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5326",
+   "title": "$DCEO-FOREST PRESERVE",
+   "role": "cosponsor",
+   "date": "2026-04-08",
+   "url": "https://openstates.org/il/bills/104th/HB5326/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5326-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1288",
+   "title": "ELECTED PUBLIC OFFICE-ELIGIBLE",
+   "role": "sponsor",
+   "date": "2026-03-30",
+   "url": "https://openstates.org/il/bills/104th/HB1288/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1288-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2",
+   "title": "ELEC CODE-INCARCERATED BAN",
+   "role": "sponsor",
+   "date": "2026-03-30",
+   "url": "https://openstates.org/il/bills/104th/HB2/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1143",
+   "title": "ILLINOIS CURE ACT",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB1143/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1143-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1227",
+   "title": "ENSLAVEMENT REDRESS ACT",
+   "role": "cosponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB1227/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1227-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1369",
+   "title": "INC TX-CAREGIVERS",
+   "role": "cosponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB1369/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1369-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2715",
+   "title": "ACUPUNCTURE-5-NEEDLE PROTOCOL",
+   "role": "cosponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB2715/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2715-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2837",
+   "title": "PEN CD-CHI FIREFIGHTER-SALARY",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB2837/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2837-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 2992",
+   "title": "HOPE PILOT PROGRAM",
+   "role": "cosponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB2992/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2992-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 38",
+   "title": "CRIM CD-MOB ACTION-STREET RACE",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB38/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB38-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 3998",
+   "title": "MEDICAID-ELIGIBILITY",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB3998/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3998-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4515",
+   "title": "CANNABIS-COMM COLL VOC PROG",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB4515/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4515-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4801",
+   "title": "PROP TX-LOW-INCOME SENIORS",
+   "role": "cosponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB4801/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4801-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5371",
+   "title": "PROP TX-PTELL CHICAGO",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB5371/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5371-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5372",
+   "title": "PROP TX-CERT OF PURCHASE",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB5372/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5372-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 5570",
+   "title": "REVENUE-PROP TX REPLACE",
+   "role": "sponsor",
+   "date": "2026-03-27",
+   "url": "https://openstates.org/il/bills/104th/HB5570/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5570-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1607",
+   "title": "ELIMINATE FOOD DESERTS",
+   "role": "cosponsor",
+   "date": "2026-03-17",
+   "url": "https://openstates.org/il/bills/104th/HB1607/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-10-28",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-07",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1607-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 696",
+   "title": "CONDEMNS-PRESIDENT TRUMP POST",
+   "role": "cosponsor",
+   "date": "2026-02-25",
+   "url": "https://openstates.org/il/bills/104th/HR696/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-02-25",
+     "motion": "Third Reading",
+     "option": "absent",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR696-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 671",
+   "title": "HONORS-REV. JESSE JACKSON",
+   "role": "cosponsor",
+   "date": "2026-02-17",
+   "url": "https://openstates.org/il/bills/104th/HR671/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR671-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 621",
+   "title": "CHILDCARE FUNDS-CUTS",
+   "role": "cosponsor",
+   "date": "2026-01-21",
+   "url": "https://openstates.org/il/bills/104th/HR621/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-01-21",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR621-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 623",
+   "title": "DJT-SUSPEND TARIFF SCHEME",
+   "role": "cosponsor",
+   "date": "2026-01-21",
+   "url": "https://openstates.org/il/bills/104th/HR623/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-01-21",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR623-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HR 624",
+   "title": "DJT-ACQUIRING LAND OVERSEAS",
+   "role": "cosponsor",
+   "date": "2026-01-21",
+   "url": "https://openstates.org/il/bills/104th/HR624/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2026-01-21",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR624-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 4451",
+   "title": "GOVERNMENT-TECH",
+   "role": "sponsor",
+   "date": "2026-01-20",
+   "url": "https://openstates.org/il/bills/104th/HB4451/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4451-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2026",
+   "identifier": "HB 1836",
+   "title": "EAVESDROP-STATEWIDE GRAND JURY",
+   "role": "cosponsor",
+   "date": "2026-01-16",
+   "url": "https://openstates.org/il/bills/104th/HB1836/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1836-2026"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 762",
+   "title": "REGULATION-TECH",
+   "role": "cosponsor",
+   "date": "2025-12-15",
+   "url": "https://openstates.org/il/bills/104th/HB762/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-10-28",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB762-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1085",
+   "title": "INS CD-MENTAL HEALTH PARITY",
+   "role": "cosponsor",
+   "date": "2025-12-12",
+   "url": "https://openstates.org/il/bills/104th/HB1085/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 3",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-07",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1085-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 520",
+   "title": "END GOVT. SHUTDOWN",
+   "role": "cosponsor",
+   "date": "2025-12-01",
+   "url": "https://openstates.org/il/bills/104th/HR520/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR520-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 543",
+   "title": "SNAP-TRUMP ADMINISTRATION",
+   "role": "cosponsor",
+   "date": "2025-12-01",
+   "url": "https://openstates.org/il/bills/104th/HR543/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR543-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1437",
+   "title": "NON-PROFIT INVESTMENT POOL",
+   "role": "cosponsor",
+   "date": "2025-11-21",
+   "url": "https://openstates.org/il/bills/104th/HB1437/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-31",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 4",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1437-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2394",
+   "title": "VEH CD-WEIGHT LIMIT EXEMPTION",
+   "role": "cosponsor",
+   "date": "2025-11-21",
+   "url": "https://openstates.org/il/bills/104th/HB2394/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2394-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3005",
+   "title": "IDOT-MECHANIC WORKFORCE GOALS",
+   "role": "cosponsor",
+   "date": "2025-10-30",
+   "url": "https://openstates.org/il/bills/104th/HB3005/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-10-30",
+     "motion": "Do Pass, Amendment 4",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Do Pass, Amendment 3",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Do Pass, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-12",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 3",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-10-30",
+     "motion": "Concurrence, Amendment 4",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3005-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 491",
+   "title": "MICHAEL JORDAN DAY",
+   "role": "cosponsor",
+   "date": "2025-10-30",
+   "url": "https://openstates.org/il/bills/104th/HR491/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR491-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 246",
+   "title": "NON-PROFIT INVESTMENT POOL",
+   "role": "cosponsor",
+   "date": "2025-10-29",
+   "url": "https://openstates.org/il/bills/104th/SB246/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-28",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB246-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 1784",
+   "title": "JUV CT-COMMITMENT-AGE",
+   "role": "cosponsor",
+   "date": "2025-10-09",
+   "url": "https://openstates.org/il/bills/104th/SB1784/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-30",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB1784-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3356",
+   "title": "HAIR BRAIDING LICENSURE REPEAL",
+   "role": "cosponsor",
+   "date": "2025-09-02",
+   "url": "https://openstates.org/il/bills/104th/HB3356/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-07",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3356-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 1519",
+   "title": "SCH CD-REFER LAW ENFORCEMENT",
+   "role": "sponsor",
+   "date": "2025-08-20",
+   "url": "https://openstates.org/il/bills/104th/SB1519/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-28",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB1519-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1224",
+   "title": "GOVT CONTRACT RETAINAGE",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/HB1224/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-06-01",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-06-01",
+     "motion": "Concurrence, Amendment 3",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1224-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1628",
+   "title": "SEIZURE & FORFEITURE REPORT",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/HB1628/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1628-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1710",
+   "title": "CRIMINAL JUSTICE REFORM",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/HB1710/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1710-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2425",
+   "title": "INS CD-DISCRIMINATION-FELONY",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/HB2425/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2425-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 189",
+   "title": "SWIMMING POOL-EQUIPMENT",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/SB189/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-23",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB189-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 24",
+   "title": "MISSING PERSONS IDENTIFICATION",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/SB24/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-31",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB24-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 637",
+   "title": "LOCAL GOVERNMENT-TECH",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/SB637/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-29",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB637-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 849",
+   "title": "TRANSPORTATION-TECH",
+   "role": "cosponsor",
+   "date": "2025-08-15",
+   "url": "https://openstates.org/il/bills/104th/SB849/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-30",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB849-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 1953",
+   "title": "POLICE RECORDS & SHERIFF BOARD",
+   "role": "cosponsor",
+   "date": "2025-08-12",
+   "url": "https://openstates.org/il/bills/104th/SB1953/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-15",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB1953-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1706",
+   "title": "NURSE LICENSURE COMPACT",
+   "role": "cosponsor",
+   "date": "2025-08-06",
+   "url": "https://openstates.org/il/bills/104th/HB1706/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1706-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1910",
+   "title": "LIBRARIES-OPIOID ANTAGONISTS",
+   "role": "cosponsor",
+   "date": "2025-08-01",
+   "url": "https://openstates.org/il/bills/104th/HB1910/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1910-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 1723",
+   "title": "EPA-SOLE-SOURCE AQUIFER",
+   "role": "cosponsor",
+   "date": "2025-08-01",
+   "url": "https://openstates.org/il/bills/104th/SB1723/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-20",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB1723-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 8",
+   "title": "SAFE GUN STORAGE",
+   "role": "cosponsor",
+   "date": "2025-07-28",
+   "url": "https://openstates.org/il/bills/104th/SB8/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-28",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB8-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "SB 1563",
+   "title": "EVICTION-CRIMINAL TRESSPASS",
+   "role": "cosponsor",
+   "date": "2025-07-21",
+   "url": "https://openstates.org/il/bills/104th/SB1563/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-21",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-SB1563-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HJR 24",
+   "title": "CHILD WELFARE LIAB TASK FORCE",
+   "role": "cosponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HJR24/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HJR24-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 171",
+   "title": "MEDICAID FUNDING ACA",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR171/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR171-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 218",
+   "title": "RECOGNIZES-AMARA HARRIS",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR218/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR218-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 248",
+   "title": "ILLINOIS CITIZENS REENTRY DAY",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR248/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-01",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR248-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 252",
+   "title": "LANDLORD-TENANT TASK FORCE",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR252/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-30",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR252-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 273",
+   "title": "MELANOMA AWARENESS & EDUCATION",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR273/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR273-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 291",
+   "title": "CHILD VACCINATIONS-SUPPORT",
+   "role": "cosponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR291/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR291-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 316",
+   "title": "URGES-DSP HOURS RESTORATION",
+   "role": "cosponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR316/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR316-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 57",
+   "title": "LIFEWAY FOODS-ACQUISITION",
+   "role": "sponsor",
+   "date": "2025-07-01",
+   "url": "https://openstates.org/il/bills/104th/HR57/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR57-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3339",
+   "title": "ROAD CAMERA-HUMAN TRAFFICKING",
+   "role": "cosponsor",
+   "date": "2025-06-30",
+   "url": "https://openstates.org/il/bills/104th/HB3339/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-31",
+     "motion": "Concurrence, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3339-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2502",
+   "title": "SCH CD-REFER LAW ENFORCEMENT",
+   "role": "sponsor",
+   "date": "2025-06-24",
+   "url": "https://openstates.org/il/bills/104th/HB2502/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2502-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2435",
+   "title": "TELE SOLICITATION-AUTO DIALER",
+   "role": "cosponsor",
+   "date": "2025-06-04",
+   "url": "https://openstates.org/il/bills/104th/HB2435/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2435-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2757",
+   "title": "REVITALIZE DOWNTOWN CHICAGO",
+   "role": "cosponsor",
+   "date": "2025-06-02",
+   "url": "https://openstates.org/il/bills/104th/HB2757/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-07",
+     "motion": "Do Pass, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-03-19",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-07",
+     "motion": "Do Pass, Amendment 2",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2757-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2927",
+   "title": "INCLUSIVE HISTORY ACT",
+   "role": "sponsor",
+   "date": "2025-06-02",
+   "url": "https://openstates.org/il/bills/104th/HB2927/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2927-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3067",
+   "title": "SMALL FARMERS RESTORATION PRGM",
+   "role": "cosponsor",
+   "date": "2025-06-02",
+   "url": "https://openstates.org/il/bills/104th/HB3067/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3067-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3650",
+   "title": "UTIL-2050 HEAT DECARBONIZATION",
+   "role": "cosponsor",
+   "date": "2025-06-02",
+   "url": "https://openstates.org/il/bills/104th/HB3650/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3650-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 170",
+   "title": "EQUAL PAY DAY",
+   "role": "cosponsor",
+   "date": "2025-05-31",
+   "url": "https://openstates.org/il/bills/104th/HR170/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-07",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-05-31",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR170-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 246",
+   "title": "SIGMA/ZETA DAY",
+   "role": "cosponsor",
+   "date": "2025-05-31",
+   "url": "https://openstates.org/il/bills/104th/HR246/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR246-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 39",
+   "title": "AUTISM AWARENESS MONTH",
+   "role": "cosponsor",
+   "date": "2025-05-31",
+   "url": "https://openstates.org/il/bills/104th/HR39/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HR39-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1330",
+   "title": "COMMUNITY CARE PROG-WORKER PAY",
+   "role": "cosponsor",
+   "date": "2025-05-30",
+   "url": "https://openstates.org/il/bills/104th/HB1330/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1330-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3996",
+   "title": "$DHS GRANT-IL PRISON PROJECT",
+   "role": "cosponsor",
+   "date": "2025-05-29",
+   "url": "https://openstates.org/il/bills/104th/HB3996/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3996-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HJR 40",
+   "title": "COST OF LIVING TASK FORCE",
+   "role": "cosponsor",
+   "date": "2025-05-29",
+   "url": "https://openstates.org/il/bills/104th/HJR40/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-29",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HJR40-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HR 391",
+   "title": "OPPOSE-TRUMP HEALTHCARE CUTS",
+   "role": "cosponsor",
+   "date": "2025-05-29",
+   "url": "https://openstates.org/il/bills/104th/HR391/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-05-29",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HR391-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2696",
+   "title": "SCH CD/SOPPA-COVERED INFO",
+   "role": "cosponsor",
+   "date": "2025-05-21",
+   "url": "https://openstates.org/il/bills/104th/HB2696/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-10",
+     "motion": "Third Reading",
+     "option": "not voting",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2696-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3491",
+   "title": "REENTRY INTO THE WORKFORCE",
+   "role": "cosponsor",
+   "date": "2025-05-20",
+   "url": "https://openstates.org/il/bills/104th/HB3491/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3491-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2750",
+   "title": "SNAP E&T PGRAM-PUBLIC COLLEGE",
+   "role": "cosponsor",
+   "date": "2025-05-16",
+   "url": "https://openstates.org/il/bills/104th/HB2750/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2750-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2507",
+   "title": "MEDICAID-NURSING PAYMENTS",
+   "role": "cosponsor",
+   "date": "2025-04-23",
+   "url": "https://openstates.org/il/bills/104th/HB2507/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2507-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3466",
+   "title": "PROP TX-AFFORDABLE HOUSING",
+   "role": "cosponsor",
+   "date": "2025-04-22",
+   "url": "https://openstates.org/il/bills/104th/HB3466/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3466-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2561",
+   "title": "FREEDOM TO WORK-HEALTH CARE",
+   "role": "cosponsor",
+   "date": "2025-04-11",
+   "url": "https://openstates.org/il/bills/104th/HB2561/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-03-19",
+     "motion": "Do Pass",
+     "option": "yes",
+     "result": "pass"
+    },
+    {
+     "date": "2025-04-07",
+     "motion": "Do Pass, Amendment 1",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB2561-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2727",
+   "title": "VEH CD-TOWING",
+   "role": "sponsor",
+   "date": "2025-04-11",
+   "url": "https://openstates.org/il/bills/104th/HB2727/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2727-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2933",
+   "title": "AG-DROUGHT & CLIMATE-STUDY",
+   "role": "cosponsor",
+   "date": "2025-04-11",
+   "url": "https://openstates.org/il/bills/104th/HB2933/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2933-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 473",
+   "title": "EDUCATION-TECH",
+   "role": "cosponsor",
+   "date": "2025-04-11",
+   "url": "https://openstates.org/il/bills/104th/HB473/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB473-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1785",
+   "title": "MEDICAID-STRIVE CALCULATIONS",
+   "role": "cosponsor",
+   "date": "2025-04-10",
+   "url": "https://openstates.org/il/bills/104th/HB1785/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1785-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3037",
+   "title": "RIGHT TO PLAY ACT",
+   "role": "cosponsor",
+   "date": "2025-04-10",
+   "url": "https://openstates.org/il/bills/104th/HB3037/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-09",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3037-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3606",
+   "title": "TOBACCO-ELECTRONIC CIGARETTE",
+   "role": "cosponsor",
+   "date": "2025-04-10",
+   "url": "https://openstates.org/il/bills/104th/HB3606/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3606-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3255",
+   "title": "PUBLIC SAFETY BENEFITS-SPOUSES",
+   "role": "cosponsor",
+   "date": "2025-04-09",
+   "url": "https://openstates.org/il/bills/104th/HB3255/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-08",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB3255-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1388",
+   "title": "GAMING BOARD ID CARDS",
+   "role": "cosponsor",
+   "date": "2025-04-07",
+   "url": "https://openstates.org/il/bills/104th/HB1388/",
+   "source": "Open States",
+   "votes": [
+    {
+     "date": "2025-04-07",
+     "motion": "Third Reading",
+     "option": "yes",
+     "result": "pass"
+    }
+   ],
+   "key": "IL-HB1388-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3651",
+   "title": "NEW OCCUPATION REGULATION",
+   "role": "cosponsor",
+   "date": "2025-04-07",
+   "url": "https://openstates.org/il/bills/104th/HB3651/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3651-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2468",
+   "title": "PHYSICIAN ASSISTANT PRACTICE",
+   "role": "cosponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB2468/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2468-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 2656",
+   "title": "CCAP-FEDERAL HOLIDAY PAYMENT",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB2656/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB2656-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3069",
+   "title": "NOTICES-ELECTRONIC PUBLICATION",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB3069/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3069-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3461",
+   "title": "REPEAL-LOAN DEFAULT ACT",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB3461/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3461-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3624",
+   "title": "CD CORR-DRUG DETECTION DOG",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB3624/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3624-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3714",
+   "title": "CD CORR-UNCONDITIONAL SENTENCE",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB3714/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3714-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3719",
+   "title": "LOCAL RECORDS-POLICE SCANNERS",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB3719/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3719-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 4",
+   "title": "MEDICAID-PHARMACY SERVICES",
+   "role": "sponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB4/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB4-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 70",
+   "title": "PROP TX-DISABILITIES",
+   "role": "cosponsor",
+   "date": "2025-03-21",
+   "url": "https://openstates.org/il/bills/104th/HB70/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB70-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 1",
+   "title": "HEMP CANNABINOIDS-MINORS",
+   "role": "sponsor",
+   "date": "2025-02-25",
+   "url": "https://openstates.org/il/bills/104th/HB1/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB1-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 3563",
+   "title": "WIND & SOLAR FACILITY DRAINAGE",
+   "role": "sponsor",
+   "date": "2025-02-18",
+   "url": "https://openstates.org/il/bills/104th/HB3563/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB3563-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 41",
+   "title": "ELEC CD-POST-CONVICTION VOTING",
+   "role": "sponsor",
+   "date": "2025-01-09",
+   "url": "https://openstates.org/il/bills/104th/HB41/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB41-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 5",
+   "title": "CD CORR<21 YRS-MITIGATION",
+   "role": "sponsor",
+   "date": "2025-01-09",
+   "url": "https://openstates.org/il/bills/104th/HB5/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB5-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 6",
+   "title": "BLIGHT MITIGATION ACT",
+   "role": "sponsor",
+   "date": "2025-01-09",
+   "url": "https://openstates.org/il/bills/104th/HB6/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB6-2025"
+  },
+  {
+   "state": "IL",
+   "session": "104th",
+   "year": "2025",
+   "identifier": "HB 7",
+   "title": "CRIM ID-EXPUNGEMENT",
+   "role": "sponsor",
+   "date": "2025-01-09",
+   "url": "https://openstates.org/il/bills/104th/HB7/",
+   "source": "Open States",
+   "votes": [],
+   "key": "IL-HB7-2025"
+  }
+ ]
+}
