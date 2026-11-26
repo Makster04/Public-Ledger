@@ -82,9 +82,12 @@ test('grade changes against a log of whole numbers: a score that only lost its r
   assert.deepEqual(gradeNews(before,now,'2026-11-17').map(x=>x.id),['a','b','c'],'a log in one decimal: every letter change counts');
 });
 
-test('site updates come from the README\'s "What\'s new" lines, after the presentation log, without maintenance lines',async()=>{
-  const {siteNews}=await import('../scripts/build-news.mjs');
-  const readme=`# X\n## What's new (November 2026)\n\n- **Nov. 25: Bills show their issues.** More text.\n- **Nov. 24: \`npm run x\` reads more.** Text. <!-- not news -->\n- **Nov. 18–19: Fixes.** Text.\n- **Nov. 17: Old one.** Text.\n## What refreshes\n- **Nov. 30: Not news.**`;
+test('site updates come from data/site-updates.md\'s dated lines, after the presentation log, without maintenance lines',async()=>{
+  const {siteNews,SITE_UPDATES}=await import('../scripts/build-news.mjs');
+  const real=siteNews(fs.readFileSync(new URL('../'+SITE_UPDATES,import.meta.url),'utf8'));
+  assert.ok(real.length>=20&&real.every(x=>/^2026-11-\d\d$/.test(x.date)),'the file\'s lines are read');
+  assert.ok(!/^## What's new/m.test(fs.readFileSync(new URL('../README.md',import.meta.url),'utf8')),'no longer in the README');
+  const readme=`# X\n## November 2026\n\n- **Nov. 25: Bills show their issues.** More text.\n- **Nov. 24: \`npm run x\` reads more.** Text. <!-- not news -->\n- **Nov. 18–19: Fixes.** Text.\n- **Nov. 17: Old one.** Text.\n## What refreshes\n- **Nov. 30: Not news.**`;
   assert.deepEqual(siteNews(readme,{after:'2026-11-17'}).map(x=>[x.date,x.headline,x.kind]),[['2026-11-25','Bills show their issues','site'],['2026-11-18','Fixes','site']]);
 });
 

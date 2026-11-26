@@ -6,9 +6,10 @@
 //             dated by the review
 //   lobby     a tracker's PAC checks to sitting members, from this cycle's FEC bulk files (pas2 and cm in .local/fec-bulk/):
 //             one item per PAC, date and amount, with every member who got that check
-//   site      a site update: each dated line of the README's "What's new" (its bold title is the headline), after the
-//             newest headline in public/score-presentation-log.json, which had them before (since Nov. 25, 2026); a line
-//             ending in <!-- not news --> is maintenance and is left out. Placed by its own date.
+//   site      a site update: each dated line of data/site-updates.md (its bold title is the headline), after the newest
+//             headline in public/score-presentation-log.json, which had them before (since Nov. 25, 2026; in the README's
+//             "What's new" until Nov. 26); a line ending in <!-- not news --> is maintenance and is left out. Placed by
+//             its own date.
 //   conflict  someone's Conflicts of Interest score (public/conflicts.json) newly given or moved since the last run, with
 //             the interested organizations behind it
 //   superpac  a tracker's own super PAC's spending for or against a candidate, from the cycle's independent-expenditure
@@ -109,12 +110,14 @@ export function superPacNews(records,{limit=NEWS_LIMIT.superpac,min=SUPER_PAC_MI
   return [...by.values()].map(o=>({...o,amount:Math.round(o.amount*100)/100})).filter(o=>o.amount>=min)
     .sort((a,b)=>b.date.localeCompare(a.date)||b.amount-a.amount).slice(0,limit);
 }
-// The README's "What's new" lines as site updates: "- **Nov. 25: Title.** text" under "## What's new (November 2026)".
+// data/site-updates.md's lines as site updates: "- **Nov. 25: Title.** text" under a month heading, "## November 2026"
+// (or the README's old "## What's new (November 2026)").
 const MONTH={jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
-export function siteNews(readme,{after=''}={}){
+export const SITE_UPDATES='data/site-updates.md';
+export function siteNews(text,{after=''}={}){
   const out=[];let year=null;
-  for(const line of String(readme||'').split('\n')){
-    const h=/^##\s+What.s new \((\w+) (\d{4})\)/.exec(line);if(h){year=Number(h[2]);continue;}
+  for(const line of String(text||'').split('\n')){
+    const h=/^##\s+(?:What.s new \()?([A-Z][a-z]+) (\d{4})\)?\s*$/.exec(line);if(h){year=Number(h[2]);continue;}
     if(/^## /.test(line)){year=null;continue;}
     const m=year&&/^- \*\*([A-Z][a-z]{2})[a-z]*\.? (\d{1,2})(?:[–-]\d{1,2})?: (.+?)\*\*/.exec(line);
     if(!m||/<!--\s*not news\s*-->/.test(line)||!MONTH[m[1].toLowerCase()])continue;
@@ -179,7 +182,7 @@ export async function writeNews({now=Date.now(),dir=process.env.FEC_BULK_DIR||pa
   }
   fresh.push(...promiseNews(readIf('data/promise-reviews.json')?.people,readIf('public/promises.json')?.people));
   const plog=readIf('public/score-presentation-log.json'),after=((plog?.entries||plog||[]).map(e=>e.date).sort().at(-1))||'';
-  try{fresh.push(...siteNews(fs.readFileSync(path.join(ROOT,'README.md'),'utf8'),{after}));}catch{}
+  try{fresh.push(...siteNews(fs.readFileSync(path.join(ROOT,SITE_UPDATES),'utf8'),{after}));}catch{}
   const coi=conflictNews(readIf('public/conflicts.json'),prev?.conflicts,today);fresh.push(...coi.items);
   const checks=await trackerChecks(dir,cycle);if(checks)fresh.push(...lobbyNews(checks));
   const ie=path.join(dir,`independent_expenditure_${cycle}.csv`);if(fs.existsSync(ie))fresh.push(...superPacNews(await readIeRecords(ie)));
