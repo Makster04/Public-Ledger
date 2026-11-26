@@ -19,7 +19,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES,SUPER_PACS} from './industries.js';
-import {winShare,versus,midtermYears,prevMidterm,hadMoney,SUPER_PAC_NAMES,FUNDED_CUTOFF,MIN_CANDIDATES} from './midterm-trackers.js';
+import {winShare,versus,midtermYears,prevMidterm,hadMoney,SUPER_PAC_NAMES,FUNDED_CUTOFF,MIN_CANDIDATES,trendColor,trendPoints} from './midterm-trackers.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {CLUB_KEYS,CLUB_LABEL,CLUB_RANGE,chamberCareer,routedStatus} from './career.js';
 import {trackerAboutHTML,trackerPanel as aboutPanel} from './tracker-about.js';
@@ -2539,7 +2539,8 @@ function midtermCardsHTML(d,year){
     const head=`<h3><span aria-hidden="true">${t.emoji}</span> ${esc(t.name)}</h3><span class="mt-kind">${funded?'Super PACs it funds':'Its own super PACs'}</span>`;
     if(!hadMoney(x))return `<article class="mt-card empty">${head}<p class="mt-why">${funded?`Its companies, their PACs and its trade groups gave nothing to a super PAC that spent in the ${y} midterms.`:`Its super PACs didn't spend in the ${y} midterms.`}</p></article>`;
     const w=winShare(x),vs=versus(w,P?winShare(P[t.key]):null,prev,hadMoney(P?.[t.key]));
-    const arrow=vs?.dir==='up'?'<span class="mt-arrow" aria-label="up">▲</span>':vs?.dir==='down'?'<span class="mt-arrow" aria-label="down">▼</span>':'';
+    // The arrow, greener or redder the more the share moved, with the points under it (approved 2026-11-26).
+    const arrow=vs?.dir==='up'||vs?.dir==='down'?`<span class="mt-trend" style="--mt-trend:${trendColor(vs.delta)}" role="img" aria-label="${vs.dir} ${Math.abs(vs.delta)} points from ${prev}"><span class="mt-arrow" aria-hidden="true">${vs.dir==='up'?'▲':'▼'}</span><small aria-hidden="true">${trendPoints(vs.delta)}</small></span>`:'';
     const backers=funded?'those super PACs':'they';
     const right=!w?`<div class="mt-pct none">—</div><div class="mt-cap">${funded?`No super PAC it gave ${cut} or more backed a candidate`:'Backed no candidate'}</div>`
       :w.few?`<div class="mt-pct none">—</div><div class="mt-cap">Too few candidates to say: ${backers} backed ${w.n}</div>`

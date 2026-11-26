@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import zlib from 'node:zlib';
 import {Readable} from 'node:stream';
 import {lastName,fecResults,siteResults,midtermTrackers,superPacSpending,giftOf,giftTracker,fundedMatchers,fundedTrackers,zipFirstEntry,MIDTERMS} from '../scripts/build-midterm-trackers.mjs';
-import {winShare,versus,midtermYears,prevMidterm,hadMoney,MIN_CANDIDATES,FUNDED_CUTOFF} from '../public/midterm-trackers.js';
+import {winShare,versus,midtermYears,prevMidterm,hadMoney,MIN_CANDIDATES,FUNDED_CUTOFF,trendColor,trendPoints,TREND_FULL} from '../public/midterm-trackers.js';
 import {TRACKER} from '../public/trackers.js';
 
 const read=f=>fs.readFileSync(new URL('../'+f,import.meta.url),'utf8');
@@ -68,7 +68,13 @@ test('the card: the share who won of the called races, at least 5 candidates, an
   assert.equal(hadMoney({for:0,against:0,gave:5}),true);assert.equal(hadMoney({for:0,against:0}),false);assert.equal(hadMoney(undefined),false);
   assert.equal(winShare({supported:{n:2,won:0,open:2}}),null);assert.equal(winShare(undefined),null);
   const now={pct:43},before={pct:78};
-  assert.deepEqual(versus(now,before,2022),{dir:'down',text:'Down from 78% in 2022'});
+  assert.deepEqual(versus(now,before,2022),{dir:'down',delta:-35,text:'Down from 78% in 2022'});
+  // The arrow: greener up, redder down, stronger the bigger the move; the points under it.
+  assert.equal(TREND_FULL,30);
+  assert.equal(trendColor(-35),'color-mix(in oklab, var(--crit) 100%, var(--ink-2))');
+  assert.equal(trendColor(3),'color-mix(in oklab, var(--good) 42%, var(--ink-2))');
+  assert.equal(trendColor(0),null);
+  assert.deepEqual([trendPoints(-35),trendPoints(12),trendPoints(1)],['−35 pts','+12 pts','+1 pt']);
   assert.equal(versus(before,now,2022).dir,'up');assert.equal(versus(now,now,2022).dir,'same');
   assert.deepEqual(versus(now,null,2022),{dir:'new',text:'New this midterm: none in 2022'});
   assert.equal(versus(now,before,null),null);
@@ -133,6 +139,7 @@ test('where the cards show: the top of the Super PACs page, before the cycle\'s 
   assert.match(app,/from '\.\/midterm-trackers\.js'/);
   assert.match(app,/<details class="mt-more"><summary><span class="kw-open"><\/span><\/summary>\$\{list\}<\/details>/,'Open at the bottom of each card lists its super PACs');
   assert.match(app,/'Super PACs it funds':'Its own super PACs'/);assert.match(app,/<h4>Super PACs it funded<\/h4>/);assert.match(app,/People who work for its companies gave/);
+  assert.match(app,/<span class="mt-trend" style="--mt-trend:\$\{trendColor\(vs\.delta\)\}"/,'the arrow takes its color from the size of the change');
   assert.match(css,/\.mt-sec \{ --mt-won: #9085e9; --mt-lost: #c98500;/);
   assert.equal(pkg.scripts['superpacs:midterms'],'node scripts/build-midterm-trackers.mjs');
   assert.match(read('scripts/build-corporate-pacs.mjs'),/writeMidtermTrackers\(\{years:\[Number\(cycle\)\],dir,refresh\}\)/);
