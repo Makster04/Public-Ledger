@@ -167,3 +167,19 @@ test('a Wayback Machine that stops answering: the run stops instead of waiting f
   assert.equal(retryable(new WaybackDown()),false);
   fs.rmSync(cache,{recursive:true,force:true});
 });
+
+test('--everyone adds every senator, House member and member-elect once, whoever has no campaign text first', async()=>{
+  const {campaignPeople}=await import('../scripts/collect-campaign-text.mjs');
+  const files={research:{members:[{id:'ossoff',name:'Jon Ossoff',chamber:'S'}],cands:[{id:'cand',name:'A Candidate'}]},
+    senate:{senators:[{id:'ossoff',name:'Jon Ossoff',class:2},{id:'warren',name:'Elizabeth Warren',class:1,since:'2013-01-03'}]},
+    house:{members:[{id:'quigley',name:'Mike Quigley',seat:'IL-5',since:'2009-04-07'}]},elect:{members:[{id:'carl',name:'Jerry Carl',seat:'AL-1',district:1,elect:true}]},
+    config:{people:[{id:'warren',campaignSite:'elizabethwarren.com'}]}};
+  assert.deepEqual(campaignPeople(files).map(p=>p.id),['ossoff','cand'],'the full profiles only, as before');
+  const all=campaignPeople(files,{everyone:true,has:id=>id==='ossoff'});
+  assert.deepEqual(all.map(p=>p.id),['cand','warren','quigley','carl','ossoff']);
+  const by=Object.fromEntries(all.map(p=>[p.id,p]));
+  assert.deepEqual([by.warren.chamber,by.warren.seat,by.warren.inOffice,by.warren.campaignSite],['S','Class 1',true,'elizabethwarren.com']);
+  assert.deepEqual([by.quigley.chamber,by.quigley.inOffice],['H',true]);
+  assert.deepEqual([by.carl.chamber,by.carl.inOffice],['H',false]);
+  assert.deepEqual(campaignPeople(files,{everyone:true,only:'quigley'}).map(p=>p.id),['quigley']);
+});

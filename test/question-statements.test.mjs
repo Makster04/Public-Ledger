@@ -9,6 +9,7 @@ import Q from '../public/questions.json' with {type:'json'};
 import R from '../public/research.json' with {type:'json'};
 import SENATE from '../public/senate.json' with {type:'json'};
 import HOUSE from '../public/house.json' with {type:'json'};
+import ELECT from '../public/members-elect.json' with {type:'json'};
 
 test('candidates: sentences naming a question\'s phrases, once per wording, with every page they were on, newest first',()=>{
   const c={campaigns:[
@@ -41,6 +42,6 @@ test('a tagged statement counts toward its side (1 beside a record), falls under
 
 test('the coded statements on file pass the checks',()=>{
   // the full profiles, and since Nov. 25, 2026 every sitting senator and House member
-  const people=new Set([...R.members,...(R.cands||[]),...(R.featured||[]),...SENATE.senators,...HOUSE.members].map(p=>p.id));
+  const people=new Set([...R.members,...(R.cands||[]),...(R.featured||[]),...SENATE.senators,...HOUSE.members,...ELECT.members].map(p=>p.id));
   assert.deepEqual(checkStatements(CODED,{people,questions:Q.questions}).problems,[]);
 });
