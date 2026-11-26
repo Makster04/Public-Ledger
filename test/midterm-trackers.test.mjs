@@ -85,6 +85,7 @@ test('where the cards show: the top of the Super PACs page, before the cycle\'s 
   const app=read('public/app.js'),css=read('public/remake.css'),pkg=JSON.parse(read('package.json'));
   assert.match(app,/<div id="sp-midterms"><\/div><div id="sp-body">/);
   assert.match(app,/renderMidtermTrackers\(\);/);
+  assert.match(app,/const order=\[\.\.\.TRACKERS\]\.sort\(\(a,b\)=>a\.name\.localeCompare\(b\.name\)\);/,'alphabetical, the same every midterm');
   assert.match(app,/from '\.\/midterm-trackers\.js'/);
   assert.match(app,/<span class="kw-open"><\/span><\/summary><h4>Biggest spenders<\/h4>/,'Open at the bottom of each card lists its super PACs');
   assert.match(css,/\.mt-sec \{ --mt-won: #9085e9; --mt-lost: #c98500;/);
