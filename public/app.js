@@ -64,7 +64,7 @@ const QCODED=QSTANCES.coded&&!Array.isArray(QSTANCES.coded)?QSTANCES.coded:{};
 // A person's stance on every question (public/question-scores.js personStances), worked out once: their record, their
 // carried-over evidence, what they said (public/question-statements.json) and the topic groups' ratings of them
 // (public/group-ratings.json), the last two by profile id.
-const qstOf=p=>{if(!p)return {};if(!p.qst)p.qst=personStances(QSTANCES.people?.[p.bioguide]||null,p.evidence,{ratings:window.GROUP_RATINGS?.people?.[p.id]||null,questions:QUESTIONS.questions,said:window.QSTATEMENTS?.people?.[p.id]||null});return p.qst;};
+const qstOf=p=>{if(!p)return {};if(!p.qst)p.qst=personStances(QSTANCES.people?.[p.bioguide]||null,p.evidence,{ratings:window.GROUP_RATINGS?.people?.[p.id]||null,questions:QUESTIONS.questions,said:window.QSTATEMENTS?.people?.[p.id]||null,state:window.QSTATE?.people?.[p.id]||null});return p.qst;};
 const withQ=p=>{qstOf(p);return p;};
 // Their items on each question and what each bill is, read when a tab shows them.
 const QEV={};let QMETA=null;
