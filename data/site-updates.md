@@ -4,6 +4,7 @@ Each dated line below becomes a "Site update" card on the home page and the Late
 
 ## November 2026
 
+- **Nov. 27: One list for the Ideology tab's categories.** The "Lean on each category" table and the list of categories under it showed the same thing, so they're now one list: each category's row has its lean bar, its number (−100 liberal to +100 conservative) with its label, and how many of its questions it's based on, and still opens to its questions and the statements, ratings and votes behind each. A category with no record yet is a dashed row that doesn't open.
 - **Nov. 27: Sort the tracker cards.** On the Super PACs page, the tracker cards can be put A to Z, by the biggest increase or decline in the share of candidates who won, by the highest or lowest share, or by the most or least money.
 - **Nov. 26: The tracker cards now cover every election since 2018.** The Super PACs page's buttons now run 2026, 2024, 2022, 2020 and 2018, presidential years included (House and Senate races only), and each arrow compares with the election two years before. Crypto's 2026 card now compares with 2024, when its super PACs first spent heavily.
 - **Nov. 26: The tracker cards' arrows show how far the share moved.** Each ▲ or ▼ on the Super PACs page is greener the more the share of winners went up, redder the more it went down, with the points under it. <!-- not news -->
