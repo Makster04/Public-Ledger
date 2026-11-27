@@ -10,8 +10,10 @@
 //                                               member-elect too, not just the full profiles; whoever has no campaign
 //                                               text yet goes first (toward 10 or more promises for everyone)
 //   npm run campaign:collect -- --from 2022     only the elections from this year on (default: config historyFrom)
+//                                               (the campaigns before it read earlier are kept as they were)
 // Which website: the campaign site in data/config.json ("campaignSite", and "campaignSites" for earlier addresses),
-// and the website the person's campaign committee gave the FEC (with FEC_API_KEY in .dev.vars). Official .gov sites
+// and the website the person's campaign committee gave the FEC (with FEC_API_KEY in .dev.vars; its answers are kept in
+// .local/campaign-fec/ for 30 days, and when it hasn't answered, the sites found before are used, see fecLookup). Official .gov sites
 // and social media pages aren't campaign sites, so they are left out. Which elections: the years the FEC lists the
 // person on the ballot, or, without the FEC, every even year for the House and the seat's years for the Senate.
 // Which pages: the homepage, the pages it links to about where they stand ("Issues", "Priorities", "Plan") with the
@@ -29,7 +31,7 @@ import {requestSource} from '../src/sources.mjs';
 import {ownDomain,sameName} from '../src/feeds.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
-const OUT=path.join(root,'data','campaign-text'),CACHE=path.join(root,'.local','campaign-pages');
+const OUT=path.join(root,'data','campaign-text'),CACHE=path.join(root,'.local','campaign-pages'),FEC_CACHE=path.join(root,'.local','campaign-fec');
 const pad=n=>String(n).padStart(2,'0');
 
 // Election day: the Tuesday after the first Monday in November.
@@ -274,20 +276,62 @@ export function campaignPeople({research,senate,house,elect,config},{everyone=fa
 // ---------- Where the FEC says their campaign is ----------
 // Every campaign the FEC lists for the person (their candidacy on file, and others of theirs in the same state: a
 // House member now running for the Senate has a House candidacy too), with the years on the ballot and each principal
-// committee's website. {websites, years}, or null without a key.
-export async function fecFacts(p,env){
+// committee's website. {websites, years, candidacies}, or null without a key. When a request isn't answered (the hourly
+// allowance used up, a timeout, a 5xx) the answer is incomplete, so it also says busy: true (Nov. 27, 2026: before, an
+// unanswered request read as no website, and a run that used up the allowance listed hundreds of people as having none).
+export async function fecFacts(p,env,{ask=u=>requestSource(u,env)}={}){
   if(!env.FEC_API_KEY)return null;
-  const ids=new Set(p.fecCand?[p.fecCand]:[]),years=new Set(),websites=new Set();
+  const ids=new Set(p.fecCand?[p.fecCand]:[]),years=new Set(),websites=new Set();let busy=false;
+  const tryTo=async f=>{try{await f();}catch(e){if(unanswered(e))busy=true;}};
   const last=String(p.name||'').replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').trim().split(/\s+/).at(-1);
-  try{if(last&&p.state){const d=await requestSource(`https://api.open.fec.gov/v1/candidates/?q=${encodeURIComponent(last)}&state=${p.state}&per_page=50`,env);
-    for(const c of d?.results||[]){const [l,f]=String(c.name||'').split(',');if(c.candidate_id&&sameName(f||'',l||'',p))ids.add(c.candidate_id);}}}catch{}
+  await tryTo(async()=>{if(last&&p.state){const d=await ask(`https://api.open.fec.gov/v1/candidates/?q=${encodeURIComponent(last)}&state=${p.state}&per_page=50`);
+    for(const c of d?.results||[]){const [l,f]=String(c.name||'').split(',');if(c.candidate_id&&sameName(f||'',l||'',p))ids.add(c.candidate_id);}}});
   for(const id of ids){
-    try{const d=await requestSource(`https://api.open.fec.gov/v1/candidate/${id}/`,env);for(const y of d?.results?.[0]?.election_years||[])years.add(Number(y));}catch{}
-    try{const d=await requestSource(`https://api.open.fec.gov/v1/candidate/${id}/committees/?designation=P&per_page=20`,env);
-      for(const c of d?.results||[]){let w=c.website;if(!w&&c.committee_id){try{w=(await requestSource(`https://api.open.fec.gov/v1/committee/${c.committee_id}/`,env))?.results?.[0]?.website;}catch{}}if(w)websites.add(w);}}catch{}
+    await tryTo(async()=>{const d=await ask(`https://api.open.fec.gov/v1/candidate/${id}/`);for(const y of d?.results?.[0]?.election_years||[])years.add(Number(y));});
+    await tryTo(async()=>{const d=await ask(`https://api.open.fec.gov/v1/candidate/${id}/committees/?designation=P&per_page=20`);
+      for(const c of d?.results||[]){let w=c.website;if(!w&&c.committee_id)await tryTo(async()=>{w=(await ask(`https://api.open.fec.gov/v1/committee/${c.committee_id}/`))?.results?.[0]?.website;});if(w)websites.add(w);}});
   }
-  try{if(p.fecCmte&&!websites.size){const d=await requestSource(`https://api.open.fec.gov/v1/committee/${p.fecCmte}/`,env);if(d?.results?.[0]?.website)websites.add(d.results[0].website);}}catch{}
-  return {websites:[...websites],years:[...years].sort((a,b)=>a-b),candidacies:[...ids]};
+  if(p.fecCmte&&!websites.size)await tryTo(async()=>{const d=await ask(`https://api.open.fec.gov/v1/committee/${p.fecCmte}/`);if(d?.results?.[0]?.website)websites.add(d.results[0].website);});
+  return {websites:[...websites],years:[...years].sort((a,b)=>a-b),candidacies:[...ids],...(busy?{busy:true}:{})};
+}
+// The FEC's API allows a key 1,000 requests an hour, shared with everything else using the key (npm start's refresh
+// too). So its answers about each person are kept on this computer for 30 days (.local/campaign-fec/), and a second run
+// asks only about the people it didn't answer for; requests are spaced 5 seconds apart (720 an hour); and when it says the
+// hour's allowance is used up (HTTP 429), the run waits 10 minutes and asks again, up to 6 times, then goes on without it.
+export class FecBusy extends Error{constructor(){super('The FEC\'s hourly allowance is used up');this.name='FecBusy';}}
+const unanswered=e=>e?.name==='FecBusy'||retryable(e);
+export function fecLookup(env,{wait=5000,pause=600000,tries=6,cache=FEC_CACHE,maxAge=30,log=console.log}={}){
+  let last=0,gaveUp=false;
+  const ask=async url=>{
+    for(let i=0;;i++){
+      if(gaveUp)throw new FecBusy();
+      const gap=last+wait-Date.now();if(gap>0)await sleep(gap);last=Date.now();
+      try{return await requestSource(url,env);}
+      catch(e){
+        if(e?.statusCode!==429)throw e;
+        if(i>=tries){gaveUp=true;log(`  (The FEC still says its hourly allowance is used up, so the rest are read without it.)`);throw new FecBusy();}
+        log(`  (The FEC's hourly allowance is used up: waiting ${Math.round(pause/60000)} minutes, ${i+1} of ${tries}…)`);await sleep(pause);
+      }
+    }
+  };
+  return {
+    get gaveUp(){return gaveUp;},
+    async facts(p){
+      if(!env.FEC_API_KEY)return null;
+      const file=path.join(cache,`${String(p.id).replace(/[^\w-]/g,'_')}.json`);
+      try{const c=JSON.parse(fs.readFileSync(file,'utf8'));if(Date.now()-Date.parse(c.asked)<maxAge*864e5)return c.facts;}catch{}
+      const f=await fecFacts(p,env,{ask});
+      if(f&&!f.busy){fs.mkdirSync(cache,{recursive:true});fs.writeFileSync(file,JSON.stringify({asked:new Date().toISOString(),facts:f})+'\n');}
+      return f;
+    }};
+}
+// What a run writes for someone, with what was there before: the campaigns before `from` or after `to` (a run with
+// --from 2022 doesn't read them) are kept as they were (Nov. 27, 2026: before, they were dropped), and so are their sites.
+export function keepEarlier(before,{from,to,years,sites,campaigns}){
+  const older=(before?.campaigns||[]).filter(c=>c.year<from||c.year>to);
+  return {years:[...new Set([...older.map(c=>c.year),...years])].sort((a,b)=>a-b),
+    sites:[...new Set([...sites,...older.map(c=>c.site).filter(Boolean)])],
+    campaigns:[...older,...campaigns].sort((a,b)=>a.year-b.year)};
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
@@ -304,7 +348,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const dbFile=path.join(root,'.local','records.sqlite'),db=fs.existsSync(dbFile)?new DatabaseSync(dbFile,{readOnly:true}):null;
   if(!env.FEC_API_KEY)console.log('No FEC_API_KEY in .dev.vars: only the campaign sites in data/config.json are read, and the election years are estimated.');
   fs.mkdirSync(OUT,{recursive:true});
-  const wb=wayback(env),noSite=[],skipped=[],summary=[];
+  const wb=wayback(env),fecs=fecLookup(env),noSite=[],skipped=[],summary=[],fecWait=[];
   console.log(`Reading the campaign websites of ${people.length} people from the Wayback Machine (about one page a second; pages read before are kept)…`);
   // A campaign read before (homepage and pages, or a sure answer that nothing was saved) is kept as it is; one that
   // failed or left pages unread is read again. --redo reads everything again.
@@ -313,19 +357,24 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   let n=0;
   people: for(const p of people){
     n++;if(people.length>50&&n%25===0)console.log(`  … ${n} of ${people.length}`);
-    const fec=await fecFacts(p,env);
-    const given=[p.campaignSite,...(p.campaignSites||[])].filter(Boolean),sites=new Map();
-    for(const u of [...given,...(fec?.websites||[])]){const s=campaignSite(u);if(s&&!sites.has(s.host))sites.set(s.host,s);}
-    for(const u of given)if(!campaignSite(u))skipped.push(`${p.id}: ${u}`);
-    const years=campaignYears({fecYears:fec?.years,chamber:p.chamber,seat:p.seat,inOffice:p.inOffice,cycle:config.cycle,since:p.since},from,to),campaigns=[];
     const out=path.join(OUT,`${p.id}.json`);let before=null;try{before=JSON.parse(fs.readFileSync(out,'utf8'));}catch{}
+    const fec=await fecs.facts(p);
+    // The FEC didn't answer in full: the sites and years found before stand in for its answer.
+    const fecBusy=!!fec?.busy;if(fecBusy)fecWait.push(p.id);
+    const given=[p.campaignSite,...(p.campaignSites||[])].filter(Boolean),sites=new Map();
+    for(const u of [...given,...(fec?.websites||[]),...(fecBusy?before?.sites||[]:[])]){const s=campaignSite(u);if(s&&!sites.has(s.host))sites.set(s.host,s);}
+    for(const u of given)if(!campaignSite(u))skipped.push(`${p.id}: ${u}`);
+    const fecYears=fecBusy?[...new Set([...(fec?.years||[]),...(before?.years||[])])]:fec?.years;
+    const years=campaignYears({fecYears,chamber:p.chamber,seat:p.seat,inOffice:p.inOffice,cycle:config.cycle,since:p.since},from,to),campaigns=[];
     const done=new Map((redo?[]:before?.campaigns||[]).filter(c=>c.site&&!c.error&&!c.unread).map(c=>[`${c.year} ${c.site}`,c]));
     const posts=(year,had)=>db?campaignPosts(db,p.id,year):(had||[]);
+    // Without the FEC's answer and no site on file, nothing is known yet: their file stays as it is, to try again.
+    if(!sites.size&&fecBusy)continue;
     if(!sites.size){
       noSite.push(p.id);
       // No website, but their campaign-season posts are still what they told voters.
       for(const year of years){const ps=posts(year);if(ps.length)campaigns.push({year,electionDay:electionDay(year),site:null,saved:false,pages:[],posts:ps});}
-      if(!campaigns.length)continue;
+      if(!campaigns.length&&!before)continue;
     }
     const todo=years.flatMap(y=>[...sites.values()].filter(s=>!done.has(`${y} ${s.root}`)).map(s=>y));
     if(todo.length)console.log(`  ${p.id.padEnd(14)} reading ${todo.join(', ')}…`);
@@ -336,8 +385,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       catch(e){if(e.name==='WaybackDown'){down=e;break people;}
         campaigns.push({year,electionDay:electionDay(year),site:site.root,saved:false,error:e.message,pages:[],posts:posts(year)});tally.failed++;failed.push(`${p.id} ${year}`);}
     }
+    const kept=keepEarlier(before,{from,to,years,sites:[...sites.values()].map(s=>s.root),campaigns});
+    if(!kept.campaigns.length)continue;
     const file={about:'What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.',
-      person:p.id,name:p.name,built:new Date().toISOString().slice(0,10),sites:[...sites.values()].map(s=>s.root),years,campaigns};
+      person:p.id,name:p.name,built:new Date().toISOString().slice(0,10),sites:kept.sites,years:kept.years,campaigns:kept.campaigns};
     fs.writeFileSync(out,JSON.stringify(file,null,1)+'\n');
     const saved=campaigns.filter(c=>c.saved),posted=campaigns.filter(c=>!c.saved&&c.posts.length),errs=campaigns.filter(c=>c.error);
     const parts=[...saved.map(c=>`${c.year} ${c.pages.length} page${c.pages.length===1?'':'s'}${c.posts.length?` + ${c.posts.length} posts`:''}${c.unread?` (${c.unread.length} not read yet)`:''}`),
@@ -348,6 +399,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const files=fs.readdirSync(OUT).filter(f=>f.endsWith('.json')).length;
   console.log(`\nWrote data/campaign-text/ (${files} people).`);
   if(noSite.length)console.log(`No campaign website found for ${noSite.length}: ${noSite.join(', ')}. Add one as "campaignSite" (or older ones as "campaignSites": [...]) in data/config.json${env.FEC_API_KEY?'':', or add FEC_API_KEY to .dev.vars so the FEC\'s can be used'}.`);
+  if(fecWait.length)console.log(`The FEC didn't answer in full for ${fecWait.length} (its allowance is 1,000 requests an hour, shared with npm start), so they were read with the sites found before, or left as they were: ${fecWait.join(', ')}. Run npm run campaign:collect again in an hour: what the FEC did answer is kept, so it asks only about these.`);
   if(skipped.length)console.log(`Not campaign sites, so not read (official .gov sites and social media pages): ${skipped.join('; ')}.`);
   if(down)console.log(`\nStopped: ${down.message}, so it is down or busy. Everyone listed above is saved; run npm run campaign:collect again later and it carries on from there.`);
   console.log(`\nCampaigns: ${tally.read} read now, ${tally.kept} kept from before, ${tally.failed} failed${tally.partial?`, ${tally.partial} with pages not read yet`:''}.`);
