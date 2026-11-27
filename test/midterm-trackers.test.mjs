@@ -159,7 +159,7 @@ test('where the cards show: the top of the Super PACs page, before the cycle\'s 
   const app=read('public/app.js'),css=read('public/remake.css'),pkg=JSON.parse(read('package.json'));
   assert.match(app,/<div id="sp-midterms"><\/div><div id="sp-body">/);
   assert.match(app,/renderMidtermTrackers\(\);/);
-  assert.match(app,/role="group" aria-label="Election">${[...years].reverse().map(/,'oldest on the left, 2026 on the right (the page opens on the newest)');assert.match(app,/The trackers' super PACs in the \$\{mtYear\} elections/);
+  assert.ok(app.includes('role="group" aria-label="Election">${[...years].reverse().map('),'oldest on the left, 2026 on the right (the page opens on the newest)');assert.match(app,/The trackers' super PACs in the \$\{mtYear\} elections/);
   assert.match(app,/const order=orderTrackers\(TRACKERS,Y,P,mtSort\);/,'in the order picked, A to Z by default');assert.match(app,/<select id="mt-sort"/);
   assert.match(app,/from '\.\/midterm-trackers\.js'/);
   assert.match(app,/<details class="mt-more"><summary><span class="kw-open"><\/span><\/summary>\$\{list\}<\/details>/,'Open at the bottom of each card lists its super PACs');
