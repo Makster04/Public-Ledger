@@ -1827,6 +1827,8 @@ input, select { accent-color: var(--accent); }
 .mt-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px 20px; flex-wrap: wrap; margin-bottom: 10px; }
 .mt-head h2 { margin: 0 0 4px; font-size: 1.2rem; }
 .mt-head p { margin: 0; max-width: 70ch; }
+.mt-ctl { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px 14px; }
+.mt-sort select { margin-left: 6px; }
 .mt-years button { font-family: var(--font-display); font-weight: 700; font-size: .95rem; padding-inline: 16px; }
 .mt-legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: .85rem; color: var(--ink-2); margin: 0 0 12px; }
 .mt-legend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -1880,6 +1882,9 @@ input, select { accent-color: var(--accent); }
 @media (max-width: 720px) {
   .mt-sec { padding: 14px 12px 12px; }
   .mt-grid { grid-template-columns: 1fr; }
+  .mt-ctl { width: 100%; justify-content: flex-start; }
+  .mt-years { width: 100%; display: flex; }
+  .mt-years button { flex: 1; padding-inline: 4px; font-size: .85rem; }
   .mt-top { grid-template-columns: minmax(0, 1fr) 124px; }
   .mt-pct { font-size: 1.7rem; gap: 4px; }
   .mt-line { grid-template-columns: 1fr; gap: 4px; }

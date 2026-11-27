@@ -40,6 +40,21 @@ export function trendColor(delta){
 export const trendPoints=delta=>`${delta>0?'+':'−'}${Math.abs(delta)} pt${Math.abs(delta)===1?'':'s'}`;
 // Whether a tracker had any super PAC money in an election: its own super PACs spent, or its companies gave.
 export const hadMoney=x=>!!x&&((x.for||0)+(x.against||0)+(x.gave||0)>0);
+// The orders a reader can pick for the cards (approved 2026-11-27).
+export const SORTS=[['az','A to Z'],['increase','Biggest increase'],['decline','Biggest decline'],['most','Highest % won'],['least','Lowest % won'],['money','Most money'],['little','Least money']];
+// The trackers in the order picked, for one election (Y: its trackers; P: the election before's). By the arrow's points,
+// the share who won (not one from too few candidates) or the money the bars show (spent, or a funded tracker's share).
+// A card without that number goes after the others; ties and those go A to Z.
+export function orderTrackers(trackers,Y,P,how='az'){
+  const az=(a,b)=>a.name.localeCompare(b.name);
+  if(!SORTS.some(([k])=>k===how)||how==='az')return [...trackers].sort(az);
+  const val=t=>{const x=Y?.[t.key];if(!hadMoney(x))return null;const w=winShare(x);
+    if(how==='increase'||how==='decline'){const v=versus(w,P?winShare(P[t.key]):null,'before',hadMoney(P?.[t.key]));return typeof v?.delta==='number'?v.delta:null;}
+    if(how==='most'||how==='least')return w&&!w.few?w.pct:null;
+    return (x.for||0)+(x.against||0);};
+  const dir=['decline','least','little'].includes(how)?1:-1;
+  return [...trackers].sort((a,b)=>{const x=val(a),y=val(b);if(x==null&&y==null)return az(a,b);if(x==null)return 1;if(y==null)return -1;return dir*(x-y)||az(a,b);});
+}
 // Names the FEC files under initials, as people know them.
 export const SUPER_PAC_NAMES={C00571703:'Senate Leadership Fund',C00504530:'Congressional Leadership Fund',C00495028:'House Majority PAC',
   C00484642:'Senate Majority PAC',C00865444:'WinSenate',C00892471:'MAGA Inc.',C00825851:'Make America Great Again Inc.',

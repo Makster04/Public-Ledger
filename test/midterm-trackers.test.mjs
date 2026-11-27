@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import zlib from 'node:zlib';
 import {Readable} from 'node:stream';
 import {lastName,fecResults,siteResults,midtermTrackers,superPacSpending,giftOf,giftTracker,fundedMatchers,fundedTrackers,zipFirstEntry,legislatorResults,ELECTIONS} from '../scripts/build-midterm-trackers.mjs';
-import {winShare,versus,electionYears,prevElection,hadMoney,MIN_CANDIDATES,FUNDED_CUTOFF,trendColor,trendPoints,TREND_FULL} from '../public/midterm-trackers.js';
+import {winShare,versus,electionYears,prevElection,orderTrackers,SORTS,hadMoney,MIN_CANDIDATES,FUNDED_CUTOFF,trendColor,trendPoints,TREND_FULL} from '../public/midterm-trackers.js';
 import {TRACKER} from '../public/trackers.js';
 
 const read=f=>fs.readFileSync(new URL('../'+f,import.meta.url),'utf8');
@@ -63,6 +63,20 @@ test('the winners of an earlier election before the FEC\'s results are out: a Ho
     {id:{fec:['H2NY99999']},terms:[{type:'rep',start:'2023-01-03'}]},{id:{},terms:[{type:'rep',start:'2025-01-03'}]}];
   assert.deepEqual([...legislatorResults(2024,people).won].sort(),['H4NY16087','H8CA28111','S4CA00694'],'every FEC ID of a winner; someone who left in 2024 isn\'t one');
   assert.equal(legislatorResults(2022,people).won.size,4,'2022: the terms starting Jan. 3, 2023');assert.equal(legislatorResults(2020,people).won.size,0);
+});
+
+test('the cards in the order picked: A to Z, the arrow\'s points, the share who won or the money, cards without the number last',()=>{
+  const T=[{key:'a',name:'Alpha'},{key:'b',name:'Beta'},{key:'c',name:'Gamma'},{key:'d',name:'Delta'}];
+  const sup=(n,won)=>({n,won,open:0});
+  const Y={a:{for:10,against:0,supported:sup(10,4)},b:{for:5,against:20,supported:sup(10,9)},c:{for:1,against:0,supported:sup(3,3)}};
+  const P={a:{for:1,against:0,supported:sup(10,8)},b:{for:1,against:0,supported:sup(10,5)}};
+  const order=how=>orderTrackers(T,Y,P,how).map(t=>t.key).join('');
+  assert.deepEqual(SORTS.map(([k])=>k),['az','increase','decline','most','least','money','little']);
+  assert.equal(order('az'),'abdc','A to Z: Alpha, Beta, Delta, Gamma');assert.equal(order('nonsense'),'abdc');
+  assert.equal(order('increase'),'badc','Beta +40 before Alpha -40; Gamma (new) and Delta (none) after, A to Z');
+  assert.equal(order('decline'),'abdc');
+  assert.equal(order('most'),'badc','Gamma\'s 3 candidates are too few to rank');assert.equal(order('least'),'abdc');
+  assert.equal(order('money'),'bacd');assert.equal(order('little'),'cabd');
 });
 
 test('the card: the share who won of the called races, at least 5 candidates, and the arrow against the midterm before',()=>{
@@ -146,7 +160,7 @@ test('where the cards show: the top of the Super PACs page, before the cycle\'s 
   assert.match(app,/<div id="sp-midterms"><\/div><div id="sp-body">/);
   assert.match(app,/renderMidtermTrackers\(\);/);
   assert.match(app,/role="group" aria-label="Election"/);assert.match(app,/The trackers' super PACs in the \$\{mtYear\} elections/);
-  assert.match(app,/const order=\[\.\.\.TRACKERS\]\.sort\(\(a,b\)=>a\.name\.localeCompare\(b\.name\)\);/,'alphabetical, the same every midterm');
+  assert.match(app,/const order=orderTrackers\(TRACKERS,Y,P,mtSort\);/,'in the order picked, A to Z by default');assert.match(app,/<select id="mt-sort"/);
   assert.match(app,/from '\.\/midterm-trackers\.js'/);
   assert.match(app,/<details class="mt-more"><summary><span class="kw-open"><\/span><\/summary>\$\{list\}<\/details>/,'Open at the bottom of each card lists its super PACs');
   assert.match(app,/'Super PACs it funds':'Its own super PACs'/);assert.match(app,/<h4>Super PACs it funded<\/h4>/);assert.match(app,/People who work for its companies gave/);
