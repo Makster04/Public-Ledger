@@ -1914,3 +1914,25 @@ input, select { accent-color: var(--accent); }
   .mt-more li .mt-for, .mt-more li .mt-against { display: none; }
   .mt-more .mt-funded li { grid-template-columns: 18px minmax(0, 1fr) auto auto; }
 }
+/* "How to read this" in Tracking Lobby Money opens and closes (Nov. 27, 2026). */
+.lk-key > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.lk-key > summary::-webkit-details-marker { display: none; }
+.lk-key > summary::after { content: "⌄"; color: var(--muted); font-size: 1.2rem; line-height: 1; }
+.lk-key[open] > summary::after { content: "⌃"; }
+.lk-key > summary h4 { margin: 0; }
+.lk-key[open] > summary { margin-bottom: 4px; }
+/* Big Money Independence over time, under the score card (Nov. 27, 2026). */
+.st-maincol { display: grid; gap: 16px; align-content: start; min-width: 0; }
+.st-maincol > .mm-panel { border-radius: 14px; }
+.sc-trend > .small { margin: 2px 0 8px; }
+.sc-trend .cx-sel { fill: color-mix(in oklab, var(--ink) 6%, transparent); }
+.sc-trend .sc-line { stroke: color-mix(in oklab, var(--ink-2) 55%, transparent); stroke-width: 2; }
+.sc-trend .sc-dot { stroke: var(--surface); stroke-width: 2; }
+.sc-trend .sc-prov { fill: var(--surface); stroke-width: 2; }
+.sc-trend .sc-none { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 2 2; }
+.sc-trend .sc-hit { cursor: pointer; }
+.sc-key { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; margin: 6px 0 0 !important; }
+.sc-ki { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.sc-k { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; }
+.sc-sel-k { background: color-mix(in oklab, var(--ink) 14%, transparent); }
+.sc-none-k { border: 1.5px dashed var(--muted); border-radius: 50%; width: 10px; height: 10px; }
