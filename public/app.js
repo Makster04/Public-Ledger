@@ -1434,7 +1434,13 @@ function qTableHTML(s,c){
 }
 function mountQCats(s,host,x){
   if(!host)return;
-  host.innerHTML=`<p class="small muted">Open a category for its questions, their stance on each, and the statements, ratings and votes behind it.</p>${(x.categories||[]).filter(c=>c.onRecord).map(c=>`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary>${issIcon(c.id)}<b>${esc(c.label)}</b> <span class="muted small">· ${c.onRecord} question${c.onRecord===1?'':'s'} on record${c.lean==null?'':` · lean ${signed(c.lean)}`}</span></summary><div class="st-more-b">${qTableHTML(s,c)}</div></details>`).join('')||'<p class="small muted">No question on record yet.</p>'}`;
+  // One row a category (Nov. 27, 2026: the "Lean on each category" table folded in): its lean on the bar, the number,
+  // and what it's based on; a category with a question on record opens to its questions and the record behind each.
+  const row=c=>{const pos=c.lean==null?`<span class="q-pos muted">${c.onRecord?'No left–right question on record':'No record yet'}</span>`:`<span class="q-pos"><b>${signed(c.lean)}</b> <span class="muted">${esc(leanLabel(c.lean))}</span></span>`;
+    const bar=c.lean==null?'<span class="q-bar"></span>':`<span class="q-bar st-lean${c.lean<0?' neg':''}" style="--x:${leanPos(c.lean)}%" aria-hidden="true"><i></i></span>`;
+    const n=c.onRecord?`${c.n} of ${c.questions.length} question${c.questions.length===1?'':'s'} placed${c.onRecord>c.n?` (and ${c.onRecord-c.n} with no left–right side)`:''}`:'';
+    return `<span class="q-ic">${issIcon(c.id)}</span><b class="q-name">${esc(c.label)}</b>${bar}${pos}<span class="q-n muted">${n}</span>`;};
+  host.innerHTML=`<p class="small muted">Open a category for its questions, their stance on each, and the statements, ratings and votes behind it.</p>${(x.categories||[]).map(c=>c.onRecord?`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary class="q-cat-row">${row(c)}</summary><div class="st-more-b">${qTableHTML(s,c)}</div></details>`:`<div class="q-cat q-cat-none"><div class="q-cat-row">${row(c)}</div></div>`).join('')}`;
   const fill=async d=>{if(d.dataset.done)return;d.dataset.done='1';const [ev,meta]=await Promise.all([qEvidence(s),qMeta()]);
     d.querySelectorAll('tr[data-q]').forEach(tr=>{const q=QISSBY[tr.dataset.q];if(q)tr.querySelector('.qt-items').innerHTML=qItemsHTML(qItems(s,q,ev,meta));});
     d.querySelectorAll('.qt-more').forEach(b=>b.addEventListener('click',()=>{const cell=b.closest('.qt-items'),open=b.dataset.open!=='1';
@@ -1444,11 +1450,6 @@ function mountQCats(s,host,x){
 }
 function paneIdeology(s,pane){
   const x=sixOf(s).ideology,max=100;
-  const issueRows=x.issues.map(c=>{
-    const n=c.onRecord?`${c.n} of ${c.questions.length} question${c.questions.length===1?'':'s'} placed${c.onRecord>c.n?` (and ${c.onRecord-c.n} with no left–right side)`:''}`:'No record yet';
-    const pos=c.lean==null?(c.onRecord?'<span class="muted">No left–right question on record</span>':'<span class="muted">No record yet</span>'):`<b>${signed(c.lean)}</b> <span class="muted">${esc(leanLabel(c.lean))}</span>`;
-    return [`<a href="#${s.id}-ideology" data-qcat="${esc(c.id)}">${esc(c.label)}</a>`,pos,c.lean==null?'':`<span class="st-lean${c.lean<0?' neg':''}" style="--x:${leanPos(c.lean)}%" aria-hidden="true"><i></i></span>`,n];
-  });
   const byIssue=ratingGroups(s),cells=list=>list.length?list.map(x=>ratingCell(s,x.g.org)).join('<br>'):'<span class="muted">None tracked</span>';
   const issues=[...RATING_ISSUES,...Object.keys(byIssue).filter(i=>!RATING_ISSUES.includes(i))].filter(i=>byIssue[i]&&(byIssue[i].conservative.length||byIssue[i].liberal.length));
   const noSide=Object.entries(byIssue).flatMap(([i,v])=>v.none.map(x=>`${ratingCell(s,x.g.org)} <span class="muted small">(${esc(i)})</span>`));
@@ -1464,7 +1465,7 @@ function paneIdeology(s,pane){
     needs:x.needs,
     notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
     evidenceTitle:'Evidence: positions and outside ratings',
-    evidence:`<h4 class="st-sub">Lean on each category</h4>${stTable(['Category','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}<div class="q-cats" id="q-cats"><p class="small muted">Open a category for its questions and the record behind each.</p></div>${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why; groups with no current ratings of members of Congress aren't listed. A group whose scorecard is about one topic also counts on that topic's question, up to 3 points; it's listed with the question's record.</p>${ratings}
+    evidence:`<h4 class="st-sub">Lean on each category <span class="muted small">(−100 liberal to +100 conservative)</span></h4><div class="q-cats" id="q-cats"><p class="small muted">Open a category for its questions and the record behind each.</p></div>${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why; groups with no current ratings of members of Congress aren't listed. A group whose scorecard is about one topic also counts on that topic's question, up to 3 points; it's listed with the question's record.</p>${ratings}
       <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each question with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
     lead:`${compassBlock(s)}${ideoBlock(s,'ideo2',{compact:true})}`,
     shown:`<div id="rec-ideo"><div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<p class="small">The bills ${esc(s.short||s.name)} sponsored and cosponsored are on the <a href="#${s.id}-showsup">Shows Up</a> tab.</p><div id="legislation-record"></div>`,
@@ -1476,7 +1477,6 @@ function paneIdeology(s,pane){
   mountIdeo('ideo2',s);mountKV('kv2',s);mountCompass(pane,s);
   recordInto(s,pane.querySelector('#legislation-record'));
   mountQCats(s,pane.querySelector('#q-cats'),x);
-  pane.querySelectorAll('[data-qcat]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const d=pane.querySelector(`#q-cats details[data-cat="${a.dataset.qcat}"]`);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}}));
   bindTips(pane);
 }
 
