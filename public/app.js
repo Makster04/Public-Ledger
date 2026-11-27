@@ -2570,7 +2570,7 @@ async function renderMidtermTrackers(){
   const Y=d.years[mtYear],prev=prevElection(d,mtYear);
   el.innerHTML=`<section class="mt-sec" aria-labelledby="mt-h">
     <div class="mt-head"><div><h2 id="mt-h">The trackers' super PACs in the ${mtYear} elections</h2><p class="small muted">One card a tracker: what its super PACs spent, and how many of the candidates they backed won.</p></div>
-      <div class="mt-ctl">${years.length>1?`<div class="seg mt-years" role="group" aria-label="Election">${years.map(y=>`<button type="button" data-y="${y}" class="${y===mtYear?'active':''}" aria-pressed="${y===mtYear}">${y}</button>`).join('')}</div>`:''}
+      <div class="mt-ctl">${years.length>1?`<div class="seg mt-years" role="group" aria-label="Election">${[...years].reverse().map(y=>`<button type="button" data-y="${y}" class="${y===mtYear?'active':''}" aria-pressed="${y===mtYear}">${y}</button>`).join('')}</div>`:''}
         <label class="small muted mt-sort">Sort <select id="mt-sort" aria-label="Sort the trackers">${SORTS.map(([k,l])=>`<option value="${k}" ${mtSort===k?'selected':''}>${l}</option>`).join('')}</select></label></div></div>
     <div class="mt-legend" aria-hidden="true"><span><i class="mt-sw won"></i>Candidate won</span><span><i class="mt-sw lost"></i>Candidate lost</span></div>
     <div class="mt-grid">${midtermCardsHTML(d,mtYear)}</div>
