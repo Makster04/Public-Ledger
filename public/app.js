@@ -9,7 +9,7 @@ import {compassOf,compassSvg,compassWord,signedLean} from './compass.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,pct1,ix1,num1,billKey,matchScore,promiseScore,promiseStatus,PROMISE_WEIGHT,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
-import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
+import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,drawScoreCycles,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {npOf,npLine,npDetails,npChip} from './nonprofits.js';
@@ -1260,10 +1260,11 @@ function stSide(sources,needs,notes=[],needsTitle='What we need before grading')
 }
 // side: more boxes under the Sources panel, beside the score card.
 // lead: a column on the left of the position card and its sources (the Ideology tab's compass and DW-NOMINATE).
-function stFrame(s,key,{res,breakdown,sources,needs,notes,needsTitle,evidenceTitle,evidence='',shown='',calc,assumptions,method,side='',lead=''}){
+// under: more under the score card, in its column (Big Money Independence's score over time).
+function stFrame(s,key,{res,breakdown,sources,needs,notes,needsTitle,evidenceTitle,evidence='',shown='',calc,assumptions,method,side='',lead='',under=''}){
   const aside=stSide(sources,needs,notes,needsTitle);
   const top=lead?`<div class="st-lead"><div class="st-lead-l">${lead}</div><div class="st-lead-r">${stCard(key,res,breakdown)}${aside}${side}</div></div>`
-    :`<div class="st-grid">${stCard(key,res,breakdown)}${side?`<div class="st-sidecol">${aside}${side}</div>`:aside}</div>`;
+    :`<div class="st-grid">${under?`<div class="st-maincol">${stCard(key,res,breakdown)}${under}</div>`:stCard(key,res,breakdown)}${side?`<div class="st-sidecol">${aside}${side}</div>`:aside}</div>`;
   return `<div class="st" data-score="${key}">${stHead(s,key)}${top}
     <h3 class="st-evh">${evidenceTitle}</h3><div class="st-evidence">${evidence}</div>
     ${shown?`<details class="st-more st-shown"><summary>Shown, not counted in ${esc(SIX_BY[key].name)}</summary><div class="st-more-b">${shown}</div></details>`:''}
@@ -1863,6 +1864,27 @@ function unboughtFor(s,inputs,d,period){
   }
   return x;
 }
+// Big Money Independence over time (Nov. 27, 2026): the score for each two-year cycle on its own, as the Period menu's
+// "only" choices give it, oldest first, this cycle last. [{cycle, pct, grade, provisional, why}]
+function unboughtCycles(s,inputs,d){
+  const current=curCycle(s),past=Object.keys(unboughtPast(s,d).camp).map(Number).filter(c=>c<current);
+  return [...new Set(past)].sort((a,b)=>a-b).concat(current).map(cy=>{
+    const x=unboughtFor(s,inputs,d,cy===current?'this':`cycle:${cy}`),pv=x.pct==null&&x.provisional?.pct!=null?x.provisional.pct:null,pct=x.pct??pv;
+    return {cycle:cy,pct,grade:pct==null?null:letter(Math.min(100,pct)),provisional:pv!=null,why:x.why||null};});
+}
+// The panel under the score card: the chart, the cycles in the period picked on a lighter band, and a table view.
+function unboughtTrendHTML(s,d,pts,period){
+  const head='<section class="mm-panel sc-trend" id="u-trend"><h3>Big Money Independence over time</h3>';
+  if(d===undefined)return head+'<p class="small muted">Reading their FEC records…</p></section>';
+  if(!d)return head+'<p class="small muted">The update service is offline, so their earlier cycles can\'t be read right now.</p></section>';
+  if(!pts||pts.length<2)return head+'<p class="small muted">Earlier cycles appear here once the FEC refresh has read them.</p></section>';
+  const graded=pts.filter(p=>p.pct!=null&&!p.provisional),first=graded[0],last=graded.at(-1);
+  const change=first&&last&&first!==last?` From ${pct1(first.pct)} in ${first.cycle-1}–${first.cycle} to ${pct1(last.pct)} in ${last.cycle-1}–${last.cycle}.`:'';
+  return `${head}<p class="small muted">Each point is one two-year cycle on its own. Stocks held are from the latest annual report in every cycle.${change}</p>
+    <div class="cx-plot" id="u-trend-plot"></div>
+    <p class="small muted sc-key"><span class="sc-ki"><span class="sc-k sc-sel-k"></span>In the period picked above</span><span class="sc-ki"><span class="sc-k sc-none-k"></span>Not graded yet</span><span class="sc-ki">Tap a cycle to show it</span></p>
+    ${tableView(['Cycle','Score','Grade'],[...pts].reverse().map(p=>[`${p.cycle-1}–${p.cycle}`,p.pct==null?'—':pct1(p.pct),p.pct==null?esc(p.why?`Not graded yet: ${p.why}`:'Not graded yet'):p.provisional?'Provisional':`<b class="gr-${p.grade}">${p.grade}</b>`]))}</section>`;
+}
 function unboughtPeriodBar(s,d){
   const current=curCycle(s),past=Object.keys(unboughtPast(s,d).camp).map(Number);
   const opts=periodOptions(current,past);
@@ -1984,12 +2006,12 @@ function lookoutsBox(s,inp){
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Tracking Lobby Money</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <div class="lk-key"><h4>How to read this</h4><p class="small muted">What each lobby gave the campaign, ${esc(inp.label)}, and what three of them spent through their super PACs.</p>
+    <details class="lk-key"><summary><h4>How to read this</h4></summary><p class="small muted">What each lobby gave the campaign, ${esc(inp.label)}, and what three of them spent through their super PACs.</p>
       <ul class="list small">
         <li><b><span class="lk-mark lk-took">✕</span> took some · <span class="lk-mark lk-none">✓</span> none · <span class="lk-mark lk-waiting">…</span> not read yet</b><br>PAC checks and gifts the group collected and passed on. For the Pro-Israel Lobby, its named donors' own checks too.</li>
         <li><b>+ from employees</b><br>Gifts from people who work in that industry, shown apart as the smaller number. They don't change the mark.</li>
         <li><b>Super PAC spending</b> <span class="muted">(Pro-Israel Lobby, Crypto, Big Tech + AI)</span><br>What their super PACs spent to help them win this cycle (for them, and against their opponents in a race they were in) and against them. It never changes the mark: the campaign doesn't take that money.</li>
-      </ul><p class="small muted">More in each tracker below.</p></div></div>`;
+      </ul><p class="small muted">More in each tracker below.</p></details></div>`;
 }
 let trackerTab='aipac';
 const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
@@ -2081,14 +2103,21 @@ function paneUnbought(s,pane){
   // records arrive), and the bundled gifts' box sits under the Sources, beside the score card.
   const mm={bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)};
   // Under the Sources: the bundled gifts, then Tracking Lobby Money for the period picked.
-  let period='this',live=undefined,sp=undefined;
+  let period='this',live=undefined,sp=undefined,trend=null;
+  // The score over time, under the score card: drawn once the records arrive, and again for each period picked (the cycles
+  // in it on a lighter band); a cycle's column picks that cycle in the Period menu.
+  const mountTrend=()=>{const el=pane.querySelector('#u-trend-plot');if(!el||!trend)return;const cur=curCycle(s);
+    drawScoreCycles(el,trend,{selected:periodCycles(period,cur,trend.map(p=>p.cycle)),name:'Big Money Independence'});
+    el.querySelectorAll('[data-cycle]').forEach(r=>{const pick=()=>{const cy=Number(r.dataset.cycle),v=cy===cur?'this':`cycle:${cy}`,sel=pane.querySelector('[data-unbought-period]');
+      if(sel&&[...sel.options].some(o=>o.value===v)&&sel.value!==v){sel.value=v;sel.dispatchEvent(new Event('change'));}};
+      r.addEventListener('click',pick);r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});});};
   const sideFor=d=>s.office?'':bundledBox(s,mm)+lookoutsBox(s,lookoutInputs(s,d,period,sp));
-  const fillLookouts=()=>{const el=pane.querySelector('#u-lookouts');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=lookoutsBox(s,lookoutInputs(s,live,period,sp));el.replaceWith(tmp.firstElementChild);};
+  const fillLookouts=()=>{const el=pane.querySelector('#u-lookouts');if(!el)return;const open=!!el.querySelector('.lk-key')?.open,tmp=document.createElement('div');tmp.innerHTML=lookoutsBox(s,lookoutInputs(s,live,period,sp));const nb=tmp.firstElementChild;if(open)nb.querySelector('.lk-key')?.setAttribute('open','');el.replaceWith(nb);};
   // Opened from the header's "Trades" link (#id-timeline): the sections above the timeline fill in as their records
   // arrive and push it down, so it's brought back into view after each, for the first few seconds only.
   const opened=Date.now(),keepTimeline=()=>{if(Date.now()-opened<4000&&location.hash===`#${s.id}-timeline`)pane.querySelector('#u-timeline')?.scrollIntoView({block:'start'});};
   const fillTrackers=()=>{const el=pane.querySelector('#u-trackers');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=trackersHTML(s,live,lookoutInputs(s,live,period,sp),sp);el.replaceWith(tmp.firstElementChild);keepTimeline();};
-  const draw=(x,d)=>stFrame(s,'unbought',{side:sideFor(d),
+  const draw=(x,d)=>stFrame(s,'unbought',{side:sideFor(d),under:s.office?'':unboughtTrendHTML(s,live,trend,period),
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they sponsored or cosponsored.'],
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],[inCongressNow(s)?'Their financial disclosure read (holdings and trades)':'Their candidate financial report read (holdings)',false]],
@@ -2117,10 +2146,13 @@ function paneUnbought(s,pane){
     const offline='The update service is offline, so their financial disclosure can\'t be read right now';
     const x=unboughtFor(s,inputs,d,'this');
     if(!d)x.why=offline;
+    trend=d?unboughtCycles(s,inputs,d):null;resizers.push(()=>{if(pane.isConnected)mountTrend();});
     // The score card and its calculation, for this cycle or the period picked.
     const show=y=>{
-      const card=pane.querySelector('.st-grid');if(card){const tmp=document.createElement('div');tmp.innerHTML=draw(y,d);card.replaceWith(tmp.querySelector('.st-grid'));}
+      // (the side column is drawn again with the card, so "How to read this" stays open if it was)
+      const card=pane.querySelector('.st-grid');if(card){const open=!!card.querySelector('.lk-key')?.open,tmp=document.createElement('div');tmp.innerHTML=draw(y,d);const nb=tmp.querySelector('.st-grid');if(open)nb.querySelector('.lk-key')?.setAttribute('open','');card.replaceWith(nb);}
       const calc=pane.querySelectorAll('.st-more .st-more-b')[1];if(calc)calc.innerHTML=unboughtCalc(s,y);
+      mountTrend();
     };
     show(x);
     const bar=pane.querySelector('#u-period');if(bar){const tmp=document.createElement('div');tmp.innerHTML=unboughtPeriodBar(s,d);const nb=tmp.firstElementChild;bar.replaceWith(nb);

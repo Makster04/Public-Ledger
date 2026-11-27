@@ -288,3 +288,33 @@ export function pieSVG(slices,{size=200,label='Pie chart',tip=s=>`${s.label}: ${
   }
   return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="${esc(label)}">${g}</svg>`;
 }
+
+// Big Money Independence over time (Nov. 27, 2026): one point a two-year cycle, that cycle alone, 0 to 100%. The dots
+// wear the grade's color (the letter is in each tip and the table view); the line joins cycles in a row that have a
+// score. A cycle without one is an empty ring on the baseline. The cycles in the period picked above sit on a lighter
+// band, and each cycle's column is a button that picks it. pts: [{cycle, pct, grade, provisional, why}], oldest first.
+export const gradeFill=g=>({A:'var(--good)',B:'var(--grade-b)',C:'var(--warn)',D:'var(--warn)',F:'var(--crit)'}[g]||'var(--muted)');
+export function drawScoreCycles(el,pts,{selected=[],name='Score'}={}){
+  if(!el||!pts?.length)return;
+  const W=Math.max(260,el.clientWidth),H=W<380?180:200,mL=40,mR=12,top=16,bot=H-26;
+  const band=(W-mL-mR)/pts.length,cx=i=>mL+band*(i+.5),Y=v=>bot-Math.max(0,Math.min(100,v))/100*(bot-top);
+  const short=cy=>band<54?`'${String(cy-1).slice(2)}–${String(cy).slice(2)}`:`${cy-1}–${String(cy).slice(2)}`;
+  let g='';
+  pts.forEach((p,i)=>{if(selected.includes(p.cycle))g+=`<rect class="cx-sel" x="${(cx(i)-band/2).toFixed(1)}" y="${top-8}" width="${band.toFixed(1)}" height="${bot-top+8}" rx="6"></rect>`;});
+  for(const v of [0,20,40,60,80,100])g+=`<line class="${v?'cx-grid':'cx-axis'}" x1="${mL}" x2="${W-mR}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}"></line><text class="cx-tick" x="${mL-7}" y="${(Y(v)+4).toFixed(1)}" text-anchor="end">${v}%</text>`;
+  // The line, broken where a cycle has no score.
+  let seg=[];const segs=[];pts.forEach((p,i)=>{if(p.pct==null){if(seg.length)segs.push(seg);seg=[];return;}seg.push([cx(i),Y(p.pct)]);});if(seg.length)segs.push(seg);
+  for(const s of segs)if(s.length>1)g+=`<polyline class="cx-line sc-line" points="${s.map(q=>q.map(n=>n.toFixed(1)).join(',')).join(' ')}"></polyline>`;
+  const lastScored=pts.map(p=>p.pct!=null).lastIndexOf(true);
+  pts.forEach((p,i)=>{const x=cx(i).toFixed(1);
+    if(p.pct==null){g+=`<circle class="sc-none" cx="${x}" cy="${Y(0).toFixed(1)}" r="4.5"></circle>`;return;}
+    g+=p.provisional?`<circle class="sc-dot sc-prov" cx="${x}" cy="${Y(p.pct).toFixed(1)}" r="5" style="stroke:${gradeFill(p.grade)}"></circle>`
+      :`<circle class="sc-dot" cx="${x}" cy="${Y(p.pct).toFixed(1)}" r="5.5" style="fill:${gradeFill(p.grade)}"></circle>`;
+    if(i===lastScored||(selected.length===1&&selected[0]===p.cycle))g+=`<text class="cx-lab" x="${x}" y="${(Y(p.pct)-11).toFixed(1)}" text-anchor="middle">${p.pct.toFixed(1)}%</text>`;
+  });
+  pts.forEach((p,i)=>{const tip=p.pct==null?`${p.cycle-1}–${p.cycle}: not graded yet${p.why?` (${p.why})`:''}`:`${p.cycle-1}–${p.cycle}: ${name} ${p.pct.toFixed(1)}%${p.provisional?', provisional, no grade':` · Grade ${p.grade}`}`;
+    g+=`<rect class="cx-hit sc-hit" x="${(cx(i)-band/2).toFixed(1)}" y="${top-8}" width="${band.toFixed(1)}" height="${bot-top+8}" data-tip="${esc(tip+' · Show this cycle')}" data-cycle="${p.cycle}" role="button" tabindex="0" aria-label="${esc(tip)}. Show this cycle"></rect>`;
+    g+=`<text class="cx-tick" x="${cx(i).toFixed(1)}" y="${H-6}" text-anchor="middle">${short(p.cycle)}</text>`;});
+  el.innerHTML=svgOpen(W,H,`${name} by two-year cycle, ${pts[0].cycle-1} to ${pts.at(-1).cycle}`)+g+'</svg>';
+  hoverTips(el);
+}
