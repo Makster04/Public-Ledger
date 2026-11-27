@@ -183,3 +183,55 @@ test('--everyone adds every senator, House member and member-elect once, whoever
   assert.deepEqual([by.carl.chamber,by.carl.inOffice],['H',false]);
   assert.deepEqual(campaignPeople(files,{everyone:true,only:'quigley'}).map(p=>p.id),['quigley']);
 });
+
+test('the FEC: a request it doesn\'t answer (its hourly allowance used up) makes the answer busy, not "no website"',async()=>{
+  const {fecFacts}=await import('../scripts/collect-campaign-text.mjs');
+  const answers=(search)=>({FEC_API_KEY:'k',fetch:async u=>{u=new URL(String(u));
+    if(u.pathname==='/v1/candidates/')return search();
+    if(u.pathname==='/v1/candidate/S1/')return Response.json({results:[{election_years:[2026]}]});
+    if(u.pathname==='/v1/candidate/S1/committees/')return Response.json({results:[{committee_id:'C1',website:'jonforsenate.com'}]});
+    return new Response('',{status:404});}});
+  const p={name:'Jon Smith',state:'IA',fecCand:'S1'};
+  assert.deepEqual(await fecFacts(p,answers(()=>new Response('',{status:429}))),{websites:['jonforsenate.com'],years:[2026],candidacies:['S1'],busy:true});
+  assert.deepEqual(await fecFacts(p,answers(()=>new Response('',{status:503}))),{websites:['jonforsenate.com'],years:[2026],candidacies:['S1'],busy:true});
+  // A 404 is an answer: nothing there.
+  assert.deepEqual(await fecFacts(p,answers(()=>new Response('',{status:404}))),{websites:['jonforsenate.com'],years:[2026],candidacies:['S1']});
+});
+
+test('the FEC lookup: spaced out, waits when the hour\'s allowance is used up, keeps its answers, and gives up after its tries',async()=>{
+  const {fecLookup}=await import('../scripts/collect-campaign-text.mjs');
+  const cache=fs.mkdtempSync(path.join(os.tmpdir(),'fec-'));
+  let calls=0,refuse=2;const logs=[];
+  const env={FEC_API_KEY:'k',fetch:async u=>{calls++;u=new URL(String(u));
+    if(refuse>0){refuse--;return new Response('',{status:429});}
+    if(u.pathname==='/v1/candidates/')return Response.json({results:[]});
+    if(u.pathname==='/v1/candidate/S1/')return Response.json({results:[{election_years:[2024]}]});
+    if(u.pathname==='/v1/candidate/S1/committees/')return Response.json({results:[{committee_id:'C1',website:'jon.com'}]});
+    return new Response('',{status:404});}};
+  const fl=fecLookup(env,{wait:0,pause:1,tries:3,cache,log:m=>logs.push(m)});
+  const jon={id:'jon',name:'Jon Smith',state:'IA',fecCand:'S1'};
+  assert.deepEqual(await fl.facts(jon),{websites:['jon.com'],years:[2024],candidacies:['S1']});
+  assert.equal(logs.filter(l=>/waiting/.test(l)).length,2,'waited twice, then it answered');
+  const n=calls;assert.deepEqual(await fl.facts(jon),{websites:['jon.com'],years:[2024],candidacies:['S1']});
+  assert.equal(calls,n,'the second time comes from what was kept');
+  assert.ok(fs.existsSync(path.join(cache,'jon.json')));
+  // It never answers again: after its tries the rest go without it, asking nothing, and nothing is kept for them.
+  refuse=Infinity;
+  const ann={id:'ann',name:'Ann Lee',state:'IA',fecCand:'S2'};
+  assert.equal((await fl.facts(ann)).busy,true);assert.equal(fl.gaveUp,true);
+  const m=calls;assert.equal((await fl.facts({id:'bo',name:'Bo Lee',state:'IA',fecCand:'S3'})).busy,true);assert.equal(calls,m);
+  assert.ok(!fs.existsSync(path.join(cache,'ann.json')));
+  assert.equal(await fecLookup({},{cache}).facts(jon),null,'no key, no FEC');
+  fs.rmSync(cache,{recursive:true,force:true});
+});
+
+test('a run with --from 2022 keeps the campaigns before 2022 that were read before',async()=>{
+  const {keepEarlier}=await import('../scripts/collect-campaign-text.mjs');
+  const c=(year,site)=>({year,site,saved:true,pages:[{url:site}],posts:[]});
+  const before={sites:['https://electjon.com/'],years:[2017,2020,2026],campaigns:[c(2017,'https://electjon.com/'),c(2020,'https://electjon.com/'),c(2026,'https://old.com/')]};
+  const now=keepEarlier(before,{from:2022,to:2026,years:[2026],sites:['https://electjon.com/'],campaigns:[c(2026,'https://electjon.com/')]});
+  assert.deepEqual(now.years,[2017,2020,2026]);
+  assert.deepEqual(now.campaigns.map(x=>`${x.year} ${x.site}`),['2017 https://electjon.com/','2020 https://electjon.com/','2026 https://electjon.com/'],'the years this run read are replaced');
+  assert.deepEqual(now.sites,['https://electjon.com/']);
+  assert.deepEqual(keepEarlier(null,{from:2022,to:2026,years:[2024],sites:[],campaigns:[]}),{years:[2024],sites:[],campaigns:[]});
+});
