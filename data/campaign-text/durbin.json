@@ -1,0 +1,498 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "durbin",
+ "name": "Richard J. Durbin",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.dickdurbin.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.dickdurbin.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-07-21",
+    "url": "https://web.archive.org/web/20260721223536/https://www.dickdurbin.com/"
+   },
+   "pages": [],
+   "unread": [
+    "the list of dickdurbin.com's saved pages"
+   ],
+   "posts": [
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mw2ep3dre222",
+     "text": "President Trump’s decision to ban CNN, Politico, and MS NOW reporters from the White House is a blatant assault on the First Amendment and a desperate attempt to distract from his Administration’s litany of failures.\n\nThis ban must be struck down as soon as possible."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mw2izbieqk22",
+     "text": "The National Institutes of Health is America’s preeminent medical research agency—one that gives hope to countless families.\n\nThe Trump Administration’s attempt to inject politics into its grant disbursements will jeopardize new discoveries, cures, and treatments."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mw4zuik5r22q",
+     "text": "There is nothing more important than the health and safety of our children.\n\nThat’s why I’m joining Senator Young to reintroduce the Lead-Safe Housing for Kids Act and lead the push to reform outdated federal housing."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mw6woncsts2q",
+     "text": "Chastising CNN won't lower the price of diesel fuel.\n\nPunishing Politico won't end the Iranian war.\n\nMaligning MS NOW won't save Donald Trump’s free falling approval ratings."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mw7mdhj7ys2a",
+     "text": "It is long overdue that there is a timely and credible plan for a democratic election in Venezuela, one that allows the safe return and full participation by opposition leaders such as Maria Corina Machado."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mw7pmma7ok2h",
+     "text": "On Sunday, ICE agents outside Chicago tackled a U.S. citizen and left him injured on the ground after they realized he wasn’t their target.\n\nThis despicable display has become all too common under Trump’s mass deportation campaign—no one is safe from this Administration’s cruelty."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwbfqlshz22j",
+     "text": "Yesterday, I met with DHS Secretary Mullin on the Trump Administration’s refugee policy to admit white-only Afrikaners.\nI urged him to process more refugees from around the world, including our Afghan allies stranded abroad. Our nation must do more to protect those fleeing violence and persecution."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwboz7bjn22o",
+     "text": "Black women in the U.S. are three times more likely to die due to pregnancy-related causes—deaths that could have been prevented with the right interventions. \n\nI’m introducing the CARE for Moms Act to provide mothers with more comprehensive & culturally competent maternal & postpartum health care."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwbqbprppc2t",
+     "text": "Corruption must never be tolerated under any Administration.\n\nI’m joining Senator Curtis in calling for the Senate Judiciary Committee to bring Hunter Biden and Donald Trump Jr. in for questioning so we can finally get answers about any potential dealings with foreign governments."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwbr332rmc2t",
+     "text": "Remember when Donald Trump promised to get rid of ‘waste, fraud, and abuse’ in Washington? Well, GAO continues to uncover incompetence and waste at the highest levels of ICE. Americans are outraged at ill-conceived immigration detention projects, and it’s time to hold DHS and ICE responsible."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwebk3aooc24",
+     "text": "Jack Smith investigated Donald Trump’s efforts to overturn the 2020 election, yet for months, Senate Republicans refused to allow him to testify about what he found.\n \nI look forward to hearing what Mr. Smith has to say on Tuesday."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwekvvnxdk2m",
+     "text": "Thousands are caught in Trump’s indiscriminately violent immigration enforcement dragnet.\n\nThis must stop. Today, I am introducing the Immigration Warrant Reform Act to prevent these due process violations."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwep22x5es22",
+     "text": "The right to vote is at the very core of our nation’s democracy, and we must reject President Trump’s continued attacks on that fundamental right."
+    },
+    {
+     "date": "2026-09-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwgk6iq3fc2d",
+     "text": "The illegal power grab by Donald Trump continues. The real question is whether my Republican colleagues will finally find their collective backbone and do something about it."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwlpllvrpk2c",
+     "text": "The White House gutted SNAP and Medicaid but somehow found money in the budget to pay for ads like this.\n \nWhat a waste of taxpayer dollars."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwmdbmij6225",
+     "text": "I joined several Senate Democrats in demanding the Trump Administration abandon any plan to exert political control over NIH’s grantmaking process. \n\nI urge my Republican colleagues to follow suit and work with us to protect science-based medical research."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwmhippomc2k",
+     "text": "Donald Trump lost the 2020 election.\n \nJack Smith investigated his efforts to illegally overturn those results.\n \nFinally, Mr. Smith will have the opportunity to testify tomorrow before the Senate Judiciary Committee about what he found."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwmoodr7y22j",
+     "text": "By an overwhelmingly bipartisan vote of 96-1, the Senate adopted an amendment that @baldwin.senate.gov and I championed. This amendment improves the Protect College Sports Act by preserving legal recourse for athletes."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwnyvrjm522y",
+     "text": "Nearly one year ago, Jack Smith volunteered to testify under oath before the Senate Judiciary Committee.\n\nFinally, today, he will have that chance.\n\nEnough baseless conspiracy theories. Enough sham hearings. Time for answers about President Trump’s efforts to break the law."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwnzudlo7s2y",
+     "text": "Listen to former Special Counsel Jack Smith’s testimony: “Our investigation developed proof beyond a reasonable doubt that President  Trump engaged in serious crimes against our nation.”"
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwo7iqafms2k",
+     "text": "Jack Smith deserves an apology for these baseless and FALSE accusations of perjury by my Republican colleague."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwor4gshuc2g",
+     "text": "Whether you’re a North or South Sider, there is something for everyone in Chicago to be excited for tonight as the Cubs and White Sox kick off the MLB postseason!\n\nBest of luck to both teams as they start their playoff runs and represent our great city."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwqvdzg5dc2i",
+     "text": "Congratulations to U of I Professor Kaiyu Guan and UChicago Professor Vincenzo Vitelli, both of whom just received the MacArthur Foundation’s “genius grant”!"
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwqvjct7ws2i",
+     "text": "Senate Republicans put forward a stock trading bill that does NOT adequately ban Congressional stock trading. \n\nAND it includes a sweeping voter suppression measure.\n\nSenate Democrats just blocked both. The American people need real action, not meaningless messaging."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwqwgnu5ek2q",
+     "text": "AI data centers should pay for the upgrades to the electric grid they need. Not ratepayers. \n \nSenate Republicans’ Ratepayer Protection Act does nothing to establish this requirement.\n \nSenate Democrats just blocked this Big Tech distraction. Americans need real action, not Republican messaging."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwqz5prjnc2b",
+     "text": "After reassigning FBI personnel from cybercrime to focus on the Trump Administration’s mass deportation agenda, the Bureau experienced a massive cybersecurity breach.\n\nCongress needs answers. What is the FBI doing to ensure a cyberattack like this never happens again?"
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwszd6iqts2p",
+     "text": "I joined @duckworth.senate.gov, @padilla.senate.gov, & @schiff.senate.gov to introduce the National Archives Protection Act, a new bill that would ensure archival records, and the history they preserve, remain an accessible resource."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwtcq2smk22q",
+     "text": "How many more failed executions must take place before this cruel practice is consigned to the dustbin of history?\n\nTo paraphrase Supreme Court Justice Harry Blackmun: we must no longer tinker with the machinery of death."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwthobjo4s2k",
+     "text": "Dreamers are our neighbors, our friends, our coworkers.\n \nIt has been one of the great privileges of my life to fight for their protection under the Dream Act, and it was my honor to join @unitedwedream.org last night to celebrate the 25th anniversary of its introduction."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwti5hpesk2x",
+     "text": "The Administration that commits a Watergate-level scandal nearly every day is looking to further absolve President Nixon of his Watergate crimes."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwtjtmmkr22x",
+     "text": "Under the Trump Administration, nearly three people are dying each month in ICE custody—demonstrating just how dangerous immigration detention has become under this Admin.\n \nThere must be accountability."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwtmcclo3c2x",
+     "text": "The Trump grift continues. \n\nCould his corruption be any more obvious?"
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwtpw3xpqk2x",
+     "text": "Why would ICE hide the medical reports of people who died in its custody? Because they show that many of those who died were medically neglected by the agency responsible for their care.\n \nThese damning reports display the extent of ICE’s callous cruelty."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mwvz7g3jz22p",
+     "text": "I’m honored to receive the Distinguished Service Award from the Illinois Health and Hospital Association today. \n\nIHA and our hospital leaders are doing all they can to provide quality care to Illinoisans, and it’s been a privilege to be their partner in that effort."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mww4xfpejc2b",
+     "text": "I joined @duckworth.senate.gov & @budzinski.house.gov to urge the Senate and House Armed Services Committees to add language in the FY27 NDAA that pauses any plans to deactivate the 183rd Wing’s CRF mission without a deployable replacement mission."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxa66jtjik2t",
+     "text": "Honored to accept the inaugural Lifetime Achievement Award from the FBA Chicago Chapter. \n\nI have taken the responsibility of recommending judicial nominees to the President very seriously, and I’m proud that the federal bench in Illinois today is more diverse and highly qualified than ever."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxaavvkrpk2c",
+     "text": "Children and teenagers, parents and teachers—these are the American citizens that ICE has detained under Trump.\n\nTheir cruel mass deportation campaign makes all of us less safe and threatens the very freedoms our nation was founded on."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxc65kve7c2p",
+     "text": "It has been three years since the horrific October 7 terrorist attack on Israel by Hamas. I pray that out of the pain and ashes of this atrocity comes a renewed focus on the future and a world that allows Israeli and Palestinian children to once and for all live together in peace and dignity."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxclaeo75k2q",
+     "text": "So much for Trump’s “Golden Age” of economic opportunity.\n \nInflation is up more than 5% since he returned to the White House.\n \nWhether it’s the President’s tariffs, war with Iran, or cuts to health care and food assistance, his Administration is making it harder for you to afford the basics."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxeogkpwks2a",
+     "text": "Jack Smith deserves an apology from my Republican colleagues who falsely accused him of perjury.\n \nThis shameful episode demands an explanation.\n \nThat starts by providing Senate Judiciary Democrats with documents that Republicans withheld before Smith’s hearing—in violation of Senate rules."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxfebasjek2l",
+     "text": "Cassidy Hutchinson displayed true courage when she testified about how Trump incited a deadly mob to attack the Capitol. \n \nThe President’s targeting of her shows yet again that he’s more concerned with imprisoning his opponents than the cost-of-living crisis impacting Americans across the country."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxffhbgxb22l",
+     "text": "Illinois families need federal assistance to recover from August’s storms, yet like a toddler throwing a tantrum, Donald Trump refuses to grant it.\n \nI support @govpritzker.illinois.gov's appeal of Trump’s decision and will do whatever I can to support Illinoisans in the aftermath of these storms."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxh2gelygc24",
+     "text": "The Srebrenica massacre was genocide and an atrocity that must never be allowed to take place again.\n \nYesterday, I joined @shaheen.senate.gov to visit the Srebrenica Memorial Center to pay our respects and remember the victims of this tragedy."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxhggy3rhs2c",
+     "text": "Public executions have no place in a democracy.\n \nWe as a nation cannot stoop to the level of the people we seek to punish."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxhptzyfuk24",
+     "text": "Today, I called on the Inspector General at DOJ to investigate why the FBI modified its hiring standards to allow those who stole from an employer, paid for sex, and engaged in bestiality to work for the Bureau.\n \nIf Kash Patel won’t give us answers on these hiring changes, we need someone who will."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxhquudjjs24",
+     "text": "After Trump’s war with Iran caused oil prices to spike, the President is now considering bankrolling Russia’s slaughter of Ukrainian civilians.\n\nLifting sanctions on Russia will only fuel Putin’s war machine and prolong the conflict in Ukraine."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxokr7eubc24",
+     "text": "Today is Indigenous Peoples’ Day—a day where we reflect on the many contributions Native Americans have made to our nation as its first inhabitants. May we continue to celebrate and honor indigenous peoples’ cultures, histories, and legacies today and every day."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxru6dawtk2q",
+     "text": "I joined my colleagues in urging President Trump to rescind his recent agreement allowing Russian-origin diesel fuel into global markets. \n \nThis deal will offer little to no relief to Americans struggling with high energy costs, and instead help finance Putin’s horrific attacks on Ukraine."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxu25rulgs2s",
+     "text": "September’s inflation report confirms what we already know, that President Trump’s bungled war with Iran is behind the outrageous increase in the cost of living over the past few months.\n \nAmericans need an end to these price hikes, not endless wars in the Middle East."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxwjvhz3bs25",
+     "text": "I’d like to extend my deepest gratitude to the men and women of the Mount Prospect and Palatine police departments who thwarted this horrific mass shooting plot.\n\nHate has no home in Illinois, and this incident is a reminder that we must remain vigilant against prejudice and bigotry."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxwvztzhhk2h",
+     "text": "Over the last year, DOJ and the FBI have seized ballots, threatened election officials, and worked with DHS in an attempt to undermine the election administration powers of states.\n\nI joined my colleagues to press both agencies to provide a full accounting of these efforts. (1/2)"
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxyz5uy6wc2d",
+     "text": "The disruption of Starshield systems will only prolong Putin’s brutal war in Ukraine and puts American personnel at risk.\n \nI joined a bipartisan group of colleagues to demand the DOD Inspector General immediately investigate this restriction on Ukraine’s ability to defend itself."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxzb3bub5s2d",
+     "text": "America must stand with Ukraine, not the Russian war criminal, Vladimir Putin.\n \nDonald Trump’s decision to buy Russian gas and limit the sharing of critical intelligence with Ukraine is an abandonment of our ally and will cause more violence and bloodshed."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mxzew3edpc2d",
+     "text": "Navy Pier is a Chicago icon and an incredible a source of entertainment for Illinoisans and visitors alike.\n \nIt has been my pleasure to advocate for federal investments for Navy Pier while in Congress, and I was honored to be recognized at their annual gala last night."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3my63xanfys2d",
+     "text": "I just returned from a CODEL to the Balkans, where I met with Balkan leaders and citizens to discuss how America has served as a force for peace in the region.\n \nAs China and Russia attempt to obtain a foothold in the region, America must remain steadfast in our engagement with our Balkan friends."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myaw5zsuns2d",
+     "text": "Any negotiations about the future of Ukraine after years defending against Russian assault must include Ukraine. Ukraine has earned its freedom and right to determine its future—which are not for President Trump to sell out to Putin and Xi because his half hearted efforts to end the war have failed."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mycwshvddc26",
+     "text": "Pleased to join @duckworth.senate.gov today in announcing that IDOT will receive more than $12 million to support the Southern Illinois Truck Parking Expansion Project. \n\nTruck drivers keep our economy moving, and they deserve safe, reliable places to rest while on the road."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myd3jqkqzs2b",
+     "text": "People continue to die at the hands of ICE’s negligence. This agency is failing the people in its custody.\n \nWe must hold this Administration accountable."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mydf52lwqk2e",
+     "text": "The great Justice Stevens taught me that government has the duty to treat every person fairly, and I have carried that sentiment with me throughout my Senate career. \n\nIt’s a privilege to receive the Chicago Bar Association's Justice John Paul Stevens Award in his honor."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myfggvbtis22",
+     "text": "While I am pleased Russia finally released Stephen Hubbard, he never should have been jailed in the first place.\n\nCalling the war criminal Vladimir Putin a “humanitarian” is a disgrace to the tens of thousands of Ukrainian soldiers and civilians that Putin has killed as part of his brutal war."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myfusxmbmc2e",
+     "text": "It was a pleasure to be part of Southland RISE’s Grantee Showcase and receive recognition for the Chicago HEAL Initiative. \n \nThanks to this partnership, our city is more resilient, and we’re shaping a better future for our kids."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mygbt2d3ac2o",
+     "text": "MxD is consistently at the forefront of digital manufacturing, and I was honored to join their annual Member Summit today to speak about Illinois’ leadership in technologies of the future."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myigtwz4dc2l",
+     "text": "I joined Sen. Grassley in urging Secretaries Hegseth and Rubio to immediately obligate Congressionally appropriated funding for the Baltic Security Initiative.\n\nIn light of intensifying Russian aggression against the Baltics, accelerating the delivery of assistance under the BSI must be a priority."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mykyyac3x225",
+     "text": "What has happened to Jose is a tragedy. He should be released immediately and allowed to return to his family in Paris. As the son of an immigrant myself, I have been profoundly disturbed by Republicans’ blind support of President Trump’s cruel mass deportation campaign."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mylco4njkk2h",
+     "text": "This baseless lawsuit is yet another attempt by the Trump Administration to sow fear and chaos in this upcoming election."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myrv7kl2yk25",
+     "text": "I was pleased to host Maria Corina Machado, whose coalition soundly won the 2024 election, at the United States Capitol earlier this year. Her return to Venezuela is welcome news that should decidedly move the country toward a clear path to free & fair elections next year."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myrytayidk2k",
+     "text": "Last week, I had the pleasure of attending the South Side Community Art Center’s Beam Raising Celebration. Since 1940, the Art Center has been a beacon of creativity and community in Chicago that celebrates Black artists and their contributions, and this expansion will continue to honor its legacy."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mysh4d5ns22e",
+     "text": "ICE is not doing enough to protect the immigrants in its custody. Its negligence is killing people and tearing families apart. This Administration must answer for its role in this travesty."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mysmzwxcis2s",
+     "text": "Today, I attended a ribbon cutting to celebrate the reopening of the Reas Bridge in Decatur. \n\nI’m proud to have played a part in securing funding for this reconstruction project that will make traveling through Macon County safer and more efficient."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myuzaj5dc22o",
+     "text": "I had the honor of visiting the newly opened Austin HOPE Center, a remarkable facility with high-quality pediatric and behavioral health services. \n\nThanks to the HOPE Center, children and families living on the West Side of Chicago have a welcoming space to seek care and community-based services."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myxa5pkdn22y",
+     "text": "60+ people have died in ICE detention since President Trump took office again last year.\n\nWe must hold this Administration accountable for their cruel and inhumane practices."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myxne2ptrc2w",
+     "text": "Today marks the eighth month of Trump’s war with Iran—and eight months of false promises, higher gas prices, and instability in the Middle East. The President has failed in his stated objectives in this conflict, and the American people are paying the price."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myxztuif5k2y",
+     "text": "I was honored to receive a rebozo today from Mujeres Latinas while we discussed how we can continue to serve survivors, Latinas, and their families. I have been proud to support Mujeres Latinas’ important work, and I look forward to seeing how they will continue to empower survivors in the future."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myzpb5ywxk2t",
+     "text": "Assault weapon bans work, & states and localities should have the ability to enact them if they choose.\n\nI led my Democratic colleagues in submitting an amicus brief to the Supreme Court urging the justices to uphold the constitutionality of these responsible restrictions on military grade weaponry."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3myzwbofcic2t",
+     "text": "Together with former Congresswoman Cheri Bustos and @duckworth.senate.gov, we secured a $23.7 million grant for East Moline’s downtown revitalization project, & today I attended its ribbon cutting. This initiative will breathe new life into this town, & I am pleased to see it near completion."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mzdt6un26c2u",
+     "text": "Sending my best wishes to my friend and colleague, @chrismurphyct.bsky.social, for a quick and full recovery. Loretta and I will be keeping him and his family in our prayers."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mzdttin6vk2c",
+     "text": "ACA Marketplace open enrollment is live now through December 15! \n\nIllinoisans and their families can explore their health insurance options for the next year by visiting getcovered.illinois.gov"
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/durbin.senate.gov/post/3mzdyvjluec2s",
+     "text": "My heart is with the Bloomington community today after an incident of senseless gun violence took a young woman's life & injured many others. \n \nIn this tremendous grief, we must recommit ourselves to ending the gun violence epidemic & providing safety & security to everyone, especially students."
+    }
+   ]
+  }
+ ]
+}

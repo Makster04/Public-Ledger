@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "takano",
+ "name": "Mark Takano",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.marktakano.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.marktakano.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108211630/https://www.marktakano.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108211630/https://www.marktakano.com/",
+     "original": "https://www.marktakano.com/",
+     "date": "2022-11-08",
+     "title": "Home - Mark Takano 🍎 for Congress",
+     "text": "## Meet Mark Takano\nAfter more than 20 years as a classroom teacher, in 2012 Mark Takano was elected to represent Riverside, Moreno Valley, Perris and Jurupa Valley in the United States Congress. In Congress, Mark works to advance local priorities: creating good-paying jobs, keeping local families in their homes, improving public education, and honoring the service of our veterans. He will never stop fighting to protect Medicare and Social Security, and strengthen America’s middle class.\n## On the Issues\nImproving Our Economy\nIn Congress, Mark Takano works every day to bring good-paying jobs to the Inland Empire.\nMark Takano will always stand up for America‘s veterans, to ensure that they receive the benefits they have earned.\nA public school teacher for more than 20 years, Mark Takano is leading the charge in Congress for better schools.\nJoin Mark’s grassroots team and our movement to bring real change to the Inland Empire.\nYour support today will help Mark keep fighting for our region's priorities in Congress.\n## The Latest\nRT @CA_Dem : Mayor @PeteButtigieg , Congressmember @MarkTakano , and Additional Special Guest Speakers to Join CADEM During a Vete https://t.co/8JD4zqkFNT\n1 year ago | @MarkTakano\nLets be clear about what happened last night: America rejected Trump and his politics of hateful division. When al https://t.co/bqrMXadkBh\n2 years ago | @MarkTakano\nThese homophobic tactics are not new. In the 90s, I was subject to homophobic smears during my campaign.Im happy https://t.co/O6SXu2WK6g\n2 years ago | @MarkTakano\nThe @NRCC wants its conservative allies to launch homophobic attacks against @GinaOrtizJones . Theyre choosing bigo https://t.co/VzMtnaSQP7\n2 years ago | @MarkTakano\nRT @HRC : HRC brought elected officials & candidates together to discuss the importance of pro-equality voteswatch as two po https://t.co/6gBVXa7O2k\n2 years ago | @MarkTakano\nThis is our moment to make hope and history rhyme - @JoeBiden quoting Seamus Heaney tonight in his acceptance spee https://t.co/kLtcFs1PqK\n2 years ago | @MarkTakano\nIts official! @JoeBiden is the Democratic nominee for President of the United States.Onward to victory in Novemb https://t.co/weXTqNsGgr\n2 years ago | @MarkTakano\nClimate action is on the ballot this November. #DemConvention\n2 years ago | @MarkTakano\nCongratulations to @KamalaHarris , the Democratic nominee for Vice President of the United States.This is a histor https://t.co/mM4K1RB8Yx\n2 years ago | @MarkTakano"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.marktakano.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105062109/https://www.marktakano.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105062109/https://www.marktakano.com/",
+     "original": "https://www.marktakano.com/",
+     "date": "2024-11-05",
+     "title": "Mark Takano",
+     "text": "## Meet Mark .\nFor more than thirty years, Mark Takano has worked to improve the lives of Riverside County residents as a high school teacher, a college trustee, and now as a Member of Congress.\nBorn and raised in Riverside, Mark's commitment to public service began at an early age. His family roots in Riverside go back to his grandparents who, along with his parents, were removed from their respective homes and sent to Japanese American Internment camps during World War II. After the war, these two families settled in Riverside County to rebuild their lives…[ READ MORE ]\nMark proudly represents California's 39th district located in the heart of the Inland Empire. Support his re-election today!\nFor the latest from the campaign trail, follow us on social media.\n## CONNECT .\nThank you for signing up to received updates from Mark Takano for Congress!"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.marktakano.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103094022/https://www.marktakano.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103094022/https://www.marktakano.com/",
+     "original": "https://www.marktakano.com/",
+     "date": "2026-11-03",
+     "title": "Mark Takano",
+     "text": "## Meet Mark .\nFor more than thirty years, Mark Takano has worked to improve the lives of Riverside County residents as a high school teacher, a college trustee, and now as a Member of Congress.\nBorn and raised in Riverside, Mark's commitment to public service began at an early age. His family roots in Riverside go back to his grandparents who, along with his parents, were removed from their respective homes and sent to Japanese American Internment camps during World War II. After the war, these two families settled in Riverside County to rebuild their lives…[ READ MORE ]\nMark proudly represents California's 39th district located in the heart of the Inland Empire. Support his re-election today!\nFor the latest from the campaign trail, follow us on social media."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

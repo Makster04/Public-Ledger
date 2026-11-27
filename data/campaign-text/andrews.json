@@ -1,0 +1,397 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "andrews",
+ "name": "Annie Andrews",
+ "built": "2026-11-26",
+ "sites": [
+  "https://drannieandrews.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://drannieandrews.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-04",
+    "url": "https://web.archive.org/web/20221104214135/https://www.drannieandrews.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221104214135/https://www.drannieandrews.com/",
+     "original": "https://www.drannieandrews.com/",
+     "date": "2022-11-04",
+     "title": "Home | Dr. Annie Andrews for Congress",
+     "text": "## JOIN ANNIE'S TEAM\nThanks for submitting!\n## MEET DR. ANNIE ANDREWS\nDr. Annie Andrews is a Professor of Pediatrics at the Medical University of South Carolina (MUSC) in Charleston and has been a pediatrician at MUSC since 2009. She cares for children and adolescents from all over the Lowcountry at the MUSC Shawn Jenkins Children’s Hospital. There she also developed and directed the Advocacy Curriculum for the Department of Pediatrics.\nShe is a gun violence prevention researcher and community advocate working to reduce the frequency of pediatric firearm injuries with a focus on secure storage counseling and gun safety education in the community. She is an active volunteer with Moms Demand Action, the largest grassroots gun violence prevention organization in the country. She is a frequent invited speaker at Children’s Hospitals and Medical Schools across the country on topics related to child health advocacy and gun violence prevention. She is a member of the South Carolina chapter of the American Academy of Pediatrics and the Charleston County Medical Society. She serves on the Charleston County Medical Society School Health Committee which advises the Charleston County School District on matters related to child health. She is an appointed member of the City of Charleston Mayor’s Health and Wellness Committee and a member of the Fall Lowcountry cohort of the Furman University Riley Institute’s Diversity Leaders Initiative.\nShe received her MD from the University of Cincinnati College of Medicine and went on to complete her residency training in Pediatrics at Cincinnati Children’s Hospital Medical Center.\nShe is married to Dr. Charlie Andrews, a Neurological Critical Care doctor at the Medical University of South Carolina. They have three incredible kids – Gracie, Henry, and Evelyn. They reside in Mount Pleasant.\nDr. Annie Andrews is an Associate Professor in the department of Pediatrics at the Medical University of South Carolina (MUSC) where she also performs clinical work as a Pediatrician at MUSC Health - Charleston. MUSC, neither directly or indirectly, endorses the campaign of Dr. Andrews and the views expressed by Dr. Andrews do not represent the views of MUSC or its affiliates.\n## WHY I'M RUNNING\nI have known since I was in preschool that I wanted to be a doctor. And from the first day I stepped foot in a Children’s Hospital, I knew I was going to be a pediatrician. I have served children and families in the Lowcountry as a pediatrician at the Children’s Hospital since 2009. I am privileged to care for children from all backgrounds. No matter their race, ethnicity, or socioeconomic status, I am honored to help them on some of their hardest days. Along with that great privilege comes a front row seat to the consequences of failed policies. I see children who go to bed hungry, children who sit in under-funded schools with under-paid teachers, children who don’t have access to the internet in their homes, children who hear gunshots on the street as they try to fall asleep at night, children whose parents are terrified that their hospital bill will plunge them into poverty. I believe it is my duty as a pediatrician and community member to advocate for these children and their families. It was never part of my plan to run for Congress. I love being a doctor. But I am frustrated with the politics in Washington, DC. Governing shouldn’t be about scoring political points or toeing the party line. Governing should be about helping people. I truly believe that if we work together, we can lift each other up and no one is more deserving of that than the children of our communities. I am running for Congress to solve real problems for the people of the Lowcountry.\n## HELP ANNIE MAKE A DIFFERENCE\nWCBD News 2\n- 1 day ago\nDr. Annie Andrews participates in early voting\nDr. Annie Andrews participates in early voting on November 1, 2022.\nKaty Solt, ABC News 4\n- 1 day ago\nAnnie Andrews talks abortion, inflation and guns with ABC News 4 ahead of election\nABC News 4 is going beyond the podium and sitting down with candidates one more time before Election Day. Today, we are talking with Dr....\nDr. Annie Andrews, The State\nNancy Mace is lying about Parris Island again, ignoring the real threat that could close it\nOnce again, Nancy Mace is lying about Parris Island. She released a new television ad last week claiming that “Washington is trying to..."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215846/https://www.drannieandrews.com/issues",
+     "original": "https://www.drannieandrews.com/issues",
+     "date": "2022-11-04",
+     "title": "Issues | Dr. Annie Andrews",
+     "text": "## INFRASTRUCTURE AND FLOODING\nFew districts in America understand the need for modern and resilient infrastructure more than South Carolina’s First District. The Lowcountry’s unique challenges stem from unprecedented growth, a booming port, climate change causing sea level rise, and near-constant flooding. We are in desperate need of federal support to fund our wide array of infrastructure needs. That’s why I supported the recently-passed bipartisan, federal infrastructure bill that sent over $6 billion to South Carolina. Unfortunately, our representative, Nancy Mace, voted against this critical funding package. I believe infrastructure should be a nonpartisan issue that requires a non-partisan approach. As our next Congresswoman, I will fight for every penny I can to continue to modernize and rebuild the Lowcountry’s roads, bridges, ports, high-speed internet, and overall infrastructure resiliency.\n## HEALTHCARE\nAs a practicing pediatrician, the issue of healthcare access and affordability is personal to me. I will never forget a young boy I admitted to the hospital on New Year’s Eve. After several difficult days in the hospital, he was diagnosed with a life-threatening illness that required a bone marrow transplant. One day his mom approached me in the hospital hallway with an urgent question. I was expecting a question about his medical care but rather she asked me if I could recall signing his admission order before or after midnight on New Year’s Eve. She had just gotten off the phone with her insurance company and was told that if this lengthy, expensive hospitalization officially started before midnight, their bill would be significantly lower because they would have already met their deductible. If his admission began in the New Year, they’d be forced to pay much more out of pocket. What a devastatingly shameful window into a healthcare system run by insurance and pharmaceutical companies. It is unacceptable that this mother had to worry about the cost of care while her son’s health was in danger. I believe that no one in the United States should go broke because they or their child got sick.\nEach day in the hospital I talk with families devastated by out-of-control medical bills, unaffordable prescription drug prices, and lack of access to care. I believe everyone deserves quality, affordable healthcare. As a practicing pediatrician, I saw the direct, positive effects of the Affordable Care Act on Lowcountry residents almost immediately after it passed. Teenagers with chronic conditions like Sickle Cell Disease who no longer had to worry about losing their insurance on their 18th birthdays. Young mothers who could access breast pumps through their insurance benefits. And fewer patients who fell into the gap of not being able to afford private insurance, but not being eligible for Medicaid.\nWe have so much work to do to improve the healthcare system in the US. We must put every American’s health over profits for insurance and pharmaceutical companies. States like South Carolina are getting left behind because we did not expand Medicaid.\n## GUN VIOLENCE\nWhen I decided to become a pediatrician, I could have never imagined the number of children with bullet holes I would care for in my career. I will never forget the image of the 3 year old, sitting alone in her hospital room, with her babydoll next to her, looking up at me with her one good eye. Her brother had found a gun at home and unintentionally shot her in the face. She lost her eye and her face was disfigured.\nA few days after the tragic shooting in Parkland, FL, I was dropping my oldest daughter off at kindergarten. I watched as she marched into the building with her bright pink backpack on. Then I saw the armed, uniformed police officer patrolling the drop off line. I was terrified for my own child’s safety in her school. I called my elected officials as soon as I got home and was deeply disappointed in the responses I received. There was clearly no plan to ensure our kid’s safety.\nCongress has failed to pass gun laws that reflect the will of the vast majority of Americans and, as a mother, I was not willing to sit idly by while the gun lobby wrote our laws. I was compelled to act and joined Moms Demand Action for Gun Sense in America. As a pediatrician, I was horrified to learn that gun violence is the leading cause of death for children in this country, but I knew that I could use my voice to accelerate change in my community. I led a team that implemented secure firearm storage counseling at children’s hospitals in Charleston. I have no doubt that the work we continue to do, educating families on secure firearm storage and providing gun locks to families who need them, has saved lives. But it isn’t enough.\nWe need background checks on all gun sales, a federal secure storage law, and we need federal funding for Hospital Based Violence Intervention programs. I support the Bipartisan Safer Communities Act, but I believe we need to go further and enact a federal red flag law to keep guns out of the hands of people who would use them for harm. We also need to raise the minimum age to purchase an assault weapon from 18 to 21. Our failure to act on this urgent public health crisis is something we should all be ashamed of. Our kids deserve better, we all deserve better.\nMake no mistake, I support the second amendment. If you are a law-abiding gun-owner, I have no interest in your guns. Frankly, I have never been particularly interested in a conversation about guns, but I am interested in a conversation about bullet holes in children, and what we can do to prevent them. I will carry the stories of my patients with me and I will never stop fighting for common sense gun laws.\n## WOMEN'S RIGHTS\nIt is not the government’s place to tell women what they can and cannot do with their bodies. Those decisions should be left to women and their medical providers. Without reproductive freedom, women will never achieve gender equality. As a pediatrician, I have seen the impossible decisions parents face when receiving devastating fetal diagnoses during pregnancy. I have also seen families under severe economic strain when they lack access to affordable contraception and therefore don’t have the luxury of family planning. And as a mom, I have experienced firsthand the benefits of growing our family on our own terms. As a Congresswoman, I will fight for Lowcountry women to have access to necessary, life-saving medical care and do everything I can to ensure that Washington politicians do not have a say in the reproductive decisions of women.\nI support the Women’s Health Protection Act. I support guaranteed access to abortion services up to the point of viability, which is generally defined as 24 weeks. I will fight to eliminate government mandates that do not align with evidence-based medicine and exist solely to restrict abortion access, such as unnecessary ultrasounds, waiting periods, and misleading information regarding abortion.\nOnce a fetus is viable, I believe that abortion access must be available if a medical provider determines–in good faith and based on current medical standards–that continuing the pregnancy places the life or health of the mother at risk, or if the fetus cannot survive outside of the womb. These situations are incredibly rare and incredibly painful for the families involved, and our government should not have a say in that decision.\n## CLIMATE CHANGE\nClimate change is real and it is human-made. The science is settled. That is a reality that our current representative will not admit. The Lowcountry cannot afford to have a climate denier as our representative in congress. We should be leading on this issue. While Nancy Mace refuses to believe the overwhelming science confirming climate change’s existence, I will be a representative who focuses on solutions to this crisis. Climate change is causing higher air and water temperatures, rising sea levels, more frequent extreme weather events and stronger hurricanes. I believe we must pass federal legislation banning offshore drilling and seismic airgun blasting off the South Carolina coast, something Congresswoman Mace opposes, and make substantial investments in clean and renewable energy to reduce carbon emissions while also creating jobs. We must also make an ambitious but realistic goal to wean ourselves off of fossil fuels and transition to clean energy within the next twenty years. We must turn the climate change crisis into an economic opportunity for South Carolina but that is only possible with a representative who believes that it is real and that it requires action. Nancy Mace does not, but I do.\n## VOTING RIGHTS\nOur democracy is under attack. States all across the country are taking unprecedented steps to roll back voting rights and implement archaic and destructive laws to make it harder to vote - particularly for minority communities. That is unacceptable and unAmerican. That’s why I was so disappointed that Nancy Mace voted against the reauthorization of the Voting Rights Act as well as the “For The People Act” and the “Freedom to Vote Act,” which protects and expands voting rights, gets dark money out of politics, ends gerrymandering and cracks down on corruption. I believe we must expand early voting, implement automatic voter registration, and take common sense steps to strengthen the public’s faith in our elections.\n## FISCAL RESPONSIBILITY\nI believe the federal government should operate under the same rules as most Lowcountry families: don’t spend more than you take in. That’s why I am a firm believer in implementing a Pay-As-You-Go policy to prevent Congress from adding to the deficit. I also support a balanced budget amendment in order to tackle our nation’s obscene national debt. Our middle and working class families don't have big, fancy lobbyists and attorneys fighting for them in Congress like Jeff Bezos and Elon Musk. I will fight for the underpaid teachers who have continued to teach our kids despite the pandemic, for the healthcare workers that put their lives on the line to protect the lives of so many more, and the cops and firefighters who live paycheck to paycheck.\nBillionaires don’t need any more giveaways. We must focus on solutions to make life more affordable for hard-working Americans while making it harder for billionaires to skirt their taxes.\n## FIGHTING CORRUPTION\nI support term limits for every member of Congress - three terms for the House, two terms for the Senate. If career politicians were good for democracy, we would have the most functional congress ever. But we don’t. And it’s time to change that.\nI also support a ban on members of Congress trading stocks. Congress shouldn’t be a place you go to get rich with classified and privileged information. Our elected officials should be finding ways to make YOUR economic situation better, not their own.\nAnd I support a lifetime ban on members of Congress becoming lobbyists. Too many people (like my opponent) see Congress as a stepping stone to their next job. Being in Congress should be a public service, not a pathway to wealth.\n## EDUCATION\nI am a proud public school parent and the daughter of a special education teacher. Growing up I saw the dedication and hard work my mother put into her job and her students. I have witnessed the same with my children’s teachers. Teachers need support. I believe we need to fully fund our public education system so that every teacher has the support they need to give every student the education they need to succeed.\nFor too long, our education system has suffered because politicians think they know better than teachers and parents, or because they only bring up education when they need to score cheap political points. As a Member of Congress, I will listen to teachers, parents, and students, and make decisions based on what they tell me is best for them. I will not support banning books and will not be distracted by talking points about critical race theory, something that is not currently taught in any South Carolina schools. I support teaching our children a complete and accurate portrayal of American history.\nThe politicization of our education system and the vitriol that has been injected into our schools must end. We should trust our teachers to do the job they are trained to do and encourage parental involvement at all levels.\n## CANNABIS\nOur archaic cannabis laws have done nothing to stop cannabis use. In fact, they have made our citizens less safe. These laws are disproportionately used to incarcerate people of color, and in South Carolina, a Black citizen is 3.5 times more likely to be arrested for low-level possession than a White citizen who uses cannabis at the same rate.\nI support full legalization of cannabis. Its medical benefits have been well-documented and patients with chronic pain deserve a safer and more effective alternative to dangerous and addictive opioids. Legalizing cannabis for recreational use would get illicit, laced cannabis off the street and provide a new stream of revenue for the federal government to use.\nNancy Mace’s cannabis bill would relegate cannabis laws to the states. That would have the same effect as the Supreme Court overruling of Roe v. Wade which left abortion laws to the states. Her bill would do absolutely nothing for South Carolina, where even medical marijuana is still prohibited.\nI will vote to legalize cannabis at a federal level so South Carolinians have the same rights as people in every other state."
+    },
+    {
+     "url": "https://web.archive.org/web/20221006012743/https://www.drannieandrews.com/post/annie-andrews-calls-on-nancy-mace-to-denounce-trump-s-plan-to-pardon-january-6th-traitors",
+     "original": "https://www.drannieandrews.com/post/annie-andrews-calls-on-nancy-mace-to-denounce-trump-s-plan-to-pardon-january-6th-traitors",
+     "date": "2022-10-06",
+     "title": "Annie Andrews Calls on Nancy Mace to Denounce Trump’s Plan to Pardon January 6th Traitors",
+     "text": "## Annie Andrews Calls on Nancy Mace to Denounce Trump’s Plan to Pardon January 6th Traitors\nDr. Annie Andrews, Lowcountry pediatrician and Democratic candidate for South Carolina’s First Congressional District, released the following statement calling on Rep. Nancy Mace to denounce Donald Trump’s plan to pardon the traitors behind the January 6, 2021 attack on the U.S. Capitol:\n“On Saturday, former President Trump promised to pardon the criminals who, in an act of domestic terrorism, violently stormed the United States Capitol, assaulted our police officers, and attempted to overturn the results of the 2020 election. Over 760 people have been arrested and charged with various crimes from their role in January 6th and more charges are undoubtedly on the way.\nToday, I am calling on Congresswoman Nancy Mace to stop her double-talk on January 6th and forcefully denounce Donald Trump's plan to pardon these violent traitors to our country.\nIn the Lowcountry, we support law enforcement and law and order. Any politician who would support pardoning the perpetrators of violent attacks on police do not deserve to hold any office, much less a seat in the United States Congress.\nCongresswoman Mace has taken so many positions on January 6th it's impossible to keep them all straight. It's time for her to clear the air and once and for all denounce Donald Trump and his insane plan to stand with violent criminals and against law enforcement.\""
+    },
+    {
+     "url": "https://web.archive.org/web/20220816152544/https://www.drannieandrews.com/post/dr-annie-andrews-asks-nancy-mace-if-she-agrees-with-governor-mcmaster-s-plan-to-ban-all-abortions",
+     "original": "https://www.drannieandrews.com/post/dr-annie-andrews-asks-nancy-mace-if-she-agrees-with-governor-mcmaster-s-plan-to-ban-all-abortions",
+     "date": "2022-08-16",
+     "title": "Dr. Annie Andrews asks Nancy Mace if she agrees with Governor McMaster's Plan to Ban All Abortions",
+     "text": "## Dr. Annie Andrews asks Nancy Mace if she agrees with Governor McMaster's Plan to Ban All Abortions\nDr. Annie Andrews asks Nancy Mace if she agrees with Governor McMaster's Plan to Ban All Abortions with No Exceptions\nToday, Lowcountry pediatrician and Democratic candidate for the First Congressional District Dr. Annie Andrews released the following statement calling on Rep. Nancy Mace to say whether she agrees with Governor McMaster’s plan to ban abortion with no exceptions:\n“Earlier this week, Governor Henry McMaster said if the Supreme Court overturned Roe v. Wade , he would call the legislature back into session to pass a total abortion ban with no exceptions for rape, incest, or life of the mother. The women of the First Congressional District deserve to know if Nancy Mace would support this radical policy. She has previously stated she would not support an abortion ban without exceptions. Is this still her position or has Katie Arrington scared her into reversing yet another position in hopes of saving her political career?”"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://drannieandrews.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102052448/https://drannieandrews.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102052448/https://drannieandrews.com/",
+     "original": "https://drannieandrews.com/",
+     "date": "2026-11-02",
+     "title": "Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## A Doctor. A Mom.\nA Fighter for South\n## Dr. Annie Andrews is a pediatrician and mom who has dedicated her career to fighting for a brighter future for all children. She’s running for the U.S. Senate to fight for the South Carolina families and kids who have been\nleft behind by Washington politicians.\n## Why I’m Running\nI’ve spent nearly twenty years caring for South Carolina’s children, from newborns with jaundice to teenagers struggling with mental health. And if there’s one thing I’ve learned, it’s that our kids’ health and wellbeing depends on the world we build around them.\nI’m running for the U.S. Senate because families are struggling in ways that we should never accept as normal.\nRead Our Platform\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102013555/https://drannieandrews.com/platform/",
+     "original": "https://drannieandrews.com/platform/",
+     "date": "2026-11-02",
+     "title": "Platform | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## A Doctor. A Mom. A Fighter for South Carolina Families.\nI’ve spent nearly twenty years caring for South Carolina’s children, from newborns with jaundice to teenagers struggling with mental health. And if there’s one thing I’ve learned, it’s that our kids’ health and wellbeing depends on the world we build around them.\nI’m running for the U.S. Senate because families are struggling in ways that we should never accept as normal. Whether it’s the cost of groceries, the price of child care, or access to affordable, quality healthcare, I see the impacts every day. It’s time for leaders who understand what’s at stake and are ready to fight for it.\nREAD ABOUT ANNIE’S PLANS:\n## EVERYONE DESERVES A FAIR SHOT\nI’m not a career politician. I’m a doctor, a mom, and someone who’s tired of watching families get left behind while Washington argues. Every child deserves a fair shot. Every family deserves a senator who actually cares.\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102014239/https://drannieandrews.com/issue/healthcare-is-a-right-not-a-privilege/",
+     "original": "https://drannieandrews.com/issue/healthcare-is-a-right-not-a-privilege/",
+     "date": "2026-11-02",
+     "title": "Healthcare is a Right, Not a Privilege | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## Healthcare is a Right, Not a Privilege\nI’ve sat beside parents who don’t know how they’ll pay for their child’s medication. I’ve seen hospitals close their doors and leave entire communities without care. Healthcare should be something every family can count on, not something you have to fight for.\nWashington has worked to slash Medicaid, roll back ACA subsidies, and gut funding for the Department of Health and Human Services. They’ve stood by while public health experts were pushed out of government and misinformation spread faster than a virus. Families are paying the price for that neglect.\nIn the Senate, I’ll work to:\n- Advocate for policies like a public option that expand access to affordable healthcare for all South Carolinians\n- Make mental health care easier to find and afford\n- Protect and expand Medicaid and Medicare\n- Lower the cost of prescription drugs\n- Defend and restore scientific research that leads to new cures\n- Strengthen vaccine access and public-health preparedness\n- Keep rural hospitals open\nEveryone deserves the peace of mind that if they or their child get sick, they can see a doctor without going broke.\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102014203/https://drannieandrews.com/issue/an-economy-that-works-for-working-people/",
+     "original": "https://drannieandrews.com/issue/an-economy-that-works-for-working-people/",
+     "date": "2026-11-02",
+     "title": "An Economy That Works for Working People | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## An Economy That Works for Working People\nI do the grocery shopping for my family. I’ve watched prices climb on everything from milk to eggs to bananas, while politicians in Washington do nothing. Families are doing everything right and still falling behind, while billionaires and corporations get special treatment. That’s not ok with me.\nI’ll fight to:\n- End tax breaks for the ultra-wealthy and corporate polluters\n- Raise wages and strengthen workers’ rights\n- Expand affordable child care and paid family leave\n- Bring back trade policies that protect South Carolina’s jobs and farms\nAn economy that works for families should not be controversial. It’s just common sense.\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102013252/https://drannieandrews.com/issue/strong-schools-affordable-child-care/",
+     "original": "https://drannieandrews.com/issue/strong-schools-affordable-child-care/",
+     "date": "2026-11-02",
+     "title": "Strong Schools & Affordable Child Care | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## Strong Schools & Affordable Child Care\nIf we want our kids to thrive, we have to give them a foundation that’s strong and safe. From early childhood through high school, families in South Carolina are doing their part, but Washington keeps short-changing our classrooms.\nWashington Republicans are all for budgets that squeeze public schools while handing tax breaks to the wealthy. That means fewer teachers, bigger class sizes, and fewer opportunities for our kids, especially in rural and working-class communities.\nI’ll fight to give every child a real shot by working to:\n- Invest in modern classrooms, technology, and school safety\n- Fully fund public schools and special education\n- Expand access to affordable child care and early learning\n- Raise pay for teachers and school staff\n- Protect and expand free and reduced-price school meals\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103060740/https://drannieandrews.com/issue/reproductive-freedom-trust-women/",
+     "original": "https://drannieandrews.com/issue/reproductive-freedom-trust-women/",
+     "date": "2026-11-03",
+     "title": "Reproductive Freedom: Trust Women | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## Reproductive Freedom: Trust Women\nAs a doctor and a mom, I’ve cared for women in some of the most difficult moments of their lives. I’ve seen what happens when politicians interfere with deeply personal medical decisions, and it’s devastating.\nRepublicans cheered on South Carolina politicians who are now pushing one of the most extreme bans in the country—one that would endanger women’s lives and criminalize doctors.\nThese decisions belong to women and families, not to politicians. I’ll fight to:\n- Restore the protections of Roe v. Wade\n- Guarantee access to contraception and infertility care\n- Expand maternal health services, especially in rural communities\nNo woman should have to leave her state or risk her life to get medical care.\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102013946/https://drannieandrews.com/issue/fighting-political-corruption/",
+     "original": "https://drannieandrews.com/issue/fighting-political-corruption/",
+     "date": "2026-11-02",
+     "title": "Fighting Political Corruption | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## Fighting Political Corruption\nPublic service is supposed to mean something. But Washington is full of people who forgot who they work for.\nI don’t take a dime of corporate PAC money. I’m not a career politician. I’m a doctor who believes the government should serve families, not donors.\nI’ll make government work for families again by:\n- Banning corporate PAC and dark money\n- Barring members of congress from trading stocks and getting rich off of insider information\n- Supporting term limits and stronger ethics rules\n- Protecting the right to vote and making elections fairer\n- Standing up to anyone, in any party, who puts power over people\nNo one should get rich off public service. It’s supposed to be about doing what’s right.\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103060425/https://drannieandrews.com/issue/an-end-to-gun-violence/",
+     "original": "https://drannieandrews.com/issue/an-end-to-gun-violence/",
+     "date": "2026-11-03",
+     "title": "An End to Gun Violence | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\n## An End to Gun Violence\nI’ve cared for children who survived shootings and met parents who didn’t get to take their child home from the hospital. Those are stories you don’t forget.\nWe can respect the Second Amendment and still protect our kids. That means:\n- Universal background checks\n- Banning weapons of war from our streets\n- Safe storage laws that prevent unintentional shootings and youth suicides\n- More funding for community violence prevention and mental health programs\n## If you've saved your information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102024741/https://drannieandrews.com/annie-andrews-unveils-plan-to-tackle-debt-rein-in-spending-cut-taxes-congressional-perks/",
+     "original": "https://drannieandrews.com/annie-andrews-unveils-plan-to-tackle-debt-rein-in-spending-cut-taxes-congressional-perks/",
+     "date": "2026-11-02",
+     "title": "ANNIE ANDREWS UNVEILS PLAN TO TACKLE DEBT, REIN IN SPENDING, CUT TAXES & CONGRESSIONAL PERKS | Dr. Annie Andrews for Senate",
+     "text": "## STAND WITH Dr. Annie ANdrews\nSep 21, 2026\n## ANNIE ANDREWS UNVEILS PLAN TO TACKLE DEBT, REIN IN SPENDING, CUT TAXES & CONGRESSIONAL PERKS\n“We’re not going to fix a $40 trillion problem overnight, but I’m not going to Washington to make excuses, rub elbows, or become part of the problem. I’m going there to get to work.” – Dr. Annie Andrews\nGREENVILLE, S.C. — Today, Dr. Annie Andrews unveiled her Taxpayer Pledge to South Carolina , a new 21-point plan to go after waste and fraud in DC, end taxpayer-funded perks for Congress, and protect South Carolinians’ hard-earned money.\n“Washington has spent decades running up the bill and expecting our families to pay for it,” said Dr. Annie Andrews. “Democrats spend billions on programs without asking whether they’re working, and Republicans waste billions on endless wars and handouts to big corporations.\n“Politicians in both parties spend our money while looking out for themselves — trading stocks while casting votes that can affect their value, collecting taxpayer-funded pensions, and enjoying perks the rest of us don’t get. It’s ridiculous, and it has to stop.\n“We’re not going to fix a $40 trillion problem overnight, but I’m not going to Washington to make excuses, rub elbows, or become part of the problem,” Dr. Andrews concluded. “I’m going there to get to work.”\nThe national debt hit a record $40 trillion this year — more than doubling in the last decade and amounting to roughly $117,000 for every American. For decades, both parties have spent beyond the government’s means and kicked the can down the road, leaving taxpayers with higher costs and interest rates that make it harder to buy a home, afford a car, or keep up with credit card payments.\nThat’s why Andrews released her Taxpayer Pledge — 21 commitments to rein in spending, cut waste and fraud, end special perks for Congress, and cut taxes for working families.\nAndrews’ new Taxpayer Pledge plan includes:\nEND THE GRAVY TRAIN FOR CONGRESS\n- End taxpayer-funded pensions and health care subsidies for members of Congress.\n- Ban members of Congress from trading stocks.\n- Stop congressional pay raises and block congressional pay during government shutdowns.\n- Impose term limits and crack down on members who misuse taxpayer dollars.\nGET SERIOUS ABOUT CLOSING THE DEFICIT\n- Require Congress to balance the budget and stop adding to the debt.\n- Cut waste, fraud, and abuse across the federal government.\n- End wasteful earmarks and hold government contractors accountable for wasting taxpayer dollars.\n- Oppose costly foreign wars and foreign government bailouts.\nCUT YOUR TAXES\n- Oppose tax increases on families making less than $500,000 a year.\n- Simplify the tax code and cut taxes for working families.\n- Make No Tax on Tips and No Tax on Social Security permanent.\n- End special tax breaks for data centers, companies that ship jobs overseas, private equity firms, and hedge funds.\n- Bring back free tax filing through the IRS.\nAfter traveling across the state on her “ Gas, Grits, and Groceries ” affordability tour, Andrews is building on that agenda with this new plan to tackle wasteful spending and shift power away from special interests and politicians in DC and back to working families across South Carolina. From the gas pump and grocery store to tackling the debt and wasteful spending, Andrews is the only candidate with plans to lower costs and make government work for South Carolina families."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-07-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mpkhtayrok24",
+     "text": "I sure am."
+    },
+    {
+     "date": "2026-07-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mpyv44vtik2b",
+     "text": "Believe women."
+    },
+    {
+     "date": "2026-07-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mqh4g3zlws2p",
+     "text": "I hope that South Carolinians will join me in setting partisanship aside and offering gratitude to Senator Lindsey Graham for his service to the great state of South Carolina."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mqjqtyhwxk2p",
+     "text": "Life is so much bigger than politics."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mrupjzyd4s2a",
+     "text": "Trump’s cuts are closing clinics, stripping coverage from tens of thousands, and pushing more people into the ER for basic care.\n\nWe should be lowering costs and expanding access — not making South Carolinians sicker. www.greenvilleonline.com/story/opinio..."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3ms7pm2kjak2f",
+     "text": "The SC Republican U.S. Senate debate just wrapped and let’s just say I am ready to debate any & all of them tomorrow. 🇺🇸"
+    },
+    {
+     "date": "2026-08-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3msvm7hgbyk2y",
+     "text": "Today, I sent a letter to Darline Graham and Ralph Norman challenging them to debate me in the Fall.\n\nSouth Carolinians deserve an honest conversation about where each of us stands — and who is prepared to deliver real results for the people of South Carolina.\n\nI’ll show up. Will they?"
+    },
+    {
+     "date": "2026-08-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3msvma4nw222y",
+     "text": "Easy choice, tbh 💅"
+    },
+    {
+     "date": "2026-08-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3msvqgmsblk2w",
+     "text": "More South Carolinians voted for me in June than voted for ̶N̶o̶r̶d̶o̶n̶e̶ ̶ Graham and Norman combined.\n\nThis state is ready for change."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mtffnavn3223",
+     "text": "Darline Graham Nordone is asking for six years as South Carolina’s senator — during wartime — yet has the gall to tell voters “national security isn’t her thing.”\n\nSouth Carolina deserves better."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mtx4irlf422r",
+     "text": "The field is set and I’m ready to bring this election home."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mtyfzhwsxc2m",
+     "text": "WATCH: South Carolinians are ready for change and need a fighter in Washington who is on their side.\n\nThis 30 second ad is the first in a series of ads that will air for the next 70 days as we continue to build a campaign that everyone in this state can be proud of."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mu34q7exi22t",
+     "text": "South Carolina is in play in 2026 and with your help, we’re going to send a pediatrician to the United States Senate."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mu3k7kx22s26",
+     "text": "It has been 15 days since I asked for a debate, so we decided to launch a debate tracker so South Carolinians can see for themselves how their \"Senator\" is hiding from them and from her opponent.\n\nWhat are you so afraid of, Darline? Visit debatemedarline.com to track for yourself."
+    },
+    {
+     "date": "2026-08-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mucoiup5m227",
+     "text": "The television stations are ready. I’m ready. The only person we haven’t heard from is the woman who believes she should be handed a six-year Senate term.\n\nTrack how long it’s been since we first asked Darline to debate at DebateMeDarline.com."
+    },
+    {
+     "date": "2026-08-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mudjq3u5hk2w",
+     "text": "Today, I started the day debate prepping with my team, then watched my daughter’s soccer game, went grocery shopping, watched my son’s football practice, and made us all dinner.\n\nBut yeah, I’m totally a “radical lunatic.”"
+    },
+    {
+     "date": "2026-08-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mufovry4ps2f",
+     "text": "We’re going on tour! With gas prices up, grocery prices up, and the cost of living soaring, I’m taking my plan for an affordable South Carolina on the road.\n\nI hope you’ll join us! RSVP for event details at DrAnnieAndrews.com/events."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3muhqb5ntfk2n",
+     "text": "A U.S. Senator should be able to do more than two things at once."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mv6rh52t4k23",
+     "text": "DAY 29: Still waiting for Darline to agree to a debate.\n\nWhat is she hiding? South Carolina voters deserve answers from their Senator. debatemedarline.com"
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mv6rpd5k4k23",
+     "text": "Jacky deserves a fighter in the Senate."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvasl3z4pk23",
+     "text": "Twenty-five years later, we remember the nearly 3,000 lives stolen on September 11, 2001, and honor the first responders who ran toward danger to save others.\n\nMy heart is with every family, survivor, and loved one carrying that loss today. You are not alone, and we will never forget."
+    },
+    {
+     "date": "2026-09-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvjaqotfjk2d",
+     "text": "It’s time to lower the damn diesel.\n\nDiesel just hit the highest price ever recorded in America — more than $6 a gallon –– up from $3.71 last year\n\nFarmers, truckers, shrimpers, small businesses, and families need relief now — not more excuses from Washington. Suspend the diesel tax."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvkznzaf4k2g",
+     "text": "South Carolina is at the bottom of too many lists we should lead — and near the top of too many we should never be on.\n\nA new study ranks SC among the worst states to live and work. That is a choice. We deserve leaders who put working people first. What needs to change?"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvl4qxbvds24",
+     "text": "Lower the damn diesel.\n\nDiesel prices hit the highest level ever recorded in South Carolina today — more than $6 a gallon.\n\nSuspend the state and federal diesel taxes. \n\nDarline, are you with me or not?"
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvnppzo3uc2q",
+     "text": "My dad is a Republican. He voted for Lindsey Graham and Fox News is his go-to channel.\n\nBut he knows exactly who I am: someone who listens, works hard, and puts South Carolina first. That’s why he’s proud to stand with me — and I’m proud to have him in my corner."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvnyhej5s22b",
+     "text": "Here in South Carolina, we already knew this seat is winnable; it’s about time everyone else starts taking note."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvpvpxchbk24",
+     "text": "I'm running for him."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mvsqoy6cdk2h",
+     "text": "South Carolina has always been fiercely independent."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mw27uoozps2a",
+     "text": "I’ll work with anyone in Congress to help reign in our debt, end Congressional stock trading, cut taxpayer funded pensions + health care for members of congress, pass term limits, and cut taxes for S.C. families.\n\nYou can read my full plan at DrAnnieAndrews.com/TaxpayerPledge."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mw6uh5z2nk2k",
+     "text": "With just six weeks to go, momentum is on our side. Let’s bring this thing home, South Carolina."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mwbnzp25vk2w",
+     "text": "Unlike my opponent, I’m not backed by AI companies or data-center developers. I answer to you — and only you.\n\nI know we can invest in technology without sacrificing local control, property rights, or our way of life."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mwm2hep3kc2g",
+     "text": "I want new investment and good-paying jobs right here in South Carolina — but not at your expense.\n\nDarline Graham says data centers are a must. I say South Carolinians should come first.\n\nThat’s why I launched DataCenterDarline.com today. See for yourself and follow the money."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mwo6kuxikc22",
+     "text": "If you’re tired of South Carolina being the butt of a joke, vote for change this November."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mwqnjldy2k22",
+     "text": "Diesel prices have hit the highest ever recorded in South Carolina.\n\nIt’s time to suspend the diesel and gas tax. LOWER THE DAMN DIESEL."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mx7kpgrzj22r",
+     "text": "Bless their heart."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mxcr2nic5k2p",
+     "text": "For the first time, South Carolinians will be able hear directly from me and Mrs. Graham Nordone directly — my vision for a South Carolina we can afford and Darline's DC consultants' vision for whatever they want her to say.\n\nI hope you'll join me in Columbia before I take the stage Sunday evening."
+    },
+    {
+     "date": "2026-10-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mxmy7bc47c24",
+     "text": "I'm ready."
+    },
+    {
+     "date": "2026-10-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mxmya3w5tc24",
+     "text": "Something is happening in South Carolina."
+    },
+    {
+     "date": "2026-10-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mxn5nbkz7224",
+     "text": "If you’re a Republican feeling left behind by your party, this is a campaign for you."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mxtvgvxqwk24",
+     "text": "I'm demanding that Darline Graham cut her family's business ties to China and recuse herself from any Senate votes involving trade with China or policy toward the Chinese Military.\n\nSouth Carolinians deserve full disclosure."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3myikphsqcc23",
+     "text": "I’ve been calling for a federal suspension of the gas and diesel tax for months, yet we’ve heard nothing on this issue from “Senator” Graham Nordone."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mys73k2j722n",
+     "text": "This is what putting South Carolina first looks like.\n\nI’m honored to have the support of two former governors — Republican David Beasley and Democrat Jim Hodges.\n\nWe may not agree on everything, but we share a belief that matters most: S.C. deserves leaders who will always put its people first."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3mywssrxmqk26",
+     "text": "Whether you voted for Donald Trump, Lindsey Graham, or someone else, you deserve leaders who care more about lowering your bills than playing politics in Washington.\n\nThat’s what this campaign is about."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/drannieandrews.com/post/3myzhsqd5yk2a",
+     "text": "46 counties. 18 months. Earning every vote.\n\nLet’s leave it all on the field, South Carolina."
+    }
+   ]
+  }
+ ]
+}

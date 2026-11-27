@@ -1,0 +1,85 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "sewell",
+ "name": "Terri A. Sewell",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.sewellforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.sewellforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-10-06",
+    "url": "https://web.archive.org/web/20221006045907/https://sewellforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221006045907/https://sewellforcongress.com/",
+     "original": "https://sewellforcongress.com/",
+     "date": "2022-10-06",
+     "title": "sewellforcongress",
+     "text": "## An impassioned voice for the issues that matter to all Alabamians\nBorn in Huntsville and raised in Selma, Terri is a child of Alabama. She is the daughter of a former high school basketball coach and a retired high school librarian. Both her father and mother held careers in the Selma public school system, and through their example of dedication to service to community, Terri learned that if you work hard at the things you are passionate about, anything is achievable.\n## Team Terri\nSelect the issues that are most important to you.\nThe Professional Fire Fighters of Alabama are proud to endorse Congresswoman @Sewell4Congress in her bid for re-election. She has been a true leader in the fight to make sure that fire fighters have the resources and equipment we need to do our jobs and keep our communities safe."
+    }
+   ],
+   "unread": [
+    "the list of sewellforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.sewellforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105072342/https://sewellforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105072342/https://sewellforcongress.com/",
+     "original": "https://sewellforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Homepage - Terri Sewell for Congress Terri Sewell for Congress",
+     "text": "## An impassioned voice for the issues that matter to all Alabamians\nBorn in Huntsville and raised in Selma, Terri Sewell is a child of Alabama. She is the daughter of a former high school basketball coach and a retired high school librarian. Both her father and mother held careers in the Selma public school system, and through their example of dedication to service to community, Terri learned that if you work hard at the things you are passionate about, anything is achievable.\n## Team Terri\nSelect the issues that are most important to you.\nThe Professional Fire Fighters of Alabama are proud to endorse Congresswoman @Sewell4Congress in her bid for re-election. She has been a true leader in the fight to make sure that fire fighters have the resources and equipment we need to do our jobs and keep our communities safe."
+    }
+   ],
+   "unread": [
+    "the list of sewellforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.sewellforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103084658/https://sewellforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103084658/https://sewellforcongress.com/",
+     "original": "https://sewellforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Homepage - Terri Sewell for Congress Terri Sewell for Congress",
+     "text": "## An impassioned voice for the issues that matter to all Alabamians\nBorn in Huntsville and raised in Selma, Terri Sewell is a child of Alabama. She is the daughter of a former high school basketball coach and a retired high school librarian. Both her father and mother held careers in the Selma public school system, and through their example of dedication to service to community, Terri learned that if you work hard at the things you are passionate about, anything is achievable.\n## @Sewell4Congress on Instagram\nView this profile on Instagram\nTerri Sewell (@sewell4congress) • Instagram photos and videos\n## Team Terri\nSelect the issues that are most important to you.\nThe Professional Fire Fighters of Alabama are proud to endorse Congresswoman @Sewell4Congress in her bid for re-election. She has been a true leader in the fight to make sure that fire fighters have the resources and equipment we need to do our jobs and keep our communities safe."
+    }
+   ],
+   "unread": [
+    "the list of sewellforcongress.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

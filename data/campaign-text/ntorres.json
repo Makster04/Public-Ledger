@@ -1,0 +1,187 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "ntorres",
+ "name": "Norma J. Torres",
+ "built": "2026-11-26",
+ "sites": [
+  "https://normatorres.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://normatorres.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107232617/https://www.normatorres.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107232617/https://www.normatorres.com/",
+     "original": "https://www.normatorres.com/",
+     "date": "2022-11-07",
+     "title": "Norma Torres for Congress",
+     "text": "## Delivering Results\nfor the Inland Empire\nJoin our email list\n## Congresswoman Norma Torres represents California’s 35th Congressional District, which includes the cities of Bloomington, Chino, Fontana, Montclair, Ontario, Pomona, and Rialto. As a City Councilmember, Mayor, State Assemblywoman, State Senator, and now Member of Congress, she has a proven record of delivering solutions for Inland Empire families.\nOn the Issues\n Working families deserve a champion in the halls of the United States Congress — and I’m committed to being that voice to help them get ahead. \n— Norma Torres\n## Media\nView this post on Instagram\nA post shared by Rep. Norma J. Torres (@repnormatorres) on Mar 2, 2020 at 12:18pm PST"
+    }
+   ],
+   "notSaved": [
+    "https://www.normatorres.com/issues"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://normatorres.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105174727/https://www.normatorres.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105174727/https://www.normatorres.com/",
+     "original": "https://www.normatorres.com/",
+     "date": "2024-11-05",
+     "title": "Norma Torres for Congress",
+     "text": "## Delivering Results\nfor the Inland Empire\nJoin our email list\n## Congresswoman Norma Torres represents California’s 35th Congressional District, which includes the cities of Chino, Chino Hills, Eastvale, Fontana, Montclair, Ontario, Pomona, Rancho Cucamonga, and Upland. As a City Councilmember, Mayor, State Assemblywoman, State Senator, and now Member of Congress, she has a proven record of delivering solutions for Inland Empire families.\nOn the Issues\n“ Working families deserve a champion in the halls of the United States Congress — and I’m committed to being that voice to help them get ahead. ”\n— Norma Torres\n## Media\nView this post on Instagram\nA post shared by Rep. Norma J. Torres (@repnormatorres) on Mar 2, 2020 at 12:18pm PST"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105174813/https://www.normatorres.com/issues-climatechange",
+     "original": "https://www.normatorres.com/issues-climatechange",
+     "date": "2024-11-05",
+     "title": "Issues-Climate-Change — Norma Torres",
+     "text": "## Combating the Climate Crisis\nThe Inland Empire has some of the poorest air quality levels in the country, and the health of our community depends on action from our government. Congresswoman Torres is committed to tackling the climate crisis head-on with commonsense and progressive solutions to ensure clean air to breathe, quality water to drink, and a sustainable future for our future generations.\nIn Congress, she is focused on improving the accessibility and affordability of public transit, modernizing our energy systems, and holding polluters accountable for their impact on our planet."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105174811/https://www.normatorres.com/issues-housing",
+     "original": "https://www.normatorres.com/issues-housing",
+     "date": "2024-11-05",
+     "title": "Issues-Housing — Norma Torres",
+     "text": "## Housing\nHousing is a critical issue that resonates across our nation, but it is especially pressing in our communities, where the demand for safe and affordable homes continues to outpace supply. Congresswoman Torres is a recognized leader in Congress, tirelessly advocating for policies that promote the construction of new housing and the preservation of affordable options. She understands that stable housing is the foundation for thriving families and communities, and she is committed to ensuring that everyone has a place to call home.\nIn addition to advocating for increased funding for affordable housing initiatives, Congresswoman Torres works to remove barriers to homeownership and support innovative housing solutions. These efforts are essential to tackling the housing crisis head-on, creating pathways for families to secure their futures and build strong, vibrant neighborhoods."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105174820/https://www.normatorres.com/issues-immigration",
+     "original": "https://www.normatorres.com/issues-immigration",
+     "date": "2024-11-05",
+     "title": "Issues-Immigration — Norma Torres",
+     "text": "## Building a Compassionate Immigration System\nCongresswoman Torres recognizes the essential need to address the root causes of migration forcing so many from Latin America to flee violence and lack of opportunity in their home countries. As Co-Chair of the Congressional Central America Caucus and New Americans Caucus, she is focused on reforming our immigration system to be more compassionate, flexible, and responsive to the needs of those who simply want to pursue the American Dream. She understands that we can secure our border and deliver the empathy and humanity that so many of our southern neighbors need right now."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105174758/https://www.normatorres.com/issues-seniors",
+     "original": "https://www.normatorres.com/issues-seniors",
+     "date": "2024-11-05",
+     "title": "Issues-Seniors — Norma Torres",
+     "text": "## Honoring our seniors with dignity, care, and lasting security.\nSeniors in our community deserve dignity, respect, and the resources to age comfortably. As the population of older adults in the Inland Empire continues to grow, Congresswoman Torres is dedicated to ensuring that seniors have access to the healthcare, retirement security, and support services they need. On the Appropriations Committee, she has fought to protect Social Security and Medicare, ensuring these vital programs remain strong for current and future generations, and voted to lower the cost of prescription drugs, so seniors no longer have to choose between medication and other necessities.\nBeyond healthcare, Congresswoman Torres is working to make sure seniors can live independently and remain connected to their communities. She secured federal funding for the City of Ontario’s Active Seniors on the Go program, expanding transportation options and mobile nutrition services for seniors. By supporting these initiatives, Congresswoman Torres is committed to enhancing the quality of life for seniors across our communities, ensuring that they have the security and resources to thrive.\""
+    },
+    {
+     "url": "https://web.archive.org/web/20241105174802/https://www.normatorres.com/issues-students",
+     "original": "https://www.normatorres.com/issues-students",
+     "date": "2024-11-05",
+     "title": "Issues-Students — Norma Torres",
+     "text": "## Supporting the Leaders of Tomorrow\nOur students are the leaders of tomorrow, and Congresswoman Torres is working in Congress to ensure they have the tools they need to succeed from preschool to college. She recognizes that success in school depends on access to food, housing, and support to allow students to solely focus on their education. That’s why she introduced the BASIC Act in Congress to fund the basic needs of our local college students and delivered millions in COVID-19 relief funding for school districts, colleges, and universities.\nThe scientists, teachers, lawyers, business leaders, and professionals of tomorrow are right here in our community. Congresswoman Torres is committed to breaking down the barriers to access that prevent our students from achieving their full potential."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105175323/https://www.normatorres.com/issues-transportation",
+     "original": "https://www.normatorres.com/issues-transportation",
+     "date": "2024-11-05",
+     "title": "Issues-Transportation — Norma Torres",
+     "text": "## Connecting communities fosters vibrant neighborhoods.\nWith average commute times in the Inland Empire averaging nearly twice the national average, addressing our transportation challenges has never been more urgent. Congresswoman Torres is committed to connecting our communities and creating high-quality, good-paying jobs through reliable transportation infrastructure. That’s why she voted for the Bipartisan Infrastructure Law which is investing billions of dollars into the Inland Empire’s infrastructure, creating safe routes to school for students, improving our communities’ roads and highways, and bringing high-speed rail from Rancho Cucamonga to Las Vegas.\nThese investments are not only about reducing traffic and improving safety but also about sustainability and economic growth. By expanding public transit options, upgrading bridges and tunnels, and investing in green technologies like electric vehicle infrastructure, Congresswoman Torres is working to build a transportation system that meets the needs of today while preparing for the future."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105174816/https://www.normatorres.com/issues-veterans",
+     "original": "https://www.normatorres.com/issues-veterans",
+     "date": "2024-11-05",
+     "title": "Issues-Veterans — Norma Torres",
+     "text": "## Serving Our Nation’s Veterans\nAs the mother of an Air Force veteran, Congresswoman Torres’ priority in Congress is serving those who so courageously served us. From assisting our local veterans receive the benefits they’re owed to expanding their access to education and health care, she is dedicated to improving available resources for current and former servicemembers."
+    }
+   ],
+   "notSaved": [
+    "https://www.normatorres.com/issues-1"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://normatorres.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103134535/https://www.normatorres.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103134535/https://www.normatorres.com/",
+     "original": "https://www.normatorres.com/",
+     "date": "2026-11-03",
+     "title": "Home | Norma Torres for Congress",
+     "text": "top of page\n## Meet\nNorma Torres has served as a 911 emergency dispatcher, a union member, Mayor, and now serves in Congress, representing the 35th Congressional District. After the passage of Prop 50, this district will include Bloomington, Chino, Chino Hills, Claremont, Corona, Eastvale, Fontana, Montclair, Norco, Ontario, Pomona, Rancho Cucamonga, and Upland.\nA mother of three sons, including an Air Force veteran and law enforcement officer, Norma has dedicated her life's work to creating safer communities, lowering costs and fighting for Inland Empire families.\nWorking families deserve a champion in the halls of the United States Congress — and I’m committed to being that voice to help them get ahead.\n## - Norma Torres\nbottom of page"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103134556/https://www.normatorres.com/priorities",
+     "original": "https://www.normatorres.com/priorities",
+     "date": "2026-11-03",
+     "title": "Priorities | Norma Torres for Congress",
+     "text": "top of page\n## Priorities\nbottom of page"
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171701/https://www.normatorres.com/issues-climatechange",
+     "original": "https://www.normatorres.com/issues-climatechange",
+     "date": "2026-09-18",
+     "title": "Issues-Climate-Change — Norma Torres",
+     "text": "## Combating the Climate Crisis\nThe Inland Empire has some of the poorest air quality levels in the country, and the health of our community depends on action from our government. Congresswoman Torres is committed to tackling the climate crisis head-on with commonsense and progressive solutions to ensure clean air to breathe, quality water to drink, and a sustainable future for our future generations.\nIn Congress, she is focused on improving the accessibility and affordability of public transit, modernizing our energy systems, and holding polluters accountable for their impact on our planet."
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171427/https://www.normatorres.com/issues-gallery",
+     "original": "https://www.normatorres.com/issues-gallery",
+     "date": "2026-09-18",
+     "title": "Issues — Norma Torres",
+     "text": "Currency value should be formatted like 1234 or 123.99.\nCountry code should have an optional plus and up to 4 digits.\nPlease fill out at least one form field.\nNumbers must contain only digits and no other characters.\nValid names contain only letters, numbers, spaces, ', or - characters.\nUnable to submit form. Please try again later."
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171703/https://www.normatorres.com/issues-housing",
+     "original": "https://www.normatorres.com/issues-housing",
+     "date": "2026-09-18",
+     "title": "Issues-Housing — Norma Torres",
+     "text": "## Housing\nHousing is a critical issue that resonates across our nation, but it is especially pressing in our communities, where the demand for safe and affordable homes continues to outpace supply.\nCongresswoman Torres is a recognized leader in Congress, tirelessly advocating for policies that promote the construction of new housing and the preservation of affordable options. As Chair of the New Democrat Coalition Working Group on Housing, Infrastructure, and Transportation, she understands that stable, affordable housing is the foundation for thriving families and communities, and she is committed to ensuring that everyone has a place to call home. And, as a senior Member of the Transportation, Housing and Urban Development Subcommittee of Appropriations, Congresswoman Torres has successfully fought against Trump Administration funding cuts to critical affordable housing and homelessness prevention programs.\nIn addition to advocating for increased funding for affordable housing initiatives, Congresswoman Torres works to remove barriers to homeownership and support innovative housing solutions. These efforts are essential to tackling the housing crisis head-on, creating pathways for families to secure their futures and build strong, vibrant neighborhoods."
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171656/https://www.normatorres.com/issues-immigration",
+     "original": "https://www.normatorres.com/issues-immigration",
+     "date": "2026-09-18",
+     "title": "Issues-Immigration — Norma Torres",
+     "text": "## Building a Compassionate Immigration System\nCongresswoman Torres recognizes the essential need to address the root causes of migration forcing so many from Latin America to flee violence and lack of opportunity in their home countries. As Co-Chair of the Congressional Central America Caucus and the New Americans Caucus, she is focused on reforming our immigration system to be more compassionate, flexible, and responsive to the needs of those who simply want to pursue the American Dream. She has authored the Fairness to Freedom Act, which would guarantee a right to a lawyer in deportation cases, and the Renewing Immigration Provisions of the Immigration Act of 1929, which would update our immigration laws to allow millions of immigrants to adjust their status and start on a path to citizenship. She understands that we can secure our border and deliver the empathy and humanity that so many of our southern neighbors need right now."
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171657/https://www.normatorres.com/issues-seniors",
+     "original": "https://www.normatorres.com/issues-seniors",
+     "date": "2026-09-18",
+     "title": "Issues-Seniors — Norma Torres",
+     "text": "## Honoring our seniors with dignity, care, and lasting security.\nSeniors in our community deserve dignity, respect, and the resources to age comfortably. As the population of older adults in the Inland Empire continues to grow, Congresswoman Torres is dedicated to ensuring that seniors have access to the healthcare, retirement security, and support services they need. On the Appropriations Committee, she has fought to protect Social Security and Medicare, ensuring these vital programs remain strong for current and future generations, and voted to lower the cost of prescription drugs, so seniors no longer have to choose between medication and other necessities. She has introduced legislation to help seniors affected by DOGE cuts at the Social Security Administration so that our seniors can receive all the benefits they earned from years of hard work.\nBeyond healthcare, Congresswoman Torres is working to make sure seniors can live independently and remain connected to their communities. She secured federal funding for the City of Ontario’s Active Seniors on the Go program, expanding transportation options and mobile nutrition services for seniors. By supporting these initiatives, Congresswoman Torres is committed to enhancing the quality of life for seniors across our communities, ensuring that they have the security and resources to thrive.\""
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171700/https://www.normatorres.com/issues-students",
+     "original": "https://www.normatorres.com/issues-students",
+     "date": "2026-09-18",
+     "title": "Issues-Students — Norma Torres",
+     "text": "## Supporting the Leaders of Tomorrow\nOur students are the leaders of tomorrow, and Congresswoman Torres is working in Congress to ensure they have the tools they need to succeed from preschool to college. She recognizes that success in school depends on access to food, housing, and support to allow students to solely focus on their education. That’s why she introduced the BASIC Act in Congress to fund the basic needs of our local college students and delivered millions in COVID-19 relief funding for school districts, colleges, and universities.\nThe scientists, teachers, lawyers, business leaders, and professionals of tomorrow are right here in our community. Congresswoman Torres is committed to breaking down the barriers to access that prevent our students from achieving their full potential."
+    },
+    {
+     "url": "https://web.archive.org/web/20260918171700/https://www.normatorres.com/issues-transportation",
+     "original": "https://www.normatorres.com/issues-transportation",
+     "date": "2026-09-18",
+     "title": "Issues-Transportation — Norma Torres",
+     "text": "## Connecting communities fosters vibrant neighborhoods.\nWith average commute times in the Inland Empire averaging nearly twice the national average, addressing our transportation challenges has never been more urgent. Congresswoman Torres is committed to connecting our communities and creating high-quality, good-paying jobs through reliable transportation infrastructure. That’s why she voted for the Bipartisan Infrastructure Law which invested billions of dollars into the Inland Empire’s infrastructure, creating safe routes to school for students, improving our communities’ roads and highways, developing Ontario and Chino airports, and bringing high-speed rail from Rancho Cucamonga to Las Vegas.\nThese investments are not only about reducing traffic and improving safety but also about sustainability and economic growth. By expanding public transit options, upgrading bridges and tunnels, and investing in green technologies like electric vehicle infrastructure, Congresswoman Torres is working to build a transportation system that meets the needs of today while preparing for the future."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

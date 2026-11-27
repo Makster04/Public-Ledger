@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "correa",
+ "name": "J. Luis Correa",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.loucorrea.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.loucorrea.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-04",
+    "url": "https://web.archive.org/web/20221104214253/https://www.loucorrea.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221104214253/https://www.loucorrea.com/",
+     "original": "https://www.loucorrea.com/",
+     "date": "2022-11-04",
+     "title": "Lou Correa for Congress",
+     "text": "The leadership & representation Orange County needs\n## Congressman Lou in the News\nPublished December 15, 2021\nJuly 28, 2020 (Congressman Lou’s time begins at 03:31:00)\nAmerican versus American\nSaúl Montreal Appoints Congressman Lou Correa as Distinguished Guest\nTrópico de Cáncer Noticias – March 23, 2022\nCongressman lou in the news\n## Be Part of Congressman Lou’s Campaign\nI want to:"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.loucorrea.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105111622/https://www.loucorrea.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105111622/https://www.loucorrea.com/",
+     "original": "https://www.loucorrea.com/",
+     "date": "2024-11-05",
+     "title": "Lou Correa for Congress",
+     "text": "The leadership & representation Orange County needs\n## Congressman Lou in the News\nPublished December 15, 2021\nJuly 28, 2020 (Congressman Lou’s time begins at 03:31:00)\nAmerican versus American\nSaúl Montreal Appoints Congressman Lou Correa as Distinguished Guest\nTrópico de Cáncer Noticias – March 23, 2022\nCongressman lou in the news\n## Be Part of Congressman Lou’s Campaign\nI want to:"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.loucorrea.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103095625/https://www.loucorrea.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103095625/https://www.loucorrea.com/",
+     "original": "https://www.loucorrea.com/",
+     "date": "2026-11-03",
+     "title": "Lou Correa for Congress",
+     "text": "The leadership & representation Orange County needs\n## Known for getting things done, Lou has earned a reputation as a practical problem-solver who listens, collaborates, and delivers real results for his community.\nHis experience includes serving in the California State Assembly (69th District), the California State Senate (34th District), and as an Orange County Supervisor representing the 1st District."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

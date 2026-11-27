@@ -1,0 +1,68 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "cruz",
+ "name": "Ted Cruz",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.tedcruz.org/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.tedcruz.org/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-02",
+    "url": "https://web.archive.org/web/20241102190045/https://www.tedcruz.org"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241102190045/https://www.tedcruz.org",
+     "original": "https://www.tedcruz.org",
+     "date": "2024-11-02",
+     "title": "Ted Cruz for Senate",
+     "text": "Ted Cruz for Senate\nli > a\"}' data-submenu-options='{\"toggleType\":\"fade\",\"handler\":\"mouse-in-out\"}' id=primary-nav itemscope itemtype=http://schema.org/SiteNavigationElement>\n## Keep Texas, Texas\nFrom the oil fields of West Texas, to the farm lands of the Panhandle, to the United States’ southern border and into space, Ted Cruz has been Texas’ leading fighter for over a decade. Since day one, creating jobs, defending freedom, and ensuring security have been Ted’s priorities. Ted has a proven record of standing up to any politician or special interest group to defend the Lone Star State. Delivering meaningful, bipartisan wins for Texas commerce and transportation, NASA, and more, Ted has worked for every Texan to keep Texas, Texas.\n## Stand with Ted\n2023: A Year Of Results For Texans\nAmerica Has The Highest Rate of Illegal Immigration Ever: End Catch and Release\n## Get the Latest\nThis website uses cookies to improve your web experience."
+    }
+   ],
+   "unread": [
+    "the list of tedcruz.org's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.tedcruz.org/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-01",
+    "url": "https://web.archive.org/web/20261101101615/https://www.tedcruz.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261101101615/https://www.tedcruz.org/",
+     "original": "https://www.tedcruz.org/",
+     "date": "2026-11-01",
+     "title": "Ted Cruz for Senate",
+     "text": "Hamburger Toggle Menu\n## Keep Texas, Texas\nFrom the oil fields of West Texas, to the farm lands of the Panhandle, to the United States’ southern border and into space, Ted Cruz has been Texas’ leading fighter for over a decade. Since day one, creating jobs, defending freedom, and ensuring security have been Ted’s priorities. Ted has a proven record of standing up to any politician or special interest group to defend the Lone Star State. Delivering meaningful, bipartisan wins for Texas commerce and transportation, NASA, and more, Ted has worked for every Texan to keep Texas, Texas.\n## Stand with Ted\n2023: A Year Of Results For Texans\nAmerica Has The Highest Rate of Illegal Immigration Ever: End Catch and Release\nFLORIDA — Today, Senator Ted Cruz endorsed Byron Donalds for Governor of Florida. About the…\nHOUSTON — Today, Senator Ted Cruz endorsed Jessica Steinmann for Texas’s 8th Congressional District.About the…\nHOUSTON — Today, Senator Ted Cruz endorsed Chip Roy for Texas Attorney General. About the…\n## Get the Latest\nJOIN THE CREW\nThis website uses cookies to improve your web experience."
+    },
+    {
+     "url": "https://web.archive.org/web/20260928041950/https://www.tedcruz.org/proven-record/",
+     "original": "https://www.tedcruz.org/proven-record/",
+     "date": "2026-09-28",
+     "title": "Proven Record - Ted Cruz For Senate",
+     "text": "Hamburger Toggle Menu\n## Ted Cruz: Leading the Fight for\nTexas Jobs, Freedom, and Security in the U.S. Senate\n\" * \" indicates required fields\n## Ted’s Key Wins for Texas\nEXPAND THE TEXAS ECONOMY: Ted led a bipartisan and bicameral coalition to cut through bureaucratic red tape to streamline the expansion of four key bridges along the Mexican border which brings over $800 billion of trade and commerce into Texas and America.\nGROW TEXAS AVIATION: Ted authored and passed the bipartisan FAA Reauthorization Act of 2024, which will benefit Texas' thriving aviation sector, and make flying safer, faster, and easier for Texas families. This legislation will bring the first direct flight from San Antonio to Ronald Reagan Washington National Airport.\nTEXAS ENERGY: Ted spearheaded the fight for Texas and American companies to win approval of four major LNG export permits to sell American energy overseas.\nPROTECTING TEXANS: Ted’s Coastal Texas Project legislation became law. Known as the “Coastal Spine” or “Ike Dike,” his law ensures that coastal Texans are better protected from major storms.\nRECONSTRUCTING TEXAS: When Hurricane Harvey devastated Texas, Ted visited with victims and volunteers, then authored the federal law that gave tax relief to storm survivors.\nGROWING THE LONE STAR STATE: Ted passed legislation to designate the Interstate 14 extension as a high priority project - a big bipartisan win for the Permian Basin region.\nCONNECTING TEXANS: Ted led bipartisan efforts to designate the I-27 Ports-to-Plains corridor as a “Future Interstate.” This allows Texas to receive additional federal funds to complete I-27’s expansion.\nPRIORITIZING TEXAS’ SPACE SECTOR: Ted worked with now-NASA Administrator Bill Nelson on the law guaranteeing Johnson Space Center’s vital place in NASA’s human spaceflight missions.\nSPACE RACE: Ted successfully led the fight to guarantee U.S. leadership with the International Space Station through 2030.\nSCHOOL CHOICE: Ted’s Student Opportunity Amendment was included in the 2017 Tax Cuts and Jobs Act. It expands 529 College Savings Plans to include K-12 tuition and is the most far-reaching federal school choice legislation to ever become law.\nSECURING THE SOUTHERN BORDER: Ted successfully included border security amendments in the 2022 Coast Guard Authorization Act. His amendments boost the surveillance capabilities for our southern “maritime” border, and also begin the process of potentially building a Coast Guard facility at Port Mansfield, Texas.\nFIGHTING FOR VETERANS: Ted led the fight to address long wait times for veterans, and won. Thanks to his amendment - now law - the VA had to address the long wait times that Texas veterans experienced in the South Texas Veterans Health Care System.\n## Championing 2A\nThis website uses cookies to improve your web experience."
+    }
+   ],
+   "unread": [
+    "the list of tedcruz.org's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

@@ -1,0 +1,433 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "kim",
+ "name": "Andy Kim",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.andykim.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.andykim.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108211622/https://www.andykim.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108211622/https://www.andykim.com/",
+     "original": "https://www.andykim.com/",
+     "date": "2022-11-08",
+     "title": "Andy Kim for Congress",
+     "text": "## Join Team Andy\nBe part of a movement that always puts people before politics.\n## Join Team Andy\nJersey is my home, and now I’m raising my two troublemaking little boys just a few miles from where I grew up. I know our community, our small businesses, our families are fighting hard to get back on their feet. We need to get America back to work, and I will do everything I can to help us get through these tough times.\nMy parents taught me that service isn’t just a job, it is a way of life. When I worked in the Situation Room or as a civilian advisor in Afghanistan, no one asked me if I was a Democrat or Republican. I served the country. Now, I’m using my experience serving in times of crisis to fight for the people of New Jersey.\nEvery day, I am keeping my promise to put people before partisan politics and to treat everyone with respect and civility. Successful leaders deliver tangible solutions, and my job is to deliver for you and your family.\nThe Smithsonian asked me to donate this blue suit that I wore while cleaning up after January 6 because we must respect our democracy and our Capitol. The Capitol is the most beautiful building. George Washington placed the cornerstone. Whatever our disagreements as a nation, we must always honor our history and our temples of democracy.\nVeterans in Ocean County shared with me their healthcare struggles, so I worked with them and pressed the VA to build a critically needed health clinic for our veterans. In Summer 2021, I was proud to stand alongside our veterans to announce construction of the new, state-of-the-art facility.\n## Whether you voted for me or not, I work for you.\nMy commitment to you is getting our country working again. That’s why I am working every day to enact policies that get us through times of crisis, build community, and restore hope. By working together, we will build an amazing future for all of us.\n## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220804/https://www.andykim.com/issues/",
+     "original": "https://www.andykim.com/issues/",
+     "date": "2022-11-04",
+     "title": "Andy on the Issues | Andy Kim for Congress",
+     "text": "## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108211619/https://www.andykim.com/issues/healthcare/",
+     "original": "https://www.andykim.com/issues/healthcare/",
+     "date": "2022-11-08",
+     "title": "Strengthening Your Healthcare | Andy Kim for Congress",
+     "text": "## Strengthening Your Healthcare\nI first ran for Congress to protect your access to healthcare after doctors warned us that our unborn son could have serious medical complications in 2017. We’re lucky that he’s grown into a healthy and thriving little boy, but no family should worry about losing their healthcare just because of a pre-existing condition.\nThe pandemic has made it even clearer that all Americans need access to affordable, high-quality healthcare . Millions of Americans are only one health incident away from losing their job or financial disaster. My mother is a nurse, and she taught me to be a fierce advocate for healthcare access. Nobody should die or face bankruptcy because they can’t afford to visit their doctor.\nThat’s why I’ve championed legislation to\n- Lower prescription drug prices , particularly for our seniors\n- Protect people with pre-existing conditions\n- Allow Medicare to negotiate lower drug prices\n- Expand Medicare to include dental, vision, and hearing coverage\n- Expand access to telehealth\n- Ensure access to reproductive healthcare\n- Provide permanent funding for the Children’s Health Insurance Plan (CHIP)\n- Support rural community health centers\nAs the father to two young boys, there is nothing more important to me than making sure New Jersey’s children grow up healthy and have a stable future.\n## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220804/https://www.andykim.com/issues/jobs/",
+     "original": "https://www.andykim.com/issues/jobs/",
+     "date": "2022-11-04",
+     "title": "Supporting Small Businesses & Creating Jobs | Andy Kim for Congress",
+     "text": "## Supporting Small Businesses & Creating Jobs\nS mall businesses are the backbone of our district, and our country. They invest in our local communities, create jobs, and become part of the fabric of our daily lives. Small businesses were hit especially hard by the pandemic, and I will continue fighting for the funds they need to reopen and thrive. As the only Member of Congress from New Jersey on the Small Business Committee, I’m championing our small businesses to make sure they have the resources they need.\nSmall businesses have been a priority for me throughout my time in Congress, and I’ve sponsored and voted for legislation that brings small business owners needed relief:\n- I co-authored the Microloan Improvement Act to reduce red tape and provide more options for accessing loans\n- I sponsored the CARES Act, which provided direct checks to Americans , a paycheck protection program , and emergency grants for small businesses\n- I voted for the American Rescue Plan that provided $6 billion in funding for New Jersey, including assistance for restaurants , funds for small business , financing for impacted businesses owned by people from marginalized communities, and funding to keep essential workers on the job\n- I authored the Better Utilizing Infrastructure for Lasting Development of (BUILD) Veterans Businesses Act to create more federal contracting opportunities for veteran-owned small businesses\n- I authored the Put Our Neighbors to Work Act to encourage the Department of Defense to hire more local workers on military construction projects and give small businesses more opportunities to compete\nSmall businesses were the first to feel the effects of the pandemic, and I want to make sure they are among the first to experience the recovery. I’ll always fight to give them the resources to grow, succeed, and contribute to our communities. And I’ll always look for ways to promote economic growth, create more good-paying American jobs in New Jersey, and strengthen our workforce for the future.\n## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220804/https://www.andykim.com/issues/environment/",
+     "original": "https://www.andykim.com/issues/environment/",
+     "date": "2022-11-04",
+     "title": "Protecting Our Environment | Andy Kim for Congress",
+     "text": "## Protecting Our Environment\nT housands of families across Ocean and Burlington county have suffered from flooding. Whether from the devastating Superstorm Sandy or from recent storms. There is even flooding on sunny days. We need to fix this immediately and secure our communities.\nDuring my time in Congress, I’ve secured millions of dollars in loan forgiveness for shore towns still recovering from Superstorm Sandy, introduced bipartisan legislation to prepare our roads, bridges, and infrastructure for extreme storms, and voted for resources and funding to increase the resilience of our coastal communities.\nWe need even bolder action to protect our environment and make our communities more resilient to extreme weather. One of the best legacies we can give to our kids, grandkids, and generations to come is a safe and thriving planet. I won’t stop working to maximize investments in our coastal communities and create policies that mitigate the climate crisis and create a resilient future.\nThat’s why I’m fighting for our once-in-a-generation opportunity to rebuild our nation’s infrastructure and fight climate change by:\n- Repealing tax breaks for oil and gas companies, making polluters pay their fair share , and cleaning up New Jersey’s Superfund sites\n- Electrifying our transit system by investing in electric vehicle charging stations and modernizing our electrical grid\n- Aggressively reducing carbon emissions at least 50 percent by 2030\n- Continuing investments in coastal restoration and making New Jersey’s shoreline communities more resilient\nThe investments we make now will create thousands of jobs in New Jersey and provide a cleaner, safer environment to enjoy now and in generations to come. That is a future we can look forward to.\n## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220804/https://www.andykim.com/issues/families/",
+     "original": "https://www.andykim.com/issues/families/",
+     "date": "2022-11-04",
+     "title": "Investing in Families | Andy Kim for Congress",
+     "text": "## Investing in Families\nT he pandemic has challenged working families in ways we’d never imagined and has made it harder for so many of us to give our kids a good start in life. I ran for Congress to build a secure future for my family and yours. Recovering from the coronavirus pandemic means getting America’s families back on track.\nI proudly voted to pass the American Rescue Plan, which provided shots in arms, money in pockets, and a pathway to economic recovery. Here in the Third District and across the country, the American Rescue Plan’s funding for school reopening plans, childcare, housing, and small businesses have proven vital to millions of peoples’ personal pandemic recovery.\nOne of the aspects of the American Rescue Plan I am most proud of is the Child Tax Credit , a forward-thinking investment in the future of America’s families that provides up to $300 a month for working families. In New Jersey’s Third Congressional District alone, 76.8 percent of children are benefiting from this policy, which is putting food on the table and lunches in backpacks, as well as helping households pay rent and bills.\nBut we need to do more. That’s why I’m also fighting to:\n- Make the Child Tax Credit permanent to significantly reduce poverty in America\n- Protect workers’ right to organize\n- Expand access to pre-K programs\n- Offer more job training and apprenticeship programs\n- Make higher education more affordable\n- Lower taxes for New Jersey families\nOur families deserve more than just to survive. I’m committed to helping New Jersey families thrive so the American Dream becomes a reality for all of us.\n## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220804/https://www.andykim.com/issues/veterans/",
+     "original": "https://www.andykim.com/issues/veterans/",
+     "date": "2022-11-04",
+     "title": "Serving Our Veterans, Servicemembers & Military Families | Andy Kim for Congress",
+     "text": "## Serving Our Veterans, Servicemembers & Military Families\nA s a former civilian strategic advisor to Generals Petraeus and Allen in Afghanistan, I’ve seen firsthand the sacrifices the members of our military make for us. That’s why I fought to get a seat on the House Armed Services Committee, where I’m proud to be a champion for our veterans, servicemembers, and their families.\nNew Jersey’s Third Congressional District is home to more than 60,000 veterans and tens of thousands of active-duty servicemembers that are stationed at Joint Base McGuire-Dix-Lakehurst. I’m committed to supporting and honoring their sacrifices and the sacrifices of their families.\nI’m proud to have recently fulfilled one of my early campaign promises to improve healthcare access for our veterans by delivering a new state-of-the-art community health clinic for veterans in Ocean County, NJ.\nAnd that’s not all I’m doing. Every day, I’m working to ensure that our veterans have the services and opportunities they deserve by:\n- Doubling funding for veteran suicide prevention and outreach programs\n- Ensuring veterans have access to employment opportunities as they transition to civilian life\n- Prioritizing efforts to make sure no veteran has to sleep in the streets . The words “veteran” and “homeless” should never appear in the same sentence.\n- Continuing to improve healthcare access for veterans\n- Improving legal services for women veterans\nWhen duty called, our veterans were there for us. I promise to always be there for them.\n## Working for You\n## ⊗"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220804/https://www.andykim.com/my-promise/",
+     "original": "https://www.andykim.com/my-promise/",
+     "date": "2022-11-04",
+     "title": "My Promise to You | Andy Kim for Congress",
+     "text": "## My Promise to You\n​​ D uring my first campaign, I made a promise to people in Burlington and Ocean Counties that I would be the most accessible, transparent, and accountable Member of Congress in the House of Representatives. And as I seek re-election now, I want to reiterate that promise.\nAs a Member of Congress:\n- I commit to holding at least one town hall every month . I have now held over 45 town halls with tens of thousands of participants.\n- I commit to not to accept a dime from corporate PACs because I believe in a government that focuses on people, not corporations. At a time when Members of Congress take millions from corporations, I have kept this promise to not accept corporate PAC money.\n- I commit to providing daily reports on what I am working on, who I am meeting with, and how I plan to vote. I have kept this promise to be the most transparent member of Congress.\n- I commit to always putting people before partisan politics . I will not stand for how toxic our politics have become. I have strived to serve in Congress with respect, integrity, and civility. We are all Americans, and I won’t let us get pulled down into the mud.\nWhether you voted for me or not, I work for you. And when I make a promise to you, I keep it, because trust is how we move forward together.\nAs your congressman, your voice is what matters to me the most. To make sure I hear you, I’ve committed to holding a town hall every month , and I’ve held more than that since I’ve been elected because hearing directly from you about your concerns allows me to better address them in Congress. We have been through so much together in the past few years – from natural disasters to political instability and acts of social injustice. That’s why it’s so important that we have space to connect, share our stories and our needs, and remember what brings us together as Americans.\nAnd, I do more than listen. I’m also committed to being transparent in my work because it’s important that you see that I am working for all of us . That’s why I publish my daily activities on my congressional website. It lets you see that I am keeping my promise to put your needs first, and it allows you to hold me accountable to issues that matter the most to you.\nMy campaign is powered by people, not corporations . I am one of only a few Members of Congress who don’t take corporate PAC money. Because I believe the only people who should influence my actions are the residents of New Jersey’s Third Congressional District.\nNow more than ever, we need leaders who are honest and hardworking, focused on helping our country rather than on political games. Treating each other with respect and compassion is not a partisan value; it’s an American value. To get America through our current crises, our leaders need to listen, keep their word, and deliver for their constituents . My promise to you is that I will continue to be that kind of representative, and I expect you to hold me to it.\n## Working for You\n## ⊗"
+    }
+   ],
+   "unread": [
+    "the list of andykim.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.andykim.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105161954/https://www.andykim.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105161954/https://www.andykim.com/",
+     "original": "https://www.andykim.com/",
+     "date": "2024-11-05",
+     "title": "Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "Click on an amount to get started and contribute to support Andy Kim. If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.\n## Join Team Andy\nNew Jersey is my home, and now I’m raising my two troublemaking little boys just down the road from where I grew up. I’m fighting for my family, for my neighbors, for the community that raised me, and for working families in pursuit of the American Dream.\nThe decision to run against Senator Menendez was one of the biggest and toughest decisions of my life. The reason I stepped up is that I’m tired of constantly watching our politics fail our nation. We are just cycling from crisis to crisis, and politicians aren’t focused on what the American people need help with.\nRight now, a staggering 84 percent of people in New Jersey believe NJ politicians are corrupt. When I read the indictment of Senator Menendez, I was stunned and felt strongly that the people of New Jersey deserve a choice for what kind of public servant they have in the Senate.\nInstead of throwing up my hands and giving up, I am stepping up to show that there is a better way. We deserve leaders that can serve with integrity. Leaders who are work horses not show horses. After this scandal, we need a fresh new start — a chance to lift up a new generation of leadership that can bring a new voice and deep public service experience to the U.S. Senate.\nMy parents taught me that service isn’t just a job, it’s a way of life. Being trusted as an elected official is an honor – an opportunity to serve our community, not a license to line your pockets for political favors. I’ve made ending government corruption a core value of my work in Congress.\nWhether you voted for me or not, you're my boss, I answer to you. I believe that we all need to work together, regardless of party, to get things done for the people we represent. Every day, I am keeping my promise to put people before partisan politics and to treat everyone with respect and civility.\nWhen I worked in the Situation Room or as a civilian advisor in Afghanistan to four-star generals, no one asked me if I was a Democrat or Republican. I served my country. In Congress, I’ve never lost sight of who I’m serving, and I’m always looking for ways I can contribute to make America work for everyone.\nWhen I was in elementary school, my mother took me to Washington, D.C. so I could understand why she had chosen to leave South Korea and create a new life in this country. On that trip, she said something I’d never forget: when a country gives you so many opportunities, you need to give back. Now I see success in this job as delivering for you and your family and the country that has given me and my family so much.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162046/https://www.andykim.com/issues/",
+     "original": "https://www.andykim.com/issues/",
+     "date": "2024-11-05",
+     "title": "On the Issues | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## On the Issues\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162423/https://www.andykim.com/issues/healthcare/",
+     "original": "https://www.andykim.com/issues/healthcare/",
+     "date": "2024-11-05",
+     "title": "Strengthening Our Families’ Healthcare | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Strengthening Our Families’ Healthcare\nI first ran for Congress to protect access to healthcare after doctors warned us that our unborn son could have serious medical complications in 2017 and my Republican member of Congress was leading the charge to take away healthcare from those with pre-existing conditions. We’re lucky that he’s grown into a healthy and thriving boy, but no family should worry about losing their healthcare because of a pre-existing condition or because they cannot afford it.\nWe need universal healthcare so that every American has access to the care they need at a cost they can afford. My mother is a nurse, and she taught me to be a fierce advocate for healthcare access. Nobody should die or face bankruptcy because they can’t afford to visit their doctor.\nThat’s why I’ve championed legislation to:\n- Lower prescription drug prices , particularly for our seniors\n- Protect people with pre-existing conditions\n- Allow Medicare to negotiate lower drug prices\n- Cap out-of-pocket drug costs for seniors at $2,000 per year\n- Cap the cost of insulin at $35/month\n- Expand Medicare to include dental, vision, and hearing coverage\n- Ensure and protect access to reproductive healthcare\n- Provide permanent funding for the Children’s Health Insurance Plan (CHIP)\n- Support rural community health centers\n- Reform the tax system to give more people access to affordable health care\n- Make it easier for seniors to receive home health care\nAs the father to two young boys, there is nothing more important to me than making sure our kids grow up healthy and have a stable future.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162425/https://www.andykim.com/issues/jobs/",
+     "original": "https://www.andykim.com/issues/jobs/",
+     "date": "2024-11-05",
+     "title": "Supporting Small Businesses & Creating Jobs | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Supporting Small Businesses & Creating Jobs\nS mall businesses are the backbone of our state and our country. They invest in our local communities, create jobs, and become part of the fabric of our daily lives. Small businesses were hit especially hard by the pandemic, and I will continue fighting for the funds they need to rebuild and thrive. I championed our small businesses to make sure they have the resources they need.\nThroughout my time in Congress, and I’ve sponsored and voted for legislation that brings small business owners needed relief, including:\n- The Microloan Improvement Act to reduce red tape and provide more options for accessing loans\n- Helped over 10,000 small businesses in New Jersey access financial assistance during the pandemic\n- The CARES Act, which provided direct checks to Americans , a paycheck protection program , and emergency grants for small businesses\n- The American Rescue Plan that provided $6 billion in funding for New Jersey, including assistance for restaurants , funds for small business , financing for impacted businesses owned by people from marginalized communities, and funding to keep essential workers on the job\n- The Better Utilizing Infrastructure for Lasting Development of (BUILD) Veterans Businesses Act to create more federal contracting opportunities for veteran-owned small businesses\n- The Put Our Neighbors to Work Act to encourage the Department of Defense to hire more local workers on military construction projects and give small businesses more opportunities to compete\nI’ll always fight to give our small businesses the resources to grow, succeed, and contribute to our communities. And I’ll always look for ways to promote economic growth, create more good-paying American jobs in New Jersey, and strengthen our workforce for the future.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162424/https://www.andykim.com/issues/environment/",
+     "original": "https://www.andykim.com/issues/environment/",
+     "date": "2024-11-05",
+     "title": "Protecting Our Environment | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Protecting Our Environment\nO ne of the most important legacies we can give to our kids, grandkids, and generations to come is a safe and thriving planet. That means we need to take bold steps today to protect our environment, cut pollution, and make our communities more resilient to extreme weather, and protect our planet for our kids and future generations.\nI voted for the Inflation Reduction Act for a lot of reasons, one of them was that it’s the largest investment in American energy independence, job creation in new, green sectors, and it combats climate change through:\n- Investments in American energy production, and does more to combat climate change than any bill in history.\n- Investments in agriculture, coastal restoration, clean energy, advanced manufacturing, and transportation that will benefit hardworking New Jersey families.\n- Cutting greenhouse gas emissions by 40% by 2030, making the United States well-positioned to meet our climate goals while also investing in our economy.\n- Saves families an average of $1,000 per year in energy costs and creates good paying jobs.\nThe investments we make now will create thousands of jobs in New Jersey and provide a cleaner, safer environment to enjoy now and in generations to come. That is a future we can look forward to, and one we can feel proud of when we hand it off to our kids and the next generation of leaders.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162422/https://www.andykim.com/issues/families/",
+     "original": "https://www.andykim.com/issues/families/",
+     "date": "2024-11-05",
+     "title": "Making Raising a Family More Affordable | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Making Raising a Family More Affordable\nA s the son of immigrants, I saw my parents work hard to give me and my sister a better future, and they started by moving to New Jersey because of the top-notch public schools. I’m proud to have done my entire K-12 education in South Jersey and am now sending my two little boys off to school just a few miles from where I went.\nAs a dad, I’m doing everything I can to help parents have the tools they need to support their families, access good-paying jobs, and secure a brighter future for their kids. In Congress I’ve supported:\n- The Inflation Reduction Act which is dramatically lowering the cost of healthcare for Americans and seniors, lowering energy costs, and providing tax credits for families to make their homes more energy efficient\n- Efforts to expand free meals for kids through the 2022-2023 school year. Thanks to the Keep Kids Fed Act, New Jersey school and daycare meal programs will get $59 million. I’ve even introduced a bill, the Summer Meals REACH Act, that would provide summer meals to kids who need the assistance and who get school provided lunch during the school year.\n- The American Rescue Plan which includes a provision that helps eligible individuals and families cover the premiums for their health insurance purchased through the Health Insurance Marketplace.\n- The CHIPS and Science Act which will secure our supply chain and better protect ourselves from global cost fluctuations by limiting our reliance on foreign countries to make these chips, will lower the cost of everyday electronics, and will boost American manufacturing creating stable, good paying, quality jobs here in our communities.\n- Major legislation that lowers costs for servicemembers and veterans. Through expanding healthcare, military paid parental leave, and military pay increases, these efforts aim to put more money in pockets.\nOur families deserve more than just to survive. I’m committed to helping New Jersey families thrive so the American Dream becomes a reality for all of us.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162426/https://www.andykim.com/issues/veterans/",
+     "original": "https://www.andykim.com/issues/veterans/",
+     "date": "2024-11-05",
+     "title": "Serving Our Veterans, Servicemembers & Military Families | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Serving Our Veterans, Servicemembers & Military Families\nA s a former civilian strategic advisor to Generals in Afghanistan, I’ve seen firsthand the sacrifices the members of our military make for us. That’s why I fought to get a seat on the House Armed Services Committee, where I’m proud to be a champion for our veterans, servicemembers, and their families.\nI’m proud to have recently fulfilled one of my early campaign promises to improve healthcare access for our veterans by delivering a new state-of-the-art community health clinic for veterans in Ocean County, NJ and voting for the largest healthcare and benefits expansion in VA history - the Honoring Our PACT Act.\nAnd that’s not all I’m doing. Every day, I’m working to ensure that our veterans have the services and opportunities they deserve by:\n- Voting to raise servicemember pay every year through the NDAA\n- Doubling funding for veteran suicide prevention and outreach programs\n- Working across the aisle to connect more veterans with jobs once they finish their service\n- Prioritizing efforts to make sure no veteran has to sleep in the streets . The words “veteran” and “homeless” should never appear in the same sentence.\n- Continuing to improve TRICARE and access to healthcare for veterans\n- Improving legal services for women veterans\n- Investing in childcare for military families including\n- Improving the Basic Allowance for Housing calculation to increase reimbursement for junior enlisted service members to counteract soaring rental rates\n- Expanding the Basic Needs Allowance to assist low-income servicemembers supporting a family\n- An increased authorization of $301 million in military construction for new child development centers\nI’ll never stop looking out for our veterans, servicemembers, and their families. Those who put their lives on the line for our country deserve our support, and I’m proud to make sure we have their back after they’ve had ours.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162424/https://www.andykim.com/issues/reproductive-rights/",
+     "original": "https://www.andykim.com/issues/reproductive-rights/",
+     "date": "2024-11-05",
+     "title": "Reproductive Rights | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Reproductive Rights\nI am proudly pro-choice and believe that the right of every person to choose what to do with their own body is an essential human right.\nThe Supreme Court’s decision to overturn Roe v. Wade immediately stripped millions of Americans of their fundamental right to choose if or when to have children – and left millions more scared and outraged.\nIn the wake of the Dobbs ruling, I voted to pass two bills – the Women’s Health Protection Act and the Ensuring Women’s Right to Reproductive Freedom Act – to protect women’s healthcare rights. And I’m proud to be a champion for women’s reproductive rights in Congress. As a member of the Pro-Choice Caucus and the Ranking Member of the Armed Services Military Personnel Subcommittee, I’ve consistently stood up, voted against, and led the fight against Republican efforts to undermine reproductive freedom.\nCongressional Republicans have made clear that if they retake a majority in Washington, they will move quickly to outlaw abortion nationwide. A nationwide ban on abortion would override the protections here in New Jersey and would endanger the lives of countless women across this country.\nIn the Senate, I will not rest until we pass a clear, comprehensive law restoring reproductive freedom for everyone, everywhere in this country.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105162425/https://www.andykim.com/issues/corruption/",
+     "original": "https://www.andykim.com/issues/corruption/",
+     "date": "2024-11-05",
+     "title": "Ending Corruption in Government | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Ending Corruption in Government\nA mericans deserve to have complete faith in the people who choose to serve in our government and the people they elect.\nThat means we need to know that politicians aren't profiting off their positions or blindly pursuing power at the expense of the people they serve.\nFrom the moment I decided to run for office in 2018, I’ve prioritized making our government more transparent and holding public officials accountable.\nWhile in Congress, I have:\n- Fulfilled my promise to my constituents to be the most accessible and accountable member of Congress in New Jersey by holding at least one town hall per month since I was sworn in, and posting my daily activities on my website.\n- Crafted legislation to prevent high-ranking public servants in all three branches of government, as well as senior staffers, and their families from buying, selling, or owning individual stocks, serving on corporate boards, and lobbying once they leave office.\n- Helped introduce and vote on legislation to get rid of dark money in our politics and restore trust in our democracy .\n- Led the fight to oppose Congressional pay raises .\n- Introduced a set of bills aimed at energizing national service, fostering volunteerism, and encouraging more Americans to serve our country or their communities in their own ways.\n- Advanced efforts to expand voting rights and promote greater access to the ballot box.\nI know for some, New Jersey politics — and politics in general — has a reputation for corruption. Many people and politicians brush it off, saying that’s just Jersey.\nBut we can do better. I know New Jerseyans are fed up with corrupt politics and powerful political families calling the shots. That means they’re fed up with dishonesty, greed, and politicians only looking out for themselves and their families.\nNow more than ever, New Jersey needs hardworking, trustworthy leaders focused on the common good, bringing integrity into our politics, and bringing people together. Together, we can create an America where democracy, civility, trust, and respect flourish.\n## Join Team Andy"
+    }
+   ],
+   "unread": [
+    "the list of andykim.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.andykim.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-31",
+    "url": "https://web.archive.org/web/20261031061902/https://www.andykim.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261031061902/https://www.andykim.com/",
+     "original": "https://www.andykim.com/",
+     "date": "2026-10-31",
+     "title": "Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "Click on an amount to get started and contribute to support Andy Kim. If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.\n## Join Team Andy\nNew Jersey is my home, and now I’m raising my two troublemaking little boys just down the road from where I grew up. I’m fighting for my family, for my neighbors, for the community that raised me, and for working families in pursuit of the American Dream.\nNew Jersey is the state that welcomed my two immigrant parents, the state that raised me, the state that gave me a chance to give back as a member of Congress representing the place where I grew up, and the state I will work every day to make proud as a United States Senator .\nNow more than ever, our country needs hardworking, trustworthy leaders focused on the common good, bringing integrity into our politics, and bringing people together. Together, we can create an America where democracy, civility, trust, and respect flourish – and that’s exactly what I aim to do in the Senate.\nWe have a lot of work to do, and I’m prepared to do whatever it takes to ensure New Jerseyans are given a fair chance and will fight for legislation that defends our American values and rights.\nMy parents taught me that service isn’t just a job, it’s a way of life. Being trusted as an elected official is an honor – an opportunity to serve our community, not a license to line your pockets for political favors. I’ve made ending government corruption a core value of my work in Congress.\nWhether you voted for me or not, you're my boss, I answer to you. I believe that we all need to work together, regardless of party, to get things done for the people we represent. Every day, I am keeping my promise to put people before partisan politics and to treat everyone with respect and civility.\nWhen I worked in the Situation Room or as a civilian advisor in Afghanistan to four-star generals, no one asked me if I was a Democrat or Republican. I served my country. In Congress, I’ve never lost sight of who I’m serving, and I’m always looking for ways I can contribute to make America work for everyone.\nWhen I was in elementary school, my mother took me to Washington, D.C. so I could understand why she had chosen to leave South Korea and create a new life in this country. On that trip, she said something I’d never forget: when a country gives you so many opportunities, you need to give back. Now I see success in this job as delivering for you and your family and the country that has given me and my family so much.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20260820192548/https://www.andykim.com/issues/",
+     "original": "https://www.andykim.com/issues/",
+     "date": "2026-08-20",
+     "title": "On the Issues | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## On the Issues\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20250628051338/https://www.andykim.com/issues/healthcare/",
+     "original": "https://www.andykim.com/issues/healthcare/",
+     "date": "2025-06-28",
+     "title": "Strengthening Our Families’ Healthcare | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Strengthening Our Families’ Healthcare\nI first ran for Congress to protect access to healthcare after doctors warned us that our unborn son could have serious medical complications in 2017 and my Republican member of Congress was leading the charge to take away healthcare from those with pre-existing conditions. We’re lucky that he’s grown into a healthy and thriving boy, but no family should worry about losing their healthcare because of a pre-existing condition or because they cannot afford it.\nWe need universal healthcare so that every American has access to the care they need at a cost they can afford. My mother is a nurse, and she taught me to be a fierce advocate for healthcare access. Nobody should die or face bankruptcy because they can’t afford to visit their doctor.\nThat’s why I’ve championed legislation to:\n- Lower prescription drug prices , particularly for our seniors\n- Protect people with pre-existing conditions\n- Allow Medicare to negotiate lower drug prices\n- Cap out-of-pocket drug costs for seniors at $2,000 per year\n- Cap the cost of insulin at $35/month\n- Expand Medicare to include dental, vision, and hearing coverage\n- Ensure and protect access to reproductive healthcare\n- Provide permanent funding for the Children’s Health Insurance Plan (CHIP)\n- Support rural community health centers\n- Reform the tax system to give more people access to affordable health care\n- Make it easier for seniors to receive home health care\nAs the father to two young boys, there is nothing more important to me than making sure our kids grow up healthy and have a stable future.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20250628051337/https://www.andykim.com/issues/jobs/",
+     "original": "https://www.andykim.com/issues/jobs/",
+     "date": "2025-06-28",
+     "title": "Supporting Small Businesses & Creating Jobs | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Supporting Small Businesses & Creating Jobs\nS mall businesses are the backbone of our state and our country. They invest in our local communities, create jobs, and become part of the fabric of our daily lives. Small businesses were hit especially hard by the pandemic, and I will continue fighting for the funds they need to rebuild and thrive. I championed our small businesses to make sure they have the resources they need.\nThroughout my time in Congress, and I’ve sponsored and voted for legislation that brings small business owners needed relief, including:\n- The Microloan Improvement Act to reduce red tape and provide more options for accessing loans\n- Helped over 10,000 small businesses in New Jersey access financial assistance during the pandemic\n- The CARES Act, which provided direct checks to Americans , a paycheck protection program , and emergency grants for small businesses\n- The American Rescue Plan that provided $6 billion in funding for New Jersey, including assistance for restaurants , funds for small business , financing for impacted businesses owned by people from marginalized communities, and funding to keep essential workers on the job\n- The Better Utilizing Infrastructure for Lasting Development of (BUILD) Veterans Businesses Act to create more federal contracting opportunities for veteran-owned small businesses\n- The Put Our Neighbors to Work Act to encourage the Department of Defense to hire more local workers on military construction projects and give small businesses more opportunities to compete\nI’ll always fight to give our small businesses the resources to grow, succeed, and contribute to our communities. And I’ll always look for ways to promote economic growth, create more good-paying American jobs in New Jersey, and strengthen our workforce for the future.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20260515015439/https://www.andykim.com/issues/environment/",
+     "original": "https://www.andykim.com/issues/environment/",
+     "date": "2026-05-15",
+     "title": "Protecting Our Environment | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Protecting Our Environment\nO ne of the most important legacies we can give to our kids, grandkids, and generations to come is a safe and thriving planet. That means we need to take bold steps today to protect our environment, cut pollution, and make our communities more resilient to extreme weather, and protect our planet for our kids and future generations.\nI voted for the Inflation Reduction Act for a lot of reasons, one of them was that it’s the largest investment in American energy independence, job creation in new, green sectors, and it combats climate change through:\n- Investments in American energy production, and does more to combat climate change than any bill in history.\n- Investments in agriculture, coastal restoration, clean energy, advanced manufacturing, and transportation that will benefit hardworking New Jersey families.\n- Cutting greenhouse gas emissions by 40% by 2030, making the United States well-positioned to meet our climate goals while also investing in our economy.\n- Saves families an average of $1,000 per year in energy costs and creates good paying jobs.\nThe investments we make now will create thousands of jobs in New Jersey and provide a cleaner, safer environment to enjoy now and in generations to come. That is a future we can look forward to, and one we can feel proud of when we hand it off to our kids and the next generation of leaders.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20250628051339/https://www.andykim.com/issues/families/",
+     "original": "https://www.andykim.com/issues/families/",
+     "date": "2025-06-28",
+     "title": "Making Raising a Family More Affordable | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Making Raising a Family More Affordable\nA s the son of immigrants, I saw my parents work hard to give me and my sister a better future, and they started by moving to New Jersey because of the top-notch public schools. I’m proud to have done my entire K-12 education in South Jersey and am now sending my two little boys off to school just a few miles from where I went.\nAs a dad, I’m doing everything I can to help parents have the tools they need to support their families, access good-paying jobs, and secure a brighter future for their kids. In Congress I’ve supported:\n- The Inflation Reduction Act which is dramatically lowering the cost of healthcare for Americans and seniors, lowering energy costs, and providing tax credits for families to make their homes more energy efficient\n- Efforts to expand free meals for kids through the 2022-2023 school year. Thanks to the Keep Kids Fed Act, New Jersey school and daycare meal programs will get $59 million. I’ve even introduced a bill, the Summer Meals REACH Act, that would provide summer meals to kids who need the assistance and who get school provided lunch during the school year.\n- The American Rescue Plan which includes a provision that helps eligible individuals and families cover the premiums for their health insurance purchased through the Health Insurance Marketplace.\n- The CHIPS and Science Act which will secure our supply chain and better protect ourselves from global cost fluctuations by limiting our reliance on foreign countries to make these chips, will lower the cost of everyday electronics, and will boost American manufacturing creating stable, good paying, quality jobs here in our communities.\n- Major legislation that lowers costs for servicemembers and veterans. Through expanding healthcare, military paid parental leave, and military pay increases, these efforts aim to put more money in pockets.\nOur families deserve more than just to survive. I’m committed to helping New Jersey families thrive so the American Dream becomes a reality for all of us.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20250628051337/https://www.andykim.com/issues/veterans/",
+     "original": "https://www.andykim.com/issues/veterans/",
+     "date": "2025-06-28",
+     "title": "Serving Our Veterans, Servicemembers & Military Families | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Serving Our Veterans, Servicemembers & Military Families\nA s a former civilian strategic advisor to Generals in Afghanistan, I’ve seen firsthand the sacrifices the members of our military make for us. That’s why I fought to get a seat on the House Armed Services Committee, where I’m proud to be a champion for our veterans, servicemembers, and their families.\nI’m proud to have recently fulfilled one of my early campaign promises to improve healthcare access for our veterans by delivering a new state-of-the-art community health clinic for veterans in Ocean County, NJ and voting for the largest healthcare and benefits expansion in VA history - the Honoring Our PACT Act.\nAnd that’s not all I’m doing. Every day, I’m working to ensure that our veterans have the services and opportunities they deserve by:\n- Voting to raise servicemember pay every year through the NDAA\n- Doubling funding for veteran suicide prevention and outreach programs\n- Working across the aisle to connect more veterans with jobs once they finish their service\n- Prioritizing efforts to make sure no veteran has to sleep in the streets . The words “veteran” and “homeless” should never appear in the same sentence.\n- Continuing to improve TRICARE and access to healthcare for veterans\n- Improving legal services for women veterans\n- Investing in childcare for military families including\n- Improving the Basic Allowance for Housing calculation to increase reimbursement for junior enlisted service members to counteract soaring rental rates\n- Expanding the Basic Needs Allowance to assist low-income servicemembers supporting a family\n- An increased authorization of $301 million in military construction for new child development centers\nI’ll never stop looking out for our veterans, servicemembers, and their families. Those who put their lives on the line for our country deserve our support, and I’m proud to make sure we have their back after they’ve had ours.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20260515020911/https://www.andykim.com/issues/reproductive-rights/",
+     "original": "https://www.andykim.com/issues/reproductive-rights/",
+     "date": "2026-05-15",
+     "title": "Reproductive Rights | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Reproductive Rights\nI am proudly pro-choice and believe that the right of every person to choose what to do with their own body is an essential human right.\nThe Supreme Court’s decision to overturn Roe v. Wade immediately stripped millions of Americans of their fundamental right to choose if or when to have children – and left millions more scared and outraged.\nIn the wake of the Dobbs ruling, I voted to pass two bills – the Women’s Health Protection Act and the Ensuring Women’s Right to Reproductive Freedom Act – to protect women’s healthcare rights. And I’m proud to be a champion for women’s reproductive rights in Congress. As a member of the Pro-Choice Caucus and the Ranking Member of the Armed Services Military Personnel Subcommittee, I’ve consistently stood up, voted against, and led the fight against Republican efforts to undermine reproductive freedom.\nCongressional Republicans have made clear that if they retake a majority in Washington, they will move quickly to outlaw abortion nationwide. A nationwide ban on abortion would override the protections here in New Jersey and would endanger the lives of countless women across this country.\nIn the Senate, I will not rest until we pass a clear, comprehensive law restoring reproductive freedom for everyone, everywhere in this country.\n## Join Team Andy"
+    },
+    {
+     "url": "https://web.archive.org/web/20260719222543/https://www.andykim.com/issues/corruption/",
+     "original": "https://www.andykim.com/issues/corruption/",
+     "date": "2026-07-19",
+     "title": "Ending Corruption in Government | Andy Kim for New Jersey - Restoring Integrity to the US Senate",
+     "text": "## Ending Corruption in Government\nA mericans deserve to have complete faith in the people who choose to serve in our government and the people they elect.\nThat means we need to know that politicians aren't profiting off their positions or blindly pursuing power at the expense of the people they serve.\nFrom the moment I decided to run for office in 2018, I’ve prioritized making our government more transparent and holding public officials accountable.\nWhile in Congress, I have:\n- Fulfilled my promise to my constituents to be the most accessible and accountable member of Congress in New Jersey by holding at least one town hall per month since I was sworn in, and posting my daily activities on my website.\n- Crafted legislation to prevent high-ranking public servants in all three branches of government, as well as senior staffers, and their families from buying, selling, or owning individual stocks, serving on corporate boards, and lobbying once they leave office.\n- Helped introduce and vote on legislation to get rid of dark money in our politics and restore trust in our democracy .\n- Led the fight to oppose Congressional pay raises .\n- Introduced a set of bills aimed at energizing national service, fostering volunteerism, and encouraging more Americans to serve our country or their communities in their own ways.\n- Advanced efforts to expand voting rights and promote greater access to the ballot box.\nI know for some, New Jersey politics — and politics in general — has a reputation for corruption. Many people and politicians brush it off, saying that’s just Jersey.\nBut we can do better. I know New Jerseyans are fed up with corrupt politics and powerful political families calling the shots. That means they’re fed up with dishonesty, greed, and politicians only looking out for themselves and their families.\nNow more than ever, New Jersey needs hardworking, trustworthy leaders focused on the common good, bringing integrity into our politics, and bringing people together. Together, we can create an America where democracy, civility, trust, and respect flourish.\n## Join Team Andy"
+    }
+   ],
+   "unread": [
+    "the list of andykim.com's saved pages"
+   ],
+   "posts": [
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mynpe75hzk2c",
+     "text": "Today is the first day of early voting in New Jersey. That’s why I’m taking action to ensure our elections remain free from federal interference.   In a democracy, voters choose their leaders, not the other way around."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mypan3jzgk22",
+     "text": "Last week, I sat down with Ambassador Talal Al Rahbi, the Omani Ambassador to the U.S., to discuss the long, historic relationship between the U.S. and Oman and how we can deepen the ties between our two countries, including through cultural exchange and people-to-people engagement. 1/2"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myqhuju3i224",
+     "text": "As parents, we have a responsibility to our children. We juggle a lot, but MediKids means you juggle less."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myruaqe6a227",
+     "text": "Congratulations to President Lula on his victory. Last night, the people of Brazil voted to uphold their democracy, championing opportunity for their families and economic independence.\n\nI hope all respect this democratic outcome."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myshkebdds2s",
+     "text": "We have a broken status quo. To fix it, we must fight corruption in all its forms."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myuk6mvfck2c",
+     "text": "Healthcare for EVERY kid is an investment in our future."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myv35ijqxs22",
+     "text": "Here's how my stock ban bill would hold officials from all 3 branches of government – including the White House, President's cabinet, Supreme Court, and Congress – accountable to the people they serve.\n\nTo me, this is a no-brainer."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myvpcdtolk2b",
+     "text": "The Trump administration is treating the Department of Justice like a Republican law firm. We must stop this."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mywwtuqsjk2j",
+     "text": "This is how much you're paying while Trump makes billions."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myxkfcjru223",
+     "text": "Dolores Huerta will be severely missed. A true leader for the labor movement, Huerta changed the lives of so many people and always stood up for immigrants, women, and workers.\n \nThe legacy she leaves behind will not be forgotten. We'll admire her for years to come."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myxnwmm4ic22",
+     "text": "NJ was hit hard by September’s nor’easter and shore communities need our support to rebuild and recover.\n\nThat’s why @booker.senate.gov and I wrote to Trump directly to request approval on Gov. Sherrill's most recent disaster declaration.\n\nLet’s deliver the federal support New Jerseyans need."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myxy2wbzj22y",
+     "text": "In several states, federal agents are going door to door to intimidate voters. That's why I'm taking action to prevent federal interference in NJ's elections."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myzlh6ady22k",
+     "text": "It's great to be at the Jersey Shore, celebrating the opening of our Northfield office!\n\nAs a South Jersey kid, I'm thrilled to be opening a Senate office that connects South Jersey and shore communities with the federal resources they need. 1/2"
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myzquveisk2z",
+     "text": "Congress made overwhelmingly clear that we must close sanctions loopholes to intensify pressure on Russia and end this war in Ukraine.\n\nYet Trump continues to defy Congress and Americans' voice. His focus on appeasing Putin and enriching Russia further erodes trust with our allies and partners."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3myzx7izx4s2v",
+     "text": "Welcome to my Northfield office at the Jersey Shore! We are here to serve you."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz27jfwars2t",
+     "text": "People are giving up everything including medicine, having kids, gym memberships, “being generous,” and their overall quality of life because they just can’t afford it anymore.\n\nAll while Trump makes billions.\n\nIt’s a crisis and it’s exactly the way he wants it."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz2m2txrd223",
+     "text": "What's with all the gold? These are the billionaires buying access to the President and funding Trump's ballroom."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz3y2bllrs2e",
+     "text": "Everyone should know about what’s happening in Sudan."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz4itqcccc27",
+     "text": "Yesterday, I joined the New Jersey Organizing Project (NJOP) to recognize the 14th anniversary of Superstorm Sandy, a storm that caused so much destruction across our state and that we still feel the effects of today. 1/2"
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz67ifvo6s24",
+     "text": "This week, I toured the Atlantic City International Airport to hear how I can help address the challenges they face, from limited flight options to high airfares.\n \nWe need to make sure transportation options are available and accessible to all in New Jersey, including in South Jersey."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz6lznum622d",
+     "text": "Happy Halloween, everyone! 🎃 It’s a beautiful day to trick-or-treat or just enjoy the Fall weather. Have fun, be safe, and look out for each other!"
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mz7c5t37ec2c",
+     "text": "As working families experience death by a thousand cuts when it comes to affordability, we must invest in our communities.\n\nThat’s why I visited casinos along the boardwalk in Atlantic City and spoke with workers and industry leaders about what’s on their minds."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzb2y5p4wc2t",
+     "text": "There's so much potential here in South Jersey."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzbh2vpabc2s",
+     "text": "Wishing Senator Murphy a speedy recovery. I wish his family well through this difficult time."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzbtt4weis27",
+     "text": "The cost of gas is directly related to our foreign policy.\n \nThe ability to run a business in America is directly related to our foreign policy.\n \nAnd I for one believe our foreign policy should create opportunity for Americans, not higher bills to pay."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzdvnunzcc2v",
+     "text": "End the war. End the tariffs. Pass MediKids.\n \nIt's time to deliver."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzecl2ntks2k",
+     "text": "Caregiving can be incredibly isolating, but gatherings like the National Caregivers Conference in Princeton, NJ, give me hope.\n \nThis Family Caregiving Month, it's an honor to meet with fellow caregivers who are doing the work, day in and day out, to support our loved ones and communities. 1/2"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzeolz6pgs22",
+     "text": "Making your voice heard is important. For example, in my office at the Capitol, New Jerseyans are currently voting to settle a classic Jersey debate: Pork Roll or Taylor Ham. \n\nTomorrow, you have the chance to make your voice heard in an even more critical way: the 2026 midterms. Get out and vote!"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzftjx6adc26",
+     "text": "Happy Election Day, New Jersey! 🗳️\n\nThe polls are open until 8pm today, so make sure you get out and exercise your right to vote! \n\nTo find your polling place, go to voter.svrs.nj.gov/polling-plac....\n\nHave any voting questions or problems? Call 1-877-NJ-VOTER"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzgcn55cwc2z",
+     "text": "Our national security depends on trust. Sending vulnerable Afghans to face imprisonment or torture by the Taliban betrays the promise we made to those who stood by us.  That’s why I joined 65 colleagues to demand a stop to these flights."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kim.senate.gov/post/3mzgltmvdt22b",
+     "text": "Want to spend days like this helping my office serve NJ? There’s still time to apply to be a Spring 2027 intern in my NEW Northfield office!\n\nLearn more and apply by Friday, November 6 at 11:59pm: kim.senate.gov/jobs-interns..."
+    }
+   ]
+  }
+ ]
+}

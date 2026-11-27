@@ -1,0 +1,726 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "bennet",
+ "name": "Michael F. Bennet",
+ "built": "2026-11-26",
+ "sites": [
+  "https://michaelbennet.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://michaelbennet.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-10-17",
+    "url": "https://web.archive.org/web/20221017175916/https://michaelbennet.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221017175916/https://michaelbennet.com/",
+     "original": "https://michaelbennet.com/",
+     "date": "2022-10-17",
+     "title": "Michael Bennet for Colorado",
+     "text": "Join Team Bennet\n## Imagine\nMichael Bennet's plan to expand the Child Tax Credit and cut child poverty in half was included in the March 2021 Covid relief package. Now the work begins to make it permanent.\nToday, ballots are being mailed to voters across Colorado for this election. Do you have a plan to vote? Go to… https://t.co/JGfV8Y7K4Q\n## Join Team Bennet"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104214522/https://michaelbennet.com/priorities/",
+     "original": "https://michaelbennet.com/priorities/",
+     "date": "2022-11-04",
+     "title": "Colorado Priorities - Michael Bennet",
+     "text": "Michael Bennet fights for hard working Coloradans and an economy that works for everyone, not just those at the top.\nMichael will work with anyone, regardless of party, to get things done in Washington and he is working to end the influence of corporate special interests in our politics. From repairing roads and bridges and protecting public lands, to cutting taxes for working families and lowering health care costs, Michael has shown he can overcome partisan gridlock, and deliver for Colorado.\n## Colorado families are finding that no matter how hard they work, they struggle to make ends meet.\nMichael passed the expanded Child Tax Credit, which kept nearly 4 million children out of poverty last year alone and gave working families a tax cut. Now, he’s fighting to make it permanent. Michael believes anybody who graduates with a high school diploma should be able to find a good job and earn a living wage. That’s why he’s working to expand access to skills training and apprenticeships, particularly in rural and underserved communities. He’s also fighting to make sure college is affordable for Coloradans who choose to attend. Michael successfully pushed to extend the pause on student loan repayments so borrowers have more time to financially recover from the pandemic.\n## Coloradans need an economy that works for everyone, not just those at the top.\nMichael is fighting to build an economy that works for everyone, not just the few at the top. He’s working to lower costs from health care to housing to child care to make sure Coloradans can get and stay ahead. Michael’s work saving small businesses during the COVID pandemic earned him the Small Business Council of America’s 2022 Congressional Award. Michael helped pass the Bipartisan Infrastructure Law which will rebuild roads and bridges while creating good-paying jobs, and expand access to high-speed internet so Coloradans can fully participate in the 21st century economy. He believes the wealthy and big corporations should pay their fair share in taxes so he’s fighting to reverse the Trump tax cuts for the wealthy and big corporations and invest in working families. Michael is fighting to boost American competitiveness to bolster our national security and bring manufacturing of critical goods back to the United States.\n## Ongoing supply chain disruptions and housing shortages mean prices continue to increase for Coloradans.\nAs housing costs rise, Michael has worked with leaders across Colorado to create a plan that will increase housing supply and lower costs. Michael responded to rising gas prices by introducing legislation to hold Big Oil companies accountable for profiteering. To solve supply chain problems, Michael has worked to allow truckers to work more efficiently, hold shipping companies accountable, and he supported small and medium meat processors to protect our food supply chain.\n## Droughts, wildfires, and air pollution are threatening the Colorado way of life.\nFor years, Michael has fought for solutions that address climate change, cut pollution, and make sure all Coloradans have clean air and water. Michael is working to help Colorado communities recover from wildfires and prevent them from happening; plug orphan wells that release toxic methane and other pollutants into our air and groundwater; and upgrade our electrical grid and grow our renewable energy sector – all while creating good-paying jobs to execute these critical programs and ensuring that as we transition to a clean energy economy, no Colorado communities are left behind.\n## The broken campaign finance system gives large corporations and their lobbyists too much power in Washington.\nMichael puts Colorado first and stands up to corporate special interests to reform our politics. He has been recognized as a leader on anti-corruption efforts in Congress by End Citizens United. Michael is the only Senator running for re-election who is not taking any money from corporate PACs and federal lobbyists. He’s currently working to ban members of Congress from trading stocks and ever becoming lobbyists. Michael knows Washington plays by different rules, and he wants to put an end to that.\n## Health care costs are too high and Coloradans need realistic solutions that expand access to good quality, affordable health care.\nMichael worked with Republicans to lower health care costs by ending surprise emergency medical bills and cut red tape so Coloradans can quickly access lifesaving medicines for cancer, diabetes, and more. Now, Michael is fighting to cap out-of-pocket insulin prices at $35 per month and to allow Medicare to negotiate drug prices. Since 2017, Michael has fought for a public option called Medicare X that would expand on the promise of the Affordable Care Act to achieve universal healthcare, and allow people to keep their private insurance if they want.\nMichael believes that Washington, D.C. should follow Colorado’s lead and codify Roe v. Wade into law, so that women can make these most personal reproductive decisions with their doctors, and without government interference.\n## Rural communities are at risk of being left behind in a rapidly changing world.\nMichael passed legislation to close the digital divide in rural communities and bring high-speed internet to tens of thousands of Coloradans who currently lack access. He passed legislation to repair roads and bridges and improve public transportation on the Western Slope. Michael is fighting to support farmers and ranchers facing an unprecedented drought and build resilient supply chains. As housing costs rise, Michael passed measures to improve and build affordable housing for our rural and mountain communities. Finally, Michael passed the Postal Reform Act which will save nearly $50 billion over the next 10 years while supporting more reliable delivery and service in Colorado’s mountain and rural communities.\n## Join Team Bennet"
+    },
+    {
+     "url": "https://web.archive.org/web/20221007051121/https://michaelbennet.com/let-us-know-what-issue-matters-most-to-you/",
+     "original": "https://michaelbennet.com/let-us-know-what-issue-matters-most-to-you/",
+     "date": "2022-10-07",
+     "title": "Let us know what issue matters most to you. - Michael Bennet",
+     "text": "Let us know what issue matters most to you.\n## Let us know what issue matters most to you."
+    },
+    {
+     "url": "https://web.archive.org/web/20220522021742/https://michaelbennet.com/vision/",
+     "original": "https://michaelbennet.com/vision/",
+     "date": "2022-05-22",
+     "title": "Michael's Vision - Michael Bennet",
+     "text": "We are the first generation of Americans at risk of handing our children less opportunity, not more.\nToday, we are reaping the whirlwind of four decades of economic immobility. Many Coloradans have not received a decent pay raise over this period, even as costs continue to rise. No matter how hard they work, many Coloradans cannot afford a middle-class life.\nColorado workers and families who were already struggling to make ends meet are hurt even harder by the economic crisis fueled by the COVID-19 pandemic.\nThe link between mobility and economic opportunity is broken. Today, there is no better predictor of what a child will earn than what their parents have earned. Take away mobility, and the American Dream becomes meaningless — something between a nostalgic myth and a political lie.\nMichael is fighting to change this. Driven by an obligation to create more opportunity for the next generation, and informed by the needs of Colorado’s local communities, this is his vision.\n## Join Team Bennet"
+    },
+    {
+     "url": "https://web.archive.org/web/20220730001530/https://admin.michaelbennet.com/priorities/",
+     "original": "https://admin.michaelbennet.com/priorities/",
+     "date": "2022-07-30",
+     "title": "Colorado Priorities - Michael Bennet",
+     "text": "Michael Bennet fights for hard working Coloradans and an economy that works for everyone, not just those at the top.\nMichael will work with anyone, regardless of party, to get things done in Washington and he is working to end the influence of corporate special interests in our politics. From repairing roads and bridges and protecting public lands, to cutting taxes for working families and lowering health care costs, Michael has shown he can overcome partisan gridlock, and deliver for Colorado.\n## Colorado families are finding that no matter how hard they work, they struggle to make ends meet.\nMichael passed the expanded Child Tax Credit, which kept nearly 4 million children out of poverty last year alone and gave working families a tax cut. Now, he’s fighting to make it permanent. Michael believes anybody who graduates with a high school diploma should be able to find a good job and earn a living wage. That’s why he’s working to expand access to skills training and apprenticeships, particularly in rural and underserved communities. He’s also fighting to make sure college is affordable for Coloradans who choose to attend. Michael successfully pushed to extend the pause on student loan repayments so borrowers have more time to financially recover from the pandemic.\n## Coloradans need an economy that works for everyone, not just those at the top.\nMichael is fighting to build an economy that works for everyone, not just the few at the top. He’s working to lower costs from health care to housing to child care to make sure Coloradans can get and stay ahead. Michael’s work saving small businesses during the COVID pandemic earned him the Small Business Council of America’s 2022 Congressional Award. Michael helped pass the Bipartisan Infrastructure Law which will rebuild roads and bridges while creating good-paying jobs, and expand access to high-speed internet so Coloradans can fully participate in the 21st century economy. He believes the wealthy and big corporations should pay their fair share in taxes so he’s fighting to reverse the Trump tax cuts for the wealthy and big corporations and invest in working families. Michael is fighting to boost American competitiveness to bolster our national security and bring manufacturing of critical goods back to the United States.\n## Ongoing supply chain disruptions and housing shortages mean prices continue to increase for Coloradans.\nAs housing costs rise, Michael has worked with leaders across Colorado to create a plan that will increase housing supply and lower costs. Michael responded to rising gas prices by introducing legislation to hold Big Oil companies accountable for profiteering. To solve supply chain problems, Michael has worked to allow truckers to work more efficiently, hold shipping companies accountable, and he supported small and medium meat processors to protect our food supply chain.\n## Droughts, wildfires, and air pollution are threatening the Colorado way of life.\nFor years, Michael has fought for solutions that address climate change, cut pollution, and make sure all Coloradans have clean air and water. Michael is working to help Colorado communities recover from wildfires and prevent them from happening; plug orphan wells that release toxic methane and other pollutants into our air and groundwater; and upgrade our electrical grid and grow our renewable energy sector – all while creating good-paying jobs to execute these critical programs and ensuring that as we transition to a clean energy economy, no Colorado communities are left behind.\n## The broken campaign finance system gives large corporations and their lobbyists too much power in Washington.\nMichael puts Colorado first and stands up to corporate special interests to reform our politics. He has been recognized as a leader on anti-corruption efforts in Congress by End Citizens United. Michael is the only Senator running for re-election who is not taking any money from corporate PACs and federal lobbyists. He’s currently working to ban members of Congress from trading stocks and ever becoming lobbyists. Michael knows Washington plays by different rules, and he wants to put an end to that.\n## Health care costs are too high and Coloradans need realistic solutions that expand access to good quality, affordable health care.\nMichael worked with Republicans to lower health care costs by ending surprise emergency medical bills and cut red tape so Coloradans can quickly access lifesaving medicines for cancer, diabetes, and more. Now, Michael is fighting to cap out-of-pocket insulin prices at $35 per month and to allow Medicare to negotiate drug prices. Since 2017, Michael has fought for a public option called Medicare X that would expand on the promise of the Affordable Care Act to achieve universal healthcare, and allow people to keep their private insurance if they want.\nMichael believes that Washington, D.C. should follow Colorado’s lead and codify Roe v. Wade into law, so that women can make these most personal reproductive decisions with their doctors, and without government interference.\n## Rural communities are at risk of being left behind in a rapidly changing world.\nMichael passed legislation to close the digital divide in rural communities and bring high-speed internet to tens of thousands of Coloradans who currently lack access. He passed legislation to repair roads and bridges and improve public transportation on the Western Slope. Michael is fighting to support farmers and ranchers facing an unprecedented drought and build resilient supply chains. As housing costs rise, Michael passed measures to improve and build affordable housing for our rural and mountain communities. Finally, Michael passed the Postal Reform Act which will save nearly $50 billion over the next 10 years while supporting more reliable delivery and service in Colorado’s mountain and rural communities.\n## Join Team Bennet"
+    },
+    {
+     "url": "https://web.archive.org/web/20220511221337/https://admin.michaelbennet.com/vision/",
+     "original": "https://admin.michaelbennet.com/vision/",
+     "date": "2022-05-11",
+     "title": "Michael's Vision - Michael Bennet",
+     "text": "We are the first generation of Americans at risk of handing our children less opportunity, not more.\nToday, we are reaping the whirlwind of four decades of economic immobility. Many Coloradans have not received a decent pay raise over this period, even as costs continue to rise. No matter how hard they work, many Coloradans cannot afford a middle-class life.\nColorado workers and families who were already struggling to make ends meet are hurt even harder by the economic crisis fueled by the COVID-19 pandemic.\nThe link between mobility and economic opportunity is broken. Today, there is no better predictor of what a child will earn than what their parents have earned. Take away mobility, and the American Dream becomes meaningless — something between a nostalgic myth and a political lie.\nMichael is fighting to change this. Driven by an obligation to create more opportunity for the next generation, and informed by the needs of Colorado’s local communities, this is his vision.\n## Join Team Bennet"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104222448/https://espanol.michaelbennet.com/priorities/",
+     "original": "https://espanol.michaelbennet.com/priorities/",
+     "date": "2022-11-04",
+     "title": "Prioridades de Colorado - Michael Bennet",
+     "text": "Prioridades de Colorado\nMichael Bennet lucha por los habitantes de Colorado que trabajan arduamente y por una economía que funcione para todas las personas, no solo para los que están en la cima.\nMichael trabajará con cualquiera, independiente de su partido político, para lograr avances en Washington, además, está trabajando para darle fin a la influencia de los intereses especiales corporativos en nuestra política. Desde la reparación de carreteras y puentes y la protección de las tierras públicas, hasta reducciones de los impuestos para las familias trabajadoras y de los costos de la atención de salud, Michael ha demostrado que puede superar los estancamientos partidistas y darle a Colorado lo que necesita.\n## Las familias de Colorado se están dando cuenta de que, por mucho que trabajen, igualmente enfrentan dificultades para llegar a fin de mes.\nMichael aprobó la expansión del Crédito tributario por hijos, lo que mantuvo a casi 4 millones de niños fuera de la pobreza en el año pasado y les proporcionó una reducción de los impuestos a las familias trabajadoras. Ahora, él está luchando para que esto sea permanente. Michael cree que todas las personas que se gradúen con un diploma de secundaria deberían poder encontrar un buen trabajo y ganar un sueldo digno. Es por eso por lo que él está trabajando para expandir el acceso al desarrollo de habilidades y formaciones, particularmente en las comunidades rurales y desatendidas. También está luchando para garantizar que los estudios universitarios sean asequibles para los habitantes de Colorado que decidan ir a la universidad. Michael logró con éxito expandir la pausa del pago de los préstamos estudiantiles para que los prestatarios tengan más tiempo para recuperarse financieramente de la pandemia.\n## Los habitantes de Colorado necesitan una economía que funcione para ellos, no solo para quienes están en la cima\nMichael está luchando por desarrollar una economía que funcione para todos, no solo para los pocos que están en la cima. Él está trabajando para reducir los costos, desde servicios médicos hasta la vivienda y el cuidado infantil, para garantizar que los habitantes de Colorado puedan avanzar y seguir en ese camino. El esfuerzo de Michael para salvar a los pequeños negocios durante la pandemia del COVID-19 le significó ganar el Premio del Congreso de 2022 del Consejo de Pequeños Negocios de Estados Unidos (SBCA, por sus siglas en inglés). Michael ayudó a aprobar la Ley de Infraestructura Bipartidista, la que reconstruirá las carreteras y puentes y creará empleos bien remunerados, además de expandir el acceso a Internet de alta velocidad para que los habitantes de Colorado puedan participar plenamente en la economía del siglo XXI. Él considera que los ricos y las grandes corporaciones deben pagar su parte justa de los impuestos. Por esto está luchando para revertir las reducciones de impuestos implementadas por Trump para los ricos y grandes corporaciones e invertir en las familias trabajadoras. Michael está luchando para impulsar la competitividad estadounidense con el fin de reforzar nuestra seguridad nacional y traer la fabricación de bienes esenciales de vuelta a los Estados Unidos.\n## Las continuas interrupciones en la cadena de suministro y la falta de viviendas provocan que los precios continúen aumentando para los habitantes de Colorado\nA medida que los costos de la vivienda aumentan, Michael ha trabajado con líderes de todo Colorado para crear un plan que aumente la oferta de viviendas y disminuya los costos. Michael ha respondido al aumento de los precios de la gasolina presentando una legislación para que las grandes empresas petroleras rindan cuentas por sus ganancias poco éticas. Para resolver los problemas de la cadena de suministro, Michael ha trabajado para que los camioneros trabajen de una manera más eficiente y que también pone más responsabilidad a las empresas para que rindan cuentas. También ha apoyado a los pequeños y medianos procesadores de carne con el fin de proteger nuestra cadena de suministro de alimentos.\n## Las sequías, incendios forestales y contaminación del aire amenazan la forma de vida de Colorado\nDurante años, Michael ha luchado para encontrar soluciones que aborden el cambio climático, reduzcan la contaminación y garanticen que todos los habitantes de Colorado tengan aire y agua limpios. Michael está trabajando para ayudar a las comunidades de Colorado a recuperarse de los incendios forestales y evitar que estos ocurran; tapar los pozos abandonados que liberan metano tóxico y otros contaminantes en nuestro aire y aguas subterráneas; y actualizar nuestra red eléctrica y expandir nuestro sector de la energía renovable, todo esto mientras se crean empleos bien remunerados para poner en marcha estos programas cruciales y garantizar que, a medida que hacemos la transición a una economía de energía limpia, ninguna comunidad de Colorado se quede atrás.\n## El sistema disfuncional de financiamiento de las campañas les da a las grandes empresas y a sus grupos de lobby cabildeo poder en Washington\nMichael pone a Colorado primero para defender al estado contra de los intereses corporativos especiales para reformar nuestra política. Él ha sido reconocido como líder de los esfuerzos contra la corrupción en el Congreso por End Citizens United. Michael es el único senador que se presenta a la reelección que no acepta ningún tipo de financiamiento proveniente de los comités de acción política corporativos o de los grupos lobistas federales. Actualmente, él está trabajando para prohibir que los miembros del Congreso inviertan en acciones y se conviertan en cabilderos. Michael sabe que las reglas en Washington son diferentes, por eso quiere darle fin a esa situación.\n## Los costos de la atención de salud son demasiado altos y los habitantes de Colorado necesitan soluciones realistas que expandan el acceso a una atención de salud asequible y de buena calidad\nMichael trabajó con los republicanos para reducir los costos de la atención de salud, terminando con las facturas sorpresas médicas de emergencia y reduciendo los trámites, para que así los habitantes de Colorado puedan acceder rápidamente a los medicamentos que salvan vidas contra el cáncer, la diabetes, entre otros. Actualmente, Michael está luchando para limitar los precios de bolsillo de la insulina a $35 mensuales y para permitir que Medicare negocie los precios de los medicamentos. Desde el año 2017, Michael ha luchado por una opción pública llamada Medicare X, la cual expandiría la promesa de la Ley del Cuidado de Salud a Bajo Precio con el propósito de lograr una atención médica universal, además de permitirles a las personas que mantengan su seguro privado si así lo desean.\nMichael cree que Washington, D.C. debería seguir el ejemplo de Colorado y codificar Roe v. Wade como ley, para que así las mujeres puedan tomar esas decisiones reproductivas tan personales con sus doctores y sin interferencia del gobierno.\n## Las comunidades rurales corren el riesgo de quedarse atrás en un mundo que está cambiando rápidamente\nMichael aprobó leyes para cerrar la brecha digital en las comunidades rurales y llevar Internet de alta velocidad a decenas de miles de habitantes de Colorado que actualmente carecen de acceso. Él aprobó leyes para reparar carreteras y puentes, además de mejorar el transporte público en el Western Slope. También aseguro $8 mil millones para mejoras en proyectos de infraestructura de agua en el oeste a través de la ley de infraestructura bipartidista. Michael está luchando para apoyar a los agricultores y ganaderos que están enfrentando una sequía sin precedentes y para establecer cadenas de suministros resilientes. Adicionalmente, Michael está trabajando en una manera bipartidista para presentar la versión del Senado de la Ley de Modernización de la Fuerza Laboral Agrícola aprobada por la Cámara, que mejoraría el sistema H-2A para crear más certeza para los agricultores y proporcionar un camino hacia la ciudadanía para los trabajadores agrícolas. Debido al aumento del costo de la vivienda, Michael aprobó medidas para mejorar y construir viviendas asequibles para nuestras comunidades rurales y de la montaña. Por último, Michael aprobó la Ley de Reforma Postal, la cual ahorrará cerca de $50,000 millones en los próximos 10 años, además de apoyar una entrega y servicios más fiables en las comunidades rurales y de las montañas de Colorado.\n## Trabajar con el equipo de Bennet\nAl proporcionar su número de teléfono celular, usted acepta recibir actualizaciones recurrentes por mensaje de texto de Bennet for Colorado, lo que incluye mensajes de texto automatizados. Puede esperar recibir no más de 1 mensaje cada 2 días. Envíe la palabra HELP para obtener ayuda, STOP para terminar. Es posible que se apliquen tarifas de mensajes y datos. Política de Privacidad y Términos y Condiciones\n## Donar\nHaga clic en una opción para empezar. Si ha guardado su información de pago con ActBlue Express, su donación se realizará inmediatamente.\n## Donar\nHaga clic en una opción para empezar. Si ha guardado su información de pago con ActBlue Express, su donación se realizará inmediatamente.\nContinúe al sitio"
+    },
+    {
+     "url": "https://web.archive.org/web/20210413222622/https://michaelbennet.com/vision/drive-economic-opportunity/",
+     "original": "https://michaelbennet.com/vision/drive-economic-opportunity/",
+     "date": "2021-04-13",
+     "title": "Drive Economic Opportunity - Michael Bennet",
+     "text": "Drive Economic Opportunity\nAmerica calls itself the land of opportunity. It doesn’t feel that way today. Wages are stagnant, costs are rising, and the economic inequality in our country is only growing worse. We need to build opportunity for every American. We need ambitious solutions to our country’s greatest challenges.\nTo drive economic opportunity, Michael will work to ensure that when the economy grows, incomes for everyone grow. In the meantime, he will take immediate steps to increase wages and lower the costs of a middle-class life. And as a former school superintendent, he will recommit our country to delivering a quality education for every American.\n## When the Economy Grows, Incomes for Everyone Should Grow\nWhen the economy grows, incomes for everyone should grow. But over the last 40 years, even as the economy has grown, 9 out of 10 Americans have not received a decent pay raise. Globalization, automation, and unfair competition from China have left far too many workers and families behind.\nYet, instead of addressing these economic changes, our broken political system has made matters worse. Since 2000, politicians have cut taxes by about $5 trillion, with two-thirds of those tax cuts going to those at or near the top. Meanwhile, we’ve spent another $5 trillion on wars overseas. We can’t spend the next two decades doing the same thing and expect a different result.\nImagine if we invested in a stronger country that builds opportunity for every American here at home. Driving up incomes for everyone won’t happen overnight, but we can start by making investments to compete in the 21st century.\nMichael will seize the economic opportunity of combating climate change—providing new opportunities for farmers, ranchers, and rural communities to become more resilient and to invest in zero-emissions energy while growing the economy.\nHe will work to fix roads and bridges that need repairing; upgrade and expand our mass transit systems, electric grid, and airports; and connect rural communities to high-speed, reliable broadband.\nHe will make strategic, job-creating investments at home that help us out-compete China in the industries of the future—such as advanced manufacturing, artificial intelligence, superconductors, and quantum computing.\nWe can do all of this for far less than the cost of those tax cuts and wars. And these investments will be designed to directly address the fact that too many shrinking small towns and rural counties, too many post-industrial cities, and too many pockets of concentrated poverty in rural and urban America have been left behind for too long.\nMichael will work with rural communities to make sure they have what they need to be competitive and that generations to come can live a good life in rural America. He will end the trade war and fix our broken immigration system, so our farmers and ranchers have access to global markets and can find the workers they need. He will empower local leaders to connect rural economies and schools to high-speed, reliable broadband and to drive federal funding for rural infrastructure projects. Michael will partner with farmers and ranchers to create new opportunities for growth locally and globally, streamline regulations, make the Department of Agriculture more accessible, and crack down on abuses by big companies against small- and medium-sized producers. And, his public health care option, Medicare-X, will come to rural areas first.\n## In the Meantime, We Need to Increase Wages and Lower Costs\nAmericans turning 30 today are just as likely to earn less than their parents did at that age, as they are to earn more. While incomes have stagnated, the costs of living have continued to rise. Most people cannot afford some combination of health care, housing, child care, and higher education. In other words, they can’t afford a middle-class life. This means for the first time in our history, we are at risk of leaving less opportunity to our kids—not more. Democracy cannot function with a lack of economic mobility for a majority of people.\nWe need to take steps that will immediately increase economic security for all Americans. Michael’s plan to overhaul and expand the Child Tax Credit, called the American Family Act, will help middle-class families afford to raise their kids and cut child poverty by nearly 40%. He also will expand the Earned Income Tax Credit, ensure equal pay for equal work, enact paid family and medical leave, make it easier for workers to bargain for better pay, and raise the minimum wage.\nAt the same time, we need to lower the costs that are making life unaffordable for too many Americans. That starts by covering every American with high-quality, affordable health insurance. Michael will work to create a public option called Medicare-X that increases competition, lowers costs, and provides everyone with a better healthcare choice. Medicare-X also empowers the federal government to negotiate lower prescription drug prices for the first time, bringing down costs for tens of millions of Americans. To further lower costs, Michael will take action to tackle the housing affordability crisis and make child care more affordable.\n## It’s Time We Provide A Quality Education for Every American\nWe must recommit to providing a quality education to every American. As a former school superintendent, Michael knows that in too many places, educational outcomes are reinforcing economic inequality rather than liberating children and their families from it. Some American children, through no fault of their own, have access to high-quality preschool and others do not; some have access to high-quality elementary, middle, and high schools and others do not; some enjoy enrichment activities and tutoring, as well as the advice of parents and coaches who themselves went to college, and others do not. When all of this is true, then equal is not equal—and unequal is catastrophic, not only for students holding the short end of the stick, but for our shared future.\nMichael will work to ensure that all of our children receive a high-quality education, from early childhood through high school; college students can pursue their studies without incurring the crushing burden of debt; more people seeking an alternative to college can pursue high-quality apprenticeships and job training; and Americans throughout their lives can advance their careers by improving their existing job skills or learning new ones.\n## Join Team Bennet\nBy providing your cell phone number you agree to receive periodic campaign updates. Text HELP for info, STOP to end. Msg & Data rates may apply.\nBy providing your cell phone number you agree to receive periodic campaign updates. Text HELP for info, STOP to end. Msg & Data rates may apply."
+    },
+    {
+     "url": "https://web.archive.org/web/20210413215623/https://michaelbennet.com/vision/fix-our-broken-politics/",
+     "original": "https://michaelbennet.com/vision/fix-our-broken-politics/",
+     "date": "2021-04-13",
+     "title": "Fix Our Broken Politics - Michael Bennet",
+     "text": "Fix Our Broken Politics\nAmerica calls itself the land of opportunity. It doesn’t feel that way today. Wages are stagnant, costs are rising, and the economic inequality in our country is only growing worse. We need to build opportunity for every American. We need ambitious solutions to our country’s greatest challenges.\nWe need to learn to govern ourselves again.\nThere are 7,591 words in the Constitution of the United States; politics is not one of them. Yet too often today, the campaigning never stops and the governing never begins. To make progress, we must fix our broken politics.\nCorruption and dysfunction in Washington not only destroy the American people’s trust in government but also prevent us from making critical decisions for our future. For too long, we have allowed a tyranny of the minority—whether the extremist so-called Freedom Caucus or a handful of billionaires who drop tens of millions of dollars into political campaigns—to override the will of the American people.\nWhen the Supreme Court, in the Citizens United decision , allowed the influence of unlimited dark money from billionaires into our politics, they took a narrow and misguided view of how money corrupts Washington. More common than politicians acting at the direct request of their donors is a widespread corruption of inaction, in which politicians do nothing to solve critical problems—like climate change or soaring health care costs—for fear of having millions of dollars spent against them in their next campaign.\nWe need to restore trust in our government by dismantling pay-to-play politics, increasing transparency, and reinvigorating the democratic process. Michael will ban Members of Congress from ever becoming lobbyists and overturn Citizens United to get unlimited dark money out of politics. He also will protect the right to vote, ensure the security of our elections, and reduce extreme partisanship in our electoral process—starting with his plan to make partisan gerrymandering illegal. Voters should choose their elected officials, not the other way around.\n## Join Team Bennet\nBy providing your cell phone number you agree to receive periodic campaign updates. Text HELP for info, STOP to end. Msg & Data rates may apply.\nBy providing your cell phone number you agree to receive periodic campaign updates. Text HELP for info, STOP to end. Msg & Data rates may apply."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://michaelbennet.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-27",
+    "url": "https://web.archive.org/web/20261027233351/https://www.michaelbennet.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261027233351/https://www.michaelbennet.com/",
+     "original": "https://www.michaelbennet.com/",
+     "date": "2026-10-27",
+     "title": "Get Updates - Michael Bennet for Colorado",
+     "text": "## Join Team Bennet\nBy providing your cell phone number and checking the checkbox, you consent to receive periodic campaign updates and fundraising asks from Bennet for Colorado, including by automated text message. Messages include donation asks. Message frequency varies. Msg & Data rates may apply. Text HELP for help, STOP to end. Terms & Privacy Policy."
+    },
+    {
+     "url": "https://web.archive.org/web/20260730174157/https://www.michaelbennet.com/priorities/",
+     "original": "https://www.michaelbennet.com/priorities/",
+     "date": "2026-07-30",
+     "title": "Priorities - Michael Bennet for Governor",
+     "text": "## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260629020638/https://www.michaelbennet.com/priorities/housing/",
+     "original": "https://www.michaelbennet.com/priorities/housing/",
+     "date": "2026-06-29",
+     "title": "Housing - Michael Bennet for Governor",
+     "text": "Affordable Homes for Every Family\nColorado faces a housing crisis that threatens families, communities, our economy, and our way of life. Many of us worry that our kids may never be able to afford to live here. Limited supply, bureaucratic delays, and rising costs have put affordable rental and homeownership out of reach for too many families and pushed Coloradans farther from their jobs. In many parts of Colorado, the number of hours a family must work to afford a mortgage has doubled over the past decade, even though average wages have increased by nearly 50%.\nMichael believes we must build more housing for people at every stage of life and for every part of Colorado, from young people entering the workforce, to parents raising kids, to seniors looking to downsize. There’s no one-size-fits-all solution, but to overcome this crisis, we must make building housing easier, faster, and less expensive, while protecting our public lands, open spaces, and the character of our communities that make Colorado special. Together, we can build a Colorado where no one is forced to spend more than 30% of their income on housing.\nMichael is committed to solving this challenge by tackling every aspect of it: building new homes of all types, preserving existing units, reducing red tape, lowering construction costs, and expanding support for first-time homebuyers. As Governor, he will bring together local communities, the private sector, non-profits, philanthropy, and the legislature to meet this urgent, statewide challenge. This innovative and future-oriented plan combines significant state investment and critical private sector participation to ensure that Coloradans can afford to live near where they work – today, and for generations to come.\nAs Governor, Michael will:\nDrive a Statewide Surge in Home Construction to Build the Homes Coloradans Need: Colorado faces a housing shortfall, driving up costs and putting housing out of reach for many. Michael will work closely with communities, homebuilders, labor, and nonprofits to expand affordable supply by reducing costs, cutting red tape, and supporting local efforts to streamline permitting, generate revenue for affordable housing programs, and boost housing density. He will bolster those efforts through strategic state investments and a commitment to increase the supply of state-supported housing by as much as 30% by 2035.\nBring Starter Homes Back to Colorado: Colorado needs more homes of all types within reach at every stage of life. Building and selling starter homes, including townhomes, condominiums, duplexes, and other types, expands affordability across the housing market. Affordable home ownership helps renters become homeowners, freeing up rental units. Michael will work with local governments and builders to provide the flexibility needed to make starter homes possible again—by speeding approvals and construction, increasing density, and reducing lot sizes, land costs, and construction expenses.\nExpand Support for First-Time Homebuyers: Michael will grow state partnerships with banks, non-profit organizations, employers, and landlords to provide options that bridge the gap between renting and homeownership. Michael will look to improve and expand tools that allow ladders into first-time home ownership, like mortgage assistance, downpayment assistance, tenant equity vehicles, and rent-to-own systems.\nPreserve and Rehabilitate Existing Affordable Homes: Preserving the affordable homes we already have is one of the most cost-effective ways to make Colorado an affordable place to live. Rehabilitating existing units is less expensive than new construction, makes use of existing infrastructure and land, and is an effective tool for helping people remain in the community they love. Michael will work to ensure that acquiring and rehabilitating existing affordable housing can compete for state housing resources, including Prop. 123 and tax credit programs. He will leverage state programs and private capital to expand financing options for maintaining and rehabilitating existing affordable homes. Michael will also support locally driven programs to put more working families in homes, like cost buy-downs, ADU construction, and permanent workforce housing in mountain communities.\nEliminate Unnecessary Red Tape: Approval delays and bureaucracy drive up the cost of building new housing. Colorado families, local governments, and home builders need a state government that is reliable, consistent, and efficient. Michael will make housing approvals faster and more predictable by cutting red tape, streamlining rules, and removing unnecessary hurdles:\n- One Application, One Process. Michael will require the state to adopt a single, common application for all state housing finance entities. This will allow home builders and local governments to apply for state funding and resources through one streamlined process, even when support comes from multiple agencies.\n- One Door For All Housing Funding. Michael will centralize access to all state housing funding streams in one place so homebuilders and local governments no longer have to shop around to different agencies to build funding stacks. This approach will break down silos and require state agencies to collaborate—with each other and with developers—to combine various public funding sources in new and creative ways that accelerate the production of more homes.\n- From Award to Breaking Ground in One Year: Colorado must move faster to tackle the housing crisis. Michael will push for state-funded projects to move from approval to groundbreaking within one year. He will work with state housing finance entities, communities, and developers to track developments in real time, ensure transparency around the cause of delays, and work with partners to simplify and expedite the process in an effort to reach this goal.\n- Use Technology to Build Faster. Michael will work with state housing finance entities and local governments to integrate technology that expedites permitting review, simplifies permits, streamlines underwriting for new housing, and improves data collection.\nGalvanize Private Sector Investment: Achieving Colorado’s housing goals requires robust private sector engagement. Michael will strategically deploy public funds to attract and accelerate private investment in housing across the state. To support this, Michael will expand and strengthen state financing tools to ensure they are effective and accessible for affordable and workforce housing in every region:\n- Create New State Financing Tools. Michael will create new state financing tools, such as state-guaranteed loans and a revolving construction loan fund, to reduce risk and interest costs, and spur private investment in housing for working families and mixed-income communities.\n- Strengthen Existing State Programs. Michael will strengthen state programs, like Proposition 123, by harnessing private investment, bonding, and credit enhancement to unlock additional funding for affordable and attainable housing development. He will also support changes to state programs that are hampering efficiency and limiting usefulness across the state.\nLower the Cost of Construction: Since 2019, the average cost to build new housing has increased almost 50%, driven by rising costs in labor, materials, land, infrastructure, and interest rates — as well as permitting and regulatory delays. Michael will work to bring down the cost of construction:\n- Create More Options for Affordable Financing. Michael will work to expand the availability of low-cost financing for new housing, necessary infrastructure, and the rehabilitation of affordable housing.\n- Make Land Available for Housing. Michael will work with state agencies, local governments, school districts, and transit agencies to identify and offer land at below-market rate for affordable and workforce housing developments where it is appropriate.\n- Expand the Housing Workforce. Michael will work with the private sector, schools, labor unions, and others to grow, accelerate, and tailor local workforce training in construction, trades, and innovative building methods.\n- Promote Efficient Building. Michael will promote efforts to use land more efficiently, use and improve existing infrastructure, speed up construction, and simplify the rules for builders. He will also support communities in efforts to reduce transportation costs for residents through building more homes near where people work and near transportation hubs.\n- Foster Fresh Thinking. Michael will support innovation and optimization of the construction process to increase speed, boost productivity, and lower costs.\nA Coordinated Approach to Reducing Homelessness. Michael will bring together Colorado leaders on the frontlines of homelessness to share best practices, learn from each other, and better coordinate the services that move people from crisis to permanent housing and stability. He will also prioritize prevention by securing stable funding for rental and utility assistance, legal aid, mediation, case management, and other supportive services that address the root causes of housing instability. These investments not only keep families and communities stable but also save money for renters, landlords, and taxpayers over the long term.\n## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260711023842/https://www.michaelbennet.com/priorities/healthcare/",
+     "original": "https://www.michaelbennet.com/priorities/healthcare/",
+     "date": "2026-07-11",
+     "title": "Healthcare - Michael Bennet for Governor",
+     "text": "Building a Healthier Colorado: A New Vision for Health and Mental Healthcare\nHealth care costs in Colorado are crushing families and consuming our state budget. In the last decade, total health care spending in Colorado has more than doubled , and out-of-pocket costs for patients have climbed almost 50% . Even families with insurance face unaffordable bills, narrow networks, and coverage that falls short when they need it most. Many Coloradans are opting out of insurance altogether. Rural hospitals are barely hanging on. And, too many families are one illness or accident away from financial disaster. Projected annual medicaid cost increases of 9% and the Trump administration’s catastrophic “Big Beautiful Bill” will only make matters worse for Colorado families.\nColorado is home to one of the healthiest populations in the country, and Michael believes we have an opportunity to define a new and bold approach. Colorado should use this moment to work together to build a new, stronger system– one that puts families and communities at the heart of our health care system, cares for the whole person through an integrated approach to mental and physical health, empowers patients to actively shape their health outcomes, and actually works for the people who depend on it.\nAt the core of Michael’s approach is his longstanding commitment to universal health care. He believes that health care is a human right and that access to care should not depend on income, geography, or circumstance.\nChanges this far reaching will require intense collaboration across our state. Michael will bring leaders from every corner of the state to work towards four core priorities:\n- Protect and strengthen Colorado’s safety net, including Medicaid, and launching a Colorado Public Option;\n- Lower health care costs, by expanding access to the state health insurance plan, realigning incentives, and focusing on prevention to reduce chronic disease;\n- Give Coloradans real transparency and the state more power to negotiate for lower costs, and\n- Expand access to whole-person care across Colorado.\n- Protect and Strengthen Medicaid and Colorado’s Safety Net. The Trump Administration’s recent steps to gut Medicaid, cut hospital matching funds, and eliminate health insurance subsidies have put Colorado’s already fragile health care safety net at serious risk. Michael will take decisive action to protect and ensure the long-term sustainability of Colorado’s health care safety net by:\n- Protecting and Strengthening Medicaid: Michael will work to strengthen Colorado’s Medicaid system by aligning incentives towards the delivery of the highest quality care to patients at the lowest possible cost. He will work to change payments so that providers are rewarded for the overall value and quality of care they deliver, rather than the number of procedures they perform. He will significantly expand auditing and fraud detection within our Medicaid system, and work to improve state government efficiency and cut out unnecessary bureaucracy. He will also collaborate closely with health care leaders and local communities to improve state government efficiency, cut out unnecessary bureaucracy, and eliminate waste and fraud. He will work in partnership with leaders across the state to bring Colorado’s eligibility and enrollment system into the 21st century, minimizing the number of people who unnecessarily lose coverage because of bureaucratic obstacles and making it faster, more efficient, and easier for Coloradans to access the care they need.\n- Launching a Colorado Public Option: Michael will work with state health care leaders, advocates, and federal partners to design and launch a new Colorado Public Option for Coloradans who earn too much to qualify for Medicaid but still struggle to afford coverage on the individual marketplace. By offering comprehensive benefits, predictable premiums, and lower out-of-pocket costs, the new Basic Health Program will serve as a bridge between Medicaid and marketplace coverage—reducing coverage churn, improving continuity of care, and helping more Coloradans (including young people coming off their parents’ insurance) access preventive services before health needs become emergencies.\n- Making Sure Taxpayer Dollars Go to Patients and Health Care Workers, Not Investor Profit: A large and growing share of Colorado’s Medicaid dollars support our aging population and Coloradans with the most complex needs, including those receiving home and community-based services. Michael will prioritize ensuring limited state resources are spent directly on Coloradans who need care and the caregivers who support them. He will direct a thorough investigation into the role private equity firms may be playing in driving up health care costs—particularly in long term supports and services settings—and into how much taxpayer funding is being diverted to investor profits rather than patient care.\n- Supporting Rural Providers and the Rural Health Care Workforce: For the past two decades, Michael has been a strong partner and tireless advocate for Colorado’s rural providers. Today, many rural hospitals across Colorado are operating in the red, with some at risk of closure. Families in rural communities face the loss of access to essential health care, while local economies risk losing critical employers and economic anchors. Michael will continue to stand with Colorado’s rural hospitals by making current government programs and investment work better for rural communities and partnering with them to sustain services for the long term, transition to more sustainable financial models, invest in needed capital improvements, and secure adequate reimbursement for services.\n- Standing Up for Public Health: As we saw during the COVID-19 pandemic, Colorado’s public health system plays a vital role in providing access to critical health care services to the entire population, including vaccines, screenings for preventable diseases, and substance abuse support. Michael will protect Colorado’s public health by working with other states to provide Coloradans accurate information, defending science-based vaccine guidance, and rebuilding the health care workforce\n- Lower health care costs, including by expanding access to the state health insurance plan and focusing on preventive care. Colorado’s health care system is fragmented, oriented toward the short-term, and burdened by bureaucracy that drives up costs without improving outcomes. It also fails to give Coloradans access to the services they need to stay healthy and prevent chronic conditions. Michael will work in partnership with health care leaders to build a better model in Colorado through:\n- Expanding the State Employee Health Plan: Currently, state employees serve as one of the largest employee groups in the state, and benefit from high-quality health coverage. At the same time, school districts and counties are left to negotiate for health care on their own–leaving them more vulnerable to higher costs. As a first step, Michael will allow school districts and county governments to participate in the health plan offered to state employees. Michael will also launch a pilot program to give Coloradans ages 25-35, small businesses (including small family farms) the opportunity to buy into state health coverage.\n- Advancing a Patient First Initiative : Colorado’s health care system is too often managed one year at a time, limiting innovation, discouraging long-term investment, and locking in short-term thinking that makes health care more expensive without making anyone healthier. The system also operates in silos, missing opportunities to coordinate care and deliver better results for patients. Michael will push for a multi-year, strategic approach to health care reform—one that rewards lasting results rather than temporary fixes. He will start a Patient First Initiative, long-term partnerships with health care providers, insurers, and communities that break down silos, focus on preventive care, integrate technology, and deliver measurable improvements in quality, access, and affordability to patients.\n- Starting Colorado HealthCheck: Michael will work with health care providers, communities, and technology partners to launch Colorado HealthCheck. While prioritizing the protection of patient privacy and data, this public-private partnership will provide Coloradans access to user-friendly technology to access basic healthcare, schedule preventive visits with local health care providers, receive personalized guidance to manage chronic conditions, and guide access to specialist referrals when required. The program will use telemedicine as a “front-door” to access, helping to amplify the reach of local providers, emphasize early intervention and prevention, and empower Coloradans to own their own health and address health concerns before they become emergencies.\n- Deploying Data and Technology to Improve Care Delivery : Working together with health care providers, Michael will implement technology that improves the flow of healthcare data to inform patient care, improve care delivery, lower costs, and ultimately improve patient outcomes. While emphasizing patient privacy, the state will invest in a cohesive data and reporting infrastructure that enables healthcare providers to learn from past performance and be responsive to changing needs, so that we spend more resources on quality care that delivers results.\n- Give Coloradans real transparency and the state more power to negotiate for better prices . Health care pricing in Colorado is opaque and increasingly disconnected from the actual cost of care. Michael will work to put the power to negotiate for better prices back in the hands of Coloradans through increasing transparency and empowering the state, including:\n- Identifying the Biggest Drivers of Health Care Costs: Every Coloradan has a story about a price tag for medical services that seems way out of line with the care delivered. Even Coloradans with insurance struggle with irrationally high medical bills for simple procedures. Michael believes Coloradans need a shared, transparent understanding of why health care costs what it costs. In his first 100 days in office, he will complete and publish a comprehensive evaluation of health care cost drivers in Colorado.\n- Passing a “If You Pay, It Counts” Law: If you pay a doctor or other health care provider yourself for a covered, medically necessary service, your health insurance should count that payment toward your deductible and out-of-pocket maximum. Michael will push for a state law requiring health insurance to count any amount patients pay directly to a health care provider toward their deductible and annual out-of-pocket maximum for a covered, medically necessary service, as long as the amount they pay is less than the average in-network rate for that service.\n- Empowering Colorado to Fight for Low Cost Prescription Drugs: Coloradans across the state are struggling to afford prescription drugs. Michael will fight to lower costs by ensuring the state partners only with pharmacy plan administrators that pass 100 percent of negotiated savings directly to Colorado consumers, and he will prioritize transparency so Coloradans can clearly see where to purchase their prescriptions at the lowest price. Michael will also pursue partnerships with other states to drive down costs, strengthen Colorado’s negotiating power, and guarantee full transparency in rebate flows. In addition, Michael will champion efforts to eliminate spread pricing in the private market by 2027.\n- Create a Statewide Health Care Financial Assistance Porta l: Due to inefficient and under funded systems, it is too hard for Coloradans to access the health care programs they’re eligible for. Michael’s administration will work with local partners to develop a digital portal where patients can apply for all available health care public assistance programs, including Hospital Discounted Care, Medicaid, and CHP+. The system will automatically route applications to participating hospitals and track status updates in real time.\n- Ensuring Access to Care for the Whole Person : Michael will prioritize access to health and behavioral health care across the state, including:\n- Integrating Mental Health and Primary Care: Michael will work with primary care providers across the state to support integrated care, so they have the resources and training to provide mental health care and support in their offices. He will also foster the expansion of partnerships that enable primary care providers to access behavioral health and specialty care for their patients remotely without having an in-house provider and create capacity in areas of the state without a sufficient supply of mental health providers.\n- Guaranteeing Mental and Behavioral Health Care Parity: Colorado law requires mental and behavioral health care to be covered by insurance on the same terms as physical health care. Too often, however, these parity laws are ignored, inconsistently enforced, or weakened by loopholes that delay or deny care when people need it most. Michael will make enforcing mental health parity a priority. He will work to close loopholes, strengthen oversight, and hold insurance providers accountable when they fail to provide behavioral health coverage that meets legal requirements. This includes ensuring timely access to providers, reasonable prior authorization requirements, and fair reimbursement for mental health services.\n- Expanding the Healthcare Workforce and Reducing Barriers to Virtual Care: Michael will explore ways to expand access to telemedicine and other technology across Colorado, ensuring that all Coloradans, including those in rural or underserved areas, can connect with health and mental health care providers quickly and conveniently. He will also work with employers, labor, and educators to meet critical workforce needs in health and behavioral health through working in partnership with communities across the state to expand opportunities for apprenticeships and job experience in health care starting in high school, and to expand training and residency pipelines.\n## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260711015801/https://www.michaelbennet.com/priorities/affordable-childcare-for-working-families/",
+     "original": "https://www.michaelbennet.com/priorities/affordable-childcare-for-working-families/",
+     "date": "2026-07-11",
+     "title": "Childcare - Michael Bennet for Governor",
+     "text": "Affordable Childcare for Working Families\nMichael believes that every Colorado family deserves access to high-quality, affordable child care.\nAlthough Colorado has made significant progress towards universal preschool, access to quality, affordable child care remains severely limited across the state. Colorado’s child care is among the most expensive in the nation, ranking fifth overall for infant care. In addition, we face a profound child care shortage: only providing enough licensed child care slots to serve 20 percent of Colorado infants and toddlers. Although two-thirds of Colorado’s 4-year-olds participate in Colorado’s Universal Preschool Program, the program only covers care for a limited number of hours per week, leaving parents to struggle to fill the gap.\nThe high cost and chronic shortage of child care in our state prevents many parents from working, staying in Colorado, or even having children. Our lack of child care affects not just families, but the broader economy. The best estimate is that our child care shortage costs Colorado $2.7 billion each year in lost earnings, productivity, and revenue.\nThe current child-care situation is unacceptable, and we can do better. Colorado has the opportunity to lead the nation in making child care truly affordable for families. At a time when costs are rising across the country, affordable child care can become our competitive edge — strengthening families, communities, and our economy. Real progress demands that we all step up — that the state government, the private sector, local governments, and philanthropy work in partnership on the systemic change necessary to deliver affordable, high-quality child care to every kid in the state.\nMichael will work to create an affordable, seamless, and high-quality system for every child from birth to age five, by: (1) cutting costs for families; (2) ensuring child care workers are paid a fair compensation and have access to health care; and (3) cutting red tape to make it easier to provide child care without compromising quality or safety.\nAs Governor, Michael will:\n1. Cut Costs for Families. Too many Colorado families simply cannot afford child care. In our state, families pay, on average, almost $20,000 a year for full-time care for a young baby, $16,000 for a toddler, and almost $14,000 for a preschooler. To bring costs down, Michael will:\n- Launch a Child Care Infrastructure Revolving Loan Fund to Fund Affordable Care Options: Child care centers often struggle with access to capital to start up new facilities and sustain or expand existing ones. Providers are frequently denied loans due to thin margins, enrollment volatility, and limited collateral. Michael will work with Colorado lenders to launch a revolving loan fund for Colorado child care providers that will offer low-interest, flexible financing designed specifically for the child-care providers providing affordable care to families. The loans will be coupled with technical assistance to support new child care businesses and help with financial plan development and approval. The fund will include new state financing tools to reduce risk and interest costs for new and successful child care facilities.\n- Stimulate Private Sector Investment in Affordable, High Quality Care: Colorado’s current Childcare Contribution Tax Credit alone generates an estimated $60 million of private investment every year. Michael will work with the legislature to modernize and expand tax credits that spark increased private sector investment in affordable, high quality, child care in Colorado. He will also work with the legislature to pass a Child Care Operations Credit that, when combined with federal tax incentives, will allow small businesses to deduct up to 60 percent of costs associated with establishing and operating a high-quality child care center.\n- Empower More Home-Based Child Care With Community Resources: Home based and licensed exempt child care is often the most affordable option for families. Michael will bolster regional efforts to connect and support home-based and licensed exempt child-care cooperatives with staffing and essential resources. The effort will better connect current and future home-based providers to each other, and to other resources that can help them start and strengthen their small businesses, including information on access to affordable insurance coverage, mortgage and rental assistance, technical and business assistance, and information on state tax credits and financial resources.\n- Protect State Investment in Affordable Child Care: Michael will fight to protect funding for the Colorado Child Care Assistance Program. He will push for the state to have flexibility to comply with federal requirements in the way that best serves Colorado families, and he will work with local governments to ensure that the delivery of state funds is as efficient as possible.\n- Cut Costs By Repurposing Unused Buildings: A significant portion of child care expenses stems from the cost of constructing and maintaining facilities. Michael will partner with communities and school districts to explore how underused space can become available to communities working to expand child care capacity.\n2. Invest in Fair Compensation for the Child Care Workforce: In the United States and in Colorado, child care workers struggle to provide for their own families and stay in the profession as a result of low wages and poor benefits. The annual mean wage among Colorado’s child care workers is $18.39 per hour, half of the living wage in many parts of Colorado. Not surprisingly, one in five child care workers leave the profession. Michael will:\n- Scale Proven and Innovative Local Models: Michael will work to scale local models – like the Denver Preschool Program and the collaborative effort in Eagle County – through access to financing and reducing barriers at the state level. He will support solutions that strategically deploy public resources toward local efforts that help families who need tuition support, subsidize wages for child care workers, pay for facility construction and improvements, and drive philanthropic, local government, and private sector investment to solve the challenge.\n- Expand Access to Affordable Health Insurance for Every Childcare Worker: Many of Colorado’s child care providers find it difficult to afford health care as a benefit to themselves and their employees. Colorado already has a law that allows for cooperatives to negotiate health insurance, and Michael will use that law to start a statewide cooperative for child-care providers. The cooperative will be empowered to access health care insurance on behalf of all of its members and enable more affordable rates that often come with larger group coverage.\n- Make the Care Worker Tax Credit Permanent: Colorado currently offers child care workers a Care Worker Tax Credit. The law provides a $1,200 income tax credit to child care workers – including family, friends, and neighbors who care for kids – who make less than $100,000 a year. The credit is scheduled to sunset in 2029, and Michael will support making the credit permanent.\n- Save on the Cost of Education Through Scale of Early-Childhood Educator Apprenticeship Degree and Certificate Programs: Michael will work with educators and child care providers across the state to scale programs that enable child care workers to earn credit towards a certificate and college degree in early childhood education through their experience on the job. Michael will also streamline the state’s credentialing process so qualified candidates in early childhood education can enter the classroom more quickly without unnecessary red tape. This includes reducing the number of bureaucratic hurdles teacher candidates face and increasing scholarships.\n3. Smarter Regulation Without Compromising Quality and Safety: Michael has heard from Colorado child care providers who believe strongly that many of our state’s well-intended regulations cause unintended delay and expense for families. Differences between state and local regulations also make it difficult for new providers to satisfy regulatory expectations. Finally, different rules for different ages of kids can create unnecessary obstacles to protecting health and safety. To cut unnecessary bureaucracy in our child care system, Michael will:\n- Make Colorado a National Leader in Smart Child Care Licensing and Delivery: Michael will lead a comprehensive overhaul of Colorado’s child care licensing system that protects quality and safety while reducing unnecessary red tape. He will work closely with families, communities, and providers to: (1) cut approval time for new facilities; (2) ensure compliance is easier and adapted for small businesses; (3) increase flexibility in state requirements; (4) align contradicting requirements at the state and local level; and (5) eliminate state requirements that are unnecessary to protect the health and safety of kids. He will also simplify state bureaucracy to better align resources and expand partnerships with schools, employers, and communities to simplify delivery of child care and subsidies to families.\n- Remove Barriers to Home-Based Child Care: Michael will work with local governments to design a pre-approved child care-friendly building design and lease that will qualify for fast-track approval through state licensing processes. In addition, he will prioritize collaboration across housing, economic development, and early childhood agencies to remove barriers and include home-based child care in real estate, infrastructure, and small business investment strategies.\n- Create a Statewide Parents’ Portal and Common Application System for Child Care: Finding and paying for child care should not be confusing and stressful for Colorado families. Michael will work with childcare providers to create a common application for state preschool and child care resources. He will also work to create a locally-driven, statewide portal that allows parents to identify real-time openings, and filters programs by location, hours, language, and special-needs services would enable families to seamlessly navigate accessing and paying for child care. The portal will provide clear information on costs and available subsidies, quick eligibility estimates through a pre-screening tool, and identify providers with evening or weekend hours.\n## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260629020953/https://www.michaelbennet.com/priorities/education/",
+     "original": "https://www.michaelbennet.com/priorities/education/",
+     "date": "2026-06-29",
+     "title": "Education - Michael Bennet for Governor",
+     "text": "Education as a Gateway to Good-Paying Jobs\nEveryone in Colorado, no matter their zip code or background, deserves the chance to earn a living wage and pursue the American Dream. Yet, too many Colorado families worry that our education and workforce system is not keeping up with the demands of today’s economy.\nThe economy is changing at the speed of light , and the skills needed to fill good jobs are evolving faster than our education and workforce systems. In some sectors, Colorado has double the skilled job openings as we have qualified workers to fill them. Meanwhile, one in five Coloradans is working a low-wage job that does not offer opportunities to grow financially or professionally. Even though our students score above the national average in reading and math, we are trending downward, while states like Mississippi and Louisiana are showing dramatic improvement. And, after COVID, 28% of Colorado kids are chronically absent from school.\nAt the same time, we continue to ask our schools to do more with less. Colorado teachers face the highest pay gap in the country. Colorado ranks 40th in school funding and 44th in higher education funding compared to other states.\nDespite limited resources, communities throughout Colorado are coming together to deliver for students of all ages. Michael’s education plan will build on the excellent work happening throughout Colorado by:\n- Making Colorado the best state to be an educator by paying teachers and others what they deserve;\n- Connecting education and work to ensure every Coloradan has access to a living wage job, and measuring our progress by wage growth;\n- Giving all Colorado kids a strong start by making Colorado the nation’s leader in reading and math growth; and,\n- Encouraging innovation to ensure education keeps up with the changing economy.\nLike so many of our biggest challenges, achieving this vision requires more than good ideas. Michael will be an unwavering champion for securing the funding our schools need to deliver quality education to Colorado’s kids. He will work to, once and for all, address Colorado’s competing and conflicting constitutional budget constraints that have forced us to run an education system with one hand tied behind our backs, and make it nearly impossible for our state to invest strategically in our future.\nThis work will require the commitment of our entire state. As Governor, Michael will work with kids and parents, public schools, labor, educators, the private sector, philanthropy, and the faith community as partners on this effort.\nTogether, we can:\n- Make Colorado the Best Place to Be an Educator by Paying Teachers and Others What They Deserve. Educators are the heart of our education system, and Colorado’s future depends on our ability to attract the best and brightest to the profession. Michael will fight for the funding needed to pay educators a competitive wage and make it easier to become a teacher or early childcare professional, without lowering standards. He will grow teacher-apprenticeship programs across the state, including programs that enable paraprofessionals to earn teacher licensure through their work in schools. Michael will also work to eliminate unnecessary red tape in the credentialing process, champion efforts to design a statewide health insurance cooperative for school districts, and use state resources to attract community investment in affordable teacher housing.\n- Connect Education and Work to Ensure Every Coloradan has Access to a Living Wage Job . Colorado is one of the most educated states in the nation, but historically, we have imported talent while disinvesting in our own kids. Michael will bring together employers, labor, education leaders, and communities statewide to build an integrated education-to-workforce system—one that links learning directly to good-paying jobs and keeps up with a rapidly changing economy. He will do this by:\n- Measuring Performance by Wage Growth : Michael will ensure that Colorado measures every education and workforce program against a clear benchmark: whether participants earn meaningful wage increases and can access quality jobs. Michael will accelerate the deployment of the Colorado State Longitudinal Data System, giving students, families, and policymakers transparent access to costs, earnings, and Return On Investment data across early childhood, K-12, higher education, apprenticeships, and short-term training programs.\n- High School That Leads to the Middle Class : Michael will make Colorado the first state where every high school student can graduate ready to earn a living wage, and with a year of career preparation and college credit. He will accomplish this goal through expansion opportunities for career training and college classes in high schools throughout the state. He will partner with schools and employers to give every high school student access to summer and school-year jobs and apprenticeships. He will work to increase access to industry credentials and support school-employer partnerships that ensure schools are teaching the skills employers actually need. Michael will push state policies to support this work and provide funding to get these programs up and running.\n- Making Job Experience Count Toward Certificates and Degrees: Michael will help grow opportunities for work experience and industry credentials to count towards academic progress across the economy, He will expand opportunities for students to use student aid, like Pell Grants and work-study, to access a wider range of high-quality workforce training programs, and incentivize employer investment in the development of their current and future workforce. He will also work with employers, labor, and educators to better integrate education and work to meet critical workforce needs in high-growth sectors such as advanced technologies, health and behavioral health, construction and skilled trades, advanced manufacturing, clean energy, and education and early childhood.\n- Helping Every Student Plan for the Future: Michael will make sure every student has a clear path from the classroom to a good-paying career. He will support programs that teach kids about potential career opportunities starting in 6th grade, and efforts to ensure all students are on track to graduate high school starting in 9th grade.\n- Integrating Technology and Real-World Skills in Schools: Michael will give schools more flexibility and funding to try new ways of teaching that prepare students for a fast-changing economy. He’ll support programs that put students in the driver’s seat of new technology—like artificial intelligence—through not only teaching them how to use it responsibly, ethically, and effectively, but to design and influence new technology for the public good. He will also support programs that emphasize skills needed in any work environment such as critical thinking, problem-solving, creativity, and teamwork.\n- Aligning Higher Education with Colorado’s Economic Future: Michael will build on efforts to strengthen Colorado’s higher education system so it’s more innovative, affordable, and focused on meaningful wage growth and living wage careers. Michael is committed to supporting ways that ensure all Colorado high school students have affordable access to higher education in Colorado. He will prioritize the seamless transfer of credit between Colorado school districts, colleges, and universities. He will also continue to advocate to bring research dollars to Colorado and build on the role of higher education as a catalyst for economic development in the state.\n- Cutting Red Tape to Support an Integrated System: Michael will build on the state’s efforts to cut bureaucracy and streamline economic development, higher education, workforce, regulatory affairs, and education agencies to better serve Colorado students. The work will ensure better alignment and better coordination, and removal of unnecessary red-tape and barriers. As part of this effort, Michael will establish a single, user-friendly entry point for employers to explore and access funding for workforce development, making it easier to combine federal and state resources and close talent gaps across industries.\n- Give Every Kid a Strong Start. Making Colorado the best state for education begins with giving every kid the tools to succeed from the start. Michael will work across the whole state to prioritize:\n- Making Colorado the National Leader in Student Reading and Math Gains: Across the state, employers and colleges are raising concerns about students graduating high school without basic skills in reading and math. Performance in Colorado is trending downward, with particularly significant challenges for non-native English speakers, students with disabilities, and students from disadvantaged backgrounds. Michael will lead a state effort to ensure every kid has the tools to read confidently by the end of third grade and reach math proficiency by fifth grade. He will work with school districts and teachers to ensure: (1) Colorado teachers are trained in the latest and best methods for teaching fundamentals and can access that training at no cost; (2) Schools are equipped with high quality curricula and staffed by educators with the expertise to deliver it effectively; (3) All students receive early, regular screening for reading and math challenges; and (4) Parents have access to transparent information about their kids’ performance, and access to resources to help kids catch up.\n- Expand Access to Mental Health: More than one-third of Colorado’s kids struggle with mental health challenges. Michael will fight for a healthcare system that treats mental and physical health together— expanding the healthcare workforce and supporting integrated care across the state, especially in places without access to mental health providers. Michael will work with school districts and teachers to implement a statewide ban on cellphones in classrooms, and keep kids safe online. He will also prioritize funding for community-led efforts that foster supportive environments where kids and parents feel connected to each other, equip schools for crises, and ensure kids have trusted adults to turn to when they need help.\n- Support Safe Schools: Recognizing Colorado’s terrible history with school shootings and violence, Michael will secure funding for collaborative work between district attorneys, community organizations, school districts, and students to make their schools safer.\n- Opening Colorado’s Outdoors to All Kids: Michael will expand access to sports and Colorado’s great outdoors so every child has the chance to get off their screens and get outside. He’ll support schools and local programs that make recreation and outdoor experiences more affordable and accessible for all families.\n- Give Kids More Learning Time: Short school days and weeks create challenges for working parents and missed learning opportunities for kids. Colorado has the fewest mandated instructional days of any state. Michael will make it a priority to increase the time students spend learning — whether in the classroom, at home, on the job, through apprenticeships, or through community service. By streamlining bureaucracy, he will use additional state funds to help launch new partnerships between schools, employers, and communities that give students more learning and job opportunities.\n- Connecting Every Kid with High-Quality, Affordable, Early Childhood Education: Michael will build on Colorado’s momentum to create a seamless, high-quality early childhood education system for every child from birth to age five. He will lead a statewide effort to close gaps in access to affordable, quality care. Michael has released his “ Affordable Childcare for Working Families ” plan, in which he has committed to quality home-based and friend, family, and neighbor care, growing the early childhood workforce, streamlining credentialing for qualified candidates and centers, and cutting red tape so it is easier to provide quality early childhood education without compromising quality or safety.\n- Encourage Debate and Discussion in the Classroom and on Campus. Our country was founded on the idea that in a free country, free people will disagree, and that the free exchange of ideas leads to better outcomes for the American people. The mission towards continuous improvement of our democracy lies at the heart of our schools and colleges. Colorado can lead in reinvigorating civil discourse by working with schools and colleges to expand classroom and campus discussion and debate, public service and community engagement, and reading and analyzing books.\n- Launch a Rocky Mountain Center for Innovation: Michael will partner with private, philanthropic, and government leaders to raise private funds for a Colorado-based initiative that will:\n- Invest in the design and implementation of new and innovative education approaches led by parents, educators, labor, businesses, the public sector, and community leaders that align resources and improve outcomes.\n- Grow proven approaches that are already delivering results across Colorado and the region.\n- Prepare students and schools to lead the way in using emerging technologies for a better future.\n## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260711015940/https://www.michaelbennet.com/priorities/clean-air/",
+     "original": "https://www.michaelbennet.com/priorities/clean-air/",
+     "date": "2026-07-11",
+     "title": "Clean Air - Michael Bennet for Governor",
+     "text": "A Cap-and-Invest Program\nColorado Clean Air, Affordable Energy Program\nWe owe it to our kids to confront climate change and reach net-zero as quickly as we can, while keeping energy affordable and reliable in our state, and while providing Colorado businesses with a predictable, market-based path to cut emissions. Colorado has been a national leader in this vital work. We’ve enacted some of the nation’s strongest laws to cut greenhouse gas emissions, and we’re steadily advancing toward our statutory climate targets, including achieving net-zero emissions by 2050.\nWe now face a time when making further gains requires more comprehensive solutions. Colorado is up to the task and well-positioned to continue to lead the way. To meet Colorado’s growing energy demand while achieving our greenhouse gas reduction targets, we need a long-term strategy that keeps energy affordable, strengthens local communities and economies, invests in proven technologies, and rewards progress towards our clean energy goals.\nAs Governor, Michael will support a durable, statewide approach that both cuts emissions and fosters a strong and competitive business environment. He will work with Colorado communities, businesses, conservation and environmental leaders, power companies, local governments, and labor to design an approach that keeps costs down, creates jobs, and strengthens the economy while safeguarding the environment and local communities.\nAs part of that work, Michael will work in partnership with leaders in Colorado to design and implement the Colorado Clean Air, Affordable Energy Program . This new program will:\n- Ensure Colorado is best positioned to meet our statutory climate targets through 2050, with a clear, enforceable cap on emissions across major economic sectors.\n- Provide Colorado businesses with a predictable and reliable, market-based path to comply with emissions reduction requirements in an economically efficient manner that protects communities.\n- Provide flexibility to companies to fulfill their responsibility to reach emissions targets, while creating stronger incentives for cleaner operations.\n- Allow Colorado’s new program to link to existing carbon markets.\n- Invest proceeds to reduce energy costs, develop new clean energy technologies, reduce pollution in the communities most affected, support climate resilience, and expand sustainable purchase programs and incentives to support Colorado businesses as they make their operations cleaner and more efficient, each of which will help meet state climate goals.\n## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260711023749/https://www.michaelbennet.com/priorities/standing-up-to-trump/",
+     "original": "https://www.michaelbennet.com/priorities/standing-up-to-trump/",
+     "date": "2026-07-11",
+     "title": "Standing Up to Trump - Michael Bennet for Governor",
+     "text": "Standing Up to Trump\nMichael has never been afraid to stand up to Donald Trump to do what’s right for Colorado. In the Senate, he’s led the charge to rein in Trump’s reckless tariffs, fought against Trump’s tax cuts for the wealthy twice , challenged the administration’s attempts to restrict vaccines, and stopped their efforts to sell off our public lands. He’s running for Governor, because governors are on the frontlines of the fight against Trump’s attacks on our economy and democracy. As Governor, Michael will stand up to Trump to keep ICE and the National Guard out of Colorado’s cities, protect the rights and freedoms Coloradans depend on, and safeguard Colorado’s democracy from political retaliation.\n## Join Team Bennet\n## Join Michael today."
+    },
+    {
+     "url": "https://web.archive.org/web/20260629020954/https://www.michaelbennet.com/priorities/conservation/",
+     "original": "https://www.michaelbennet.com/priorities/conservation/",
+     "date": "2026-06-29",
+     "title": "Conservation - Michael Bennet for Governor",
+     "text": "Protecting Colorado’s Outdoors for the Next Generation\nColorado’s land, water, and wildlife are the foundation of our economy, identity, and way of life. To live in Colorado is to embrace the responsibility of stewarding our natural resources, ensuring future generations can work on the land, start new businesses, and enjoy the incredible places Colorado has to offer.\nFor the last two decades, Michael stood with local communities to safeguard Colorado’s way of life, protecting over 700,000 acres of Colorado’s public lands . He worked with the Obama and Biden Administrations to establish three Colorado national monuments, including iconic landscapes like Camp Hale , Chimney Rock , and Browns Canyon . And he partnered with local leaders across Colorado to protect the Hermosa Creek watershed , prevent new oil and gas development in the Thompson Divide and near the City of Durango , resolve one of the longest-running mine conflicts in Colorado , expand Yucca House National Monument , and add Camp Amache to the National Park System .\nThe work must continue. President Trump is cutting staff, slashing resources, and trying to ditch protections we worked together to put in place. At the same time, rising costs and overcrowding mean too many Coloradans are being priced out of their own backyard.\nMichael believes that Colorado can be the gold standard for protecting our public lands, growing our outdoor economy, stewarding our natural resources, and ensuring everyone has access to the outdoors.\nAs Governor, he will:\n- protect Colorado’s natural heritage;\n- make our outdoors more accessible and affordable for all; and\n- collaborate for better management of our land, water, and wildlife.\nProtect Colorado’s Natural Heritage. Public lands – our forests, canyons, parks, and high country watersheds – define Colorado. Michael has long believed that some places are just too special to develop. He will continue to fight to protect these treasured places so that future generations can enjoy them. In partnership with Colorado leaders, he will develop the vision and champion the investments needed to grow our outdoor economy by expanding open space, conserving fish and wildlife habitat, and protecting our water supply. He will:\n- Protect Our Public Lands: Coloradans know that our public lands are our legacy and we should manage them well for the next generation. Michael led the fight against the Trump Administration’s radical attempt to sell off public lands and he continues to oppose projects that don’t serve the public interest. As Governor, Michael will keep Colorado’s public lands in public hands. He will ask for feedback, early and often, to make sure that federal land management respects local values and meets Colorado’s needs. And he’ll continue to support permanent protections for remarkable places, from Gunnison County to the Dolores River Basin .\n- Expand State Parks and Wildlife Areas: Colorado’s state parks and wildlife areas provide countless conservation, recreation, and habitat benefits. In partnership with local communities, Michael will expand existing state parks and wildlife areas, and create new ones. With outdoor recreation contributing over $18 billion to Colorado’s economy and supporting 137,000 jobs, he will work with Colorado communities to create new recreation-focused designations that improve access, advance responsible recreation, and benefit local communities.\n- Invest in Colorado’s Working Lands: Colorado’s conservation easement tax credit is the most successful private lands conservation program in the nation. It has helped farmers, ranchers, and landowners voluntarily conserve more than 3.5 million acres of working land and wildlife habitat. Not surprisingly, the tax credit is popular and oversubscribed – a testament to Colorado’s stewardship ethic. Michael will lead the charge to extend the program and secure sustainable and predictable future funding.\n- Conserve Fish and Wildlife Habitat : Colorado’s fish and wildlife draws millions of people every year to birdwatch, hunt and fish, and recreate in our state — contributing over $3 billion to our economy. Michael will prioritize research and updated mapping for the over 1,400 wildlife species the state manages, to avoid, minimize, and mitigate impacts on vital fish and wildlife habitat. With Colorado reporting over 4,000 wildlife-vehicle collisions each year, Michael will also expand Colorado’s wildlife crossing infrastructure to protect habitat corridors, save lives, and cut costs.\nA More Accessible and Affordable Outdoors. Michael believes that every kid in Colorado, regardless of where they grow up or how much money they have, should be able to access and enjoy Colorado’s great outdoors. Pricey gear, lodging costs, and limited transportation options keep too many Coloradans from experiencing everything our state has to offer. In partnership with community leaders, Michael will undertake a comprehensive effort to build an outdoors accessible to all. He will:\n- Break Down Barriers : Across the state, community leaders are finding creative solutions to get more people into the outdoors. Michael will partner with these communities and build on the success of effective but oversubscribed state initiatives, like the Outdoor Equity Grant Program and GOCO’s Generation Wild. He will expand resources for grassroots and community-based organizations serving underrepresented and under resourced communities. And he will elevate diverse voices, ensuring they are not just consulted but positioned to influence and lead decisions that affect their communities. As part of this work, Michael will strengthen state initiatives that support close to home places to play, with the goal of giving every kid in Colorado green space within a 10 minute walk.\n- Support Outdoor Learning & Careers : Schools provide an avenue to expose kids and families to the outdoors and outdoor jobs. Michael will support school districts and local programs that integrate outdoor skills and experiences, especially in early childhood education and high school. He’ll expand opportunities for kids and young adults to pursue natural resource management and outdoor-based apprenticeships, service opportunities, and work experiences, including through partnerships with businesses and higher education institutions.\n- Partner with Communities and Industry to Cut Costs : Skiing, mountain biking, fishing, and other outdoor pursuits can be prohibitively expensive for families. Michael will tackle the affordability challenges head on. He will expand fee-free days for families at our state parks. And he will continue to convene the outdoor industry, showing that Colorado is the best place to start a business, while encouraging the industry to forge new partnerships and pitch in, from affordable ski passes for families and schools to donations to local gear libraries and investments in local green space.\nCollaboration for Better Management. Climate change, population growth, tourism, and new energy and infrastructure development will bring new challenges to Colorado communities. Michael has spent the last two decades bringing people out of their corners, bridging divides, and having the hard conversations required to find the durable solutions. He’ll follow that same model as Governor, working with and across Colorado to improve our quality of life. He will:\n- Invest in Local Recreation Infrastructure: Colorado’s popularity as a recreation destination requires communities to get creative to manage the influx of people and competing public land priorities. Michael will build on Colorado’s Outdoor Strategy by investing in locally-led, collaborative planning. He’ll support counties and municipalities pursuing new revenue sources for recreation related infrastructure, such as bathrooms, parking lots, roads, trailheads, and emergency services. And he will demand that the federal land management agencies uphold their end of the bargain by dedicating staff to our most popular public lands, and keeping revenues generated in Colorado’s National Forests here in Colorado.\n- Improve State Trust Land Management: Colorado’s State Trust Lands are a unique asset, providing a source of revenue for our schools while supporting agricultural families and wildlife habitat, and offering recreation opportunities. Michael will pursue new ideas to improve state trust land management and diversify revenue. He will steward the state’s assets, explore innovative uses like appropriately-sited housing on state lands located near communities, provide durable protections for lands with exceptional ecological values, while continuing to support heritage industries.\n- Rebuild Trust: Michael believes that proactive conversations with local communities – informed by quality data and the best available science – can help Colorado prepare for future threats and mitigate conflict. Michael will continuously seek feedback from local governments, agriculture, recreation, sportsmen, energy, and conservation interests to work on shared solutions. And he will appoint leaders who listen to the entire state and bring people together to solve problems.\n## Join Team Bennet\n## Join Michael today."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-08-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msl6wqdbfs27",
+     "text": "While this spending bill temporarily prevents the Trump Administration from freezing or canceling scientific research funding at the President's political whim, temporary protections are not enough.\n\nthehill.com/homenews/sen..."
+    },
+    {
+     "date": "2026-08-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mslj3rqkac2n",
+     "text": "Today, the Senate passed our resolution to honor the five wildfire responders who lost their lives during this devastating fire season. These brave Americans made the ultimate sacrifice to protect our communities and keep Coloradans safe.\n\nwww.bennet.senate.gov/2026/08/08/c..."
+    },
+    {
+     "date": "2026-08-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msm3tdn6ok2w",
+     "text": "Happy National Farmers Market Week! Colorado's farmers markets support local producers, strengthen our communities, and make fresh Colorado-grown food more accessible.\n\nFind a farmers market near you: coloradoinfo.com/farmers-mark..."
+    },
+    {
+     "date": "2026-08-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msnqp5zawc2c",
+     "text": "Head Start provides comprehensive, high-quality early childhood education that leads to higher graduation rates, better health outcomes, and increased lifetime earnings.\n\napnews.com/article/head..."
+    },
+    {
+     "date": "2026-08-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msqkme3qos2h",
+     "text": "I joined the Colorado Democratic Delegation to demand answers from DHS after a protester was shot and injured outside of the Aurora ICE detention facility last month by a GEO employee.\n\nWe cannot allow this violence to become the new normal."
+    },
+    {
+     "date": "2026-08-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msr3z4tocc2h",
+     "text": "Just as Colorado kids are heading back to school, President Donald Trump and HHS Secretary Robert F. Kennedy Jr. are doubling down on an anti-science agenda that rejects decades of proven medical consensus."
+    },
+    {
+     "date": "2026-08-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msr7gycgdc2h",
+     "text": "Four years ago today, we passed the PACT Act, delivering one of the largest expansions of veterans’ health care benefits in decades."
+    },
+    {
+     "date": "2026-08-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mstfex5jts2e",
+     "text": "The Trump administration is doing everything it can to make our elections less safe and less secure: pushing large-scale voter roll purges, intimidating state election officials, and repeatedly trying to get their hands on Colorado's voter rolls."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msy3igljks2t",
+     "text": "The Trump Administration's decision to reclassify the deaths of four service members and the injuries of more than 200 is not only dishonest, it’s an affront to their service and sacrifice."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3msyr4n4sv22w",
+     "text": "President Trump’s “public charge” rule is designed to stoke fear in immigrant communities by making the path to a green card more challenging."
+    },
+    {
+     "date": "2026-08-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mt3bkno7kk2v",
+     "text": "Today marks 91 years of Social Security, a historic program that has allowed generations of Americans to live with dignity, security, and peace of mind."
+    },
+    {
+     "date": "2026-08-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mt5f62zxms2t",
+     "text": "Congratulations to Colorado's own Dr. Brandi Kaye Freeman on her installation as President of the National Medical Association."
+    },
+    {
+     "date": "2026-08-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mt7wf6v77k2m",
+     "text": "⏪ Four years ago, Democrats passed the Inflation Reduction Act to lower costs, create good-paying jobs, and build a modern energy system for our kids and grandkids."
+    },
+    {
+     "date": "2026-08-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtcjkvmwqp2a",
+     "text": "President Trump has abused his office to grow his own fortune and enrich his family and friends. Last year alone he made $1.4B from crypto ventures, and rewarded investors with exclusive dinners and other access.\n\nIt is blatant corruption unlike anything we have ever seen from an American president."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtegus3uys2k",
+     "text": "The Trump administration must rescind their dangerous, anti-science executive order that’s thrown families into chaos and confusion just as school is starting back up."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mter4nypzs2z",
+     "text": "Glad to see Teamsters Local 455 and Cargill reach an agreement that will allow 1,700 Colorado workers to return to work with better pay and benefits."
+    },
+    {
+     "date": "2026-08-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mthirrkpq226",
+     "text": "RFK Jr. and President Trump’s anti-science agenda undermines public trust in vaccines and only makes it harder for schools to keep kids healthy and safe \n\nThat’s why I’m leading the charge to stand up against Trump’s back to school chaos."
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtjv74tmd22u",
+     "text": "President Trump used the full power of the federal government to punish Coloradans and secure Tina Peters' release."
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtk7ybamy22v",
+     "text": "⏪ Earlier this year, I cornered RFK Jr. into admitting that the measles vaccine is safe and effective for our children."
+    },
+    {
+     "date": "2026-08-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtmnogujuc27",
+     "text": "Congratulations to the Colorado Space Institute at Arapahoe Community College for securing a $1.3 million NASA grant and being named one of just seven state NASA Hubs nationwide."
+    },
+    {
+     "date": "2026-08-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtmul3crek2q",
+     "text": "The Trump administration must be held accountable for this coordinated attack on our state."
+    },
+    {
+     "date": "2026-08-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtp6fp4r3c26",
+     "text": "The Trump administration's decision to reclassify four deaths and 200 injuries is a morally indefensible attempt to obscure the real cost of his Iran war."
+    },
+    {
+     "date": "2026-08-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtroox54fc2s",
+     "text": "This August marks 6 years since the Cameron Peak Fire, the largest wildfire in our state's history."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mttqzzqyqf24",
+     "text": "Back-to-school is more expensive this year, thanks to Trump’s war with Iran and reckless tariffs driving up costs.\n\nHe created this mess, and American families are paying the price. I’m fighting to end the war and undo these tariffs."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtu46kgt2s2p",
+     "text": "The Aspen Acres and Gold Mountain fires collectively burned over 140,000 acres across Custer, Pueblo, and Ouray counties, destroying critical infrastructure, water supply systems, and hundreds of homes and structures."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtuh4f4rhk22",
+     "text": "Mail-in ballots go out to Colorado voters in just a few weeks, but President Trump is working tirelessly to sow doubt in our elections and make voting more difficult."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtwimmwvv227",
+     "text": "Happy 110th birthday to our National Park Service!\n\nLet's get outdoors this week to celebrate what makes Colorado special and stand together against President Trump’s attacks on our public lands and the workforce that protects them."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtwsibszos2l",
+     "text": "Colorado’s childhood vaccination rates are going in the wrong direction.\n\nParents need clear, science-backed guidance, not politics, chaos, and confusion from the Trump administration.\n\nwww.axios.com/local/denver..."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mtzgh75e6p23",
+     "text": "By handing out massive tax breaks to the richest Americans, President Trump has blown a hole in our deficit and added trillions to the national debt.\n\nInstead of investing in the middle class, the President has prioritized the ultra-wealthy and put the economic security of our children at risk."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mu3pikrgek2r",
+     "text": "Pausing immigrant visa applications worldwide will create significant delays and uncertainty for people who did everything right.\n\nThis is cruel, unnecessary, and designed to stoke fear and punish immigrants trying to build a better life for themselves and their families."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mu5ucqadrc2p",
+     "text": "I'm leading my colleagues to demand the Trump administration put an end to the bureaucratic roadblocks holding up wind and solar permits across the West."
+    },
+    {
+     "date": "2026-08-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mufb55dg7s25",
+     "text": "Despite President Trump’s efforts to sow doubt about mail-in voting, Colorado voters should rest assured that their mail-in ballots will arrive in time to cast their votes in the midterm elections.\n\nColorado will not let the President interfere in our gold-standard election system."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3muhv2wcimc2m",
+     "text": "Each year, I'm honored to nominate young Coloradans who exhibit an exceptional commitment to service and leadership to attend our U.S. Service Academies. \n\nApplications close September 4, 2026. Visit my website to apply 👉 www.bennet.senate.gov/services/stu..."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mumn65i7nc25",
+     "text": "President Trump’s One Big Beautiful Bill is creating unnecessary red tape that could cause over 100,000 Coloradans to lose access to health care through no fault of their own.\n\nwww.cbsnews.com/colorado/new..."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mun6vdnm422z",
+     "text": "The Trump administration’s effort to strip the tax-exempt status from thousands of schools and universities is another attempt by President Trump to impose his will on academic institutions, undermining opportunities of hundreds of thousands of students across the country."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3munfy3btok2f",
+     "text": "Today, we remember Gloria Steinem and celebrate her incredible contributions to women's rights and gender equality.\n\nGloria was a true trailblazer, and we must carry her legacy forward."
+    },
+    {
+     "date": "2026-09-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3muqa3pbixk2j",
+     "text": "I’m glad Colorado communities devastated by this summer’s wildfires will get some of the federal support needed to rebuild. \n\nNow President Trump must approve the remaining assistance Colorado families and communities need to recover. www.bennet.senate.gov/2026/09/04/b..."
+    },
+    {
+     "date": "2026-09-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mux5baxf422h",
+     "text": "Happy Labor Day, Colorado! \n\nToday, we celebrate Colorado’s workers and the labor unions who make our state stronger. \n\nWe must keep fighting for good-paying jobs, fair wages, and an economy that works for everyone."
+    },
+    {
+     "date": "2026-09-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3muzv2wle6k22",
+     "text": "President Trump is working to undermine trust in our elections and make voting harder. But Coloradans will continue to rely on what we’ve built: a secure, accessible vote-by-mail system that voters trust.\n\napnews.com/article/trum..."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mv6bvs6cic2b",
+     "text": "One year ago today, the Evergreen community experienced an unthinkable act of gun violence."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvb4du25d22m",
+     "text": "On the 25th anniversary of 9/11, we remember the nearly 3,000 innocent lives lost, the first responders who ran toward danger, and the service members who answered the call to defend our nation."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvboi6dstz2d",
+     "text": "Shana Tova, Colorado!\n\nWishing everyone celebrating Rosh Hashanah a happy new year of peace, good health, and time with loved ones."
+    },
+    {
+     "date": "2026-09-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvdyh7jruk2k",
+     "text": "Fire season isn’t over. We need to make sure we have the people, resources, and support to keep our communities and wildland firefighters safe.\n\nwww.bennet.senate.gov/2026/09/10/b..."
+    },
+    {
+     "date": "2026-09-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvikaivyzc22",
+     "text": "The Lincoln Park Superfund site near Cañon City has waited more than 40 years for the cleanup of the former Cotter uranium mill site. This community deserves transparency and progress."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvleipgszs2f",
+     "text": "When the President lies about measles vaccine safety and sends Dr. Oz to clean up the mess on TV, that's an operational failure.\n\nToday I held HHS Dep Sec nominee Chris Klomp accountable. Colorado families deserve better than this administration's chaos."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvliisfg3k2f",
+     "text": "President Trump is gutting power plant climate rules, trading our children's future for corporate profits. \n\nThis reckless attack on science and public health endangers our communities and ignores the reality of climate change.\n\nwww.cnn.com/2026/09/14/c..."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvlnqsg2ar2j",
+     "text": "This Hispanic Heritage Month, we celebrate the deep roots and lasting contributions of Hispanic and Latino communities across Colorado.\n\nAt a time of fear and division, we stand with Hispanic and Latino families and honor the culture, history, and resilience of generations of Coloradans."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvlnuwttxk2p",
+     "text": "This Hispanic Heritage Month, we celebrate the deep roots and lasting contributions of Hispanic and Latino communities across Colorado.\n\nAt a time of fear and division, we stand with Hispanic and Latino families and honor the culture, history, and resilience of generations of Coloradans."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvluzqcr2c2x",
+     "text": "I voted NO to advance the Clarity Act because it fails to rein in the President's rampant corruption, letting him and his family continue amassing billions from unethical crypto ventures."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvnv6fdgxk2r",
+     "text": "We must stop the gravel quarry expansion threatening the Glenwood hot springs, an iconic Colorado landmark and Ute cultural site."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvoddya6t22r",
+     "text": "I am disappointed that we are back in the same position voting on the same Farm Bill this Committee considered in August. My hope was to return to a bipartisan process, rather than continue down this partisan path. Unfortunately, that did not happen."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvpwgusjps23",
+     "text": "I'm glad to see that the House passed my Finish the Arkansas Valley Conduit Act in WRDA, fulfilling the federal government's 60+ year promise to finish the AVC and deliver clean water to over 50,000 people in 39 communities across SE Colorado."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvqm6egboc2q",
+     "text": "Great to see the House pass our SEED Act, delivering relief for early childhood educators who cover classroom costs out of their own pockets."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvslkvfx2223",
+     "text": "The American people deserve real guardrails on crypto. \n\nThe Clarity Act is weak legislation that will only enable the President to continue lining his pockets while in office."
+    },
+    {
+     "date": "2026-09-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvuyio7zzk23",
+     "text": "I visited Mexico City last week, where I met senior U.S. embassy and Mexican officials to advance intelligence, security, and trade cooperation. \n\nThe trip reaffirmed my commitment to this relationship, which is crucial to ensuring security and prosperity on both sides of the border."
+    },
+    {
+     "date": "2026-09-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvxu6pb73223",
+     "text": "Lake San Cristobal is the namesake and crown jewel of Lake City, a community that has shown great resiliency in the face of the devastating Elk Fire."
+    },
+    {
+     "date": "2026-09-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mvycqivce22n",
+     "text": "Tonight begins Yom Kippur, the holiest day in the Jewish calendar. \n\nTo Coloradans observing tonight and tomorrow, I wish you a meaningful fast and a peaceful time of prayer and reflection."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mw2cjgkzok2y",
+     "text": "CMU is proof that education built for today’s economy opens pathways to good-paying jobs across Colorado.\n\nGreat to learn more about the CMU Tech apprenticeship program and how it’s preparing students with the skills they need to build careers and earn a living wage."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mw2rc5l5cc2l",
+     "text": "Devastating to see firsthand the impact of this year’s historic drought and record-low snowpack on Blue Mesa Reservoir’s water levels. \n\nI was glad to hear from Western Slope water leaders about how they are working together to respond and how I can support them moving forward."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mw5ayekr422c",
+     "text": "Thank you to CiviCO for a great conversation about strengthening civic engagement and trust in our democracy. \n\nWe're counting on Colorado's future leaders to join us in building an economy that works for everyone."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mw6ybkbz5s2x",
+     "text": "AI companies need to face real consequences, including the power to pause unsafe technology and impose serious penalties of up to 15% of global revenue.\n\nIt’s time for an independent agency with the authority to regulate Big Tech and AI, protect the American people, and keep pace with innovation."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mw7z7xqvvk2s",
+     "text": "We eliminated measles in this country more than 30 years ago. We shouldn’t be fighting it again because this administration refuses to take science seriously.\n\nColorado’s kids and families deserve better."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwcdoxbnoj2h",
+     "text": "I'm proposing an independent federal agency to regulate AI and big tech. We need to act before serious harm occurs and hold these companies accountable when they break the rules."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwedmqzjy222",
+     "text": "We need a cop on the beat to protect the safety of the American people from the risks of AI.\n\nThat’s why I’m introducing an independent agency to oversee AI innovation and ensure Big Tech companies play by the rules."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mweliplpcs2e",
+     "text": "An illness, car accident, or family emergency can push a family out of their home and into a cycle of poverty."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwexxa42m22e",
+     "text": "President Trump has already tried to get his hands on Colorado voters’ information. Now he’s using lies to make it harder for Americans to exercise their right to vote."
+    },
+    {
+     "date": "2026-09-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwjpfkeigc2n",
+     "text": "As alarms sound about the risks of AI, we need an independent federal agency that can put safeguards on Big Tech while ensuring America remains competitive in AI."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwrbs7c7x22y",
+     "text": "I'm calling for an independent federal agency to regulate AI and hold Big Tech accountable.\n\nHere's what it would do ⬇️"
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwt6xvfjd225",
+     "text": "This week, the Senate passed my Crystal Reservoir Conveyance Act, bringing the City of Ouray one step closer to restoring this critical water supply and protecting a beloved recreational resource for future generations."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwtyavddlo2u",
+     "text": "The Bipartisan Infrastructure Law provided historic investments in Colorado roads, bridges, transit, and airports.\n\nWith billions in funding set to expire today, Congress must pass a bipartisan surface transportation reauthorization that protects these investments and keeps critical projects moving."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwwctlutnc2t",
+     "text": "From working families struggling to put food on the table to farmers and ranchers facing historic diesel and fertilizer costs, Coloradans are paying the price for President Trump’s Iran war and reckless global tariffs."
+    },
+    {
+     "date": "2026-10-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mwypkcqcqk23",
+     "text": "President Trump has weaponized the federal government against Colorado. No American should have to fear political retaliation from their own President."
+    },
+    {
+     "date": "2026-10-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mx3csjbcfc2l",
+     "text": "This week, I introduced legislation to ensure oil and gas companies can’t abandon wells and leave Colorado taxpayers footing the cleanup bill."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mx5tnqkvfs2n",
+     "text": "Congratulations to Bye Aerospace on the first flight of its all-electric eFlyer 2, a major milestone for the future of aviation.\n\nColorado continues to lead the way in aerospace innovation.\n\nwww.cbsnews.com/colorado/new..."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxch2yp5pa2z",
+     "text": "Today, we remember those murdered on October 7 and stand with their families, the hostages, and all those still suffering."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxeuer5brk2v",
+     "text": "We are facing the worst measles outbreak in decades, yet the Trump administration has actively undermined childhood vaccines, delayed routine shots, and underreported measles deaths.   \n\nThat’s why I’m demanding immediate answers from the CDC Director to defend settled science."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxhzdti5ic2r",
+     "text": "The Trump administration has proven, once again, that they are willing to risk the health and safety of Americans for political games.\n\nColorado is a proud leader in state methane pollution limits, and I will continue to defend these protections nationwide.\n\nwww.cpr.org/2026/10/07/t..."
+    },
+    {
+     "date": "2026-10-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxmkejef7s2d",
+     "text": "Every American should be able to visit their place of worship, school, or community center without fear. \n\nThis week, I introduced the Safer Spaces for All Act to strengthen security for at-risk communities and confront hate wherever it appears.\n\nwww.bennet.senate.gov/2026/10/09/b..."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxou5nlcnk2g",
+     "text": "This Indigenous Peoples' Day, we honor the Tribal nations who are the first stewards of Colorado's lands and waters and who have faced violence and broken promises throughout our nation's history."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxoxzlj7tk2j",
+     "text": "President Trump’s war of choice is driving costs up for Americans."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxrqjax25222",
+     "text": "Vaccines are safe, effective, and remain one of the strongest defenses we have against preventable disease.\n\nWe cannot allow President Trump's misinformation campaign to undermine public trust in settled science."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxut4gcw6c2i",
+     "text": "The  restrictions on Ukraine’s use of Starlink for its air defenses are unacceptable and contrary to U.S. national security, as is the Trump admin’s alleged threat to suspend other U.S. support to Ukraine.\n\nThe Department of Defense must restore full Starlink access immediately."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mxzkc3fsbs2r",
+     "text": "Colorado’s gold-standard election system works best when we all participate. \n\nVote by November 3rd to make your voice heard."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3my3nb3xvm224",
+     "text": "Congress overwhelmingly passed our bipartisan Russia sanctions bill to pressure Putin to end his war of aggression against Ukraine.\n\nTrump’s decision to waive those sanctions is irresponsible and contrary to U.S. national security."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3my62qnx3wc24",
+     "text": "This week, I visited the Food Bank of the Rockies to hear how the Trump administration’s historic SNAP cuts are pushing Colorado families to rely on food pantries.\n\nI won't stop fighting to protect food bank funding and make it easier to access food assistance in Colorado."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3myif5rjz522a",
+     "text": "Every Colorado voter has the right to cast their ballot without fear or interference.\n\nI won't stand by while that right is threatened by President Trump’s intimidation tactics."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3myl3fqrwoy2v",
+     "text": "My thoughts are with the communities in Pagosa Springs, South Fork, and across Southern Colorado impacted by severe flooding. I am actively monitoring the situation and am ready to assist at the federal level.\n\nhttps://coloradosun.com/2026/10/23/southern-colorado-flooding-south-fork-area/"
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3myuvqbtuxk2e",
+     "text": "This weekend, I joined Coloradans at the State Capitol for the Emergency Ukraine Rally to show our solidarity with the Ukrainian people as they continue their fight for freedom."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mywyny2aik26",
+     "text": "This decision is not only an assault on Coloradans’ health and safety, but will cut jobs and limit natural gas supply at a time when energy prices are already soaring. \n\nI will continue to fight for these vital protections for Colorado communities.\n\nwww.politico.com/news/2026/10..."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mz266j5ki32w",
+     "text": "With just 5 days until Election Day, it’s too late to return your ballot by mail. Get it off the kitchen counter and into a secure drop box to make sure your voice is heard."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mz4txums3w2t",
+     "text": "From gas to groceries, Coloradans are paying the price for President Trump’s war of choice every single day."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mzejjmbaxc2c",
+     "text": "Donald Trump promised to lower costs. Instead, Americans are facing skyrocketing health insurance premiums.\n\nHealth care should be a right, not a luxury. It's time for health care for all."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bennet.senate.gov/post/3mzgdymub3k2h",
+     "text": "It's Election Day, Colorado. Make your voice heard. 🗳️"
+    }
+   ]
+  }
+ ]
+}

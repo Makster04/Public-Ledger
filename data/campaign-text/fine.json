@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "fine",
+ "name": "Randy Fine",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.voterandyfine.com/"
+ ],
+ "years": [
+  2024,
+  2025,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.voterandyfine.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-10-19",
+    "url": "https://web.archive.org/web/20241019041045/https://www.voterandyfine.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241019041045/https://www.voterandyfine.com/",
+     "original": "https://www.voterandyfine.com/",
+     "date": "2024-10-19",
+     "title": "Randy Fine for State Senate",
+     "text": "Please enable JavaScript in your browser to complete this form.\n## Randy Fine puts\nAmerica and Florida First.\n- Secure our borders and give the Sheriff the power to arrest illegal immigrants.\n- Continue record investments in traffic-reducing projects.\n- Lower insurance rates and hold insurance companies accountable.\n- Protect elections from fraud.\n- Protect the Second Amendment at all costs.\n- Counter the effects of inflation and lower prices.\n- Fight to defend life.\n- Cut property taxes.\n- Back the Blue and give first responders the resources they need to keep us safe.\n- Restore the Indian River Lagoon.\n“Florida State Rep. Randy Fine is a MAGA Warrior who will stand up to anyone to advance the America First agenda! One four only elected Jewish Republicans, he stands with me for an America that brings Peace through Strength, and an Economy that works for our Nation’s families. I need him in the Florida Senate, and he has my Complete and Total Endorsement!”"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2025,
+   "electionDay": "2025-11-04",
+   "site": "https://www.voterandyfine.com/",
+   "saved": true,
+   "capture": {
+    "date": "2025-10-08",
+    "url": "https://web.archive.org/web/20251008165839/https://www.voterandyfine.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20251008165839/https://www.voterandyfine.com/",
+     "original": "https://www.voterandyfine.com/",
+     "date": "2025-10-08",
+     "title": "Randy Fine for Congress",
+     "text": "top of page\nSERVING FLORIDA’S 6TH DISTRICT\nPRESIDENT DONALD J. TRUMP!\n## JOIN\nBy submitting your phone number, you are authorizing Randy Fine for Congress to send you text messages, donation messages and notifications. You agree to the terms & privacy policy for messages from Randy Fine for Congress to the phone number you provide. Message and data rates may apply. Msg frequency varies. Reply HELP for help. You can opt out at any time by replying STOP to any message sent from us.\n## & ENDORSED BY MICHAEL WALTZ\nNational Security Advisor of the United States\nPUTS AMERICA AND FLORIDA FIRST.\nLOWER insurance rates and hold insurance companies accountable.\nPROTECT Social Security and Medicare.\nENSURE honesty and transparency in government.\nSECURE our borders.\nBOOST job creation and the economy.\nCOUNTER the effects of inflation and lower prices.\nDEFEND the right to life and the ability to defend it via the Second Amendment.\nBACK THE BLUE and give first responders the necessary resources to keep us safe.\nbottom of page"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.voterandyfine.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103060400/https://www.voterandyfine.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103060400/https://www.voterandyfine.com/",
+     "original": "https://www.voterandyfine.com/",
+     "date": "2026-11-03",
+     "title": "Randy Fine for Congress",
+     "text": "top of page\nSERVING FLORIDA’S 6TH DISTRICT\nPRESIDENT DONALD J. TRUMP!\n## JOIN\nBy providing your telephone number and checking this box, you consent to receive calls and text messages. Msg & data rates may apply. Msg frequency may vary. Messaging may include requests for donation. Reply “STOP” to opt-out & “HELP” for help. View Privacy Policy for more information.\n## & ENDORSED BY MICHAEL WALTZ\nNational Security Advisor of the United States\nPUTS AMERICA AND FLORIDA FIRST.\nLOWER insurance rates and hold insurance companies accountable.\nPROTECT Social Security and Medicare.\nENSURE honesty and transparency in government.\nSECURE our borders.\nBOOST job creation and the economy.\nCOUNTER the effects of inflation and lower prices.\nDEFEND the right to life and the ability to defend it via the Second Amendment.\nBACK THE BLUE and give first responders the necessary resources to keep us safe.\nbottom of page"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

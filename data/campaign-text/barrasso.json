@@ -1,0 +1,61 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "barrasso",
+ "name": "John Barrasso",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.barrassoforwyoming.com/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.barrassoforwyoming.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105151146/https://barrassoforwyoming.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105151146/https://barrassoforwyoming.com/",
+     "original": "https://barrassoforwyoming.com/",
+     "date": "2024-11-05",
+     "title": "John Barrasso for Senate - Serving the People of Wyoming",
+     "text": "for the people of Wyoming\nBy providing your phone number, you are consenting to receive calls and text messages including autodialed, automated and pre-recorded calls and texts, to that number from John Barrasso. Message and data rates may apply. Message frequency may vary. Reply “STOP” to opt-out and “HELP” for help. View Privacy Policy or Terms & Conditions for more info.\n## About John\nSenator John Barrasso was sworn in to the United States Senate in 2007 having represented the people of Natrona County in the Wyoming State Senate from 2003-2007. In November 2018, Barrasso was reelected to the U.S. Senate with more than 67% of the vote.\nSenator Barrasso is the ranking member of the Senate Energy and Natural Resources Committee which directly impacts Wyoming’s economy, energy interests, public lands, and national parks. He also serves on the Senate Finance Committee\nSenator Barrasso is known by many as Wyoming’s Doctor. During his 24 years as an orthopedic surgeon, Barrasso served as President of the Wyoming Medical Society and was named Wyoming Physician of the Year.\nDon’t miss a thing\n## Get Updates\nBy providing your phone number, you are consenting to receive calls and text messages including autodialed, automated and pre-recorded calls and texts, to that number from John Barrasso. Message and data rates may apply. Message frequency may vary. Reply “STOP” to opt-out and “HELP” for help. View Privacy Policy or Terms & Conditions for more info.\nYou can help change Washington — Chip In!\nBy providing your phone number, you are consenting to receive calls and text messages including autodialed, automated and pre-recorded calls and texts, to that number from John Barrasso. Message and data rates may apply. Message frequency may vary. Reply “STOP” to opt-out and “HELP” for help. View Privacy Policy or Terms & Conditions for more info."
+    }
+   ],
+   "unread": [
+    "the list of barrassoforwyoming.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.barrassoforwyoming.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102193918/https://barrassoforwyoming.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102193918/https://barrassoforwyoming.com/",
+     "original": "https://barrassoforwyoming.com/",
+     "date": "2026-11-02",
+     "title": "John Barrasso for Senate - Serving the People of Wyoming",
+     "text": "for the people of Wyoming\nBy providing your phone number, you are consenting to receive calls and donation text messages including autodialed, automated and pre-recorded calls and texts, to that number from John Barrasso. Message and data rates may apply. Message frequency may vary. Reply “STOP” to opt-out and “HELP” for help. View Privacy Policy or Terms & Conditions for more info.\n## About John\nSenator John Barrasso was sworn in to the United States Senate in 2007 having represented the people of Natrona County in the Wyoming State Senate from 2003-2007. In November 2018, Barrasso was reelected to the U.S. Senate with more than 67% of the vote.\nSenator Barrasso is the ranking member of the Senate Energy and Natural Resources Committee which directly impacts Wyoming’s economy, energy interests, public lands, and national parks. He also serves on the Senate Finance Committee\nSenator Barrasso is known by many as Wyoming’s Doctor. During his 24 years as an orthopedic surgeon, Barrasso served as President of the Wyoming Medical Society and was named Wyoming Physician of the Year.\nDon’t miss a thing\n## Get Updates\nBy providing your phone number, you are consenting to receive calls and donation text messages including autodialed, automated and pre-recorded calls and texts, to that number from John Barrasso. Message and data rates may apply. Message frequency may vary. Reply “STOP” to opt-out and “HELP” for help. View Privacy Policy or Terms & Conditions for more info.\nYou can help change Washington — Chip In!\nBy providing your phone number, you are consenting to receive calls and donation text messages including autodialed, automated and pre-recorded calls and texts, to that number from John Barrasso. Message and data rates may apply. Message frequency may vary. Reply “STOP” to opt-out and “HELP” for help. View Privacy Policy or Terms & Conditions for more info."
+    }
+   ],
+   "unread": [
+    "the list of barrassoforwyoming.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

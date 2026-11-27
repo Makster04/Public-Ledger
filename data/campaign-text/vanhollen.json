@@ -1,0 +1,510 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "vanhollen",
+ "name": "Chris Van Hollen",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.vanhollen.org/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.vanhollen.org/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107020648/https://vanhollen.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107020648/https://vanhollen.org/",
+     "original": "https://vanhollen.org/",
+     "date": "2022-11-07",
+     "title": "Chris Van Hollen | Democrat for U.S. Senate",
+     "text": "Working for every Marylander\nProven. Effective. Democrat.\nIf you've saved your information with ActBlue Express, your donation will go through immediately.\n## Meet Chris.\nChris ran for office to get things done for Marylanders, to build an economy that works for everyone not just the privileged few, and to fight to make good on the promise of equal rights, equal justice, and equal opportunity for all. And that’s what he’s doing.\n## Chris On the Issues\nWhether it’s large investments in transportation, resources to protect the Chesapeake Bay, support for schools, students, seniors, affordable housing, COVID relief, or local economic development initiatives, Chris has worked tirelessly as our Senator to deliver for Marylanders in every corner of our state.\n## An Economy that Works for Everyone\nChris believes the challenge of our time is building a stronger, more inclusive economy with more shared prosperity. That's why he has led the charge to increase paychecks and benefits for working families and cut the costs of everything from prescription drugs to child care. He is the author of Build Back Better measures to end tax giveaways to the super wealthy so we can invest more in the success of every American.\n## Expanding Educational and Workforce Training Opportunities\n## Healthy Lives and Safe Communities\n## Keeping our Promises to Seniors\n## Protecting Our Environment\n## Democracy and Justice"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107032858/https://vanhollen.org/issues/",
+     "original": "https://vanhollen.org/issues/",
+     "date": "2022-11-07",
+     "title": "Issues - Chris Van Hollen",
+     "text": "## On the Issues\nChris pushed for and won vital funding for economic relief to help Maryland families, workers, and small businesses during the pandemic, including direct support payments for families, rental and food assistance, delivery of essential resources to seniors, and critical funding to ramp up efforts to beat the virus and improve accessibility and equity of vaccine distribution.\nAn Economy that Works for Everyone\nChris believes the challenge of our time is building a stronger, more inclusive economy with more shared prosperity. That’s why he has led the charge to increase paychecks and benefits for working families and cut the costs of everything from prescription drugs to child care. He is the author of Build Back Better measures to end tax giveaways to the super wealthy so we can invest more in the success of every American.\nExpanding Educational and Workforce Training Opportunities\nStrengthening Public Safety and Ending Gun Violence\nUniversal Access to Affordable and Quality Health Care\nOne of the most fundamental responsibilities of government is to ensure universal access to affordable health care. Chris has worked tirelessly to defend the Affordable Care Act against Republican attacks and increase access to mental health and other services. He has championed measures to reduce prescription drug and health care costs, address the medical debt crisis, and end health disparities that mostly impact women and minorities.\nKeeping Our Promises to Our Seniors\nKeeping our Promises to our Veterans\nA grateful nation must support those who are willing to risk their lives for our safety and freedom. Chris honors those who serve by working hard to provide them with quality health care, education benefits, affordable housing, and opportunities to start businesses. He has successfully brought numerous Community Based Outpatient Clinics (CBOCs) to Maryland and helped veterans secure the medals they earned serving our nation.\nOur Environment and the Planet\nProtecting our Democracy and Ending Secret Money in Politics\nThe Struggle for Equal Rights and Equal Justice\nChris’s leadership on some of the biggest issues of our time — whether it’s advancing civil rights, reforming our criminal justice system, or fighting for gender and LGBT equality — stems from a deeply held belief in the values of equal rights and equal justice for all Americans. He is an original sponsor of the George Floyd Justice in Policing Act and believes we need to end the private prison industry and treat drug addiction as a health issue, not a criminal act.\nWomen’s Health, Pay Equity and Choice\nFrom his first days in the Maryland legislature to his current time in the Senate, Chris has been a recognized champion on issues vital for women and families. He is a staunch supporter of the Paycheck Protection Act to ensure equal pay for equal work and the Equal RIghts Amendment. He is also a fierce defender of a woman’s right to reproductive choice and an original sponsor of the Women’s Health Protection Act.\nAmerica is a nation of immigrants, from our founding to today. Chris believes that enabling immigrants to become a strong and vital part of our country is not just consistent with our values, but is a proven path to strengthening our economic future. Chris is an original co-sponsor of comprehensive immigration reform initiatives, which would combine a path to citizenship for Dreamers, TPS recipients and others with effective border security.\nNational Security and Foreign Policy\nAmerican leadership and engagement in the world are vital for our own security and to counter the rising tide of authoritarianism we see around the globe. Chris believes a strong, inclusive American economy is a critical backbone of effective leadership abroad. He has been working to advance our economic interests at home, counter illegal trade practices of China and others, end foreign influence in our elections, and promote human rights and democracy."
+    },
+    {
+     "url": "https://web.archive.org/web/20221002000243/https://vanhollen.org/issue/delivering-for-marylanders/",
+     "original": "https://vanhollen.org/issue/delivering-for-marylanders/",
+     "date": "2022-10-02",
+     "title": "Delivering for Marylanders - Chris Van Hollen",
+     "text": "## Delivering for Marylanders\nAs a member of the powerful Senate Appropriations Committee, the same Committee where Senator Barbara Mikulski once served, Chris has been uniquely positioned to help address key needs of our state and deliver real results for Marylanders. There is not a single County or municipality that hasn’t benefited from his non-stop efforts to lookout for the people of Maryland and secure resources to address unmet priorities.\nProvisions in the recently passed Infrastructure bill and the Build Back Better Act will provide historic investments in the future of our physical and human infrastructure — and have a massive positive impact on the lives of Marylanders.\nModernizing Our Infrastructure and Building Back Better. Chris shares President Biden’s view that simply returning to the pre-pandemic status-quo in our country is not good enough. We must use this moment to address chronic challenges that have gone unaddressed for far too long — and build our country and our economy back better than they were before January 2020. Building back better means modernizing our infrastructure, building an economy with more shared prosperity, reducing the everyday costs overwhelming the weekly budgets of hardworking families, addressing issues of racial equity and social justice, and confronting the mounting harms wrought by climate change. We have much work ahead of us to build an economy where every American has a fair shot. But the good news is that we are making important progress already and Chris is working to deliver for Marylanders.\nThe Infrastructure Modernization Law. Chris was proud to join President Biden at the White House on November 15th for the signing of the bipartisan Infrastructure modernization bill, which contains many provisions that he championed for our state. Those include over $7 billion over the next five years to modernize Maryland’s roads, bridges, tunnels, and transit systems — and funds that will help modernize AMTRAK and make changes that will cut the rail travel time between Washington D.C. and Baltimore to thirty minutes. The infrastructure bill also provides funds for a national program, that Chris spearheaded, to remove past infrastructure that divided communities, like the infamous Highway to Nowhere in West Baltimore, which decimated and split a once vibrant African American community, leaving an empty wasteland in its place. Chris also led the way on the renewed federal commitment of $150 million a year for the Washington area Metro system and, importantly, the provision that revives the possibility of building a new Red Line metro system in Baltimore — a project that Governor Hogan unilaterally terminated years ago despite a commitment of almost $1 billion in federal funds.\nThe Infrastructure Bill also includes a large infusion of funds ($267 million on top of the annual appropriations) to protect and restore the Chesapeake Bay. Chris also worked to include a large pool of funds that can be used by the Port of Baltimore to dramatically increase its cargo capacity, making room for substantial job growth in the Baltimore area. Finally, for years, Chris has fought to secure the funds, included in this bill, to end the digital divide and expand broadband to every household and business. He also fought successfully for the measures to ensure clean drinking water and start building a national network of electric car charging stations and other infrastructure to accelerate our country’s transition away from fossil-fuels and to a clean energy economy.\nThe Build Back Better Plan. The infrastructure modernization plan will revitalize America’s physical backbone and help bring it into the 21st Century. But, in order for us to achieve our goal of greater prosperity for all, we must also empower every American to succeed in this century, end the constant financial squeeze faced by too many American workers, families and seniors, and address the mounting harm caused by climate change to communities across our country. The Build Back Better agenda will directly address these challenges and, as a member of the Senate Budget Committee, Chris is proud to have been at the forefront of the effort to design and pass this important bill. It will include a number of measures Chris has championed for years — including universal early education so every child can get a good start; affordable child care (no family will have to pay more than 7% of their income on quality child care); and, over time, significant cuts in the cost of prescription drugs. Chris has also been a leading sponsor of another key element of the plan — tax cuts for middle and lower income families of up to $3,600 per child, which will benefit over 700,000 Maryland households and cut in half the national child poverty rate. He has also been a leading proponent of the provisions to dramatically cut the cost of in-home health care for seniors and to expand Medicare to cover hearing services.\nChris has been a lead advocate of the desperately needed measure to expand the supply of affordable housing in our country, and authored the provision to boost the number of choice housing vouchers that empower families with young children to move to areas of opportunity.\nThe Build Back Better plan will also, finally, include major investments to prevent catastrophic climate change, and mitigate the rising threats we are already experiencing. Chris has been a champion and lead author of many provisions in in this area, including the deployment of a Clean Energy Accelerator (like a Green Bank), the measures to boost home energy efficiency, and the tax incentives to promote the rapid deployment of clean energy. These clean energy provisions of the bill are essential to our ability to achieve our goals of reducing greenhouse gas emissions by 50% by 2030 and net zero emissions by 2050."
+    }
+   ],
+   "unread": [
+    "the list of vanhollen.org's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.vanhollen.org/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-26",
+    "url": "https://web.archive.org/web/20261026134126/https://vanhollen.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261026134126/https://vanhollen.org/",
+     "original": "https://vanhollen.org/",
+     "date": "2026-10-26",
+     "title": "Chris Van Hollen | Democrat for U.S. Senate",
+     "text": "Working for every Marylander\nProven. Effective. Democrat.\nIf you've saved your information with ActBlue Express, your donation will go through immediately.\n## Meet Chris.\nChris ran for office to get things done for Marylanders, to build an economy that works for everyone not just the privileged few, and to fight to make good on the promise of equal rights, equal justice, and equal opportunity for all. And that’s what he’s doing.\n## Chris On the Issues\nWhether it’s large investments in transportation, resources to protect the Chesapeake Bay, support for schools, students, seniors, affordable housing, COVID relief, or local economic development initiatives, Chris has worked tirelessly as our Senator to deliver for Marylanders in every corner of our state.\n## An Economy that Works for Everyone\nChris believes the challenge of our time is building a stronger, more inclusive economy with more shared prosperity. That's why he has led the charge to increase paychecks and benefits for working families and cut the costs of everything from prescription drugs to child care. He is the author of Build Back Better measures to end tax giveaways to the super wealthy so we can invest more in the success of every American.\n## Expanding Educational and Workforce Training Opportunities\n## Healthy Lives and Safe Communities\n## Keeping our Promises to Seniors\n## Protecting Our Environment\n## Democracy and Justice"
+    },
+    {
+     "url": "https://web.archive.org/web/20261007184129/https://vanhollen.org/issues/",
+     "original": "https://vanhollen.org/issues/",
+     "date": "2026-10-07",
+     "title": "Issues - Chris Van Hollen",
+     "text": "## On the Issues\nChris pushed for and won vital funding for economic relief to help Maryland families, workers, and small businesses during the pandemic, including direct support payments for families, rental and food assistance, delivery of essential resources to seniors, and critical funding to ramp up efforts to beat the virus and improve accessibility and equity of vaccine distribution.\nAn Economy that Works for Everyone\nChris believes the challenge of our time is building a stronger, more inclusive economy with more shared prosperity. That’s why he has led the charge to increase paychecks and benefits for working families and cut the costs of everything from prescription drugs to child care. He is the author of Build Back Better measures to end tax giveaways to the super wealthy so we can invest more in the success of every American.\nExpanding Educational and Workforce Training Opportunities\nStrengthening Public Safety and Ending Gun Violence\nUniversal Access to Affordable and Quality Health Care\nOne of the most fundamental responsibilities of government is to ensure universal access to affordable health care. Chris has worked tirelessly to defend the Affordable Care Act against Republican attacks and increase access to mental health and other services. He has championed measures to reduce prescription drug and health care costs, address the medical debt crisis, and end health disparities that mostly impact women and minorities.\nKeeping Our Promises to Our Seniors\nKeeping our Promises to our Veterans\nA grateful nation must support those who are willing to risk their lives for our safety and freedom. Chris honors those who serve by working hard to provide them with quality health care, education benefits, affordable housing, and opportunities to start businesses. He has successfully brought numerous Community Based Outpatient Clinics (CBOCs) to Maryland and helped veterans secure the medals they earned serving our nation.\nOur Environment and the Planet\nProtecting our Democracy and Ending Secret Money in Politics\nThe Struggle for Equal Rights and Equal Justice\nChris’s leadership on some of the biggest issues of our time — whether it’s advancing civil rights, reforming our criminal justice system, or fighting for gender and LGBT equality — stems from a deeply held belief in the values of equal rights and equal justice for all Americans. He is an original sponsor of the George Floyd Justice in Policing Act and believes we need to end the private prison industry and treat drug addiction as a health issue, not a criminal act.\nWomen’s Health, Pay Equity and Choice\nFrom his first days in the Maryland legislature to his current time in the Senate, Chris has been a recognized champion on issues vital for women and families. He is a staunch supporter of the Paycheck Protection Act to ensure equal pay for equal work and the Equal RIghts Amendment. He is also a fierce defender of a woman’s right to reproductive choice and an original sponsor of the Women’s Health Protection Act.\nAmerica is a nation of immigrants, from our founding to today. Chris believes that enabling immigrants to become a strong and vital part of our country is not just consistent with our values, but is a proven path to strengthening our economic future. Chris is an original co-sponsor of comprehensive immigration reform initiatives, which would combine a path to citizenship for Dreamers, TPS recipients and others with effective border security.\nNational Security and Foreign Policy\nAmerican leadership and engagement in the world are vital for our own security and to counter the rising tide of authoritarianism we see around the globe. Chris believes a strong, inclusive American economy is a critical backbone of effective leadership abroad. He has been working to advance our economic interests at home, counter illegal trade practices of China and others, end foreign influence in our elections, and promote human rights and democracy."
+    },
+    {
+     "url": "https://web.archive.org/web/20250417192802/https://vanhollen.org/issue/delivering-for-marylanders/",
+     "original": "https://vanhollen.org/issue/delivering-for-marylanders/",
+     "date": "2025-04-17",
+     "title": "Delivering for Marylanders - Chris Van Hollen",
+     "text": "## Delivering for Marylanders\nAs a member of the powerful Senate Appropriations Committee, the same Committee where Senator Barbara Mikulski once served, Chris has been uniquely positioned to help address key needs of our state and deliver real results for Marylanders. There is not a single County or municipality that hasn’t benefited from his non-stop efforts to lookout for the people of Maryland and secure resources to address unmet priorities.\nProvisions in the recently passed Infrastructure bill and the Build Back Better Act will provide historic investments in the future of our physical and human infrastructure — and have a massive positive impact on the lives of Marylanders.\nModernizing Our Infrastructure and Building Back Better. Chris shares President Biden’s view that simply returning to the pre-pandemic status-quo in our country is not good enough. We must use this moment to address chronic challenges that have gone unaddressed for far too long — and build our country and our economy back better than they were before January 2020. Building back better means modernizing our infrastructure, building an economy with more shared prosperity, reducing the everyday costs overwhelming the weekly budgets of hardworking families, addressing issues of racial equity and social justice, and confronting the mounting harms wrought by climate change. We have much work ahead of us to build an economy where every American has a fair shot. But the good news is that we are making important progress already and Chris is working to deliver for Marylanders.\nThe Infrastructure Modernization Law. Chris was proud to join President Biden at the White House on November 15th for the signing of the bipartisan Infrastructure modernization bill, which contains many provisions that he championed for our state. Those include over $7 billion over the next five years to modernize Maryland’s roads, bridges, tunnels, and transit systems — and funds that will help modernize AMTRAK and make changes that will cut the rail travel time between Washington D.C. and Baltimore to thirty minutes. The infrastructure bill also provides funds for a national program, that Chris spearheaded, to remove past infrastructure that divided communities, like the infamous Highway to Nowhere in West Baltimore, which decimated and split a once vibrant African American community, leaving an empty wasteland in its place. Chris also led the way on the renewed federal commitment of $150 million a year for the Washington area Metro system and, importantly, the provision that revives the possibility of building a new Red Line metro system in Baltimore — a project that Governor Hogan unilaterally terminated years ago despite a commitment of almost $1 billion in federal funds.\nThe Infrastructure Bill also includes a large infusion of funds ($267 million on top of the annual appropriations) to protect and restore the Chesapeake Bay. Chris also worked to include a large pool of funds that can be used by the Port of Baltimore to dramatically increase its cargo capacity, making room for substantial job growth in the Baltimore area. Finally, for years, Chris has fought to secure the funds, included in this bill, to end the digital divide and expand broadband to every household and business. He also fought successfully for the measures to ensure clean drinking water and start building a national network of electric car charging stations and other infrastructure to accelerate our country’s transition away from fossil-fuels and to a clean energy economy.\nThe Build Back Better Plan. The infrastructure modernization plan will revitalize America’s physical backbone and help bring it into the 21st Century. But, in order for us to achieve our goal of greater prosperity for all, we must also empower every American to succeed in this century, end the constant financial squeeze faced by too many American workers, families and seniors, and address the mounting harm caused by climate change to communities across our country. The Build Back Better agenda will directly address these challenges and, as a member of the Senate Budget Committee, Chris is proud to have been at the forefront of the effort to design and pass this important bill. It will include a number of measures Chris has championed for years — including universal early education so every child can get a good start; affordable child care (no family will have to pay more than 7% of their income on quality child care); and, over time, significant cuts in the cost of prescription drugs. Chris has also been a leading sponsor of another key element of the plan — tax cuts for middle and lower income families of up to $3,600 per child, which will benefit over 700,000 Maryland households and cut in half the national child poverty rate. He has also been a leading proponent of the provisions to dramatically cut the cost of in-home health care for seniors and to expand Medicare to cover hearing services.\nChris has been a lead advocate of the desperately needed measure to expand the supply of affordable housing in our country, and authored the provision to boost the number of choice housing vouchers that empower families with young children to move to areas of opportunity.\nThe Build Back Better plan will also, finally, include major investments to prevent catastrophic climate change, and mitigate the rising threats we are already experiencing. Chris has been a champion and lead author of many provisions in in this area, including the deployment of a Clean Energy Accelerator (like a Green Bank), the measures to boost home energy efficiency, and the tax incentives to promote the rapid deployment of clean energy. These clean energy provisions of the bill are essential to our ability to achieve our goals of reducing greenhouse gas emissions by 50% by 2030 and net zero emissions by 2050."
+    }
+   ],
+   "unread": [
+    "the list of vanhollen.org's saved pages"
+   ],
+   "posts": [
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mwripia4vk2j",
+     "text": "If Republicans really wanted to stop data centers from raising your utility rates, they wouldn't have put forward a toothless bill.\n \nIn January, I intro'd the Power for the People Act, a real, enforceable solution to this crisis. No Republicans have joined us.\n \nLet's vote on it!"
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mwrmh4hlas2b",
+     "text": "Pierre Damas Bel was an honor student & part of his college's ROTC program. He was also a TPS recipient.\n\nAfter Trump's attacks on TPS, he was forced to wear an ankle monitor that isolated and humiliated him.\n\nPierre died in an apparent suicide. He was 20."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mwvjciaa5c22",
+     "text": "Thanks to Trump & Republicans' refusal to extend ACA tax credits, Marylanders will see their ACA premiums go up AGAIN in 2027. That's on top of rising copays & deductibles.\n \nThey're gutting healthcare while they spend billions on an illegal war & tax cuts for the rich. Shameful."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mwvsofjk4k2v",
+     "text": "The Egyptian govt has arrested & disappeared 6 journalists, with zero justification — the largest crackdown in years.\n \nJournalism is not a crime.\n \nThe Egyptian govt must disclose their locations, provide access to their legal rights, & release all six immediately."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mww476mwrs25",
+     "text": "After Trump's pool guy screwed up the reflecting pool renovation, Trump tried to frame a Marylander, David Hearn.\n \nYesterday, justice won & a judge barred the admin from bringing more baseless charges against him.\n \nNow the Trump admin should be held accountable."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mwwad3jm2c25",
+     "text": "The President, who continues to hide service member casualties, is now sending up to another 10,000 troops to his illegal war of choice in Iran.\n \nWhen Trump says he's planning on renewing his war next month, believe him. Congress must cut off funding.\n\nwww.wsj.com/politics/nat..."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mx5m3ws3xk26",
+     "text": "Or we could hold you accountable for the harm you cause.\n \nJust because the Trump admin won't lift a finger doesn't mean big AI should get away with putting profits over people.\n\nwww.politico.com/news/2026/10..."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mx5scalfsk26",
+     "text": "Around the country, Americans are fighting back to ensure that big polluters pay for the harm they cause.   SCOTUS should hold polluters accountable & Congress should pass my Polluters Pay bill to make Big Oil pay for their climate mess, not you. \n\nwww.washingtonpost.com/politics/202..."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mx5urqczvc26",
+     "text": "More corruption. During her time as DHS Secretary, Kristi Noem gave over $900 MILLION in contracts to companies led by one of her political donors. This included the purchase of multiple luxury jets well above market value.\n \nEvery penny of their corruption must be investigated."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxa7pwrgh22u",
+     "text": "Last week, Azerbaijani anti-corruption advocate Dr. Gubad Ibadoghlu was finally allowed to get the medical care he desperately needs & has been denied for years.\n \nMeanwhile, the bogus charges against him remain. The Aliyev govt must immediately & unconditionally drop all charges."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxacs6mfek2d",
+     "text": "This propaganda should have never been paid for with taxpayer dollars.\n \nEvery single dollar stolen must be repaid to the American people.\n\nwww.washingtonpost.com/politics/202..."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxafuaklbk2a",
+     "text": "While this hearing didn't proceed, it's clear the Trump admin is continuing what a judge has called a \"vindictive prosecution\" of Kilmar Abrego Garcia.\n\nAs I said from day 1, if they can do this to Kilmar, they can do it to anyone.\n\nWe'll keep fighting this political persecution."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxcjmxc2yc2v",
+     "text": "Thanks to Trump, gas is over $4 a gallon, health care premiums are spiking, & everything from groceries to mortgages costs more.\n \nAnd what's Trump focused on?\n \nYet another pointless scheme that will do nothing but benefit him."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxcuopyclk2v",
+     "text": "For over 20 years, civilians in Afghanistan risked their lives to help us. The bipartisan Special Immigrant Visa program was a promise & a recognition of their service.\n \nBy dismantling this program, Trump is breaking that promise & sending many of these allies back into harm's way."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxd4a2mo3c2y",
+     "text": "Making it easier to pollute the air we breathe because it boosts Big Oil's bottom line.\n \nIs this how we Make America Healthy Again?"
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxf6k4ghy22a",
+     "text": "The war in Sudan has created the largest humanitarian crisis in the world.\n \nFrom rampant sexual violence to the use of chemical weapons, it's time for all of us to stand up and stop this humanitarian catastrophe that's happening on our watch."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxfhqs5uvk2h",
+     "text": "Julián Curo-Churata, a 47-year-old father of 2 from Laurel, MD, died in ICE custody last month.\n \nJulián was the 37th person to die in ICE detention in the past year.\n \nThere must be a full independent investigation into his death. Not another dime for this lawlessness."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxfm53j4m22g",
+     "text": "Once again, an independent watchdog found the Trump admin illegally withheld funds, including ~$80 million intended for the Agency for Healthcare Research & Quality here in MD.\n\nCongress must re-appropriate these funds & make clear we will not tolerate these illegal cuts."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxho4xzxlk2a",
+     "text": "New @nytimes.com reporting shows US Embassy officials in Israel are blocking info from Congress on the killings of Americans in the West Bank.\n\nI'm calling on Senator Risch & the Foreign Relations Committee to hold a hearing into this coverup.\n\nThe American people deserve the truth."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxhszz6wes2b",
+     "text": "Trump is STILL using your tax dollars to pay for this propaganda — even after promising to pay for these ads himself.\n \nEvery single dollar spent on this BS campaign is a dollar that could be going toward lowering your costs. It must end, NOW."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxhwyvhiak2b",
+     "text": "Trump started a stupid & illegal war in Iran that has driven up diesel prices. Now he wants to bankroll Putin's illegal war against Ukraine by buying diesel from him.\n \nOne strategic disaster after the next.\n\nwww.politico.com/news/2026/10..."
+    },
+    {
+     "date": "2026-10-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxkbv6sdnk2c",
+     "text": "26 years ago, we eradicated measles. Now, this year alone, there have been over 4,000 cases, 40+ outbreaks, and people have died.\n\nRFK Jr.'s anti-vax rhetoric & conspiracy theories have consequences. He must resign NOW. Vaccines are safe & effective. Period."
+    },
+    {
+     "date": "2026-10-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxki2yvyr22k",
+     "text": "As Trump himself said, this entire campaign is about protecting Netanyahu.\n \nWords of condemnation aren't enough, ICC members must take action to defend the rule of law. Remember, ICC prosecutors have the authority to open criminal investigations against ANYONE who obstructs justice."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxp7gvla5k2g",
+     "text": "Trump's continued attacks on @repilhan.bsky.social  the Somali American community, & our Muslim neighbors are a heinous attempt to distract from his complete & utter failure as president. Every American should be chilled to the bone: these are the actions of a dictatorship not a democracy."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxpl37fcak2n",
+     "text": "Trump’s destruction of parts of a DC public park in violation of a federal judge’s order cannot go unpunished. \n\nThis land, like the Kennedy Center & Yosemite belongs to the people, not him.\n\nThe perpetrators need to be held in contempt."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxr4yhtlqs2n",
+     "text": "Did you know businesses with federal govt contracts aren’t allowed to spend for or against federal candidates? \n\nHow then has Elon Musk, whose companies get billions in contracts, spent hundreds of millions in our elections?\n\nThe answer: A giant loophole I'm working to close."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxrpbszfak2b",
+     "text": "Despite a court order, Trump kept using your tax dollars to run his propaganda ads.\n \nFrom his gold-plated ballroom, to his new DC golf course, to these illegal ads, Trump will use your tax dollars to do everything but lower your costs.\n \nHe & his minions must reimburse taxpayers."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxrt7y34m22b",
+     "text": "Never in recorded history have corporations made more than they do today.\n \nNever in recorded history have workers taken home less of those profits than they do today.\n \nThat's Trump's economy in a nutshell.\n\nwww.axios.com/2026/10/13/e..."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxtohvhomc2b",
+     "text": "Musk's DOGE boys took a 'sledgehammer' to the federal govt & services people relied on. Now they're getting rich off the pain they caused.\n \nDOGE was never about efficiency, it was about breaking the govt & selling it off to Trump's billionaire buddies & allies.\n \nEndless grift."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxu7gyenn22p",
+     "text": "🚨 A federal judge has halted Trump's attempts to close the Beltsville Agricultural Research Center in MD.\n \nFor decades, experts at BARC have protected our food & farmers, including from threats like cyclospora.\n \nWe'll keep working to protect BARC & these dedicated civil servants."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxuf7d4nx22t",
+     "text": "Some good news: our efforts to clean up the Chesapeake Bay are paying off! The Bay is a national treasure & an economic & environmental lifeline to our state & region.\n \nWe can't stop now.\n \nThere's more to do, & we won't let Trump, big polluters, or anyone else stop this progress."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxui33tszk2t",
+     "text": "Americans can feel it, now the numbers confirm it: Inflation is only getting worse.\n \nEnd the war, protect our troops, lower costs — it's that simple. The fact that Trump refuses to do so — while he uses the Oval Office to make money for himself — is shameful."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxwi6vsg3s2u",
+     "text": "This is the result of 7+ years of Trump's attacks on @repilhan.bsky.social, Somali-Americans, & the Muslim community.\n \nEveryone, regardless of party, must speak out against this fascistic abuse of power.\n \nIf they can do this to a sitting Congresswoman, they can & will do it to anyone."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxwntbflbs2m",
+     "text": "Hegseth eliminated staff who prevent civilian casualties, called the rules of engagement safeguarding civilians 'stupid,' & now he's covering up the report on the Minab school strike that killed over 120 children.\n \nHe needs to be removed from office & we need accountability NOW."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxwvtcrc4k2m",
+     "text": "New @washingtonpost.com reporting shows a majority of the money Trump has \"raised\" for his ballroom has come from companies or wealthy people with interests before the federal govt.\n \nMake no mistake this is a two-way street: every single one of these donors wants something in return."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxxkbyndx22m",
+     "text": "This is heartbreaking. From this senseless act in Bend to the daily toll of violence on our communities, we must do better for our children.\n \nWe need to pass gun safety laws now. Anyone who stands in the way is complicit."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxyq23fw322m",
+     "text": "Erdogan has now taken over 5 major news outlets in Turkey.\n\nMeanwhile, what is the supposed leader of the free world doing? Going after political opponents & banning media outlets from covering him.\n\nTrump's crackdowns only embolden authoritarians the world over."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mxzelbvbyc27",
+     "text": "Today, another American citizen & journalist was brutalized by Israeli settlers attacking Palestinians in the West Bank.\n\nThis repeated violence & brazen impunity for attacks against Americans & Palestinians alike are unacceptable.\n\nWhen will Trump & Rubio DO SOMETHING?"
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3my37aaa2yk2z",
+     "text": "243 years ago, George Washington resigned his commission & made one thing clear: We will have no kings in America. Today, we have a president who's ripping up our Constitution & trampling over our democracy.\n\nWe must show him that he won't get away with it.\n\nNO KINGS!"
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3my3wdfvv4c25",
+     "text": "Hate against our South-Asian communities is on the rise, last Sunday’s planned attack was an example of this horrifying truth.\n \nI am grateful that worshipers at the Balaji Temple in Illinois weren’t harmed. Everyone, regardless of party, must call out & condemn this hatred."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3my4jlndbok25",
+     "text": "Unacceptable. Meta took down the No Kings Instagram today and kept it offline for well over an hour.\n\nCensoring free speech to appease Donald Trump?\n\nWe the people deserve answers, but regardless, we will not be silenced."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3my663jjanc2g",
+     "text": "Trump started an illegal war, prices are through the roof, Americans are hurting, & yet he lays awake thinking about how to screw our DC neighbors & take over their public parks.\n\nOut of touch doesn’t even begin to describe it."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3my67pwe7kk2g",
+     "text": "They started the Iran war together. They crack down on press freedom together. They lie about everything together. \n\nAuthoritarians of a feather flock together."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myat7ombo222",
+     "text": "Trump kicked millions off their healthcare & caused back-to-back double-digit spikes in ACA premiums — all to fund tax breaks for billionaires.\n \nYour healthcare shouldn't be at the whim of Republicans, corporate middlemen, or the billionaire class. We need Medicare for All."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myb2kesadc2i",
+     "text": "Trump wants to spend hundreds of thousands of your tax dollars on an ad campaign to attract more White South African \"refugees.\"\n \nThis white nationalist immigration policy is a waste of taxpayer dollars & it makes a mockery of our laws & Lady Liberty's promise. It must end."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mybdgz5w5k24",
+     "text": "Another day, another wildly corrupt plot that would shock the country under any other administration.\n \nTrump & his rich friends have turned the federal govt into a pay-to-play scheme — exchanging millions of dollars for favors & selling access to foreign tycoons.\n\nwww.axios.com/2026/10/19/k..."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myd5xdyvxc2g",
+     "text": "SpaceX got almost $6 BILLION in taxpayer-funded defense contracts last fiscal year.\n\nMeanwhile, SpaceX CEO, Elon Musk, has spent over $360 MILLION in our elections this cycle.\n\nThis should be illegal — but it isn't. I'll be introducing a bill to close the loophole that allows it."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mydjkglm6c2g",
+     "text": "Eight days ago, less than a month before an election, Trump's DOJ raided @repilhan.bsky.social’s home in what we know is a fascistic attempt to denaturalize & deport her.\n \nWe cannot become numb to these blatant abuses of power. Failure to call this for what it is, is complicity."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myfao4rehk2g",
+     "text": "When push comes to shove, Trump would rather you lose power than the data center companies lose a cent of profit. Clearly, this admin & FERC are not protecting consumers. \n \nCongress must pass my Power for the People Act, to ensure that your power needs are put before Big Tech's."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myfqbd4roc2g",
+     "text": "Today, while protecting Palestinians, Brad Lander & a group of American rabbis & others were taken by the IDF. Releasing Brad isn't enough, the Israeli govt must release them all.\n \nIf this is how they treat Americans, imagine how they treat Palestinians. Trump & Rubio's silence fuels this impunity."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myg2kyx66k2p",
+     "text": "With so much grift in the Trump admin it's hard to keep track of who is selling pardons, who is selling access, and who is buying it all.\n \nWhen the wealthy can buy their own laws & subvert justice it reveals a completely corrupt and rigged system."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mygbiducl22p",
+     "text": "Vladimir Putin is a war criminal. He's responsible for killing over 150,000 Ukrainians — including more than 15,000 civilians — and the murder of political opponents & dissidents.\n \nWitkoff & Trump's bootlicking is an embarrassment to our country."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myip4hlqqs2p",
+     "text": "Since last Saturday, Meta executives have given vague & shifting answers for why the No Kings Instagram was taken down at the height of the protests.\n \nToday, I'm calling on Meta to come clean.\n \nIs Meta intentionally censoring speech? Americans deserve answers."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myiy4kkx7s2t",
+     "text": "Why is GM nickel and diming their workers if they have billions for stock buybacks?\n \nThese profits belong, first & foremost, to the workers who created them. Sending them to Wall Street & their executives is gross abuse of corporate power. Give it back!\n\nuaw.org/statement-fr..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mykaxwebsk2h",
+     "text": "Less than a month after arresting the entire Matsadaash newsroom, the Egyptian govt has now filed baseless charges against the editor-in-chief of Mada Masr, continuing their largest crackdown in years.\n \nThis assault on the free press must end NOW. Journalism is not a crime."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mykvrfpbh22x",
+     "text": "The cover-up continues. First they lied about what we could see with our own eyes & called Alex Pretti & Renee Good ‘domestic terrorists.’ Now they’re back to hiding evidence from MN state investigators.\n\nMN investigators must be given access to ALL evidence. This impunity must end."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mynksbarg225",
+     "text": "Trump’s illegal Iran war is turning into our next forever war.\n \n8 months in, Trump & Republicans have deluded themselves into thinking the next strike or another bombing campaign will finally bring victory.\n \nFrom Vietnam to Iraq, we know how this ends.\n \nThis war must end NOW."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myrtrtpxw22w",
+     "text": "Working Americans around the country are having to choose between getting groceries or filling up a tank of gas — all thanks to Trump.\n\nBut what is he focused on? Finding new schemes to evade taxes on his billions. Despicable."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myudattin22j",
+     "text": "America must put an end to this gross abuse of power. Blanche must be held accountable for this blatant prosecutorial misconduct & complicit DOJ officials held in contempt."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myvaec5xds2l",
+     "text": "Trump & Republicans would rather make you ration your meds & skip a doctor’s appointment than make a billionaire pay their fair share.\n \nIn the richest country in the world, healthcare shouldn't be a privilege for the rich, it should be a right for all.\n \nWe need Medicare for All."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myxctnsyy22h",
+     "text": "Yesterday, after weeks of escalating crackdowns, Egypt’s govt shut down Mada Masr, one of the country’s leading independent outlets, & convicted its editor-in-chief, Lina Attalah.\n \nThey must reverse this decision & stop their assault on press freedoms.\n \nJournalism is not a crime."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myxh27qjms2h",
+     "text": "Michael & Susan Pretti saw their son gunned down by DHS officers & watched this admin smear him as a \"domestic terrorist.\" Now they can't get answers about his death from Trump, Blanche, & Mullin. \n\nEveryone engaged in this cover up must be held accountable.\n\nwww.nbcnews.com/news/us-news..."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myxn2mlab22h",
+     "text": "🚨 They're STILL covering up the Epstein Files. Blanche specifically said there was no classified material in the Epstein Files — was that a lie? What are they hiding?\n \nThis coverup is illegal & needs to end now.\n\nwww.cbsnews.com/news/epstein..."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3myzsscjpxc2m",
+     "text": "Billionaires like Elon Musk are spending gobs of money to elect candidates who can then turn around & funnel your taxpayer dollars to those same billionaires’ companies.\n\n@robertgarcia.house.gov & I have a bill to close this corrupt campaign cash-for-contracts loophole."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mz2jjehjgk2o",
+     "text": "Trump is still trying to use your tax dollars to run his propaganda ads on TV, in yet another attempt to illegally influence the midterms for Trump.\n \nYOUR tax dollars should be used to lower YOUR costs, improve YOUR schools, or fix YOUR roads — not to run ads for the president."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mz3sgmjdwk2o",
+     "text": "DoorDash spent years stiffing workers but just coughed up $17 BILLION to buy a competitor.\n \nIf you can cut a check for $17 BILLION, you can afford to pay your workers a fair & living wage.\n \nMeanwhile, Trump's FTC is silent as more & more mergers raise prices & hurt workers."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mz4lgmhxfk2p",
+     "text": "Since Trump started this illegal & senseless war in Iran, his buddies in Big Oil have made $130 BILLION in profit while American households have paid over $1,100 in extra fuel costs.\n \nLiterally profiting off working people's pain.\n \nTo save lives & lower costs, this war must end."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mzecjg5g4s2o",
+     "text": "Musk's pouring millions into our elections while he rakes in $16 BILLION in taxpayer-funded contracts. A fat return.\n \nWe need to pass my bill with @robertgarcia.house.gov to close the loophole that lets CEOs grab government contracts with one hand while forking over campaign cash with the other."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mzeo3d3qck25",
+     "text": "This is the right decision by SCOTUS to protect the integrity of our elections against Trump's baseless efforts to rig them.\n \nAs Trump's authoritarian government continues to attack our free & fair elections, we must keep standing up in Congress, in the courts, and in our communities."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/vanhollen.senate.gov/post/3mzgoqstyac25",
+     "text": "Today’s the day!\n \nGet out there and make your voice heard, America.\n \nGO VOTE!"
+    }
+   ]
+  }
+ ]
+}

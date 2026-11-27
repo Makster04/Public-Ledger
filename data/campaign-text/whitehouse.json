@@ -1,0 +1,552 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "whitehouse",
+ "name": "Sheldon Whitehouse",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.whitehouseforsenate.com/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.whitehouseforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105072558/https://whitehouseforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105072558/https://whitehouseforsenate.com/",
+     "original": "https://whitehouseforsenate.com/",
+     "date": "2024-11-05",
+     "title": "Sheldon Whitehouse for Senate",
+     "text": "## Join Team Whitehouse\nStay up to date with news and updates from the campaign.\n## Join Sheldon's Campaign!\nIt's official: Sheldon is running for re-election to continue serving Rhode Islanders in the U.S. Senate. He’s been fighting to make our government and economy work for all Americans, and there's a lot of work ahead."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072600/https://whitehouseforsenate.com/issues/",
+     "original": "https://whitehouseforsenate.com/issues/",
+     "date": "2024-11-05",
+     "title": "Issues - Whitehouse for Senate",
+     "text": "## Protecting Social Security & Medicare\nProtecting Social Security and Medicare is so important to me that I co-founded a Senate caucus solely focused on defending Social Security – and now we’re working to expand benefits....\n## Improving Health Care & Fighting the Opioid Epidemic\nIn the wealthiest country in the world, every single Rhode Islander should be able to get high-quality health care at a price they can afford. From introducing the public insurance...\n## Defending Reproductive Freedom\nWhen the right-wing justices on the Supreme Court followed the urging of far-right billionaires and overturned Roe v. Wade, it was a massive, life-altering setback for millions of women. I...\n## Upgrading Infrastructure\nThis year, $300 million was at work in Rhode Island on projects funded by the INFRA Program I championed through the Environment and Public Works Committee: four massive job-creating projects...\n## Fighting Climate Change\nWe see firsthand what increasingly extreme storms and rising sea levels mean for our coastal economy and way of life in the Ocean State. Rhode Island’s own Coastal Resources Management...\n## Standing Up to Special Interests\nThe American people are fed up with dark money influence campaigns that allow billionaires and big corporations to blockade progress on essential needs like solving climate change, enacting commonsense gun...\n## Safeguarding Justice & Democracy\nI’m leading the effort to reform the Supreme Court and make the judicial branch more accountable, with a strong, binding code of ethics at the Supreme Court, term limits for...\n## Creating Opportunity & Lowering Costs\nAmerica’s economy needs to work for the middle class. The American Dream rests on the promise that every child, regardless of the zip code where they were born, can get...\n## Supporting Veterans\nWe can never fully repay the debt of gratitude we owe to servicemembers and military families who sacrifice so much for our nation. I am working hard to ensure our...\n## Protecting National Security & Fixing the Immigration System\nAmerica is engaged in a clash of civilizations. Democracy and the rule of law are up against forces of autocracy and corruption on the march around the globe. Those forces..."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072632/https://whitehouseforsenate.com/issues/creating-opportunity-lowering-costs/",
+     "original": "https://whitehouseforsenate.com/issues/creating-opportunity-lowering-costs/",
+     "date": "2024-11-05",
+     "title": "Creating Opportunity & Lowering Costs - Whitehouse for Senate",
+     "text": "## Creating Opportunity & Lowering Costs\nAmerica’s economy needs to work for the middle class. The American Dream rests on the promise that every child, regardless of the zip code where they were born, can get a first-rate education and prosper in a career of their choice. That’s why I’ve been focused on improving our public schools, making higher education more affordable by increasing Pell Grants, and reducing the student debt burden on graduates who dedicated their careers to serving others. I’ve been a strong advocate for our local manufacturing industry, and I’ve delivered hundreds of millions of dollars in direct job-creating investments to Rhode Island communities.\nWhile big corporations post record profits, many Rhode Islanders still struggle to make ends meet and worry about their children’s opportunities. I’m fighting to restore fairness to the tax code, protect unions, bring homeownership within reach, and make sure women are paid fairly. When Big Oil’s price gouging started getting out of control, I wrote a bill to claw back excess fossil fuel profits for consumers."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072629/https://whitehouseforsenate.com/issues/protecting-social-security-medicare/",
+     "original": "https://whitehouseforsenate.com/issues/protecting-social-security-medicare/",
+     "date": "2024-11-05",
+     "title": "Protecting Social Security & Medicare - Whitehouse for Senate",
+     "text": "## Protecting Social Security & Medicare\nProtecting Social Security and Medicare is so important to me that I co-founded a Senate caucus solely focused on defending Social Security – and now we’re working to expand benefits. I’ve introduced legislation to protect the solvency of Social Security and Medicare as far as the eye can see, simply by making the nation’s highest earners contribute their fair share.\nRepublicans have put Social Security and Medicare in their crosshairs for years. Let me be clear: I will fight with every available tool any attempt to roll back, slim down, or push further out of reach the Social Security and Medicare benefits that seniors have earned and paid for over a lifetime of hard work. I know how much Rhode Island seniors and their loved ones rely on these programs for their financial security. I am determined to remove any doubt in Rhode Islanders’ hearts about the security of these programs, so they can check that worry off their family’s list of concerns."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072630/https://whitehouseforsenate.com/issues/health-care/",
+     "original": "https://whitehouseforsenate.com/issues/health-care/",
+     "date": "2024-11-05",
+     "title": "Improving Health Care & Fighting the Opioid Epidemic - Whitehouse for Senate",
+     "text": "## Improving Health Care & Fighting the Opioid Epidemic\nIn the wealthiest country in the world, every single Rhode Islander should be able to get high-quality health care at a price they can afford. From introducing the public insurance option during the Affordable Care Act debate to delivering funding to keep our state’s health care system afloat during the pandemic, I have a long track record of work to lower health care costs and improve the quality of care.\nOur Inflation Reduction Act capped the price of insulin at $35 for seniors, and allowed Medicare to negotiate prescription drug prices for the first time ever. I will defend the Affordable Care Act and the Inflation Reduction Act from Republican attempts to take us back to the bad old days when people could be denied coverage for pre-existing conditions and seniors had to ration their insulin to keep food on the table.\nI’ve been on a mission to help end the opioid addiction crisis that has afflicted so many families from every walk of life, and to help more Rhode Islanders succeed on the long, noble road of recovery. My bipartisan Comprehensive Addiction and Recovery Act is the most far-reaching and effective law ever passed to address addiction in America. That law is hard at work in Rhode Island, helping save lives by supporting new partnerships between law enforcement and behavioral health, making fire stations safe places to seek help for addiction, and supplying addiction medication and overdose prevention kits."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072633/https://whitehouseforsenate.com/issues/reproductive-freedom/",
+     "original": "https://whitehouseforsenate.com/issues/reproductive-freedom/",
+     "date": "2024-11-05",
+     "title": "Defending Reproductive Freedom - Whitehouse for Senate",
+     "text": "## Defending Reproductive Freedom\nWhen the right-wing justices on the Supreme Court followed the urging of far-right billionaires and overturned Roe v. Wade, it was a massive, life-altering setback for millions of women. I support codifying Roe into federal law to reverse the damage this captured Supreme Court has done to women’s freedoms. With Republicans seeking a nationwide abortion ban – even in Rhode Island – and threatening access to IVF, I will continue defending women’s rights to make their own family planning decisions and determine the course of their own lives."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072629/https://whitehouseforsenate.com/issues/upgrading-infrastructure/",
+     "original": "https://whitehouseforsenate.com/issues/upgrading-infrastructure/",
+     "date": "2024-11-05",
+     "title": "Upgrading Infrastructure - Whitehouse for Senate",
+     "text": "## Upgrading Infrastructure\nThis year, $300 million was at work in Rhode Island on projects funded by the INFRA Program I championed through the Environment and Public Works Committee: four massive job-creating projects to upgrade the Pell Bridge, Route 146, the Providence Viaduct, and connections to Quonset Business Park. I had a hand in developing the landmark Bipartisan Infrastructure Law, which will deliver over $2 billion in investments to rebuild Rhode Island’s highways and bridges, replace lead pipes, improve drinking water and wastewater systems, boost coastal resiliency, and build EV charging infrastructure, among many other upgrades. Included in that law was a program I helped create to protect key infrastructure from climate change – a program already at work protecting our historic Mount Hope Bridge."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072632/https://whitehouseforsenate.com/issues/fighting-climate-change/",
+     "original": "https://whitehouseforsenate.com/issues/fighting-climate-change/",
+     "date": "2024-11-05",
+     "title": "Fighting Climate Change - Whitehouse for Senate",
+     "text": "## Fighting Climate Change\nWe see firsthand what increasingly extreme storms and rising sea levels mean for our coastal economy and way of life in the Ocean State. Rhode Island’s own Coastal Resources Management Council has begun to redraw Rhode Island’s map for what those rising seas will do. I regularly battle the fossil fuel industry, so we can hasten America’s transition to a clean energy economy and leave this planet a better, safer place for our children and grandchildren.\nThe Inflation Reduction Act was a major step toward climate safety, and I shaped many of the clean energy provisions of the law – provisions that will save Rhode Islanders money and create jobs. I founded the bipartisan Senate Oceans Caucus to protect natural resources like Narragansett Bay, and I created a national coastal fund to help communities near the ocean address the unique challenges facing coastal infrastructure.\nI’ve authored legislation to put a price on carbon pollution, reduce the emissions that drive climate change, and return the money back to the American people. Democrats and Republicans serious about tackling climate change agree that a system like the one I’ve proposed is our best bet for a path to a safe climate and healthy ocean."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105072631/https://whitehouseforsenate.com/issues/standing-up-to-special-interests/",
+     "original": "https://whitehouseforsenate.com/issues/standing-up-to-special-interests/",
+     "date": "2024-11-05",
+     "title": "Standing Up to Special Interests - Whitehouse for Senate",
+     "text": "## Standing Up to Special Interests\nThe American people are fed up with dark money influence campaigns that allow billionaires and big corporations to blockade progress on essential needs like solving climate change, enacting commonsense gun safety laws, and restoring women’s reproductive freedom. We need to root out special interest influence from our government and our courts, and restore power to ordinary Americans. I’m leading the charge in the Senate for disclosure laws that would undo the disastrous Citizens United decision and prevent billionaires from anonymously pulling the strings of government from the shadows."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.whitehouseforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-31",
+    "url": "https://web.archive.org/web/20261031024822/https://whitehouseforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261031024822/https://whitehouseforsenate.com/",
+     "original": "https://whitehouseforsenate.com/",
+     "date": "2026-10-31",
+     "title": "Sheldon Whitehouse for Senate",
+     "text": "## Join Team Whitehouse\nStay up to date with news and updates from the campaign.\nRhode Islanders know Sheldon Whitehouse as a tireless fighter for middle-class values. Join our team today to re-elect Sheldon Whitehouse for Senate."
+    },
+    {
+     "url": "https://web.archive.org/web/20260807103946/https://whitehouseforsenate.com/issues/",
+     "original": "https://whitehouseforsenate.com/issues/",
+     "date": "2026-08-07",
+     "title": "Issues - Whitehouse for Senate",
+     "text": "## Protecting Social Security & Medicare\nProtecting Social Security and Medicare is so important to me that I co-founded a Senate caucus solely focused on defending Social Security – and now we’re working to expand benefits....\n## Improving Health Care & Fighting the Opioid Epidemic\nIn the wealthiest country in the world, every single Rhode Islander should be able to get high-quality health care at a price they can afford. From introducing the public insurance...\n## Defending Reproductive Freedom\nWhen the right-wing justices on the Supreme Court followed the urging of far-right billionaires and overturned Roe v. Wade, it was a massive, life-altering setback for millions of women. I...\n## Upgrading Infrastructure\nThis year, $300 million was at work in Rhode Island on projects funded by the INFRA Program I championed through the Environment and Public Works Committee: four massive job-creating projects...\n## Fighting Climate Change\nWe see firsthand what increasingly extreme storms and rising sea levels mean for our coastal economy and way of life in the Ocean State. Rhode Island’s own Coastal Resources Management...\n## Standing Up to Special Interests\nThe American people are fed up with dark money influence campaigns that allow billionaires and big corporations to blockade progress on essential needs like solving climate change, enacting commonsense gun...\n## Safeguarding Justice & Democracy\nI’m leading the effort to reform the Supreme Court and make the judicial branch more accountable, with a strong, binding code of ethics at the Supreme Court, term limits for...\n## Creating Opportunity & Lowering Costs\nAmerica’s economy needs to work for the middle class. The American Dream rests on the promise that every child, regardless of the zip code where they were born, can get...\n## Supporting Veterans\nWe can never fully repay the debt of gratitude we owe to servicemembers and military families who sacrifice so much for our nation. I am working hard to ensure our...\n## Protecting National Security & Fixing the Immigration System\nAmerica is engaged in a clash of civilizations. Democracy and the rule of law are up against forces of autocracy and corruption on the march around the globe. Those forces..."
+    },
+    {
+     "url": "https://web.archive.org/web/20260714044658/https://whitehouseforsenate.com/issues/creating-opportunity-lowering-costs/",
+     "original": "https://whitehouseforsenate.com/issues/creating-opportunity-lowering-costs/",
+     "date": "2026-07-14",
+     "title": "Creating Opportunity & Lowering Costs - Whitehouse for Senate",
+     "text": "## Creating Opportunity & Lowering Costs\nAmerica’s economy needs to work for the middle class. The American Dream rests on the promise that every child, regardless of the zip code where they were born, can get a first-rate education and prosper in a career of their choice. That’s why I’ve been focused on improving our public schools, making higher education more affordable by increasing Pell Grants, and reducing the student debt burden on graduates who dedicated their careers to serving others. I’ve been a strong advocate for our local manufacturing industry, and I’ve delivered hundreds of millions of dollars in direct job-creating investments to Rhode Island communities.\nWhile big corporations post record profits, many Rhode Islanders still struggle to make ends meet and worry about their children’s opportunities. I’m fighting to restore fairness to the tax code, protect unions, bring homeownership within reach, and make sure women are paid fairly. When Big Oil’s price gouging started getting out of control, I wrote a bill to claw back excess fossil fuel profits for consumers."
+    },
+    {
+     "url": "https://web.archive.org/web/20260807120307/https://whitehouseforsenate.com/issues/protecting-social-security-medicare/",
+     "original": "https://whitehouseforsenate.com/issues/protecting-social-security-medicare/",
+     "date": "2026-08-07",
+     "title": "Protecting Social Security & Medicare - Whitehouse for Senate",
+     "text": "## Protecting Social Security & Medicare\nProtecting Social Security and Medicare is so important to me that I co-founded a Senate caucus solely focused on defending Social Security – and now we’re working to expand benefits. I’ve introduced legislation to protect the solvency of Social Security and Medicare as far as the eye can see, simply by making the nation’s highest earners contribute their fair share.\nRepublicans have put Social Security and Medicare in their crosshairs for years. Let me be clear: I will fight with every available tool any attempt to roll back, slim down, or push further out of reach the Social Security and Medicare benefits that seniors have earned and paid for over a lifetime of hard work. I know how much Rhode Island seniors and their loved ones rely on these programs for their financial security. I am determined to remove any doubt in Rhode Islanders’ hearts about the security of these programs, so they can check that worry off their family’s list of concerns."
+    },
+    {
+     "url": "https://web.archive.org/web/20260714031114/https://whitehouseforsenate.com/issues/health-care/",
+     "original": "https://whitehouseforsenate.com/issues/health-care/",
+     "date": "2026-07-14",
+     "title": "Improving Health Care & Fighting the Opioid Epidemic - Whitehouse for Senate",
+     "text": "## Improving Health Care & Fighting the Opioid Epidemic\nIn the wealthiest country in the world, every single Rhode Islander should be able to get high-quality health care at a price they can afford. From introducing the public insurance option during the Affordable Care Act debate to delivering funding to keep our state’s health care system afloat during the pandemic, I have a long track record of work to lower health care costs and improve the quality of care.\nOur Inflation Reduction Act capped the price of insulin at $35 for seniors, and allowed Medicare to negotiate prescription drug prices for the first time ever. I will defend the Affordable Care Act and the Inflation Reduction Act from Republican attempts to take us back to the bad old days when people could be denied coverage for pre-existing conditions and seniors had to ration their insulin to keep food on the table.\nI’ve been on a mission to help end the opioid addiction crisis that has afflicted so many families from every walk of life, and to help more Rhode Islanders succeed on the long, noble road of recovery. My bipartisan Comprehensive Addiction and Recovery Act is the most far-reaching and effective law ever passed to address addiction in America. That law is hard at work in Rhode Island, helping save lives by supporting new partnerships between law enforcement and behavioral health, making fire stations safe places to seek help for addiction, and supplying addiction medication and overdose prevention kits."
+    },
+    {
+     "url": "https://web.archive.org/web/20260611092550/https://whitehouseforsenate.com/issues/reproductive-freedom/",
+     "original": "https://whitehouseforsenate.com/issues/reproductive-freedom/",
+     "date": "2026-06-11",
+     "title": "Defending Reproductive Freedom - Whitehouse for Senate",
+     "text": "## Defending Reproductive Freedom\nWhen the right-wing justices on the Supreme Court followed the urging of far-right billionaires and overturned Roe v. Wade, it was a massive, life-altering setback for millions of women. I support codifying Roe into federal law to reverse the damage this captured Supreme Court has done to women’s freedoms. With Republicans seeking a nationwide abortion ban – even in Rhode Island – and threatening access to IVF, I will continue defending women’s rights to make their own family planning decisions and determine the course of their own lives."
+    },
+    {
+     "url": "https://web.archive.org/web/20260807113530/https://whitehouseforsenate.com/issues/upgrading-infrastructure/",
+     "original": "https://whitehouseforsenate.com/issues/upgrading-infrastructure/",
+     "date": "2026-08-07",
+     "title": "Upgrading Infrastructure - Whitehouse for Senate",
+     "text": "## Upgrading Infrastructure\nThis year, $300 million was at work in Rhode Island on projects funded by the INFRA Program I championed through the Environment and Public Works Committee: four massive job-creating projects to upgrade the Pell Bridge, Route 146, the Providence Viaduct, and connections to Quonset Business Park. I had a hand in developing the landmark Bipartisan Infrastructure Law, which will deliver over $2 billion in investments to rebuild Rhode Island’s highways and bridges, replace lead pipes, improve drinking water and wastewater systems, boost coastal resiliency, and build EV charging infrastructure, among many other upgrades. Included in that law was a program I helped create to protect key infrastructure from climate change – a program already at work protecting our historic Mount Hope Bridge."
+    },
+    {
+     "url": "https://web.archive.org/web/20260714040233/https://whitehouseforsenate.com/issues/fighting-climate-change/",
+     "original": "https://whitehouseforsenate.com/issues/fighting-climate-change/",
+     "date": "2026-07-14",
+     "title": "Fighting Climate Change - Whitehouse for Senate",
+     "text": "## Fighting Climate Change\nWe see firsthand what increasingly extreme storms and rising sea levels mean for our coastal economy and way of life in the Ocean State. Rhode Island’s own Coastal Resources Management Council has begun to redraw Rhode Island’s map for what those rising seas will do. I regularly battle the fossil fuel industry, so we can hasten America’s transition to a clean energy economy and leave this planet a better, safer place for our children and grandchildren.\nThe Inflation Reduction Act was a major step toward climate safety, and I shaped many of the clean energy provisions of the law – provisions that will save Rhode Islanders money and create jobs. I founded the bipartisan Senate Oceans Caucus to protect natural resources like Narragansett Bay, and I created a national coastal fund to help communities near the ocean address the unique challenges facing coastal infrastructure.\nI’ve authored legislation to put a price on carbon pollution, reduce the emissions that drive climate change, and return the money back to the American people. Democrats and Republicans serious about tackling climate change agree that a system like the one I’ve proposed is our best bet for a path to a safe climate and healthy ocean."
+    },
+    {
+     "url": "https://web.archive.org/web/20260714043212/https://whitehouseforsenate.com/issues/standing-up-to-special-interests/",
+     "original": "https://whitehouseforsenate.com/issues/standing-up-to-special-interests/",
+     "date": "2026-07-14",
+     "title": "Standing Up to Special Interests - Whitehouse for Senate",
+     "text": "## Standing Up to Special Interests\nThe American people are fed up with dark money influence campaigns that allow billionaires and big corporations to blockade progress on essential needs like solving climate change, enacting commonsense gun safety laws, and restoring women’s reproductive freedom. We need to root out special interest influence from our government and our courts, and restore power to ordinary Americans. I’m leading the charge in the Senate for disclosure laws that would undo the disastrous Citizens United decision and prevent billionaires from anonymously pulling the strings of government from the shadows."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mxzhpynrcs2m",
+     "text": "More on the creepy billionaires desperately grabbing at power over our beloved country.\nwww.politico.com/news/2026/10..."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my3e56jpvs2r",
+     "text": "Trump/Russia was no hoax. apnews.com/article/russ..."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my3hkuy62k2t",
+     "text": "Putin bombs maternity hospitals; Trump claims Ukraine’s attacks on the refineries fueling Putin’s war machine are a “disgrace.” It’s sick. www.bbc.com/news/article..."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my3hm4ncec2t",
+     "text": "Best wishes for full and speedy recovery to Pope Leo as he returns home from the hospital."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my3kdkwzas27",
+     "text": "The Court That Dark Money Built still responds to dark money, through flotillas of dark-money-funded front groups that file orchestrated “amicus” briefs — and they win pretty much every time. It’s a racket.\nwww.motherjones.com/politics/202..."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my3klkz56227",
+     "text": "Always, always, always with these guys it’s the thing that benefits Russia. Trump/Russia, anyone? www.ft.com/content/5435..."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my453xz6vc2a",
+     "text": "This is lawsuit five by agents. They’re mostly stalled over motions to dismiss, but if they get past that to discovery, Patel is going to have a lot more trouble than from lying to Congress with Republicans who won't call out lies. apnews.com/article/fire..."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3my4dgjmyms2g",
+     "text": "www.wpri.com/dont-miss/gu..."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myaog4g2vk2i",
+     "text": "I just love her band. :-)\nyoutu.be/zfaVCiyyqTQ?..."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myaomugj5c2i",
+     "text": "The question of regulatory misbehavior against clean energy does need to be resolved before Democrats will vote for this bill. This misbehavior sends all the wrong signals."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mydbhcn6622a",
+     "text": "Another cost increase fossil fuel emissions foist on us; add car insurance and it’s worse.\n \nFor some families it’s worse: no insurance to be had.  No insurance means no mortgages, which usually means lost home value."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myf5n2n7pc2i",
+     "text": "Based on Ukraine, it looks like Trump would have sided with Hitler, not England — no Band of Brothers, no Greatest Generation, no American Century."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myfg7fabwk2o",
+     "text": "It looks like it may be worse than just betrayal; it looks like betrayal plus crooked side deals for Trump and cronies."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myhtslgkyk2p",
+     "text": "Glad she noticed."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myhw5ujtvc2j",
+     "text": "Putin is no humanitarian."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myi27sc7qk27",
+     "text": "Call it a metaphor.  \nwww.washingtonpost.com/national-sec..."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myi5srt4ns2q",
+     "text": "Remember their courthouse fiasco? Confusing a high-schooler with a thirty-something? Violating agreement with court and courthouse rules? Threatening a judge (while he was parked in judges-only spot, which to some would be a clue)?   \nwww.bostonglobe.com/2026/10/21/m..."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myidqnfu322q",
+     "text": "Trump/Russia was never a hoax."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myigvnvkf22g",
+     "text": "What is it with billionaires and taxes? What change in his lifestyle would these taxes cause? Would the guy even notice? What, he doesn’t have enough money already?\nwww.politico.com/news/2026/10..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mykkojsaa22l",
+     "text": "We must protect our historic democracy from devolving into government-by-creepy-billionaire. By the people, for the people, of the people.\nwww.politico.com/live-updates..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mykmqucw5c2z",
+     "text": "Every remaining scenario for climate safety shows overshoot, so carbon capture is needed — and so is carbon pricing.  \n\nFossil fuel being allowed to pollute for free is now lethal to climate safety. Period. It’s price or fail.  \nwww.bloomberg.com/news/article..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mykq3unonk2t",
+     "text": "Always Trump/Russia, Trump/Russia, Trump/Russia. Now Russia is interfering for Trump in U.S. elections. Probably with his blessing.   \nwww.nytimes.com/2026/10/22/u..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mykstrghvk25",
+     "text": "Of course it does.    \nwww.theguardian.com/us-news/2026..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mykvd6igrk2i",
+     "text": "This is the kind of thug behavior creepy billionaires and their government stooges resort to when it looks like the people are going to reclaim their power. Democracy? Or government-by-billionaire? That’s the choice.\nwww.washingtonpost.com/national-sec..."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myky72abm22o",
+     "text": "There is much to be said and done about climate change, but three essentials must guide us. 🧵"
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mylhlc4kcs2p",
+     "text": "The fossil fuel industry pollutes for free.\n \nBut in the rest of the world, nothing is free. People are dealing with climate-driven price hikes for home insurance, food, and other basics.\n \nPolluters should be paying these costs – not the people.\nwww.youtube.com/watch?v=sOXU..."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myncgn5pms2h",
+     "text": "Creepy billionaires want to run our country through political stooges. We can stop that. \nwww.theverge.com/tech/1014252..."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mynijg5cq225",
+     "text": "Top Ten Fun Facts about what climate change is doing to Florida’s home insurance market:\n\nFact #1 is that it’s already the most expensive in the country, and predicted to double or triple in years ahead. 🧵"
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mynklslu522g",
+     "text": "The “ice cream window” is open at DOJ for MAGA to drive up and get taxpayer money.\nwww.bloomberg.com/news/article..."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mypkaxbytk24",
+     "text": "What government by billionaire gets you."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mypmn4jv322x",
+     "text": "Big Oil used to pretend climate change wasn’t real – then they pretended they were part of the solution. 🧵"
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myptlmbs622m",
+     "text": "Hillary Clinton too sees Trump/Russia/Epstein:"
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myqacngrwk26",
+     "text": "Look how many Floridians get that climate change is driving their home insurance crisis.  Big majorities; nearly half of Trump voters!"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myqltrmnpk2k",
+     "text": "Bravo, Lula!! Thank you, Brazil!"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myrpdd22cs2x",
+     "text": "Along with free “We’re a bunch of crooks” bumper stickers. \nwww.washingtonsun.com/whitehouse/w..."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myrwqdqpjk2q",
+     "text": "“I’m Jeffrey, Don’s best friend.”"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mys46sg5t22q",
+     "text": "Rest of sentence: “off American consumers.” Who does Bozo think is paying that “freaking fortune”?"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mysa3h2l2k2q",
+     "text": "Student anti-corruption protests sweep Vucic out of office in Serbia. People everywhere are sick of corruption. Our turn."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mysdya64ek2q",
+     "text": "Fossil fuel at work destroying life."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myugeay7qs2o",
+     "text": "They ignore the irony of the present FBI Director, “Poodle Room” Patel, regularly lying to Congress."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myuwt4r2v22a",
+     "text": "This brought to you by your friends in the fossil fuel industry."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myvcquq2as2f",
+     "text": "Remind me, what bills have they passed that reduced fossil fuel’s carbon emissions? And where they were on the destruction of the methane emissions program?\nwww.politico.com/news/2026/10..."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mywzdmb7kc2f",
+     "text": "As the world moves to fast, efficient, fun electric vehicles, Trump is obstructing the development of this technology at home."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myzl6qzuvc2v",
+     "text": "Nowhere near enough for them to approve simple repowerings. We await real signs of regulatory good faith."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myzoxoeha22v",
+     "text": "What we need here is for the “high ambition” countries to gather outside the UN process that gives polluter countries a veto. Together, they’re an economic force sufficient to change industry behavior. But they need a better venue."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3myzytlklq22v",
+     "text": "Trump’s fossil fuel donors are making a fortune off his war, for sure. They are also making a fortune off his clean energy blockade. In both cases, you pay for it."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz22zbwack2v",
+     "text": "Not to my knowledge."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz253ly3mc2s",
+     "text": "Setting aside the illegality of the thing, the worst part is the roll-over by Senate Republicans as Trumpsters take this legislative power away."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz4hirkrrs2s",
+     "text": "Maybe we can learn something from the puffins."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz6hclq7w22o",
+     "text": "Like a gangster movie, where the boss finds out one of his goons isn’t paying the required tribute."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz6lapbbns27",
+     "text": "I will miss my friend Aram, a true Rhode Island fixture who served in many roles of civic leadership."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz6vuz4aus2c",
+     "text": "An updated compendium of decisions where judges found the Trump administration unworthy of the longstanding “presumption of regularity.”"
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mz7ba5muyc2i",
+     "text": "Trump/Epstein is real, and so is the MAGA DOJ cover-up."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzaxiiycw22j",
+     "text": "Today’s “fall back” ritual is unnecessary, antiquated, and disrupts Rhode Islanders’ lives.\n\nLet’s get the Sunshine Protection Act again through the Senate and onto the President’s desk."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzb5yvmzas2j",
+     "text": "Not easy to see how any of this behavior of Trump appointees comports with the board’s fiduciary duty to the Center."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzc3qa67hc2j",
+     "text": "When Tony Soprano doesn’t get his cut, he’s pissed. \n\n(BTW, quick list of legit services she could possibly provide worth $50 million?)"
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzc3wg6n3c2j",
+     "text": "This mini-tantrum of a brief challenges the judge’s fact-finding with presumptions about what took place when they have control over the evidence.\n\nSeems like appointing a special master to investigate DOJ’s conduct and report would make sense.\nwww.courtlistener.com/docket/73710..."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzdwyafvi22h",
+     "text": "Our permitting bill saves ratepayers $55 BILLION alone just by requiring data centers to pay their fair share."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzdzveos622h",
+     "text": "Hey, Florida, put that on Big Oil’s climate change tab. \n\nHow much are they pitching in?"
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mze34sukt22h",
+     "text": "Yup. Even juvenile great whites around the Block Island wind farm “cafeteria.”"
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mze3c74pik2h",
+     "text": "“Not only is reform needed to meet America’s soaring energy needs, but — contrary to the claims of its critics — it’s also essential to safeguard the nation’s natural resources.”\n \nA cleaner, more affordable future awaits."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzeol6ikgk2u",
+     "text": "Fall skies."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzgj2vvhyc2u",
+     "text": "Elections must be free, fair, and secure. \n\nWe got a serious briefing Sunday night on the Trump/MAGA schemes to cheat, and have made preparations so they don’t succeed at subverting our democracy."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/whitehouse.senate.gov/post/3mzgo2rb6qs2u",
+     "text": "You pay for their grotesque excess profits, from them gouging you at the pump. Trump helps them screw you by blockading low-cost clean energy."
+    }
+   ]
+  }
+ ]
+}

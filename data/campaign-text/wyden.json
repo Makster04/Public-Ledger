@@ -1,0 +1,237 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "wyden",
+ "name": "Ron Wyden",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.standtallforamerica.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.standtallforamerica.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108232621/https://www.standtallforamerica.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108232621/https://www.standtallforamerica.com/",
+     "original": "https://www.standtallforamerica.com/",
+     "date": "2022-11-08",
+     "title": "Wyden for Senate",
+     "text": "div\" data-cycle-pager=\"#custom-pager\" data-cycle-prev=\".cycle-prev\" data-cycle-next=\".cycle-next\" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz>\n## What's new\nNovember 4, 2022\nThe Republican plan to bail out billionaires\nNovember 2, 2022\nWhat it means to be a progressive\nOctober 31, 2022\nWATCH: Ron’s new ad against extremism\nOctober 26, 2022\nWe’ve all heard the horror stories, now it’s time to do something\nOctober 17, 2022\nKeeping their big donors happy\nOctober 13, 2022\nA fragile moment in our democracy’s history\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107041010/https://www.standtallforamerica.com/issues/",
+     "original": "https://www.standtallforamerica.com/issues/",
+     "date": "2022-11-07",
+     "title": "Issues | Wyden for Senate",
+     "text": "## Issues\nSee where Ron stands on these issues:\n## What's new\nNovember 4, 2022\nThe Republican plan to bail out billionaires\nNovember 2, 2022\nWhat it means to be a progressive\nOctober 31, 2022\nWATCH: Ron’s new ad against extremism\nOctober 26, 2022\nWe’ve all heard the horror stories, now it’s time to do something\nOctober 17, 2022\nKeeping their big donors happy\nOctober 13, 2022\nA fragile moment in our democracy’s history\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221002221548/https://www.standtallforamerica.com/issues/jobs-economy/",
+     "original": "https://www.standtallforamerica.com/issues/jobs-economy/",
+     "date": "2022-10-02",
+     "title": "Jobs & Economy | Wyden for Senate",
+     "text": "## Supporting Oregon Families\nToo many middle-class families in Oregon are hurting. Around the state, the cost of living is skyrocketing, and many areas struggle to create and retain jobs. Ron is focused squarely on promoting policies that create jobs, grow paychecks, and improve the economic security of Oregon families. That means overhauling the tax code to promote growth and investment, making trade more fair and opening markets for goods made in Oregon, investing in clean energy produced in Oregon, and promoting innovation in every sector from tech to agriculture.\nRon is fighting against special interest tax loopholes and for a tax system where big corporations have to play by the same rules as everyday Americans.\nIn 2019, Ron introduced sweeping legislation to overhaul the U.S. tax code in order to start taxing wealth like wages, ensuring that millionaires and billionaires pay their fair share.\nHe also implemented the most sweeping reform of our nation’s foster care system in a generation with his Family First legislation.\nRon introduced the first legislation to hold Big Oil accountable for price-gouging Americans at the gas pump by implementing a tax on excess oil and gas profits.\nIn 2022, under the Inflation Reduction Act, the Senate passed Ron’s legislation to crack down on corporations that reward their shareholders and CEOs with stock buybacks, and instead incentivize companies to invest in their workers and create more, good-paying red, white, and blue jobs.\nRon also worked to pass legislation in 2022 that would boost domestic manufacturing of semiconductor chips, invest in American workers, ease supply chain woes, and lower costs for American families.\n## Education\nRon is working to bring down the cost of college, and relieve the crushing load of student debt. As a first step, he passed a permanent extension of the American Opportunity Tax Credit, offering families a helping hand with college costs. He believes in making sure every child has access to a quality K-12 education, and is working with Oregon leaders to attack Oregon’s low graduation rates. Ron worked hard to replace No Child Left Behind with a better approach that empowers teachers and parents, and supports schools.\n## Digital Economy & Internet Freedom\nFew members of Congress have been as involved in protecting the internet from over-regulation, over-taxation and monopolization as Ron Wyden.\nTwo decades ago, Ron authored a critical provision of the Communications Decency Act that has allowed regular Americans to make their voices heard as never before. This provision, known as the “most important law protecting internet speech, helped create the digital world and marketplaces we rely upon everyday. He wrote the Internet Tax Freedom Act that protects internet access and services from multiple, burdensome taxes at every level of government. Ron has been on the front lines of the fight to enshrine net neutrality and defend a free and open internet. He stands up to big cable companies to ensure that the internet remains affordable and accessible to everyone, both consumers and providers of new and innovative services.\nRon believes in an open internet that allows all Americans the freedom to speak, learn and innovate online.\n## What's new\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221002233150/https://www.standtallforamerica.com/issues/health-care/",
+     "original": "https://www.standtallforamerica.com/issues/health-care/",
+     "date": "2022-10-02",
+     "title": "Health Care | Wyden for Senate",
+     "text": "## Not just for the healthy & the wealthy\nRon believes health care is a human right. Throughout his career in Congress, Ron has fought to expand access to quality, affordable health care for all Americans, support reproductive health care, expand Medicare and Medicaid, and defend Medicare against relentless Republican attacks and attempts to dismantle the program.\nRon achieved a ten year extension for the Children's Health Insurance Program, the longest ever extension for the program, securing access to vital health care coverage for some of America’s most vulnerable children.\nUnder the Inflation Reduction Act of 2022, Ron led the charge to – for the first time ever – give Medicare the power to negotiate directly with pharmaceutical companies to lower the cost of prescription drugs for seniors in Medicare. He also secured a $2000 monthly out-of-pocket cap for seniors in Medicare. Ron’s legislation will also hold Big Pharma accountable for their price-gouging at the pharmacy counter if they raise the cost of drugs faster than the rate of inflation.\n## What's new\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221002214957/https://www.standtallforamerica.com/issues/equality/",
+     "original": "https://www.standtallforamerica.com/issues/equality/",
+     "date": "2022-10-02",
+     "title": "Equality | Wyden for Senate",
+     "text": "## LGBTQ+ Equality\nRon is a lifelong ally of the LGBTQ+ community and has fought for years to expand protections against discrimination on the job, in public accommodations, and housing. In 1996, Ron was one of the first U.S. Senators to declare his support for marriage equality. He was one of just 14 senators to vote against The Defense of Marriage Act (DOMA). Now that the freedom to marry is protected nationwide, Ron used his position as Chairman of the Finance Committee to ensure that the tax code treated the community equally and Ron is fighting to pass the Equality Act, because every person deserves equal protection under the law, no matter who they love or how they identify.\nTo shed light on discrimination in higher education, Ron fought to make public the names of institutions that receive religious exemptions from Title IX that can be used to discriminate against women and transgender students and employees.\n## Reproductive Freedom\nRon has always defended women’s health care and reproductive rights. He has fought back against the relentless attacks on Planned Parenthood. Politicians have no place between a woman and her doctor, and Ron will always stand up to the extremists trying to take away access to health care and reproductive services.\nRon fights for women and families' economic futures by supporting equal pay for equal work, access to affordable health care, and policies that help make strong families and support women in the workplace like paid sick and maternity leave.\nIn the wake of the gut-wrenching repeal of Roe v. Wade, Ron has led the charge to protect Americans’ reproductive data by pressuring private companies to safeguard womens’ private data so it can’t be weaponized against them if they seek out reproductive care. He also co-authored the strongest reproductive privacy legislation ever to put these protections into black-letter law.\n## What's new\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221002233642/https://www.standtallforamerica.com/issues/climate-crisis/",
+     "original": "https://www.standtallforamerica.com/issues/climate-crisis/",
+     "date": "2022-10-02",
+     "title": "Climate Crisis | Wyden for Senate",
+     "text": "## Climate Crisis\nThe climate crisis poses a grave danger to all of us, whether we live in urban or rural places. Ron is known for forging consensus among Oregonians, including conservationists, farmers and ranchers, large and small businesses, and all those who enjoy our special places and the great outdoors. Together, we can combat the climate crisis and protect Oregon’s unique, beautiful environmental treasures for generations to come.\nIn 2022, the Senate passed Ron’s Clean Energy for America Act into law, which is the most consequential climate legislation of our lifetime. This law secures new tax incentives for investment in clean energy and good-paying jobs on American soil. Ron’s legislation will result in an estimated 40% reduction in carbon emissions by 2030.\nRon is also a cosponsor of the Green New Deal resolution as part of his efforts to transition the United States to cleaner energy and jobs.\n## What's new\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221002224823/https://www.standtallforamerica.com/issues/seniors/",
+     "original": "https://www.standtallforamerica.com/issues/seniors/",
+     "date": "2022-10-02",
+     "title": "Seniors | Wyden for Senate",
+     "text": "## Seniors\nRon began his career as co-founder of Oregon’s Gray Panthers and organizing legal services for the elderly, and has never let up in the fight to protect seniors and promote policies that help seniors live fulfilling, healthy, independent lives.\n## Medicare\nFrom defending the Medicare guarantee to enacting the “Independence at Home” program to fighting for affordable prescription drugs, Ron is always on the front lines in the fight for our seniors. He led a bipartisan initiative in the Senate to update Medicare so that it can better address chronic conditions like diabetes and Alzheimer’s while providing better care and improving the security of the program.\nUnder the Inflation Reduction Act of 2022, Ron secured changes to give Medicare the power to negotiate drug prices with pharmaceutical companies to lower the cost of prescription drugs for seniors in Medicare. His legislation will also cap out-of-pocket drug costs for seniors in Medicare at $2000 a month, and hold Big Pharma accountable for price-gouging seniors at the pharmacy counter.\n## Social Security\nSocial Security is the most successful government program in our country’s history and keeps millions of our most vulnerable members of society out of poverty every year. That’s why Ron has spent his career fighting efforts to privatize or dismantle Social Security and is committed to strengthening and protecting the program for future generations.\nBecause women earn only 78 cents for every dollar their male counterparts earn and they are more likely to be out of the workforce or to have breaks in employment, their savings often lag behind, making Social Security all the more critical. Ron is currently exploring proposals to close the gender gap in retirement income.\n## What's new\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221002214001/https://www.standtallforamerica.com/issues/veterans/",
+     "original": "https://www.standtallforamerica.com/issues/veterans/",
+     "date": "2022-10-02",
+     "title": "Standing up for our veterans | Wyden for Senate",
+     "text": "## Standing up for our veterans\nThe American people have a covenant with our veterans – one that Ron believes we are duty-bound to keep.\nThroughout his career, Ron has worked to honor the sacrifices of our veterans by promoting veterans hiring, fixing the problems at the VA, giving veterans access to greater health care choices, and making sure that mental health and suicide prevention services are made readily available to those returning from combat.\nRon has particularly fought to ensure that members of the Guard and Reserve receive the same benefits as all other combat veterans.\n## What's new\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20221106171032/https://www.standtallforamerica.com/issues/national-security/",
+     "original": "https://www.standtallforamerica.com/issues/national-security/",
+     "date": "2022-11-06",
+     "title": "America’s Place in the World | Wyden for Senate",
+     "text": "## America’s Place in the World\nRon believes that America must lead the world by building consensus, promoting human rights, and tackling the climate crisis.\nIn trade, America can create prosperity at home by leveling the playing field for American businesses and workers so that we can make things here and sell them around the world.\nRon was one of just 23 U.S. Senators to vote against the war in Iraq and has worked for years to resolve conflicts and bring peace to the Middle East.\nRon believes America plays an important role and has a moral obligation to welcome those fleeing persecution from other countries and seeking refuge in the United States. Immigrants strengthen our nation and Ron supports policies that would end the atrocities of separating families and other inhumane actions taken by the White House.\n## What's new\nNovember 4, 2022\nThe Republican plan to bail out billionaires\nNovember 2, 2022\nWhat it means to be a progressive\nOctober 31, 2022\nWATCH: Ron’s new ad against extremism\nOctober 26, 2022\nWe’ve all heard the horror stories, now it’s time to do something\nOctober 17, 2022\nKeeping their big donors happy\nOctober 13, 2022\nA fragile moment in our democracy’s history\n## Meet Ron Wyden\n## Connect with Ron"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.standtallforamerica.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-30",
+    "url": "https://web.archive.org/web/20261030054135/https://www.standtallforamerica.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261030054135/https://www.standtallforamerica.com/",
+     "original": "https://www.standtallforamerica.com/",
+     "date": "2026-10-30",
+     "title": "Wyden for Senate",
+     "text": "## What's new\nAugust 28, 2026\nNeedless death. Higher costs. Zero strategic gains.\nAugust 21, 2026\nThe last time the DOJ wasn’t independent was Watergate\nAugust 19, 2026\nYou’re paying higher energy bills while data centers profit\nAugust 14, 2026\nSocial Security is earned; it’s not an “entitlement”\nAugust 11, 2026\nTrump’s voter suppression efforts mean one thing:\nJuly 28, 2026\nRFK Jr.’s secret backroom deals\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20260714104406/https://www.standtallforamerica.com/issues/",
+     "original": "https://www.standtallforamerica.com/issues/",
+     "date": "2026-07-14",
+     "title": "Issues | Wyden for Senate",
+     "text": "## Issues\nSee where Ron stands on these issues:\n## What's new\nMay 26, 2026\nTrump is waging a shadow war on reproductive rights\nMay 9, 2026\nScience and privacy over politics\nApril 28, 2026\nI refuse to play Trump’s zero-sum game\nApril 24, 2026\nClobbered by Trump’s manufactured energy crisis\nApril 22, 2026\nProtecting our beautiful state\nApril 15, 2026\nA laser-guided weapon aimed at any useful public service\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20260612141551/https://www.standtallforamerica.com/issues/jobs-economy/",
+     "original": "https://www.standtallforamerica.com/issues/jobs-economy/",
+     "date": "2026-06-12",
+     "title": "Jobs & Economy | Wyden for Senate",
+     "text": "## Supporting Oregon Families\nToo many middle-class families in Oregon are hurting. Around the state, the cost of living is skyrocketing, and many areas struggle to create and retain jobs. Ron is focused squarely on promoting policies that create jobs, grow paychecks, and improve the economic security of Oregon families. That means overhauling the tax code to promote growth and investment, making trade more fair and opening markets for goods made in Oregon, investing in clean energy produced in Oregon, and promoting innovation in every sector from tech to agriculture.\nRon is fighting against special interest tax loopholes and for a tax system where big corporations have to play by the same rules as everyday Americans.\nIn 2019, Ron introduced sweeping legislation to overhaul the U.S. tax code in order to start taxing wealth like wages, ensuring that millionaires and billionaires pay their fair share.\nHe also implemented the most sweeping reform of our nation’s foster care system in a generation with his Family First legislation.\nRon introduced the first legislation to hold Big Oil accountable for price-gouging Americans at the gas pump by implementing a tax on excess oil and gas profits.\nIn 2022, under the Inflation Reduction Act, the Senate passed Ron’s legislation to crack down on corporations that reward their shareholders and CEOs with stock buybacks, and instead incentivize companies to invest in their workers and create more, good-paying red, white, and blue jobs.\nRon also worked to pass legislation in 2022 that would boost domestic manufacturing of semiconductor chips, invest in American workers, ease supply chain woes, and lower costs for American families.\n## Education\nRon is working to bring down the cost of college, and relieve the crushing load of student debt. As a first step, he passed a permanent extension of the American Opportunity Tax Credit, offering families a helping hand with college costs. He believes in making sure every child has access to a quality K-12 education, and is working with Oregon leaders to attack Oregon’s low graduation rates. Ron worked hard to replace No Child Left Behind with a better approach that empowers teachers and parents, and supports schools.\n## Digital Economy & Internet Freedom\nFew members of Congress have been as involved in protecting the internet from over-regulation, over-taxation and monopolization as Ron Wyden.\nTwo decades ago, Ron authored a critical provision of the Communications Decency Act that has allowed regular Americans to make their voices heard as never before. This provision, known as the “most important law protecting internet speech, helped create the digital world and marketplaces we rely upon everyday. He wrote the Internet Tax Freedom Act that protects internet access and services from multiple, burdensome taxes at every level of government. Ron has been on the front lines of the fight to enshrine net neutrality and defend a free and open internet. He stands up to big cable companies to ensure that the internet remains affordable and accessible to everyone, both consumers and providers of new and innovative services.\nRon believes in an open internet that allows all Americans the freedom to speak, learn and innovate online.\n## What's new\nMay 26, 2026\nTrump is waging a shadow war on reproductive rights\nMay 9, 2026\nScience and privacy over politics\nApril 28, 2026\nI refuse to play Trump’s zero-sum game\nApril 24, 2026\nClobbered by Trump’s manufactured energy crisis\nApril 22, 2026\nProtecting our beautiful state\nApril 15, 2026\nA laser-guided weapon aimed at any useful public service\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20261025130316/https://www.standtallforamerica.com/issues/health-care/",
+     "original": "https://www.standtallforamerica.com/issues/health-care/",
+     "date": "2026-10-25",
+     "title": "Health Care | Wyden for Senate",
+     "text": "## Not just for the healthy & the wealthy\nRon believes health care is a human right. Throughout his career in Congress, Ron has fought to expand access to quality, affordable health care for all Americans, support reproductive health care, expand Medicare and Medicaid, and defend Medicare against relentless Republican attacks and attempts to dismantle the program.\nRon achieved a ten year extension for the Children's Health Insurance Program, the longest ever extension for the program, securing access to vital health care coverage for some of America’s most vulnerable children.\nUnder the Inflation Reduction Act of 2022, Ron led the charge to – for the first time ever – give Medicare the power to negotiate directly with pharmaceutical companies to lower the cost of prescription drugs for seniors in Medicare. He also secured a $2000 monthly out-of-pocket cap for seniors in Medicare. Ron’s legislation will also hold Big Pharma accountable for their price-gouging at the pharmacy counter if they raise the cost of drugs faster than the rate of inflation.\n## What's new\nOctober 9, 2026\nData centers on public lands? Hell no\nOctober 8, 2026\nAnother Trump SCOTUS seat?\nOctober 2, 2026\nA year ago, Trump tried to invade my hometown. We beat him.\nSeptember 26, 2026\nKeeping the “Public” in Public Lands\nSeptember 17, 2026\nThe Constitution is not a ‘choose your own adventure’\nSeptember 7, 2026\nDid you know Oregon was the first state to recognize Labor Day?\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20261020002020/https://www.standtallforamerica.com/issues/equality/",
+     "original": "https://www.standtallforamerica.com/issues/equality/",
+     "date": "2026-10-20",
+     "title": "Equality | Wyden for Senate",
+     "text": "## LGBTQ+ Equality\nRon is a lifelong ally of the LGBTQ+ community and has fought for years to expand protections against discrimination on the job, in public accommodations, and housing. In 1996, Ron was one of the first U.S. Senators to declare his support for marriage equality. He was one of just 14 senators to vote against The Defense of Marriage Act (DOMA). Now that the freedom to marry is protected nationwide, Ron used his position as Chairman of the Finance Committee to ensure that the tax code treated the community equally and Ron is fighting to pass the Equality Act, because every person deserves equal protection under the law, no matter who they love or how they identify.\nTo shed light on discrimination in higher education, Ron fought to make public the names of institutions that receive religious exemptions from Title IX that can be used to discriminate against women and transgender students and employees.\n## Reproductive Freedom\nRon has always defended women’s health care and reproductive rights. He has fought back against the relentless attacks on Planned Parenthood. Politicians have no place between a woman and her doctor, and Ron will always stand up to the extremists trying to take away access to health care and reproductive services.\nRon fights for women and families' economic futures by supporting equal pay for equal work, access to affordable health care, and policies that help make strong families and support women in the workplace like paid sick and maternity leave.\nIn the wake of the gut-wrenching repeal of Roe v. Wade, Ron has led the charge to protect Americans’ reproductive data by pressuring private companies to safeguard womens’ private data so it can’t be weaponized against them if they seek out reproductive care. He also co-authored the strongest reproductive privacy legislation ever to put these protections into black-letter law.\n## What's new\nOctober 8, 2026\nAnother Trump SCOTUS seat?\nOctober 8, 2026\nData centers on public lands? Hell no\nOctober 2, 2026\nA year ago, Trump tried to invade my hometown. We beat him.\nSeptember 26, 2026\nKeeping the “Public” in Public Lands\nSeptember 17, 2026\nThe Constitution is not a ‘choose your own adventure’\nSeptember 7, 2026\nDid you know Oregon was the first state to recognize Labor Day?\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20260714104910/https://www.standtallforamerica.com/issues/climate-crisis/",
+     "original": "https://www.standtallforamerica.com/issues/climate-crisis/",
+     "date": "2026-07-14",
+     "title": "Climate Crisis | Wyden for Senate",
+     "text": "## Climate Crisis\nThe climate crisis poses a grave danger to all of us, whether we live in urban or rural places. Ron is known for forging consensus among Oregonians, including conservationists, farmers and ranchers, large and small businesses, and all those who enjoy our special places and the great outdoors. Together, we can combat the climate crisis and protect Oregon’s unique, beautiful environmental treasures for generations to come.\nIn 2022, the Senate passed Ron’s Clean Energy for America Act into law, which is the most consequential climate legislation of our lifetime. This law secures new tax incentives for investment in clean energy and good-paying jobs on American soil. Ron’s legislation will result in an estimated 40% reduction in carbon emissions by 2030.\nRon is also a cosponsor of the Green New Deal resolution as part of his efforts to transition the United States to cleaner energy and jobs.\n## What's new\nJune 20, 2026\nTrump’s anti-choice propaganda website\nJune 18, 2026\nTrump’s election interference\nJune 12, 2026\nTrump wants a special set of rules for himself and his family\nJune 9, 2026\nWe can’t give Trump this spying power\nMay 26, 2026\nTrump is waging a shadow war on reproductive rights\nMay 9, 2026\nScience and privacy over politics\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20261030180056/https://www.standtallforamerica.com/issues/seniors/",
+     "original": "https://www.standtallforamerica.com/issues/seniors/",
+     "date": "2026-10-30",
+     "title": "Seniors | Wyden for Senate",
+     "text": "## Seniors\nRon began his career as co-founder of Oregon’s Gray Panthers and organizing legal services for the elderly, and has never let up in the fight to protect seniors and promote policies that help seniors live fulfilling, healthy, independent lives.\n## Medicare\nFrom defending the Medicare guarantee to enacting the “Independence at Home” program to fighting for affordable prescription drugs, Ron is always on the front lines in the fight for our seniors. He led a bipartisan initiative in the Senate to update Medicare so that it can better address chronic conditions like diabetes and Alzheimer’s while providing better care and improving the security of the program.\nUnder the Inflation Reduction Act of 2022, Ron secured changes to give Medicare the power to negotiate drug prices with pharmaceutical companies to lower the cost of prescription drugs for seniors in Medicare. His legislation will also cap out-of-pocket drug costs for seniors in Medicare at $2000 a month, and hold Big Pharma accountable for price-gouging seniors at the pharmacy counter.\n## Social Security\nSocial Security is the most successful government program in our country’s history and keeps millions of our most vulnerable members of society out of poverty every year. That’s why Ron has spent his career fighting efforts to privatize or dismantle Social Security and is committed to strengthening and protecting the program for future generations.\nBecause women earn only 78 cents for every dollar their male counterparts earn and they are more likely to be out of the workforce or to have breaks in employment, their savings often lag behind, making Social Security all the more critical. Ron is currently exploring proposals to close the gender gap in retirement income.\n## What's new\nOctober 26, 2026\nLet’s talk about Flock\nOctober 9, 2026\nData centers on public lands? Hell no\nOctober 8, 2026\nAnother Trump SCOTUS seat?\nOctober 2, 2026\nA year ago, Trump tried to invade my hometown. We beat him.\nSeptember 26, 2026\nKeeping the “Public” in Public Lands\nSeptember 17, 2026\nThe Constitution is not a ‘choose your own adventure’\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20260714092439/https://www.standtallforamerica.com/issues/veterans/",
+     "original": "https://www.standtallforamerica.com/issues/veterans/",
+     "date": "2026-07-14",
+     "title": "Standing up for our veterans | Wyden for Senate",
+     "text": "## Standing up for our veterans\nThe American people have a covenant with our veterans – one that Ron believes we are duty-bound to keep.\nThroughout his career, Ron has worked to honor the sacrifices of our veterans by promoting veterans hiring, fixing the problems at the VA, giving veterans access to greater health care choices, and making sure that mental health and suicide prevention services are made readily available to those returning from combat.\nRon has particularly fought to ensure that members of the Guard and Reserve receive the same benefits as all other combat veterans.\n## What's new\nJune 20, 2026\nTrump’s anti-choice propaganda website\nJune 18, 2026\nTrump’s election interference\nJune 12, 2026\nTrump wants a special set of rules for himself and his family\nJune 9, 2026\nWe can’t give Trump this spying power\nMay 26, 2026\nTrump is waging a shadow war on reproductive rights\nMay 9, 2026\nScience and privacy over politics\n## Meet Ron Wyden\n## Connect with Ron"
+    },
+    {
+     "url": "https://web.archive.org/web/20260714102907/https://www.standtallforamerica.com/issues/national-security/",
+     "original": "https://www.standtallforamerica.com/issues/national-security/",
+     "date": "2026-07-14",
+     "title": "America’s Place in the World | Wyden for Senate",
+     "text": "## America’s Place in the World\nRon believes that America must lead the world by building consensus, promoting human rights, and tackling the climate crisis.\nIn trade, America can create prosperity at home by leveling the playing field for American businesses and workers so that we can make things here and sell them around the world.\nRon was one of just 23 U.S. Senators to vote against the war in Iraq and has worked for years to resolve conflicts and bring peace to the Middle East.\nRon believes America plays an important role and has a moral obligation to welcome those fleeing persecution from other countries and seeking refuge in the United States. Immigrants strengthen our nation and Ron supports policies that would end the atrocities of separating families and other inhumane actions taken by the White House.\n## What's new\nJune 20, 2026\nTrump’s anti-choice propaganda website\nJune 18, 2026\nTrump’s election interference\nJune 12, 2026\nTrump wants a special set of rules for himself and his family\nJune 9, 2026\nWe can’t give Trump this spying power\nMay 26, 2026\nTrump is waging a shadow war on reproductive rights\nMay 9, 2026\nScience and privacy over politics\n## Meet Ron Wyden\n## Connect with Ron"
+    }
+   ],
+   "unread": [
+    "the list of standtallforamerica.com's saved pages"
+   ],
+   "posts": [
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mwodiwudks2z",
+     "text": "They aren’t sending their best"
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mwt35bg34k2w",
+     "text": "Yesterday I tried to fast track my bill to ban data center development on public lands, like this one in Oregon. Republicans blocked it. In case there was any doubt, it’s clear Republicans are all in on Trump’s plan to hijack your public lands for data centers."
+    },
+    {
+     "date": "2026-10-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mwy2qzbz6s2l",
+     "text": "My investigators have confirmed the Trump administration is hiding interview documents it conducted with some of Epstein’s banks, and there could be more. There’s no limit to how far Scott Bessent, Kash Patel and Todd Blanche will go to continue this cover up."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mxc4r63a6s2h",
+     "text": "The Trump administration will start selecting lawyers for unaccompanied minors. Meaning the judges work for Donald Trump, the prosecutors work for Trump, and now the attorneys representing children will work for Trump. This is a rigged system that will result in more untold horrors for these kids."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mxhhwhbmzk2w",
+     "text": "The administration that continues to cover up for pedophiles simply cannot be trusted with the care of hundreds of unaccompanied children with no oversight and no transparency"
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mxtzrbryt22u",
+     "text": "Vote Republican in November if you want more of this"
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3myalyekeok2z",
+     "text": "Mark Zuckerberg should understand that Republicans won’t always be in charge. If Democrats take the Senate, he will be forced to answer to Congress about his company’s abuse of tax credits to avoid paying its fair share while it builds AI data centers."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3myfjucazkc2o",
+     "text": "Happy Global Encryption Day to all who value their privacy and security. I'll keep fighting to protect and push for adoption of strong encryption to keep us all safe."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3myuwnvkyqc2y",
+     "text": "Oregonians: let’s show the rest of the country how safe and easy it is to vote by mail. If you’re dropping your ballots off this week, reply to this post with a photo I can amplify."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mze66su7qs2u",
+     "text": "Very important holiday coming up"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/wyden.senate.gov/post/3mzg7q4k4tk2m",
+     "text": "Today’s the day. Oregonians: it’s too late to mail your ballot. Locate your nearest ballot drop box at oregonvotes.gov and make a plan to vote."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,527 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "smith",
+ "name": "Tina Smith",
+ "built": "2026-11-26",
+ "sites": [
+  "https://tinasmithmn.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://tinasmithmn.com/",
+   "saved": false,
+   "pages": [],
+   "posts": [
+    {
+     "date": "2026-07-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mptaosvy3c2y",
+     "text": "The progress of America has never been linear. The best version of this country is possible, but only if we don’t let them divide and distract us. This country belongs to ALL of us.\n \nHappy 250th Birthday America 🦅🇺🇸"
+    },
+    {
+     "date": "2026-07-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqa33agoqc24",
+     "text": "Intrigued by the pickle pie at the Minnesota State Fair this year. Not opposed, just…intrigued."
+    },
+    {
+     "date": "2026-07-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqclkui2r22r",
+     "text": "ICE agents feel emboldened because they know their higher ups will protect them by lying to the public about what happened. How can we trust any sort of investigation solely done by an agency that does whatever it wants, whenever it wants, with no repercussions?\n\nJustice for Lorenzo Salgado Araujo"
+    },
+    {
+     "date": "2026-07-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqeyykhdlc2m",
+     "text": "Homes are for families — not private equity!"
+    },
+    {
+     "date": "2026-07-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqez2f6nbk2m",
+     "text": "400,000 rural homes can now be saved from falling into disrepair"
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqk2tgf2cs2y",
+     "text": "Thank you to all the first responders and firefighters putting themselves in harm’s way to combat the wildfires up near the Boundary Waters. Everyone in the area should listen to the guidance of state and local officials.\n \nStay safe Minnesota!"
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqk6psdd5s2c",
+     "text": "The feds are finally sharing evidence from Renee Good and Alex Pretti's killings, but this took way too long, and it's not enough. Minnesotans' trust has been fundamentally broken."
+    },
+    {
+     "date": "2026-07-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqkvq7zios2a",
+     "text": "ICE is beyond repairing. We can't reform our way out of this. Strip it down to the studs and start over."
+    },
+    {
+     "date": "2026-07-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqmsanijcs27",
+     "text": "The entirety of the Boundary Waters is being evacuated due to wildfires, led by eight fearless Wilderness Rangers paddling around to campsites.\n \n1,000,000 acres.\n2,000 campsites.\n4 teams of rangers.\n2 rangers per canoe."
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqpakyta5s2d",
+     "text": "Naïve to think he was ever going to end ICE traffic stops. He LIKES that his secret police force can do whatever they want with no repercussions. The cruelty is the point."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqrwtb3mrs2f",
+     "text": "Cancer doesn’t give a shit about DEI policies. The disease will continue impacting some populations more than others and refusing to research why is asinine and hurts us all."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqs252ggps2f",
+     "text": "Booking it back to Minnesota to visit folks on the front lines of the wildfires up in Ely and around the Boundary Waters. Stay safe, Minnesota."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqsmftvv6227",
+     "text": "He feels cornered. He sees what will happen when we take back power, so he’s lashing out the only way he knows how.\n \nElection conspiracy theories didn’t save him in 2020. They won’t save him in 2026."
+    },
+    {
+     "date": "2026-07-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mqx6oeg3qk2l",
+     "text": "This is tragic news. Holding the families and loved ones of these brave service members in my heart and offering my deepest condolences."
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mr6pal65bs2z",
+     "text": "So letting ICE investigate itself? Americans deserve real accountability, not another cover up from this Administration."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mrasggt67k2c",
+     "text": "How can you Make American Healthy Again when people are afraid to eat their vegetables?"
+    },
+    {
+     "date": "2026-07-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mrfi57c7kk2m",
+     "text": "Six months ago, Alex Pretti was shot by federal immigration agents on the streets of Minneapolis, just 18 days after ICE fatally shot Renee Good. Alex was a 37-year-old intensive care nurse for veterans, an outdoorsman, a dog lover, a brother, and a son."
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mrnszjcge223",
+     "text": "Trump tried canceling $646,000,000 in infrastructure money for Minnesotans just because we didn’t vote for him. But the real kicker is that he tried blocking new transmission lines that would connect the grids in *Republican* states (SD, ND, IA, MO, NE and KS) just because they included Minnesota."
+    },
+    {
+     "date": "2026-07-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mrsaekylss2r",
+     "text": "Epstein survivors have more courage in the tips of their fingernails than Todd Blanche has in his entire body"
+    },
+    {
+     "date": "2026-07-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mrxxh6bnbc26",
+     "text": "How can the Administration justify asking for a $1.5 trillion defense budget when the Pentagon has never even passed a full audit?"
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3ms6z4biygc26",
+     "text": "New reporting shows the President met with Big Tobacco at a golf club in Florida and promised he’d do pretty much anything the executives wanted in exchange for millions of dollars in political donations to his campaign."
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3ms7budgk6s26",
+     "text": "Pretty clear Todd Blanche is just another yes-man who will sign off on the President’s worst ideas. Why would we trust someone who demonstrates he can’t stand up for what’s right?"
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3ms7ndzw4ys26",
+     "text": "A system that penalizes people for following its rules is fundamentally broken. ICE needs to be stripped down to the studs."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3msbqnxe4hk2w",
+     "text": "TODD BLANCHE: Rest assured that we’re working hand in hand with HHS and the FDA and the White House and President Trump’s team to get permanent solutions so that the Dobbs decision becomes permanent in every single state."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3msbqve22oc2w",
+     "text": "Republicans will likely do what they always do and confirm Blanche as Attorney General despite all of this, and once again, women across America will pay the price."
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mse5fl37a22c",
+     "text": "The Trump Administration is churning through our military’s limited supply of Patriot missiles faster than they can resupply, all for an unpopular war in the Middle East."
+    },
+    {
+     "date": "2026-08-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3msldetnz3k22",
+     "text": "We’ve always known Todd Blanche won’t stand up to the President. The real question has been whether or not Republicans who know better would say enough is enough. His confirmation is maddeningly unsurprising."
+    },
+    {
+     "date": "2026-08-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3msvvhlskfk2e",
+     "text": "My heart breaks for the firefighter who tragically lost their life near Ely while assigned to fight the Boundary Waters wildfires. I’m holding their family, friends, and all first responders in my heart as they grieve. Minnesota is eternally grateful for your service."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3msxr2i3iys2e",
+     "text": "The White House normally gets $2.5 million a year for maintenance. Trump’s team has allocated $875 million.\n \nThat’s 350 years’ worth of the usual budget spent by a single administration."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3msy5awwbvc2e",
+     "text": "Masks covering their faces. Little or no visible identification. Unmarked vehicles. Guns. And as if that wasn’t enough, ICE is now getting electric-shock gloves straight out of a dystopian sci-fi novel."
+    },
+    {
+     "date": "2026-08-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtcmcpyxxc2a",
+     "text": "We ask our sailors and their families to make incredible sacrifices. In return, we promise to move hell and high water to get them the support they need to carry out their operations."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtem2elcj22k",
+     "text": "Minnesotans strongly support protecting the Boundary Waters. We are a mining state, but not this mine in this place. The Trump Administration and Republicans in Congress ignored the science and overturned protections for the Boundary Waters, but the fight continues here at home."
+    },
+    {
+     "date": "2026-08-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mth4svvas227",
+     "text": "📍Crosby, Minnesota"
+    },
+    {
+     "date": "2026-08-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mthgn2zptc2p",
+     "text": "Finding a safe and decent place to call home is too expensive in the first place. And for those who can put the money together to own a home, there’s another growing cost: home insurance."
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtjpbvxvpc2p",
+     "text": "Cuyuna Regional Medical Center (CRMC) is a 25-bed hospital in Crosby with clinics across north-central Minnesota. Patients can access primary and specialty care without having to trek to a big city, and it’s a perfect example of the kind of facility that Minnesotans rely on to stay healthy."
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtkdhaoa5s2x",
+     "text": "Farmers and ranchers need options. They need choices. They need more than just whatever the four big corporations that control meat processing in this country offer. That’s why the new Farmers Union Processing and Meats facility in Staples matters."
+    },
+    {
+     "date": "2026-08-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtlwpdpsqc22",
+     "text": "In cities, towns and rural communities alike, I hear the same thing:  the dire need for affordable childcare. Parents can’t start jobs because there’s no one to watch the kids. Businesses can’t expand because there’s no one to fill the jobs."
+    },
+    {
+     "date": "2026-08-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtmeadbxd22m",
+     "text": "First Liam Conejo Ramos. Now Liam Tadeo.\n \nHow many five-year-old boys need to be taken by ICE before Republicans will admit to the cruelty of this mass deportation campaign? Where is our humanity? How can we justify putting a five-year-old through this?"
+    },
+    {
+     "date": "2026-08-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtpffw7m3s2m",
+     "text": "A lot of people are surprised to hear that Minnesota produces the fifth most honey in the country. Mann Lake LTD employs about 140 people in Hackensack and is a key supplier for professional honey producers and backyard beekeeping enthusiasts."
+    },
+    {
+     "date": "2026-08-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtrjji4cwc2m",
+     "text": "So great to be in Little Falls, an amazing community in central Minnesota that’s using federal programs to help their small businesses update historic buildings to meet their needs while protecting the history of the town.\n \nThank you for taking the time to show me around!"
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtw6y5sot22m",
+     "text": "On these Canada tariffs: Trump’s trying more of the same failed policy and he knows it. The trade war will inevitably just drive up prices on everyone while alienating one of our closest trading partners."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtwj7xdk7k2m",
+     "text": "Dolly Parton performs at the Minnesota State Fair (1993) ❤️🕊️"
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtyh637mp22a",
+     "text": "The average age of America’s farmer is nearing 60 years old, yet our young farmers tasked with taking over are being boxed out from starting their own operations. How can they be expected to compete with corporate investors buying land?"
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtyw53rizs2s",
+     "text": "Small towns and rural communities are seeing a troubling trend of labor and delivery services being cut at rural hospitals. It means when expecting mothers go into labor, they have to drive farther to get the care they need, which can be dangerous for both baby and mom."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mtzidnwobk2s",
+     "text": "Tomorrow is the grand opening of the Minnesota State Fair, and it also marks 365 days since the lives of Annunciation School families were irrevocably broken by gun violence. I think about the Annunciation School community all the time."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mu3kqapvxc2p",
+     "text": "Again, not a betting woman. But I’d bet if you handed Trump a map of all Great Lakes and asked him point and name them he couldn’t."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mu63p3ajds2p",
+     "text": "Six months ago he told us the Iran War would only last a few weeks"
+    },
+    {
+     "date": "2026-08-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3muflzvh75s2c",
+     "text": "New Blatnik Bridge design 👀"
+    },
+    {
+     "date": "2026-08-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mufsdldsbc2q",
+     "text": "The Blatnik Bridge between Duluth and Superior has reached the end of its useful life after serving us for 65 years. By 2030, it will have been deemed unsafe and decommissioned. But the bridge is the linchpin that connects the bustling, proud cities that make up the Twin Ports."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3muhnaqmxzc2y",
+     "text": "2025: 1,180 cases of cyclosporiasis\n2026: 17,180 cases of cyclosporiasis\n \nCutting research into the parasite causing the outbreak is akin to burying our heads in the sand and hoping this whole thing goes away."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mun37lwho22k",
+     "text": "Anyone who has lived or driven around Moorhead knows the train crossings along 11th Street can be a giant headache."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3munbbsbhx32k",
+     "text": "Apple Tree Dental in Hawley, Minnesota has provided more than 353,000 dental visits to more than 35,000 patients across the Northland. They’ve often been the only provider in the area willing to see patients on Medicaid."
+    },
+    {
+     "date": "2026-09-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvistub7bs2v",
+     "text": "If it looks like a cage and acts as a cage… it’s a cage. Calling these “calming areas” at Alligator Alcatraz is some dystopian doublespeak."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvkxs4ldvc2g",
+     "text": "Unsurprising that Republicans are giving corporations (most of whom donated to their campaigns) the greenlight to pollute our air."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvl4w6ie6s2t",
+     "text": "Trump’s EPA will let power plants emit more lead, mercury and other chemicals into the air to be breathed in by you and your kids because he’ll do just about anything to help out the fossil fuel companies that funded his campaign"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvlgqhk3222t",
+     "text": "We just spent a month outside of the DC bubble and instead of coming back to address any of the concerns we heard back home (gas prices, Iran, data centers)"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvlpxew62225",
+     "text": "These big AI companies should be held civilly and/or criminally liable and prosecuted when their models hurt people. They don’t get a free pass just because they’ve now decided to admit to the dangers of what they’ve created."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvntpgnrqs2b",
+     "text": "The United States has no business sending Netanyahu billions of dollars’ worth of bombs after his record of indiscriminate violence against Palestinian civilians, including children."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvsne4qwws2m",
+     "text": "These AI companies cannot be trusted to regulate themselves. Don’t let the fox guard the henhouse."
+    },
+    {
+     "date": "2026-09-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mvv33zoet22t",
+     "text": "There is one thing we should be clear-eyed about right now: AI developers aren’t above the laws we have currently on the books. They can and should be prosecuted and held liable if they break the law and their products harm us."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mw4vkbvqj22t",
+     "text": "It’s not just a question of how long farmers can hunker down and endure high diesel prices. It’s a question of how many farms will go under because it’s just too much."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mw6sf6ndlk2t",
+     "text": "The problem for farmers isn’t just that diesel prices are high. It’s that diesel prices are high RIGHT BEFORE harvest season."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwc3csnhqk2f",
+     "text": "Lots of ways to finally help young people afford their first home. 7% mortgage rates (and climbing) thanks to another endless war in the Middle East is not one of them."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwcfdoiysk2f",
+     "text": "Trusting the same DOJ that covered up the Epstein Files to protect us from frontier AI… What could possibly go wrong?"
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwegrbcnks25",
+     "text": "Visiting with farmers in Lamberton today and their message was clear. Producers need stability and consistency so they can plan for the next season, not more chaotic trade wars and price hikes due to the war in Iran."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwev36bges25",
+     "text": "New Richland endured nine inches of rain from just one storm, flooding the town and forcing residents to evacuate. The anxiety from residents is palpable. It’s going to take an all-hands-on-deck effort to recover, clean up the damage and get the community back on its feet."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwomkpctqs2y",
+     "text": "You’re telling me the guy who said “LET DATA REIGN” just poured cold water on the only bipartisan AI safety talks that seem promising?"
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwrh4l4wns2g",
+     "text": "Even their own ridiculous AI bot understands why a copper-nickel mine doesn’t belong near the Boundary Waters"
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mwvlngkkxc2z",
+     "text": "They spend all this time and money defending Richard Nixon but can’t prosecute the men in the Epstein Files?"
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mx5k7st7dk2b",
+     "text": "Reports are swirling around that tech companies are cashing in on corporate tax breaks from the Big Beautiful Bill to bankroll massive data centers. So I am requesting Congress’s official tax estimators provide a full report on just how much money Republicans shelled out to these corporations."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxcn2txbic2r",
+     "text": "Incredibly grateful for our state and federal law enforcement partners who were able to foil this terrorist plot at the Mall of America before it could take place."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxhlb7a5kc2o",
+     "text": "AI companies love to claim they’re SO special they need special treatment and can’t follow the same rules other dangerous technologies are bound by, and that’s just bullshit."
+    },
+    {
+     "date": "2026-10-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxmzhreppc2o",
+     "text": "Data centers epitomize the power Big Tech has over communities. People point to these buildings as proof that Big Tech plays by a different set of rules, and get pissed that data centers are built over the objections of the people who live around them (often with taxpayer $$)"
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxonacayf22l",
+     "text": "On Indigenous Peoples’ Day, I want to say Pidamayaye and Miigwech to Tribal Nations and Native communities in Minnesota and beyond for your partnership and friendship over the years."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxosrlhfsk2l",
+     "text": "I’m outraged by this attack on Representative Omar. Trump and his DOJ have a bizarre obsession with tearing down Minnesota, our leaders and our communities. This latest action, even as voting has already started in Minnesota, is a transparent attempt to interfere in our elections."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxrha6xgcc2w",
+     "text": "ZACHARIA: “THIS IS A PRESIDENT AND ADMINISTRATION THAT IS LOOKING OUT FOR YOU”"
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mxubwk636s2w",
+     "text": "I think people don't really always think about this, but AI companies are at risk of creating a massive financial bubble and have yet to prove they can make the profits to back it up."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3myg3hzrs7c2s",
+     "text": "Farmers deserved affordable fuel in the first place instead of a retroactive check. The USDA payout will help (if it materializes) but they're rightfully pissed they need a payout at all.\n \nThey’re tired of this dancing around the real solution: Ending the war."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3myidwdtrkc2m",
+     "text": "The DOJ is once again refusing to cooperate with Minnesota officials in the investigation into what happened to Renee Good and Alex Pretti. Reeks of a cover-up."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mys5w5k3pc2j",
+     "text": "American farmers are expected to pay $2.4 billion MORE for diesel alone this year. In Minnesota, farmers are taking an extra $1,900 hit to the pocketbook just to fill their fuel tank in the yard.\n \nTrump has some nerve to brag about making a “freaking fortune” from the sky-high oil prices."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3myuogi4qrs2h",
+     "text": "In the small town of Bricelyn, MN (pop. 350), folks line up outside the local food pantry before it even opens.\n \nThis is what Trump’s SNAP cuts look like in our rural communities."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3myxjl63s522h",
+     "text": "TRUMP YESTERDAY: “We brought inflation way down.”\n\nBUREAU OF LABOR STATISTICS: Inflation in December 2024 was 2.9%. This September it was 3.7%."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mz4crsmtu22h",
+     "text": "So we’re supposed to believe there’s no money for health care, but there’s enough money for ICE to spend nearly $500 million buying an abandoned private prison in MN that was originally offered for sale at $75 million just last year?"
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/smith.senate.gov/post/3mzb5hbw26k2h",
+     "text": "Wishing a day full of love, laughter and joyful remembrance on this Día de los Muertos.\n \nMay their memories live on forever."
+    }
+   ]
+  }
+ ]
+}

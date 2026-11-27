@@ -1,0 +1,133 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "fetterman",
+ "name": "John Fetterman",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.johnfetterman.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.johnfetterman.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108141325/https://johnfetterman.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108141325/https://johnfetterman.com/",
+     "original": "https://johnfetterman.com/",
+     "date": "2022-11-08",
+     "title": "John Fetterman - Official Campaign Website",
+     "text": "## Support John Fetterman for Senate\n## Every County, Every Vote\n## A different kind of Democrat.\nJohn doesn’t look like a typical politician, and more importantly, he doesn’t act like one. He supported legalizing marijuana before it was popular, officiated a same-sex marriage before it was legal, and pushed for single payer healthcare long before it was mainstream. The issues John is running on now are the same issues he’s been working on for the last two decades.\n## Vote by Mail\nBy participating with your mobile number, you agree to terms & privacy policy and consent to receive messages to support John Fetterman (messages include donation links). Message & data rates may apply. Message frequency varies. Text HELP for help, Text STOP to Opt Out.\n## What John stands for\nYou’ll always know exactly where I stand. I haven’t had to ‘evolve’ on the issues, because I’ve always said what I believe is true and I’ve been championing the same core principles for the last 20 years.\n## “this tough-guy, give-it-to-you-straight vibe sets Fetterman apart from most politicians”\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108125337/https://johnfetterman.com/issues/",
+     "original": "https://johnfetterman.com/issues/",
+     "date": "2022-11-08",
+     "title": "Issues - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## Issues\nYou’ll always know exactly where I stand. I haven’t had to ‘evolve’ on the issues, because I’ve always said what I believe is true and I’ve been championing the same core principles for the last 20 years.\nJohn’s Plan to Hold Washington Accountable\nAll across Pennsylvania, we’re seeing soaring prices, hollowed out communities, and families getting ripped off by corporate greed. I’ve got a five-point plan to fix our economy and hold Washington accountable.\n## John on the Issues\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108035244/https://johnfetterman.com/plan/",
+     "original": "https://johnfetterman.com/plan/",
+     "date": "2022-11-08",
+     "title": "John’s Plan to Hold Washington Accountable - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## John’s Plan to Hold Washington Accountable\nAll across Pennsylvania, we’re seeing soaring prices, hollowed out communities, and families getting ripped off by corporate greed. Things are tough, and people are struggling. Washington D.C. doesn’t see that — and they don’t care about places like ours.\nI don’t see these as Democratic or Republican solutions. They’re patriotic, pro-America, pro-worker — and just plain common sense. When I’m in D.C., I’ll fight to:\n- Make more stuff in America\n- Cut taxes for working people\n- Ban Congress from trading stocks\n- Slash “out of pocket” health care costs\n- End immoral price gouging\n## Make More Stuff in America 🇺🇸\nFighting inflation and lowering costs starts with making more stuff in America and bringing jobs home. We need to bring back American manufacturing by strengthening “Buy American” requirements for companies that do business with the federal government and mandating that companies we buy from make their products right here at home. We also need to crack down on companies that falsely claim their products are made here and punish them for ripping off and misleading the American people.\nFor too long, out-of-touch politicians in Washington have sold out people on factory floors to benefit their friends in corporate boardrooms, passing bad trade deals that have sent thousands of good-paying jobs overseas. I’ll work to punish companies that ship jobs overseas and reverse the bad trade deals that have hurt American workers. And I’ll fight to bring more jobs back home to Pennsylvania.\nMaking more stuff here in America would mean prices wouldn’t spike every time there’s a problem overseas. We don’t need to be outsourcing any more jobs and production to China, and making inflation worse. There is no reason that the next generation of technology—from defense to clean energy to the microchips that power our cell phones—can’t be manufactured right here in the Commonwealth.\n## Cut Taxes for Working People 📉\nWe need to cut taxes for working families to even the odds and guarantee that the ultra-wealthy aren’t abusing our broken tax code. I support suspending the federal gas tax, to provide working people with immediate relief at the pump and help deal with rising costs. We also need to bring down taxes for working people across the board.\nTo replace the revenue, we will make sure Wall Street, hedge fund managers, and mega-millionaires pay their fair share by enacting a financial transaction tax on trades of stocks, bonds, and derivatives. The savings could then be used to cut taxes for working families and reinvest in the American people.\nI’ll fight for a tax code that ensures the wealthiest Americans and corporations like Amazon and don’t get away with scamming the system, and finally pay their fair share like the rest of us. We can and must build an economy that works for all of us.\n## Ban Congress from Trading Stocks 💰\nThis is just common sense. Lawmakers should not be profiting off special access to closed-door information about the companies they’re supposed to be regulating. Allowing members of Congress and their immediate families to trade stocks is a clear conflict of interest — and the Senate needs to be getting shit done for the people, not for their own portfolios.\nI’ll push to ban Members of Congress and their families from holding or trading stocks. Congress already has enough perks — insider trading shouldn’t be one of them.\n## Slash “Out of Pocket” Health Care Costs 🩺\nWe’ve got to end the stranglehold of health care costs on American families by instituting a cap on out-of-pocket costs. I’ll make sure no American has to pay more than a thousand dollars a year out of pocket for necessary medical expenses.\nWe don’t need any more simps for big pharma in the Senate — there are already plenty. I’ll fight to hold drug companies accountable for forcing families to ration insulin as they rake in record profits and rip Pennsylvanians off.\nIf we’re going to bring down the prices of prescription drugs, we need to go after the pharmaceutical companies that jack up the prices. We should also pass legislation to allow for the importation of lower-priced prescription drugs from other countries and put a cap on prescription drug costs.\n## End Immoral Price Gouging 🧾\nIt’s time we crack down on the big corporations who are making record profits while jacking up prices for all of us. We need to prosecute the executives of huge corporations, including the big oil companies and meatpacking companies who are artificially driving up prices, gouging consumers at the pump and at the grocery store.\nBig oil companies like Chevron, Exxon, and Shell have seen their profits increase 200% since last year, but they’re still charging us sky-high prices for gas. Companies like Tyson posted over a billion dollars in profits last quarter, while raising prices on meat products our families depend on.\nIt’s gross, and deeply unpatriotic, for the big corporations to be rolling around in cash while charging us record high prices for gas and groceries.\nInstead of raising costs at the pump or in the grocery store, these companies should be working to help drive prices down, even if it means their CEOs make a little bit less. It’s time to take on the big corporations and special interests, and bring down prices for the American people.\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108035244/https://johnfetterman.com/issue/building-a-humane-safe-and-secure-immigration-system/",
+     "original": "https://johnfetterman.com/issue/building-a-humane-safe-and-secure-immigration-system/",
+     "date": "2022-11-08",
+     "title": "Building a Humane, Safe, and Secure Immigration System - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## Building a Humane, Safe, and Secure Immigration System\nI fundamentally believe immigration is what makes America, America. This issue is personal to me. My wife, Gisele, was a Dreamer who came to America when she was 7, fleeing violence in Brazil with her family. I would not have my family if it weren’t for immigration.\nIt is no secret our immigration system is broken. We need a system that is strong, secure, and humane. In the Senate, I would support investments that go towards keeping our borders strong and preventing the flow of illegal drugs into our country. We also must work to ensure that our immigration system is humane. I support commonsense immigration reforms that will restore our country’s legacy as a nation built by immigrants. In the Senate, I will work to modernize our visa system and asylum programs so that they can’t be exploited by bad actors. I will also fight for a pathway to citizenship for frontline workers, small business owners, and young people who have only known this country as their home.\nWe have to reject the false choice pitting laws and strong borders against those coming to America to seek a better life for themselves and their families.\n## John on the Issues\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108035244/https://johnfetterman.com/issue/delivering-criminal-justice-reform/",
+     "original": "https://johnfetterman.com/issue/delivering-criminal-justice-reform/",
+     "date": "2022-11-08",
+     "title": "Delivering Criminal Justice Reform - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## Delivering Criminal Justice Reform\nOur criminal justice system is broken. I believe in the power of a second chance, and for years, I have advocated for reforms to our too often unforgiving and vindictive justice system. As Lieutenant Governor, I have fought hard for second chances for deserving Pennsylvanians and to free the wrongfully convicted through my work as Chair of the Board of Pardons.\nAs your senator, I will fight for a criminal legal system where everyone is equal in the eyes of the law. I will work to make sure that serious crimes receive serious punishment, while also alleviating the burdens placed on prosecutors and judges by focusing on effective diversion programs for nonviolent offenders and prioritizing sentencing reform.\n## John on the Issues\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108035245/https://johnfetterman.com/issue/fighting-inflation-lowering-costs/",
+     "original": "https://johnfetterman.com/issue/fighting-inflation-lowering-costs/",
+     "date": "2022-11-08",
+     "title": "Fighting Inflation + Lowering Costs - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## Fighting Inflation + Lowering Costs\nAcross Pennsylvania, people are getting squeezed. We’re paying more at the grocery store, more at the pump, and more almost everywhere else. Inflation is a tax on working people, and we must do more to stop it.\nFirst and foremost, we have to tackle the corporate greed that’s been contributing to the sky high prices. In the Senate, I will fight for a fair tax code that ensures the wealthiest Americans and corporations don’t get away with scamming the system, and finally pay their fair share. We can and must build an economy that works for all of us.\nTo bring down costs, we also need to make our supply chains more resilient and ensure that they start and end here at home – because supply chains get a lot less complicated when we make stuff here, not overseas. Making more stuff here in America would mean prices wouldn’t spike every time there’s a problem overseas. We don’t need to be outsourcing any more jobs and production to China, while exacerbating inflation.\nAnd when it comes to gas prices, we should suspend the federal gas tax to provide immediate relief for people at the pump. We should also continue to use American oil, produce and invest in more American energy, and invest in programs that help low-income Pennsylvanians pay their energy bills. And finally, it’s time we crack down on the big oil companies who are making record profits while jacking up prices for all of us. Instead of raising costs at the pump, these oil companies should be working to help drive prices down, even if it means their CEOs make a little bit less.\nThe bottom line is that we have to make more stuff in America and bring manufacturing and jobs back home — not just to America, but to right here in Pennsylvania.\n## John on the Issues\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108035244/https://johnfetterman.com/issue/guaranteeing-health-care/",
+     "original": "https://johnfetterman.com/issue/guaranteeing-health-care/",
+     "date": "2022-11-08",
+     "title": "Guaranteeing Health Care - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## Guaranteeing Health Care\nI believe that health care is a basic, fundamental human right, not a privilege. But health care in America is far too expensive and convoluted. In the richest nation on earth, I believe we have a moral duty to guarantee quality health care coverage for every American, and end the disgusting practice of corporations profiting from people’s health and well-being.\nIn the Senate, I will support any legislation that gets us closer to the goal of universal health care coverage. I’m less fixated on what you call it, and more focused on the result: ensuring access to health care for every American. I will also support efforts to lower the Medicare eligibility age to 60 while expanding its benefits to include vision, hearing, and dental care.\nUnder our current system, many people are forced to pay thousands of dollars for medicine that they need to survive. It’s inhumane and inexcusable. If we are going to bring down the prices of prescription drugs, we need to go after the pharmaceutical companies that jack up the prices. We have finally passed a law to allow Medicare to negotiate certain drug prices and cap annual prescription drug costs, but we cannot stop there–we must allow for the importation of lower priced prescription drugs from other countries and limit drug costs for all Americans.\n## John on the Issues\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108035244/https://johnfetterman.com/issue/investing-in-rural-communities/",
+     "original": "https://johnfetterman.com/issue/investing-in-rural-communities/",
+     "date": "2022-11-08",
+     "title": "Investing in Rural Communities - John Fetterman",
+     "text": "## Support John Fetterman for Senate\n## Investing in Rural Communities\nWhen I say “Every County, Every Vote,” I mean it. For too long, politicians in Washington have promised to fight for rural America but have repeatedly failed to deliver. A lot of talk, and little action. Small towns and rural communities are the heart and soul of this country – it’s time we invest in them. When I’m your senator, I’ll bring that commitment to everything I do.\nIn the Senate, I’ll fight for farmers’ rights to repair their own equipment and take on Big Ag so Pennsylvania’s small farmers can have a fair shot; this includes fighting for improved grant and loan opportunities for farmers of color. I’ll also make sure that long-promised investments in rural broadband and other critical infrastructure make their way to where they’re actually needed, because in this day and age, broadband internet access is almost as fundamental as electricity or running water. We can’t let red tape and bureaucracy get in the way of lifting up our communities that have been left behind.\n## John on the Issues\n## Join Our Campaign\n## Support John Fetterman for Senate"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.johnfetterman.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-30",
+    "url": "https://web.archive.org/web/20261030122603/https://www.johnfetterman.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261030122603/https://www.johnfetterman.com/",
+     "original": "https://www.johnfetterman.com/",
+     "date": "2026-10-30",
+     "title": "John Fetterman | Every County, Every Vote",
+     "text": "## Common Sense. Country over Party.\nReject the extremes.\n## Every County, Every Vote\nEvery donation helps John in uniting our neighbors and helping our communities succeed\n## A different kind of democrat\nJohn doesn’t look like a typical politician, and more importantly, he doesn’t act like one. He supported legalizing marijuana before it was popular, officiated a same-sex marriage before it was legal, and pushed for single payer healthcare long before it was mainstream. The issues John is running on now are the same issues he’s been working on for the last two decades.\n## every county, every vote\nEvery donation helps John in uniting our neighbors and helping our communities succeed\n## join our campaign\nWe’ve built a grassroots campaign that fought for every vote in every one of Pennsylvania’s 67 counties. Join us as we continue to build our team stronger.\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form."
+    },
+    {
+     "url": "https://web.archive.org/web/20261024223256/https://www.johnfetterman.com/where-john-stands",
+     "original": "https://www.johnfetterman.com/where-john-stands",
+     "date": "2026-10-24",
+     "title": "Where John Stands",
+     "text": "## Every County, Every Vote\nEvery donation helps John in uniting our neighbors and helping our communities succeed\n## VETERANS\n\"Non-negotiable. Full stop.\"\nThe country's commitment to veterans should never be a budget line item up for debate. Expanded VA healthcare, mental health resources, and making sure the men and women who served get everything they were promised.\n## IMMIGRATION\n\"The border is broken. Ignoring a problem isn't compassion — it's politics.\"\nComprehensive reform that secures the border while treating people with dignity. Both parties need to stop using the issue as a political football and start fixing the system, from asylum processing to workforce needs.\n## HEALTHCARE\n\"I nearly died. I know what it means to navigate the American healthcare system personally.\"\nAfter surviving a stroke and battling severe depression, the fight to lower prescription drug costs, protect coverage for pre-existing conditions, and expand mental health services is deeply personal, not political.\n## TRADE & MANUFACTURING\n\"Pennsylvania built this country. I'll protect American workers\"\nFighting for trade policies that protect Pennsylvania steel, manufacturing, and union jobs. Pushing back on deals that ship jobs overseas. Buy American. Build American.\n## DEMOCRACY\n\"I believe in elections, in counting every vote, and making it easier — not harder — to participate.\"\nDefending free and fair elections since long before it was a national conversation. Protecting voting rights, fighting gerrymandering, and ensuring every eligible American can cast their ballot without unnecessary barriers.\n## HOUSING\n\"The cost of housing is crushing working families. We need to build more and cut the red tape.\"\nIncreasing the supply of affordable housing, cutting bureaucratic barriers to new construction, and cracking down on corporate landlords driving up rents. Every Pennsylvanian deserves a roof over their head without going broke.\n## CRIME & SAFETY\n\"Communities need to be safe. Full stop.\"\nHaving served as mayor of Braddock, the reality of gun violence and crime isn't abstract, it's personal. That means supporting law enforcement and common-sense gun safety. Safe streets aren't a partisan issue.\n## GOOD JOBS. STRONG UNIONS.\nUnions built the American middle class, period. I stand proudly with union workers across Pennsylvania, fighting for fair wages, safe working conditions, and the right to organize without corporate interference.\n## every county, every vote\nEvery donation helps John in uniting our neighbors and helping our communities succeed\n## join our campaign\nWe’ve built a grassroots campaign that fought for every vote in every one of Pennsylvania’s 67 counties. Join us as we continue to build our team stronger.\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form."
+    }
+   ],
+   "unread": [
+    "the list of johnfetterman.com's saved pages"
+   ],
+   "posts": [
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/fetterman.senate.gov/post/3mwr3evyh722r",
+     "text": "Was an honor to meet these Pennsylvanians with the National Down Syndrome Congress today.\n\nFrom the IDEA Full Funding Act to the SSI Savings Penalty Elimination Act, making sure people with disabilities have the appropriate resources and benefits they need is a priority."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/fetterman.senate.gov/post/3myui2f7qds2e",
+     "text": "8 years ago, 11 innocent people at the Tree of Life synagogue here in Western PA were brutally murdered in a vile, antisemitic attack.\n\nToday and always, we remember Joyce, Richard, Rose, Jerry, Cecil, David, Bernice, Sylvan, Daniel, Melvin, and Irving."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/fetterman.senate.gov/post/3mzbfg7bvnc2p",
+     "text": "I’ve just heard the news about Senator Murphy.\n\nAs someone who survived a near-fatal stroke, I understand all too well how much this impacts your life.\n\nMy family is rooting for Chris and his family for a full and speedy recovery."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,117 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "paul",
+ "name": "Rand Paul",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.randpaul.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.randpaul.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107035630/https://randpaul.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107035630/https://randpaul.com/",
+     "original": "https://randpaul.com/",
+     "date": "2022-11-07",
+     "title": "Rand Paul For US Senate",
+     "text": "## KENTUCKY\nSince being elected to the U.S. Senate in 2010, I have had the honor of representing all Kentuckians while defending our constitutional liberties. I would be honored to have your support. - Rand Paul\n## Dr. Paul has a long-standing record of taking action to combat the debt and outrageous spending by the federal government that has led us into economic disaster.\nThe Democrat machine is targeting Rand day in and day out. Please consider a donation to the campaign to help support our efforts to defend the Constitution.\n## Meet Rand\nRand Paul never planned to be a politician. He saw the direction our country was headed under President Obama and decided to leave his successful ophthalmology practice and run for the Senate in 2010. Since then he has been a strident defender of individual liberties and a strong representative for all Kentuckians.\nRand Paul needs your help to keep Kentucky strong and well represented in the U.S. Senate. Sign up to learn about volunteer opportunities and events in your area.\n## How do you want to support Rand?\nYou can select more than one option *\n## #FireFauci\nIt’s time to say enough is enough and Fire Fauci.\n## MORE ISSUES\nThe Latest News From The Campaign\nIn the News"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107035813/https://randpaul.com/issues/",
+     "original": "https://randpaul.com/issues/",
+     "date": "2022-11-07",
+     "title": "Issues - Rand Paul For US Senate",
+     "text": "## Issues\nMy policies will defeat the Washington Machine and unleash the creative spirit of the American people. Rand Paul\n## America First\nIt's time to put our country first.\n## Second Amendment\nOur First Amendment is only as good as our Second Amendment.\n## Parents’ Rights & School Choice\nParents should not be forced into accepting radicalized curriculums, unnecessary vaccine requirements, or mask mandates.\n## Criminal Justice\nWe must focus on incarcerating violent offenders and protecting public safety, not filling our prisons with non-violent offenders.\n## Life\nI will fight to protect every unborn child.\n## #FireFauci\nIt’s time to say enough is enough and Fire Fauci.\n## Serving Kentuckians\nI will never stop working for our state, whether I’m treating an individual patient or I am fighting for our liberties in the Senate.\n## Fighting for the Bill of Rights\nOur liberties are under attack now more than ever.\n## Infrastructure\nOur nation deserves more than crumbling roads and aging bridges.\n## Spending & Debt\nAmerica has accumulated almost $30 TRILLION in debt, creating a fiscal crisis that must be taken seriously.\n## Term Limits\nIt is time to put an end to “career politicians.”\n## Taxes\nBurdensome taxes hurt small businesses and crush our economy.\n## Audit the Fed\nIt is by far time Congress passes legislation to hold the Federal Reserve accountable to the people’s representatives.\n## Foreign Policy & Defense\nI believe in Ronald Reagan’s “Peace through Strength.”"
+    },
+    {
+     "url": "https://web.archive.org/web/20221108050108/https://randpaul.com/issue/firefauci/",
+     "original": "https://randpaul.com/issue/firefauci/",
+     "date": "2022-11-08",
+     "title": "#FireFauci - Rand Paul For US Senate",
+     "text": "## #FireFauci\nDr. Anthony Fauci has abandoned science and embraced theatrics at the expense of our freedom. Thanks to public email records, we know for certain that Dr. Fauci has been ignoring good advice, and lying about everything from masks to the contagiousness of the virus. It’s time to say enough is enough and Fire Fauci."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215015/https://randpaul.com/issue/fighting-for-the-bill-of-rights/",
+     "original": "https://randpaul.com/issue/fighting-for-the-bill-of-rights/",
+     "date": "2022-11-04",
+     "title": "Fighting for the Bill of Rights - Rand Paul For US Senate",
+     "text": "## Fighting for the Bill of Rights\nWe need to become the party of the ENTIRE Bill of Rights. We must defend the entire Constitution with the same furor and the same passion that we defend the Second Amendment. Our liberties are under attack now more than ever. The federal government keeps expanding its power, and our fellow Americans seem increasingly comfortable with trading their liberty for security.\nI will defend all of the liberties that we are guaranteed by our nation’s Constitution: our right to free speech, our right to bear arms, and every other enumerated protection that we have been given to protect us from an overreaching federal government."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215017/https://randpaul.com/issue/foreign-policy-and-defense/",
+     "original": "https://randpaul.com/issue/foreign-policy-and-defense/",
+     "date": "2022-11-04",
+     "title": "Foreign Policy & Defense - Rand Paul For US Senate",
+     "text": "## Foreign Policy & Defense\nI believe in Ronald Reagan’s “Peace through Strength.”\nAmerica must protect our interests and our citizens. The decision to enter war should not be taken lightly and must be done only as the Constitution requires: with a formal declaration from Congress.\nOver the last few decades, America has wasted millions of dollars and thousands of lives on unchecked, unilateral, never-ending “democracy building” overseas.\nWe must restore Congressional oversight by ending the dangerous AUMF policy that allows our government to commit American lives and money without approval, so we can increase transparency, protect our troops, and prevent unnecessary war."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215015/https://randpaul.com/issue/america-first/",
+     "original": "https://randpaul.com/issue/america-first/",
+     "date": "2022-11-04",
+     "title": "America First - Rand Paul For US Senate",
+     "text": "## America First\nWe spend billions and billions of dollars sending money to countries that hate us. Why should the American taxpayer be on the hook for other countries?\nOur taxpayer dollars have gone to fund a cricket team in Pakistan, fund home mortgages in Nigeria, and help people learn Facebook in Kenya.\nInstead of sending our money abroad, we should be focusing on what’s happening here at home.\nSimply put, it’s time to put our country first."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215015/https://randpaul.com/issue/second-amendment/",
+     "original": "https://randpaul.com/issue/second-amendment/",
+     "date": "2022-11-04",
+     "title": "Second Amendment - Rand Paul For US Senate",
+     "text": "## Second Amendment\nI believe that our entire Bill of Rights is at risk if we allow our Second Amendment to become a watered-down, second-tier “right.” Our First Amendment is only as good as our second amendment. That’s why I will never back down when it comes to defending our right to bear arms. I will not give an inch. I will protect our right to defend ourselves and preserve our 2nd Amendment rights to the fullest extent."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215015/https://randpaul.com/issue/parents-rights-school-choice/",
+     "original": "https://randpaul.com/issue/parents-rights-school-choice/",
+     "date": "2022-11-04",
+     "title": "Parents' Rights & School Choice - Rand Paul For US Senate",
+     "text": "## Parents’ Rights & School Choice\nI will always work to empower parents to have the most input over their own children’s health and education choices. The state doesn’t own your children. Parents are responsible for their own children. Parents should not be forced into accepting radicalized curriculums, unnecessary vaccine requirements, or mask mandates.\nI’ve introduced the Support Children Having Open Opportunities for Learning (SCHOOL) Act to provide parents and students with much-needed flexibility and options regarding K-12 education. It’s imperative that we empower parents to make the decision that’s best for their child’s education — without being restricted by the political games our governors and teachers’ unions have been playing with our children’s lives and well-being."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215015/https://randpaul.com/issue/criminal-justice/",
+     "original": "https://randpaul.com/issue/criminal-justice/",
+     "date": "2022-11-04",
+     "title": "Criminal Justice - Rand Paul For US Senate",
+     "text": "## Criminal Justice\nI believe that our criminal justice system is broken, and in need of major changes. We must focus on incarcerating violent offenders and protecting public safety, not filling our prisons with non-violent offenders. My REDEEM Act (Record Expungement Designed to Enhance Employment) will give Americans convicted of non-violent crimes a second chance at the American Dream. This legislation will help prevent kids who get into trouble from slipping into a lifetime of crime and help adults who commit non-violent crimes become more self-reliant and less likely to commit future crimes. These steps would reduce the cost to taxpayers of our criminal justice system and increase public safety."
+    }
+   ],
+   "unread": [
+    "the list of randpaul.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.randpaul.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103230704/https://randpaul.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103230704/https://randpaul.com/",
+     "original": "https://randpaul.com/",
+     "date": "2026-11-03",
+     "title": "Rand Paul For US Senate",
+     "text": "## Freedom &\nRand Paul believes your freedoms aren't granted by government. They're yours by birthright. He has fought tirelessly against government overreach, endless wars, and out-of-control spending that burdens future generations.\n\" * \" indicates required fields\n## I'm In!\nThe uniparty is working overtime to silence Rand. Every dollar you give goes directly to defending your constitutional rights and fighting back against the Washington establishment.\n## Meet Rand\nElected to the U.S. Senate in 2010, Rand Paul has been an outspoken champion for constitutional liberties, fiscal responsibility, and limited government. As one of the Senate’s most consistent voices against government overreach, Rand has fought to hold Washington accountable, pushing to audit the Federal Reserve, protect civil liberties, and rein in reckless federal spending. He didn’t come to Washington to go along to get along. He came to make a difference.\n## Insert/edit link\nEnter the destination URL\nOr link to existing content\nNo search term specified. Showing recent items."
+    }
+   ],
+   "unread": [
+    "the list of randpaul.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

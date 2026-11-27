@@ -1,0 +1,559 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "bluntrochester",
+ "name": "Lisa Blunt Rochester",
+ "built": "2026-11-26",
+ "sites": [
+  "https://lisabluntrochester.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://lisabluntrochester.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108002100/https://lisabluntrochester.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108002100/https://lisabluntrochester.com/",
+     "original": "https://lisabluntrochester.com/",
+     "date": "2022-11-08",
+     "title": "Lisa Blunt Democrat for Congress |",
+     "text": "## A Strong Voice for Delaware\n## About Lisa\nLisa’s historic election in 2016 marks the first time the First State has sent a woman and person of color to Congress.\nLisa brings to Congress a fresh, common-sense approach and believes that we can find common ground to help people improve their lives and communities.\nShe began her professional career as a problem-solver and an advocate. A caseworker for then-Congressman Tom Carper, Lisa helped people during challenging times with their Social Security benefits, disability insurance claims, IRS disputes and housing needs. She served in the cabinets of two Delaware governors as Delaware’s first African-American woman Secretary of Labor, and as Delaware’s first African-American Deputy Secretary of Health and Social Services and State Personnel Director. As Secretary of Labor, Lisa managed 500 employees and an $87 million budget; she focused on connecting employers to resources and jobseekers – particularly those on welfare or leaving Delaware prisons. As State Personnel Director, Lisa was commissioned to investigate the Delaware State Police for racial and sexual discrimination. Working with local and national experts in policing and civil rights, the 2001 Blunt-Bradley Report served as a roadmap to improve the internal and external relations of the State Police.\n## Twitter\nOn the last day of early voting, I was glad to be in the Fifth Senate District to support Sen. @KyleEvansGay!\n1 day ago Follow ›\nIt was so great to be with @CedricRichmond and my fellow @DelDems as we rallied to get out the… https://t.co/C5TrXgyxaH\n1 day ago Follow ›\nI have so many fond memories of knocking doors in Wilmington with my dad, Ted Blunt. It was great to canvass togeth… https://t.co/FBrcUDfXge\n2 days ago Follow ›\nSmall businesses are the backbone of our community. I am always happy to support these great ones on Market Street… https://t.co/QDVn6Mofrm\n2 days ago Follow ›\n## Join our movement\nClick an option below to get started. If you’ve saved your payment information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20220919021947/https://lisabluntrochester.com/issues/campaign-finance-reform-and-expanding-voting-rights",
+     "original": "https://lisabluntrochester.com/issues/campaign-finance-reform-and-expanding-voting-rights",
+     "date": "2022-09-19",
+     "title": "Campaign Finance Reform and Expanding Voting Rights | Lisa Blunt Democrat for Congress",
+     "text": "## Campaign Finance Reform and Expanding Voting Rights\n“One person, one vote is the cornerstone of our country’s political system. I will stand strong in my commitment to defend that principal so our leaders in Washington are only concerned with the will of the people.” - Lisa Blunt Rochester\nOver the last few decades there has been a shift in our politics to where money became more important than the will of the people. We reached a tipping point with the Citizens United decision in which the Supreme Court tore down the floodgates and let unlimited, unregulated money into our system. Not only did this allow for the outsized influence of corporations and Billionaires, but it has deeply eroded the already tenuous trust our communities have in their representatives.\nThe Citizens United decision was an incredible mistake that works to prevent everyday Americans from having a say in the political process. If I’m elected, one of my top priorities will be to reform our campaign finance system, and we need to start by passing legislation that will overturn the Citizens United decision, even if that means amending the Constitution.\nOnly when we get money truly out of our political system can we start to make sure that our elected officials are beholden only to the needs of our communities, not the checkbooks of special interests.\nThe next step after ending Citizens United is to open up the voting process and make sure our government is truly representative of our state and our nation. We need to renew our commitment to voting rights and institute Same Day Voter Registration so everyone’s voice can be heard. And we need to address the issue of gerrymandering - where congressional lines are sliced up to serve personal political interests, not to best represent our people. We need an impartial redistricting process in order to create districts that are contiguous and properly represent their constituents. In Congress, I will introduce legislation to bring this process out of the smoke-filled back rooms and into the light.\nIn Congress, Lisa will be a champion for getting money out of politics and reforming our broken system by:\n- Working to pass a constitutional amendment declaring corporations aren’t people and overturning Citizens United.\n- Pushing for national Same Day Voter Registration laws.\n- Introducing legislation to take drawing congressional districts out of the hands of politicians.\n## Twitter\n🎶 Who run the world? Girls! 💪🏽\nI had great time yesterday at the @nc100bwinc - Delaware Chapter’s Black Girls Move… https://t.co/huikWHLZM0\n6 hours ago Follow ›\nToday is Primary Day here in Delaware! The polls are open until 8:00 PM, so be sure to make your voice heard. 🗳 https://t.co/5lSGLtHKmo\n5 days ago Follow ›\nIt’s time for #TeamLBR yard signs!🪧\nCome by @DelDems HQ this Saturday from 11am to 12pm for a meet and greet and t… https://t.co/RzzNLIi8XW\n📢 Primary Election Day is less than a week away in Delaware! 📢\nI was excited to vote early today in Wilmington and… https://t.co/65aVJWXWtz\n10 days ago Follow ›\n## Show Your Support"
+    },
+    {
+     "url": "https://web.archive.org/web/20220919015539/https://lisabluntrochester.com/issues/equal-pay-equal-work",
+     "original": "https://lisabluntrochester.com/issues/equal-pay-equal-work",
+     "date": "2022-09-19",
+     "title": "Equal Pay for Equal Work | Lisa Blunt Democrat for Congress",
+     "text": "## Equal Pay for Equal Work\n“I will stand up to the politicians in Washington who oppose efforts to guarantee equal pay for equal work. This is about fairness and it is about strengthening our families” – Lisa Blunt Rochester\nWomen in Delaware make on average 81% of the wages earned by their male counterparts and that rate is even less for Latino and African American women. That means that women in Delaware earn potentially hundreds of thousands of dollars less than men over the course of their careers. This doesn’t just hurt women, but it hurts their families who count on them and hurts our economy across the board.\nLeaders in Washington need to get serious to fix this problem. There has been a lot of talk, but almost no action from Congress, and in the meantime our families in Delaware are falling further and further behind. More women than ever before are the breadwinners in their families, and most Delaware households rely on two incomes. We have to take action now.\nIn Congress, Lisa will be a champion for Equal Pay by:\n- Pushing for an online database that would make information about wages by job category public, so everyone can see if they are getting proper compensation for their type of work.\n- Working to finally pass the Paycheck Fairness Act so that employers couldn’t retaliate against employees who want to share information about how much they’re paid.\n- Fighting to provide accessible, high quality early learning options for working families.\n## Twitter\n🎶 Who run the world? Girls! 💪🏽\nI had great time yesterday at the @nc100bwinc - Delaware Chapter’s Black Girls Move… https://t.co/huikWHLZM0\n5 hours ago Follow ›\nToday is Primary Day here in Delaware! The polls are open until 8:00 PM, so be sure to make your voice heard. 🗳 https://t.co/5lSGLtHKmo\n5 days ago Follow ›\nIt’s time for #TeamLBR yard signs!🪧\nCome by @DelDems HQ this Saturday from 11am to 12pm for a meet and greet and t… https://t.co/RzzNLIi8XW\n📢 Primary Election Day is less than a week away in Delaware! 📢\nI was excited to vote early today in Wilmington and… https://t.co/65aVJWXWtz\n10 days ago Follow ›\n## Show Your Support"
+    },
+    {
+     "url": "https://web.archive.org/web/20210111195241/https://lisabluntrochester.com/issues/social-securitymedicare",
+     "original": "https://lisabluntrochester.com/issues/social-securitymedicare",
+     "date": "2021-01-11",
+     "title": "Social Security/Medicare | Lisa Blunt Democrat for Congress",
+     "text": "## Social Security/Medicare\n“We have made a commitment to the generations before us to protect them and care for them as they’ve cared for us. Any politician who wants to turn our seniors’ wellbeing over to Wall Street will have to go through me first.” - Lisa Blunt Rochester\nBefore Social Security and Medicare, the single biggest cause of poverty in this country was getting old. We saw this problem, came together as a country, and created two of the most successful public programs of all time.\nMost Republicans in Washington want to gamble with our seniors’ wellbeing by privatizing Social Security and cutting Medicare, I’m running for Congress to ensure that doesn’t happen.\nIn Congress, Lisa will be a champion for our seniors by:\n- Fighting any attempt to privatize Social Security and Medicare\n- Allow Medicare to negotiate for lower prescription drug prices\n- Opposing reductions in cost of living adjustments\n- Fighting to keep the retirement age at 67\n- Supporting policies that asked wealthier Americans to contribute more to the solvency of Social Security by increasing the current qualified income cap\n## Twitter\nRT @JoeBiden: Go vote, Georgia!\nWhile this inauguration will look different, there are going to be plenty of exciting and innovative ways for the A… https://t.co/IeJkT8rHZX\n26 days ago Follow ›\nProud doesn't even begin the capture it. My sister, Marla Blunt-Carter is my hero. Her bravery and resilience are unrivaled. And today, one year after suffering a stroke, I watched her pick up a pen, sign her name, and cast Delaware's vote for Joe Biden & Kamala Harris.\n28 days ago Follow ›\nProud doesn’t even begin the capture it. My sister, @Marlabc11 is my hero. Her bravery and resilience are unrivaled… https://t.co/DPToOxLnr7\n28 days ago Follow ›\n## Show Your Support"
+    },
+    {
+     "url": "https://web.archive.org/web/20210927030149/https://lisabluntrochester.com/issues/womens-health",
+     "original": "https://lisabluntrochester.com/issues/womens-health",
+     "date": "2021-09-27",
+     "title": "Women's Health | Lisa Blunt Democrat for Congress",
+     "text": "## Women's Health\n“As a young woman I relied on Planned Parenthood for my health needs. I know I am not alone. We cannot afford to let politicians in Washington try and drag us back to the last century.” – Lisa Blunt Rochester\nWomen’s health care is under a relentless attack across the country. Republicans in Washington have voted over and over again to defund Planned Parenthood’s work providing cancer screening and health services to women in need. They have voted against a woman’s right to choose and even refused to protect the medical records of victims of rape and incest from government invasion.\nWe must put an end to these out-of-date attacks and start focusing on how to improve the lives and health of people in our communities.\nDelaware is one of only 3 states to have never sent a woman to Congress. We're the First State... we shouldn't be the last one to elect a woman.\nIn Congress, Lisa will be a champion for women’s health by:\n- Standing up to the Republicans in Congress trying to defund Planned Parenthood\n- Working to make it easier for low-income women to get cancer screenings and mammograms\n- Fighting against regressive legislation that tries to put the government between a woman and her doctor\n## Twitter\n3 days ago Follow ›\nRT @PramilaJayapal: So thrilled that my friend @ewarren is the keynote speaker for our virtual Build Our America event this year!\n4 days ago Follow ›\nI was so pleased to join @SWEambUSA, @FinlandinUSA, and @MikePurzycki at the Copeland Maritime Center on the Wilmin… https://t.co/gHbGCiVXBK\n8 days ago Follow ›\nI was glad to be in Wilmington this morning for the 35th AIDS Walk with @SarahEMcBride, @MattMeyerDE, and @AIDSDE.… https://t.co/R7ucoWuzmV\n8 days ago Follow ›\n## Show Your Support"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://lisabluntrochester.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-04",
+    "url": "https://web.archive.org/web/20241104105953/https://lisabluntrochester.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241104105953/https://lisabluntrochester.com/",
+     "original": "https://lisabluntrochester.com/",
+     "date": "2024-11-04",
+     "title": "Lisa Blunt Rochester for U.S. Senate",
+     "text": "## A Bright Hope\nfor Our Future\nBy submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## A Bright Hope\nfor Our Future\nBy submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Lisa Blunt Rochester is running to bring Bright Hope to the U.S. Senate – and to America.\nLisa’s story starts with Bright Hope. She knows that when Delawareans have access to great jobs and health care, to clean air and water, and when people’s right to vote and control their own bodies is protected, there is less fear in the world. And there is more Bright Hope.\n## Together, we can\nprotect what matters\nmost to Delaware\nThrough our darkest times, it’s Bright Hope – optimism, resilience, belief – that has kept us striving toward a more perfect union. Together, we can protect what matters most.\n## The Latest Updates\nAfter last night's GOTV rally, I am filled with Bright Hope for Delaware's future✨\nWorking together with @M...\n3 hours ago\nGot my sticker earlier today, and I hope you’ll grab yours too 🗳️\nToday was the last day of Early Voti...\n6 hours ago\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101213206/https://lisabluntrochester.com/issues/",
+     "original": "https://lisabluntrochester.com/issues/",
+     "date": "2024-11-01",
+     "title": "Issues - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101225034/https://lisabluntrochester.com/issue/agriculture/",
+     "original": "https://lisabluntrochester.com/issue/agriculture/",
+     "date": "2024-11-01",
+     "title": "Agriculture - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Agriculture\nLisa was the first person from Delaware in over 120 years to sit on the Agriculture Committee in Congress. Serving on this committee was intentional for Lisa — Delaware represents many different parts of agriculture from cutting-edge medical research to multigenerational family farmers who put food on our tables.\nAs a member of this historically bipartisan committee, Lisa made it a priority to hear from farmers and farmworkers about their experiences. Lisa worked across the aisle to create financial safety nets for American farms and farmers who are all too often left behind.\nFarmers and farmworkers work day in, day out to feed our families, and Lisa will always fight for quality nutrition for families across our state. In Congress, Lisa worked to expand access to fresh produce for low-income individuals.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101225847/https://lisabluntrochester.com/issue/bipartisanship-and-working-together/",
+     "original": "https://lisabluntrochester.com/issue/bipartisanship-and-working-together/",
+     "date": "2024-11-01",
+     "title": "Bipartisanship and Working Together - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Bipartisanship and Working Together\nIn Congress, Lisa’s focus has been reaching across the aisle to work with anyone, regardless of party, to get things done for all Delawareans. There’s no denying we live in polarized times, but Lisa always finds solutions to bring people together.\nLisa is better at working with both parties than 93% of people in Congress. She was awarded the Legislative Action Award by the Bipartisan Policy Center for her focus on working with both parties. She is a proven leader who has shown that she is willing to work with Democrats and Republicans to get results for her constituents.\nLisa authored key pieces of bipartisan legislation, including bringing widespread high-speed internet to Delaware and other parts of the United States. Her bipartisan efforts have led to rebuilding America’s roads, bridges, and rails, bringing clean drinking water to under-resourced communities, and taking climate action. She has also worked with members of both parties to support small businesses, create new jobs, relieve our supply chains, and keep our communities safe.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101231535/https://lisabluntrochester.com/issue/climate/",
+     "original": "https://lisabluntrochester.com/issue/climate/",
+     "date": "2024-11-01",
+     "title": "Climate - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Climate\nDelaware has the lowest mean elevation in the entire country, meaning many Delaware businesses and residents are already experiencing the effects of sea level rise. Lisa understands the urgency of the climate crisis we face and believes that everyone deserves access to clean air and water.\nLisa believes that protecting our environment can lead to economic growth and opportunity. She supports investments in renewable energy, green job creation and training, and promoting clean air and water protections.\nIn Congress, Lisa has led efforts to bring clean air and water to Delaware and efforts to protect our coastal communities.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101232308/https://lisabluntrochester.com/issue/democracy-voting-rights/",
+     "original": "https://lisabluntrochester.com/issue/democracy-voting-rights/",
+     "date": "2024-11-01",
+     "title": "Democracy & Voting Rights - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Democracy & Voting Rights\nOn Jan. 6, Lisa was trapped in the balcony overlooking the House floor when insurrectionists attacked our Capitol. She saw firsthand how fragile our democracy is and how close we were to losing it.\nLisa believes there are vital steps we must take to protect our democracy, including ending partisan gerrymandering, stopping the influence of money in our politics, and enshrining federal voting rights protections.\nAttacks on our access to the ballot box also hit close to home — in early 2024, the Delaware Superior Court ruled to remove access to early voting and permanent absentee ballots for Delaware voters. Lisa will continue to sound the alarm on right-wing extremist attacks on our voting rights.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241104112712/https://lisabluntrochester.com/issue/economy/",
+     "original": "https://lisabluntrochester.com/issue/economy/",
+     "date": "2024-11-04",
+     "title": "Economy - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Economy\nBefore she decided to run for Congress, Lisa was in a grocery store in Wilmington when she overheard a dad in the checkout line tell his daughter to put the grapes back because they couldn’t afford them. That moment snapped her into action and she decided to run for Congress so no family has to sacrifice basic necessities.\nAt a time when working families, seniors, and individuals struggle to put food on the table, pay their bills, and stretch their pocketbooks at the gas pump, the wealthy and corporations get richer. This is a status quo Lisa won’t stand for.\nIn Congress, Lisa is a leader in building a stronger economy that works for everyone. From her time as Labor Secretary in Delaware for Governor Carper, she has laid the foundation that has led to job growth, fair wages, and opportunities for all Americans to succeed.\nAs a staunch advocate for economic opportunity and job creation, Lisa has championed policies that created good-paying jobs for Delaware, supported Delaware businesses, invested in infrastructure, and promoted workforce development and training programs.\nLisa believes in building an economy that works for everyone, focused on building the middle class from the bottom up and the middle out. Lisa founded the Bipartisan Future of Work Caucus in Congress, which focuses on promoting policies that prepare our workforce for the jobs of the future.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101235051/https://lisabluntrochester.com/issue/veterans/",
+     "original": "https://lisabluntrochester.com/issue/veterans/",
+     "date": "2024-11-01",
+     "title": "Veterans - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Veterans\nNearly 80,000 veterans — almost 10 percent of the state’s population — call Delaware home after valiantly serving our nation. They are not only honorable members of our community but also vital contributors to our economy.\nLisa believes we have an obligation to support the brave men and women who sacrificed for our country and their families. She will continue to fight to protect the Veterans’ Administration from efforts to privatize it, expand workforce and educational opportunities for veterans, and support access to physical and mental health care.\nIn Congress, Lisa helped pass significant legislation to improve health care for veterans exposed to toxic substances and burn pits. She also took part in a historic effort to honor the Tuskegee Airmen, the first Black military pilots who fought in World War II.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241102035418/https://lisabluntrochester.com/a-focus-on-the-future-lisa-blunt-rochester-talks-comprehensive-ag-plan-supporting-de-farmers/",
+     "original": "https://lisabluntrochester.com/a-focus-on-the-future-lisa-blunt-rochester-talks-comprehensive-ag-plan-supporting-de-farmers/",
+     "date": "2024-11-02",
+     "title": "“A Focus on the Future”: Lisa Blunt Rochester Talks Comprehensive Ag. Plan, Supporting DE Farmers - Lisa Blunt Rochester for U.S. Senate",
+     "text": "October 4, 2024\n## “A Focus on the Future”: Lisa Blunt Rochester Talks Comprehensive Ag. Plan, Supporting DE Farmers\nWilmington, Del. — Yesterday, Lisa Blunt Rochester sat down with WMDT to speak about her comprehensive agriculture plan, shaped by insights gathered during her Delivering for Delaware statewide tour. The plan directly addresses the challenges facing the agriculture industry and the needs of rural communities, while building on the Congresswoman’s work tackling concerns like lowering grocery prices and supply chain resilience.\nRead the full coverage here or watch the segment here.\n- Rep. Blunt Rochester tells WMDT that the ideas for the plan came from Delawareans. She heard from them as she traveled on her Delivering For Delaware tour.\n- One in four Delawareans live in rural areas. Rep. Blunt Rochester says coming up with creative solutions to tackle the challenges that many of them face is crucial.\n- Rep. Blunt Rochester says supporting farmers off of the fields is equally as important. The Congresswoman’s agriculture plan urges more resources for housing, health care, lower utility costs, increasing education, and delivering the latest in technology to rural communities.\n- “Making sure that we’re paying attention to what we’ve done but also what we can do, that’s what this plan is all about,’ Rep. Blunt Rochester said. ‘As we look towards the future, and look towards the present, we’ve got to make sure that we’re using all of the tools at our disposal.’”\n- All of these efforts, Rep. Blunt Rochester says, inform the way that Delaware will support its next generation of farmers. And extending that attention to the younger generations is key in that work, she says.\n- The Congresswoman points to farm-to-table programs, and innovative projects like vertical farming in First State schools, primary to higher education. Rep. Blunt Rochester is also touting her success in securing Congressional community project funding to bring the Delaware State Fair’s 4H and Future Farmers of America facility up to speed.”\n- Looking ahead, Rep. Blunt Rochester says collaborating with other lawmakers on Capitol Hill is going to be vital to pushing these efforts forward. The Congresswoman is the first person from the state of Delaware to serve on the House Agriculture Committee in 120 years.\n- Rep. Blunt Rochester says she’s seen first-hand how agriculture touches so many lives. The Congresswoman recounts an incident in line at the grocery store in which she noticed a father with three children replacing a bag of grapes that rang up at $9. “It shook me to my core, and it made me realize that I can do something,” Rep. Blunt Rochester said. “Every single one of us is impacted by agriculture in this country and in this state, and [it relates to] the focus on keeping the costs of goods down so people can afford them.”\nThe agriculture plan lays out how, in the Senate, Blunt Rochester will build on her track record of bipartisan achievement and her leadership as the first Delawarean in over 120 years to serve on the House Agriculture Committee to create good-paying jobs and ensure the agricultural industry remains competitive in a changing world.\nThis plan also builds on her Senate campaign’s “ambitious” plan to grow the middle class, released earlier this summer, by tackling prices at the grocery store, creating jobs, and shoring up our supply chains.\n## Lisa Blunt Rochester is running to make a difference –\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://lisabluntrochester.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-29",
+    "url": "https://web.archive.org/web/20261029110746/https://lisabluntrochester.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261029110746/https://lisabluntrochester.com/",
+     "original": "https://lisabluntrochester.com/",
+     "date": "2026-10-29",
+     "title": "Lisa Blunt Rochester for U.S. Senate",
+     "text": "## A Bright Hope\nfor Our Future\nBy submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## A Bright Hope\nfor Our Future\nBy submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## Lisa Blunt Rochester is running to bring Bright Hope to the U.S. Senate – and to America.\nLisa’s story starts with Bright Hope. She knows that when Delawareans have access to great jobs and health care, to clean air and water, and when people’s right to vote and control their own bodies is protected, there is less fear in the world. And there is more Bright Hope.\n## Together, we can\nprotect what matters\nmost to Delaware\nThrough our darkest times, it’s Bright Hope – optimism, resilience, belief – that has kept us striving toward a more perfect union. Together, we can protect what matters most.\n## The Latest Updates\nWe are one week from an election that will define our future.\nI’ve so enjoyed hitting the trail with incred...\n2 days ago\nOhio knows how to show up! Great weekend with my friends @SherrodBrown @ShontelMBrown @EmiliaSykesOH and volu...\n2 weeks ago\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20260812170243/https://lisabluntrochester.com/issues/",
+     "original": "https://lisabluntrochester.com/issues/",
+     "date": "2026-08-12",
+     "title": "Issues - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately.\nIssues - Lisa Blunt Rochester for U.S. Senate"
+    },
+    {
+     "url": "https://web.archive.org/web/20260812170545/https://lisabluntrochester.com/issue/agriculture/",
+     "original": "https://lisabluntrochester.com/issue/agriculture/",
+     "date": "2026-08-12",
+     "title": "Agriculture - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Agriculture\nLisa was the first person from Delaware in over 120 years to sit on the Agriculture Committee in Congress. Serving on this committee was intentional for Lisa — Delaware represents many different parts of agriculture from cutting-edge medical research to multigenerational family farmers who put food on our tables.\nAs a member of this historically bipartisan committee, Lisa made it a priority to hear from farmers and farmworkers about their experiences. Lisa worked across the aisle to create financial safety nets for American farms and farmers who are all too often left behind.\nFarmers and farmworkers work day in, day out to feed our families, and Lisa will always fight for quality nutrition for families across our state. In Congress, Lisa worked to expand access to fresh produce for low-income individuals.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20260712144258/https://lisabluntrochester.com/issue/bipartisanship-and-working-together/",
+     "original": "https://lisabluntrochester.com/issue/bipartisanship-and-working-together/",
+     "date": "2026-07-12",
+     "title": "Bipartisanship and Working Together - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Bipartisanship and Working Together\nIn Congress, Lisa’s focus has been reaching across the aisle to work with anyone, regardless of party, to get things done for all Delawareans. There’s no denying we live in polarized times, but Lisa always finds solutions to bring people together.\nLisa is better at working with both parties than 93% of people in Congress. She was awarded the Legislative Action Award by the Bipartisan Policy Center for her focus on working with both parties. She is a proven leader who has shown that she is willing to work with Democrats and Republicans to get results for her constituents.\nLisa authored key pieces of bipartisan legislation, including bringing widespread high-speed internet to Delaware and other parts of the United States. Her bipartisan efforts have led to rebuilding America’s roads, bridges, and rails, bringing clean drinking water to under-resourced communities, and taking climate action. She has also worked with members of both parties to support small businesses, create new jobs, relieve our supply chains, and keep our communities safe.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20260712154921/https://lisabluntrochester.com/issue/climate/",
+     "original": "https://lisabluntrochester.com/issue/climate/",
+     "date": "2026-07-12",
+     "title": "Climate - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Climate\nDelaware has the lowest mean elevation in the entire country, meaning many Delaware businesses and residents are already experiencing the effects of sea level rise. Lisa understands the urgency of the climate crisis we face and believes that everyone deserves access to clean air and water.\nLisa believes that protecting our environment can lead to economic growth and opportunity. She supports investments in renewable energy, green job creation and training, and promoting clean air and water protections.\nIn Congress, Lisa has led efforts to bring clean air and water to Delaware and efforts to protect our coastal communities.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20260712151923/https://lisabluntrochester.com/issue/democracy-voting-rights/",
+     "original": "https://lisabluntrochester.com/issue/democracy-voting-rights/",
+     "date": "2026-07-12",
+     "title": "Democracy & Voting Rights - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Democracy & Voting Rights\nOn Jan. 6, Lisa was trapped in the balcony overlooking the House floor when insurrectionists attacked our Capitol. She saw firsthand how fragile our democracy is and how close we were to losing it.\nLisa believes there are vital steps we must take to protect our democracy, including ending partisan gerrymandering, stopping the influence of money in our politics, and enshrining federal voting rights protections.\nAttacks on our access to the ballot box also hit close to home — in early 2024, the Delaware Superior Court ruled to remove access to early voting and permanent absentee ballots for Delaware voters. Lisa will continue to sound the alarm on right-wing extremist attacks on our voting rights.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20260712151609/https://lisabluntrochester.com/issue/economy/",
+     "original": "https://lisabluntrochester.com/issue/economy/",
+     "date": "2026-07-12",
+     "title": "Economy - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Economy\nBefore she decided to run for Congress, Lisa was in a grocery store in Wilmington when she overheard a dad in the checkout line tell his daughter to put the grapes back because they couldn’t afford them. That moment snapped her into action and she decided to run for Congress so no family has to sacrifice basic necessities.\nAt a time when working families, seniors, and individuals struggle to put food on the table, pay their bills, and stretch their pocketbooks at the gas pump, the wealthy and corporations get richer. This is a status quo Lisa won’t stand for.\nIn Congress, Lisa is a leader in building a stronger economy that works for everyone. From her time as Labor Secretary in Delaware for Governor Carper, she has laid the foundation that has led to job growth, fair wages, and opportunities for all Americans to succeed.\nAs a staunch advocate for economic opportunity and job creation, Lisa has championed policies that created good-paying jobs for Delaware, supported Delaware businesses, invested in infrastructure, and promoted workforce development and training programs.\nLisa believes in building an economy that works for everyone, focused on building the middle class from the bottom up and the middle out. Lisa founded the Bipartisan Future of Work Caucus in Congress, which focuses on promoting policies that prepare our workforce for the jobs of the future.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20260616144529/https://lisabluntrochester.com/issue/veterans/",
+     "original": "https://lisabluntrochester.com/issue/veterans/",
+     "date": "2026-06-16",
+     "title": "Veterans - Lisa Blunt Rochester for U.S. Senate",
+     "text": "## Veterans\nNearly 80,000 veterans — almost 10 percent of the state’s population — call Delaware home after valiantly serving our nation. They are not only honorable members of our community but also vital contributors to our economy.\nLisa believes we have an obligation to support the brave men and women who sacrificed for our country and their families. She will continue to fight to protect the Veterans’ Administration from efforts to privatize it, expand workforce and educational opportunities for veterans, and support access to physical and mental health care.\nIn Congress, Lisa helped pass significant legislation to improve health care for veterans exposed to toxic substances and burn pits. She also took part in a historic effort to honor the Tuskegee Airmen, the first Black military pilots who fought in World War II.\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20250103192153/https://lisabluntrochester.com/a-focus-on-the-future-lisa-blunt-rochester-talks-comprehensive-ag-plan-supporting-de-farmers/",
+     "original": "https://lisabluntrochester.com/a-focus-on-the-future-lisa-blunt-rochester-talks-comprehensive-ag-plan-supporting-de-farmers/",
+     "date": "2025-01-03",
+     "title": "“A Focus on the Future”: Lisa Blunt Rochester Talks Comprehensive Ag. Plan, Supporting DE Farmers - Lisa Blunt Rochester for U.S. Senate",
+     "text": "October 4, 2024\n## “A Focus on the Future”: Lisa Blunt Rochester Talks Comprehensive Ag. Plan, Supporting DE Farmers\nWilmington, Del. — Yesterday, Lisa Blunt Rochester sat down with WMDT to speak about her comprehensive agriculture plan, shaped by insights gathered during her Delivering for Delaware statewide tour. The plan directly addresses the challenges facing the agriculture industry and the needs of rural communities, while building on the Congresswoman’s work tackling concerns like lowering grocery prices and supply chain resilience.\nRead the full coverage here or watch the segment here.\n- Rep. Blunt Rochester tells WMDT that the ideas for the plan came from Delawareans. She heard from them as she traveled on her Delivering For Delaware tour.\n- One in four Delawareans live in rural areas. Rep. Blunt Rochester says coming up with creative solutions to tackle the challenges that many of them face is crucial.\n- Rep. Blunt Rochester says supporting farmers off of the fields is equally as important. The Congresswoman’s agriculture plan urges more resources for housing, health care, lower utility costs, increasing education, and delivering the latest in technology to rural communities.\n- “Making sure that we’re paying attention to what we’ve done but also what we can do, that’s what this plan is all about,’ Rep. Blunt Rochester said. ‘As we look towards the future, and look towards the present, we’ve got to make sure that we’re using all of the tools at our disposal.’”\n- All of these efforts, Rep. Blunt Rochester says, inform the way that Delaware will support its next generation of farmers. And extending that attention to the younger generations is key in that work, she says.\n- The Congresswoman points to farm-to-table programs, and innovative projects like vertical farming in First State schools, primary to higher education. Rep. Blunt Rochester is also touting her success in securing Congressional community project funding to bring the Delaware State Fair’s 4H and Future Farmers of America facility up to speed.”\n- Looking ahead, Rep. Blunt Rochester says collaborating with other lawmakers on Capitol Hill is going to be vital to pushing these efforts forward. The Congresswoman is the first person from the state of Delaware to serve on the House Agriculture Committee in 120 years.\n- Rep. Blunt Rochester says she’s seen first-hand how agriculture touches so many lives. The Congresswoman recounts an incident in line at the grocery store in which she noticed a father with three children replacing a bag of grapes that rang up at $9. “It shook me to my core, and it made me realize that I can do something,” Rep. Blunt Rochester said. “Every single one of us is impacted by agriculture in this country and in this state, and [it relates to] the focus on keeping the costs of goods down so people can afford them.”\nThe agriculture plan lays out how, in the Senate, Blunt Rochester will build on her track record of bipartisan achievement and her leadership as the first Delawarean in over 120 years to serve on the House Agriculture Committee to create good-paying jobs and ensure the agricultural industry remains competitive in a changing world.\nThis plan also builds on her Senate campaign’s “ambitious” plan to grow the middle class, released earlier this summer, by tackling prices at the grocery store, creating jobs, and shoring up our supply chains.\n## Lisa Blunt Rochester is running to make a difference –\nand to make history.\n## By submitting your cell phone number you are agreeing to receive periodic text messages from Lisa Blunt Rochester for Senate. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\nPO Box 9767, Wilmington, DE 19809 | (302) 353-1995\n## Take Action with Team Lisa!\n## If you’ve saved your payment info with ActBlue Express, your donation will go through immediately."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-07-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mq2pnl7ulk2k",
+     "text": "For an Administration committed to \"Making America Healthy Again,\" they're taking every opportunity to cut science-based efforts to keep our communities safe."
+    },
+    {
+     "date": "2026-07-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mq5kexo6lk2d",
+     "text": "The recent heatwave is just another reminder that we need to invest in protecting and restoring our planet before it’s too late."
+    },
+    {
+     "date": "2026-07-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mq7u4qga7c2i",
+     "text": "Wishing a very happy birthday to the heart of our family!\n\nHere's to the woman who taught us the importance of staying grounded while reaching for the stars.\n\nLove you, Mom!"
+    },
+    {
+     "date": "2026-07-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqa5s27ws22i",
+     "text": "The Trump admin wants to alter American history to follow to his agenda. \n\nThe Smithsonian museums should be a place for us to learn about all our history, the good and the bad."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqjvszfxa22k",
+     "text": "The President may think historic legislation isn't worth his time or attention, but despite his inaction the ROAD to Housing package is now law.\n\nEveryone should have a safe, affordable place to call home."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqkp53semk2k",
+     "text": "President Trump said the war was over, but a month later the fighting continues and costs keep rising.\n\nThis is a war that never should have started, and it's time for this administration to listen to the American people and end it."
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqozpejir22f",
+     "text": "This is unacceptable. We must stop this chaos.\n\nThis week, ICE shot and killed two more people in the streets — people who weren't even subjects of investigation — and Republicans want to give them MORE money?\n\nEnough. I won't support it."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqrl3aamx22f",
+     "text": "FIVE of my bills are now law as a part of the ROAD to housing package.\n\nAfter 30 years, we’re finally cutting red tape, increasing housing supply, and tackling America’s housing crisis."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqrtk2l5b22f",
+     "text": "This week I questioned Dr. Schwartz, Trump’s nominee to lead the CDC, and I’m concerned.\n\nNot because she’s not qualified— she is. \n\nBut because this administration has shown a pattern of undermining the independence of qualified leaders and our public health demands better."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqrzudmyfc2b",
+     "text": "Trump doesn't have the votes to pass his deeply unpopular agenda, so he's going to use a primetime address from the White House to spread lies and conspiracies about the 2020 election.\n\nOur elections are safe and secure.\n\nNo matter how hard he tries, Trump can't rewrite history."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqtsybmwv22b",
+     "text": "We should all be paying attention. The president is actively attacking the integrity of our elections to try and justify his voter suppression efforts.\n\nHere's the truth: the 2020 election was free and fair.\n\nNow, we need to stay vigilant to make sure the 2026 elections are too."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqucgwqcs22b",
+     "text": "It’s been six years since we lost my friend, colleague, mentor, and our hero John Lewis.\n\nThroughout his extraordinary life, he showed us that - even in our darkest moments - we can fight for what is right AND spread joy and light.\n\nWe miss you, John!"
+    },
+    {
+     "date": "2026-07-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mqz46oi3bs2b",
+     "text": "The SAVE Act is just voter suppression by another name.\n\nNo lies concocted by the President and his allies will change our votes: I'm a no on Jim Crow 2.0."
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mr3lv2y3i22y",
+     "text": "This administration is trying to tell you that gutting the agencies in charge of monitoring for and protecting against diseases like this didn't hurt our response time.\n\nThe reality is: they've been making us sicker and poorer since day one."
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mr5w4iu2j22y",
+     "text": "For every dollar a white man earns, Black women earn 63 cents — that's unacceptable.\n\nAs we mark Black Women's Equal Pay Day, here's a look at some of the ways I'm fighting for true equality here in the Senate."
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mr6bnh72sc2y",
+     "text": "RFK Jr has actively rallied against vaccines for diseases like measles, and he's used his position to delay efforts to stop the spread. These are the consequences.\n\nThe administration’s commitment to conspiracy theories and inaction is making our friends and neighbors sicker."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrazlboze22y",
+     "text": "Our Haitian friends and neighbors play key roles throughout our communities. That's why I'm leading with a bill with @markey.senate.gov to restore their Temporary Protected Status and give them stability.\n\nNow, I'm headed to the Senate floor to call on my colleagues to get it passed."
+    },
+    {
+     "date": "2026-07-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrfl54j2kk2l",
+     "text": "These \"new\" tariffs are more of the same— chaos and confusion raising costs for working people."
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrn2eyn6ck2f",
+     "text": "This is the story of the Trump administration: millions of Americans left sicker, poorer, and hungrier."
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrn5sqo2pk2f",
+     "text": "For decades, federal regulations helped keep food clean and safe.\n\nCuts to the agencies that enforce those regulations may make life easier for big producers, but they put all our health at risk.\n\nAgain and again, this administration refuses to put the people first."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrpo3xedds2f",
+     "text": "Elections have consequences— vote for an administration that puts a longtime vaccine conspiracy theorist as its public health lead, get the worst Measles outbreak in 35 years."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrqan3wpqk2f",
+     "text": "Ahead of a new school year, families shouldn't have to worry about affording the supplies they need.\n\nNow, we're seeing the real effects of President Trump’s tariffs and endless wars on our communities and our classrooms."
+    },
+    {
+     "date": "2026-07-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrs3ry6dgc2f",
+     "text": "Voting by mail is safe, secure and effective.\n\nTrump isn’t trying to keep elections safe, he’s attacking American’s constitutional right to vote."
+    },
+    {
+     "date": "2026-07-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrspwu3ahk2f",
+     "text": "This shouldn't even be a partisan issue. The administration's decision to end TPS for Haitians will put families in danger.\n\nIt's time to legislate with compassion.\nwww.cbsnews.com/news/ohio-mi..."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mruushgswk25",
+     "text": "The Attorney General’s role is to protect and serve the American people. \n\nTodd Blanche thinks it’s to protect and serve President Trump — It’s clear he’s unfit for the role."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mrv6ic5jzc2l",
+     "text": "Medicare and Medicaid have helped us access healthcare for 61 years, but because of Washington Republicans’ cuts, 8 million and counting have lost their coverage.\n\nSenate Democrats are fighting to make sure you and your loved ones can always get the care you need."
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3ms7adgtsh22f",
+     "text": "Delaware is doing amazing and innovative things! \n \nA new solar array (one of the largest in North America!) floating in Middletown will power thousands of homes. Proud to celebrate the work that is making this ambitious project a reality."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3msb74bauxs2f",
+     "text": "RFK keeps promoting his own anti-vaccine agenda, and Americans are paying the price.\n\nHe's completely unfit to lead HHS."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3msbnh7zkus2f",
+     "text": "It was never about 'returning it to the states'. \n\nTheir plan is to outlaw abortion care nationwide and put countless women across the country in harm's way.\n\nTodd Blanche is a piece of that puzzle, and he can NOT be confirmed."
+    },
+    {
+     "date": "2026-08-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3msgl6zbmy22z",
+     "text": "This administration's 'deport first, ask questions later' policy is heartless, thoughtless, and unAmerican."
+    },
+    {
+     "date": "2026-08-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3msgs44zcls2z",
+     "text": "Today marks 61 years of the Voting Rights Act and our commitment to ensuring everyone has a voice at the ballot box. \n\nInstead of celebrating this milestone, President Trump and his allies continue to try to overturn progress and return us to a time of the past."
+    },
+    {
+     "date": "2026-08-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3msix4t3cjs24",
+     "text": "Todd Blanche said it himself – he serves one person: Donald Trump. I have absolutely no confidence that he will respect the rule of law, remain impartial, or honorably serve the American people. I opposed his nomination as Deputy AG over a year ago, and I will do the same now."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mtu6l2tyvc2c",
+     "text": "Our nation’s public health is at a crossroads.\n\nWe need trusted leaders who will follow the science and put the well-being of our communities first."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mtw4jdiu2c2y",
+     "text": "This administration's attempts to undermine mail-in voting have nothing to do with \"securing our elections.\" \n\nThis is all part of their plan to silence voices that don't agree with them, because they know they can't win otherwise."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mtzad4gxps2c",
+     "text": "106 years ago, the 19th Amendment was ratified, giving women the right to vote.\n\nThat right wasn't freely given— it was earned in years of struggle. This Women's Equality Day, we reflect on that fight as we work to defend every American's right to make their voice heard."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mu33tbwdj22c",
+     "text": "WOW. According to a new report, Delawareans are spending $3,300 more on average thanks to the Trump administration.\n\nI'm fighting to bring down costs for folks working hard just to make it by. It's time for Republicans in Washington to join me."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mu5mxmoyds2y",
+     "text": "Trump is telling us he has no plans of giving up power, that's why we're working hard behind the scenes to make sure he honors your vote— no matter the results."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mu5x4uf5v22y",
+     "text": "63 years ago today, Dr. Martin Luther King Jr. delivered his I Have A Dream speech from the steps of the Lincoln Memorial.\n\nIn this dark and heavy moment, as we work to make sure his dream lives on, may we be fueled by his vision and determination to build a better world."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3muhnihkybk2c",
+     "text": "Every family deserves access to safe, affordable, and reliable housing.\n\nWe’re taking steps to make it a reality across the country."
+    },
+    {
+     "date": "2026-09-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mv44veoc4s2e",
+     "text": "Even if there was a 1% chance AI could wipe out human life, we should be pumping the brakes to make sure we have the proper safeguards in place, not racing blindly into disaster.\n\nIt's time for Congress to step in and find the balance between safety and innovation, before it's too late."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mv6dpszofs2t",
+     "text": "The 21st Century Road to Housing Act was a monumental first step in addressing affordable housing, but it’s clear that there’s still more work to do to make sure federal investments are reaching those who need them the most."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mv6nykkikc2c",
+     "text": "President Trump has driven our economy into the ground, and everyday American workers are the ones paying the price."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mvpvoqztrk2e",
+     "text": "This President is burning billions of OUR taxpayer dollars on an illegal war, he's also the reason our costs keep climbing.\n\nTrump's failure in Iran is costing us critical defense infrastructure and pushing prices higher every day. \n\nOur country can't afford any more of this."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mvt2dkxens2e",
+     "text": "Republicans control the House and the Senate – if they wanted, we could be taking action to respond to these alarming escalations right now.\n\nInstead, House Republicans are headed home. In this moment that requires real leadership, they're abandoning ship."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mvzw7rlgas2u",
+     "text": "This is a crisis. Access to affordable reproductive health care shouldn't depend on your ZIP code.\n\nBut that's the reality for women across America thanks to Trump and Congressional Republicans big, ugly bill."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mw4izjyjyc23",
+     "text": "Trump is attacking the free press because they're reporting  the truth he doesn't want you to know: he's failing the American people."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mw7bcghldk23",
+     "text": "The 21st Century ROAD to Housing Act was a huge step in the right direction in addressing our nation’s housing crisis, but there's still more work to be done.\n \nI was excited to sit down with @politico.com to talk about ways we can keep working toward affordable housing for every American."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mwe42dnahc22",
+     "text": "'1984' was supposed to be a dystopian cautionary tale.\n\nThis administration is treating it like a blueprint."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mwmd5tekvc2r",
+     "text": "This weekend's nor'easter brought historic floods to Delaware's coastal communities. I'm thankful for the work of our emergency response teams, and I'm keeping all those affected in my thoughts\n\nAs the lowest mean elevation state, we're feeling the climate crisis firsthand. We need to do more."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mwor6ev7zs2r",
+     "text": "Costs are rising across the country. \n\nBut instead of offering relief, the President is forcing more than 1 million American children to lose access to food assistance."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mwqmc64mzs2r",
+     "text": "AI is becoming more unrecognizable by the day, and now scammers are using it to take advantage of Americans – especially older Americans – across the country.\n\nMy AI Fraud Accountability Act will ban fraudsters from using these realistic AI impersonations to rip you off."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mwrallih422r",
+     "text": "Finally, a member of this adminsitration that tells the truth."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mxf3iik6kk2l",
+     "text": "We’ve put in work to address the affordable housing crisis, but we need to make sure we keep the momentum going. \n\nMy Affordable Housing Preservation and Protection Act will support existing affordable housing and continue the progress we’ve made."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3myiftvkfzc2l",
+     "text": "Plain and simple, there just aren't enough houses to meet demand— that's why we're taking steps to increase the supply of affordable housing across the country.\n\nBut we can't stop here. It's time to build on this momentum and make housing a reality for all of us."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mykdresfhc2l",
+     "text": "This is unprecedented and unacceptable.\n\nThere is NO reason for ICE agents to invade our schools and terrorize our kids. Schools should be safe places to learn— we need accountability so this can't happen again."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3myxdky43cs2l",
+     "text": "Today we mourn the loss of a true powerhouse and one of my sister Marla's personal heroes.\n\nAs someone who comes from a line of social workers, Dolores Huerta was a legend. My heart and prayers are with her family, friends, and loved ones today."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/bluntrochester.senate.gov/post/3mzdoeb6np222",
+     "text": "The war in Iran is hurting all of us, but especially our farmers. DE farmers are paying almost $300 more just to fill up their tractors!\n\nEnough is enough. It’s time to bring this war to an end."
+    }
+   ]
+  }
+ ]
+}

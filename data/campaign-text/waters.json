@@ -1,0 +1,56 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "waters",
+ "name": "Maxine Waters",
+ "built": "2026-11-26",
+ "sites": [
+  "https://maxinewatersforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://maxinewatersforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107232618/https://maxinewatersforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107232618/https://maxinewatersforcongress.com/",
+     "original": "https://maxinewatersforcongress.com/",
+     "date": "2022-11-07",
+     "title": "Home - Maxine Waters | Democrat for Congress (CA-43)",
+     "text": "Maxine Waters for Congress\n## Already Registered\nNot a member? Join today\n[themeum_heading title_alignment=”center” title_head=”LET’S RECLAIM OUR TIME” top_title_heading=”h1″ top_title_size=”36″ title_head_color=”#ffffff” top_title_weight=”” main_title_weight=”” title_weight=””]\n[themeum_heading title_alignment=”center” top_title_size=”” title_head_color=”” top_title_weight=”700″ top_title_margin=”” title=”CONTRIBUTE” color=”#e06a1b” subtitle=”NOW!” size=”48″ main_title_heading=”h2″ main_title_weight=”700″ main_title_margin=”0px 0px 20px 0px” subtitle2=”I’m building a grassroots movement to prevent President Trump from rolling back the progress we’ve made.\nIf you’ve saved your payment information with ActBlue Express, your donation will go through immediately.\n249 E. Ocean Blvd.\nLong Beach, CA 90802"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://maxinewatersforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-04-30",
+    "url": "https://web.archive.org/web/20240430042812/https://www.maxinewatersforcongress.com/"
+   },
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://maxinewatersforcongress.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

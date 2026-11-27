@@ -1,0 +1,728 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "gallego",
+ "name": "Ruben Gallego",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.gallegoforarizona.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.gallegoforarizona.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108223621/https://gallegoforarizona.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108223621/https://gallegoforarizona.com/",
+     "original": "https://gallegoforarizona.com/",
+     "date": "2022-11-08",
+     "title": "Gallego for Arizona",
+     "text": "## for Arizona\nRuben Gallego is a true fighter for the people of Arizona. Add your name to say you support his re-election today\n## Meet Ruben\nThe working-class son of immigrant parents from Colombia and Mexico, Ruben Gallego went to college at Harvard, scrubbing toilets and working at a meat packing plant to pay his way. He joined the Marine Corps after college and deployed to Iraq as an infantryman in 2005 where his unit saw some of the worst fighting of the war. That experience led him to public service. Ruben has served in Congress since 2015 and is currently running for re-election to Congress in Arizona’s 3rd Congressional District.\n## Priorities\nRuben has never backed down from fighting for Arizona families. As a son of immigrants, he understands what it means to achieve the American dream, and in Congress, he works to make sure Arizonans can achieve theirs.\nMAKE IT MONTHLY\n## THE LATEST NEWS\nGallego Votes to Protect Americans from Gun Violence\nWASHINGTON, DC – Rep. Ruben Gallego (AZ-07) voted ...\nRep. Gallego: ‘Red Flag’ law could’ve help...\nRuben Gallego’s Fury Over Uvalde Is Exactly Why He Must Ch...\nIn Rep. Gallego, a pragmatic climate champion\nProposal would create a $30 million fund to plant trees in a...\nRep. Gallego: Democrats must use ‘offensive strategy&#...\nRep. Ruben Gallego: “You have to go on the offensive. We have to remind the voters that the Republ ...\nVIEW ALL NEWS AND PRESS"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107231451/https://gallegoforarizona.com/issues/",
+     "original": "https://gallegoforarizona.com/issues/",
+     "date": "2022-11-07",
+     "title": "Issues - Gallego for Arizona",
+     "text": "## PRIORITIES\nRuben has never backed down from fighting for Arizona families. As a son of immigrants, he understands what it means to achieve the American dream, and in Congress, he works to make sure Arizonans can achieve theirs.\nEnvironment & Climate Change"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105124113/https://gallegoforarizona.com/issues/veterans/",
+     "original": "https://gallegoforarizona.com/issues/veterans/",
+     "date": "2022-11-05",
+     "title": "Veterans - Gallego for Arizona",
+     "text": "## Veterans\nRuben understands what it means to be a veteran in the United States—he is one. After coming home from fighting in Iraq, Ruben experienced firsthand the need for better financial, medical, and social support to meet veteran community needs. It’s essential that we continue to honor here at home those who have sacrificed the most.\nAs a member of the Veterans’ Affairs Committee in Congress, Ruben has vocally supported programs to get veterans the housing, education, economic opportunity, and mental and physical health care they deserve. From successes like the Honoring Our PACT Act to provide veterans exposed to toxic burn pits needed medical care to the Alexander Lofgren Veterans in Parks Act, which allows veterans free access to our nation’s public parks and lands, Ruben remains committed to standing up for all Arizona veterans."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105124059/https://gallegoforarizona.com/issues/education/",
+     "original": "https://gallegoforarizona.com/issues/education/",
+     "date": "2022-11-05",
+     "title": "Education - Gallego for Arizona",
+     "text": "## Education\nHaving grown up poor, Ruben knows the power that education has to change lives and has worked in Congress to make sure all kids have the same transformative educational opportunities he did.\nIn Congress, Ruben has taken the lead in working to address the teacher shortage crisis in Arizona and across the country by introducing legislation to support both teachers and students. He’s also prioritized federal funding to support Arizona’s public schools and led the fight for universal full-day Kindergarten and access to affordable higher education for all students, including Dreamers."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105124113/https://gallegoforarizona.com/issues/environment/",
+     "original": "https://gallegoforarizona.com/issues/environment/",
+     "date": "2022-11-05",
+     "title": "Environment & Climate Change - Gallego for Arizona",
+     "text": "## Environment & Climate Change\nIt’s a fact: the climate is changing and we need to act. That’s why in Congress Ruben has made environmental issues one of his top priorities. With Arizona getting hotter and drier with each passing year, Ruben is leading efforts to combat excess urban heat and find innovative solutions to ensure our state has enough water for all Arizonans.\nRuben is also a leader in preserving Arizona’s public lands. The uniqueness of our state is its natural beauty, and we need to make sure generations to come can enjoy our public lands for generations to come. That’s why he’s worked to ensure that diverse communities can participate in our public lands, whether through championing partnerships with Tribal governments or working to commemorate César Chávez in the form of a National Historic Park in Phoenix."
+    },
+    {
+     "url": "https://web.archive.org/web/20221007083953/https://gallegoforarizona.com/issues/national-security/",
+     "original": "https://gallegoforarizona.com/issues/national-security/",
+     "date": "2022-10-07",
+     "title": "National Security - Gallego for Arizona",
+     "text": "## National Security\nProtecting Arizonans from threats foreign and domestic remains one of Ruben’s top priorities in Congress. The highest-ranked Latino on the House Armed Services Committee, Ruben always puts our servicemembers first, regardless of rank.\nAs chairman of the Intelligence and Special Operations Subcommittee, Ruben has a leading role in overseeing the operations and priorities of our special forces and intelligence community. And as the co-chair of the House Baltic Caucus, Ruben has been an unapologetic advocate for deterring Russian aggression in Europe. On the committee at large, Ruben remains a leading voice in supporting Arizona’s military community."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105124117/https://gallegoforarizona.com/issues/arizona-families/",
+     "original": "https://gallegoforarizona.com/issues/arizona-families/",
+     "date": "2022-11-05",
+     "title": "Arizona Families - Gallego for Arizona",
+     "text": "## Arizona Families\nRuben has never backed down from fighting for Arizona families. As a son of immigrants, he understands what it means to achieve the American dream, and in Congress, he works to make sure Arizonans can achieve theirs.\nAs a father, Ruben has been a staunch supporter of the child tax credit and child care support for families with young children. He’s also championed lower health care costs, including prescription drug reform to make sure Arizona families can always access high quality health care. As the representative for Phoenix, he has been vocal in the need for more affordable housing and fought in Congress to bring home the resources needed to deliver it. As Arizona continues to grow, Ruben is working to ensure opportunities for all of Arizona’s families grow, too."
+    }
+   ],
+   "unread": [
+    "the list of gallegoforarizona.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.gallegoforarizona.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-04",
+    "url": "https://web.archive.org/web/20241104230137/https://gallegoforarizona.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241104230137/https://gallegoforarizona.com/",
+     "original": "https://gallegoforarizona.com/",
+     "date": "2024-11-04",
+     "title": "Ruben Gallego for Senate",
+     "text": "## Endorse Ruben Gallego for Senate\nNo one person can win this Senate campaign alone. It will take all of us. Together. Add your name to say you endorse Ruben Gallego for Senate.\n## Meet Ruben Gallego\nIntro Early Years College Military Service Public Service\n## Meet Ruben\nRuben Gallego is the son of immigrants who was raised by a single mom on a secretary’s pay alongside his three sisters. Growing up, he worked whatever job he could find to help support his family— at a pizza joint, construction sites, and a meatpacking plant — before earning a spot at Harvard. Ruben deployed to Iraq in 2005 where his company saw some of the highest casualties of the war. A Marine combat veteran, Ruben was elected to the Arizona State House in 2010 and the U.S. House in 2014 where he has served as a voice for Arizona’s veterans, hardworking families, and seniors for over a decade. Ruben is married and lives in South Phoenix with his wife Sydney, son Michael and daughter Isla.\n## Early Years\nHe can trace his drive to succeed to the first night he slept on the floor in the apartment his mother got for him and his sisters after his father left. Lying there, he remembers thinking “my life sucked and I am not going to stand for that.”\nGrowing up poor, he took advantage of the things Democrats championed and the people of our country provided: Pell Grants and school lunch programs to name two. Those helping hands gave him (and people like him) a debt of gratitude he worked to pay back through service — first in the Marines, and now in Congress.\n## College\nAfter high school, Ruben Gallego went to Harvard where he cleaned other students’ bathrooms, worked at a meat packing plant and was a reservist during college to afford school. He later used his money saved while fighting in Iraq to pay off the $15,000 he had left in debt.\n## Military Service\nRuben deployed to Iraq as a United States Marine Infantryman in 2005 where his company saw some of the hardest fighting and the heaviest casualties of the Iraq War, losing 22 Marines and a Navy Corpsman in eight months.\nRuben wrote a book about his time overseas titled They Called Us “Lucky” — a story about his time in Iraq and the people he served with from blue-collar towns, immigrant households and the Navajo Nation. It also detailed how he has dealt with PTSD since coming back from Iraq.\n## Public Service\nRuben’s military service motivated him to seek public office, where he has worked tirelessly to ensure that members of the military are never again sent into harm’s way without a plan for winning the fight and caring for those service members when they return home.\nRuben got his start in politics working on ballot initiatives in Phoenix and went on to serve as a Chief of Staff for a member of the Phoenix City Council and Vice Chair of the Arizona Democratic Party. He was elected to the Arizona State House in 2010 and to the United States House of Representatives in 2014.\n## Meet Ruben\nRuben Gallego is the son of immigrants who was raised by a single mom on a secretary’s pay alongside his three sisters. Growing up, he worked whatever job he could find to help support his family— at a pizza joint, construction sites, and a meatpacking plant — before earning a spot at Harvard. Ruben deployed to Iraq in 2005 where his company saw some of the highest casualties of the war. A Marine combat veteran, Ruben was elected to the Arizona State House in 2010 and the U.S. House in 2014 where he has served as a voice for Arizona’s veterans, hardworking families, and seniors for over a decade. Ruben is married and lives in South Phoenix with his wife Sydney, son Michael and daughter Isla.\nRuben can trace his drive to succeed to the first night he slept on the living room floor in the apartment his mother got for the family after his father left. Lying there, he remembers thinking that he needed to fight for a better life for himself and his family. From that day forward, he set out to change things, taking whatever job he could find to help support his family and work his way to a better life.\n## College\nAfter high school, Ruben earned a spot at Harvard, where he cleaned his peers’ bathrooms and stacked books at the library to afford school supplies.\n## Military Service\nRuben deployed to Iraq as a United States Marine Infantryman in 2005 where his company saw some of the hardest combat and the heaviest casualties of the Iraq War, losing 22 Marines and a Navy Corpsman in eight months.\n## Public Service\nRuben's military service motivated him to seek a life of continued service, where he has worked tirelessly to ensure that members of the military are never again sent into harm's way without a plan for winning the fight and caring for our servicemembers when they return home. Ruben got his start in politics working on ballot initiatives to preserve Arizonans’ rights and freedoms before serving the City of Phoenix, then being elected to the Arizona State House, and later going to the United States House of Representatives, where he has proudly served his Maricopa County community for a decade.\n## Priorities\nIn the years since Ruben served our country in combat as a Marine, he has dedicated his life to public service — working to make life better for hardworking Arizona families.\nAs a Congressman, he’s made that clear. Ruben has stood up and advocated for Arizona values at every turn. In the House, Ruben is particularly proud of the work he has done to increase access to health care, cut costs of everything from gas to groceries, defend democracy in the face of relentless far-right challenges, strengthen our national security through his role as the Chair of the Intelligence and Special Operations Subcommittee of the House Armed Services Committee, and bring federal funding and jobs home to Arizona.\nNow, Ruben is running for Senate because Arizona is at a crossroads. Protecting abortion access, housing affordability, our water supply — there is so much at stake. In the Senate, he will continue to bring people together to support Arizona families in every corner of our state — from Douglas and Parker to Phoenix and our 22 federally recognized tribes.\n## Make your first donation today.\n## Take Action\nRuben Gallego is a true fighter for the people of Arizona. Add your name to say you support his re-election today\n## Join The Campaign.\n## RUSH a donation to Ruben Gallego and help him defeat Kari Lake!\nContinue to site"
+    },
+    {
+     "url": "https://web.archive.org/web/20241101235009/https://gallegoforarizona.com/issues/",
+     "original": "https://gallegoforarizona.com/issues/",
+     "date": "2024-11-01",
+     "title": "Issues - Ruben Gallego",
+     "text": "Gallego for Arizona\n## On the Issues\nDedicating his life to service, Ruben has always fought for what is right. Raised by an immigrant single mom, Ruben joined the Marines and served in Iraq. Now he serves in Congress to defend our Democracy, hold corrupt politicians accountable, and preserve a woman’s right to have an abortion.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101234635/https://gallegoforarizona.com/issue/arizona-families/",
+     "original": "https://gallegoforarizona.com/issue/arizona-families/",
+     "date": "2024-11-01",
+     "title": "Arizona Families - Ruben Gallego",
+     "text": "## Arizona Families\nA Marine through and through, Ruben has never backed down from a fight—especially when it comes to fighting for Arizona families. A father of two, Ruben has always been a staunch supporter of the child tax credit, which provides a much needed tax-break for everyday Arizona families. In Congress, he introduced the Universal Full-Day Kindergarten Act to ensure every child has access to high-quality, full- day kindergarten. He’s also championed lower health care costs, including prescription drug reform to make sure Arizona families can always access high quality health care. He has been a vocal advocate for making housing more affordable — knowing that the everyday Arizona family can no longer afford the average Arizona home — and pushed Congress to bring home the federal resources needed to build more of it.\nAs Arizona continues to grow, Ruben is working to ensure opportunities for our families to grow with it.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101220656/https://gallegoforarizona.com/issue/protecting-arizonas-water/?",
+     "original": "https://gallegoforarizona.com/issue/protecting-arizonas-water/?",
+     "date": "2024-11-01",
+     "title": "Protecting Arizona's Water - Ruben Gallego",
+     "text": "## Protecting Arizona’s Water\nFor every Arizonan looking toward the future, water is a top priority. As our state gets hotter and drier with each passing year, Ruben is leading efforts to combat excess urban heat and find solutions to ensure our state has enough water.\nTo that end, he has introduced federal legislation to keep foreign corporations and governments like Saudi Arabia from using excess water in drought-stricken states like Arizona. In 2022, he also introduced the Excess Urban Heat Mitigation Bill, which directs funds to climate resiliency in major cities. Ruben recognizes that 21st century water problems require 21st century solutions, which is why he introduced a bill to support and fund emerging water conservation technologies.\nTo protect our public lands and water, he co-authored the 30×30 Initiative, a comprehensive plan to conserve 30% of our global lands and oceans by the year 2030. And he successfully advocated for permanent authorization and funding for the Land and Water Conservation Fund (LWCF), a cornerstone public land program that protects critical drinking water sources across the country.\nRuben knows that a safe and healthy future for our families depends on sustainable water access. He’ll fight for that access as Arizona’s next Senator.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101234709/https://gallegoforarizona.com/issue/health-care/",
+     "original": "https://gallegoforarizona.com/issue/health-care/",
+     "date": "2024-11-01",
+     "title": "Health Care - Ruben Gallego",
+     "text": "## Health Care\nRuben knows that our healthcare system is broken. Health care is a human right, and in the wealthiest nation on the planet, it is unacceptable that high-quality, comprehensive health care is not accessible for all Arizonans.\nRuben has long been a champion for improving health care access for families. He is an unwavering supporter of Medicaid expansion, and he stood up to Republican attempts to gut Arizona’s Medicaid program and dismantle the Affordable Care Act time and again.\nFor seniors, Ruben was proud to pass lower prescription drug prices as part of the Inflation Reduction Act. He will continue to stand up to any attempt to privatize or cut Medicare on behalf of the 1.45 million Arizonans who rely on it—and he will fight every day to expand Medicare benefits.\nIn Congress, Ruben has led the fight to lower health care costs—including prescription drug reform—to make sure Arizona families can always access high quality health care. And as a Senator, he will not stop until every Arizonan has access to high quality health care.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101225104/https://gallegoforarizona.com/issue/veterans/",
+     "original": "https://gallegoforarizona.com/issue/veterans/",
+     "date": "2024-11-01",
+     "title": "Veterans - Ruben Gallego",
+     "text": "## Veterans\nRuben understands what it means to be an American veteran—he is one. After coming home from fighting in Iraq, where he was an infantryman in one of the hardest hit units of the war, Ruben experienced firsthand the need for better financial, medical, and social support to meet veteran community needs. We must continue to honor those who sacrifice the most, even and especially when they return home.\nAs a former member of the Veterans’ Affairs Committee in Congress, Ruben has vocally supported programs to get veterans the housing, education, economic opportunity, and mental and physical health care they deserve. From the historic Honoring Our PACT Act which will provide benefits to veterans exposed to toxic burn pits, to his Restore Veterans’ Compensation Act which will allow veterans to keep their separation pay should they qualify for VA disability, Ruben remains committed to our veterans in Arizona and across the country.\nAs a veteran who has struggled with PTSD, he knows how important the VA is to Arizona veterans, but only if it works how it’s supposed to. He has introduced legislation to improve VA oversight, including patient care data and public records requests, so the veteran community and Congress know how to improve the VA for those who served.\nThe brave men and women who have served in uniform—and their families, who are too often forgotten or ignored—put their lives on the line to defend our freedom. Ruben will continue to be their champion and voice in the Senate.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101223333/https://gallegoforarizona.com/issue/tribal-communities/?",
+     "original": "https://gallegoforarizona.com/issue/tribal-communities/?",
+     "date": "2024-11-01",
+     "title": "Tribal Communities - Ruben Gallego",
+     "text": "## Tribal Communities\nAs the former Chair and a current member of the Subcommittee for Indian and Insular Affairs, Ruben is a passionate voice for Arizona’s tribes in Congress.\nHe has worked tirelessly to improve access to quality healthcare for tribal communities. He wrote the Coverage for Urban Indian Health Providers Act to insure Urban Indian Organizations (UIOs), and the Urban Indian Health Facilities Improvement Act, to support their infrastructure – successfully securing votes to sign both bills into law. He was a leader in the push for advanced funding for Urban Indian Health Organizations and the Indian Health Service to protect Indian Country from future government shutdowns.\nRuben is committed to helping tribal communities protect themselves, including by addressing the crisis of Missing and Murdered Indigenous Women (MMIW). He led a bipartisan effort to have the government’s top watchdog align federal, state, and tribal agencies to address MMIW cases and held the first congressional hearing on the crisis. He also works to improve tribal law enforcement through his bill, the BADGES in Native Communities Act, to increase coordination between federal, state, and tribal law enforcement.\nRuben knows that too many Native Americans in rural areas, including tribal lands, often lack access to vital resources – and he’s made progress to close that gap. Ruben’s PAVA Program Inclusion Act improves access to the ballot for Native Americans with disabilities living in the four corners region. He also successfully advocated for the inclusion of robust broadband deployment for Indian Country in the Bipartisan Infrastructure Law, and he wants to do even more to expand broadband on tribal lands through his Bridging the Tribal Digital Divide Act.\n## Make your first donation today.\n## Join The Campaign."
+    }
+   ],
+   "unread": [
+    "the list of gallegoforarizona.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.gallegoforarizona.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103041743/https://gallegoforarizona.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103041743/https://gallegoforarizona.com/",
+     "original": "https://gallegoforarizona.com/",
+     "date": "2026-11-03",
+     "title": "Ruben Gallego for Senate",
+     "text": "## Endorse Ruben Gallego for Senate\nNo one person can win this Senate campaign alone. It will take all of us. Together. Add your name to say you endorse Ruben Gallego for Senate.\n## Meet Ruben Gallego\nIntro Early Years College Military Service Public Service\n## Meet Ruben\nRuben Gallego is the son of immigrants who was raised by a single mom on a secretary’s pay alongside his three sisters. Growing up, he worked whatever job he could find to help support his family— at a pizza joint, construction sites, and a meatpacking plant — before earning a spot at Harvard. Ruben deployed to Iraq in 2005 where his company saw some of the highest casualties of the war. A Marine combat veteran, Ruben was elected to the Arizona State House in 2010 and the U.S. House in 2014 where he has served as a voice for Arizona’s veterans, hardworking families, and seniors for over a decade. Ruben is married and lives in South Phoenix with his wife Sydney, son Michael and daughter Isla.\n## Early Years\nHe can trace his drive to succeed to the first night he slept on the floor in the apartment his mother got for him and his sisters after his father left. Lying there, he remembers thinking “my life sucked and I am not going to stand for that.”\nGrowing up poor, he took advantage of the things Democrats championed and the people of our country provided: Pell Grants and school lunch programs to name two. Those helping hands gave him (and people like him) a debt of gratitude he worked to pay back through service — first in the Marines, and now in Congress.\n## College\nAfter high school, Ruben Gallego went to Harvard where he cleaned other students’ bathrooms, worked at a meat packing plant and was a reservist during college to afford school. He later used his money saved while fighting in Iraq to pay off the $15,000 he had left in debt.\n## Military Service\nRuben deployed to Iraq as a United States Marine Infantryman in 2005 where his company saw some of the hardest fighting and the heaviest casualties of the Iraq War, losing 22 Marines and a Navy Corpsman in eight months.\nRuben wrote a book about his time overseas titled They Called Us “Lucky” — a story about his time in Iraq and the people he served with from blue-collar towns, immigrant households and the Navajo Nation. It also detailed how he has dealt with PTSD since coming back from Iraq.\n## Public Service\nRuben’s military service motivated him to seek public office, where he has worked tirelessly to ensure that members of the military are never again sent into harm’s way without a plan for winning the fight and caring for those service members when they return home.\nRuben got his start in politics working on ballot initiatives in Phoenix and went on to serve as a Chief of Staff for a member of the Phoenix City Council and Vice Chair of the Arizona Democratic Party. He was elected to the Arizona State House in 2010 and to the United States House of Representatives in 2014.\n## Meet Ruben\nRuben Gallego is the son of immigrants who was raised by a single mom on a secretary’s pay alongside his three sisters. Growing up, he worked whatever job he could find to help support his family— at a pizza joint, construction sites, and a meatpacking plant — before earning a spot at Harvard. Ruben deployed to Iraq in 2005 where his company saw some of the highest casualties of the war. A Marine combat veteran, Ruben was elected to the Arizona State House in 2010 and the U.S. House in 2014 where he has served as a voice for Arizona’s veterans, hardworking families, and seniors for over a decade. Ruben is married and lives in South Phoenix with his wife Sydney, son Michael and daughter Isla.\nRuben can trace his drive to succeed to the first night he slept on the living room floor in the apartment his mother got for the family after his father left. Lying there, he remembers thinking that he needed to fight for a better life for himself and his family. From that day forward, he set out to change things, taking whatever job he could find to help support his family and work his way to a better life.\n## College\nAfter high school, Ruben earned a spot at Harvard, where he cleaned his peers’ bathrooms and stacked books at the library to afford school supplies.\n## Military Service\nRuben deployed to Iraq as a United States Marine Infantryman in 2005 where his company saw some of the hardest combat and the heaviest casualties of the Iraq War, losing 22 Marines and a Navy Corpsman in eight months.\n## Public Service\nRuben's military service motivated him to seek a life of continued service, where he has worked tirelessly to ensure that members of the military are never again sent into harm's way without a plan for winning the fight and caring for our servicemembers when they return home. Ruben got his start in politics working on ballot initiatives to preserve Arizonans’ rights and freedoms before serving the City of Phoenix, then being elected to the Arizona State House, and later going to the United States House of Representatives, where he has proudly served his Maricopa County community for a decade.\n## Priorities\nIn the years since Ruben served our country in combat as a Marine, he has dedicated his life to public service — working to make life better for hardworking Arizona families.\nAs a Congressman, he’s made that clear. Ruben has stood up and advocated for Arizona values at every turn. In the House, Ruben is particularly proud of the work he has done to increase access to health care, cut costs of everything from gas to groceries, defend democracy in the face of relentless far-right challenges, strengthen our national security through his role as the Chair of the Intelligence and Special Operations Subcommittee of the House Armed Services Committee, and bring federal funding and jobs home to Arizona.\nNow, Ruben is running for Senate because Arizona is at a crossroads. Protecting abortion access, housing affordability, our water supply — there is so much at stake. In the Senate, he will continue to bring people together to support Arizona families in every corner of our state — from Douglas and Parker to Phoenix and our 22 federally recognized tribes.\n## Make your first donation today.\n## Take Action\nRuben Gallego is a true fighter for the people of Arizona. Add your name to say you support his re-election today\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20260820202311/https://gallegoforarizona.com/issues/",
+     "original": "https://gallegoforarizona.com/issues/",
+     "date": "2026-08-20",
+     "title": "Issues - Ruben Gallego",
+     "text": "Gallego for Arizona\n## On the Issues\nDedicating his life to service, Ruben has always fought for what is right. Raised by an immigrant single mom, Ruben joined the Marines and served in Iraq. Now he serves in Congress to defend our Democracy, hold corrupt politicians accountable, and preserve a woman’s right to have an abortion.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20260820202311/https://gallegoforarizona.com/issue/arizona-families/",
+     "original": "https://gallegoforarizona.com/issue/arizona-families/",
+     "date": "2026-08-20",
+     "title": "Arizona Families - Ruben Gallego",
+     "text": "## Arizona Families\nA Marine through and through, Ruben has never backed down from a fight—especially when it comes to fighting for Arizona families. A father of two, Ruben has always been a staunch supporter of the child tax credit, which provides a much needed tax-break for everyday Arizona families. In Congress, he introduced the Universal Full-Day Kindergarten Act to ensure every child has access to high-quality, full- day kindergarten. He’s also championed lower health care costs, including prescription drug reform to make sure Arizona families can always access high quality health care. He has been a vocal advocate for making housing more affordable — knowing that the everyday Arizona family can no longer afford the average Arizona home — and pushed Congress to bring home the federal resources needed to build more of it.\nAs Arizona continues to grow, Ruben is working to ensure opportunities for our families to grow with it.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20260827232839/https://gallegoforarizona.com/issue/protecting-arizonas-water/",
+     "original": "https://gallegoforarizona.com/issue/protecting-arizonas-water/",
+     "date": "2026-08-27",
+     "title": "Protecting Arizona's Water - Ruben Gallego",
+     "text": "## Protecting Arizona’s Water\nFor every Arizonan looking toward the future, water is a top priority. As our state gets hotter and drier with each passing year, Ruben is leading efforts to combat excess urban heat and find solutions to ensure our state has enough water.\nTo that end, he has introduced federal legislation to keep foreign corporations and governments like Saudi Arabia from using excess water in drought-stricken states like Arizona. In 2022, he also introduced the Excess Urban Heat Mitigation Bill, which directs funds to climate resiliency in major cities. Ruben recognizes that 21st century water problems require 21st century solutions, which is why he introduced a bill to support and fund emerging water conservation technologies.\nTo protect our public lands and water, he co-authored the 30×30 Initiative, a comprehensive plan to conserve 30% of our global lands and oceans by the year 2030. And he successfully advocated for permanent authorization and funding for the Land and Water Conservation Fund (LWCF), a cornerstone public land program that protects critical drinking water sources across the country.\nRuben knows that a safe and healthy future for our families depends on sustainable water access. He’ll fight for that access as Arizona’s next Senator.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20260820202311/https://gallegoforarizona.com/issue/health-care/",
+     "original": "https://gallegoforarizona.com/issue/health-care/",
+     "date": "2026-08-20",
+     "title": "Health Care - Ruben Gallego",
+     "text": "## Health Care\nRuben knows that our healthcare system is broken. Health care is a human right, and in the wealthiest nation on the planet, it is unacceptable that high-quality, comprehensive health care is not accessible for all Arizonans.\nRuben has long been a champion for improving health care access for families. He is an unwavering supporter of Medicaid expansion, and he stood up to Republican attempts to gut Arizona’s Medicaid program and dismantle the Affordable Care Act time and again.\nFor seniors, Ruben was proud to pass lower prescription drug prices as part of the Inflation Reduction Act. He will continue to stand up to any attempt to privatize or cut Medicare on behalf of the 1.45 million Arizonans who rely on it—and he will fight every day to expand Medicare benefits.\nIn Congress, Ruben has led the fight to lower health care costs—including prescription drug reform—to make sure Arizona families can always access high quality health care. And as a Senator, he will not stop until every Arizonan has access to high quality health care.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20260820202311/https://gallegoforarizona.com/issue/veterans/",
+     "original": "https://gallegoforarizona.com/issue/veterans/",
+     "date": "2026-08-20",
+     "title": "Veterans - Ruben Gallego",
+     "text": "## Veterans\nRuben understands what it means to be an American veteran—he is one. After coming home from fighting in Iraq, where he was an infantryman in one of the hardest hit units of the war, Ruben experienced firsthand the need for better financial, medical, and social support to meet veteran community needs. We must continue to honor those who sacrifice the most, even and especially when they return home.\nAs a former member of the Veterans’ Affairs Committee in Congress, Ruben has vocally supported programs to get veterans the housing, education, economic opportunity, and mental and physical health care they deserve. From the historic Honoring Our PACT Act which will provide benefits to veterans exposed to toxic burn pits, to his Restore Veterans’ Compensation Act which will allow veterans to keep their separation pay should they qualify for VA disability, Ruben remains committed to our veterans in Arizona and across the country.\nAs a veteran who has struggled with PTSD, he knows how important the VA is to Arizona veterans, but only if it works how it’s supposed to. He has introduced legislation to improve VA oversight, including patient care data and public records requests, so the veteran community and Congress know how to improve the VA for those who served.\nThe brave men and women who have served in uniform—and their families, who are too often forgotten or ignored—put their lives on the line to defend our freedom. Ruben will continue to be their champion and voice in the Senate.\n## Make your first donation today.\n## Join The Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20260820202311/https://gallegoforarizona.com/issue/tribal-communities/",
+     "original": "https://gallegoforarizona.com/issue/tribal-communities/",
+     "date": "2026-08-20",
+     "title": "Tribal Communities - Ruben Gallego",
+     "text": "## Tribal Communities\nAs the former Chair and a current member of the Subcommittee for Indian and Insular Affairs, Ruben is a passionate voice for Arizona’s tribes in Congress.\nHe has worked tirelessly to improve access to quality healthcare for tribal communities. He wrote the Coverage for Urban Indian Health Providers Act to insure Urban Indian Organizations (UIOs), and the Urban Indian Health Facilities Improvement Act, to support their infrastructure – successfully securing votes to sign both bills into law. He was a leader in the push for advanced funding for Urban Indian Health Organizations and the Indian Health Service to protect Indian Country from future government shutdowns.\nRuben is committed to helping tribal communities protect themselves, including by addressing the crisis of Missing and Murdered Indigenous Women (MMIW). He led a bipartisan effort to have the government’s top watchdog align federal, state, and tribal agencies to address MMIW cases and held the first congressional hearing on the crisis. He also works to improve tribal law enforcement through his bill, the BADGES in Native Communities Act, to increase coordination between federal, state, and tribal law enforcement.\nRuben knows that too many Native Americans in rural areas, including tribal lands, often lack access to vital resources – and he’s made progress to close that gap. Ruben’s PAVA Program Inclusion Act improves access to the ballot for Native Americans with disabilities living in the four corners region. He also successfully advocated for the inclusion of robust broadband deployment for Indian Country in the Bipartisan Infrastructure Law, and he wants to do even more to expand broadband on tribal lands through his Bridging the Tribal Digital Divide Act.\n## Make your first donation today.\n## Join The Campaign."
+    }
+   ],
+   "unread": [
+    "the list of gallegoforarizona.com's saved pages"
+   ],
+   "posts": [
+    {
+     "date": "2026-07-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqa2jlukjk2s",
+     "text": "Lorenzo Salgado Araujo did everything right. A hardworking father who gave dozens of men a shot at the American dream. Driving his crew to work, ICE stopped him in unmarked cars and shot him dead. We need a full investigation. ICE’s track record says their story can’t be trusted."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqk3vg75622u",
+     "text": "The projected price tag of Trump’s illegal war of choice in Iran: $1 trillion  \n\nImagine what that money could do if we invested it in schools, housing, and health care instead of sending working-class kids to die."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqkmla3jpc2e",
+     "text": "The FHA's multifamily loan limits haven't been updated since 2003. Construction costs have. That gap is choking apartment supply nationwide, and it's a big reason your rent keeps going up. I teamed up with a Republican to fix the math. Get builders back to building. Now it's law."
+    },
+    {
+     "date": "2026-07-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqmnim6jac2d",
+     "text": "The ROAD to Housing Act is officially law. It stops Wall Street from buying up single family homes and cuts the red tape standing in the way of new construction. This is for every Arizona family just trying to buy a home."
+    },
+    {
+     "date": "2026-07-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqmyudcdak2c",
+     "text": "It's almost like his actions had consequences."
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqp4knvg4c2t",
+     "text": "I'm about to speak a the National Association of Latino Election and Appointed Officials (@NALEO) annual conference. WATCH HERE: naleo.org/naleo2026-li..."
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqpbe4utss2d",
+     "text": "When right wing extremists say that Latinos aren't Americans, they couldn't be more wrong. If they step onto any military base across the country, they'll see Latinos everywhere who are willing to give up their lives for this country.\n\n@naleoofficial.bsky.social"
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqpc2qlc4s2d",
+     "text": "Once again, this administration has made Latinos feel like we aren't part of this country when that couldn't be further from the truth. Joan Sebastian Guerrero and Lorenzo Salgado Araujo were killed just for fighting for their families and for the American Dream\n\n@naleoofficial.bsky.social"
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqpeqpwluk2j",
+     "text": "Standing up for our dignity, demanding economic fairness, and protecting our families is not in opposition of America, it is the most American thing we could be doing.\n\n@naleoofficial.bsky.social"
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqrixwe6w227",
+     "text": "Last night the Senate unanimously passed my resolution with Senator Lummis saying Sam Bankman-Fried should never get a pardon. He stole more than $8 billion from hardworking Americans and a jury convicted him unanimously. He's a criminal who deserves to stay locked up.\n\nwww.yahoo.com/news/politic..."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mqrqpfo5w22z",
+     "text": "Navy Federal Credit Union already agreed to pay back $80 million in illegal overdraft fees to veterans and service members. Then Russell Vought tore up the order and killed the deal. He says the order was unlawful. What's actually unlawful is stiffing our troops out of the $80 million they're owed."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mraorlq66k24",
+     "text": "This is horrifying. We must hold these companies accountable.\n\nfuturism.com/artificial-i..."
+    },
+    {
+     "date": "2026-07-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrcldbtway2f",
+     "text": "When we invest in men's health, we build stronger families and stronger communities."
+    },
+    {
+     "date": "2026-07-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrflmtfmhs2j",
+     "text": "Lorenzo Salgado Araujo’s sons never got to say goodbye to their father. It’s high time the Department of Homeland Security reigns in ICE’s reckless and cavalier behavior before they tear more families apart."
+    },
+    {
+     "date": "2026-07-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrgaxnffzk2w",
+     "text": "There are some good things in this bill. But some of that good is paid for by robbing one veteran to pay another.\n\nWe don't have to choose between veterans. Fund it right."
+    },
+    {
+     "date": "2026-07-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mriadhulej2s",
+     "text": "I grew up working construction sites. Yesterday I worked alongside @habitatcaz.bsky.social, the #1 Habitat affiliate out of 1,000 for families served. Arizona's growing fast but construction hasn't kept up. My ROAD to Housing Act will boost supply and lower costs for families buying a home."
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrnao2qsl62s",
+     "text": "Kids are on these apps for hours and it's showing. Grades slipping, confidence shot. These platforms mine kids for data and don't care what it costs their mental health. My bill says if you're under 16, you need your parent's permission to create an account. We have to protect our kids."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrpufpqlbs2k",
+     "text": "Make it make sense."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrqbbkqcfc2p",
+     "text": "Trump is trying to restrict vote-by-mail, but he doesn't call the shots. Arizonans — Democrats, Republicans, and Independents — have decided they want to vote-by-mail, so we're going to continue to vote-by-mail."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrt6an72pc23",
+     "text": "There’s no national coalition, no vibrant democracy, without Latinos. When they try to make us feel hopeless or drive us into the shadows, we fight back.  \n\nWe organize, we register, and we bring our people to the polling booth. \n\n¡Muchas gracias, @weareunidosus.bsky.social! ¡Seguimos adelante!"
+    },
+    {
+     "date": "2026-07-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mrxk2xng5k2m",
+     "text": "Half of American parents are going into debt just to send their kids back to school. That's not normal. That's a cost of living crisis. I'm fighting every day to lower costs for Arizona families so back to school doesn't mean back to debt."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3msbqrgkrp72r",
+     "text": "Social media is poisoning our kids’ developing minds. When unsupervised online, they can be exposed to explicit material, recruited by drug or sex traffickers, or cyber bullied. Meanwhile, Big Tech is profiting off of that very screen time. It’s time we set a federal policy to protect our children."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3msy2r4bc4k26",
+     "text": "I’m seeking an official oversight visit with a bipartisan Senate Delegation to the USS Lincoln to investigate the reported alarming conditions."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3msyco3v6522n",
+     "text": "As a Marine who’s seen active duty, I can't imagine not having a sense of when I'd be able to go home. \n\nI'm calling for an immediate investigation into these alarming reports. In the meantime, here's a resource for our service members: www.health.mil/Military-Hea..."
+    },
+    {
+     "date": "2026-08-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mt2wf55tl227",
+     "text": "The Navajo Code Talkers helped this country secure victory in WWII. We owe them a debt that can never be repaid.\n\nSempre Fi, Marines."
+    },
+    {
+     "date": "2026-08-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mt5djdvnnk2e",
+     "text": "Because of Trump's cuts to Medicaid, rural healthcare centers in places like Graham County are at risk of closing. Republicans are making people sicker and poorer to give tax cuts to the rich."
+    },
+    {
+     "date": "2026-08-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtaijc3pw22o",
+     "text": "Stopped by the Safford Fire Department to thank some of our firefighters. As extreme heat and dry conditions increase the risk of wildfire, I’m working to ensure our firefighters have the resources they need to keep Arizonans safe."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtcx2fqhnc26",
+     "text": "Great to meet with students and faculty at Eastern Arizona College as they kick off the semester. We talked about public service, life in the Senate, and how to build opportunity right here in rural Arizona."
+    },
+    {
+     "date": "2026-08-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtgz6uunwk2q",
+     "text": "NEW: I’m introducing a bill to ban cell phones in the classroom.\n\nTechnology is an important part of our kids’ lives, and it’s not going away. But we can’t let it get in the way of their learning.\n\nLet's get it done."
+    },
+    {
+     "date": "2026-08-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mthgxlmlsc2q",
+     "text": "The biggest housing bill in over 30 years is now law. And it includes a key provision of mine that cuts red tape to build more housing, faster, and lower costs. \n\nGrowing up, I didn’t always have a bed. But I always had a place to call home. I'm working to make sure every family can say the same."
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtjdbbqisc2o",
+     "text": "My commitment: make sure no part of Arizona is forgotten."
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtjtl6an7c2f",
+     "text": "$1 billion in tariff refunds to boost Target’s profits. \n$0 for you.\n\nThat money should go back into your hands, not corporate bank accounts."
+    },
+    {
+     "date": "2026-08-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtquhegtd22m",
+     "text": "As Trump moves to gut Head Start—a program thousands of Arizona's working families rely on—I met with parents and providers to hear what's happening on the ground.\n\nHead Start has given kids a fair shot since 1965. I’m fighting to make sure it’s still here for the next generation."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtrzxvvkss23",
+     "text": "Latino men feel a deep responsibility to provide for and protect their families.\n\nWe need to make sure they have the support to be good fathers, husbands, partners, business owners, and community leaders—while also valuing and empowering the Latinas in our lives."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtuhbhu2bk2u",
+     "text": "Trump just moved to gut Head Start, and Arizona families will feel it along with families across the country.  \n\nFor an administration that calls itself \"pro-family,\" this is about as anti-family as it gets. We need to do everything in our power to fight back."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtw3k3doz22w",
+     "text": "110 years of the most beautiful landscapes in the world. Happy birthday National Park Service!\n\n(P.S. Thanks to my Veterans in Parks Act, veterans and Gold Star families can visit any national park for free, so get exploring!)"
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtynsvepac2d",
+     "text": "This outcome speaks for itself. Big Tech companies like Meta are purposely harming our kids.\n\nThat's why I introduced a bill requiring parental permission before kids under 16 join social media. Time to put an end to Big Tech making billions at the expense of our kids' well-being."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mtywz4xcvk2g",
+     "text": "The most important part of my job is hearing directly from you. That's why I'll be in Nogales for a town hall this Friday to discuss immigration, delays in DACA renewals, trade-related challenges and inflation, and pathways to greater economic mobility in Santa Cruz County. I hope you'll join me."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mu5zcys3g22w",
+     "text": "We’re 6 months into a war that’s achieved nothing.\n\n18 of our men and women in uniform have been killed, and the cost-of-living is crushing American families.\n\nIt's time to end this stupid war and bring our service members home."
+    },
+    {
+     "date": "2026-08-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mudoh6e5rs22",
+     "text": "For 70 years, Paul Bond Boots has called Nogales home. Supporting businesses like this means supporting local jobs, local families, and the entire community."
+    },
+    {
+     "date": "2026-08-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mufa2aaopk2w",
+     "text": "The best part of my job is hearing directly from you, and this past Friday in Nogales was a great reminder of that. Thanks to everyone who came out to my town hall. I'll keep showing up for Arizona."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mui3rm3zhk2x",
+     "text": "As Trump plunges us into a reckless trade war with Canada, I met with Parliamentary Secretary to the Minister of International Trade Yasir Naqvi today in Ottawa."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3muiemtkquc2k",
+     "text": "Canada fought beside the U.S. in both World Wars, the Korean War, and Afghanistan. Their National War Memorial stands as a reminder of what that cost. \n\nYou don't walk away from an alliance like this. I'll keep fighting to protect it."
+    },
+    {
+     "date": "2026-09-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mukfailib22z",
+     "text": "A whistleblower from the U.S. Postal Service has confirmed what we feared: Trump's mail-ballot verification system is so broken it could lose or reject ballots ahead of the midterms.\n\nSo, I'm demanding USPS testify before the Senate. If you try to impede Arizonans from voting, you have answer to us."
+    },
+    {
+     "date": "2026-09-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3muzdq4vric2c",
+     "text": "I grew up poor, but I was lucky enough to get a good education, make it to Harvard, and become a U.S. Senator. Every kid deserves that same fair shot.\n\nThat’s what I'm fighting for: a public school system that works no matter who you are or where you’re born.\n\nLet's get to work."
+    },
+    {
+     "date": "2026-09-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3muzlxjmua22l",
+     "text": "Protecting the Department of Education has to be a priority. So does slashing federal funding for vouchers, increasing teacher pay, tackling student absenteeism, and building out workforce training programs.\n \nHow do we afford it?\n \nLet's start by eliminating Trump’s tax cuts for billionaires."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvamftjy2k2x",
+     "text": "Today we pause to honor those we lost on September 11, 2001, and the heroic men and women who ran toward danger to save lives."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvbh2t24qc2f",
+     "text": "U.S. diesel prices have topped $6 a gallon for the first time ever. \n\nThe trucks that deliver your food run on diesel. Just about everything you buy at the grocery store is about to get more expensive.\n\nOur country can’t afford another endless war."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvbinpd35224",
+     "text": "Sydney and I are wishing all those celebrating Rosh Hashanah a healthy, happy, and sweet new year. Shana Tova!"
+    },
+    {
+     "date": "2026-09-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvftazuru22x",
+     "text": "I spend a lot of time at Section 60 in Arlington, visiting friends I lost in Iraq. Now Trump wants an ugly arch within view of that sacred ground. This isn't about liking the guy. It's January 6th. It's the DOJ. It's putting his name on the Kennedy Center. None of it earns a monument."
+    },
+    {
+     "date": "2026-09-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvftcqnhs22x",
+     "text": "AI is unlike any technology we've seen before. Once it becomes fully dangerous, it won't care whether you're Chinese or American. We can't afford to wait three years to act, we have to move now to regulate it."
+    },
+    {
+     "date": "2026-09-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvgmx7ndys23",
+     "text": "This administration says their tariffs on Canada will bring back American manufacturing. They won't. Smart industrial policy—like the CHIPS Act—and real cooperation with Canada are what actually build a stronger North American economy that can compete with China."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvjhnndzgs2e",
+     "text": "AI is advancing faster than our ability to understand its risks. When our national security is on the line, waiting to act isn’t an option."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvjib7r4sc2e",
+     "text": "We don’t need to wait on the president to regulate AI. This is why we have different branches of government. Congress needs to bring experts to the table, work across the aisle, and move quickly on guardrails that protect America, the world, and humanity."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvjixpkn2s2e",
+     "text": "The Supreme Court just rejected the president’s attempt to restrict mail-in voting. \n\n80% of Arizonans—Republicans, Democrats, and Independents—vote by mail, and Trump can’t change that."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvqdk65j3s2z",
+     "text": "Corporations are mining your data to squeeze more money out of you. It’s called surveillance pricing, and I’m working to ban it."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvqmihu7w22q",
+     "text": "Great to welcome Black leaders to Washington for Congressional Black Caucus week.\n\nWhen our Black communities are strong, Arizona is strong—and our entire country is stronger when we move forward together."
+    },
+    {
+     "date": "2026-09-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mvydrn5lgk2p",
+     "text": "Wishing all those who observe an easy fast and a meaningful Yom Kippur. G’mar Chatimah Tovah."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mw5ffzicxs2h",
+     "text": "Today at @concordiasummit.bsky.social, I made the case: AI is moving quickly. Congress needs to move with it to protect America, the world, and humanity."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mw77mwrjsk2d",
+     "text": "What's Congress doing on AI right now? Nothing.\n\nEveryone's focused on the next election while this technology moves faster than any of us can predict. I’m pushing to get everyone at the table—experts, skeptics, regulators, and government—to rein in this technology. Not later, now."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwer5ghqe222",
+     "text": "Sydney and I had a great time at the Action for Cancer Awareness Awards Luncheon this week. The @preventcancer.org Foundation's bipartisan Congressional Families Program is about getting people the resources they need to catch cancer early, when it's still treatable. We're proud to be a part of it."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwk5kd6azc2p",
+     "text": "On Gold Star Mother’s and Family’s Day, we honor those who gave their lives for our country and hold their loved ones close in our hearts.\n\nWe have a sacred obligation to care for our Gold Star mothers and families. I will always fight to ensure they have the resources and support they have earned."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwlv6otw3k2j",
+     "text": "Honored to receive the Marine Corps seal from Brigadier General Shannon M. Brown, who served in Iraq and in some of the hardest battles with me.\n\nIt's tradition for each service branch to present a seal to members of Congress. As a Marine, this one is special. Semper Fi."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwo63lkrxs2u",
+     "text": "NEW: The Senate just passed our bipartisan bill to extend terrorism risk insurance—a program created after 9/11 to make sure businesses aren’t left without coverage in the event of an attack."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwogo7meuc2o",
+     "text": "Americans everywhere are struggling to buy a home. And without the ability to buy a home, many of them can't build wealth. \n\nAt today's American Growth Summit, I laid out the changes we need in Washington to give everyone a fair shot at the American dream."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwrabcyyvc2x",
+     "text": "There is no kill switch. No failsafe protections.\n\nI asked AI safety experts what happens if things go really bad, really fast.\n\nTheir answer should terrify us all."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwrfbxteyk2d",
+     "text": "Once rogue AI agents start speaking in their own language, they won't care whether you're America or China. We're all at risk.\n\nCongress needs to take that threat seriously."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mwvt4mmgss2e",
+     "text": "While you had to pay up, Meta skirted almost $4 billion in taxes last year.\n\nHow? By abusing a tax credit tied to its data centers.\n\nIt's time to make corporations pay their fair share."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mx5pk2syhc2r",
+     "text": "On her way out the door, Kristi Noem used taxpayer dollars to buy five planes from a donor.\n\nJust the latest example of blatant government corruption under President Trump."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mx5sye5tgc2z",
+     "text": "Kids are getting phones younger and younger, and we’re seeing the consequences in the classroom: more distractions, less learning. As a dad of three young kids, I’m worried. \n\nIt’s time to get cell phones out of the classroom. I introduced a bill to get it done."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mx7wpycys22h",
+     "text": "This means a handful of Trump’s billionaire buddies will control huge parts of the media. \n\nThe next president needs to break up all the mergers approved under this administration. Big business has to understand there are consequences when they team up with corrupt government."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxewnvkxgk2f",
+     "text": "Anyone who works hard enough, saves enough, and plays by the rules should be able to build wealth for their family, buy a car, a house, or a big-ass truck. The American dream.\n\nBut right now, hard work isn't cutting it. And as elected officials, it’s our job to change that."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxh7x3lapk2f",
+     "text": "AI companies are making a fortune right now. Working people can't get left behind. \n\nMy plan is simple: tax AI companies and data centers, then use that money to put Americans to work in a New Deal-style public service jobs program. \n\nWe did it before, and we can do it again."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxoxdn7llk2l",
+     "text": "It’s Indigenous Peoples’ Day—a day to honor the Indigenous communities that continue to shape Arizona's history, heritage, and culture."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxp4sour5k2q",
+     "text": "One of the best parts of this job is meeting the next generation of Arizona leaders.\n\nI was honored to speak with students in the Latino Leaders Program at Chandler City Hall. I may be Arizona’s first Latino Senator, but if these kids have anything to do with it, I won’t be the last."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxrncjxj3k22",
+     "text": "In case you missed it, I put out a plan to save the middle class and restore the American dream."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxwvxkqck226",
+     "text": "As union density has gone down, wages have stalled. \n\nCorporations are making record profits while workers are taking home a smaller slice of the economy than ever before. \n\nHere’s one way we can rebuild union power and change the direction of the working class."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mxx4p7ashs2y",
+     "text": "Many Arizona families can’t afford child care. And even when they can, they can’t find a spot.\n\nJoin me and child care leaders from across Arizona on Monday, Oct. 19 for a town hall on making child care affordable and easier to find.\n\nRSVP at the link below.\nforms.cloud.microsoft/g/cQAJf8FdRZ"
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3myawlnnxcc2l",
+     "text": "On average, Arizona families spend more than $16,000 per year on child care. That’s more than college tuition at ASU. \n\nI’m backing a bill to cap the price of child care. We’ve got to get serious about making it easier to be a working parent."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mycth57g5c26",
+     "text": "Thank you to the child care leaders, parents, and providers who joined me at my town hall yesterday.\n\nEvery story in that room came back to the same two problems: child care costs too much, and there aren’t enough spots for the families who need them. We have to do better for Arizona's families."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3myczfpusbk23",
+     "text": "Trump is spending billions on an illegal war that nobody asked for. Imagine what that money could do if we funded childcare or healthcare instead. \n\nEnd the war in Iran. Invest in working families."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mydkagshfs2n",
+     "text": "Child care should not be a luxury. We need to make high-quality child care as universal as possible so that every parent can afford to work and raise their kids."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3mydu6rptpc2c",
+     "text": "Arizona families work hard for every dollar they earn, but rising gas and grocery prices are eating up their paychecks.\n\nI’m fighting to lower costs, but the fastest way to do that is simple: end the war in Iran."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3myfr2hyp4s2h",
+     "text": "Big news for Arizona! Chiricahua is now officially America’s 64th national park, and Arizona’s fourth.\n\nIf you’ve been, you know: it's called the “Wonderland of Rocks” for a reason. The views are like nothing else in the country.\n\nNow is the time to visit Chiricahua National Park!"
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3myhyic6gms2e",
+     "text": "Gas, groceries, energy: it all costs more. Diesel now averages around $6.30 a gallon nationwide.\n\nThe most important thing Trump could do right now to bring prices down? End his stupid war in Iran."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/gallego.senate.gov/post/3myiiotokoc2a",
+     "text": "Sometimes what helps with healing most is a project, the right tools, and people who get it. That’s what Guardian Garage in Peoria, Arizona offers.\n\nWhile I was there, I sat down with military families and veterans to hear what they’re up against. I’m bringing what I heard back to D.C."
+    }
+   ]
+  }
+ ]
+}

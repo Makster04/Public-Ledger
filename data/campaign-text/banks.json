@@ -1,0 +1,59 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "banks",
+ "name": "Jim Banks",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.jimbanks.us/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.jimbanks.us/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108215004/https://jimbanks.us/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108215004/https://jimbanks.us/",
+     "original": "https://jimbanks.us/",
+     "date": "2022-11-08",
+     "title": "Jim Banks for Congress",
+     "text": "## Meet Jim Banks\nJim Banks is a proven conservative leader who has made a difference in Congress. Congressman Banks has worked tirelessly to rebuild our military and secure better care for our veterans, cut taxes and grow our economy, protect the right to life and defend our religious liberty. He needs your help to get re-elected so he can continue to fight for our conservative values and move our country forward.\nRequest a Yard Sign"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220611/https://jimbanks.us/issues/",
+     "original": "https://jimbanks.us/issues/",
+     "date": "2022-11-04",
+     "title": "Issues – Jim Banks for Congress",
+     "text": "## House Committee on Armed Services\nAs a member of the House Committee on Armed Services, Jim prioritizes our service members’ ability to defend the nation against potential threats – while also being as fiscally responsible as possible. We owe this to ourselves and the generations of Hoosiers and all Americans who will inherit our great country. Jim is honored to co-chair the Future of Defense Task Force which is charged with reviewing U.S. defense assets and capabilities and assessing the state of the national security innovation base to meet emerging threats. He also serves on the Seapower and Projection Forces Subcommittee and is honored to be the Ranking Member on the Cyber, Innovative Technologies, and Information Systems Subcommittee.\n## House Committee on Education and Labor\nJim is committed to supporting pro-growth policies like those that have produced record low unemployment and the strongest wage growth in decades. He is honored to serve on the House Education and Labor Committee where he sits on the Health, Employment, Labor, and Pensions and Higher Education and Workforce Investment Subcommittees. He is always looking for opportunities to fill the skills gap between training and available jobs, as well as fighting to ensure our students have the tools, resources and access to quality education they need to succeed.\n## House Committee on Veterans’ Affairs\nAs a member of the House Committee on Veterans’ Affairs and a veteran himself, Jim is acutely aware of the challenges facing the veteran population and works every day to ensure our veterans receive the care and benefits they have earned. He sits on the House Veterans’ Affairs Subcommittee on Technology Modernization where he oversees the replacement of VA’s archaic legacy electronic health record (EHR) with the modern and efficient commercial Cerner Millennium EHR.\n## Chairman, Republican Study Committee’s Budget and Spending Task Force\nThe Republican Study Committee (RSC), the largest caucus of conservatives in Congress, named Congressman Banks the Chairman of the Budget & Spending Task Force. Banks and his colleagues have produced the only budget in Congress that cuts trillions in wasteful spending and starts the overdue task of beginning to pay down our over $22 Trillion national debt by balancing the budget in 5 years.\n## House Values Action Team and Pro-Life Caucus\nCongressman Banks is a proud member of both the House Values Action Team and the House Pro-Life Caucus. These two groups work in conjunction with over 100 members of Congress to advance policies that promote a culture of life and traditional family values. Banks has introduced/cosponsored over 30 pieces of legislation this Congress that would encourage these shared goals."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.jimbanks.us/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.jimbanks.us/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "lujan",
+ "name": "Ben Ray Luján",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.benrlujan.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.benrlujan.com/",
+   "saved": false,
+   "pages": [],
+   "posts": [
+    {
+     "date": "2026-07-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mpm56uhkxc2v",
+     "text": "If you’re born on American soil, you’re an American citizen. Period."
+    },
+    {
+     "date": "2026-07-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mpmhb6hsvk2p",
+     "text": "President Trump and Congressional Republicans refused to extend ACA tax credits, and now 3 million Americans have been priced out of their health care.\n\nThey don't care about making health care affordable. They care about protecting wealthy donors and corporate interests."
+    },
+    {
+     "date": "2026-07-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mpov7mia4c2v",
+     "text": "I had the opportunity to sit down with Matthew Bernabe, a local business owner who truly embodies what it means to serve our communities."
+    },
+    {
+     "date": "2026-07-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mpqzverzns2g",
+     "text": "Come work on my team! My office is now accepting internship applications for the upcoming fall semester. For more information about the internship program, please visit: www.lujan.senate.gov/services/int..."
+    },
+    {
+     "date": "2026-07-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mpuetri4i226",
+     "text": "I took this photo a year ago when Senate Democrats were on the floor for nearly 24 hours straight, fighting back against President Trump’s Budget Betrayal. \n\nCongressional Republicans weren’t working for the American people that day – only billionaires and large corporations."
+    },
+    {
+     "date": "2026-07-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mpueukvygc26",
+     "text": "Happy Fourth of July, New Mexico! 🇺🇸\n\nAs we celebrate 250 years of independence, let's remember that America's story has always been one of choosing freedom over tyranny and democracy over kings. We've come too far to go back."
+    },
+    {
+     "date": "2026-07-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mq3b5zoje22o",
+     "text": "Millions of Americans are being priced out of their health care plans because of Trump and Republicans' Big Betrayal. (1/3)"
+    },
+    {
+     "date": "2026-07-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mqhhpo3k4s2b",
+     "text": "Terrible news this morning. Senator Graham spent his life serving our country, first in the Air Force and later in Congress. He was committed to public service.\n\nMy prayers are with Senator Graham’s family, friends, staff, and the people of South Carolina. May he rest in peace."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mqknj4hpos2h",
+     "text": "President Trump has weakened America’s food safety and disease monitoring systems by firing the inspectors and researchers who keep our communities safe."
+    },
+    {
+     "date": "2026-07-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mqmwdiztck2e",
+     "text": "I just voted against the motion to proceed with the Senate Republicans’ version of the NDAA. I will not condone Trump’s illegal war with Iran that has already claimed the lives of 15 servicemembers and costs the American taxpayer billions of dollars."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mqspkemmcc2a",
+     "text": "If you didn’t catch Donald Trump’s incoherent ramblings tonight, here’s what you need to know:\n\nDonald Trump lost the 2020 election. Fair and square. He’s still selling the same lies that led to a violent insurrection five years ago."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mqulzbgrlk2j",
+     "text": "I miss my friend, especially now. Whenever you would call John on the phone and reached his voicemail, he would end with, “Don’t take your eye off the prize.” \n\nAmerica: don’t for a second take your eyes off what Republicans are doing to undermine our elections. The time to use your voice is now."
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mr3hfvp7ws2g",
+     "text": "14 days to save Chaco Canyon from the Trump administration! Let’s make our voices heard."
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mr3t24lbak2w",
+     "text": "I’m deeply saddened by the loss of another American servicemember in the Middle East. My prayers are with the heroes we’ve lost, their families, and all those mourning this devastating loss."
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mr3xriqruc2w",
+     "text": "Our servicemembers deserve better than this.\n \nPete Hegseth must stop hiding the true toll of Trump's illegal and unwanted war with Iran. The injuries and deaths suffered by our troops must be fully disclosed to the public. Shame on you, Secretary."
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mr46yn6uws2w",
+     "text": "9 more days to make it clear to Donald Trump: keep your hands off Chaco and our public lands! Make your voice heard; link in the comments."
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mr6laf6yf22a",
+     "text": "Donald Trump promised to lower costs. Instead, he's launched a global trade war against our closest allies, disrupting local economies, and threatening American jobs. All while Donald Trump and his political allies keep getting richer."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mrb5a2ewlk2f",
+     "text": "Today, I stood with the All Pueblo Council of Governors and the New Mexico Congressional Delegation with one clear message for Donald Trump: Chaco Canyon is not for sale.\n\nOnce Trump damages the land around Chaco, it cannot be undone."
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mrnsc5oto22v",
+     "text": "Only TWO days left to submit your public comment and tell the Trump administration to back off Chaco. \n\nChaco is sacred, irreplaceable, and must be protected. We need everyone's voice in this fight. Submit your public comment right now and send to a friend:"
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mrq46b774s2h",
+     "text": "Chaco Canyon is NOT for sale. You have until TOMORROW to submit a public comment and help protect this sacred site.\n\nSubmit your public comment now: \n\neplanning.blm.gov/Project-Home..."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mrqksxhso22r",
+     "text": "I voted against confirming Jay Clayton as President Trump’s Director of National Intelligence. This position must be guided by facts, not conspiracy theories or blind political loyalty."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mrv7gfakys2l",
+     "text": "On the 61st anniversary of Medicaid and Medicare, Donald Trump and Republicans have made it clear: they don't care about your health care."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mrvbjvgaic2e",
+     "text": "Over 200,000 of you made your voice heard for Chaco! The fight doesn’t end here. Follow here for more updates on the process and how you can continue to help protect Chaco."
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3ms74yhimok2r",
+     "text": "Americans deserve to know that no one is above the law, especially the President of the United States. The Department of Justice must protect the people – not those who break the law."
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3msdyf2g3rk2u",
+     "text": "New Mexico’s specialty crop farmers struggle every year with weather disasters, drought, and market uncertainty. That’s why I introduced the CHILE Act to bring federal support to the producers of our chile, pecans, and other specialty crops that make our state’s food so special."
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mseincadws2l",
+     "text": "Taking food from 5 million Americans – including 1.5 million children – is nothing to be proud of."
+    },
+    {
+     "date": "2026-08-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mshbsjf6p22x",
+     "text": "The Voting Rights Act was signed into law 61 years ago today to break down barriers to the ballot box. Republicans are trying to reverse that progress.\n \nTheir so-called SAVE Act would make it harder for millions of eligible Americans to vote."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mtehmelmmc2p",
+     "text": "I’ll be in Gallup this Wednesday to help get as many New Mexicans compensation who are nuclear fallout victims and uranium workers through my Radiation Exposure Compensation Act. We’ll be answering questions and helping folks with their applications. If you think you qualify, register here:"
+    },
+    {
+     "date": "2026-08-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mtjxij52mk2e",
+     "text": "Targeting families seeking care at a health clinic and arresting them in the parking lot is sickening. These reckless thugs have no place in our communities.\n\nFamilies shouldn’t have to fear that getting medical care for their child could put their family at risk."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mtwjp5ijhc2s",
+     "text": "Alongside the community, I fought to get RECA signed into law and deliver compensation to New Mexicans. \n\nI was proud to be in Gallup last week to help ensure New Mexicans receive what they are owed."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mtwu7wp3u22y",
+     "text": "This is deeply sad. Measles cases continue to spread even though vaccines are safe, effective, and readily available.\n\nDon’t believe the dangerous conspiracies coming from the Trump administration. Protect yourself, your family, and your community. Get vaccinated."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mu3ptocwh22l",
+     "text": "ICE's plan to spend millions of taxpayer dollars on shock gloves raises serious concerns about safety, accountability, and the potential for abuse.\n\nGiven ICE’s record of excessive force and lack of transparency, I’m calling on ICE to scrap this plan and focus on holding its officers accountable."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mumx3hq6ss2f",
+     "text": "I was in Rio Arriba County yesterday and had one clear message from New Mexicans: our public lands are NOT for sale!"
+    },
+    {
+     "date": "2026-09-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3muuzvuudd22v",
+     "text": "It’s New Mexico, always has been and always will be. \n\nJust like how you’ll always be a sinvergüenza and corrupt."
+    },
+    {
+     "date": "2026-09-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mux573s6tk2u",
+     "text": "Happy Labor Day, New Mexico!  \n\nAmerica is strong because of our union workers, and all hard-working folks nationwide. I will continue to stand in solidarity in the fight to expand workers' rights, fair pay, and safer working environments."
+    },
+    {
+     "date": "2026-09-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mv4atjtygs2v",
+     "text": "New Mexico wouldn’t be New Mexico without our chile, pecans, or pistachios. Specialty crop producers around the country grow all of the iconic and nutritious foods that keep Americans healthy and happy."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mv6ek5an322w",
+     "text": "I’m leading the NM Congressional Delegation in calling on Apple and Google to keep New Mexico as New Mexico on their maps.\n \nPresident Trump has no legal authority to rename our state. New Mexico’s name belongs to our people – not the president.\n \nThe companies have until Sept 18 to publicly commit."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mv6tcahaek2b",
+     "text": "It was an honor to provide the keynote at the @nmsu.edu Domenici Public Policy Conference.\n\nSenator Domenici showed that bipartisanship isn’t about agreeing on everything. It’s about finding common ground and getting things done for folks at home. That’s the NM tradition I’m proud to carry forward."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mvbrbvagi223",
+     "text": "Wishing a very happy New Year to the Jewish community in New Mexico 🍎🍯"
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mvlxl4vyes2k",
+     "text": "Who pays for the wedding — the bride’s family or the groom’s? Well, if you’re Donald Trump Jr., you can get a Russian oligarch with a net worth of $300 million and in Putin’s inner circle to pay for a private island in the Bahamas, with lavish fireworks displays and more."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwbxnjxlp224",
+     "text": "I just voted for the 14th time to end Donald Trump’s disastrous war with Iran and bring our troops home.\n \nAt least 19 servicemembers have lost their lives, many remain in harm’s way, gas is over $4.53 a gallon, and record diesel prices are squeezing our farmers and working families."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mweowdqaa22k",
+     "text": "I was proud to pass this legislative victory in the Senate for those who have cared for our lands for hundreds of years. Now more than ever, we need better communication and consultation between land grant-merced communities and the federal government."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwexlwgmyk2k",
+     "text": "The countdown is ON! Only 7 more days until the Albuquerque sky is lit up with the most incredible balloons. Will we see you there?"
+    },
+    {
+     "date": "2026-09-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwgtjlo5xs2g",
+     "text": "There’s only one thing I have to say to those who want to come in and sell off or destroy our public lands: hell no, hands off! \n\nYou can read my full thoughts on the recent land grab by the Trump administration and Congressional Republicans in the @thenewmexican.bsky.social:"
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwlv3fld622l",
+     "text": "Gun violence has no place in our schools and our communities. Every educator, student, and family deserves to feel safe, and we must continue working to prevent violence and protect our communities.\n \nI’m praying for Mr. Matthews and the entire Highland Middle School community."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwmbprvdzk2n",
+     "text": "As climate change worsens and drought becomes a growing part of life across the West, the federal government must be better prepared to support Western states and deliver emergency funding when disaster strikes."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwopbiqjos2n",
+     "text": "President Trump and Russ Vought are stealing nearly $1 billion in funding Congress already approved. They don’t get to pick which laws to follow and which ones to break.\n\nI’m fighting to get these funds to the New Mexico students, families, and small businesses counting on them."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwor7nsy5c2n",
+     "text": "President Trump used your tax dollars to run a self-promotional, illegal TV ad to distract from soaring prices and his reckless war in Iran, with no end in sight.\n\nCongressional Republicans wrote a blank check from Trump's Department of Homeland Security – and this is what they are spending it on."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwtmqgsjhk2m",
+     "text": "President Trump promised to lower costs on day one.\n\nIt’s just another broken promise. New Mexicans are paying the price for Trump’s never-ending war and reckless trade war."
+    },
+    {
+     "date": "2026-10-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mwylkrnmhs2o",
+     "text": "This is what they’re fighting for. This is what WE’RE fighting for. \n\nAre you with us in standing up against a foreign-owned uranium mining company coming in and destroying the Rio Chama watershed?"
+    },
+    {
+     "date": "2026-10-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mxkghrs5rk24",
+     "text": "Nothing like New Mexico in the fall 🍂"
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mxncpm4ync2l",
+     "text": "All good things must come to an end!\n\nThank you to the organizers, pilots, vendors, photographers, and visitors who made this year’s Balloon Fiesta so special.\n\nUntil next year, Albuquerque!"
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mxopsyj5z22y",
+     "text": "On Indigenous Peoples’ Day, we recognize and honor the accomplishments, contributions, and strength of Tribal Nations across the country. This day is also an important reminder of the generations of injustice endured by Native communities and our responsibility to confront that history."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mxu5askzgs2m",
+     "text": "ICE is terrorizing our communities, making people afraid to go to work or even step outside.\n\nThis isn’t making our communities safer. Republicans wrote ICE a blank check, enabling reckless thugs to terrorize our neighbors. They own the chaos and fear they’ve unleashed across America."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3my66vvub2224",
+     "text": "More than 1M of you fought back against the Trump administration by making your voices heard.\n\nWe cannot let up in the fight to preserve the Roadless Rule, which protects our forests, wildlife, and watersheds and supports NM’s outdoor recreation economy. Keep showing up and making your voices heard."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3myfswvwcxs2g",
+     "text": "Meta misled consumers about the privacy of their personal information, and now it's being held accountable. I'm proud of NM for standing up for consumers, and I'll keep fighting to give New Mexicans more control over their data and make sure Big Tech's profits don't come at the expense of privacy."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3myfw2hmt4s2k",
+     "text": "Our veterans should never have to worry about where their next meal will come from.\n\nBut Republican cuts to SNAP are putting food assistance at risk for veterans who need it. That’s unacceptable. I’m fighting to restore food programs and make sure no veteran, child, or senior goes hungry."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3myxbsugjrs2s",
+     "text": "Dolores Huerta was a shining beacon in the darkness. She led countless people in the fight for better wages, safer working conditions, and a seat at the table.\n\nDolores was a voice for those whose voices had long gone unheard. I am praying for everyone who was inspired by this incredible leader."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/lujan.senate.gov/post/3mz2afpg7as2f",
+     "text": "San Juan County residents impacted by historic flooding deserve the resources to recover & rebuild. I’m grateful to our first responders, local officials, and volunteers who have stepped up. I will continue working with state, federal, and Tribal partners to deliver the support our communities need."
+    }
+   ]
+  }
+ ]
+}

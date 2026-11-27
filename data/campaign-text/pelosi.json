@@ -1,0 +1,135 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "pelosi",
+ "name": "Nancy Pelosi",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.pelosiforcongress.org/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.pelosiforcongress.org/",
+   "saved": true,
+   "capture": {
+    "date": "2022-10-14",
+    "url": "https://web.archive.org/web/20221014084748/https://www.pelosiforcongress.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221014084748/https://www.pelosiforcongress.org/",
+     "original": "https://www.pelosiforcongress.org/",
+     "date": "2022-10-14",
+     "title": "Nancy Pelosi for Congress",
+     "text": "## Latest News\nIt is my honor to represent our City and our San Francisco values in the Congress: jobs with dignity, human rights, reproductive justice, LGBTQ equality, respect for immigrants, and care for our planet and for each other. When people ask me “What are the three most important issues facing the Congress?” I always say “our […]\n## Twitter\nOur Democracy is on the ballot. Our economic security is on the ballot.\nWe know what extreme Republicans are doing across America to undermine our elections.\nWith YOU, our Volunteers in Politics, we will win. 25 days left — make every day count! -NP\nCongressman Jesús “Chuy” García fights for immigration policy that reflects our values, health care, criminal justice & workers' rights.\nWith decades of experience as an organizer & advocate, #IL04 counts on @ChuyForCongress to show up for the vulnerable. #HispanicHeritageMonth https://t.co/atEZALdhc9 https://t.co/zd7Cc7Rllz\nRep. Lou Correa defends our Democracy and delivers for working families.\n@voteloucorrea fights for investments in public schooling and higher learning because he believes education is an equalizer of opportunity and access to the American Dream. #CA46 #HispanicHeritageMonth https://t.co/scnQQ7577y\nDemocrats cut seniors’ prescription drugs costs and strengthened their earned benefits — but extreme Republicans plan to cut seniors’ earned benefits by slashing Social Security and Medicare.\nThe choice is clear:\nDemocrats cut costs; Republicans cut benefits. -NP\nRep. @JuanVargas4CA learned to work for justice and to prioritize the health and welfare of children & families from his Jesuit education and parents' example.\nHe delivers jobs, investments in education and increased opportunity for his constituents. #CA51 #HispanicHeritageMonth https://t.co/Btwz9VQvHi\nWe know what extreme Republicans would do if they regain power — ban abortion and slash Social Security and Medicare — and we will NEVER let that happen!\nGrab a shift and help Get Out The Vote for Democrats: https://t.co/XrvHUuQeNj https://t.co/rldWC1Bjj1"
+    },
+    {
+     "url": "https://web.archive.org/web/20220814034330/https://www.pelosiforcongress.org/issues/national-security-and-gun-safety/",
+     "original": "https://www.pelosiforcongress.org/issues/national-security-and-gun-safety/",
+     "date": "2022-08-14",
+     "title": "National Security and Gun Safety: - Nancy Pelosi for Congress",
+     "text": "## National Security and Gun Safety:\nOur first responsibility is to protect and defend the American people. Nancy takes that responsibility seriously. Whether it is combating terrorism, protecting human rights, stopping cyber-attacks, working to put an end to the epidemic of gun violence or defending our democracy from foreign attacks – Nancy is working determinedly to protect America.\nNancy Fighting Back :\nProtect Our Democracy\nAmerica’s 2016 elections were attacked by a foreign adversary. Our democracy was undermined as the world watched. Ever since then, Democrats have been calling for an outside, independent commission to investigate this foreign assault and prevent it from ever happening again. Nancy and Democrats are fighting Republicans in Congress who’ve been working to cover up Donald Trump’s corruption and launched a smear campaign against Special Counsel Robert Muller, undermining his right to follow the facts wherever they may lead to.\nWhat do the Russians have on Donald Trump politically, financially and personally that he refuses to stand up to Putin and defend our democracy? That is a question Americans from every corner of our country want to know, and we will not stop pressing for answers.\nEnd Gun Violence\nThe failure to address the atrocious gun violence epidemic claiming 91 people every day in America and terrorizing our children’s schools must come to an end. We need strengthened background checks – which are supported by 97 percent of Americans including gun owners – to keep guns away from those who shouldn’t have them."
+    },
+    {
+     "url": "https://web.archive.org/web/20220814042456/https://www.pelosiforcongress.org/issues/energy-and-the-environment/",
+     "original": "https://www.pelosiforcongress.org/issues/energy-and-the-environment/",
+     "date": "2022-08-14",
+     "title": "Energy and the Environment - Nancy Pelosi for Congress",
+     "text": "## Energy and the Environment\nWe cannot afford Republicans’ willful special interest blindness to the climate crisis. With rising temperatures, surging seas and record floods, fires and storms, real American leadership is needed now more than ever. But Republicans are busy stacking the deck for big polluters against the health of our children and our communities.\nNancy Fighting Back :\nThat is why Democrats are fighting Trump and his cabinet’s reckless decision to leave the Paris Climate Agreement in which nations of the world came together to combat the climate crisis. Meanwhile, Republicans have accelerated their assault on our environment – with a dirty energy agenda that harms God’s creation by weakening critical clean air and clean water protections, auctions off our public lands, and enriches polluters and Big Oil.\nWe will continue fighting to ensure our children and their children inherit a world in which the air they breathe is clean of toxins and the water they drink is safe for their health by pushing for policies that protect our planet and bring about good-paying, clean energy jobs."
+    },
+    {
+     "url": "https://web.archive.org/web/20220814032152/https://www.pelosiforcongress.org/issues/human-rights/",
+     "original": "https://www.pelosiforcongress.org/issues/human-rights/",
+     "date": "2022-08-14",
+     "title": "Human Rights - Nancy Pelosi for Congress",
+     "text": "## Human Rights\nPeople in the United States of America have the right to live with dignity and respect. And it is on us as a people, and on elected representatives of the people, to ensure that sacred right is fiercely defended – no matter one’s race, ethnicity, nationality, religion, ability, sexual orientation or gender identity.\nNancy Fighting Back :\nUnder the Speakership of Nancy Pelosi, Democrats passed the Lilly Ledbetter Act which was the first bill signed into law by President Barack Obama. Democrats know that when women succeed, America succeeds — and we continue to fight to end the injustice of the gender wage gap with the Paycheck Fairness Act, provide affordable child care through Democrats’ A Better Deal, and grant much-needed paid sick leave for working parents. We will continue to fight to end harassment, abuse and discrimination against women in every sector of our society\nFrom repealing ‘Don’t Ask, Don’t Tell” to passing the Matthew Shepard and James Byrd, Jr. Hate Crimes Prevention Act, Democrats have made much-needed progress toward ending discrimination against the LGBT community. But more must be done to achieve full equality under the law. That is why with Democrats will continue fighting for the Equality Act and ensure our courageous transgender troops are protected from Trump’s misguided policies that punishes people for who they are.\nJust as the military leaves no soldier behind on the battlefield, as Democrats and elected officials, we will leave no veteran behind when they return home. Under my Speakership, Democrats were proud to have passed the largest increases in veterans’ funding; spearheaded educational opportunities for Iraq and Afghanistan veterans and their spouses and children with the Post 9/11 GI Bill; fought veteran homelessness and Republican efforts to privatize the VA and profit from veterans’ health care; and so much more. We will continue to stand with and protect veterans and their families who’ve defended our country, our democracy and our ideals.\nOur nation is one made up of immigrants from all parts of the world. Every newcomer, who brings their dreams, optimism and aspiration, contributes to our social, economic and political fabric – making America more American. Under Republican control of Washington, immigrants face an anti-immigrant agenda that instills fear and tears families apart.\nDemocrats continue to champion a bipartisan solution that will grant our brave DREAMers the opportunity to live in and continue contributing to the only country they love and call home. While the GOP demonizes hard-working immigrant families, Leader Pelosi and Democrats won’t stop fighting for comprehensive immigration reform."
+    },
+    {
+     "url": "https://web.archive.org/web/20220814023713/https://www.pelosiforcongress.org/issues/education/",
+     "original": "https://www.pelosiforcongress.org/issues/education/",
+     "date": "2022-08-14",
+     "title": "Education - Nancy Pelosi for Congress",
+     "text": "## Education\nEducation is fundamental to the strength of our democracy and country. It is key to ensuring people in America are equipped and prepared to succeed in an ever-changing global economy. As Nancy has said time and again: nothing brings more money to the Department of Treasury than investing in education – early childhood, K-12, higher education, post graduate, and lifetime learning.\nNancy has fought tirelessly to secure federal resources to help save San Francisco City College. Under her leadership, Democrats worked to strengthen federal safeguards in order to maintain high standards and promote equal opportunity for historically disadvantaged kids through the Every Student Succeeds Act. Because of the Student Aid and Fiscal Responsibility Act that passed under her speakership, students in California and across the country have been able to pursue a higher education thanks to the creation of the American Opportunity Tax Credit and thanks to the maximum amount increase in Pell Grants, which remain under Republican assaults.\nDemocrats also helped graduate students with their loans by slashing Stafford loan interest rates in half – from 6.7% to 3.4% – in addition to creating an income-based repayment program and establishing a loan forgiveness program for graduates who embark in public interest careers.\nNancy Fighting Back :\nStudent Loans, Childhood Learning and Teachers:\nIn America, over 40 million people are saddled by $1.3 trillion in student loan debt. This has to change. Nancy believes students across California and the U.S. deserve the right to refinance this crushing economic ordeal at reasonable and affordable rates through the Bank On Students Emergency Loan Refinancing Act.\nNancy also knows more must be done so children and students are able compete in the 21st century. That is why she is fighting to increase access to effective early childhood learning. At the same time, our teachers – who give their all – must be provided with the necessary resources and funding in order to ensure our future leaders stand ready to face the challenges of tomorrow ."
+    },
+    {
+     "url": "https://web.archive.org/web/20220705132339/https://www.pelosiforcongress.org/issues/campaign-finance-reform-and-voting-rights/",
+     "original": "https://www.pelosiforcongress.org/issues/campaign-finance-reform-and-voting-rights/",
+     "date": "2022-07-05",
+     "title": "Campaign Finance Reform, Gerrymandering and Voting Rights: - Nancy Pelosi for Congress",
+     "text": "## Campaign Finance Reform, Gerrymandering and Voting Rights:\nSince Citizens United, unlimited, secret money has flooded the airwaves and continuously drowned the say of millions of Americans – emboldening the dangerous, special interest agenda of the Koch Brothers and Republican corporate donors.\nWith their gerrymandered maps, Republicans have gone great lengths to rig the rules of our democracy against voters who know they choose their elected officials, not the other way around. At the same time, Americans across the country have encountered cynical Republican efforts to raise new barriers to vote at the ballot box.\nOur Founders pledged their lives, their liberty and their sacred honor to create a democracy: a government of the many, not government of the money.\nNancy Fighting Back :\nFixing the Broken Campaign System\nWe must repair our broken campaign system. Democrats have a solution. We issue our D.A.R.E : we will work to Disclose those behind the endless money in our politics; Amend the Constitution to right the Citizens United verdict; Reform the current campaign finance system we find ourselves in, and Empower our people to participate in our democracy by voting. To continue taking on special interest money, Democrats will arm the American people with the necessary tools via the Government by the People Act."
+    },
+    {
+     "url": "https://web.archive.org/web/20220705121900/https://www.pelosiforcongress.org/issues/health-care-and-retirement-security/",
+     "original": "https://www.pelosiforcongress.org/issues/health-care-and-retirement-security/",
+     "date": "2022-07-05",
+     "title": "Health Care and Retirement Security - Nancy Pelosi for Congress",
+     "text": "## Health Care and Retirement Security\nNot long ago, American children and families were often denied coverage for having a pre-existing condition, millions were job-locked by their need for health coverage, and insurers could charge a woman higher premiums just for being a woman.\nNot anymore. That has all changed. Led by Speaker Nancy Pelosi, Democrats – who believe that health care is a right for all Americans, not a privilege for the few – spearheaded the passage of the historic Affordable Care Act in 2010 that has brought about health progress for our people:\n- More than 5 million seniors have saved over $3 billion on the crippling cost of prescription drugs;\n- Over 100 million Americans are no longer slapped with a lifetime limit on their coverage; millions more, including 17 million children, are no longer denied coverage for having a pre-existing condition;\n- 2.5 million additional young adults have access to health coverage.\nWhile Republicans cynically work to sabotage American’s health care and dismantle the Affordable Care Act, Democrats will continue working to protect and improve this historic law and strengthen coverage for the American people.\nWe believe seniors deserve a dignified retirement. As Leader of the House Democrats, Nancy is fighting to strengthen and protect Social Security and Medicare from Donald Trump and House Republicans’ fixation with destroying these vital pillars of retirement security.\nNancy Fighting Back:\nA Better Deal on Prescription Drugs\nAmericans across the country are suffering from the skyrocketing cost of prescription drugs. They deserve better than a Republican Congress that would have made prescription drugs even harder to afford with the cruel cost increases of Trumpcare.\nLeader Pelosi and Democrats offer Americans A Better Deal to reduce the cost of prescription drugs by cracking down on pharmaceutical price gouging that increases consumers’ drug prices for no reason, giving Medicare Part D the ability to negotiate lower drug prices, and ensuring real transparency for excessive drop price increases."
+    },
+    {
+     "url": "https://web.archive.org/web/20220814042318/https://www.pelosiforcongress.org/issues/democrats-fighting-back/",
+     "original": "https://www.pelosiforcongress.org/issues/democrats-fighting-back/",
+     "date": "2022-08-14",
+     "title": "Jobs & Economy - Nancy Pelosi for Congress",
+     "text": "## Jobs & Economy\nNancy knows that the middle class is the backbone of our democracy. In her time Congress, she has fought for good-paying jobs, living wages and always worked to strengthen the middle class. In the aftermath of the Great Recession, she led the passage of the American Recovery and Reinvestment Act – which, to this day, has saved and/or created millions of American jobs across the country.\nBut more must be done. America’s middle class families have struggled while special interests and corporations continue benefitting from a rigged economy. This must end.\n## Democrats Fight Back\nA better deal\nAmericans were promised so much, but have received a raw deal from Donald Trump and the Republican Congress. Democrats are offering families A Better Deal: Better Jobs, Better Wages, and a Better Future. With concrete policy proposals, we will increase the incomes and wages of our American workers while at the same time creating millions of good-paying jobs by investing in and rebuilding our nation’s crumbling infrastructure, empowering unions, and ensuring every American has the tools they need to succeed in the 21st Century economy. From prescription drugs to education, we will fight to decrease the cost of living in America.\nUnder the Speakership of Nancy Pelosi, Democrats raised the minimum wage for working Americans. But Republicans have refused to modernize it ever since, rejecting Democrats’ repeated attempts to raise the minimum wage. Under a Democratic Majority, we will make $15 minimum wage a reality.\nGOP Tax Scam\nWe believe Americans deserve true bipartisan tax reform that focuses on the middle class – not a tax scam that enriches big corporations and the wealthiest 1 percent by exploding the debt and mortgaging the future Medicare, Medicaid and Social Security\nThis is why Nancy has been traveling from community to community across the country to inform Americans about the consequences of the Republican tax bill: it’s a GOP Tax Scam where 83 percent of the benefits go to the top 1 percent; that ultimately increases taxes on 86 million middle class families; irresponsibly adds nearly $2 trillion to the deficit; and endangers the future of Medicare, Medicaid and Social Security."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.pelosiforcongress.org/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105153423/https://www.pelosiforcongress.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105153423/https://www.pelosiforcongress.org/",
+     "original": "https://www.pelosiforcongress.org/",
+     "date": "2024-11-05",
+     "title": "Nancy Pelosi for Congress",
+     "text": "## THANK YOU\nTo the California Democratic Party, Young Democrats, so many Democratic Clubs, our friends in Labor and all our VIPs, our Volunteers in Politics – thank you from the bottom of my heart for your endorsements.\nI’m enormously proud of your support and confidence in me as your voice in Congress. I hope that I make you proud in representing our San Francisco values as a model to the nation!\nWinning gives us the opportunity to turn our values into policy to build the future that we want and to make a difference in people’s lives.\nWorking together in solidarity, we will uplift our communities, save our health care and preserve our freedoms and Democracy!\nOur inside maneuvering in Congress can only do so much; your outside mobilization makes all our victories for freedom, justice and a more equitable future for everyone possible.\nBecause of you, President Biden and Democrats delivered jobs, expanded health care including veterans’ cancer care, invested in climate action now and protected our Democracy.\nWith your help, Democrats will take back the House, grow our majority in the Senate to bypass the filibuster and re-elect President Joe Biden and Vice President Kamala Harris!\nAnd once we win in 2024, we will do more to invest in the Care Economy, make the Biden Child Tax Cut permanent, and codify Roe v Wade, LGBTQ Equality and an Assault Weapons Ban. We will pass the John R. Lewis Voting Rights Advancement Act and The For The People Act to build a Democracy of the many and not of the money.\nBecause of you, we will not only be on the right side of history — we will be on the right side of the future.\nOnward to a great Democratic victory!\nThank you and God bless you all!"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105154934/https://www.pelosiforcongress.org/landing/stand-with-nancy/",
+     "original": "https://www.pelosiforcongress.org/landing/stand-with-nancy/",
+     "date": "2024-11-05",
+     "title": "Stand with Nancy",
+     "text": "## Stand with Nancy\nThe early days of Donald Trump’s presidency are shaping up to follow the style of his campaign: offensive, radical, and filled with terrible ideas.\nNow more than ever, we need Nancy Pelosi — a strong voice for hard-working families and our shared American values.\nAre you with her? Sign on and declare your support:"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.pelosiforcongress.org/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103111905/https://www.pelosiforcongress.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103111905/https://www.pelosiforcongress.org/",
+     "original": "https://www.pelosiforcongress.org/",
+     "date": "2026-11-03",
+     "title": "Nancy Pelosi for Congress",
+     "text": "## Democrats United to STOP Trump’s Redistricting Power Grab\nDonald Trump and Republicans know they can't win fair and free elections after passing a sinful budget that rips away health care and food from millions of their own constituents — so they're trying to redline the congressional map and silence voters.\nTheir scheme to re-redistrict Texas is a shameless attempt to escape accountability for betraying their communities. Trump started this; he can end it.\nIf Trump Republicans shut down the voices of the people, California Democrats and other Blue State Democrats will respond accordingly to meet this moment."
+    }
+   ],
+   "unread": [
+    "the list of pelosiforcongress.org's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

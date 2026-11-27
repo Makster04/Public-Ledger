@@ -1,0 +1,61 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "hoeven",
+ "name": "John Hoeven",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.hoevenforsenate.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.hoevenforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107042349/https://hoevenforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107042349/https://hoevenforsenate.com/",
+     "original": "https://hoevenforsenate.com/",
+     "date": "2022-11-07",
+     "title": "Home",
+     "text": "I live by my North Dakota values and will not stop pushing for the issues important to our state.\nWorking with President Trump we:\n- Confirmed a record number of conservative judges\n- Made the United States energy secure\n- Built hundreds of miles of border wall\nThe Biden administration is taking us in the wrong direction. I am fighting this federal overreach including vaccine mandates, federalization of our elections and efforts to kill fossil fuels.\nWith your support we can get our country headed back in the right direction!\nJoin Team Hoeven"
+    }
+   ],
+   "notSaved": [
+    "https://hoevenforsenate.com/issues"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.hoevenforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-08-20",
+    "url": "https://web.archive.org/web/20260820203209/https://hoevenforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20260820203209/https://hoevenforsenate.com/",
+     "original": "https://hoevenforsenate.com/",
+     "date": "2026-08-20",
+     "title": "Home",
+     "text": "I live by my North Dakota values and will not stop pushing for the issues important to our state.\nWorking with President Trump we:\n- Confirmed a record number of conservative judges\n- Made the United States energy secure\n- Built hundreds of miles of border wall\nThe Biden administration is taking us in the wrong direction. I am fighting this federal overreach including vaccine mandates, federalization of our elections and efforts to kill fossil fuels.\nWith your support we can get our country headed back in the right direction!\nJoin Team Hoeven"
+    }
+   ],
+   "notSaved": [
+    "https://hoevenforsenate.com/issues"
+   ],
+   "posts": []
+  }
+ ]
+}

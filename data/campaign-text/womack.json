@@ -1,0 +1,69 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "womack",
+ "name": "Steve Womack",
+ "built": "2026-11-26",
+ "sites": [
+  "https://womackforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://womackforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108210919/https://www.womackforcongress.com/"
+   },
+   "pages": [],
+   "unread": [
+    "the list of womackforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://womackforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105133252/https://www.womackforcongress.com/"
+   },
+   "pages": [],
+   "unread": [
+    "the list of womackforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://womackforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103080443/https://www.womackforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103080443/https://www.womackforcongress.com/",
+     "original": "https://www.womackforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Steve Womack for Congress",
+     "text": "Currency value should be formatted like 1234 or 123.99.\nCountry code should have an optional plus and up to 4 digits.\nPlease fill out at least one form field.\nNumbers must contain only digits and no other characters.\nValid names contain only letters, numbers, spaces, ', or - characters.\nUnable to submit form. Please try again later."
+    }
+   ],
+   "unread": [
+    "the list of womackforcongress.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

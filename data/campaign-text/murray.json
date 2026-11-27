@@ -1,0 +1,291 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "murray",
+ "name": "Patty Murray",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.pattymurray.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.pattymurray.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-04",
+    "url": "https://web.archive.org/web/20221104213844/https://pattymurray.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221104213844/https://pattymurray.com/",
+     "original": "https://pattymurray.com/",
+     "date": "2022-11-04",
+     "title": "Patty Murray for U.S. Senate",
+     "text": "## Patty Murray - Democrat for U.S. Senate\nPatty Murray brings Washington state progressive priorities to the other Washington. Each day, she works to help people, solve problems, and make sure every family and community has a voice in our country.\nBy submitting your cell phone number you are agreeing to receive periodic text messages from this organization. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## ABOUT PATTY\nPatty first got involved in politics to fight back against politicians who were trying to cut a preschool program that her kids counted on. When she was told she couldn’t make a difference because she was “just a mom in tennis shoes,” she realized that if she wanted change, she was going to have to lace up those tennis shoes and fight back. Since the moment she was elected, Patty has used every tool at her disposal to help people, solve problems, and offer a clear and loud voice for progressive change. Each day she continues to fight for Washington state’s progressive values and for an economy and country that works for every family and community, not just those at the very top.\nPatty is up for reelection. Chip in today to help us run a winning campaign!"
+    },
+    {
+     "url": "https://web.archive.org/web/20210119112051/https://act.pattymurray.com/page/s/support-the-biden-harris-plan-to-get-america-back-on-track",
+     "original": "https://act.pattymurray.com/page/s/support-the-biden-harris-plan-to-get-america-back-on-track",
+     "date": "2021-01-19",
+     "title": "People for Patty Murray | Support the Biden-Harris plan to get America back on track",
+     "text": "## People for Patty Murray\nSupport the Biden-Harris plan to get America back on track\nWith a Senate Democratic majority -- thanks to support from people like you -- and a real partner in the White House, we have an opportunity to finally turn the corner on this pandemic, and then build back stronger and fairer. It won’t be easy, but we can do it together.\nAdd your name now to support strong, immediate relief for workers and families in response to the COVID-19 crisis.\n* denotes required field"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.pattymurray.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-02-19",
+    "url": "https://web.archive.org/web/20260219040117/https://pattymurray.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20260219040117/https://pattymurray.com/",
+     "original": "https://pattymurray.com/",
+     "date": "2026-02-19",
+     "title": "Patty Murray for U.S. Senate",
+     "text": "## Patty Murray - Democrat for U.S. Senate\nPatty Murray brings Washington state progressive priorities to the other Washington. Each day, she works to help people, solve problems, and make sure every family and community has a voice in our country.\nBy submitting your cell phone number you are agreeing to receive periodic text messages from this organization. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages.\n## ABOUT PATTY\nPatty first got involved in politics to fight back against politicians who were trying to cut a preschool program that her kids counted on. When she was told she couldn’t make a difference because she was “just a mom in tennis shoes,” she realized that if she wanted change, she was going to have to lace up those tennis shoes and fight back. Since the moment she was elected, Patty has used every tool at her disposal to help people, solve problems, and offer a clear and loud voice for progressive change. Each day she continues to fight for Washington state’s progressive values and for an economy and country that works for every family and community, not just those at the very top.\nPatty is up for reelection. Chip in today to help us run a winning campaign!"
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myhyfskgik2r",
+     "text": "Parents can’t go to work if they can’t find child care. Child care IS infrastructure.\n\nLet's PASS universal child care."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myicx3ahf22r",
+     "text": "Trump is literally trying to use marriage and birth rates to decide how much federal funding YOUR community might get for transit projects.\n \nHe is weaponizing federal grants to wage his regressive culture war, and your commute is collateral damage."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myki5qwltk2r",
+     "text": "Republicans think the only way to save Social Security is to cut benefits—they just talk in euphemisms.\n\nDemocrats have better solutions, like finally scrapping the cap and making billionaires pay their fair share."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myksk2wxes2r",
+     "text": "Defunding medical research doesn’t make America healthy. It makes America sick."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mykyh3ml4s2r",
+     "text": "Trump is weaponizing America's Department of Justice to argue that elections can only be certified if Republicans win.\n\nThis is historic corruption, but he doesn't get the final word. We do at the ballot box. VOTE!"
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myn3aeyya22j",
+     "text": "$4,700 more. That’s how much extra Trump’s tariffs and Trump’s war have cost the average American family.\n\nRepublicans promised lower prices on day ONE. It's been 600+ days."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mypmmf3w2c2j",
+     "text": "Washington state: it’s time to make your voice heard. \n\nFill out your ballot and bring it to a drop box near you now through Election Day – the earlier the better."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myqbjzqesk2x",
+     "text": "From measles to foodborne illnesseses, Trump and RFK Jr. have torn apart public health and completely disregarded basic science.\n\nI'm working to fix it."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mys5ay2klk2w",
+     "text": "Just outright disgusting and hateful garbage.\n\nTrump is focused on spewing this garbage instead of doing anything to make life more affordable for Americans.\n\nA total disgrace."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mysca62tac2w",
+     "text": "Trump could not say it more plainly: he doesn't \"give a damn\" about the American people suffering because of his illegal war.\n\nVOTE!"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myskq4z2o22w",
+     "text": "Trump's solution to affordability? Cut back on your doll purchasing budget.\n\nAs if people are blowing their budgets on dolls. We need a Congress that will put an end to Trump's tariffs and actually work to LOWER prices for the American people."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myump5o5jc2v",
+     "text": "Wonder why beer isn't $5 anymore? Laney told me how her brewery would order tap handles and the tariffs would INCREASE mid-shipment.\n\nThe tariff would be as expensive as the product itself by the time it gets to them! A Democratic majority would fight to END Trump's trade wars."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myuzr4cx4k2d",
+     "text": "The most corrupt President in U.S. history.\n \nTrump is getting rich while working families struggle to get by. \n \nA Senate Democratic majority can finally put a check on Trump's obscene corruption. \n \nVOTE!"
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myvblyeqmc2b",
+     "text": "For years, Republicans have been pushing to cut FDA funding. Recent outbreaks (diarrhea lettuce) prove we can’t keep cutting domestic spending to fund foreign wars.\n \nCongress MUST reject Trump’s $1.5 TRILLION war request and focus on real priorities—like keeping our food safe."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myx5nt6up22d",
+     "text": "Trump may not be interested in health care, but the millions of Americans priced out of their plans or kicked off Medicaid sure are.\n\nIt's time to put a stop to Trump's health care sabotage.\n\nVOTE."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myxcqjfa5s2d",
+     "text": "Dolores Huerta spent her life standing up for working people and fighting for justice. Her courage and leadership helped change this country for the better. My thoughts are with her loved ones.\n\nWe must carry her fight forward."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myxgjurrvs2y",
+     "text": "Trump and Republicans kicked millions of families and kids off SNAP.\n\nA Senate Democratic majority will fight to reverse these cuts, because no one in America should go hungry."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myxoqekwrc22",
+     "text": "Science and public health must come before politics. We need an investigation of this alarming decision, which appears to have little to no evidence or FDA experts behind it. \n\nSecretary Kennedy cannot be allowed to replace FDA's gold standard for safety and effectiveness with junk science."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myxw5wkv2k2s",
+     "text": "Fire RFK Jr."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myzkr3xigs2w",
+     "text": "Republicans cut over $1 trillion from health care. \n\nVOTE!"
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myzshhzthc2w",
+     "text": "Republicans call Social Security a \"Ponzi scheme\" and talk about making cuts. \n \nDemocrats have plans to scrap the cap and real fixes to make sure you get YOUR money. \n \nYou get to choose what happens with your voice and vote on Election Day."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3myzynq4ka22t",
+     "text": "Trump thinks there’s always money for war, but no money for child care. He wants to spend trillions on bombs and weapons, while cutting investments in housing and health care.\n\nIt does not get more wrong or out of touch than that."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mz42h4qzac2w",
+     "text": "Trump pursued some of the biggest tax hikes in American history, and Republicans cheered him on. \n \nI have a bill to end Trump’s idiotic tariffs—and a Senate Democratic majority will fight to pass it."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mz4avxcpoc2w",
+     "text": "Trump says there is no money for health care or child care but wants to spend TRILLIONS on forever wars. \n \nThis is NOT what the American people need or want."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mz4hjs7t6s2p",
+     "text": "ICE broke Erik Zepeda's wrist—a special needs student in California—and he wasn't even who they were looking for. No apology, no accountability. NOTHING.\n\nI am sick and tired of ICE's cruelty and unchecked violence.\n\nVOTE."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mz4wfvbmhc2p",
+     "text": "Look, we've got bigger fish to fry this week (VOTE!), but starting this weekend, the sun sets before 5pm in Washington state. It doesn't have to!\n\nThe Senate could pass my bill to lock the clock and make daylight saving time permanent.\n\nMore sunshine, less depression."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mz6tqahuq224",
+     "text": "Get your ballot in early so your voice is heard.\n \nVisit VoteWA.gov for more info."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mz73of2mck24",
+     "text": "Let's PASS universal child care."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzb5kwfw6c24",
+     "text": "Women’s reproductive rights are on the ballot. \n \nIf you want to protect a woman’s ability to make her own decisions about her life and her body, VOTE."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzbqvgixnc2n",
+     "text": "I’m wishing Senator Murphy a speedy recovery. He’s an incredible colleague, a good friend, and an important voice for our democracy.\n\nRest up and get well soon, Chris."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzbv6oc2622n",
+     "text": "NOW is the time to make your voice heard.\n\nYou've paid into Social Security your entire working life—you deserve to retire with dignity.\n\nRepublicans want to cut your benefits. Democrats want billionaires to pay their fair share.\n\nTHIS is the Social Security election."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzc63b5izc2n",
+     "text": "YOU are paying for Trump's war with Iran at the pump while he gets rich. \n\nA Senate Democratic Majority will finally put a check on this President and fight to END his reckless war. \n\nMake your voice heard. Vote."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzdnq3hjxs2w",
+     "text": "Trump says we can't take care of child care. Yet somehow we can take care of ballrooms for his parties and private jets for his cabinet members.\n \nWe have a child care crisis in this country. We need to be funding high-quality, affordable child care—not Trump's vanity projects."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzdx6zxylk2w",
+     "text": "REMEMBER: Trump and Republicans cut over a TRILLION dollars for health care while also passing over a TRILLION dollars in tax breaks for the ultra-wealthy.\n \nStealing from the poor to give to the rich. It's not right. Make your voice HEARD."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzeotooo2s2w",
+     "text": "Trump says he'd give his economy an A+++.\n \nMeanwhile, nearly 80% of Americans say their paycheck can't keep up with rising costs. That’s an F in my gradebook."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzg5djh3ws2w",
+     "text": "It's Election Day, Washington state!\n \nFind a ballot drop box or go to your voting center TODAY to make your voice heard. 🇺🇸"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzgmqdsdrs22",
+     "text": "🚨🚨 WA STATE: TODAY IS THE LAST DAY TO VOTE 🚨🚨\n \nMake your voice heard. Find your ballot drop box at the link below. www.sos.wa.gov/elections/vo..."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/murray.senate.gov/post/3mzgv7jbysk27",
+     "text": "VOTE, AMERICA! SAVE THIS DEMOCRACY! 🇺🇸🇺🇸🇺🇸"
+    }
+   ]
+  }
+ ]
+}

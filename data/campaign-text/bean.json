@@ -1,0 +1,104 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "bean",
+ "name": "Aaron Bean",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.aaronbean.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.aaronbean.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-05",
+    "url": "https://web.archive.org/web/20221105130325/https://aaronbean.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221105130325/https://aaronbean.com/",
+     "original": "https://aaronbean.com/",
+     "date": "2022-11-05",
+     "title": "Aaron Bean, Republican Candidate for Florida Congressional District 4",
+     "text": "## Meet Aaron Bean\nI’m a conservative businessman, a lifelong Republican, a husband, and father of three from Northeast Florida. I got into public service because my heart is devoted to serving my community and working hard for what I believe in. Now, I’m seeking to take my public servant’s heart to Washington to represent the people of Congressional District 4.\n## The New 4th District\nAfter the 2020 Census and the state’s redistricting process, the new 4th Congressional District in Northeast Florida includes all of Clay and Nassau counties and part of Duval County.\nDonations from personal checking accounts can be made out and mailed to:\nAaron Bean for Congress, P.O. Box 16251, Fernandina Beach, FL 32035.\nContributions to Aaron Bean for Congress are not deductible as charitable contributions for federal income tax purposes.\nThe maximum an individual may contribute is $2,900 for the primary election and $2,900 for the general election, for a total of $5,800. Personal contributions only. Federal law requires us to use our best efforts to collect and report the name, mailing address, occupation, and employer for each individual whose contributions exceed $200 in an election cycle."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105092849/https://aaronbean.com/duval-county-regional-leaders-stand-with-aaron-bean/",
+     "original": "https://aaronbean.com/duval-county-regional-leaders-stand-with-aaron-bean/",
+     "date": "2022-11-05",
+     "title": "Duval County & Regional Leaders Stand with Aaron Bean",
+     "text": "## Duval County & Regional Leaders Stand with Aaron Bean\nJune 15, 2022\nFernandina Beach, Fla. – Republican candidate for Congressional District 4 Aaron Bean today announced another round of local endorsements, highlighting leaders from Duval County and the Northeast region who support his bid for Congress.\n“On the heels of our sheriffs’ endorsement from Clay and Nassau Counties last week, I am so excited to announce the amazing roster of leaders from Duval County and our Northeast region who have endorsed my candidacy and have joined the Bean Team,” said Bean. “These great leaders have all served our community tirelessly, focusing on building up our Northeast region and putting the needs of our neighbors first. I am honored to have their support and take our shared commitment of conservative values to Washington to fight out-of-control gas prices, inflation and government overreach. I continue to be overwhelmed by the support from our area leaders from all three counties in CD 4, and I am ready to fight to win on Primary Election Day.”\nThe Duval County and regional leaders that have endorsed Bean include:\n- Former Congressman Ander Crenshaw\n- Former President of Florida State University, & Former State Senator & Speaker of the House John Thrasher\n- Former Florida Lieutenant Governor Jennifer Carroll\n- Former Mayor John Peyton\n- Former Mayor John Delaney\n- Mayor of Baldwin Sean Lynch\n- Mayor of Atlantic Beach Ellen Glasser\n- Mayor of Neptune Beach Elaine Brown\n- Mayor of Jacksonville Beach Chris Hoffman\nBean currently represents the people of Nassau and Duval counties in the Florida Senate, serving in the Republican-led Senate as its Senate President Pro Tempore. Elected to the Senate in 2012 and to the Florida House before that, Bean has been a noted advocate for lowering taxes on hardworking Floridians and focusing on pro-business, pro-family initiatives and supporting the Florida freedom agenda and policies of Governor DeSantis. Bean has long served his local community, while raising a family and running a small business, with a focus on knowing what it means to work hard every day and on what his community needs.\n# # #"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105092851/https://aaronbean.com/poll-aaron-bean-in-dominating-position-ahead-of-cd-4-gop-primary/",
+     "original": "https://aaronbean.com/poll-aaron-bean-in-dominating-position-ahead-of-cd-4-gop-primary/",
+     "date": "2022-11-05",
+     "title": "Poll: Aaron Bean in dominating position ahead of CD 4 GOP Primary",
+     "text": "## Poll: Aaron Bean in dominating position ahead of CD 4 GOP Primary\nAugust 5, 2022\nSt. Pete Polls found he may already have the nomination locked up.\nState Sen. Aaron Bean faces little challenge in winning the Republican Primary for an open congressional seat. That’s the clear takeaway from a new St. Pete Polls survey of likely Republican voters in Florida’s 4th Congressional District.\nMore than 59% of GOP voters included in the poll favor Bean for the Republican nomination in CD 4. Just 16% prefer Erick Aguilar and about 6% want Jon Chuba to win the Primary.\nAmong the 16% of respondents who already cast their vote-by-mail ballots in the race, nearly 62% say they voted for Bean. Just over 15% already put in their vote for Aguilar and around 6% have voted for Chuba."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.aaronbean.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105062905/https://aaronbean.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105062905/https://aaronbean.com/",
+     "original": "https://aaronbean.com/",
+     "date": "2024-11-05",
+     "title": "Aaron Bean Represents Florida Congressional District 4 in Congress",
+     "text": "Early voting has started in Clay, Duval and Nassau Counties! Find early voting locations.\n## Meet Aaron Bean\nI am beyond proud to represent the people of Northeast Florida as the Congressman from District 4, serving Clay, Duval and Nassau Counties. In addition to serving in Congress, I’m a conservative businessman, a lifelong Republican, a husband and a father of three. I got into public service because my heart is devoted to serving my community and working hard for what I believe in, and I am honored to serve in our nation’s Capitol representing the people of Congressional District 4.\n## EARLY VOTing\nEarly voting has started in Clay, Duval and Nassau Counties! As long as you’re registered to vote in the county, you can vote early at a location that is convenient for you. To find early voting locations in your county, please click on the county you’re registered in below.\n## The New 4th District\nAfter the 2020 Census and the state’s redistricting process, the new 4th Congressional District in Northeast Florida includes all of Clay and Nassau Counties and part of Duval County.\nDonations from personal checking accounts can be made out and mailed to:\nAaron Bean for Congress, P.O. Box 16251, Fernandina Beach, FL 32035.\nContributions to Aaron Bean for Congress are not deductible as charitable contributions for federal income tax purposes.\nThe maximum an individual may contribute is $3,300 for the primary election and $3,300 for the general election, for a total of $6,600. Personal contributions only. Federal law requires us to use our best efforts to collect and report the name, mailing address, occupation, and employer for each individual whose contributions exceed $200 in an election cycle."
+    },
+    {
+     "url": "https://web.archive.org/web/20240808044007/https://aaronbean.com/duval-county-regional-leaders-stand-with-aaron-bean/",
+     "original": "https://aaronbean.com/duval-county-regional-leaders-stand-with-aaron-bean/",
+     "date": "2024-08-08",
+     "title": "Duval County & Regional Leaders Stand with Aaron Bean",
+     "text": "## Duval County & Regional Leaders Stand with Aaron Bean\nJune 15, 2022\nFernandina Beach, Fla. – Republican candidate for Congressional District 4 Aaron Bean today announced another round of local endorsements, highlighting leaders from Duval County and the Northeast region who support his bid for Congress.\n“On the heels of our sheriffs’ endorsement from Clay and Nassau Counties last week, I am so excited to announce the amazing roster of leaders from Duval County and our Northeast region who have endorsed my candidacy and have joined the Bean Team,” said Bean. “These great leaders have all served our community tirelessly, focusing on building up our Northeast region and putting the needs of our neighbors first. I am honored to have their support and take our shared commitment of conservative values to Washington to fight out-of-control gas prices, inflation and government overreach. I continue to be overwhelmed by the support from our area leaders from all three counties in CD 4, and I am ready to fight to win on Primary Election Day.”\nThe Duval County and regional leaders that have endorsed Bean include:\n- Former Congressman Ander Crenshaw\n- Former President of Florida State University, & Former State Senator & Speaker of the House John Thrasher\n- Former Florida Lieutenant Governor Jennifer Carroll\n- Former Mayor John Peyton\n- Former Mayor John Delaney\n- Mayor of Baldwin Sean Lynch\n- Mayor of Atlantic Beach Ellen Glasser\n- Mayor of Neptune Beach Elaine Brown\n- Mayor of Jacksonville Beach Chris Hoffman\nBean currently represents the people of Nassau and Duval counties in the Florida Senate, serving in the Republican-led Senate as its Senate President Pro Tempore. Elected to the Senate in 2012 and to the Florida House before that, Bean has been a noted advocate for lowering taxes on hardworking Floridians and focusing on pro-business, pro-family initiatives and supporting the Florida freedom agenda and policies of Governor DeSantis. Bean has long served his local community, while raising a family and running a small business, with a focus on knowing what it means to work hard every day and on what his community needs.\n# # #"
+    },
+    {
+     "url": "https://web.archive.org/web/20240808033000/https://aaronbean.com/poll-aaron-bean-in-dominating-position-ahead-of-cd-4-gop-primary/",
+     "original": "https://aaronbean.com/poll-aaron-bean-in-dominating-position-ahead-of-cd-4-gop-primary/",
+     "date": "2024-08-08",
+     "title": "Poll: Aaron Bean in dominating position ahead of CD 4 GOP Primary",
+     "text": "## Poll: Aaron Bean in dominating position ahead of CD 4 GOP Primary\nAugust 5, 2022\nSt. Pete Polls found he may already have the nomination locked up.\nState Sen. Aaron Bean faces little challenge in winning the Republican Primary for an open congressional seat. That’s the clear takeaway from a new St. Pete Polls survey of likely Republican voters in Florida’s 4th Congressional District.\nMore than 59% of GOP voters included in the poll favor Bean for the Republican nomination in CD 4. Just 16% prefer Erick Aguilar and about 6% want Jon Chuba to win the Primary.\nAmong the 16% of respondents who already cast their vote-by-mail ballots in the race, nearly 62% say they voted for Bean. Just over 15% already put in their vote for Aguilar and around 6% have voted for Chuba."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.aaronbean.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103101542/https://aaronbean.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103101542/https://aaronbean.com/",
+     "original": "https://aaronbean.com/",
+     "date": "2026-11-03",
+     "title": "Aaron Bean Represents Florida Congressional District 4 in Congress",
+     "text": "Countdown to Election Day\n## The clock is ticking.\nEvery knock, call, and dollar matters between now and November 3, 2026. Here's how much time is left to help keep the Fourth in good hands.\nReplaces Countdown at 7:00am on November 3\nElection Day · November 3, 2026\n## Today is Election Day.\nPolls are open from 7:00 a.m. to 7:00 p.m. Anyone in line at 7:00 p.m. can still vote. Your polling place depends on your address, so find it in your county:\n## When we do the right thing, our best days are still ahead.\nAaron Bean brings energy and results to the fight for our schools, our jobs, and our families. Let's keep Northeast Florida bright.\n[Press Outlet 1] [Press Outlet 2] [Press Outlet 3] [Press Outlet 4] [Press Outlet 5] [Press Outlet 6]\nKeep Florida's Fourth strong\n## Born here. Built here. Fighting for Northeast Florida.\nAaron Bean was born and raised right here in Northeast Florida, and he isn't planning on going anywhere. He's a conservative businessman, a lifelong Republican, a husband, and a proud dad of three — and every day he takes the same thing to Washington that he learned around the dinner table in the 904: work hard, do the right thing, and take care of your neighbors.\nThe people of Florida's Fourth Congressional District — Clay, Duval, and Nassau Counties — sent Aaron to Congress on November 8, 2022, and he was sworn in on January 7, 2023. Today he serves on the powerful House Ways and Means Committee — the committee that writes America’s tax law — and co-founded the Congressional DOGE Caucus to root out waste, fraud, and abuse. His mission is simple: lower costs for hardworking families, back the blue, and make Washington account for every last one of your tax dollars.\nBefore Congress, Aaron spent 10 years in the Florida Senate, where his colleagues chose him as Senate President Pro Tempore and he chaired the Appropriations Subcommittee on Health and Human Services. He also proudly chaired the Duval Delegation. Through all of it, he built a reputation as a relentless fighter for lower taxes on hardworking Floridians, for pro-business, pro-family policy, and for the Florida freedom agenda alongside Governor Ron DeSantis.\nAaron also served eight years in the Florida House of Representatives — a life of service that started, like so much of his story, close to home.\nIn between the House and the Senate, Aaron rolled up his sleeves in the private sector. He opened an insurance agency and even rescued a beloved local Putt-Putt golf business from going under. Running a small business, Aaron and his wife, Abby, saw first-hand the bureaucratic red tape our job creators fight through every single day. They loved the work anyway — getting up each morning, employing their neighbors, and being part of the engine that drives our local economy.\nFrom an early age, Aaron knew he wanted to serve. He worked his way through Jacksonville University, where his fellow students elected him student body president and he helped start the Young Republicans in Nassau County. After college he married his sweetheart, Abby Bradley — a fifth-generation Clay Countian — and got involved in local business, where he saw up close the burden government places on small business owners and entrepreneurs. That's what led him to run for local office, because Aaron has always believed government can do better. He served his hometown as a city commissioner in Fernandina Beach and later as its mayor.\nBefore Congress, Aaron worked in development at UF Health Jacksonville. He and Abby have been married for more than three decades, and these days they get the joy of watching their grown children build lives of their own. Aaron's message hasn't changed since day one: when we do the right thing, our best days are still ahead. Let's go get 'em.\nThe Fourth District\n## From the port cranes of Jacksonville to the shrimp docks of Fernandina.\nFlorida's Fourth covers Clay, Duval, and Nassau Counties — JAXPORT and the rail lines that feed it, NAS Jacksonville's military families, the St. Johns River, and some of the fastest-growing communities in America. Aaron has spent his whole life here, and it shows in the work.\nFlorida's 4th District — Clay, Duval & Nassau Counties\n## What Aaron is fighting for\nBig goals, good neighbors, brighter days.\n## A Growing First Coast Economy\nCut the red tape Aaron fought as a small-business owner. Keep taxes low so Northeast Florida stays the best place in America to work and hire.\n## Education That Answers to Parents\nAaron chaired the House Subcommittee on Early Childhood, Elementary, and Secondary Education — and he’s still putting parents, not Washington bureaucrats, in charge of the classroom.\n## JAXPORT & Infrastructure\nAaron is fighting for the port, rail, and roads that make Jacksonville a logistics powerhouse.\n## Standing With Military Families\nNAS Jacksonville and thousands of veterans call the Fourth home. Aaron backs the bases, the benefits, and the families who serve.\n## A Secure Border\nEvery state is a border state now. Aaron supports finishing the wall, backing the Border Patrol, and ending catch-and-release.\n## Spending Discipline\nAaron balanced budgets in Tallahassee for eighteen years. Washington should live within its means the way Florida families do.\n## Straight from the trail\nOn the trail\n## &rarr;\nendorsement logo endorsement logo endorsement logo endorsement logo\n“[Pull quote from Endorser One goes here — one sentence that vouches for Aaron's record.]” — [Endorser One, Title]\n“[Pull quote from Endorser Two goes here.]” — [Endorser Two, Title]\n“[Pull quote from Endorser Three goes here.]” — [Endorser Three, Title]\n## &larr;\nIn the News September 24, 2026 · The Floridian\nIn the News August 26, 2026 · Florida Daily\nIn the News June 11, 2026 · The Floridian\nIn the News May 30, 2026 · Florida Politics\nIn the News May 16, 2026 · Florida Politics\nIn the News April 20, 2026 · The Floridian\nIn the News April 10, 2026 · The Floridian\nIn the News February 27, 2026 · The Floridian\nIn the News January 13, 2026 · Florida Politics\nIn the News January 8, 2026 · The Yulee News\nIn the News January 4, 2026 · West Orlando News\nIn the News December 11, 2025 · The Floridian\nIn the News December 4, 2025 · Florida Politics\nIn the News December 3, 2025 · The Floridian\nIn the News October 11, 2025 · Florida Politics\n## This campaign runs on neighbors.\nKnock doors, wave signs, make calls, host a meet-and-greet — or just put a yard sign out front. Tell us how you want to help and the team will be in touch.\n## Sign me up\nCheck the box to receive texts, or clear the phone number.\nBy providing your mobile phone number, you are giving your express written consent to receive calls and SMS/MMS messages, including autodialed and automated calls and texts, to that number from Aaron Bean for Congress. Msg frequency varies. Msg & data rates may apply. Text HELP for support or e-mail moc.naebnoraa@ngiapmac . Reply STOP to opt out. Terms and Conditions | Privacy Policy\nThanks for joining The Bean Team!\n## Join The Bean Team\nAdd your name, grab a yard sign, and help us keep the 4th winning."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

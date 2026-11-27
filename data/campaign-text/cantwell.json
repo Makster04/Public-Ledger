@@ -1,0 +1,514 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "cantwell",
+ "name": "Maria Cantwell",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.cantwell.com/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.cantwell.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-03",
+    "url": "https://web.archive.org/web/20241103195647/https://www.cantwell.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241103195647/https://www.cantwell.com/",
+     "original": "https://www.cantwell.com/",
+     "date": "2024-11-03",
+     "title": "Maria Cantwell for Senate",
+     "text": "## Proudly representing the people of the State of Washington and the values we share.\nAs your Senator, I’ve crafted legislation to help bring prosperity to our state and to our nation. I've fought to ensure an innovative future for our country and worked across the aisle to achieve sustainable domestic infrastructure for generations of Americans to benefit from.\nEvery day I work to protect the health of our families, preserve the environment we live in, and invest in long-term solutions, like caring for our children and making education affordable. I believe we must honor and respect the contributions made by our veterans and seniors."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101182946/https://www.cantwell.com/issues/",
+     "original": "https://www.cantwell.com/issues/",
+     "date": "2024-11-01",
+     "title": "ISSUES — Maria Cantwell for Senate",
+     "text": "What I Stand For\nIn the Senate, I've learned how to overcome partisan divides and gridlock to get things done for students, seniors, veterans, women, and working families who make Washington their home.\nWorking together, we can grow the economy, protect the environment, build clean energy jobs, provide educational opportunities for all people at all stages of life, protect Social Security, Medicare and Medicaid, and ensure that housing, health care, and retirement remain affordable for working families.\nJobs & the Economy | Environment | Health Care | Reproductive Rights | Women's Issues | Veterans | Education | Housing | Retirement Security | Agriculture | Cybersecurity | Opioid Crisis | Homeland Security\nJobs & The Economy\nMany of the most successful businesses in the world were founded in Washington state, and continue to grow here. Throughout my career, I've worked to support our state’s unique and enviable culture of science, innovation, and economic growth. I've seen how successful Washington companies operate, and I know what it means for our state.\nIt means jobs.\nNot just jobs for tech workers, but across all sectors of our economy. My mission is to ensure that our prosperity is shared—so I fight for things working families need, like access to education and job training, and making housing, health care, and childcare more affordable.\nI support the men and women of organized labor. I'm proud that Washington State is leading the nation in raising the minimum wage. I’ve worked hard to increase investment in workforce training and I’m fighting for more apprentice jobs so more working-class families can earn and learn.\nI led legislation investing in 10 key technology areas – including semiconductor chip manufacturing – with funding for research and development in tech hubs and universities across the country so we continue to lead the world in science and innovation.\nI supported the creation of a $30 billion lending fund to help small businesses, the great engine of our economy.\nWorking with women entrepreneurs, we increased access to capital and funding for business counseling so we could grow more women-owned businesses.\nToday, it is not uncommon for workers to transition through multiple careers in their lifetime. We must prepare workers to thrive in a 21st-century global economy. We need to provide education and training for returning veterans and laid-off workers, and support our community colleges.\nOur state is at the forefront of the knowledge economy. Two key ways of staying ahead are affordable education and reduction of student loan debt. We must invest in making college more affordable. The benefits we gain from these efforts are further innovation and greater success.\nLike many Washingtonians, one of my favorite things to do is go hiking. Whether it’s the Cascades, the Olympics, the Methow Valley, or our spectacular Pacific coastline, the incredible natural beauty and untamed wilderness of our state is a gift we share. One of my greatest responsibilities is to help protect this gift for future generations.\nThat's why I fought so hard to permanently fund the Land and Water Conservation Fund (LWCF) in the Great American Outdoors Act and to address the maintenance backlog in our national parks and wildlife refuges.\nI've worked to grow Washington's leadership in new solar, wind, biofuel, and fuel cell jobs by promoting renewable energy over fossil fuels and maintaining fuel efficiency for cars.\nI will fight any attempt to privatize Bonneville public power.\nI fought to protect Puget Sound by creating a Puget Sound Office where the EPA, NOAA, and other federal partners will have an annual $50 million budget for research and recovery efforts to help clean up our Sound.\nI believe in health care for all. I support universal coverage, and that’s why I’m fighting every day for all of our fellow citizens to have access to affordable, high-quality health care.\nI helped pass the Inflation Reduction Act, which capped insulin prices at $35 for those on Medicare and extended health care subsidies.\nI fought to stop President Trump and Republicans in Congress from stripping health care from 750,000 Washingtonians and eliminating protections for pre-existing conditions. I also support improvements to the Affordable Care Act, like expansion of the Basic Health Plan, to lower premiums and out-of-pocket expenses.\nMedicaid has brought coverage to 650,000 people in our state. I’ve fought hard against proposals that would undermine Medicaid by repealing the expansion and turning the program into a block grant.\nI am proud of Washington’s innovative health care system and world-renowned medical research institutions. I support strong federal investments in biomedical research and innovation in health care services to lower costs, improve results, and keep the focus on patients.\nPrescription drugs must be more affordable. That’s why I co-sponsored legislation to allow the safe importation of prescription drugs from Canada and empower Medicare to negotiate prices directly with drug manufacturers. At every chance I get, I will join with legislators of both parties to work to end price-gouging of prescription drugs — such as when a bipartisan coalition successfully helped pressure Eli Lilly to lower the cost of insulin.\nWe still have a lot of work to do. That's why I continue fighting for lower costs, expanded access, and better health care outcomes for all.\nSince the Supreme Court ruled to overturn Roe v. Wade , I have been hard at work pursuing every possible avenue to protect reproductive freedom both at home in Washington state and across the country.\nWhen “trigger laws” in more than a dozen states enacted abortion bans after the Court overturned Roe , pro-choice states like Washington experienced an influx of out-of-state patients. That’s why I worked to protect our state’s health care delivery system and ensure providers can continue helping patients.\nI fought for clarity from the Department of Justice on potential federal actions to protect patients and providers, regardless of where the patient comes from.\nI introduced legislation to protect health care privacy and keep personal data safe from being misused against a patient.\nI worked to protect providers from prosecution for providing essential reproductive care to patients traveling from anti-choice states – which Republicans blocked.\nI fought for access to contraception in the wake of conservative states’ attempts to ban or limit individuals’ access.\nThese are just a few pieces of the ongoing fight to restore and defend abortion and privacy rights. I will continue pushing forward against extremist attempts to roll back progress.\nWhile we have made progress, we must continue the fight to protect the rights of women and for fair pay at work.\nWe passed the Lilly Ledbetter Fair Pay Act to do away with gender-based compensation discrimination and help ensure fair pay. Now we are fighting to ensure that there is equal pay for equal work.\nOur state has passed paid family and medical leave and the nation should follow suit. We must also continue working to help make child care more affordable. We lead the nation in this respect but we’ve still got to keep moving forward.\nIn the reauthorization of the Violence Against Women Act, I fought to extend the protection of this legislation to the most vulnerable women in our society.\nWe must continue to raise awareness of, and speak out against, sexual harassment in the workplace.\nWorking with women entrepreneurs, I helped pass a law to ensure women-owned small businesses have equal access to federal contracting. And we are continuing to push for policies that increase access to capital and funding for business counseling so we can grow more women-owned businesses.\nAfter the U.S. Women’s National Soccer Team won the 2019 FIFA Women’s World Cup, I introduced the Equal Pay for TEAM USA Act which was signed into law by President Biden. The law requires that the U.S. Olympic and Paralympic Committee and sports’ governing bodies provide the same pay, medical care, travel accommodations, and coverage of expenses to U.S. athletes regardless of gender. Now when women win, they no longer have to worry that a men’s team will somehow be paid more.\nAccess to affordable educational opportunities is the key to a thriving economy and a productive workforce. That’s why I fought to protect funding for K-12, worked to expand GI Bill education benefits and sponsored legislation to increase Pell Grants and allow refinancing of student loans. I’ve fought to protect Impact Aid and secured increased funding for schools in rural counties through the Secure Rural Schools program.\nIn particular, I believe in life-long learning opportunities, from Head Start programs for early childhood, to adult basic education funding and programs to help displaced workers.\nI am a strong supporter of STEM programs (Science, Technology, Engineering & Mathematics) because our future success will require skilled scientists and engineers.\nVeterans put everything on the line for us—and we, as a nation, have a responsibility to do all we can to assist their transition. That means ensuring timely access to quality health care and GI benefits.\nI’ve worked to bring job training, skills transition programs, education, and small business assistance to help veterans convert their experience and discipline into economic success.\nTo help those who provide daily care to many veterans, I supported expansion of the VA’s Caregivers Program. We expanded the term of eligibility for GI Bill loans and I supported laws to provide tax incentives for employers to hire veterans. And in my efforts to address affordable housing, I passed legislation to open up more housing units for homeless veterans.\nI’m fighting to ensure all veterans receive the care, benefits and respect they’ve earned through their sacrifice.\nEveryone in Washington should have access to safe, affordable housing. For too many in our state, the lack of affordable housing makes it difficult to just get by, let alone save for retirement.\nIncreasing our housing supply is a big part of the solution and that’s why I've sponsored and helped pass the first federal increase in the affordable housing tax credit in a decade. This legislation helps fund increased housing production around Washington state. I’ve also fought to address affordability, promote anti-discrimination protections, and increase funding for low-income and veterans’ programs within the federal budget.\nHousing affordability is reaching a crisis stage and it's time for us to step up and take on the complex issues surrounding housing costs. I will continue working at the federal level to enact policies and gain needed resources to ensure all in Washington have access to affordable housing.\nCybersecurity is an issue that keeps me up at night. Each day we face an increasing number of cyber attacks, including attacks from state actors, to our electrical grid and energy infrastructure.\nThat’s why I worked with Democrats and Republicans to pass critical legislation out of the Senate to help strengthen our preparedness and resilience to energy-sector cyber attacks.\nThis bipartisan legislation will help the Department of Energy to identify vulnerabilities, strengthen response capabilities, promote public-private information sharing and address workforce training and shortages.\nI’ve worked with our National Guard to strengthen its preparedness and response capabilities and introduced legislation to authorize the deployment of cybersecurity first response teams in all 50 states.\nPrevious generations worked securely in the knowledge that they could rely on pensions and Social Security in retirement. But more and more these days, workers aren't staying in one company for their whole career, and many lack adequate pensions. We’ve even seen pension funds fail.\nIn addition, we’ve had to fight repeated attempts by unscrupulous politicians to raid the Social Security trust fund and hand it over to Wall Street.\nWe need to do everything possible to safeguard the financial security of American citizens, who are rightfully concerned about their future. And to do that we must do more to help workers save. That’s why I introduced legislation that would create incentives for employers to match workers' contributions, and a new retirement plan option for workers who do not have access to a 401(k).\nI will not allow Social Security to be eroded by those in Congress who are more interested in the health of financial industry profits than they are about the people of America.\nOur diverse agriculture industry, driven by farmers and ranchers across Washington state, supports 164,000 jobs and more than $10.6 billion in agriculture production. Washington state is also the third largest exporter of food and agricultural products in the nation, with exports totaling almost $7 billion annually.\nThat’s why I fight for policies and programs that support farming and ranching families and help us to compete in international markets. I’ve worked to expand the Market Access Program which helps farmers gain access to consumers in emerging markets like India and China, and crop insurance to help families weather natural disasters and catastrophic crop loss.\nI’ve fought for agricultural research funding to help address falling numbers in wheat; added peas and lentils into our national school lunch program; expanded research and development funding for specialty crops; and backed increased funding for the National Clean Plant Network that helps keep plants virus free.\nI’ve also supported funding for Washington State University’s agriculture extension network, conservation programs like the Conservation Reserve Program, and rural development programs that support housing and other important economic investments in farm communities across our state.\nI’ve been vigilant against unfair trading practices and have worked with our growers to hold our trading partners accountable. A new trade enforcement trust fund that I helped create will help provide dedicated funding to enforce trade agreements. I will fight to ensure that Washington’s farms, ranches and other export-dependent businesses do not turn into collateral damage.\nAs I’ve traveled across our state, I’ve seen the devastating impact the opioid epidemic is having on our communities. From Longview to Port Angeles and Everett to Spokane, I’ve held forums to hear first hand about the difficult fight our families, community leaders, health care providers, and law enforcement officials are up against.\nThat’s why I supported the Comprehensive Addiction and Recovery Act, legislation that dramatically increased federal resources for treatment, recovery, supportive services for families and law enforcement.\nI introduced a bill, supported by 39 state Attorneys General, to increase the penalties on drug manufacturers when they turn a blind eye to the reckless distribution of opioids in our communities. We need greater transparency and accountability into the production, marketing and distribution practices of drug manufacturers and that’s what my bill does.\nThere is no greater responsibility of our federal government than to ensure our national security and that of every American. Washington state faces a unique set of security challenges. We are a major gateway to trans-Pacific trade and we’re a border state. We’re experiencing record-setting growth at our airports, even as aviation security requirements increase. I take my responsibility to help keep our state safe very seriously.\nI’ve passed bipartisan legislation to help law enforcement identify and evaluate potential terror suspects at foreign airports before they're permitted to board a flight for the U.S.\nI’ve worked to increase the deployment of technology to monitor and better secure remote portions of our northern border. I’ve sponsored legislation to bring federal funding to support law enforcement in our border communities with the cost of prosecuting drug trafficking and other crimes. I’ve worked to increase the security of container cargoes so they are identified and screened before they leave foreign shores destined for our ports. And I’ve worked to increase the deployment of K-9 units and specialized security teams at our airports to improve safety and to move passengers through security lines more quickly.\nWe must remain ever vigilant in our efforts to protect our nation. But we must do so without ever compromising our values, our humanity, the rule of law, or due process."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.cantwell.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-30",
+    "url": "https://web.archive.org/web/20261030223605/https://www.cantwell.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261030223605/https://www.cantwell.com/",
+     "original": "https://www.cantwell.com/",
+     "date": "2026-10-30",
+     "title": "Maria Cantwell for Senate",
+     "text": "## Proudly representing the people of the State of Washington and the values we share.\nAs your Senator, I’ve crafted legislation to help bring prosperity to our state and to our nation. I've fought to ensure an innovative future for our country and worked across the aisle to achieve sustainable domestic infrastructure for generations of Americans to benefit from.\nEvery day I work to protect the health of our families, preserve the environment we live in, and invest in long-term solutions, like caring for our children and making education affordable. I believe we must honor and respect the contributions made by our veterans and seniors."
+    },
+    {
+     "url": "https://web.archive.org/web/20260126235713/https://www.cantwell.com/issues/",
+     "original": "https://www.cantwell.com/issues/",
+     "date": "2026-01-26",
+     "title": "ISSUES — Maria Cantwell for Senate",
+     "text": "What I Stand For\nIn the Senate, I've learned how to overcome partisan divides and gridlock to get things done for students, seniors, veterans, women, and working families who make Washington their home.\nWorking together, we can grow the economy, protect the environment, build clean energy jobs, provide educational opportunities for all people at all stages of life, protect Social Security, Medicare and Medicaid, and ensure that housing, health care, and retirement remain affordable for working families.\nJobs & the Economy | Environment | Health Care | Reproductive Rights | Women's Issues | Veterans | Education | Housing | Retirement Security | Agriculture | Cybersecurity | Opioid Crisis | Homeland Security\nJobs & The Economy\nMany of the most successful businesses in the world were founded in Washington state, and continue to grow here. Throughout my career, I've worked to support our state’s unique and enviable culture of science, innovation, and economic growth. I've seen how successful Washington companies operate, and I know what it means for our state.\nIt means jobs.\nNot just jobs for tech workers, but across all sectors of our economy. My mission is to ensure that our prosperity is shared—so I fight for things working families need, like access to education and job training, and making housing, health care, and childcare more affordable.\nI support the men and women of organized labor. I'm proud that Washington State is leading the nation in raising the minimum wage. I’ve worked hard to increase investment in workforce training and I’m fighting for more apprentice jobs so more working-class families can earn and learn.\nI led legislation investing in 10 key technology areas – including semiconductor chip manufacturing – with funding for research and development in tech hubs and universities across the country so we continue to lead the world in science and innovation.\nI supported the creation of a $30 billion lending fund to help small businesses, the great engine of our economy.\nWorking with women entrepreneurs, we increased access to capital and funding for business counseling so we could grow more women-owned businesses.\nToday, it is not uncommon for workers to transition through multiple careers in their lifetime. We must prepare workers to thrive in a 21st-century global economy. We need to provide education and training for returning veterans and laid-off workers, and support our community colleges.\nOur state is at the forefront of the knowledge economy. Two key ways of staying ahead are affordable education and reduction of student loan debt. We must invest in making college more affordable. The benefits we gain from these efforts are further innovation and greater success.\nLike many Washingtonians, one of my favorite things to do is go hiking. Whether it’s the Cascades, the Olympics, the Methow Valley, or our spectacular Pacific coastline, the incredible natural beauty and untamed wilderness of our state is a gift we share. One of my greatest responsibilities is to help protect this gift for future generations.\nThat's why I fought so hard to permanently fund the Land and Water Conservation Fund (LWCF) in the Great American Outdoors Act and to address the maintenance backlog in our national parks and wildlife refuges.\nI've worked to grow Washington's leadership in new solar, wind, biofuel, and fuel cell jobs by promoting renewable energy over fossil fuels and maintaining fuel efficiency for cars.\nI will fight any attempt to privatize Bonneville public power.\nI fought to protect Puget Sound by creating a Puget Sound Office where the EPA, NOAA, and other federal partners will have an annual $50 million budget for research and recovery efforts to help clean up our Sound.\nI believe in health care for all. I support universal coverage, and that’s why I’m fighting every day for all of our fellow citizens to have access to affordable, high-quality health care.\nI helped pass the Inflation Reduction Act, which capped insulin prices at $35 for those on Medicare and extended health care subsidies.\nI fought to stop President Trump and Republicans in Congress from stripping health care from 750,000 Washingtonians and eliminating protections for pre-existing conditions. I also support improvements to the Affordable Care Act, like expansion of the Basic Health Plan, to lower premiums and out-of-pocket expenses.\nMedicaid has brought coverage to 650,000 people in our state. I’ve fought hard against proposals that would undermine Medicaid by repealing the expansion and turning the program into a block grant.\nI am proud of Washington’s innovative health care system and world-renowned medical research institutions. I support strong federal investments in biomedical research and innovation in health care services to lower costs, improve results, and keep the focus on patients.\nPrescription drugs must be more affordable. That’s why I co-sponsored legislation to allow the safe importation of prescription drugs from Canada and empower Medicare to negotiate prices directly with drug manufacturers. At every chance I get, I will join with legislators of both parties to work to end price-gouging of prescription drugs — such as when a bipartisan coalition successfully helped pressure Eli Lilly to lower the cost of insulin.\nWe still have a lot of work to do. That's why I continue fighting for lower costs, expanded access, and better health care outcomes for all.\nSince the Supreme Court ruled to overturn Roe v. Wade , I have been hard at work pursuing every possible avenue to protect reproductive freedom both at home in Washington state and across the country.\nWhen “trigger laws” in more than a dozen states enacted abortion bans after the Court overturned Roe , pro-choice states like Washington experienced an influx of out-of-state patients. That’s why I worked to protect our state’s health care delivery system and ensure providers can continue helping patients.\nI fought for clarity from the Department of Justice on potential federal actions to protect patients and providers, regardless of where the patient comes from.\nI introduced legislation to protect health care privacy and keep personal data safe from being misused against a patient.\nI worked to protect providers from prosecution for providing essential reproductive care to patients traveling from anti-choice states – which Republicans blocked.\nI fought for access to contraception in the wake of conservative states’ attempts to ban or limit individuals’ access.\nThese are just a few pieces of the ongoing fight to restore and defend abortion and privacy rights. I will continue pushing forward against extremist attempts to roll back progress.\nWhile we have made progress, we must continue the fight to protect the rights of women and for fair pay at work.\nWe passed the Lilly Ledbetter Fair Pay Act to do away with gender-based compensation discrimination and help ensure fair pay. Now we are fighting to ensure that there is equal pay for equal work.\nOur state has passed paid family and medical leave and the nation should follow suit. We must also continue working to help make child care more affordable. We lead the nation in this respect but we’ve still got to keep moving forward.\nIn the reauthorization of the Violence Against Women Act, I fought to extend the protection of this legislation to the most vulnerable women in our society.\nWe must continue to raise awareness of, and speak out against, sexual harassment in the workplace.\nWorking with women entrepreneurs, I helped pass a law to ensure women-owned small businesses have equal access to federal contracting. And we are continuing to push for policies that increase access to capital and funding for business counseling so we can grow more women-owned businesses.\nAfter the U.S. Women’s National Soccer Team won the 2019 FIFA Women’s World Cup, I introduced the Equal Pay for TEAM USA Act which was signed into law by President Biden. The law requires that the U.S. Olympic and Paralympic Committee and sports’ governing bodies provide the same pay, medical care, travel accommodations, and coverage of expenses to U.S. athletes regardless of gender. Now when women win, they no longer have to worry that a men’s team will somehow be paid more.\nAccess to affordable educational opportunities is the key to a thriving economy and a productive workforce. That’s why I fought to protect funding for K-12, worked to expand GI Bill education benefits and sponsored legislation to increase Pell Grants and allow refinancing of student loans. I’ve fought to protect Impact Aid and secured increased funding for schools in rural counties through the Secure Rural Schools program.\nIn particular, I believe in life-long learning opportunities, from Head Start programs for early childhood, to adult basic education funding and programs to help displaced workers.\nI am a strong supporter of STEM programs (Science, Technology, Engineering & Mathematics) because our future success will require skilled scientists and engineers.\nVeterans put everything on the line for us—and we, as a nation, have a responsibility to do all we can to assist their transition. That means ensuring timely access to quality health care and GI benefits.\nI’ve worked to bring job training, skills transition programs, education, and small business assistance to help veterans convert their experience and discipline into economic success.\nTo help those who provide daily care to many veterans, I supported expansion of the VA’s Caregivers Program. We expanded the term of eligibility for GI Bill loans and I supported laws to provide tax incentives for employers to hire veterans. And in my efforts to address affordable housing, I passed legislation to open up more housing units for homeless veterans.\nI’m fighting to ensure all veterans receive the care, benefits and respect they’ve earned through their sacrifice.\nEveryone in Washington should have access to safe, affordable housing. For too many in our state, the lack of affordable housing makes it difficult to just get by, let alone save for retirement.\nIncreasing our housing supply is a big part of the solution and that’s why I've sponsored and helped pass the first federal increase in the affordable housing tax credit in a decade. This legislation helps fund increased housing production around Washington state. I’ve also fought to address affordability, promote anti-discrimination protections, and increase funding for low-income and veterans’ programs within the federal budget.\nHousing affordability is reaching a crisis stage and it's time for us to step up and take on the complex issues surrounding housing costs. I will continue working at the federal level to enact policies and gain needed resources to ensure all in Washington have access to affordable housing.\nCybersecurity is an issue that keeps me up at night. Each day we face an increasing number of cyber attacks, including attacks from state actors, to our electrical grid and energy infrastructure.\nThat’s why I worked with Democrats and Republicans to pass critical legislation out of the Senate to help strengthen our preparedness and resilience to energy-sector cyber attacks.\nThis bipartisan legislation will help the Department of Energy to identify vulnerabilities, strengthen response capabilities, promote public-private information sharing and address workforce training and shortages.\nI’ve worked with our National Guard to strengthen its preparedness and response capabilities and introduced legislation to authorize the deployment of cybersecurity first response teams in all 50 states.\nPrevious generations worked securely in the knowledge that they could rely on pensions and Social Security in retirement. But more and more these days, workers aren't staying in one company for their whole career, and many lack adequate pensions. We’ve even seen pension funds fail.\nIn addition, we’ve had to fight repeated attempts by unscrupulous politicians to raid the Social Security trust fund and hand it over to Wall Street.\nWe need to do everything possible to safeguard the financial security of American citizens, who are rightfully concerned about their future. And to do that we must do more to help workers save. That’s why I introduced legislation that would create incentives for employers to match workers' contributions, and a new retirement plan option for workers who do not have access to a 401(k).\nI will not allow Social Security to be eroded by those in Congress who are more interested in the health of financial industry profits than they are about the people of America.\nOur diverse agriculture industry, driven by farmers and ranchers across Washington state, supports 164,000 jobs and more than $10.6 billion in agriculture production. Washington state is also the third largest exporter of food and agricultural products in the nation, with exports totaling almost $7 billion annually.\nThat’s why I fight for policies and programs that support farming and ranching families and help us to compete in international markets. I’ve worked to expand the Market Access Program which helps farmers gain access to consumers in emerging markets like India and China, and crop insurance to help families weather natural disasters and catastrophic crop loss.\nI’ve fought for agricultural research funding to help address falling numbers in wheat; added peas and lentils into our national school lunch program; expanded research and development funding for specialty crops; and backed increased funding for the National Clean Plant Network that helps keep plants virus free.\nI’ve also supported funding for Washington State University’s agriculture extension network, conservation programs like the Conservation Reserve Program, and rural development programs that support housing and other important economic investments in farm communities across our state.\nI’ve been vigilant against unfair trading practices and have worked with our growers to hold our trading partners accountable. A new trade enforcement trust fund that I helped create will help provide dedicated funding to enforce trade agreements. I will fight to ensure that Washington’s farms, ranches and other export-dependent businesses do not turn into collateral damage.\nAs I’ve traveled across our state, I’ve seen the devastating impact the opioid epidemic is having on our communities. From Longview to Port Angeles and Everett to Spokane, I’ve held forums to hear first hand about the difficult fight our families, community leaders, health care providers, and law enforcement officials are up against.\nThat’s why I supported the Comprehensive Addiction and Recovery Act, legislation that dramatically increased federal resources for treatment, recovery, supportive services for families and law enforcement.\nI introduced a bill, supported by 39 state Attorneys General, to increase the penalties on drug manufacturers when they turn a blind eye to the reckless distribution of opioids in our communities. We need greater transparency and accountability into the production, marketing and distribution practices of drug manufacturers and that’s what my bill does.\nThere is no greater responsibility of our federal government than to ensure our national security and that of every American. Washington state faces a unique set of security challenges. We are a major gateway to trans-Pacific trade and we’re a border state. We’re experiencing record-setting growth at our airports, even as aviation security requirements increase. I take my responsibility to help keep our state safe very seriously.\nI’ve passed bipartisan legislation to help law enforcement identify and evaluate potential terror suspects at foreign airports before they're permitted to board a flight for the U.S.\nI’ve worked to increase the deployment of technology to monitor and better secure remote portions of our northern border. I’ve sponsored legislation to bring federal funding to support law enforcement in our border communities with the cost of prosecuting drug trafficking and other crimes. I’ve worked to increase the security of container cargoes so they are identified and screened before they leave foreign shores destined for our ports. And I’ve worked to increase the deployment of K-9 units and specialized security teams at our airports to improve safety and to move passengers through security lines more quickly.\nWe must remain ever vigilant in our efforts to protect our nation. But we must do so without ever compromising our values, our humanity, the rule of law, or due process."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-07-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpmciiphek2h",
+     "text": "This week marks the 57th anniversary of the #Stonewall uprising, an act of bravery and resiliency in the face of violence and discrimination against the LGBTQ+ community. We must always honor all those fighting for LGBTQ+ equality."
+    },
+    {
+     "date": "2026-07-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpml7chncc2k",
+     "text": "The formal review of the USMCA started today. The agreement and the subsequent investments in supply chains built on a three-country market have created wealth and opportunity for all of North America. I ask the USTR to negotiate in good faith with our partners and extend the agreement."
+    },
+    {
+     "date": "2026-07-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpogznxb4k2g",
+     "text": "Let’s get building! The signing of the Record of Decision brings the Pacific Northwest one step closer to replacing the aging Interstate Bridge with the modern, resilient crossing our region has needed for decades. (1/3)"
+    },
+    {
+     "date": "2026-07-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpuculdnlc2f",
+     "text": "American exceptionalism is that we are a melting pot, and that melting pot makes us stronger. Today in Seattle, I celebrated our nation’s 250th anniversary with 252 new U.S. citizens."
+    },
+    {
+     "date": "2026-07-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpucvj7iik2f",
+     "text": "American exceptionalism is that we are a melting pot, and that melting pot makes us stronger. Today in Seattle, I celebrated our nation’s 250th anniversary with 252 new U.S. citizens."
+    },
+    {
+     "date": "2026-07-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpyqndkuns2p",
+     "text": "I ask my Senate colleagues to stand up for your vote and for our rights – because if we don’t stop this assault on vote-by-mail, I guarantee you millions of Americans will be disenfranchised."
+    },
+    {
+     "date": "2026-07-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mpyysagqsc2w",
+     "text": "Seattle fans have always brought the noise on Monday nights. From the waterfront piers to Pioneer Square to the stadium, let's get loud!"
+    },
+    {
+     "date": "2026-07-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqajgao3r22m",
+     "text": "I recently celebrated with Congressional Award Gold Medalists from Washington state. They dedicated hundreds of hours to serving their communities, a feat they should be very proud of."
+    },
+    {
+     "date": "2026-07-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqd4wtxp522i",
+     "text": "The court has sided with the rule of law in allowing health inspectors into the Northwest ICE detention center. Everyone, including contractors to the federal government, need to comply with our state’s health laws for detainees and Washington workers.\n\nwww.kiro7.com/news/local/j..."
+    },
+    {
+     "date": "2026-07-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqddyylzlk2i",
+     "text": "By removing all members of the independent and bipartisan federal Election Assistance Commission, President Trump is making our elections less secure. Only Congress can eliminate the EAC -- but that hasn’t stopped the President from trying to fully disable it. (1/2)"
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqk7syjmqk2n",
+     "text": "Thank you to Everytown for Gun Safety and Moms Demand Action advocates from WA for our recent meeting in DC. We discussed the urgent need to prevent gun violence, which affects far too many people across Washington state."
+    },
+    {
+     "date": "2026-07-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqmrjycx6s27",
+     "text": "The SAVE America Act and redistricting to eliminate minority-majority districts are actions to take away the right to vote."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqrp4ezwic2h",
+     "text": "I opposed the $1.1 trillion NDAA because it does not end President Trump’s unauthorized war with Iran, does not safeguard against the military being used domestically, and fails to justify its historic cost as Americans grapple with soaring food and energy prices. (1/2)"
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqtzlulfxk2t",
+     "text": "The President is wrong. Washington State’s universal vote-by-mail system is safe and secure and so was the 2020 election. Ask Mike Pence. (1/2)"
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mqu7myxjxs2m",
+     "text": "Six years ago today, we lost John Lewis – a civil rights icon who inspired us to fight for justice and equality, even in the face of great adversity. We now fight for our voting rights, which are under threat by the President of the United States. (1/2)"
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mr3vmx2oyk2q",
+     "text": "57 years ago, astronauts Neil Armstrong & Buzz Aldrin became the first people to set foot on the moon. Subsequent Apollo missions landed 3 lunar rovers built in WA – and we’re very proud that 40+ WA companies supported this year’s Artemis II mission."
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mr4l6l5vek2t",
+     "text": "The Justice Department's decision to allow TikTok on federal devices is deeply concerning. Federal phones contain sensitive government communications, contacts, and location data, making them attractive targets for foreign intelligence. (1/2)"
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mr63axywbs24",
+     "text": "Trade with Canada powers $7.3 billion in Washington state exports and supports more than 200,000 jobs. (1/2)"
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mr6srx7qdc26",
+     "text": "We should not accept the fact that in this country women, especially Black women, earn less than men for doing the same work. I join my colleagues in shining the light on this inequity in order to push for a real solution to this problem. (1/2)"
+    },
+    {
+     "date": "2026-07-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrdchpdcu22l",
+     "text": "Democrats have the vision: Bringing the supply chain back to America, demanding that critical manufacturing happen here, and creating jobs through apprenticeship programs."
+    },
+    {
+     "date": "2026-07-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrijmyjsvs25",
+     "text": "On World IVF Day, we celebrate the new life that IVF brings into the world. Congress must protect families’ access to IVF by passing the Right to IVF Act, which establishes a nationwide right to IVF and makes fertility treatments more affordable."
+    },
+    {
+     "date": "2026-07-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrkxka2myc25",
+     "text": "Today we recognize the 36th anniversary of the Americans with Disabilities Act, which has made it possible for so many individuals with disabilities to live independently and join the workforce.  \n\nwww.cantwell.senate.gov/imo/media/do..."
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrm32waab22t",
+     "text": "This is a tragic situation. My heart goes out to the victims, their families, and all those affected. I’m following developments closely. Thank you to all the first responders at the Seattle Center, Harborview, and everywhere else in the city."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mroawr6qdk2m",
+     "text": "The Administration is using the Supreme Court's mistaken ruling on Temporary Protected Status to strip legal status from thousands of law-abiding Haitians nationwide, including many community members in Spokane. (1/2)\n\ntime.com/article/2026..."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mroclpwr5c2m",
+     "text": "The US Postal Service has no role in deciding who can vote. The Supreme Court should reject President Trump’s latest demand to allow him to interfere with the ability of Washingtonians to vote by mail. (1/2)"
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrpx3cbsxc26",
+     "text": "Great to meet with members of RESULTS Washington who came to talk to me about ways to reduce poverty. We discussed big issues in WA, across the nation, and abroad, including access to food assistance, healthcare, and housing."
+    },
+    {
+     "date": "2026-07-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrsrqjp5hc2z",
+     "text": "Thank you to the WA members of Boys and Girls Clubs of America (BGCA) who visited me in DC! We got the chance to talk about the importance of BGCA for young people across our state, along with the important work that these BGCA members are doing to better their communities."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrupmvdvss2i",
+     "text": "GDP data released this morning revealed, again, that the economy is not growing at a pace we need to have any confidence for the future. A 1.5% rate of growth in the second quarter of 2026 is another warning sign that the economic policies of this Admin are wrong-headed & need to be changed."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrv5oaautk2f",
+     "text": "Medicare and Medicaid were signed into law on this day 61 years ago. Today, nearly 2 in 5 Americans & more than 3 million Washingtonians – including hundreds of thousands of children – rely on these programs for affordable healthcare. We must protect these life-saving programs."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrvjiaqy6c2e",
+     "text": "More than 15,000 low-income families in Washington rely on the Child Care and Development Fund. Today, Senate Republicans voted to keep a Trump Administration policy that will make childcare more expensive and less accessible for many of those families. (1/2)"
+    },
+    {
+     "date": "2026-07-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mrxtpd6rgk23",
+     "text": "This is what America and American workers get when you make port infrastructure investments.\n\nwww.youtube.com/live/PG9hLwc..."
+    },
+    {
+     "date": "2026-08-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3ms2sqafic22s",
+     "text": "I am monitoring the dangerous fires in Spokane and across Central Washington. My office and I are in contact with local, state, and federal agencies to help make sure firefighters and first responders have the resources they need. (1/2)"
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3ms5b4wtzyc2h",
+     "text": "The Spokane fire is the top fire in our nation. The federal government is going to give us the resources we need here on the ground. (1/2)"
+    },
+    {
+     "date": "2026-08-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3ms7jwavc5227",
+     "text": "Today I joined the entire WA congressional delegation in a letter to President Trump supporting an expedited Emergency Declaration for counties and tribes affected by the large, fast-moving wildfires across our state."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3msbjr2gdis2v",
+     "text": "Today is the 6th anniversary of our successful fight to pass the Great American Outdoors Act. This law fully funded the Land and Water Conservation Fund, which has invested over $730 million in conserving open space and public lands in Washington since its creation."
+    },
+    {
+     "date": "2026-08-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3msc36j2xxk2f",
+     "text": "Today is Primary Election Day in WA! Voters, be sure to return your ballot to a state ballot drop box or your local voting center by 8:00 PM PT TONIGHT. (1/2)"
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3msdszdwr3s2k",
+     "text": "Today Interior Sec. Burgum, Agriculture Sec. Rollins, DOI Wildland Fire Service Director Brian Fennessy, and USFS officials briefed Senators on keeping assets in the Northwest as we are at a Preparedness Level 5, an extreme wildfire designation. (1/4)"
+    },
+    {
+     "date": "2026-08-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3msjp4kelsk2e",
+     "text": "Today is Purple Heart Day, when we remember the bravery and sacrifices of Americans who were wounded or lost their lives in service of our nation. They have helped safeguard the United States and all it stands for."
+    },
+    {
+     "date": "2026-08-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3msw4bvqnw22x",
+     "text": "Today in Yakima we celebrated the grand opening of Casa de la Mora, a housing complex for people with disabilities, young adults exiting homelessness or foster care, and low-income households. This is the transformative element that might get somebody from just existing to thriving again."
+    },
+    {
+     "date": "2026-08-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3msymk3g65c2z",
+     "text": "Yesterday we learned from Tom Clemo of California Interagency Incident Management Team 7, Maj. Gen. Gent Welsh of the Washington National Guard, and local fire chiefs that the Spokane fires could have been a lot worse. (1/3)"
+    },
+    {
+     "date": "2026-08-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mt2ubejd3s23",
+     "text": "Today is Social Security’s 91st birthday, a lifeline benefit that keeps nearly 300,000 Washingtonians above the poverty line. In the Senate, I will continue to protect the Social Security program."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mtfe4uozs226",
+     "text": "At a moment when climate change is intensifying wildfire risks, this administration is moving to strip protections from some of America’s last remaining wild forests. (1/3)\n\napnews.com/article/road..."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mtukvboktc2p",
+     "text": "Today’s Supreme Court decision gets the Trump Administration one step closer to implementing its voter suppression order and forcing states to hand over personal voter data to the federal government. This is wrong. (1/3)\n\napnews.com/article/trum..."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mtzbfcswfc2c",
+     "text": "Today, on #WomensEqualityDay, we honor the women who fought tirelessly for the right to vote. Our democracy – and our country – is stronger because it includes women’s voices."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mtzqeh2fgc2a",
+     "text": "Meta has known for years that its products have addictive design features that harm kids. Today’s settlement finally holds the company accountable for its actions by requiring Meta to adopt major changes to make Facebook and Instagram safer for kids online. (1/3)"
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mu4nle74uc2z",
+     "text": "With pivotal elections less than 70 days away, I’m grateful a federal judge again blocked President Trump’s efforts to weaponize the Postal Service and limit mail-in ballots. (1/2)\n\napnews.com/article/trum..."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mug5qn5wwk2y",
+     "text": "Today we recognize International Overdose Awareness Day. Washingtonians are gathering across our state to remember people we’ve lost, and support neighbors who are dealing with addiction. www.overdoseday.com"
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3muhp74kde22t",
+     "text": "It’s time to stop taxing Americans at the border and provide working families relief from President Trump’s destructive tariffs. (1/2)\nwww.cantwell.senate.gov/news/press-r..."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mumxoiyxcc2b",
+     "text": "No one worked harder or contributed more to feminism in the public eye. Her legacy will live on. My heart goes out to her friends and family. She will be missed.\ntime.com/article/2026..."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3munb3rligc2i",
+     "text": "In the wake of the horrific 9/11 attacks, with our region still in shock, Mike Cameron, Mark McLemore and the 2001 Mariners created an iconic moment of healing and unity. (1/2)"
+    },
+    {
+     "date": "2026-09-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3muwwlc45d22n",
+     "text": "Today, on #LaborDay, we honor the hard-working Americans who are so vital to our economy. To create opportunities for the future, we must continue to invest in our workers and protect their rights."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mv6zo6dr2s24",
+     "text": "Republicans are suddenly waking up to the urgent need for tough AI safety rules, a sharp reversal from last year when House Republicans and Chairman Cruz tried to impose a 10-year moratorium on state AI regulations that the tech bros wanted. (1/3)"
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mv7cbswwz22v",
+     "text": "That's right! Harm is being done to voters. DISENFRANCHISEMENT!!! Thanks to the Appeals Court decision, the court is saying USPS chaos has got to stop.\n\nwww.cbsnews.com/news/appeals..."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mv7kkan4h22v",
+     "text": "Roughly 250,000 Washingtonians are about to see another big spike in their health insurance costs because Republicans passed a bill that made health care more expensive and failed to extend critical financial assistance. (1/2)"
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvauj3unek2v",
+     "text": "Our hearts are mourning for all those lost on September 11, 2001. We remember the victims as well as the heroism of first responders, the service members who continue to protect us, and the incredible unity we felt as a nation in the aftermath of the attacks. (1/3)"
+    },
+    {
+     "date": "2026-09-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvirqrbxkc2l",
+     "text": "Rolling back carbon pollution limits from power plants is a step in the wrong direction. Rather than abandoning public health standards and the fight against climate change, the way to keep electricity prices down is to invest in cleaner, more efficient energy technologies."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvjeb6rx222k",
+     "text": "This close to the election we need stability, not disenfranchisement and confusion. I’m glad a majority of the Supreme Court Justices rejected Trump’s mail-in ballot scheme that would have created chaos and denied many Americans the right to vote. (1/2)"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvlonrx5wk2l",
+     "text": "This report demonstrates how the unsustainable growth in spending on college sports is amplifying the broader financial pressures on colleges and universities. (1/3)"
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvlxrr6pks2i",
+     "text": "A strong bipartisan group of Senators voted to advance discussion of college sports reforms. With the drag on higher education that athletic departments are causing, this discussion can't happen soon enough. Women's and Olympic sports need immediate shoring up.\n\nwww.espn.com/college-spor..."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvqt466k622u",
+     "text": "I want these rules in place because sports is about any given Saturday. It’s not about whether you have a billionaire in your backyard. It’s about whether you can coach, recruit, have academic performance, & have fairness. But that fairness does not exist today without this bill."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mvsowolm322h",
+     "text": "This #AeroWeek, we celebrate the 100,000+ aerospace workers and 1,500+ companies in Washington state creating the future of flight and space exploration.\n\nWA boasts over 100 years of commercial aviation heritage and we are proud to be a leader in the aerospace industry."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mw7es33pfs2s",
+     "text": "I am honored to be a recipient of #NAFTAE’s Friend of Adult Learners Award. It’s my pleasure to support adult learners by strengthening adult education opportunities. Thank you NAFTAE."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mwcb46qjks2o",
+     "text": "The costs of President Trump’s unnecessary war with Iran continue to mount, and the American people want it to end. We have lost valuable lives, and the conflict is compounding the burden of high gas and grocery prices at home."
+    },
+    {
+     "date": "2026-09-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mwf2v7252c2f",
+     "text": "Powerful words from Vancouver NAACP Vice President, Rev. Michael Jones Jr.: “Voting rights in America have been expanded through struggle, not convenience. This is not just a political issue. This is a civil rights issue.”\n\nyoutu.be/am5w7Q-A7mI"
+    },
+    {
+     "date": "2026-09-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mwgzwymi7k27",
+     "text": "Dolores Sibonga was a giant in our community whose impact and trailblazing legacy will live on. She was the first woman of color elected to the Seattle City Council and the first Filipino American to pass the Washington State bar exam. (1/2)\n\nwww.seattletimes.com/life/culture..."
+    },
+    {
+     "date": "2026-09-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mwh7tryggc27",
+     "text": "The Trump administration is threatening to repeal the Roadless Rule, which protects some of America’s last remaining wild forests from development. (1/2)"
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mwltoa24p22t",
+     "text": "Voting in America is a right. And as Hayward Evans of the Seattle King County NAACP says, that precious right has been denied to too many in our nation’s history. \n\nwww.youtube.com/watch?v=HKl9..."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mwmx3re3s22b",
+     "text": "Tonight the Senate passed the Protect College Sports Act 77-22."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mxf25pflms2y",
+     "text": "It was great meeting with Gabriela Whitemarsh, the 2026 Washington State Teacher of the Year. Gabriela teaches advanced mathematics in both English and Spanish and is an advocate for bilingual education. Thank you Gabriela for the lifechanging work you do with Pasco’s youth!"
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mxfiibs3sc2y",
+     "text": "We had a great crowd at yesterday's Main Street Promise Celebration in Vancouver. The community had a vision for Main Street, and that vision has become a reality. Congratulations, Vancouver!"
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mxp2rbjcjc22",
+     "text": "Native Americans have faced and risen above tremendous challenges. Today, on #IndigenousPeoplesDay, we honor Native history and celebrate the first inhabitants of our country."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mxtze3cujc23",
+     "text": "A war with Iran and damaging tariffs continue to haunt American households by raising the costs of everything. Prices overall are up 3.7%. Those families trying to budget for winter heating needs are facing fuel oil prices that are up 74.2% over last year. (1/2)\n\nabcnews.com/Business/inf..."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3myiqkinmuc2z",
+     "text": "What a great soul. \n\nTom played so many iconic characters throughout his life, and he was generous to the people and causes he cared about, including the arts, veterans, and the environment. How lucky were we to have Tom and Julie in the Northwest. He will be missed."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/cantwell.senate.gov/post/3mz4llq6j6s2x",
+     "text": "We mourn the passing of Dolores Huerta, a labor leader, civil rights icon, and tireless advocate for justice. (1/2)"
+    }
+   ]
+  }
+ ]
+}

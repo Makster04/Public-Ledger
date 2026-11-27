@@ -1,0 +1,48 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "brooks",
+ "name": "Bob Brooks",
+ "built": "2026-11-26",
+ "sites": [
+  "https://brooksforcongress.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://brooksforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103032802/https://www.brooksforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103032802/https://www.brooksforcongress.com/",
+     "original": "https://www.brooksforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Bob Brooks for Congress | Put the fire out in Washington",
+     "text": "Washington, D.C. is on fire.\n## Working people keep getting burned.\nBob Brooks is a firefighter running for Congress to put the fire out and make Washington work for us. Bob has had a lot of jobs – bartender, landscaper, baseball coach, Teamster. He knows Washington needs to do better, and he’s tough enough to get the job done for us.\nBob spent 20 years as a firefighter in the City of Bethlehem. He’s held nearly every position on the truck and every post in his union. As the union President of the Pennsylvania Professional Fire Fighters Association, Bob took on the politicians for higher wages, better healthcare, and benefits for all workers.\nEndorsed by Governor Josh Shapiro\nWhere Bob Stands\nEnd the affordability crisis\nBuild a fair and sustainable healthcare system\nMake the rich pay their taxes\nRaise the minimum wage\nEnd and expose government corruption\nBring housing costs down in the Lehigh Valley\nSecure the border and build a working immigration system\nPower the Lehigh Valley\n## Firefighter. Union leader. Family man.\nIn the News\nOct 25, 2026\nFirefighter Bob Brooks Leads Ryan Mackenzie by Five Points in New NYT/Inquirer/Siena Poll\nOct 22, 2026\nThe Numbers Are In: Bob Brooks’ Q3 Raised the Most of Any Quarter in the History of the Lehigh Valley\nOct 20, 2026\nPhiladelphia Inquirer: Bob Brooks for Pennsylvania’s 7th Congressional District Endorsement\nOct 5, 2026\nICYMI: Armchair Lehigh Valley Profiles Bob Brooks’ Working-Class Roots and Fight to Lower Costs\nOct 1, 2026\nFirefighter Bob Brooks Hauls in Over $2.5 Million in Q3, Higher Than Entire Cycle To Date\nSep 29, 2026\nBob Brooks didn’t start the DC dumpster fire. He wants to put it out\n## Support Bob Brooks for Congress!\n## VOTE Bob Brooks for Congress."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103032800/https://www.brooksforcongress.com/on-the-issues/",
+     "original": "https://www.brooksforcongress.com/on-the-issues/",
+     "date": "2026-11-03",
+     "title": "Bob's Platform - Bob Brooks for Congress",
+     "text": "Bob's Policy Platform\n## Washington’s a dumpster fire, and working people are the ones getting burned.\nBillionaires and big corporations run the show while the rest of us are left to scrape by. I’ve lived a working-class life. There was a time when a blue-collar job could make you a decent living. It doesn’t anymore.\nWe’ve fought three wars since the minimum wage was last raised.\nThe richest 1% of Americans hold 40% of the nation’s wealth while the bottom 50% share just 4%.\nJeff Bezos paid no federal income taxes in 2007 or 2011.\n## It’s time to change it.\nWhile Republicans are stripping us for parts, Democrats in Washington need to step up and deliver. That’s why I’m running. I know how hard it is out there right now. I’ve lived it, and I believe we can do better.\nI’m here to present the following platform and humbly ask for your support.\n## End the affordability crisis.\n## Build a fair and sustainable healthcare system.\n## Make the rich pay their taxes.\n## Raise the minimum wage.\n## Strengthen unions.\n## Bring housing costs down in the Lehigh Valley.\n## Protect social security and retirement benefits.\nI’ll always defend Social Security and will sign on to the Medicare and Social Security Fair Share Act, which removes the cap on Social Security Payroll taxes and increases the net investment income tax by 1.2%. While Republicans gut American’s social safety net, I will work to protect the benefits tens of millions have worked hard to earn.\n## Cut the cost of childcare.\n## Help young people afford college and trade schools.\n## End and expose government corruption.\n## Secure the border and build a working immigration system.\n## Protect local control over the data center industry.\nThe federal government should never take the power to decide where a data center gets built out of the hands of the residents who have to live near them. I oppose all legislation that hampers local control, like the ten-year ban on state AI regulation Ryan Mackenzie voted for in the One Big Beautiful Bill.\nUtility costs are already too high. The last thing we need are data centers raising our energy costs while an out-of-state corporation gets rich.\nI'm grateful Governor Shapiro is taking steps like his recent executive order to protect regular Pennsylvanians and allow communities to veto data center proposals in their backyard. We must pass national legislation that makes these protections federal law, and in Congress, that is what I'll fight for.\n## Power the Lehigh Valley.\n## End gun violence.\n## Fund public schools.\n## Make our community safer.\n## Protect reproductive rights.\nWe need to codify Roe v. Wade and pass legislation to overturn Trump abortion bans in red states. If you need care, everyone deserves the same access, the same protections, and the same rights.\n## Stop bullying LGBTQ people.\n## Stop endless wars and support our allies.\nTrump weakened our alliances, cozied up to Putin, started a war with Iran, and blocked aid to Ukraine, leaving us less secure on the world stage.\n## End the illegal war in Iran.\nRyan Mackenzie promised to end costly wars and bring down your costs. Then he did the opposite.\nFive times, he had the chance to end the unauthorized war in Iran. Five times, he voted to keep it going. The result: gas and fertilizer prices spiking, inflation hitting a four-year high, and working families in the Lehigh Valley paying the price for a war that should’ve never been started.\nI will always stand against pointless wars that cost American lives and hundreds of billions of taxpayer dollars.\n## Serve those who have served our country.\n## Modernize transportation around here.\n## Fighting for Carbon County.\n## Support Bob Brooks for Congress!\n## VOTE Bob Brooks for Congress."
+    },
+    {
+     "url": "https://web.archive.org/web/20260810214629/https://brooksforcongress.com/issues/",
+     "original": "https://brooksforcongress.com/issues/",
+     "date": "2026-08-10",
+     "title": "Platform – Bob Brooks For Congress",
+     "text": "## Washington’s a dumpster fire, and working people are the ones getting burned.\nBillionaires and big corporations run the show while the rest of us are left to scrape by.\nI’ve lived a working-class life. There was a time when a blue-collar job could make you a decent living. It doesn’t anymore.\n- We’ve fought three wars since the minimum wage was last raised.\n- The richest 1% of Americans hold 40% of the nation’s wealth while the bottom 50% share just 4%.\n- Jeff Bezos paid no federal income taxes in 2007 or 2011.\n## It’s time to change it.\nWhile Republicans are stripping us for parts, Democrats in Washington need to step up and deliver.\nThat’s why I’m running. I know how hard it is out there right now. I’ve lived it, and I believe we can do better.\n## I’m here to present the following platform, and to humbly ask for your support.\nI’ll always defend Social Security and will sign on to the Medicare and Social Security Fair Share Act , which removes the cap on Social Security Payroll taxes and increases the net investment income tax by 1.2%. While Republicans gut American’s social safety net, I will work to protect the benefits tens of millions have worked hard to earn.\nWe need to codify Roe v. Wade in the constitution and pass legislation to overturn Trump abortion bans in red states. If you need care, everyone deserves the same access, the same protections, and the same rights.\nTrump weakened our alliances, cozied up to Putin, risked war with Iran, and blocked aid to Ukraine, leaving us less secure on the world stage."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

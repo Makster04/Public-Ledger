@@ -1,0 +1,433 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "peters",
+ "name": "Gary C. Peters",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.petersformichigan.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.petersformichigan.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103190914/https://petersformichigan.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103190914/https://petersformichigan.com/",
+     "original": "https://petersformichigan.com/",
+     "date": "2026-11-03",
+     "title": "Home Page - Gary Peters for Michigan",
+     "text": "## Meet Gary\nGary is focused on strengthening our middle class by protecting access to quality, affordable health care, preparing Michigan for the jobs of tomorrow and helping our small businesses grow.\nMeet Gary >>\n## Help Gary Fight For Michigan\n*If you’ve saved your information with ActBlue Express, your donation will go through immediately.\n## On the Issues\nGary’s number one priority is making sure Michigan families can thrive. Whether fighting for quality, affordable health care and lower prescription drug prices, defending our Great Lakes, protecting public schools or standing up for small businesses, Gary always puts Michigan first.\nView All Issues >>"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103190925/https://petersformichigan.com/on-the-issues/",
+     "original": "https://petersformichigan.com/on-the-issues/",
+     "date": "2026-11-03",
+     "title": "On the Issues - Gary Peters for Michigan",
+     "text": "## Gary’s number one priority is making sure Michigan families can thrive.\nWhether fighting for quality, affordable health care and lower prescription drug prices, defending our Great Lakes, protecting public schools or standing up for small businesses, Gary always puts Michigan first.\n## Protecting Michigan Families from Coronavirus\nGary has been leading the fight to protect families, essential workers and small businesses during this unprecedented pandemic.\n## Strengthening Michigan’s Economy\nGary’s top priority is building a strong economy to support small businesses, boost manufacturing and create good-paying jobs.\n## Expanding Access to Affordable Health Care\nWhether lowering the cost of prescription drugs or working to give more people access to affordable health care, Gary is fighting to make sure no one has to choose between paying their bills and getting the care they need.\n## Protecting Public Schools and Education\nAs the son of a public school teacher, Gary saw firsthand how access to education can change lives, and he’s fighting to strengthen our schools, no matter the zip code.\n## Defending the Great Lakes and Environment\nThe Great Lakes are part of our DNA as Michiganders. Gary’s working to preserve our environment for generations to come.\n## Keeping Michigan Safe\nAs the Ranking Member on the Homeland Security and Governmental Affairs Committee, a member of the Armed Services Committee and a veteran, Gary knows that his number one job is keeping Michigan safe.\n## Fighting For Women\nThroughout his career, Gary has fought for women and policies that empower them to have equal opportunities and make choices about their own health care.\n## Standing Up For Agriculture and Rural Communities\nGary knows that agriculture is integral to Michigan’s economy and strengthens our communities — that’s why he’s fighting for opportunities to invest in and protect our farmers, small towns and rural areas.\n## Equity and Justice\nGary is fighting to address racial disparities and improve opportunities for Michigan’s African American communities from expanding health care and reforming our criminal justice system to creating jobs and expanding voting rights.\n## Getting Results for Michigan\nGary is a proven leader who has fought tirelessly to hold Washington accountable and save millions in taxpayer dollars."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103190919/https://petersformichigan.com/on-the-issues/michigans-economy/",
+     "original": "https://petersformichigan.com/on-the-issues/michigans-economy/",
+     "date": "2026-11-03",
+     "title": "Strengthening Michigan's Economy - Gary Peters for Michigan",
+     "text": "## Strengthening Michigan’s Economy\nGary knows that our economy is powered by middle-class families like the one he grew up in, and he knows to keep our state strong, we have to stand up for small businesses. Small businesses create two out of every three jobs, and Gary believes that protecting them means strengthening the backbone of our state.\nAfter working for over 20 years in business, Gary understands the unique challenges that small businesses face. During his time in the Senate, he has cut red tape and fought to ensure small businesses have the resources to thrive. Additionally, he helped secure a bipartisan law that helps entrepreneurs understand patent laws to protect their intellectual property.\nGary knows that Michigan has the greatest workforce in the world, and we have to expand their opportunities for our state to thrive. That’s why he’s working to create jobs by fighting to ensure Michigan is a manufacturing hub, and is expanding access to workforce training and skilled trades programs that have literally built our state’s economy. Gary knows that for many families, a certificate that leads to a good job can mean just as much as any four-year degree and has passed bipartisan legislation to expand career and technical education, apprenticeship programs and trade school opportunities for high school students and veterans."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103191006/https://petersformichigan.com/on-the-issues/fighting-for-women/",
+     "original": "https://petersformichigan.com/on-the-issues/fighting-for-women/",
+     "date": "2026-11-03",
+     "title": "Fighting For Women - Gary Peters for Michigan",
+     "text": "## Fighting For Women\nEmpowering and supporting women is personal to Gary — he’s a father to two daughters, a husband and a brother of two sisters. He’s fought for women throughout his career.\nOne of the first bills he cosponsored in Congress was the Lilly Ledbetter Fair Pay Act to ensure that women get equal pay for equal work, and he continues to champion efforts to combat pay discrimination. To build more opportunities for women in the workforce, Gary passed bipartisan legislation to help increase the number of women working in science, technology, engineering and math (STEM) fields.\nGary understands the unique challenges women face in dealing with domestic abuse and violence. That’s why he supported the landmark Violence Against Women Act to reduce intimate partner violence and provide resources to ensure that more women can be safe and healthy. He also led passage of the PAWS Act to support domestic violence shelters in providing pet-friendly housing so the facilities can provide support for both survivors and their pets.\nGary has been endorsed by Planned Parenthood, NARAL and the National Organization for Women (NOW) as an advocate for reproductive freedom and the ability for everyone to make personal choices about their own bodies."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103191006/https://petersformichigan.com/on-the-issues/standing-up-for-agriculture-and-rural-communities/",
+     "original": "https://petersformichigan.com/on-the-issues/standing-up-for-agriculture-and-rural-communities/",
+     "date": "2026-11-03",
+     "title": "Standing Up For Agriculture and Rural Communities - Gary Peters for Michigan",
+     "text": "## Standing Up For Agriculture and Rural Communities\nGary is a tireless advocate for Michigan’s farming and rural communities. He led the way to help protect our farmers from unfair foreign trade practices. In the Senate, he introduced bipartisan legislation to ensure our laws are enforced and that Michigan farmers — especially our cherry growers — are not disadvantaged by unfair trade practices.\nHe has also supported renegotiating unfair trade deals like NAFTA, and he fought to improve and voted for the bipartisan USMCA to help level the playing field for our farmers, workers and businesses. As the leading Democrat on the Homeland Security Committee, Gary fought hard to pass bipartisan legislation into law to hire hundreds of agricultural inspectors at our borders to stop contaminated products from entering and protect Michigan’s marketplace and our nation’s food supply.\nWhen it comes to supporting those who live in our rural communities, Gary knows you can’t leave anyone behind. That’s why he’s working to expand broadband internet access to support telehealth, remote learning and precision agriculture. Given that so many rural Michiganders rely on the vital services the US Postal Service provides, Gary has led the fight to maintain the service’s funding, especially during the COVID-19 crisis."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103190915/https://petersformichigan.com/on-the-issues/protecting-mi-families-from-coronavirus/",
+     "original": "https://petersformichigan.com/on-the-issues/protecting-mi-families-from-coronavirus/",
+     "date": "2026-11-03",
+     "title": "Protecting Michigan Families from Coronavirus - Gary Peters for Michigan",
+     "text": "## A MESSAGE FROM GARY:\nFor so many people, this is an incredibly uncertain and difficult time. The challenges the Coronavirus pandemic has brought are unprecedented, and we will have to work especially hard in the weeks ahead to fight this virus and the health and economic concerns it brings.\nMichigan has been home to my family for five generations, and I’ve lived here my whole life. In difficult moments like this, I often think of how resilient the people of our state are — it’s just in our DNA. We’ve seen tough days before, and we will rise to meet this challenge and face it as we always have during times of turmoil: together.\nAnd here is my promise to you: I will always stand up for Michigan. My number one priority is to keep you and your family safe, and I will never waver in my commitment to fighting for financial aid for working families, equipment to protect our doctors and nurses on the front lines and, now more than ever, working to expand access to affordable health care.\nStay safe. Stay strong. We will get through this together.\n## What you can do to help:\n- Stay home, stay safe, save lives: Many people can have Coronavirus and spread it unknowingly — the best thing you can do to prevent the spread is by staying home unless it is absolutely essential.\n- Support your local food bank: Families who are already dealing with food insecurity are going to be especially vulnerable during this time. Find a food bank near you and help them keep their shelves replenished.\n- Visit michigan.gov/coronavirus to access the state’s online guide to apply for aid, get information or learn about volunteer and donation opportunities.\n## What Gary’s doing:\n- Supporting Essential Workers: Gary is working to pass his proposal for a Heroes Fund to increase pay for essential workers on the frontlines of the pandemic.\n- Providing Historic Unemployment Aid: Gary wrote, introduced and helped pass the Pandemic Unemployment Assistance Act to expand unemployment benefits and get more aid for more workers over a longer period of time.\n- Expanding Free Testing for Coronavirus: Gary introduced and passed the Free COVID-19 Testing Act to make sure all Americans have adequate testing capabilities.\n- Protecting Small Businesses: Gary fought to secure additional relief for small businesses, including $60 billion for minority-owned businesses and community lenders while working to expand the funding available for small business loans and grants in the CARES Act.\n- Getting Funding for Hospitals, Health Care Workers and Our Health Care System: Gary worked tirelessly to provide more critical funding for already overstretched hospitals and is continuing to fight to get health care workers the supplies they need to stay safe on the front lines of the pandemic.\n- Bringing Manufacturing Back to Michigan: One of Gary’s top priorities is to bring back American manufacturing of PPE, critical drugs and medical supplies — that’s why he’s fighting to pass his legislation to strengthen and boost Michigan manufacturing.\n- Holding Government Accountable: Gary is investigating the federal government’s response to the pandemic and fighting for Michigan to get its fair share of relief, including demanding answers on how small business loans were misallocated to large corporations and ensuring hospitals and health care workers get critical funding.\n## Resources for you:\nVisit michigan.gov/coronavirus for more resources and information available."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103190921/https://petersformichigan.com/on-the-issues/health-care/",
+     "original": "https://petersformichigan.com/on-the-issues/health-care/",
+     "date": "2026-11-03",
+     "title": "Expanding Access to Affordable Health Care - Gary Peters for Michigan",
+     "text": "## Expanding Access to Affordable Health Care\nGary knows that no one should have to make the impossible decision between paying their medical bills and putting food on the table. That’s why he was proud to vote for the Affordable Care Act (ACA) and has opposed attempts to repeal it to protect the 1.7 million Michiganders with pre-existing conditions who depend on the ACA for protections.\nThough Gary is proud to support the ACA, he’s also working for common sense fixes to make it work better for Michigan. That’s why he supported repealing the Cadillac Tax on high-cost employer plans to ease the burden on small business owners. He’s also working to expand coverage for middle-class families with solutions like a Medicare public option.\nGary knows that far too many seniors and others who rely on prescription medications are struggling to keep up with their skyrocketing costs. That’s why he helped lead and pass bills to get generic versions of insulin into the market more quickly, expand access to more affordable generic drugs and prevent big pharmaceutical companies from monopolizing the generic drug market. In addition, Gary helped introduce legislation that would allow Medicare to negotiate drug prices to keep costs low and make sure more Michiganders can afford their life-saving medications."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103191006/https://petersformichigan.com/on-the-issues/protecting-public-schools-and-education/",
+     "original": "https://petersformichigan.com/on-the-issues/protecting-public-schools-and-education/",
+     "date": "2026-11-03",
+     "title": "Protecting Public Schools and Education - Gary Peters for Michigan",
+     "text": "## Protecting Public Schools and Education\nGary and his family are proud products of Michigan’s public schools. Through his father, a public school English teacher, Gary saw firsthand the importance of having access to quality education. That’s why he’s advocated for better education opportunities for all Michiganders, from pushing to make higher education more affordable to expanding access to technical, vocational and apprenticeship programs. Gary has prioritized fighting so everyone — no matter where they live — can have access to affordable education.\nIn addition, Gary has stood up to special interests that have tried to gut funding for public education. From the beginning, he opposed the nomination and confirmation of Education Secretary Betsy DeVos and has fought against her attempts to cut funding for Michigan’s public schools, including critical after school programs.\nGary is pushing to expand funding opportunities for technical and vocational education programs for Michigan high school students to help them realize their full potential and have the skills they need on the job. He’s passed legislation to lessen the burden of student loans and promote diversity in STEM fields, and he’s helped to secure a record amount of funding for Pell Grants to make higher education more affordable for all students, regardless of zip code."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103190917/https://petersformichigan.com/on-the-issues/climate-and-the-great-lakes/",
+     "original": "https://petersformichigan.com/on-the-issues/climate-and-the-great-lakes/",
+     "date": "2026-11-03",
+     "title": "Defending the Great Lakes and Environment - Gary Peters for Michigan",
+     "text": "## Defending the Great Lakes and Environment\nIn Michigan, the Great Lakes are central to our culture, economy and way of life. Gary grew up spending his summers on the Great Lakes and knows that we need to protect them for future generations.\nYears before it was mainstream, Gary was working to combat climate change and defend our lakes by advocating for a Great Lakes drilling ban. While in the Senate, Gary authored and passed into law bipartisan measures to protect our lakes from catastrophic oil spills, and he successfully fought against budget cuts that would have eliminated Great Lakes funding, even helping secure historic Great Lakes funding to clean up contaminated lakes, beaches and waterways and prevent the spread of invasive species.\nWhile areas like Flint and Detroit continue to struggle for clean and accessible water, Gary has taken action to uplift and support these communities by leading the fight to successfully pass emergency aid for Flint after the lead water crisis. He’s also helping to secure funding to expand Head Start for communities affected by lead water pollution and is a leader on cleaning up toxic PFAS chemicals, which have contaminated drinking water across the state. Gary helped convene the Senate’s first-ever hearing on PFAS, passed into law a ban on the use of PFAS firefighting foams on military bases, which has been a key source of PFAS contaminated water in our state, and he’s led efforts to establish clear standards on cleaning up and limiting exposure to these toxic chemicals."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-07-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mpm6nrddms2z",
+     "text": "This is a direct result of Republicans cutting essential health care tax credits that lowered monthly premiums for millions of Americans. Instead of playing politics, Republicans should work with us to address this health care crisis and lower costs.\n\napnews.com/article/affo..."
+    },
+    {
+     "date": "2026-07-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mpr43rnncc24",
+     "text": "Michiganders across the state are gathering together to celebrate the 250th anniversary of the founding of our nation. Have fun, stay safe, and enjoy the monumental day! \nwww.freep.com/story/news/l..."
+    },
+    {
+     "date": "2026-07-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mpsx26msp22q",
+     "text": "Happy 4th of July and 250th birthday to this great nation we call home. During this remarkable milestone, may we look ahead to what we will achieve, together, in the next 250 years. God Bless America."
+    },
+    {
+     "date": "2026-07-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mptoxxqlvs2m",
+     "text": "Happy Fourth of July, Michigan 🇺🇸"
+    },
+    {
+     "date": "2026-07-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mptyf7szfs2v",
+     "text": "Flipping pancakes at the Very Cherry Flying Pancake Breakfast!"
+    },
+    {
+     "date": "2026-07-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqcd3dh3es2x",
+     "text": "Wishing a very happy birthday to my partner in the Senate, Senator Slotkin! I'm proud to work with you everyday to serve the people of Michigan."
+    },
+    {
+     "date": "2026-07-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqht5j6rg22s",
+     "text": "I’m saddened to hear of the passing of my colleague Senator Lindsey Graham. We may not have always agreed, but I respected his dedication to our country. My deepest condolences are with his family."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqkbqxncpc22",
+     "text": "Since Trump's \"Big, Beautiful Bill\" became law one year ago, it has ripped away SNAP nutrition assistance from over 120,000 Michiganders, including over 40,000 children — all to pay for a giant tax break for the wealthy. michiganadvance.com/2026/06/24/c..."
+    },
+    {
+     "date": "2026-07-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqke2odw522e",
+     "text": "There’s a foodborne parasite spreading, but there are ways for folks to stay healthy. Michigan HHS has great resources on how to keep safe, and it can be as simple as always washing your hands and thoroughly cleaning fresh produce, as recommended. See more below 👇"
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqovpbtqvs2d",
+     "text": "Trump and Republicans refuse to rein in ICE and CBP. These fatal shootings are why Democrats are pushing to enact commonsense reforms like deescalation training, body cameras, and accountability."
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqrwl7igkk2e",
+     "text": "It’s always great to bring a little taste of Michigan to DC on National Hot Dog Day!"
+    },
+    {
+     "date": "2026-07-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqrxqhouz22k",
+     "text": "Encourage Michiganders to visit this website for guidance on how to protect themselves from the wildfire smoke moving across our state right now. Hope everyone is staying safe.\n \nwww.michigan.gov/mdhhs/safety..."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mqtqrvfft22b",
+     "text": "My statement on President Trump's speech."
+    },
+    {
+     "date": "2026-07-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mquhfe7cjs2k",
+     "text": "In case you missed it – the 21st Century ROAD to Housing Act is now the law of the land! I am proud of this huge bipartisan victory to increase our housing supply and lower costs for Michiganders.\n \nhuroncountyview.com/articles/pet..."
+    },
+    {
+     "date": "2026-07-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mr4cmkd5bs2u",
+     "text": "My heart breaks for the families and loved ones of the American servicemembers who were killed in action this weekend. Their sacrifice is a debt we can never repay."
+    },
+    {
+     "date": "2026-07-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mr6pagrxwk26",
+     "text": "The Great Lakes Restoration Initiative is the most significant investment ever made to restore and protect our Great Lakes. Now more than ever, we need to ensure this vital program has the resources necessary to keep our treasured waterways healthy and vibrant for generations to come."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mr6zhbofcc2q",
+     "text": "This Administration is failing our brave men and women in uniform. We need real leadership to end this war with Iran."
+    },
+    {
+     "date": "2026-07-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mrfuxtszyk2y",
+     "text": "Happy 325th to the 3-1-3!"
+    },
+    {
+     "date": "2026-07-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mrncfipxec2n",
+     "text": "Today, we celebrate an exciting new chapter for the U.S.-Canada economic partnership: the opening of the Gordie Howe International Bridge."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mrqdyrqgoc2j",
+     "text": "President Trump is trying to control elections and allow USPS to block millions of Americans from exercising their right to vote.\n \nIt’s illegal and unconstitutional. Voters choose their leaders, not the other way around. apnews.com/article/trum..."
+    },
+    {
+     "date": "2026-07-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mrrzoaflmk2s",
+     "text": "Rising gas prices continue to bear down on Michiganders. The American people need a clear vision from the President about the path to lower costs and end this war in the Middle East. www.wxyz.com/news/gas-pri..."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mrukzr7ups2t",
+     "text": "This week, the Senate showed enormous bipartisan support for the Ukrainian people in their fight against Russian aggression.\n\nAs we heard from President Zelenskyy, strong U.S. sanctions on Russia will send a clear message to Putin that we demand lasting peace for Ukraine and the entire region."
+    },
+    {
+     "date": "2026-07-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mruywnqtqs2g",
+     "text": "For the 13th time, I voted to end this war in Iran. It's unacceptable that the Trump Administration continues to mislead Congress and the American people about why we are in this war, and how we are going to get out of it."
+    },
+    {
+     "date": "2026-07-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mrx66x7d522c",
+     "text": "Throughout my time in Congress, I’ve repeatedly fought to support Michigan growers and protect their livelihoods. That’s why I’m going to keep pushing to pass my bipartisan SWAT Act to combat an invasive species that is raising production costs and threatening their crops."
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mse43edmwk26",
+     "text": "President Trump is cutting important Medicare funding, raising prescription drug costs for millions of Americans. We are simply going in the wrong direction at a time when Americans are also feeling the burden of rising costs at the gas pump and grocery store. www.wsj.com/health/healt..."
+    },
+    {
+     "date": "2026-08-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3msgpivb33s2q",
+     "text": "The Bipartisan Infrastructure Law continues to support needed upgrades to Michigan roads, bridges, and critical infrastructure. I am pleased to announce $12.5 million in federal funding from that law for roadway safety projects in Ingham County."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtedqifbqk2z",
+     "text": "The Trump Administration’s disregard for PFAS contamination is a danger to our environment and public health. We need to better protect Americans from these toxic chemicals.\n\nI’m continuing to fight back against Trump’s EPA for ignoring PFAS safety in our country."
+    },
+    {
+     "date": "2026-08-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mteextel422z",
+     "text": "Millions of Americans have voted by mail, including President Trump. His fearmongering is an attempt to undermine the upcoming elections because he knows his policies have hurt Americans and he’s worried about the results."
+    },
+    {
+     "date": "2026-08-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtgt3jrunk2v",
+     "text": "ICE must be held to the same standard as our local law enforcement. Unfortunately, DHS has not shared any corrective actions that have been taken related to the killings of Mr. Pretti and Ms. Good. Instead, we have seen the agency double down on violent tactics from Maine to Texas."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtupk3qlek2m",
+     "text": "About to begin my “Thank You, Michigan” motorcycle tour at UAW Local 5960 in Lake Orion. Excited to be joined by some longtime riders and good friends on this last tour."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtupoi53522l",
+     "text": "For over 100 years, Berston Field House has been a cornerstone of the Flint community. I was proud to officially kick off the motorcycle tour here and discuss federal funding that will strengthen this institution for decades to come."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtups43lhk2l",
+     "text": "Honored to meet with first responders at the Bay City Fire Department on this year’s tour. During my time in Congress, I’ve made it a mission to ensure Michigan firefighters have the support they need to do their essential work. Thank you to all who protect the people of Michigan."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtwid7oolc2w",
+     "text": "Thunder Bay National Marine Sanctuary is an economic engine for the City of Alpena and a critical part of Michigan’s heritage. Thank you to all the partners like Thunder Bay who help protect our Great Lakes!"
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mtwt3xxnbc2k",
+     "text": "The Mackinac Bridge is a testament to Michigan’s power and grit. We are a state of builders – and breathtaking views!"
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mu37nmsr7k2k",
+     "text": "We heard about the amazing improvements to come at the new Michigan Veteran Homes D.J. Jacobetti in Marquette. I was proud to jump start this construction by securing a $57 million federal investment in 2023. Special thank you to Michigan Veteran Homes."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mu37qfp3rc2k",
+     "text": "Here’s a wrap of days 2 and 3 of my motorcycle tour going to the UP and back!"
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mu42yk5pjs2c",
+     "text": "In Traverse City today, we toured the nearly finished FishPass project downtown. Once completed, we will have the ability to sort native fish from harmful invasive species like sea lamprey in the Boardman/Ottaway River."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mu5gp7lxkk2d",
+     "text": "Securing our nation from cyberattacks is one of the most important national security challenges we face. Ferris State University is helping to make sure we are prepared by training the next generation of cyber professionals."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mu5yq2mbwc25",
+     "text": "Thank you Humane Society of West Michigan for your caring work and partnership over the years to support survivors of domestic violence and their pets.\n\nI am proud to stand by them through my work in Congress, and I will always fight to protect our four-legged friends."
+    },
+    {
+     "date": "2026-09-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3muhvsebs5k2s",
+     "text": "Thank you to the National Park Service for 110 years of serving the American people. Our country is home to treasured public lands and natural wonders. I am fighting to protect them for future generations.\nwww.pbs.org/newshour/sho..."
+    },
+    {
+     "date": "2026-09-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mviyxifxuc2o",
+     "text": "During my motorcycle tour, we learned about the Bay City Fire Department’s plans to use federal funding I helped secure to protect firefighters from toxic PFAS contamination and purchase critical safety equipment."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mvjinkemus2i",
+     "text": "The Supreme Court upheld the law and denied the Trump Administration’s demands to rewrite the rules for absentee ballots just weeks before the election."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mvncaqrjm22w",
+     "text": "Trump’s war with Iran continues to raise fuel costs. Michiganders did not want this war to begin with, and they are continuing to shoulder the burden. www.detroitnews.com/story/news/l..."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mvo2ds5ir22a",
+     "text": "Once completed, the Michigan Veteran Homes D.J. Jacobetti will help ensure veterans in the U.P. continue to receive quality care long into the future. I was proud to support this new construction by securing a $57 million federal investment in 2023."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mvqeaedaq22f",
+     "text": "I’m aware of the plane crash near Traverse City. I am closely monitoring the situation as we work to get more information on the incident. Praying that the pilot and folks on the ground are safe."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mw7esgdj3c2l",
+     "text": "I’m proud to join Michiganders in recognizing our first PFAS Awareness Week. I'll never stop fighting to clean up contaminated sites, keep PFAS out of our drinking water, and hold polluters accountable."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mwbv5lubnk2m",
+     "text": "Since the beginning of Trump’s war with Iran, Michiganders have watched their gas prices go up and up. Instead of working towards ending this war and bringing costs down, the President is now considering a further escalation of the conflict."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mwccsvel622x",
+     "text": "Very proud that my wife Colleen was honored with the Congressional Families Leadership Award today for her work to increase cancer awareness and early detection. She is truly the most important person in my life, and I am so lucky to be by her side."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mwobhnsrzc2n",
+     "text": "Trump’s “One Big Beautiful Bill” sold out many rural hospitals in Michigan by making drastic cuts to Medicaid funding. These health care cuts will make it harder for Michiganders to receive care, and it was all to pay for tax cuts to billionaires.\nwww.mlive.com/news/kalamaz..."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mwoss4jozs2n",
+     "text": "I led nearly three dozen of my colleagues last week calling on Secretary Mullin to drop these requirements, and to halt DHS’s election interference efforts.\nwww.politico.com/news/2026/09..."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mx7ttabuac2w",
+     "text": "Exciting progress in downtown Traverse City! Once completed, this pedestrian bridge will give folks a glimpse into the FishPass project that will help protect the Great Lakes ecosystem by sorting local fish from invasive species like sea lamprey."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3mxeocmdmls25",
+     "text": "The Great Lakes Restoration Initiative is the most significant investment ever made to restore and protect our Great Lakes. I’ll keep working in a bipartisan way to get this commonsense bill passed into law to help protect the Great Lakes for future generations."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3myaikhojc22v",
+     "text": "Many truck drivers and farmers are now paying nearly double for diesel compared to before Trump’s war with Iran. This Administration must work towards ending this war and bringing costs down."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3myalyhjphk22",
+     "text": "I am deeply concerned by the escalating situation in Albania. Local authorities must refrain from aggression against peaceful protesters, and everyone on the ground must work to deescalate and prevent further violence."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3myryvaog7c22",
+     "text": "Michigan never fails to innovate, and the FRIB at MSU is no exception. Since they broke ground on this facility over a decade ago, I have been proud to support their exploration in science and technology. We’ll benefit from the investments made at this facility for decades to come."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3myshd5wvtc2o",
+     "text": "After 411 days, Henry Ford Genesys nurses reached a contract agreement. They stood together for safer staffing, better working conditions, and the patients they serve.\n\nGrowing up in a union household, I know the power of collective bargaining. I stand with Michigan workers."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/peters.senate.gov/post/3myxcymyozk2w",
+     "text": "I've been proud to support the FishPass Project in downtown Traverse City to help preserve vital Great Lakes ecosystems and waterways across the region for years to come. This project is a tremendous example of what we can accomplish when local, state, federal, and tribal partners come together."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "schatz",
+ "name": "Brian Schatz",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.brianschatz.com/",
+  "https://www.schatzforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.brianschatz.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108000413/https://brianschatz.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108000413/https://brianschatz.com/",
+     "original": "https://brianschatz.com/",
+     "date": "2022-11-08",
+     "title": "Brian Schatz for Hawaii - Brian Schatz",
+     "text": "Schatz for Senate\nAs chair of the Special Committee on the Climate Crisis, @BrianSchatz is fighting for bold action that protects Hawai‘i’s residents on the front lines of the climate crisis. We're proud to endorse Senator Schatz in his re-election campaign!\nOctober is LGBT History Month and Pride Month in Honolulu, so we’re launching a new line of Pride merch!\nNOW OPEN: The new Team Schatz online store is live with tons of new merch. Check it out today. 👇 https://shop.brianschatz.com/\nBrian is fighting for urgent climate action:\n✔️ Reduce greenhouse gas emissions\n✔️ Build a clean-energy economy\n✔️ Make environmental justice a top priority\nHe’ll need a strong grassroots team to keep fighting in Washington. #EarthDay\nIn 2020, we raised millions of dollars for Democrats -- and it worked. We flipped the Senate.\nNow, Brian is up for re-election and today is the first FEC deadline since we launched our campaign. If you can, chip in a few dollars. Every dollar matters.👇"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.brianschatz.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-30",
+    "url": "https://web.archive.org/web/20261030060514/https://www.brianschatz.com/"
+   },
+   "pages": [],
+   "unread": [
+    "the list of brianschatz.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

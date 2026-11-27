@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "lee",
+ "name": "Mike Lee",
+ "built": "2026-11-26",
+ "sites": [
+  "https://leeforsenate.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://leeforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108004905/https://leeforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108004905/https://leeforsenate.com/",
+     "original": "https://leeforsenate.com/",
+     "date": "2022-11-08",
+     "title": "Mike Lee for Senate",
+     "text": "## Together, we can stop the biden Agenda, but I need your help.\n<iframe src=\"//www.youtube.com/embed/FhJVwrJPpVs?wmode=opaque\" height=\"480\" width=\"854\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>\n## Mike Lee Is Committed To UTahns\n“Washington needs someone who will say no.”\n## mike Lee Delivers Wins for Utah\nMike Lee is a champion of conservative values. Learn more about the efforts he’s made for Utahns as your US Senator.\n## We Like Mike\nFind out why community leaders across our state support Senator Mike Lee.\n## “Washington D.C. Changes a lot of people. It hasn’t changed Mike Lee.”\nGreg Hughes, Former Speaker of the Utah House"
+    },
+    {
+     "url": "https://web.archive.org/web/20210924084213/https://leeforsenate.com/policy-and-process/",
+     "original": "https://leeforsenate.com/policy-and-process/",
+     "date": "2021-09-24",
+     "title": "“They’re Upset by the Policy and They’re Upset by the Process” – Mike Lee for Senate",
+     "text": "## “They’re Upset by the Policy and They’re Upset by the Process”\nNovember 4, 2015\nSenator Lee describes why his Facebook post on late-night budget deal went viral – reaching tens of millions of Americans: http://bit.ly/1NgtT4z"
+    },
+    {
+     "url": "https://web.archive.org/web/20220515234932/https://leeforsenate.com/updates/stand-with-mike-lee-in-defending-american-energy-producers",
+     "original": "https://leeforsenate.com/updates/stand-with-mike-lee-in-defending-american-energy-producers",
+     "date": "2022-05-15",
+     "title": "Stand with Mike Lee in Defending American Energy Producers — Mike Lee for Senate",
+     "text": "## Stand with Mike Lee in Defending American Energy Producers\nWritten By Ben Burr\nJoe Biden in 2020 - “No more subsidies for fossil fuel industry. No more drilling on federal lands. No more drilling, including offshore. No ability for the oil industry to continue to drill, period. It ends.”\nMake no mistake, Joe Biden has waged a relentless assault against the American Oil and Gas industry:\n-Jan 2021 - Executive Order halting oil and gas leasing on federal land\n-May 2021 - Biden Administration pressured big banks to divest from traditional energy investments\n-June 2021 - Biden revoked permit and canceled the Keystone XL Pipeline\n-August 2021 - Called on Russia and OPEC to increase production to counter rising prices instead of increasing domestic production\n-August 2021 - Increased regulations and scrutiny to punish the fossil fuel industry\n-Februrary 22, 2022 - On the eve of Russia's invasion of Ukraine, Biden delayed issuing new oil and gas drilling permits on federal land.\nIn the Uintah Basin, our local Utah energy industry is waiting for the Biden Administration to issue a Record of Decision on the Uintah Basin Railway.\nThe top challengers in my Senate race voted for Joe Biden and are relying heavily on support from anti-American-energy Democrats in their campaigns. My challengers have been silent on Biden's assault on our American energy producers that has given Vladimir Putin every advantage he needed to invade Ukraine. Now this assault on American energy is also hurting Americans and fueling inflation. I have fought consistently for free markets, deregulation, and American strength, and I need your support.\nJoe Biden in 2020 - “No more subsidies for fossil fuel industry. No more drilling on federal lands. No more drilling, including offshore. No ability for the oil industry to continue to drill, period. It ends.” pic.twitter.com/8oL7SDhNLK\n— Mike Lee (@MikeLeeforUtah) March 12, 2022"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://leeforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-08-20",
+    "url": "https://web.archive.org/web/20260820204826/https://leeforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20260820204826/https://leeforsenate.com/",
+     "original": "https://leeforsenate.com/",
+     "date": "2026-08-20",
+     "title": "Mike Lee for Senate",
+     "text": "## Mike Lee Is Committed To UTahns\n“Washington needs someone who will say no.”\n## mike Lee Delivers Wins for Utah\nMike Lee is a champion of conservative values. Learn more about the efforts he’s made for Utahns as your US Senator.\n## We Like Mike\nFind out why community leaders across our state support Senator Mike Lee.\n## “Washington D.C. Changes a lot of people. It hasn’t changed Mike Lee.”\nGreg Hughes, Former Speaker of the Utah House"
+    },
+    {
+     "url": "https://web.archive.org/web/20250629060925/https://leeforsenate.com/updates/stand-with-mike-lee-in-defending-american-energy-producers",
+     "original": "https://leeforsenate.com/updates/stand-with-mike-lee-in-defending-american-energy-producers",
+     "date": "2025-06-29",
+     "title": "Stand with Mike Lee in Defending American Energy Producers — Mike Lee for Senate",
+     "text": "## Stand with Mike Lee in Defending American Energy Producers\nWritten By Ben Burr\nJoe Biden in 2020 - “No more subsidies for fossil fuel industry. No more drilling on federal lands. No more drilling, including offshore. No ability for the oil industry to continue to drill, period. It ends.”\nMake no mistake, Joe Biden has waged a relentless assault against the American Oil and Gas industry:\n-Jan 2021 - Executive Order halting oil and gas leasing on federal land\n-May 2021 - Biden Administration pressured big banks to divest from traditional energy investments\n-June 2021 - Biden revoked permit and canceled the Keystone XL Pipeline\n-August 2021 - Called on Russia and OPEC to increase production to counter rising prices instead of increasing domestic production\n-August 2021 - Increased regulations and scrutiny to punish the fossil fuel industry\n-Februrary 22, 2022 - On the eve of Russia's invasion of Ukraine, Biden delayed issuing new oil and gas drilling permits on federal land.\nIn the Uintah Basin, our local Utah energy industry is waiting for the Biden Administration to issue a Record of Decision on the Uintah Basin Railway.\nThe top challengers in my Senate race voted for Joe Biden and are relying heavily on support from anti-American-energy Democrats in their campaigns. My challengers have been silent on Biden's assault on our American energy producers that has given Vladimir Putin every advantage he needed to invade Ukraine. Now this assault on American energy is also hurting Americans and fueling inflation. I have fought consistently for free markets, deregulation, and American strength, and I need your support.\nJoe Biden in 2020 - “No more subsidies for fossil fuel industry. No more drilling on federal lands. No more drilling, including offshore. No ability for the oil industry to continue to drill, period. It ends.” pic.twitter.com/8oL7SDhNLK\n— Mike Lee (@MikeLeeforUtah) March 12, 2022"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

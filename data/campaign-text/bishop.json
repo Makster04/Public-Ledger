@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "bishop",
+ "name": "Sanford D. Bishop, Jr.",
+ "built": "2026-11-26",
+ "sites": [
+  "https://sanfordbishop.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://sanfordbishop.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108014532/https://sanfordbishop.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108014532/https://sanfordbishop.com/",
+     "original": "https://sanfordbishop.com/",
+     "date": "2022-11-08",
+     "title": "Sanford Bishop for Congress",
+     "text": "## A proven leader\nworking for you.\n## Fighting for Middle and Southwest Georgia\n30 years ago, the people of Georgia’s Second Congressional District put their faith in me to represent them in Congress. While much has changed since then, I remain as grateful, humbled, and committed as ever to serve you.\nDuring my time as your Congressman, I have done my dead level best to have a positive impact on all that reside in Middle and Southwest Georgia. But my work is far from over — we must continue our fight to build a better Georgia.\nI am convinced that together we can do great things, and that with your help, we can ensure the American Dream remains accessible to all.\nAbout Congressman Bishop\n## A Moderating Voice in Congress\nThis campaign is a movement for the people — for voting rights and civil rights, for farmers and ranchers, for students and teachers, for men and women of all races and creeds to pursue equality, prosperity, and the American dream.\n## Help Us Cross the Finish Line\nP.o. Box 909\nColumbus, GA 31902"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://sanfordbishop.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105045636/https://sanfordbishop.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105045636/https://sanfordbishop.com/",
+     "original": "https://sanfordbishop.com/",
+     "date": "2024-11-05",
+     "title": "Sanford Bishop for Congress",
+     "text": "## A proven leader\nworking for you.\n## Sanford Bishop 26th Golf Classic\nSanford Bishop’s 26th Golf Classic is happening on April 22nd, 2024 at the Green Island Country Club in Columbus, Georgia. Learn more about the event here!\n## Fighting for Middle and Southwest Georgia\nOver 30 years ago, the people of Georgia’s Second Congressional District put their faith in me to represent them in Congress. While much has changed since then, I remain as grateful, humbled, and committed as ever to serve you.\nDuring my time as your Congressman, I have done my dead level best to have a positive impact on all that reside in Middle and Southwest Georgia. But my work is far from over — we must continue our fight to build a better Georgia.\nI am convinced that together we can do great things, and that with your help, we can ensure the American Dream remains accessible to all.\nAbout Congressman Bishop\n## A Moderating Voice in Congress\nThis campaign is a movement for the people — for voting rights and civil rights, for farmers and ranchers, for students and teachers, for men and women of all races and creeds to pursue equality, prosperity, and the American dream.\nP.o. Box 909\nColumbus, GA 31902\nGolf Classic rsvp"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://sanfordbishop.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103093746/https://sanfordbishop.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103093746/https://sanfordbishop.com/",
+     "original": "https://sanfordbishop.com/",
+     "date": "2026-11-03",
+     "title": "Sanford Bishop for Congress",
+     "text": "28th Annual Sanford Bishop Golf Classic\n## A proven leader\nworking for you.\n## Sanford Bishop 27th Golf Classic\nSanford Bishop’s 27th Golf Classic is happening on April 22nd, 2025 at the Green Island Country Club in Columbus.\n## Fighting for Middle and Southwest Georgia\nOver 30 years ago, the people of Georgia’s Second Congressional District put their faith in me to represent them in Congress. While much has changed since then, I remain as grateful, humbled, and committed as ever to serve you.\nDuring my time as your Congressman, I have done my dead level best to have a positive impact on all that reside in Middle and Southwest Georgia. But my work is far from over — we must continue our fight to build a better Georgia.\nI am convinced that together we can do great things, and that with your help, we can ensure the American Dream remains accessible to all.\nAbout Congressman Bishop\n## A Moderating Voice in Congress\nThis campaign is a movement for the people — for voting rights and civil rights, for farmers and ranchers, for students and teachers, for men and women of all races and creeds to pursue equality, prosperity, and the American dream.\nP.o. Box 909\nColumbus, GA 31902\nGolf Classic rsvp"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

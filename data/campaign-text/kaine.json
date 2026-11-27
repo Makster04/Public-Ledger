@@ -1,0 +1,666 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "kaine",
+ "name": "Tim Kaine",
+ "built": "2026-11-26",
+ "sites": [
+  "https://timkaine.com/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://timkaine.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105234102/https://timkaine.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105234102/https://timkaine.com/",
+     "original": "https://timkaine.com/",
+     "date": "2024-11-05",
+     "title": "Kaine for Virginia",
+     "text": "## Meet Tim Kaine\nFrom his work as a civil rights lawyer in Richmond to his time as U.S. Senator for Virginia, Tim has dedicated his life to helping others and standing up for Virginians.\n## Fighting for\nTim has spent his entire career fighting to improve the lives of everyday Virginians. Learn more about how he’s taking on the issues that matter most.\n## Protecting Our Climate\nClimate change is an existential threat to Virginia’s economy, our national security, and the future...\n## Defending Democracy and the Right to Vote\nDating back to Tim’s time as a civil rights attorney, he’s devoted his entire career...\n## Keeping America Safe and Strengthening Diplomacy\nTim is committed to strengthening America’s national security through a balance of our military, economic,...\n## Supporting our Military and Veterans\nNo state is more closely connected to the military than Virginia. As the father of...\n## Investing in Rural Virginia\nRural areas frequently lack the necessary support and resources they rightfully deserve. As Governor and...\n## Standing with our Seniors\nAt a time when extreme politicians are calling for ending Social Security and Medicare as...\n## Strengthening Education and Workforce Opportunities\nDating back to his tenure as Mayor of Richmond when he built four new schools,...\n## Fighting for Equality and Justice\nOur country was founded on the principle that “all men are created equal,” and Tim...\n## Prioritizing Public Safety\nDating back to his tenure as Mayor of Richmond, Tim Kaine has a decades-long record...\n## Fighting For Immigrant Communities\nVirginia is home to over one million immigrants from all across the globe, and Tim...\nToday is Election Day!\nPolls are now open until 7 PM. If you’re in line by 7 PM, you’ll be allowed to cas...\nThis race is about people who stand up vs people who tear down.\nI want you to know: I’ll always stand up fo...\nThis election is classic driver’s ed. If you put the car in D, you go (a new way) forward.\nIf you put it i...\n🛑 Stop scrolling and watch this video! 🛑\nTomorrow is Election Day—here's everything you need to know ...\nThis afternoon I had the pleasure of grabbing lunch with small business owners in Fredericksburg alongside @YV...\nIt was great to see folks in Fredericksburg with @AnneHolton and @YVindman who are fired up about voting!\nA vote for @KamalaHarris means a future where everyone has a voice in the direction of our country.\nA vote fo...\nI'll always do everything I can to help Virginians find and afford quality health care.\nThe future of our Commonwealth and our country are on the ballot tomorrow.\nMake a plan to vote. Let's get it ...\n## The Latest\nNovember 4, 2024\n## 7 Days, 7 Ways Tim Kaine Stands Up For Virginia: Supporting Reproductive Freedom\nNovember 3, 2024"
+    },
+    {
+     "url": "https://web.archive.org/web/20241101214814/https://timkaine.com/issues/",
+     "original": "https://timkaine.com/issues/",
+     "date": "2024-11-01",
+     "title": "Issues - Kaine for Virginia",
+     "text": "Senator Tim Kaine is running for re-election in 2024 to continue Standing Up for Virginia."
+    },
+    {
+     "url": "https://web.archive.org/web/20241102095528/https://timkaine.com/issues/creating-jobs-and-strengthening-our-economy/",
+     "original": "https://timkaine.com/issues/creating-jobs-and-strengthening-our-economy/",
+     "date": "2024-11-02",
+     "title": "Creating Jobs and Strengthening our Economy - Kaine for Virginia",
+     "text": "## Creating Jobs and Strengthening our Economy\nTim Kaine knows that our economy is strongest when workers and families have access to good-paying jobs, higher wages, and the skills to succeed and get ahead. When Tim was Governor, Virginia was ranked the best state for business. As Senator, he’s working to ensure that every Virginia family has a fair shot at the American dream. He strongly believes Virginia has the best workforce in the country, and has authored bipartisan legislation to give Virginia workers even more tools to succeed.\nIn 2021, Tim was a deciding vote to pass the American Rescue Plan, which ushered in the strongest jobs recovery on record. This legislation expanded the Child Tax Credit, a tax cut for working families in Virginia that benefited 1.7 million Virginia children and cut child poverty to its lowest rate ever. He’s working to bring that tax cut back and make it permanent.\nTim was also a deciding vote to pass the landmark Inflation Reduction Act. The energy-efficiency provisions in this legislation will save the average new homeowner in Virginia 17.9 percent on their utility bills—$426 annually. The IRA is also projected to create 1 million good-paying jobs per year.\nTim helped pass the CHIPS and Science Act, a historic law to boost domestic manufacturing, shore up supply chains, lower costs, create jobs, and ensure that we outcompete China. The CHIPS and Science Act created the Tech Hubs program, which has already brought two Tech Hubs to Virginia that will help supercharge the Commonwealth’s manufacturing sector.\nTim is working to raise the federal minimum wage to $17 per hour, and he sponsored the Raise the Wage Act so Virginians can afford to put more food on the table. Raising the minimum wage to $17 per hour would secure higher pay for 776,000 Virginians and nearly 28 million workers nationwide."
+    },
+    {
+     "url": "https://web.archive.org/web/20241102095749/https://timkaine.com/issues/protecting-reproductive-rights/",
+     "original": "https://timkaine.com/issues/protecting-reproductive-rights/",
+     "date": "2024-11-02",
+     "title": "Protecting Reproductive Rights - Kaine for Virginia",
+     "text": "## Protecting Reproductive Rights\nRight now, women are facing threats to reproductive freedom around the country with new draconian abortion restrictions and extremist legislatures plotting to rip away even more reproductive rights following the Supreme Court overturning Roe v. Wade . Virginia is the last state in the South without an extreme abortion ban – and Tim Kaine is fighting in the U.S. Senate to stand up for women across the country so they can make their own health care decisions without interference from out-of-touch politicians.\nAfter an extreme majority on the Supreme Court overturned Roe v. Wade , Tim got to work to protect reproductive rights and introduced the Reproductive Freedom for All Act, bipartisan legislation that would enact the core holdings of Supreme Court cases, including Roe v. Wade , which established and affirmed the rights to abortion and contraception. When extremists tried to defund Planned Parenthood and jeopardize health care clinics that more than 30,000 Virginians rely on, Tim stood up and helped to block their efforts to restrict reproductive health care. And when then-President Trump issued an executive order to institute the Global Gag Rule, Tim cosponsored legislation to undo this harmful policy that puts millions of women at risk around the world. Tim was also an original cosponsor of legislation to restore contraception coverage in the Affordable Care Act."
+    },
+    {
+     "url": "https://web.archive.org/web/20241102100020/https://timkaine.com/issues/making-health-care-more-affordable/",
+     "original": "https://timkaine.com/issues/making-health-care-more-affordable/",
+     "date": "2024-11-02",
+     "title": "Making Health Care More Affordable - Kaine for Virginia",
+     "text": "## Making Health Care More Affordable\nTim is standing up for access to quality, affordable health care for every Virginian. That’s why he is working to lower health care costs and protect health care coverage for Virginians as a member of the Health, Education, Labor and Pensions (HELP) Committee.\nIn the U.S. Senate, Tim was a deciding vote to preserve the Affordable Care Act, protecting the health care coverage of 1.3 million Virginians with a pre-existing condition. He took on Big Pharma to lower the cost of insulin, so now drug companies cannot charge more than $35 for this life-saving medication. Tim was a deciding vote for the American Rescue Plan, which included a provision from his Medicare-X plan to lower health care premiums and included funding to speed up the distribution of life-saving vaccines and to reopen schools safely. He also enacted bipartisan bills expanding access to medical products and accelerating FDA processes for approvals of certain drugs.\nTim has been a leading voice in the U.S. Senate to tackle the substance use disorder crisis that has hurt families across the Commonwealth. He worked across the aisle to pass the SUPPORT for Patients and Communities Act, which included his proposals to help ensure job training is incorporated into recovery programs and that the kids who are hurt by this crisis get the resources they need. And he was a deciding vote to pass the American Rescue Plan, which provided Virginia with nearly $70 million in funding to bolster mental-health and substance-abuse programs amid the COVID-19 pandemic. Tim is also working with both parties to prevent suicide and burnout among health care professionals, leading the charge to pass the reauthorization of the Dr. Lorna Breen Health Care Provider Protection Act , legislation named after a physician from Charlottesville, Virginia, who was working on the frontlines of the pandemic who died by suicide.\nWorking across the aisle to improve public health, Tim led the fight to raise the federal tobacco age from 18 to 21 years old and help protect young people from the dangers of nicotine. He has also been a champion for the National Institute of Health to study pediatric disease, introducing and passing into law the Gabriella Miller Act , legislation that authorized $12.6 million per fiscal year through FY23 for pediatric disease research. The legislation was named after a Leesburg, Virginia, resident who died from a rare form of brain cancer at 10 years old. Tim is still fighting to build on his work and provide new sources of funding to the program he helped create so we can combat more pediatric diseases."
+    },
+    {
+     "url": "https://web.archive.org/web/20241102100208/https://timkaine.com/issues/delivering-for-virginia/",
+     "original": "https://timkaine.com/issues/delivering-for-virginia/",
+     "date": "2024-11-02",
+     "title": "Delivering for Virginia - Kaine for Virginia",
+     "text": "## Delivering for Virginia\nBecause of Tim’s work to pass the Bipartisan Infrastructure Law, Virginia is seeing long overdue infrastructure projects in every corner of our Commonwealth. This means rebuilding our roads and bridges, providing clean water to our communities, expanding high-speed internet, and more. Furthermore, the Inflation Reduction Act marked the largest initiative to reduce carbon pollution in U.S. history. This landmark legislation is lowering utility costs for Virginians, supercharging the Commonwealth’s clean energy sector, capping prescription drug costs, reducing health care premiums, and creating good-paying jobs.\nAs Governor, Tim made sure the Silver Line was planned, financed, under contract, and under construction. Thanks to his tireless efforts, the Silver Line extension to Dulles is now complete – providing rail service to our international gateway, access to more jobs and economic opportunities, and easing traffic congestion. Tim also helped pass the CHIPS and Science Act, a historic law to boost domestic semiconductor manufacturing, strengthen supply chains, lower costs, create good-paying jobs, and ensure that we outcompete China."
+    },
+    {
+     "url": "https://web.archive.org/web/20241102100349/https://timkaine.com/issues/securing-the-border/",
+     "original": "https://timkaine.com/issues/securing-the-border/",
+     "date": "2024-11-02",
+     "title": "Securing The Border - Kaine for Virginia",
+     "text": "## Securing The Border\nAs Senator, Tim has fought to keep Virginians safe by ensuring law enforcement has the training, technology, and tools they need to secure the U.S. border.\nTim has voted for nearly $300 billion for border security to stop the flow of illicit drugs and weapons into the U.S., address humanitarian needs at the border, and keep Virginians safe. He supports the bipartisan border security bill – the best bill in decades to secure the border – and will work with anyone willing to provide law enforcement with the tools they have been asking for to protect us. He knows too many Virginians have died from fentanyl, which is why he has introduced and passed the bipartisan Disrupt Fentanyl Trafficking Act to direct increased federal attention to fentanyl trafficking by declaring fentanyl trafficking a national security threat, utilizing Pentagon resources like counter-drug intelligence, and involving Mexico as an active partner to combat the crisis. The bipartisan border security deal would have also provided funding to deploy more inspection machines to detect fentanyl at ports of entry as well as increase law enforcement officers, immigration judges, and asylum officers.\nTim thinks that Virginians pay the cost when Republicans just want to talk about border security to score political points, instead he’s committed to reaching and passing bipartisan solutions."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101231829/https://timkaine.com/issues/fighting-for-immigrant-communities/",
+     "original": "https://timkaine.com/issues/fighting-for-immigrant-communities/",
+     "date": "2024-11-01",
+     "title": "Fighting For Immigrant Communities - Kaine for Virginia",
+     "text": "## Fighting For Immigrant Communities\nVirginia is home to over one million immigrants from all across the globe, and Tim believes that diversity makes our Commonwealth stronger. That’s why Tim is determined to fix our broken immigration system by making the process fairer and more efficient; creating a path to citizenship for those who are eligible and standing up against xenophobia. During a debate on immigration reform in 2013, Tim made history when he proudly delivered the first full speech in Spanish on the U.S. Senate floor.\nTim has been a leading voice in Congress on the importance of defending Temporary Protective Status (TPS) and called on the Biden Administration to continue protecting displaced Salvadorans and Hondurans by redesignating those countries for Temporary Protected Status (TPS). He has also successfully pushed the Biden Administration to grant TPS designations for Cameroon and Ukraine as well as designating TPS status for Venezuela. He stood up to then-President Trump by introducing legislation to end his cruel policy of tearing families apart at the border. Tim also strongly supports the DACA program and is working to give Dreamers and others who have been forced to live in the shadows a permanent solution that gives them the peace of mind they deserve.\nTim is laser-focused on finding real, commonsense solutions on immigration, so those who desire can safely and lawfully live out the American dream."
+    },
+    {
+     "url": "https://web.archive.org/web/20241101231634/https://timkaine.com/issues/prioritizing-public-safety/",
+     "original": "https://timkaine.com/issues/prioritizing-public-safety/",
+     "date": "2024-11-01",
+     "title": "Prioritizing Public Safety - Kaine for Virginia",
+     "text": "## Prioritizing Public Safety\nDating back to his tenure as Mayor of Richmond, Tim Kaine has a decades-long record of keeping Virginia safe and cutting crime.\nTim believes weapons of war have no place on our streets or in our schools, which is why he supports universal background checks, banning assault weapons and high-capacity magazines, and providing more support for people facing mental health challenges. In 2022, he worked to pass the Bipartisan Safer Communities Act – the first major federal gun safety in nearly three decades.\nDuring his time in the Senate, Tim has worked to support Virginia’s law enforcement agencies by delivering over $40 million in Community Oriented Policing Services (COPS) grants to Virginia, boosting public safety across the Commonwealth. He also passed the bipartisan Public Safety Officer Support Act to ensure that more families of fallen public safety officers access line-of-duty benefits — including the families of Virginia officers Jeffrey Smith and Howard Liebengood, who defended the Capitol during the January 6th insurrection.\nTim also helped pass the reauthorization of the Violence Against Women Act and worked across the aisle to pass the First Step Act to curb racial disparities in the criminal justice system."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://timkaine.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-27",
+    "url": "https://web.archive.org/web/20261027233428/https://timkaine.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261027233428/https://timkaine.com/",
+     "original": "https://timkaine.com/",
+     "date": "2026-10-27",
+     "title": "Kaine for Virginia",
+     "text": "## Meet Tim Kaine\nFrom his work as a civil rights lawyer in Richmond to his time as U.S. Senator for Virginia, Tim has dedicated his life to helping others and standing up for Virginians.\n## Fighting for\nTim has spent his entire career fighting to improve the lives of everyday Virginians. Learn more about how he’s taking on the issues that matter most.\n## Protecting Our Climate\nClimate change is an existential threat to Virginia’s economy, our national security, and the future...\n## Defending Democracy and the Right to Vote\nDating back to Tim’s time as a civil rights attorney, he’s devoted his entire career...\n## Keeping America Safe and Strengthening Diplomacy\nTim is committed to strengthening America’s national security through a balance of our military, economic,...\n## Supporting our Military and Veterans\nNo state is more closely connected to the military than Virginia. As the father of...\n## Investing in Rural Virginia\nRural areas frequently lack the necessary support and resources they rightfully deserve. As Governor and...\n## Standing with our Seniors\nAt a time when extreme politicians are calling for ending Social Security and Medicare as...\n## Strengthening Education and Workforce Opportunities\nDating back to his tenure as Mayor of Richmond when he built four new schools,...\n## Fighting for Equality and Justice\nOur country was founded on the principle that “all men are created equal,” and Tim...\n## Prioritizing Public Safety\nDating back to his tenure as Mayor of Richmond, Tim Kaine has a decades-long record...\n## Fighting For Immigrant Communities\nVirginia is home to over one million immigrants from all across the globe, and Tim...\nTariffs and the Iran War raising prices on everything and our Sundowner President is focused on this? https://...\nNext post from the Sundowner in Chief . . . “And New York and New Jersey . . . foreign names . . . must be ...\nTranslation: “Netanyahu and Pete and Lindsey bamboozled me into an idiotic and illegal war in Iran. Props t...\nI visited Ukraine and other European allies in June to discuss US support for Ukraine. They all urged us to pa...\nInflation just jumped 3.7%. Gas prices are up 9.1% from a month ago as Trump’s illegal war with Iran drags o...\nGo Army! We’ve got some tricks up our sleeve for today’s game against Tulane. https://t.co/vnSiKpbrwq\nTrump playing silly word games while wars and tariffs punish everyday folks? Plus . . . it should be “anyone...\nWhat an embarrassment for a great nation to have a leader who no one would ever encourage their children to em...\nIt was great to vote early in Richmond this morning! Proud to cast my vote for my amazing wife @AnneHolton for...\n## The Latest\nNovember 4, 2024\n## 7 Days, 7 Ways Tim Kaine Stands Up For Virginia: Supporting Reproductive Freedom\nNovember 3, 2024"
+    },
+    {
+     "url": "https://web.archive.org/web/20260811182736/https://timkaine.com/issues/",
+     "original": "https://timkaine.com/issues/",
+     "date": "2026-08-11",
+     "title": "Issues - Kaine for Virginia",
+     "text": "Senator Tim Kaine is running for re-election in 2024 to continue Standing Up for Virginia."
+    },
+    {
+     "url": "https://web.archive.org/web/20260811174326/https://timkaine.com/issues/creating-jobs-and-strengthening-our-economy/",
+     "original": "https://timkaine.com/issues/creating-jobs-and-strengthening-our-economy/",
+     "date": "2026-08-11",
+     "title": "Creating Jobs and Strengthening our Economy - Kaine for Virginia",
+     "text": "## Creating Jobs and Strengthening our Economy\nTim Kaine knows that our economy is strongest when workers and families have access to good-paying jobs, higher wages, and the skills to succeed and get ahead. When Tim was Governor, Virginia was ranked the best state for business. As Senator, he’s working to ensure that every Virginia family has a fair shot at the American dream. He strongly believes Virginia has the best workforce in the country, and has authored bipartisan legislation to give Virginia workers even more tools to succeed.\nIn 2021, Tim was a deciding vote to pass the American Rescue Plan, which ushered in the strongest jobs recovery on record. This legislation expanded the Child Tax Credit, a tax cut for working families in Virginia that benefited 1.7 million Virginia children and cut child poverty to its lowest rate ever. He’s working to bring that tax cut back and make it permanent.\nTim was also a deciding vote to pass the landmark Inflation Reduction Act. The energy-efficiency provisions in this legislation will save the average new homeowner in Virginia 17.9 percent on their utility bills—$426 annually. The IRA is also projected to create 1 million good-paying jobs per year.\nTim helped pass the CHIPS and Science Act, a historic law to boost domestic manufacturing, shore up supply chains, lower costs, create jobs, and ensure that we outcompete China. The CHIPS and Science Act created the Tech Hubs program, which has already brought two Tech Hubs to Virginia that will help supercharge the Commonwealth’s manufacturing sector.\nTim is working to raise the federal minimum wage to $17 per hour, and he sponsored the Raise the Wage Act so Virginians can afford to put more food on the table. Raising the minimum wage to $17 per hour would secure higher pay for 776,000 Virginians and nearly 28 million workers nationwide."
+    },
+    {
+     "url": "https://web.archive.org/web/20260606013403/https://timkaine.com/issues/protecting-reproductive-rights/",
+     "original": "https://timkaine.com/issues/protecting-reproductive-rights/",
+     "date": "2026-06-06",
+     "title": "Protecting Reproductive Rights - Kaine for Virginia",
+     "text": "## Protecting Reproductive Rights\nRight now, women are facing threats to reproductive freedom around the country with new draconian abortion restrictions and extremist legislatures plotting to rip away even more reproductive rights following the Supreme Court overturning Roe v. Wade . Virginia is the last state in the South without an extreme abortion ban – and Tim Kaine is fighting in the U.S. Senate to stand up for women across the country so they can make their own health care decisions without interference from out-of-touch politicians.\nAfter an extreme majority on the Supreme Court overturned Roe v. Wade , Tim got to work to protect reproductive rights and introduced the Reproductive Freedom for All Act, bipartisan legislation that would enact the core holdings of Supreme Court cases, including Roe v. Wade , which established and affirmed the rights to abortion and contraception. When extremists tried to defund Planned Parenthood and jeopardize health care clinics that more than 30,000 Virginians rely on, Tim stood up and helped to block their efforts to restrict reproductive health care. And when then-President Trump issued an executive order to institute the Global Gag Rule, Tim cosponsored legislation to undo this harmful policy that puts millions of women at risk around the world. Tim was also an original cosponsor of legislation to restore contraception coverage in the Affordable Care Act."
+    },
+    {
+     "url": "https://web.archive.org/web/20260606010742/https://timkaine.com/issues/making-health-care-more-affordable/",
+     "original": "https://timkaine.com/issues/making-health-care-more-affordable/",
+     "date": "2026-06-06",
+     "title": "Making Health Care More Affordable - Kaine for Virginia",
+     "text": "## Making Health Care More Affordable\nTim is standing up for access to quality, affordable health care for every Virginian. That’s why he is working to lower health care costs and protect health care coverage for Virginians as a member of the Health, Education, Labor and Pensions (HELP) Committee.\nIn the U.S. Senate, Tim was a deciding vote to preserve the Affordable Care Act, protecting the health care coverage of 1.3 million Virginians with a pre-existing condition. He took on Big Pharma to lower the cost of insulin, so now drug companies cannot charge more than $35 for this life-saving medication. Tim was a deciding vote for the American Rescue Plan, which included a provision from his Medicare-X plan to lower health care premiums and included funding to speed up the distribution of life-saving vaccines and to reopen schools safely. He also enacted bipartisan bills expanding access to medical products and accelerating FDA processes for approvals of certain drugs.\nTim has been a leading voice in the U.S. Senate to tackle the substance use disorder crisis that has hurt families across the Commonwealth. He worked across the aisle to pass the SUPPORT for Patients and Communities Act, which included his proposals to help ensure job training is incorporated into recovery programs and that the kids who are hurt by this crisis get the resources they need. And he was a deciding vote to pass the American Rescue Plan, which provided Virginia with nearly $70 million in funding to bolster mental-health and substance-abuse programs amid the COVID-19 pandemic. Tim is also working with both parties to prevent suicide and burnout among health care professionals, leading the charge to pass the reauthorization of the Dr. Lorna Breen Health Care Provider Protection Act , legislation named after a physician from Charlottesville, Virginia, who was working on the frontlines of the pandemic who died by suicide.\nWorking across the aisle to improve public health, Tim led the fight to raise the federal tobacco age from 18 to 21 years old and help protect young people from the dangers of nicotine. He has also been a champion for the National Institute of Health to study pediatric disease, introducing and passing into law the Gabriella Miller Act , legislation that authorized $12.6 million per fiscal year through FY23 for pediatric disease research. The legislation was named after a Leesburg, Virginia, resident who died from a rare form of brain cancer at 10 years old. Tim is still fighting to build on his work and provide new sources of funding to the program he helped create so we can combat more pediatric diseases."
+    },
+    {
+     "url": "https://web.archive.org/web/20260811183200/https://timkaine.com/issues/delivering-for-virginia/",
+     "original": "https://timkaine.com/issues/delivering-for-virginia/",
+     "date": "2026-08-11",
+     "title": "Delivering for Virginia - Kaine for Virginia",
+     "text": "## Delivering for Virginia\nBecause of Tim’s work to pass the Bipartisan Infrastructure Law, Virginia is seeing long overdue infrastructure projects in every corner of our Commonwealth. This means rebuilding our roads and bridges, providing clean water to our communities, expanding high-speed internet, and more. Furthermore, the Inflation Reduction Act marked the largest initiative to reduce carbon pollution in U.S. history. This landmark legislation is lowering utility costs for Virginians, supercharging the Commonwealth’s clean energy sector, capping prescription drug costs, reducing health care premiums, and creating good-paying jobs.\nAs Governor, Tim made sure the Silver Line was planned, financed, under contract, and under construction. Thanks to his tireless efforts, the Silver Line extension to Dulles is now complete – providing rail service to our international gateway, access to more jobs and economic opportunities, and easing traffic congestion. Tim also helped pass the CHIPS and Science Act, a historic law to boost domestic semiconductor manufacturing, strengthen supply chains, lower costs, create good-paying jobs, and ensure that we outcompete China."
+    },
+    {
+     "url": "https://web.archive.org/web/20260606021639/https://timkaine.com/issues/securing-the-border/",
+     "original": "https://timkaine.com/issues/securing-the-border/",
+     "date": "2026-06-06",
+     "title": "Securing The Border - Kaine for Virginia",
+     "text": "## Securing The Border\nAs Senator, Tim has fought to keep Virginians safe by ensuring law enforcement has the training, technology, and tools they need to secure the U.S. border.\nTim has voted for nearly $300 billion for border security to stop the flow of illicit drugs and weapons into the U.S., address humanitarian needs at the border, and keep Virginians safe. He supports the bipartisan border security bill – the best bill in decades to secure the border – and will work with anyone willing to provide law enforcement with the tools they have been asking for to protect us. He knows too many Virginians have died from fentanyl, which is why he has introduced and passed the bipartisan Disrupt Fentanyl Trafficking Act to direct increased federal attention to fentanyl trafficking by declaring fentanyl trafficking a national security threat, utilizing Pentagon resources like counter-drug intelligence, and involving Mexico as an active partner to combat the crisis. The bipartisan border security deal would have also provided funding to deploy more inspection machines to detect fentanyl at ports of entry as well as increase law enforcement officers, immigration judges, and asylum officers.\nTim thinks that Virginians pay the cost when Republicans just want to talk about border security to score political points, instead he’s committed to reaching and passing bipartisan solutions."
+    },
+    {
+     "url": "https://web.archive.org/web/20260719004754/https://timkaine.com/issues/fighting-for-immigrant-communities/",
+     "original": "https://timkaine.com/issues/fighting-for-immigrant-communities/",
+     "date": "2026-07-19",
+     "title": "Fighting For Immigrant Communities - Kaine for Virginia",
+     "text": "## Fighting For Immigrant Communities\nVirginia is home to over one million immigrants from all across the globe, and Tim believes that diversity makes our Commonwealth stronger. That’s why Tim is determined to fix our broken immigration system by making the process fairer and more efficient; creating a path to citizenship for those who are eligible and standing up against xenophobia. During a debate on immigration reform in 2013, Tim made history when he proudly delivered the first full speech in Spanish on the U.S. Senate floor.\nTim has been a leading voice in Congress on the importance of defending Temporary Protective Status (TPS) and called on the Biden Administration to continue protecting displaced Salvadorans and Hondurans by redesignating those countries for Temporary Protected Status (TPS). He has also successfully pushed the Biden Administration to grant TPS designations for Cameroon and Ukraine as well as designating TPS status for Venezuela. He stood up to then-President Trump by introducing legislation to end his cruel policy of tearing families apart at the border. Tim also strongly supports the DACA program and is working to give Dreamers and others who have been forced to live in the shadows a permanent solution that gives them the peace of mind they deserve.\nTim is laser-focused on finding real, commonsense solutions on immigration, so those who desire can safely and lawfully live out the American dream."
+    },
+    {
+     "url": "https://web.archive.org/web/20260719000708/https://timkaine.com/issues/prioritizing-public-safety/",
+     "original": "https://timkaine.com/issues/prioritizing-public-safety/",
+     "date": "2026-07-19",
+     "title": "Prioritizing Public Safety - Kaine for Virginia",
+     "text": "## Prioritizing Public Safety\nDating back to his tenure as Mayor of Richmond, Tim Kaine has a decades-long record of keeping Virginia safe and cutting crime.\nTim believes weapons of war have no place on our streets or in our schools, which is why he supports universal background checks, banning assault weapons and high-capacity magazines, and providing more support for people facing mental health challenges. In 2022, he worked to pass the Bipartisan Safer Communities Act – the first major federal gun safety in nearly three decades.\nDuring his time in the Senate, Tim has worked to support Virginia’s law enforcement agencies by delivering over $40 million in Community Oriented Policing Services (COPS) grants to Virginia, boosting public safety across the Commonwealth. He also passed the bipartisan Public Safety Officer Support Act to ensure that more families of fallen public safety officers access line-of-duty benefits — including the families of Virginia officers Jeffrey Smith and Howard Liebengood, who defended the Capitol during the January 6th insurrection.\nTim also helped pass the reauthorization of the Violence Against Women Act and worked across the aisle to pass the First Step Act to curb racial disparities in the criminal justice system."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-08-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mt2de3hifk2b",
+     "text": "91 years ago, President FDR signed the Social Security Act, establishing safeguards for people with disabilities, retirees, and others. I'm committed to pushing for bipartisan solutions like the PROMISE Act to ensure Congress protects benefits for generations to come."
+    },
+    {
+     "date": "2026-08-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtcicoh5jc2b",
+     "text": "I will challenge Trump’s deranged threat to “bomb the shit” out of our ally Oman.⁩"
+    },
+    {
+     "date": "2026-08-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtcvn3qslc23",
+     "text": "North Korea tests ballistic missiles and Trump decides the problem is with ... our ally, South Korea, because it has the sense to avoid joining Trump’s disastrous war with Iran? Kim Jong Un couldn't buy a better deal."
+    },
+    {
+     "date": "2026-08-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtmeoccdkk2k",
+     "text": "Kicked off the day yesterday with @bobbyscott.house.gov in Newport News at a roundtable on special education. We heard from parents, educators, and advocates about the challenges facing students with disabilities and discussed the need to fully fund IDEA and protect special ed programs."
+    },
+    {
+     "date": "2026-08-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtmof6mln22k",
+     "text": "Great to visit Volvo Penta's North American Headquarters in Chesapeake. I learned more about the company’s work and met with employees. We’re lucky to have Volvo Penta in Virginia!"
+    },
+    {
+     "date": "2026-08-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtp3g45iis2k",
+     "text": "While I am grateful for the admirable service of the USS Abraham Lincoln sailors and the sacrifices made by them and their families during this deployment, Congress needs to stop allowing these endless extensions for an illegal and foolish war."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtuebhbwns2b",
+     "text": "Virginia farmers feed our communities and boost our economy. Glad to have spoken with Virginia Farm Bureau leaders and Virginia farmers to listen to their views on the farm bill and the agricultural workforce. We also discussed the impact of federal tariff policies on the farm economy."
+    },
+    {
+     "date": "2026-08-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtvsqzvc222k",
+     "text": "Happy birthday to the National Park Service! Take time to visit one of Virginia's national parks today. I will keep working to protect America’s incredible natural treasures and continue to defend the NPS against federal funding and workforce cuts."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtx6aekabs2y",
+     "text": "@repvindman.bsky.social man and I had an important discussion with veterans in Stafford yesterday. I was glad to hear that they’re happy with the quality of care they receive from VA physicians and staff, and will keep working with VA leaders to cut wait times and improve access to that care."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtyiwohmgc2y",
+     "text": "It’s been 106 years since the 19th Amendment was certified, giving all women nationwide the right to vote. We must renew our commitment to safeguarding that hard-won right by supporting stronger legal protections for voting access and standing against efforts to disenfranchise Americans."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtyq7ozg3s2i",
+     "text": "I had a great time speaking with elected officials and manufacturing leaders in Danville yesterday about the effects of workforce challenges and federal tariff policies on local businesses. Southside businesses are critical to Virginia's economy, and I'll keep working to support them."
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtzgo7uros2u",
+     "text": "I was glad to visit with PATHS leaders, providers, and patients in Danville yesterday to talk about the need to protect Medicaid and my bipartisan bill to strengthen the 340B program, which PATHS and so many other rural providers rely on to buy discounted medications."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mtzq4omspc2u",
+     "text": "Always great to be at IALR in Danville, where incredible strides are made in research, workforce training, and innovative defense manufacturing. I’ve supported IALR since I was Governor and look forward to continuing to work together to boost our economy and national security."
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mu367md44c2s",
+     "text": "Glad to have stopped by SVHEC in South Boston yesterday to talk with local education and business leaders. I was proud to secure over $751K to expand skills training at the center, and I’ll keep working to help all Virginia localities make the investments they need to attract talent."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mu5ma327222c",
+     "text": "Trump promised his war with Iran would be over in days. Six months later: troops killed and injured, billions spent, gas and grocery prices climbing. Congress has declared this war illegal — and I'm working to cut off its funding."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mu5xv3haus2s",
+     "text": "63 years ago, Dr. Martin Luther King, Jr. delivered his \"I Have a Dream\" speech in Washington. That message continues to inspire us. As the Trump-Vance Administration seeks to roll back the progress made on civil rights, we must work together to uphold and advance Dr. King's vision for our nation."
+    },
+    {
+     "date": "2026-09-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3muine7toks22",
+     "text": "Happy Virginia African Diaspora Heritage Month! The African diaspora community contributes to the richness of Virginia’s cultural, economic, and social diversity. I'm proud to champion legislation to establish a National African Diaspora Heritage Month."
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3munekak6bk2k",
+     "text": "We owe so much to Gloria Steinem, who devoted her life to fighting for equality and women's rights. She said: \"The truth will set you free, but first it will piss you off.\" May those words continue to guide us in the years to come. My thoughts are with all who knew and loved her."
+    },
+    {
+     "date": "2026-09-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3muwrk6jzjc2e",
+     "text": "Happy Labor Day! Today and every day, let’s honor Virginia’s workers who keep our Commonwealth and our nation running. I will always fight for fair wages, safe workplaces, and stronger protections for all."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mv6474o2ok2b",
+     "text": "This World Suicide Prevention Day is a reminder to check in on loved ones, prioritize your well-being, and remember that it's okay to ask for help. If you or someone you know is struggling, you can call or text 988Lifeline at 9-8-8 anytime for free, confidential support."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mv6nl5bubs2b",
+     "text": " It was great to visit Bright Point in Chester yesterday to learn more about its programs. I was proud to secure $296,000 in funding to expand the college’s lab capacity so we can train more students in critical fields like health care."
+    },
+    {
+     "date": "2026-09-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mv6zggrt4c2h",
+     "text": "This morning in Glen Allen, I attended the annual Sovereign Nations of Virginia Conference to discuss the integral role of our tribes to the history, culture, and economy of Virginia. I'll keep working to advance their priorities and make sure all indigenous Virginians have a voice in DC."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvb46zkqts2m",
+     "text": "It was great to join the kickoff of the Jeremiah Community Project and celebrate $2.92 million in funding I secured to build housing. This project is a true testament to what we can do when we work together, and I’m excited about how this will help more people have a place to call home."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvbfri2nf22i",
+     "text": "As Rosh Hashanah begins this evening, I send my best wishes for a worthwhile, healthy, and peaceful new year to the Jewish community across Virginia and around the world. Shana Tova!"
+    },
+    {
+     "date": "2026-09-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvj4s6vdok27",
+     "text": "Happy National Virginia Day! It’s an honor to serve our Commonwealth and live in such a wonderful place. Today, we celebrate the amazing people, towns, and nature that make Virginia exceptional."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvjdcegmoc2i",
+     "text": "I visited U.S. Coast Guard Base Portsmouth to visit the Command Center, tour CGC RESOLUTE, and speak with some of the exceptional leaders and servicemembers on base. I will keep working to support our Coasties and their families. Semper Paratus!"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvkn3fxhlc2m",
+     "text": "Happy Hispanic Heritage Month! Now and always, we honor the rich history, vibrant voices, and vital contributions of Hispanic communities throughout Virginia and across the country."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvktlf6a422m",
+     "text": "Five years ago today, the U.S., U.K., and Australia launched AUKUS. I'm proud to have championed the legislation to implement and strengthen this historic partnership—advancing a free Indo-Pacific and further solidifying Virginia's leadership in shipbuilding."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvkxlkpjnc2r",
+     "text": "¡Feliz Mes de la Herencia Hispana! Ahora y siempre, honramos la rica historia, grandes voces, y las aportaciones críticas de las comunidades hispanas en Virginia y en toda la nación."
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvlhi25evs2k",
+     "text": "I oppose this legislation because I worry that the passage of inadequate cryptocurrency regulation will give Americans a false sense of security and fail to protect consumers from the corruption, fraud, and money laundering that is all too rampant in this industry."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvnar6rp5c2k",
+     "text": "Did you see this? The CBO says the Iran war has already cost the U.S. $38 BILLION. And that's just the military operation."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvnhtcr4nk24",
+     "text": "Last week in Richmond, @mcclellan.house.gov , @dannyavula.bsky.social, Virginia Health and Human Resources, local leaders, and I discussed how rising costs of gas, groceries, housing, and child care are squeezing families. We're going to keep fighting to lower costs."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvnjz7zugc26",
+     "text": "Last week in Fredericksburg, I held a roundtable on affordable housing and how we can make it easier for Virginians to find a place they can afford to call home. As a former fair housing attorney, I’ll keep fighting to expand access to affordable housing."
+    },
+    {
+     "date": "2026-09-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvnwu3fevs2a",
+     "text": "Donald Trump says he'd \"bomb the s--- out of\" Oman, a U.S. ally, if it gets in the way of his illegal war with Iran.\n \nWhat an idiotic idea. That’s why I filed a War Powers Resolution to prevent another foolish war."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvpuw576ks2q",
+     "text": " I joined my colleagues in urging the Department of Education to reinstate critical guidelines that protect students from discrimination in career and technical education programs. Fair and equitable access to CTE is essential to our students and the strength of our economy."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvqip5gpdc2u",
+     "text": "On this day in 1787, our founders signed the U.S. Constitution—and its ideals have guided us closer to equality in the years since. But there's more work to do, particularly when it comes to enshrining equal rights protections for women in that pivotal, living document."
+    },
+    {
+     "date": "2026-09-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvqptcellc2k",
+     "text": "This is a massive mistake. The Chesapeake Bay plays a critical role in Virginia's economy and seafood industries, and we must take steps to protect the waters and shores of the region. I'm going to do everything I can to fight this.\n\nwww.wboc.com/news/trump-a..."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvsctrku422k",
+     "text": "Donald Trump’s promise of $5,000 checks sounds like a bribe to me. Instead of making promises he won’t keep, he should focus on actually making life more affordable for Americans by ending his stupid tariffs and illegal wars that drive up costs."
+    },
+    {
+     "date": "2026-09-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvso5jaxw22c",
+     "text": "Happy 79th birthday to the U.S. Air Force! Thank you to the men and women of the United States Air Force for your dedication and sacrifice. On the Armed Services Committee, I'll keep working to ensure the Air Force has the leadership and support its needs."
+    },
+    {
+     "date": "2026-09-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mvxkcusejc24",
+     "text": "Did you know today is National Wife Appreciation Day? Anne, you make every day brighter. I love you!"
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mw2ih6oofs2q",
+     "text": "Farmers were already getting crushed by the Trump-Vance Administration’s tariffs. Now they can’t afford diesel for their tractors or fertilizer for their fields because of the war. Instead of helping them, President Trump is fixating on plans for a ridiculous 250ft arch!\n\nwww.npr.org/2026/09/21/n..."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mw6ylzw7ok2l",
+     "text": "Congressional Republicans' SNAP cuts ripped food assistance away from 110,000+ Virginians. No one should have to skip meals or go to school hungry. We need to reverse these cuts.\n\nrichmond.com/news/state-r..."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwc7lyrg322y",
+     "text": "Could you ever have imagined a President threatening to annihilate another country? At our best, America has been a strong, resolute, reliable neighbor, not a global bully. We need leaders who'll bring us back to that. That isn't Donald Trump."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwdx6ia7xk2y",
+     "text": "The Trump-Vance Administration thinks AI risks are a hoax. The American people know AI safety measures are needed. Democrats will put appropriate regulation in place."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwedkw6qxc25",
+     "text": "It was great to start yesterday morning with @markwarner.bsky.social r and Hispanic and Latino leaders from across Virginia at our Commonwealth Coffee event! This Hispanic Heritage Month, we’re celebrating all you do every day to make Virginia stronger. Thank you for joining us!"
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwlj2ea2pk2d",
+     "text": "It was a pleasure to join early childhood educators and advocates in Blacksburg to hear about challenges they face and thank them for their work. We’ve made progress to expand child care, but there’s more to do to lower costs, boost the workforce, and raise wages for providers."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwlvcbi4vk22",
+     "text": "On Friday in Abingdon, I met with the Regional Housing Alliance of Appalachia. We talked about how Virginia can benefit from the bipartisan ROAD to Housing Act and what else we can do to support affordable housing. I'll keep fighting so everyone has a safe place to call home."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwoe4gumw22a",
+     "text": "My statement on the Trump-Vance Administration's rollback of protections for survivors of assault on campus and LGBTQ students:"
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mworcmacr22r",
+     "text": "The DCA crash was a preventable tragedy. We can't fix this airspace's safety issues without addressing congestion. That’s why @markwarner.bsky.social and I have a bill to reduce traffic and put the safety of 25 million annual travelers ahead of the convenience of Members of Congress."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwrbf4u4kc2m",
+     "text": "Southside is on the move! 3 megaprojects with an expected 6,000 good-paying jobs are coming to Pittsylvania County. Proud of what we did to get the Megasite ready for development, including helping clear permitting hurdles. It's great to see this work paying off. virginiabusiness.com/past-decades..."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwtccsbums2m",
+     "text": "Americans pay into Social Security their entire working lives. They need to understand what benefits they’re entitled to so they can make informed decisions about retirement. I’m glad that my bipartisan bill to make that information clearer is going to the President's desk."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwtualstns27",
+     "text": "President Trump canceled over $800 million in funding that Congress approved and he signed into law. What was the funding for? Education, housing, small businesses, and health research. He wants ballrooms and arches for himself and cuts for everyone else."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mwvlfg4k6k2a",
+     "text": "Eight years ago today, the Saudi government directed the brutal murder of Jamal Khashoggi, a Virginia resident and journalist dedicated to shining a light on the truth. As we honor his memory and courage, we must fight for accountability and defend press freedom worldwide."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mx56hgsces2g",
+     "text": "On World Teachers’ Day, we celebrate the educators who inspire students and uplift communities. As the proud dad of an early childhood educator and husband of a professor, I know how much they do to invest in the next generation. Thank you!"
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mx5jpaysd22g",
+     "text": "Veterans deserve to know that help is there when they need it. I’m proud to have worked with @markwarner.bsky.social to secure over $4.1 million to expand suicide prevention efforts and connect Virginia veterans and their families with the support and resources they need."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mx5stbuor22s",
+     "text": "80% of Americans say finding and affording child care is a major problem. This hurts families and our economy. Instead of building ballrooms and starting new wars, we should pass my Child Care for Working Families Act to cap costs and raise wages for providers."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mx7lzkhuu22s",
+     "text": "October is Domestic Violence Awareness Month. We all have a role to play in addressing domestic violence. If you or someone you know needs help, please call the National Domestic Violence Hotline at 1-800-799-7233."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mx7xj4wjos2s",
+     "text": "Coal miners make great sacrifices to keep our nation running. I was glad to host a forum with the National Black Lung Association to discuss how we can better support miners suffering from black lung disease and ensure they have protections in place to protect their safety."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxc5msybp22s",
+     "text": "During National Substance Abuse Prevention Month, we raise awareness about substance use disorder and stand with those in treatment and recovery. We’ve done a lot to expand access to substance use prevention, treatment, and recovery programs, but we can do more."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxc5uxxoss2s",
+     "text": "My statement on three years since Hamas’ horrific terrorist attack against Israel"
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxew5awtd22e",
+     "text": "1 in 8 women are diagnosed with breast cancer during their life. This Breast Cancer Awareness Month, we recommit to doing more to support survivors and expand access to screenings and treatment. I encourage you to get screened!"
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxfatymfr22f",
+     "text": "The Virginia Department of Education posted annual school performance data this week. Very proud of great progress for many of my hometown Richmond schools. A special shoutout to Holston High in Washington County for its amazing performance."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxpfmt4g5c2v",
+     "text": "This Indigenous Peoples’ Day, we celebrate the history and contributions of indigenous communities. It’s been an honor to get to work with Virginia’s tribes, including on federal recognition of six of them. I’ll keep working to support Virginia’s tribes."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxrleasc2s2v",
+     "text": "Happy 251st birthday to the U.S. Navy! Virginia is proud to have the largest naval base in the world and be home to so many Sailors and their families. As Ranking Member of the Senate Seapower Subcommittee, I will keep working to support our servicemembers and military families."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxtxifwvcc2v",
+     "text": "For decades, Head Start has given millions of kids the education and health care they need to thrive. This National Head Start Awareness Month, let’s continue to push back against the Trump-Vance Administration’s attacks on the program and invest in our children."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxu2lg2mo22r",
+     "text": "Are we really surprised? Donald Trump’s failed economic agenda, his foolish and illegal war, and his ridiculous tariffs are driving up costs and hurting American families. Virginians can’t afford more of this, and I’ll keep fighting to bring costs down.\n\nwww.cnbc.com/2026/10/14/c..."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxufg46fmk2v",
+     "text": "The Chesapeake Bay, which is key to Virginia's economy, is the healthiest it has been in at least 40 years! But there's still work to do, and President Trump's repeal of an executive order to help clean it up threatens our progress. I'll keep pushing for improvement.\nwww.whro.org/environment/..."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxwedo2njc2v",
+     "text": "Americans have been forced to pay over $129 billion more for gas and diesel because of Trump’s foolish war in Iran—and it’s been reported that he’s thinking about ordering more strikes! This isn't what the American people want. We must work to lower costs, not continue this war."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mxzeltfcv222",
+     "text": "My bipartisan Retire through Ownership Act is now law! It’ll facilitate employee stock ownership plans, so workers can share directly in the profits they help create. That means higher wages, more wealth-building, and a real stake in their workplace.\n\nwww.kaine.senate.gov/press-releas..."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myaaeck7ns2l",
+     "text": "Medicare Open Enrollment has begun! Virginia seniors, 2027 plan options are live. Costs and benefits change yearly, so review your options to protect your health and save money. Contact your local Area Agency on Aging for free, unbiased help navigating your coverage options Find Your AAA – vaaaa.org"
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mycrbt6s6s2k",
+     "text": "A strong workforce and economy depend on expanding opportunity and removing the barriers to inclusion. National Disability Employment Awareness Month reminds us of the need to better support Americans with disabilities in finding good jobs."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myczb67nzk2k",
+     "text": "Virginia is for (research) lovers! 300+ Virginians at Haleon in Richmond are working on critical research for over-the-counter products, from Tums to Emergen-C. I’ll keep doing all I can on the Senate’s health committee to promote research and domestic drug manufacturing."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myf5sedp3s2k",
+     "text": "Great to be at VCU to see Virginia’s only undergraduate robotics and autonomous systems engineering program. I’m proud to have secured $1 million in federal funding to support this research—giving students hands-on experience and a path to in-demand careers in a fast-growing field."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myhtvu46ik2o",
+     "text": "Trump’s vanity projects — a gold ballroom, a $100M “Triumphal Arch,” gold-plated horse statues, a $50M golf course — are set to cost taxpayers $1.8+ billion.\n \nHere’s what that money could have been spent on:"
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myi6xdqomc25",
+     "text": "Survivors of domestic violence and sexual assault deserve safety and support. In Dumfries, I toured ACTSPWC to see how the $1.78 million in federal funding I secured will help provide temporary housing and other critical services to help promote healing."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mykms5glpc2h",
+     "text": "In Leesburg, I toured the new Loudoun Crisis Receiving and Stabilization Center, built with $4.1M in federal funding I helped secure to put critical care in reach for those in crisis. I appreciate Loudoun Chair Phyllis Randall partnership in making behavioral health resources a priority."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mysjc2nogk2m",
+     "text": "Northern Virginia’s water supply depends on the work happening every day at the Upper Occoquan Service Authority. Thank you to the UOSA team in Centreville for the tour, where the $1M+ in federal funding I secured will modernize its septic waste facility."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myskrwooac2t",
+     "text": "Now is the time to announce the path to free elections. I endorse Senator Bernie Moreno’s call for a Presidential election by July 24, 2027, the birthday of Liberator Simón Bolívar. Liberate Venezuela from dictatorship. Liberate Venezuela from foreign domination. Venezuela for Venezuelans!"
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myuimnwpd22f",
+     "text": "It’s been eight years since 11 worshippers at Tree of Life Synagogue were murdered in the deadliest antisemitic attack in American history.  May their memories be a blessing and a call to action against hate and gun violence."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myupnbvuoc24",
+     "text": " Trump’s tariffs are fueling inflation, and inflation is crushing Virginia families. People are paying more for groceries, cars, and everyday goods because of a choice this Administration made. It can be undone. Congress should do its job.\n\nwww.wsj.com/opinion/the-..."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3myx3jzo6u22n",
+     "text": "I’ve seen Virginia’s first responders at their best in our worst moments: floods, fires, emergencies. On National First Responders Day and always, I’m grateful for their courage and committed to making sure they have the equipment, training, and mental health support they need."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mz3tvjwn5k2y",
+     "text": "Congrats to the 2026 U.S. Presidential Scholars, including Virginians Yalini Kathamuthu of Herndon and Nived Nandakumar of Chantilly! Years ago, I urged President Obama to open this honor to Career & Technical Education students, and I’m thrilled to see 15 CTE scholars named."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/kaine.senate.gov/post/3mz4diyqybs24",
+     "text": "So the plan is another year of war, higher gas prices, and hoping Iran “comes to the table”? That’s not a strategy, that’s a wish.\n\nwww.ft.com/content/7037..."
+    }
+   ]
+  }
+ ]
+}

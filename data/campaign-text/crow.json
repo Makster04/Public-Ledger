@@ -1,0 +1,108 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "crow",
+ "name": "Jason Crow",
+ "built": "2026-11-26",
+ "sites": [
+  "https://jasoncrow.org/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://jasoncrow.org/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://jasoncrow.org/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://jasoncrow.org/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103092132/https://jasoncrow.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103092132/https://jasoncrow.org/",
+     "original": "https://jasoncrow.org/",
+     "date": "2026-11-03",
+     "title": "Jason Crow for Colorado | Official Campaign Website",
+     "text": "## A New Generation of Leadership.\nBy submitting this form and signing up for texts, you consent to receive donation asks, voter contact, and informational messages from Jason Crow for Congress. Msg & data rates may apply. Msg frequency varies. Unsubscribe at any time by replying STOP. Text START to opt in. Text HELP for help. Privacy Policy.\n## Fighting to make life more affordable for you.\nOur democracy needs bold leaders who fight and have moral clarity. Coloradans deserve a champion who will make life more affordable, lower healthcare costs, and take on corruption. It’s why Jason never has, and never will accept corporate PAC money – because it’s time for a new generation of leadership that focuses on working people, not protecting special interests.\n## NOT CORPORATE PACS & SPECIAL INTERESTS.\nJason knows Washington is broken by dark money and corporate special interests. It’s why he’s fighting for campaign finance reform and to ban insider stock trading. He leads by example, refusing to take corporate PAC money, not trading stocks, and posting his public schedule – because for Jason, elected office is about public service, and he’ll only be accountable to Coloradans.\nIf you’ve made a contribution with ActBlue Express, your donation will go through immediately.\n## Meet Jason\nJason grew up in a working class family. He’s the grandson of a bricklayer and the son of small business owners who taught him the value of hard work. He joined the National Guard to pay for school, and after September 11th enlisted in the Army to defend and serve his country. He served three combat tours in Iraq and Afghanistan, rose from private to captain, and earned a Bronze Star. He’s fighting to lower costs, root out corruption, and hold a reckless President accountable."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103092131/https://jasoncrow.org/values/",
+     "original": "https://jasoncrow.org/values/",
+     "date": "2026-11-03",
+     "title": "Values - Jason Crow for Congress",
+     "text": "Jason Crow for Colorado | Official Campaign Website"
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055147/https://jasoncrow.org/issue/campaign-finance/",
+     "original": "https://jasoncrow.org/issue/campaign-finance/",
+     "date": "2026-11-02",
+     "title": "Tackling Corruption and Campaign Finance Reform - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nTackling Corruption and Campaign Finance Reform?\nWashington is broken. Too many politicians are in the pockets of the special interests that spend millions of dollars to get them elected. They stack the deck for their donors, and Colorado families pay the price. We can unrig the system by ending the flood of unlimited and undisclosed money that is drowning out the voices of regular people. I am fighting to bring accountability to Washington and end the corrupting influence of special interest money so that our government serves all Coloradans. This is why I promise not to take a dime of corporate PAC money, just like I promised in 2018.\nI was proud to introduce my first piece of legislation as a Member of Congress, the End Dark Money Act, to crack down on dark money in politics and close the loophole that allows mega-donors to hide their political contributions through so-called “social welfare” organizations. I also cosponsored the DISCLOSE Act, which would require organizations spending money in federal elections to disclose their donors, and the SHIELD Act, which requires candidates to report any offers of assistance from foreign governments to law enforcement."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055147/https://jasoncrow.org/issue/civil-rights/",
+     "original": "https://jasoncrow.org/issue/civil-rights/",
+     "date": "2026-11-02",
+     "title": "Civil Rights & Criminal Justice Reform - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nCivil Rights & Criminal Justice Reform?\nWe cannot ignore the inequality that still exists in many communities. It is the duty of anyone who believes in our nation’s core values to stand up with one voice and clearly denounce all forms of bigotry and hatred. Communities of color in America have been torn apart by systemic injustices. We must acknowledge this and tackle inequities where they exist so that we can provide safety, opportunity, and dignity for all Americans. I fought beside soldiers who came from different racial, religious, and economic backgrounds – people who forged bonds and became brothers and sisters. We need to move toward a place of respect, understanding, and honesty so that we can fight inequality everywhere.\nMass incarceration, unequal application of the justice system based on race and class, and the long-term impacts of incarceration on employment, housing, and re-integration point to a criminal justice system in need of reform. In Congress, I am fighting for justice and equal treatment for all by promoting criminal justice policies to improve law enforcement, reduce incarceration, decriminalize marijuana, and strengthen communities. I support innovative, data-based reforms such as restorative justice that are designed to keep the public safer and address the underlying causes of crimes. Nationally, roughly 77% of those released from prison are rearrested within five years. Research shows that longer sentences actually make recidivism more, not less likely. The deck is stacked against individuals with a criminal conviction who struggle to re-enter the workforce, find stable housing, and maintain a steady paycheck. Many of those in the criminal justice system suffer from mental illness or substance abuse, and prisons remain ill-equipped to offer treatment and rehabilitation services. In Congress, I’ve helped bridge the trust divide between law enforcement and our community. I’ve worked to reform law enforcement training to better address the inequities facing our communities of color and I will continue this work to protect civil rights and our community."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055148/https://jasoncrow.org/issue/democracy/",
+     "original": "https://jasoncrow.org/issue/democracy/",
+     "date": "2026-11-02",
+     "title": "Defending Our Democracy - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nDefending Our Democracy?\nAmerica’s democratic institutions and the rule of law must be defended. One of my proudest accomplishments is leading paratroopers in combat for this country. Wearing the American flag on my shoulder and fighting for America is something that left a lasting mark on my life and my values. I saw countries that struggled to enforce the rule of law, due process, and individual rights. I served in the Army in countries where citizens cannot depend on these pillars of democracy. When I came home, I continued my fight for these same values as I began my legal career and took another oath to uphold and defend the Constitution. I experienced first-hand the strengths and weaknesses of our criminal justice system – including prosecuting criminal cases and representing those accused of crimes. As a lawyer who specialized in conducting independent legal investigations, I know how critical Congress’ power to investigate is for understanding facts, discovering corruption and culpability, and holding people accountable. I spent time in countries where fundamental rights—like the right to vote—aren’t guaranteed. So I know that we must protect those rights here at home. That’s why I cosponsored the Voting Rights Advancement Act to help ensure that all Americans who are eligible to vote can exercise that right."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055147/https://jasoncrow.org/issue/education/",
+     "original": "https://jasoncrow.org/issue/education/",
+     "date": "2026-11-02",
+     "title": "Education - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nYoung people should have access to high quality education, regardless of where they live or their ability to pay. I owe much of my success to strong, public, neighborhood schools. Every child deserves the same. Colorado’s public school system has left too many children behind. In Congress, I am fighting against cuts in funding and voucher proposals that will only make this problem worse for Colorado’s families.\nAmerica has the best colleges, universities, and technical training in the world, but all too often our students cannot afford to pursue their education. Americans owe over $1.52 trillion in student loan debt. We must ensure that student loans are affordable, costs of higher education are reasonable, and that community colleges and technical training opportunities are available and reliable so that job training and re-training for tomorrow’s economy is available to all Americans. All hardworking students should have the option to pursue education or advanced training without fear of a massive price tag. Our young people should not have to make the choice between an education and eventually owning a home. In Congress I supported legislation to allow people to refinance and consolidate student loans, lower education costs, and provide loan forgiveness to those who work in public service careers."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055147/https://jasoncrow.org/issue/environment/",
+     "original": "https://jasoncrow.org/issue/environment/",
+     "date": "2026-11-02",
+     "title": "Environment - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nWe must fight climate change and protect the Colorado that we love. Climate change is the defining issue of our age. This is not just a vague idea for my family or any family that enjoys Colorado’s beautiful outdoors. My children are 5th generation Coloradans and our family has already seen the effects of long-term drought, higher temperatures, and natural disasters.\nAmerica must live up to its role as a global leader to help solve our world’s most pressing problems, especially climate change. We must re-engage with other nations to work towards climate solutions, including encouraging clean energy transitions. Pushing for renewable energy development will also help grow our economy and create good-paying jobs.\nIn Congress, I have launched a “Sustainable Power Initiative” to bring together military, economic, defense, energy, and environmental leaders to discuss how to improve energy efficiency and environmental resiliency at the Department of Defense. As a result, my Military Installation Resilience Assuredness (MIRA) Act, which improves the security and resilience of military installations that are vulnerable to the damaging effects of extreme weather and climate change, was signed into law.\nI am also fighting to ensure that our public lands are not sold off to the highest bidder or destroyed by irresponsible drilling and mining, and I will continue to do so if reelected. Communities across America depend on government funding to help treat drinking water, detect lead contamination, clean up abandoned mines and waste sites, and ensure our families are safe from pollution. Leaving a healthy planet for our children and grandchildren will always be a priority for me and should never be a pawn in political games."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055148/https://jasoncrow.org/issue/foreign-policy/",
+     "original": "https://jasoncrow.org/issue/foreign-policy/",
+     "date": "2026-11-02",
+     "title": "Foreign Policy - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nWhen I served in Iraq and Afghanistan, I learned firsthand that American security and prosperity requires a dynamic, nuanced, and engaged foreign policy, where America projects its interests rather than withdraws behind our borders. Over the last 20 years, our foreign policy has increasingly been defined by the three “D’s”—Diplomacy, Defense, and Development. While spending the largest portion of our budget on defense, our security and economic interests are increasingly dependent on negotiating a complex, competitive, and often dangerous world. Diplomacy saves American lives.\nAmerica needs to resume its global leadership position in international institutions, and promote human rights and democracy abroad. The current administration’s foreign policy has frightened our allies, weakened our alliances, and signaled to our enemies that we are weak. Retreating from our global leadership position is not an option, and will not move the world to a safer, cleaner, and more prosperous place for our children."
+    },
+    {
+     "url": "https://web.archive.org/web/20261102055147/https://jasoncrow.org/issue/guns/",
+     "original": "https://jasoncrow.org/issue/guns/",
+     "date": "2026-11-02",
+     "title": "Gun Violence Prevention - Jason Crow for Congress",
+     "text": "## What is Jason Crow's position on\nGun Violence Prevention?\nEach year, 36,000 Americans die from gun violence and another 100,000 are shot. Here in Colorado we’ve dealt with two of the nation’s worst mass shootings in Aurora and Littleton. Coloradans know that we do not have to choose between Second Amendment protections and safer communities. As a hunter and former Army Ranger, I know that there are many responsible gun owners in Colorado, but I also know what guns are capable of and that common-sense reforms are needed to reduce gun violence.\nCommon-sense laws that are supported by a huge majority of Americans can help make our communities, schools, and homes safer from gun violence. Background checks have prevented over 2.4 million gun sales to felons, domestic abusers, and dangerously mentally ill individuals. But, loopholes still allow too many gun sales to go unchecked. I know that Coloradans support closing these types of loopholes, and I have fought to do that in Congress. I introduced legislation to close the “Colorado Loophole,” which would prohibit the sale of long guns to residents from other states who could not buy them in their own home state, am vice chair of the Gun Violence Prevention Task Force, and was a proud supporter of H.R. 8 to expand background checks for all gun sales.\nI will not only refuse corporate PAC money, but I will also never take a dime from the gun lobby. My priority in Congress is to work towards solutions to gun violence and I will always put our children, our families, and our communities first."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

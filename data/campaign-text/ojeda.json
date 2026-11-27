@@ -1,0 +1,48 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "ojeda",
+ "name": "Richard Ojeda",
+ "built": "2026-11-26",
+ "sites": [
+  "https://ojedafornc.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://ojedafornc.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103231955/https://ojedafornc.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103231955/https://ojedafornc.com/",
+     "original": "https://ojedafornc.com/",
+     "date": "2026-11-03",
+     "title": "Richard Ojeda for NC09 - United We Win",
+     "text": "## We Win\nMajor Ret. Richard Ojeda is running for US Congress in North Carolina’s 9th District to fight for American Families, Veterans, and the future of our democracy.\n## Join Team Ojeda\nThe appearance of U.S. Department of Defense visual information does not imply or constitute DOD endorsement.\nNote: If you have donated through ActBlue, these links will take you through express checkout.\n## Why support our campaign?\nVoting isn’t just about picking a name. It’s about choosing someone who will fight for you, listen to your story, and stand up for what matters in North Carolina. Here’s why Richard Ojeda is the clear choice for NC-09 and the people who call it home.\nWe represent the people, not the powerful.\nThis campaign doesn’t take a dime from corporate PACs or lobbyists. Our strength comes from small-dollar donations and grassroots support, proving that when everyday people chip in, we can take on Washington.\nWe listen before we speak.\nThis campaign is built on conversations, not backroom deals. Richard listens to veterans, teachers, farmers, and families, shaping his platform from the real stories and struggles of North Carolinians.\nWe show up in every corner of NC-09.\nRichard isn’t hiding in offices or talking to insiders. He’s on the road, putting boots on the ground, at fish fries, car shows, union halls, and community meetings, listening to concerns and standing shoulder to shoulder with neighbors.\nWe fight for those left behind.\nToo many families feel ignored by politicians. Richard is committed to lifting up the voices of rural towns, veterans in need, overworked teachers, and workers pushed aside by corporate greed.\nWe believe change starts in our community.\nReal change doesn’t come from Washington. It comes from neighbors talking to neighbors, volunteers knocking doors, and communities standing together. That’s the movement Richard is building across NC-09.\n## Meet Ret. Major Richard Ojeda\nThis campaign is about service. Richard Ojeda has spent his career in the military, as a teacher, and as a fighter in state legislature. When he goes to D.C., you can count on his commitment to:\n## Representing Real People\nRichard Hudson has been putting the interests of billionaires before those of working families in N.C. That stops now.\n## Country Over Party\nThis country is at a turning point, and we deserve leaders who know what it means to serve and stand for our nation, united.\n## Fight for Veterans\nProtect and improve VA care, pensions, and mental health support for veterans.\n## Protect Education\nRaise teacher pay, cut student debt, and keep politics out of the classroom.\n## Invest in North Carolina\n## Ensure Quality Healthcare\n## Stand by Working Families\n## Save the Future of Social Security\nRaise the income cap and stop retirement age hikes.\n## Let’s take Congress back.\nThere are so many ways you can help us flip this seat and start righting the ship. With our democracy at stake, there’s no time like today to get involved.\n## Join Team Ojeda\nBy sending this message, you agree to be contacted by email and/or phone via text message by Ojeda for NC. You can opt-out any time. Rates & message frequency may vary. For additional information, please read our Terms & Conditions and Privacy Policy."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103231956/https://ojedafornc.com/fighting-for-veterans/",
+     "original": "https://ojedafornc.com/fighting-for-veterans/",
+     "date": "2026-11-03",
+     "title": "Fighting for Veterans - Richard Ojeda for NC09",
+     "text": "## Veterans deserve care, respect, and real action.\nRichard Hudson calls himself the “veterans’ representative” but he votes to tear down veterans at every turn. I served for 24 years, and as a retired Army Major, I know firsthand what it means to serve. Veterans deserve more than words. They deserve healthcare, pensions, and respect that matches the sacrifice they gave this nation.\nStop the assault on the VA workforce from politicians like Richard Hudson\nProtect pensions and benefits veterans have already earned.\nPrioritize mental health care for veterans and families.\n## Healthcare Access\nEvery veteran deserves timely, quality VA healthcare without months of waiting.\n## Fair\nNo one who served should ever have to fear losing retirement or disability benefits.\n## Mental\nExpand access to counseling and treatment to end veteran suicide.\n## Community Support\nStronger outreach programs to connect veterans with local resources and jobs.\n## No veteran should be left behind to fund tax breaks for billionaires\nCongressmen like Richard Hudson make promises to veterans and then forget them. I will never forget my fellow service members. Here are answers to the most important questions veterans and their families are asking.\nHow will you fix VA care?\nI will fight to expand facilities in North Carolina, hire more staff, and cut red tape so veterans are not left waiting months for appointments or denied the care they earned.\nWhat about pensions and retirement security?\nI will oppose any attempt to cut military pensions or disability benefits. These are promises made to service members. Breaking them dishonors service and hurts families who sacrificed for this country.\nWill you focus on mental health?\nYes. We must expand VA mental health services, increase access to counseling, and address PTSD and suicide directly. Veterans deserve care that matches the invisible battles they still face.\nHow will families be supported?\nMilitary families serve too. I will strengthen spousal support programs, improve education opportunities, and expand job training so families have stability and opportunity after years of sacrifice.\nWhy trust you to deliver?\nBecause the VA is my care in the community. I know the challenges of military service, the frustration of fighting bureaucracy, and the need for quality healthcare for those who have earned it. Service is about standing up for one another and we must stand ready to care for those we have sent into harms way."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103232031/https://ojedafornc.com/policies/",
+     "original": "https://ojedafornc.com/policies/",
+     "date": "2026-11-03",
+     "title": "Richard Ojeda’s Policies | Fighting for NC-09 Families",
+     "text": "## A blueprint for real change in North Carolina starts with you.\nRichard Ojeda’s platform is built on common sense and real conversations with the people of NC-09. From veterans and farmers to teachers and working families, every policy starts with one simple promise: put people before politics.\n## Fight for Veterans\nBetter VA care, fair pensions, and mental health support for veterans.\n## Protect Education\nRaise teacher pay, cut student debt, and keep politics out.\n## Invest in NC\n## Ensure Quality Healthcare\n## Stand by Working Families\n## Save Social Security\nProtect Social Security, stop retirement age hikes, and block new penalties.\nReal change takes real people. Join Richard Ojeda’s team of volunteers and stand shoulder to shoulder with North Carolina’s working families. From knocking on doors to making calls, your time makes the difference."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

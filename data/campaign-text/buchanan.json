@@ -1,0 +1,113 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "buchanan",
+ "name": "Vern Buchanan",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.vernbuchanan.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.vernbuchanan.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108015757/https://www.vernbuchanan.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108015757/https://www.vernbuchanan.com/",
+     "original": "https://www.vernbuchanan.com/",
+     "date": "2022-11-08",
+     "title": "Vern Buchanan for Congress – Florida Republican",
+     "text": "## Listening. Leading.\nFighting for You!\nU.S. Rep. Vern Buchanan is a self-made businessman, who knows what it takes to create jobs and jump-start the economy. He understands that America’s greatness comes from its entrepreneurial spirit and pro-growth, free-market policies.\nBuchanan is a senior member of the powerful House Ways & Means Committee, which has jurisdiction over tax policy, international trade, health care, welfare, and Social Security.\n## Creating Jobs\nU.S. Rep. Vern Buchanan is a self-made businessman. He knows what it means to balance a budget, meet a payroll, and to exercise fiscal discipline that keeps a business...\n## Tax Relief for middle-class working Amer...\nThe U.S. tax code punishes families trying to make ends meet and employers trying to compete in the global marketplace. If we are serious about reducing unemployment and strengthening...\n## Retirement Security\nSenior citizens and retirees living on their Nest Eggs are particularly vulnerable to the current economic difficulties. Many are worried about the continued viability and long-term solvency of their...\n## Join Vern's Team"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107233736/https://www.vernbuchanan.com/on-the-issues/",
+     "original": "https://www.vernbuchanan.com/on-the-issues/",
+     "date": "2022-11-07",
+     "title": "Issues",
+     "text": "## Creating Jobs\nU.S. Rep. Vern Buchanan is a self-made businessman. He knows what it means to balance a budget, meet a payroll, and to exercise fiscal discipline that keeps a business moving forward. Giving small businesses the resources they need to create jobs, making sure our government spends no more than what it takes in, and keeping […]\n## Tax Relief for middle-class working Amer...\nThe U.S. tax code punishes families trying to make ends meet and employers trying to compete in the global marketplace. If we are serious about reducing unemployment and strengthening...\n## Retirement Security\nSenior citizens and retirees living on their Nest Eggs are particularly vulnerable to the current economic difficulties. Many are worried about the continued viability and long-term solvency of their...\n## Compete in the 21st Century Global Marke...\nThe global population has surpassed 7 billion people and 95% of the world’s consumers live outside of the United States. Opening up foreign markets for U.S. goods and services...\n## Join Vern's Team"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220238/https://www.vernbuchanan.com/issues/creating-jobs/",
+     "original": "https://www.vernbuchanan.com/issues/creating-jobs/",
+     "date": "2022-11-04",
+     "title": "Creating Jobs",
+     "text": "## Creating Jobs\nU.S. Rep. Vern Buchanan is a self-made businessman. He knows what it means to balance a budget, meet a payroll, and to exercise fiscal discipline that keeps a business moving forward. Giving small businesses the resources they need to create jobs, making sure our government spends no more than what it takes in, and keeping taxes low will ultimately mean greater economic growth and prosperity for everyone.\nWe have had an anemic economic recovery from the Great Recession. What the country truly needs is a common-sense plan to boost our economy and protect and produce more American jobs in the United States.\nIn order to achieve these goals, Vern Buchanan has a 10 point plan to create jobs and restore our economy:\n- Tax Reform: Broadly restructure our tax system in order to help struggling families and to encourage businesses to keep their jobs in America.\n- Regulation Reform: Abolish costly onerous government regulations on employers that drive up costs while keeping job growth down.\n- Eliminate the New Health Law’s Mandate on Business: Repeal the new, heavy-handed requirement that all businesses buy health insurance for their workers.\n- BBA: A Balanced Budget Amendment will help bring stability to our economy.\n- Trade: Support free and fair trade to open global markets and create jobs in the United States.\n- Tort Reform: Pass far-reaching legal reform that removes frivolous lawsuits from our court system.\n- Energy: Propose expanded drilling in places like Alaska and other areas. Expansion will not only lead to more American energy, but lead to hundreds of thousands of jobs.\n- Labor: Fight an overactive NLRB. Support states pursuing right-to-work laws.\n- China: China has ignored intellectual property rights. This cost the U.S. economy $48 billion in 2009. One study concluded that if China cracked down on this problem, it could create 2.1 million jobs in the U.S.\n- Government Workers: Reduce the government workforce by 10% via attrition and align wages and benefits of government workers with private sector.\n## Join Vern's Team"
+    },
+    {
+     "url": "https://web.archive.org/web/20220815063843/https://www.vernbuchanan.com/issues/tax-relief-for-middle-class-working-americans-and-small-businesses/",
+     "original": "https://www.vernbuchanan.com/issues/tax-relief-for-middle-class-working-americans-and-small-businesses/",
+     "date": "2022-08-15",
+     "title": "Tax Relief for middle-class working Americans and small businesses",
+     "text": "## Tax Relief for middle-class working Americans and small businesses\nTax Relief for middle-class working Americans and small businesses\nThe U.S. tax code punishes families trying to make ends meet and employers trying to compete in the global marketplace.\nIf we are serious about reducing unemployment and strengthening our economy, we should let people keep more of their own money and help small businesses grow, not punish them with higher taxes. America’s greatness comes from its people and their innovation, not more government intrusion.\nReducing the tax burden on small business would free up money that could be used to invest in new equipment, grow their company and hire more workers.\n## Join Vern's Team"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220238/https://www.vernbuchanan.com/issues/retirement-security/",
+     "original": "https://www.vernbuchanan.com/issues/retirement-security/",
+     "date": "2022-11-04",
+     "title": "Retirement Security",
+     "text": "## Retirement Security\nSenior citizens and retirees living on their Nest Eggs are particularly vulnerable to the current economic difficulties. Many are worried about the continued viability and long-term solvency of their pensions, IRAs, and 401(k) plans.\nKey Federal safety net programs, such as Social Security and Medicare, must be protected and their long-term solvency be ensured to help retirees and seniors in their post-employment years. We need a non-partisan Blue Ribbon Commission to make recommendations about how best to guarantee Social Security and Medicare’s long-term future. In the early Reagan Administration, the “Greenspan Commission” helped save Social Security for 30 years. We need a 21st Century version of this to help keep Social Security and Medicare safe for the Baby Boom generation.\n## Join Vern's Team"
+    }
+   ],
+   "unread": [
+    "the list of vernbuchanan.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.vernbuchanan.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105083444/https://www.vernbuchanan.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105083444/https://www.vernbuchanan.com/",
+     "original": "https://www.vernbuchanan.com/",
+     "date": "2024-11-05",
+     "title": "Vern Buchanan",
+     "text": "## Supporting Law Enforcement\nStay Up to Date\nJoin Vern's Team\nBy providing your phone number, you are consenting to receive calls and text\nmessages, including autodialed and automated calls and texts,\nto that number from Vern Buchanan for Congress. Message and data rates may apply."
+    }
+   ],
+   "unread": [
+    "the list of vernbuchanan.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.vernbuchanan.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-02-08",
+    "url": "https://web.archive.org/web/20260208045748/https://www.vernbuchanan.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20260208045748/https://www.vernbuchanan.com/",
+     "original": "https://www.vernbuchanan.com/",
+     "date": "2026-02-08",
+     "title": "Vern Buchanan",
+     "text": "## Supporting Law Enforcement\nStay Up to Date\nJoin Vern's Team\nBy providing your phone number, you are consenting to receive calls and text\nmessages, including autodialed and automated calls and texts,\nto that number from Vern Buchanan for Congress. Message and data rates may apply."
+    }
+   ],
+   "unread": [
+    "the list of vernbuchanan.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

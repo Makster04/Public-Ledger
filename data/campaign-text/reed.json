@@ -1,0 +1,485 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "reed",
+ "name": "Jack Reed",
+ "built": "2026-11-26",
+ "sites": [
+  "https://jackreed.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://jackreed.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102011724/https://jackreed.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102011724/https://jackreed.com/",
+     "original": "https://jackreed.com/",
+     "date": "2026-11-02",
+     "title": "Jack Reed",
+     "text": "## Join Team Reed\nAdd your name to get updates from Jack Reed on how he delivers real results for Rhode Islanders.\nThank you for joining Team Reed!\nSupport Jack Reed’s re-election campaign today!\n## General Election 2026 Information\n- Early Voting: Wednesday, Oct. 14 – Monday, Nov. 2\n- Absentee Ballot Return Deadline: Tuesday, Nov. 3 – 8:00 p.m.\n- Election Day: Tuesday, Nov. 3 – 7:00 a.m.-8:00 p.m. ET"
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw25qhqd522q",
+     "text": "RI’s farmers are critical to our food system, but they’ve been hit by severe weather, tariffs, & surging diesel prices. \n\nTeamed up with RIDEM to welcome over $15 million in federal farm aid & ensure it reaches local farmers who need it."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw27mcpvgc2n",
+     "text": "Coastal floods are linked to climate change and sea level rise. \n\nThis #ClimateWeek we must act with urgency to turn climate goals into action and protect RI’s beaches and coastal communities."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw2dh3hirc2d",
+     "text": "Powerful celebration of hope, resilience, & connection at the 23rd annual Rally 4 Recovery this weekend. \n\nGrateful for the service providers, volunteers, partners, & families who came out to show their support."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw2ftrnues2w",
+     "text": "The Trump Admin has hidden the true costs of the President’s reckless Iran war since day one.\n \nAmericans deserve to know why their loved ones are risking their lives overseas. Taxpayers deserve to know what this war costs."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw2loeen622z",
+     "text": "@climateactionri.org does critical work advocating for a brighter, more resilient future for our state, nation, & planet. 🌎 \n\nGreat to join their Picnic for the Planet yesterday to help kick off #ClimateWeek."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw2oca5ml22n",
+     "text": "Under Sec. Hegseth’s failed leadership, DOD has obfuscated the numbers of wounded servicemembers in Iran and reclassified American deaths under a new operation name to avoid contradicting Pres. Trump. \n\nThis is not only wrong – it is profoundly disrespectful to our troops and their families."
+    },
+    {
+     "date": "2026-09-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw2te4wskc2n",
+     "text": "Great food, good music, & even better friends here at RI’s Lebanese Festival! 🇱🇧\n\nThis annual celebration uplifts the rich culture, heritage, & contributions of Lebanese-RIers. Great to join in on the fun!"
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw2yx3g3n22n",
+     "text": "The costs of Trump’s reckless war in Iran climb by billions each month, even as this Admin refuses to acknowledge the munitions crisis & damages that threaten our nat’l security.\n \nCongress cannot do its job when Sec. Hegseth’s Pentagon won’t tell the truth."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw4i7h6r622t",
+     "text": "While the President dismisses the need for AI guardrails, continued public reports point to the dangers of rushing AI deployment by U.S. military.\n \n@markwarner.bsky.social  @coons.senate.gov & I are demanding immediate investigations."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw4sknnxzs2i",
+     "text": "Proud to support RI’s booming aquaculture sector – growing healthful and delicious food, innovation, jobs, and more right here in the Ocean State. #AquacultureWeek"
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw53ptjdks2t",
+     "text": "Congress must play a role in establishing clear guardrails and sensible speed limits for AI use by our armed forces. \n\nAmericans deserve answers about alarming public reports about faulty AI intel and operations. \n\nI’m fighting for transparency and accountability."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw557yv6ts2i",
+     "text": "It’s Rhode Island Day at the Big E!\n\nwww.wpri.com/new-england/..."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mw5eznou2c2t",
+     "text": "BREAKING: $271 Million to Help U.S. Coast Guard Expand in RI & Advance NAVSTA Newport Shoreside Modernization"
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwbrnnjl422x",
+     "text": "NOR’EASTER ALERT: The season’s first nor’easter is forecast for this weekend. \n\nBe prepared & follow weather.gov & local news for latest forecasts and warnings."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwbru7yerk2x",
+     "text": "Trump’s policies and tariffs have increased the cost of housing and pushed homeownership out of reach for more Americans.\n\nCongress must help lower costs, halt tariffs, alleviate housing crunch, and ensure wise implementation of The 21st Century ROAD to Housing Act."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwlicvjjz22l",
+     "text": "Instead of lowering gas and grocery costs for your family  President Trump is using your tax dollars illegally for TV campaign ads. \n\nwww.nytimes.com/2026/09/27/u..."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwltkc6wlc22",
+     "text": "Advancing new treatments & support for Alzheimer’s disease and other forms of dementia is critical for public health & our economic future. Here w/ Alzheimer's Assoc. RI Chapter advocates, caregivers and volunteers to discuss our delegation’s efforts to boost research & hope for RIers with dementia."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwlyiaky7s22",
+     "text": "Congress must act to lower the cost-of-living. Working families keep paying more in Trump’s economy while the wealthiest reap huge benefits. \n\nJoined @epi-ri.bsky.social to talk about my fight for commonsense policies & meaningful change to help everyday RIers get ahead."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwofcitxu225",
+     "text": "Adopted at age 7, Alexia Rodrigues' journey has taken her from foster care to RI National Guard to competing for Miss America.\n\nShe’s an advocate & role model for foster youth & has a bright future. I’m proud she’s a 2026 Congressional Coalition on Adoption Institute Angel in Adoption honoree"
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwokuigff225",
+     "text": "Enjoyed celebrating Korean culture at the 2026 RI Korean Festival!"
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwqpmpwcq22b",
+     "text": "Members of Congress should not own or trade individual stocks. Period.\n\nThe GOP bill is a sham. Instead of shutting down Congressional stock trades, it opens loopholes & has unrelated voter suppression language that’s already been rejected on a bipartisan basis."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwr2kmkvz22m",
+     "text": "Proud to join @whitehouse.senate.gov, @magaziner.house.gov, and @amo.house.gov in securing $4.5M to help local firefighters strengthen safety and training, upgrade equipment, and purchase new emergency response vehicles."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwr47kliss2m",
+     "text": "Teamed up with @whitehouse.senate.gov and @amo.house.gov to secure $1M for Tiverton water system improvements to help residents affected by toxic chemicals in their drinking water."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwsylrmw322t",
+     "text": "During #BreastCancerAwarenessMonth, I am thinking of those we’ve lost and those who continue their fight. \n\nTo all the women & families battling breast cancer: I admire your strength & am committed to helping find a cure."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwsziwdmsc2t",
+     "text": "Congrats to our 2026 Rhode Island Teacher of the Year, Sarah Dully, an English and special ed teacher at Narragansett High School!\n\nFrom True Crimes studies to Practical Literacy, you bring learning to life.  Thank you for sharing your students’ voices"
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mww6c7yyyk2m",
+     "text": "Wastewater systems aren’t too glamorous, but boy does it stink when they don’t work. \n\nThat’s why investments – like this $3.25M earmark I delivered for Coventry to extend sewer line to the HS & dozens of local homes – are key to protecting public health & our environment."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mww6oswskk2m",
+     "text": "Almost all of us know someone who had cancer or sadly lost their battle to this devastating disease. \n\nI joined @acscan.bsky.social #RIResearchBreakfast this morning to discuss my efforts to boost & protect federal research funding to advance the fight for a cure."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mww7ciopv22m",
+     "text": "Talking about safeguarding Social Security, restoring and expanding Medicare & Medicaid, and how evolving techn can help older RIers connect with services, assistance, & community. \n\nGrateful for the @sacri-ri.bsky.social for all they do to improve the lives of RI seniors."
+    },
+    {
+     "date": "2026-10-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwyvbn7dfc2k",
+     "text": "After securing $3.1M to support Hope & Main, I joined chef-entrepreneurs to cut the ribbon of their new West End Kitchen, which serves up test kitchen space & #smallbiz training."
+    },
+    {
+     "date": "2026-10-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mwyx2cbzzk2k",
+     "text": "Celebrating #HispanicHeritageMonth with LG Matos, Treasurer Diossa & more. So grateful for the countless contributions & positive impacts of RI's vibrant Latino communities."
+    },
+    {
+     "date": "2026-10-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mx2mxoxlek2k",
+     "text": "Joined Day One Pioneers of Hope Celebration to congratulate the 2026 ‘Pioneers of Hope’ awardees."
+    },
+    {
+     "date": "2026-10-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mx2x7hsohs2k",
+     "text": "Joined National Federation of the Blind’s 56th Annual Convention to discuss ensuring that people with disabilities have the same rights and opportunities as everyone."
+    },
+    {
+     "date": "2026-10-04",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mx3howgnfs2k",
+     "text": "Great time cheering on families, advocates, & caregivers at BreakthroughT1D’s annual walk to raise awareness and support research to improve the lives of people with Type 1 Diabetes!"
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mx5bc7kypc2p",
+     "text": "During #DomesticViolenceAwarenessMonth, we reaffirm our commitment to ending domestic violence, sexual assault, and stalking, while ensuring survivors have access to the care, support, and resources they need."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mx7rz2ff222f",
+     "text": "#NationalSeafoodMonth is a great time to support our local fisheries!\n \nLearn more here: seafood.ri.gov"
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxa4he54ds2f",
+     "text": "¡Qué gran momento celebrar el 20.° aniversario de Fuerza Laboral y los distinguidos premiados del Premio Legado!\n \nProud to have secured $650K to support their mission of building sustainable career pathways for hardworking Rhode Islanders."
+    },
+    {
+     "date": "2026-10-08",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxevapg24223",
+     "text": "Honored to receive an “A” on @wedefendthevote.org’s 2026 legislative scorecard!\n\nI will continue fighting corruption, protecting voting rights, defending democracy, and serving as a voice for all RIers!"
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxh2nwc6ks2e",
+     "text": "NEW: $38.7M for Rhode Island Infrastructure Bank will help accelerate lead service line replacements to ensure families across RI have access to clean & safe drinking water.\n\nProud to have supported the Infrastructure Investment and Jobs Act which made extra funding possible."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxhsvmbqgk2b",
+     "text": "Years of hard work to bring NOAA’s Marine Operations Center – Atlantic to Rhode Island is paying off.  Great to tour progress at this state-of-the-art facility & chat about the Ocean State’s growing leadership in the Blue Economy."
+    },
+    {
+     "date": "2026-10-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxmlcqsx2c2t",
+     "text": "Thanks to all who came out to NAMI Rhode Island’s 5K walk to help raise awareness about mental health, reduce stigma, & support those experiencing mental health issues. #namiwalks"
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxrrutwov22n",
+     "text": "Joined Higher Ground International’s Cultural Gala to celebrate the 2026 Village Leader Award recipients! Thank you for your commitment to restoring dignity, empowering lives, and keeping peace."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxrt6wor422n",
+     "text": "As major retailers seem to be using AI to make so-called ‘surveillance pricing’ or ‘personal pricing’ more intrusive, unfair & opaque, I'm working to protect your data & prevent companies from unfairly using it to charge you more."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxtx773yck2l",
+     "text": "Support local Rhode Island businesses and celebrate #NationalSeafoodMonth at the 35th annual Bowen’s Wharf Seafood Festival!\n\nbowenswharf.com/events/annua..."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxuekfaiw22l",
+     "text": "Trump’s failed policies continue to drive up your costs & fuel inflation, squeezing household budgets & leaving hardworking Americans with the tab."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxyqldvpy222",
+     "text": "The Southeast New England Program continues to deliver big for RI’s environment, economy, & communities.\n\nThis week we announced newest $2.3M in SNEP grants that I helped create to clean up Narragansett Bay and our local watersheds."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxz7uacm5c2x",
+     "text": "DELIVERED: $23.5 Million in LIHEAP aid to help RIers in need lower their utility bills."
+    },
+    {
+     "date": "2026-10-16",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mxze6ygol22y",
+     "text": "Joined New England Tech to break ground on its new $40M state-of-the-art Innovation Center for Building Sciences, which will help train the next generation of skilled workers critical to the success of our economy!"
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3my3iguqfw22i",
+     "text": "Met with doctors, nurses, and staff of local health centers to discuss the positive impacts of preventative care & how Trump Admin’s $1 trillion health care cuts are affecting public health."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3my3pc4ct522l",
+     "text": "Rhode Islanders deserve clean, reliable drinking water and government that is transparent, effective, and accountable. \n\nJoined officials and residents in Tiverton to hear firsthand about water infrastructure issues and efforts to extend clean, reliable water service to homes impacted by PFAS."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myazozlqd222",
+     "text": "DELIVERED: $7.6M in federal investments to advance 30 new affordable, accessible homes here in West Warwick. Thanks to the Women’s Development Corporation and partners for helping neighbors & strengthening neighborhoods."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mydhubtxxc2s",
+     "text": "For decades, Merrill Thomas put the CARE in #healthcare & worked to expand high-quality, affordable care to all.\n\nGrateful for his impactful leadership of Providence Community Health Centers & honored to join Merrill & his team to receive this year’s Community Health Champion Award."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mygrhllb5s23",
+     "text": "No RIer can watch this video of a man trying to keep his children safe & think the actions of these federal agents are acceptable. \n\nSurely we can acknowledge that traumatizing toddlers on the streets of Providence is a betrayal of our values as Americans."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myi6f7eaas2y",
+     "text": "Was honored to join Colonel Stephen T. Guertin for his promotion ceremony to Brigadier General. Thank you for your service to Rhode Island and our country."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myidh2dipk2y",
+     "text": "Support Rhode Island's local shellfish hatcheries and oyster farmers during #NationalOysterWeek!"
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myiexlgius24",
+     "text": "GOOD NEWS: Nearly $22 million in federal investments helped Portsmouth make the Ade Bethune House a reality, creating 54 brand new homes for older RIers & a state-of-the-art senior center for the community."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myivebdeas2w",
+     "text": "The mission of @edesianutrition.bsky.social here in Quonset is to end child hunger across the globe.  From its newly expanded 300,000 sqft facility, Edesia’s amazing work will help reach an additional 10 million children each year."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mynmdskym22r",
+     "text": "Kicking off East Greenwich’s 350th Anniversary celebrations today at Academy Field, highlighting the tremendous contributions EG has made to our state & nation."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mysdhmsqx226",
+     "text": "Celebrated AmeriCorps Opening Day! Thank you to this year's class of AmeriCorps leaders for your willingness to serve and for choosing to do so in Rhode Island."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myse6new2s26",
+     "text": "Turning Parking into Power: I delivered a $4.5M federal earmark to plug RI in to a greener, clean energy future as the State adds new solar carports, battery energy storage, & EV charging projects."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mysj6dqqmk26",
+     "text": "Joined members, volunteers, and current residents at Jonnycake Center to celebrate a $500K federal earmark that will renovate and create affordable homes for local families."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myspm2u75s2u",
+     "text": "With $5.3 million in federal investments, Phase 1 of Westerly’s Tower Street Community Center is now complete! \n\nThis new facility will be an asset to the community, bringing workforce training opportunities, health care services, and fun activities for all ages under one roof."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myurimrhak22",
+     "text": "Happy #NavyDay to all the brave men and women who have served our nation at sea!"
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myutw2kzts22",
+     "text": "DELIVERED:  $1.2 million to Cumberland to reduce chronic flooding along the Industrial Road area. \n\nModernizing this drainage system will capture stormwater & reduce flooding -- improving reliability along a busy hub for local businesses."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myv4zp7gws2w",
+     "text": "Joined @whitehouse.senate.gov to ‘shellebrate’ a $1.95M grant for Roger Williams University's new histology lab space  –  which will help boost aquaculture development across Rhode Island!"
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myx5oumq2c2c",
+     "text": "My statement marking eight months of Trump's War with Iran."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myxk44ysns2c",
+     "text": "Every Democratic member of the Senate Banking Committee opposes Trump’s sham attempt to remove Federal Reserve Gov. Lisa Cook & force the Fed to prioritize his political needs over the American people & economy. \n\nOur letter: www.reed.senate.gov/download/let..."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myxuecqb3226",
+     "text": "Thanks to Juan & Alberto for the great tour of Chalkstone Marketplace’s new location here on Manton Ave in Olneyville. \n\nGlad my office could help connect this terrific small business with assistance for customers with SNAP benefits."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myxzucgrdc2p",
+     "text": "Got a sneak peek at what will be @rilatinoarts.bsky.social’s new home on Eddy Street. \n\nFrom this blank canvass, Marta & her talented team will bring to life the vibrant story & countless contributions of RI’s proud Latino communities."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myzk2zcq222p",
+     "text": "Getting set up here with the great folks at Tri-County Community Action to raise awareness about critical home heating assistance that I champion through the Low-Income Home Energy Assistance Program (LIHEAP)."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3myzzzydzuc2a",
+     "text": "Households that heat with oil are paying nearly twice what they paid a year ago. That puts real stress on people’s budgets, especially seniors on fixed-incomes. \n\nLIHEAP offers substantial grants to help ensure vulnerable RIers can afford their heating bills this winter."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mz22jctawk2a",
+     "text": "Joined local manufacturers and Polaris MEP for a roundtable discussion on efforts to strengthen RI's manufacturing industry."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mz4ipspiqc2p",
+     "text": "Delivered a $1.6M earmark for Bryant University’s Accelerator Hub to help Rhode Island small businesses learn to effectively & ethically harness the power of AI to compete, grow, and thrive."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mz4lovn3ss2p",
+     "text": "Happy Diwali! Celebrating in style w/ friends from India Association of Rhode Island."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mzdt4yhhz22c",
+     "text": "After 13 months of work, the newly renovated West Street senior center in Jamestown is officially re-opened! \n\nThanks to all who contributed to upgrading this wonderful community asset!"
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/reed.senate.gov/post/3mzecgkwdxs2c",
+     "text": "Celebrated the opening of the new Multipurpose Community Center at Cass Park in Woonsocket! \n\nProud to deliver a $500K earmark and help provide an additional $6.9M in federal funds to make this facility possible."
+    }
+   ]
+  }
+ ]
+}

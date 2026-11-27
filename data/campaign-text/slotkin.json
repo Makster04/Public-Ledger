@@ -1,0 +1,414 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "slotkin",
+ "name": "Elissa Slotkin",
+ "built": "2026-11-26",
+ "sites": [
+  "https://elissaslotkin.org/",
+  "https://www.elissaforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.elissaforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108232100/https://elissaforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108232100/https://elissaforcongress.com/",
+     "original": "https://elissaforcongress.com/",
+     "date": "2022-11-08",
+     "title": "Homepage - Elissa Slotkin for Congress",
+     "text": "A Strong Voice for Michigan’s 7th District\nIn MI-07? We want to hear from you:\nJoin Team Slotkin\nA Strong Voice for Michigan’s 7th District\nIn MI-07? We want to hear from you:\nJoin Team Slotkin\nMeet Congresswoman Elissa Slotkin\nServing mid-Michigan in Congress is the most important thing I’ve ever done. Since winning election in 2018, I’ve worked to defend and expand the middle class—but our work is just beginning.\nI’m running for re-election in 2022 in Michigan’s newly formed 7th district because I want to build the next generation of cars and chips here in the U.S.; lower the cost of prescription drugs; fight for the Roe standard to preserve women’s personal freedom; and prevent corporate money from warping the political process.\nA Strong Voice for Michigan\nItaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.\nA Common Sense Approach\nElissa Slotkin is running for re-election in Michigan’s 7th congressional district, which covers Ingham, Livingston, Clinton, Eaton, and Shiawassee counties, as well as the small portions of Genesee and Oakland counties. Learn more about Elissa and join Team Slotkin!\nMichigan’s 7th District\nWondering what’s going on with Michigan’s district lines? Here’s the scoop: Congressional districts are redrawn every 10 years. Thanks to a ballot initiative passed in 2018 designed to end partisan gerrymandering, Michigan’s district lines were drawn by an independent citizens commission for the very first time.\nElissa will be seeking re-election to Congress in Michigan’s new 7th Congressional district. This new district still contains 2 of the 2.5 counties she currently represents (Ingham and Livingston Counties), and adds Clinton County, Shiawassee County and most of Eaton County as well as small portions of Oakland and Genesee Counties.\nELISSA SLOTKIN SERVED IN THE CENTRAL INTELLIGENCE AGENCY AND THE DEPARTMENT OF DEFENSE. USE OF HER JOB TITLES AND PHOTOGRAPHS DURING SERVICE DO NOT IMPLY ENDORSEMENT BY THE CENTRAL INTELLIGENCE AGENCY OR THE DEPARTMENT OF DEFENSE."
+    },
+    {
+     "url": "https://web.archive.org/web/20221107235244/https://elissaforcongress.com/priorities-3/",
+     "original": "https://elissaforcongress.com/priorities-3/",
+     "date": "2022-11-07",
+     "title": "Priorities - Elissa Slotkin for Congress",
+     "text": "Priorities and Results"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122840/https://elissaforcongress.com/priorities-3/campaign-finance-reform/",
+     "original": "https://elissaforcongress.com/priorities-3/campaign-finance-reform/",
+     "date": "2022-11-05",
+     "title": "Fighting for Campaign Finance Reform - Elissa Slotkin for Congress",
+     "text": "Fighting for Campaign Finance Reform\nOur campaign finance system is broken and largely responsible for so much of the polarization and dysfunction we see in our politics today. Much of this can be traced back to the U.S. Supreme Court’s Citizens United decision, which allowed corporate special interest money to flood into our democratic system and drown out the voice of voters in our own elections. That’s why I made the decision to refuse corporate PAC money, as I never wanted my constituents to question why I voted the way I did.\nThe first bill I voted for as a Member of Congress was the For the People Act (HR1). This bill would curb partisan gerrymandering, expand voter rights, and crack down on the culture of corruption in Washington. It passed the U.S. House of Representatives in March of 2019, but unfortunately, it’s been stuck in the Senate ever since.\nI promise to continue fighting to reform our campaign finance laws, supporting policies that would increase transparency, curb unlimited spending, to ensure that the voices of our citizens are heard. I support measures that would hold candidates and donors — including my own — accountable through clearly defined fundraising disclosures, deadlines, and penalties. Voters deserve to know who is funding their elected officials."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122839/https://elissaforcongress.com/priorities-3/affordable-healthcare/",
+     "original": "https://elissaforcongress.com/priorities-3/affordable-healthcare/",
+     "date": "2022-11-05",
+     "title": "Affordable Healthcare - Elissa Slotkin for Congress",
+     "text": "I believe all Americans should have access to healthcare they can afford, regardless of pre-existing conditions. No one should ever go broke because they happen to get sick, and no family should have to decide whether they can afford to save the life of a loved one. I believe we need true bipartisan reform of the Affordable Care Act (ACA). We should also consider options that would allow people the choice to buy into plans, such as Medicare, that have been proven to control costs for consumers. Healthcare reform must be accompanied by a serious effort to reform standards on the prescription drug industry in order to bring down prescription drug costs, something both Democrats and Republicans left out of the original ACA legislation.\nLike many Americans, healthcare is a deeply personal issue for me. In fact, healthcare was the reason I decided to first run for office. In 2009, my mother was diagnosed with Stage IV ovarian cancer at a time when she was uninsured. She had struggled with her healthcare since 2002 when she lost her job and benefits. She had breast cancer as a young woman — what we now call a “pre-existing condition” — so she couldn’t find a healthcare plan that she could afford for many years. Eventually she got insurance, but unbeknownst to my family, she let it lapse just months before her cancer returned. A loophole saved her from going bankrupt from the high cost of her medical bills, but our family’s experience is evidence of a broken system.\nOur nation has made important strides over the past seven years. The ACA ensured that insurance companies could not discriminate based on pre-existing conditions, eliminated lifetime coverage limits, allowed young people to stay on their parents’ insurance until age 26, and made some progress in bringing down healthcare and drug costs for seniors. But there is much more to do: premiums have risen, particularly for small business owners, and too many people in our district are covered but struggle to afford the high premiums and deductibles associated with their insurance plans.\nWe need to approach healthcare with the seriousness and focus it deserves. I believe it is important to work in a bipartisan fashion to tackle the challenges that remain under the ACA. But the way ahead must safeguard vital components of the ACA: protection for essential health benefits, no annual or lifetime coverage caps, no denial of coverage based on health status or pre-existing conditions, and no discrimination based on gender. I believe we must bring down the high price of prescription drugs, which is why I have cosponsored a number of bills to increase transparency around drug pricing, and to allow for price negotiations, which will bring down drug costs for all consumers. The health and safety of our families are at stake in this debate, and we must treat this issue with the seriousness that it deserves."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122838/https://elissaforcongress.com/priorities-3/affordable-prescription-drugs/",
+     "original": "https://elissaforcongress.com/priorities-3/affordable-prescription-drugs/",
+     "date": "2022-11-05",
+     "title": "Affordable Prescription Drugs - Elissa Slotkin for Congress",
+     "text": "Lowering the Cost of Prescription Drugs\nWorking to lower the cost of prescription drugs has been a top priority of mine since I was elected. The cost of prescription drugs has skyrocketed over the past few decades, and research shows that 1 in 5 Americans have walked away from the pharmacy counter because they can’t afford their prescription drugs. To bring down the cost to consumers, it is essential that there is far greater price transparency, and that the government has the tools to negotiate down drug prices with the pharmaceutical companies, especially for Medicare beneficiaries.\nTo tackle the problem of price transparency, I introduced the Real Time Benefits Act, which passed the House with unanimous, bipartisan support in October 2019. This bill creates a “real time benefits” tool which could be used by doctors and Medicare patients to access information about the cost of a prescription, compare cheaper generic alternatives, and find the pharmacy with the best price. This would allow patients to know the real cost of their prescription drugs, before they leave the doctor’s office.\nTo tackle the issue of negotiation, I co-sponsored the Lower Drug Cost Now Act. And in December 2019 I was extremely proud to see it pass the House with bipartisan support. This comprehensive drug pricing reform bill would allow the government to directly negotiate with pharmaceutical companies to lower the costs of prescription drugs, bringing down the costs for all consumers. Right now, the Veteran’s Administration health care system is able to do just that for the nearly 10 million patients that access healthcare through the VA. Negotiation will bring prices down, which will benefit all Americans.\nUnfortunately, both of these bills remain stuck in the Senate’s hands.\nFor too long, big pharmaceutical firms have bought influence through campaign donations and politicians have looked the other way as prescription drug prices have skyrocketed. I don’t accept a dime from this industry, or any corporate PAC, in my campaign. I will pledge to continue the fight for increased checks and balances on the pharmaceutical industry. The fight for affordable prescription drugs is far from over. I can’t get through the grocery store without people coming up to tell me that they can’t afford their son’s insulin, they can’t send their daughter to summer camp because they can’t afford the four required inhalers, or that their elderly parents are rationing their medication. This is a struggle that nobody should have to go through, and why I will continue to fight to find ways to lower the cost of prescription drugs."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122839/https://elissaforcongress.com/priorities-3/investing-in-education/",
+     "original": "https://elissaforcongress.com/priorities-3/investing-in-education/",
+     "date": "2022-11-05",
+     "title": "Investing in Education - Elissa Slotkin for Congress",
+     "text": "Investing in Education\nA ll children deserve access to a high-quality education that will allow them to compete in the 21st century economy — both the practical skills and the critical thinking they need to succeed. My priority is fighting for common-sense measures that support funding for science, technology, engineering, arts and math (STEAM) education, improving access to the skills training necessary to secure the well-paid jobs here in Michigan, and making higher education affordable for everyone who chooses to pursue it.\nFrom Lansing to Rochester Hills, public schools are the anchor of our communities and as they go, so goes the future of our towns and cities. Thriving public schools require skilled, committed teachers, and I will continue fighting to make sure that they get the respect and support they have earned. I believe educational innovation is important, especially in underserved communities, and I support communities having choices, including magnet schools and public non-profit charter schools.\nBut I have strong concerns that private, for-profit charter schools may put profit-making at odds with educating Michigan’s children. Regardless of the school, I believe that it is essential for our state to have robust standards across the board. However, any alternative option must apply equal standards and include public accountability for taxpayers’ dollars that gives parents confidence in the quality of the education their children receive. Furthermore, such alternatives cannot come at the expense of ensuring that quality schools exist in each of our district’s neighborhoods.\nI believe our education system should work from the bottom up, from early childhood education to skilled trade programs, so that we’re providing the broad set of skills needed for our children to succeed. College shouldn’t be considered a luxury, or a requirement for success, and should be affordable for those who are interested in pursuing it. We need more options — more certification programs and college apprenticeship programs that are paired with the specific job opportunities available right now in our state — to ensure that we are educating and training our young people to contribute to growing Michigan’s economy.\nI believe that hard-working college graduates should get a fair shot at the American dream. However, the reality is that many students finish college saddled with crushing debt. I am committed to making higher education more affordable and more accessible to our district’s young people. I will continue to fight to strengthen federal Pell grants, expand federal funds for school-to-work programs so that students know that they have a job waiting for them when they graduate, strengthen career and technical education, and cap the student loan interest rates to reduce the debt on graduating students, to ensure that students are getting a fair shake."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122839/https://elissaforcongress.com/priorities-3/growing-economic-opportunity/",
+     "original": "https://elissaforcongress.com/priorities-3/growing-economic-opportunity/",
+     "date": "2022-11-05",
+     "title": "Growing Economic Opportunity in Michigan - Elissa Slotkin for Congress",
+     "text": "Growing Economic Opportunity in Michigan\nMichigan was the birthplace of the middle class, and we must make sure we enact policies that allow Michigan’s middle class families to succeed.\nGrowing economic opportunity begins by investing in talent in our communities. We must train the next generation to take on roles in Michigan’s 21st century economy by connecting our workforce to the training that will prepare them for the trades, advanced manufacturing, technical, and cyber jobs of the future.\nMichigan has always been a place where things are designed and built. Our state has an amazing history of innovation, from the creation of the modern automobile to the invention of penicillin. But the economy is evolving in our state and we need to face forward and change with it. For our communities to thrive, we must be serious and strategic about growing economic opportunity here in Michigan. That starts with investing in education, connecting our talented young people with opportunities in our businesses, and ensuring that our entrepreneurs and small business owners are able to grow by hiring talent directly from our communities.\nAcross our district, I hear from businesses big and small that they have trouble finding the local talent they need to compete. Instead, our companies are turning to out-of-state talent to fill their critical openings, particularly in IT, cyber-security, coding, and health care. At the same time, I am constantly meeting people who are unsure of the educational path they should pursue to prepare them for well-paid careers, and fear taking on too much student debt with the promise of a job in their field. If we have critical vacancies in fields like IT and healthcare, we should invest in job training programs that match talent to opportunity. Instead of our businesses spending money to hire out of state, they should have the option to partner with the community high schools and colleges to train their own pipeline of talent."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122840/https://elissaforcongress.com/priorities-3/investing-in-infrastructure/",
+     "original": "https://elissaforcongress.com/priorities-3/investing-in-infrastructure/",
+     "date": "2022-11-05",
+     "title": "Investing in our Infrastructure - Elissa Slotkin for Congress",
+     "text": "Investing In Our Infrastructure & Water Systems\nI live twenty minutes from Flint, Michigan — so clean, safe drinking water is something that’s always on my mind. And here in Michigan we know that you can’t talk about clean water without talking about the threat posed by PFAS contamination, often called the “forever chemical” that has found its way into hundreds of sites in Michigan due to industrial contamination.\nAs a member of the House Armed Services Committee, I directly advocated for six PFAS related provisions to be included in the 2019 National Defense Authorization Act (NDAA), and I am proud that my bills to combat the threat of PFAS were signed into law by the President. As a result, the Department of Defense must stop using PFAS based firefighting foams no later than 2024, National Guard bases will be able to receive funding from the Department of Defense to support environmental remediation efforts to clean up PFAS. Importantly, as a result of my PFAS Monitoring Act, communities across the country will now be required to test for PFAS. There is still much work to be done to ensure that every Michigander has clean, drinkable water when they turn their tap — making that a reality remains one of my top priorities in Washington.\nEvery Michigander knows that our roads need some serious work . The visible potholes in our roads are a daily reminder of how Michigan’s infrastructure is in serious need of investment. We all know the challenges, and we have the skilled workforce in our state ready to rebuild the roads, bridges, pipelines, and other critical infrastructure that our economy depends on. Investing in our infrastructure will attract investment to our state — improving our economic competitiveness — and improve the safety and security of Michiganders. I stand ready and willing to work with anybody, of any political party, who is serious about addressing this critical issue."
+    },
+    {
+     "url": "https://web.archive.org/web/20221105122839/https://elissaforcongress.com/priorities-3/ensuring-retirement-security/",
+     "original": "https://elissaforcongress.com/priorities-3/ensuring-retirement-security/",
+     "date": "2022-11-05",
+     "title": "Ensuring Retirement Security - Elissa Slotkin for Congress",
+     "text": "Protecting Retirement Security\nIf you work hard your whole life, you deserve a dignified retirement. Social Security and Medicare are a promise — one that seniors have contributed to through a lifetime of hard work. Safeguarding the economic security of retirees by defending these programs and bringing the costs of prescription drugs down have been among my top priorities since I was elected.\nMichiganders pay their fair share towards Medicare and Social Security. Hundreds of thousands of people across our state rely on a responsible government to preserve and protect their benefits. While I wholeheartedly support common-sense approaches to improve efficiency and reduce administrative costs for Medicare, we should not be looking to balance the federal budget on the backs of seniors. It is essential that these programs are safeguarded and defended. Our seniors have earned it."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://elissaslotkin.org/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-04",
+    "url": "https://web.archive.org/web/20241104213328/https://elissaslotkin.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241104213328/https://elissaslotkin.org/",
+     "original": "https://elissaslotkin.org/",
+     "date": "2024-11-04",
+     "title": "Elissa Slotkin for Michigan – Official U.S. Senate Campaign Website",
+     "text": "## Fighting to defend and expand Michigan's middle class .\n## Watch Our First Ad and Meet Elissa Slotkin\nElissa’s story is one of hard work, community, and service. Those are the values she learned growing up in Michigan, and they’re the values that she’ll bring to the U.S. Senate.\nA third generation Michigander, Elissa was shaped by her early life on her family farm in Holly, Michigan. Elissa has dedicated her life to serving our country and protecting our homeland – first in the CIA, where she served three tours in Iraq alongside the U.S. military, and later at the White House, State Department, and finally at the Pentagon.\nHer family story is “made in Michigan,” starting with her great-grandfather. He came to the United States and lived the American Dream when he founded the family meat business, Hygrade Foods. The company created a number of food staples beloved by Michiganders, including the famous Ballpark Frank, first sold at Tiger Stadium.\n## Delivering Results for Michiganders\nElissa refuses to take a dime of corporate PAC money. Chip in to help fuel our people-powered campaign:\nIf you've saved your payment information with ActBlue Express, your donation will go through immediately.\n## Join Elissa\nIf you support Elissa’s brand of Midwestern leadership, please consider adding your name and staying up to date with our campaign.\n## Join Our Campaign\n## Become a Grassroots Donor to our Campaign for Senate\nIf you've saved your payment information with ActBlue Express, your donation will go through immediately.\nContinue to site"
+    },
+    {
+     "url": "https://web.archive.org/web/20241027183232/https://elissaslotkin.org/priorities/",
+     "original": "https://elissaslotkin.org/priorities/",
+     "date": "2024-10-27",
+     "title": "Priorities – Elissa Slotkin for Michigan",
+     "text": "## Priorities\nDelivering Results for Michiganders\nElissa’s priorities will grow and deepen as she embarks on a listening tour around Michigan, visiting communities across the state to learn about how she can best serve in the U.S. Senate.\nProtecting our Rights and Democracy\nElissa believes that protecting America’s democracy is the ultimate kitchen table issue – because every other issue depends on a vibrant and resilient democracy. Elissa has made defending and expanding voting rights, civil rights, LGBTQ rights, and women’s rights a priority in her time in public office.\nIn order to preserve our democracy, we must also reform the very political system we use to elect our leaders. With trust in our elected officials at an all-time low and with the foundation of our democracy at stake, Elissa is proud to have never taken a dime of corporate PAC money – not ever. In Congress, she has led the charge to ban corporate PACs and pushed leaders in both parties to ban Members of Congress from trading stocks. Elissa believes our government needs to work for the people — not the wealthy and the well-connected.\nKeeping our Communities and Kids Safe\nElissa’s national security background means she’s focused on the things that are truly a threat to our kids. From physical safety to cybersecurity, she feels there is no higher responsibility than to protect the next generation.\nElissa is the first Member of Congress to have two school shootings in her district – the first in Oxford and the second at Michigan State University in East Lansing. Elissa has seen firsthand the toll gun violence has taken on Michigan and our children. In Congress, Elissa has supported no-brainer gun safety measures to keep our communities safe, including safe storage of firearms, universal background checks, red flag laws, and the assault weapons ban.\nAfter the November 2021 shooting at Oxford High School, Elissa introduced a bill requiring safe storage of firearms when children are present in the home, which passed in the House in 2022. Having grown up in a gun-owning family and being trained on a Glock and an M4 during three tours in Iraq alongside the U.S. military, Elissa respects the right to own and to use it responsibly for hunting and sportsmanship – but she will never stop fighting to keep deadly weapons out of the hands of criminals and the mentally ill.\nMaking Things in America\nElissa believes that we need to make more critical items in America, so that we are in control of our own economic security.\nShe pushed leaders in both parties to pass the CHIPS Act into law to manufacture microchips in the U.S. and protect Michigan’s auto industry. And she championed bills like the Bipartisan Infrastructure Law to rebuild our roads, bridges, and water infrastructure while creating tens of thousands of good-paying, union jobs across Michigan. In the Senate, Elissa will work every day to bring critical supply chains and manufacturing back home.\nDefending and Expanding Michigan’s Middle Class\nElissa is a big believer in protecting and expanding Michigan’s middle class. That means addressing the things Michiganders talk about every night at the kitchen table: their pocketbooks and their kids.\nElissa has fought to create jobs with dignity in Michigan, taken on the Chinese government, and worked to bring critical supply chains back to America and good-paying jobs back to Michigan.\nAnd like many Americans, healthcare is a deeply personal issue for Elissa. In fact, it was the reason she decided to first run for office. In 2009, Elissa’s mother was diagnosed with Stage IV ovarian cancer at a time when she was uninsured. She struggled to afford healthcare for years because of an early case of breast cancer, and at the time, the insurance companies had gouged her for years based on that pre-existing condition. The same month that Elissa got her mother’s terminal diagnosis and was desperately trying to get her life-saving care was the same month that the family was also filling out the paperwork for her to declare bankruptcy.\nElissa believes all Americans should have access to healthcare they can afford, regardless of pre-existing conditions. No one should ever go broke because they happen to get sick, and no family should have to decide whether they can afford to save the life of a loved one. In Congress, Elissa has taken the fight to Big Pharma and helped pass legislation to make prescription drug prices more transparent that is coming into force in early 2023, and fought to pass laws that capped the cost of insulin for seniors, and allowed Medicare to negotiate for lower drug prices.\n## Join Our Campaign"
+    },
+    {
+     "url": "https://web.archive.org/web/20241029014418/https://elissaslotkin.org/opportunity-agenda/",
+     "original": "https://elissaslotkin.org/opportunity-agenda/",
+     "date": "2024-10-29",
+     "title": "Opportunity Agenda – Elissa Slotkin for Michigan",
+     "text": "## A Lifetime Of Public Service\nCongresswoman Slotkin served on President Obama’s national security team in the White House, where she briefed the President on critical national security issues in the Oval Office and the Situation Room. Later, President Obama nominated Elissa to serve as an Assistant Secretary of Defense at the Pentagon.\n## Passing Groundbreaking Legislation\n- Enacting laws to get guns off our streets and make our communities safer\n- Proudly supporting the George Floyd Justice in Policing Act\n- Protecting Obamacare and lowering health care costs\n- Taking on the drug companies to lower costs, including capping insulin at $35 per month for seniors and allowing Medicare to negotiate lower drug costs\n- Passing laws to make microchips in the U.S. and bring good-paying manufacturing jobs back to Michigan\n- Delivering funds for local highway and bridge repairs, replacing lead pipes, providing home repairs to seniors and low-income residents in Detroit, and cutting costs for working families\n- Expanding Voting Rights and protecting democracy as a co-sponsor of the John Lewis Voting Rights Advancement Act\n## Delivering Federal Dollars To The Community\nWorking with community leaders, Elissa secured over $55 million in direct federal dollars to fund important community projects on issues like gun violence prevention, safe and transparent policing, affordable and accessible childcare, and community health. Projects include:\n- $1.3 million to support the Lansing Police Department’s hiring of social workers\n- $400,000 to fund a Lansing Community College Mobile Healthcare Unit\n- $2.5 million to support a community health center for medically underserved communities in Ingham County\n- $500,000 for gun violence prevention initiatives in Ingham County\n- $2.1 million for a Michigan State University childcare center\n- Billions of dollars in federal COVID relief funds for Michigan\n## In the U.S. Senate, an Opportunity Agenda for Michigan\nSupport inclusive community and economic development that prioritizes a true investment in workforce development and training for jobs of today, and the future.\nProvide Title I resources to neighborhood schools and attract and retain quality childcare workers and educators from the communities they serve.\nExpand early childhood development programs that are proven to work – including Head Start, the expanded Child Tax Credit and the Child and Dependent Care Tax Credit to support parents and families.\nEnsure federal dollars are spent equitably and reflect the real needs of our cities and towns – so Michiganders can see and feel the investment coming to their communities.\nEnsure fair and transparent policing by increasing funding for initiatives for urban communities.\nReduce health disparities by increasing access to quality healthcare and nutritious food, and going after the long-standing problems like infant mortality and Black maternal health.\nIncrease access to capital and other financial tools to support minority businesses, and increase transparency and accountability for lenders.\nEnsure minority businesses have equal access to federal contracts and enforce oversight policies–so businesses can create sustainable futures.\nReform the filibuster , which is critical to give issues like voting rights an up-or-down vote in the U.S. Senate.\nSecure funds to revitalize Michigan’s housing stock so everyone is on the path to homeownership.\nEnact responsible gun laws and expand opportunities for youth , to keep our communities, schools, and places of worship safe."
+    }
+   ],
+   "notSaved": [
+    "https://elissaslotkin.org/issue/defending-and-expanding-michigans-middle-class",
+    "https://elissaslotkin.org/issue/making-things-in-america",
+    "https://elissaslotkin.org/issue/keeping-our-communities-and-kids-safe",
+    "https://elissaslotkin.org/issue/protecting-our-rights-and-democracy"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://elissaslotkin.org/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-01",
+    "url": "https://web.archive.org/web/20261101182735/https://elissaslotkin.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261101182735/https://elissaslotkin.org/",
+     "original": "https://elissaslotkin.org/",
+     "date": "2026-11-01",
+     "title": "Elissa Slotkin for Michigan – Official U.S. Senate Campaign Website",
+     "text": "## Fighting to defend and expand Michigan's middle class .\n## ADD YOUR NAME\n## Watch Our First Ad and Meet Elissa Slotkin\nElissa’s story is one of hard work, community, and service. Those are the values she learned growing up in Michigan, and they’re the values that she’ll bring to the U.S. Senate.\nA third generation Michigander, Elissa was shaped by her early life on her family farm in Holly, Michigan. Elissa has dedicated her life to serving our country and protecting our homeland – first in the CIA, where she served three tours in Iraq alongside the U.S. military, and later at the White House, State Department, and finally at the Pentagon.\nHer family story is “made in Michigan,” starting with her great-grandfather. He came to the United States and lived the American Dream when he founded the family meat business, Hygrade Foods. The company created a number of food staples beloved by Michiganders, including the famous Ballpark Frank, first sold at Tiger Stadium.\n## Delivering Results for Michiganders\nElissa refuses to take a dime of corporate PAC money. Chip in to help fuel our people-powered campaign:\nIf you've saved your payment information with ActBlue Express, your donation will go through immediately.\n## Join Elissa\nIf you support Elissa’s brand of Midwestern leadership, please consider adding your name and staying up to date with our campaign.\n## Join Our Campaign\n## ADD YOUR NAME"
+    },
+    {
+     "url": "https://web.archive.org/web/20260820201217/https://elissaslotkin.org/priorities/",
+     "original": "https://elissaslotkin.org/priorities/",
+     "date": "2026-08-20",
+     "title": "Priorities – Elissa Slotkin for Michigan",
+     "text": "## Priorities\nDelivering Results for Michiganders\nElissa’s priorities will grow and deepen as she embarks on a listening tour around Michigan, visiting communities across the state to learn about how she can best serve in the U.S. Senate.\nProtecting our Rights and Democracy\nElissa believes that protecting America’s democracy is the ultimate kitchen table issue – because every other issue depends on a vibrant and resilient democracy. Elissa has made defending and expanding voting rights, civil rights, LGBTQ rights, and women’s rights a priority in her time in public office.\nIn order to preserve our democracy, we must also reform the very political system we use to elect our leaders. With trust in our elected officials at an all-time low and with the foundation of our democracy at stake, Elissa is proud to have never taken a dime of corporate PAC money – not ever. In Congress, she has led the charge to ban corporate PACs and pushed leaders in both parties to ban Members of Congress from trading stocks. Elissa believes our government needs to work for the people — not the wealthy and the well-connected.\nKeeping our Communities and Kids Safe\nElissa’s national security background means she’s focused on the things that are truly a threat to our kids. From physical safety to cybersecurity, she feels there is no higher responsibility than to protect the next generation.\nElissa is the first Member of Congress to have two school shootings in her district – the first in Oxford and the second at Michigan State University in East Lansing. Elissa has seen firsthand the toll gun violence has taken on Michigan and our children. In Congress, Elissa has supported no-brainer gun safety measures to keep our communities safe, including safe storage of firearms, universal background checks, red flag laws, and the assault weapons ban.\nAfter the November 2021 shooting at Oxford High School, Elissa introduced a bill requiring safe storage of firearms when children are present in the home, which passed in the House in 2022. Having grown up in a gun-owning family and being trained on a Glock and an M4 during three tours in Iraq alongside the U.S. military, Elissa respects the right to own and to use it responsibly for hunting and sportsmanship – but she will never stop fighting to keep deadly weapons out of the hands of criminals and the mentally ill.\nMaking Things in America\nElissa believes that we need to make more critical items in America, so that we are in control of our own economic security.\nShe pushed leaders in both parties to pass the CHIPS Act into law to manufacture microchips in the U.S. and protect Michigan’s auto industry. And she championed bills like the Bipartisan Infrastructure Law to rebuild our roads, bridges, and water infrastructure while creating tens of thousands of good-paying, union jobs across Michigan. In the Senate, Elissa will work every day to bring critical supply chains and manufacturing back home.\nDefending and Expanding Michigan’s Middle Class\nElissa is a big believer in protecting and expanding Michigan’s middle class. That means addressing the things Michiganders talk about every night at the kitchen table: their pocketbooks and their kids.\nElissa has fought to create jobs with dignity in Michigan, taken on the Chinese government, and worked to bring critical supply chains back to America and good-paying jobs back to Michigan.\nAnd like many Americans, healthcare is a deeply personal issue for Elissa. In fact, it was the reason she decided to first run for office. In 2009, Elissa’s mother was diagnosed with Stage IV ovarian cancer at a time when she was uninsured. She struggled to afford healthcare for years because of an early case of breast cancer, and at the time, the insurance companies had gouged her for years based on that pre-existing condition. The same month that Elissa got her mother’s terminal diagnosis and was desperately trying to get her life-saving care was the same month that the family was also filling out the paperwork for her to declare bankruptcy.\nElissa believes all Americans should have access to healthcare they can afford, regardless of pre-existing conditions. No one should ever go broke because they happen to get sick, and no family should have to decide whether they can afford to save the life of a loved one. In Congress, Elissa has taken the fight to Big Pharma and helped pass legislation to make prescription drug prices more transparent that is coming into force in early 2023, and fought to pass laws that capped the cost of insulin for seniors, and allowed Medicare to negotiate for lower drug prices.\n## Join Our Campaign\n## ADD YOUR NAME"
+    },
+    {
+     "url": "https://web.archive.org/web/20261029225830/https://elissaslotkin.org/opportunity-agenda/",
+     "original": "https://elissaslotkin.org/opportunity-agenda/",
+     "date": "2026-10-29",
+     "title": "Opportunity Agenda – Elissa Slotkin for Michigan",
+     "text": "## A Lifetime Of Public Service\nCongresswoman Slotkin served on President Obama’s national security team in the White House, where she briefed the President on critical national security issues in the Oval Office and the Situation Room. Later, President Obama nominated Elissa to serve as an Assistant Secretary of Defense at the Pentagon.\n## Passing Groundbreaking Legislation\n- Enacting laws to get guns off our streets and make our communities safer\n- Proudly supporting the George Floyd Justice in Policing Act\n- Protecting Obamacare and lowering health care costs\n- Taking on the drug companies to lower costs, including capping insulin at $35 per month for seniors and allowing Medicare to negotiate lower drug costs\n- Passing laws to make microchips in the U.S. and bring good-paying manufacturing jobs back to Michigan\n- Delivering funds for local highway and bridge repairs, replacing lead pipes, providing home repairs to seniors and low-income residents in Detroit, and cutting costs for working families\n- Expanding Voting Rights and protecting democracy as a co-sponsor of the John Lewis Voting Rights Advancement Act\n## Delivering Federal Dollars To The Community\nWorking with community leaders, Elissa secured over $55 million in direct federal dollars to fund important community projects on issues like gun violence prevention, safe and transparent policing, affordable and accessible childcare, and community health. Projects include:\n- $1.3 million to support the Lansing Police Department’s hiring of social workers\n- $400,000 to fund a Lansing Community College Mobile Healthcare Unit\n- $2.5 million to support a community health center for medically underserved communities in Ingham County\n- $500,000 for gun violence prevention initiatives in Ingham County\n- $2.1 million for a Michigan State University childcare center\n- Billions of dollars in federal COVID relief funds for Michigan\n## In the U.S. Senate, an Opportunity Agenda for Michigan\nSupport inclusive community and economic development that prioritizes a true investment in workforce development and training for jobs of today, and the future.\nProvide Title I resources to neighborhood schools and attract and retain quality childcare workers and educators from the communities they serve.\nExpand early childhood development programs that are proven to work – including Head Start, the expanded Child Tax Credit and the Child and Dependent Care Tax Credit to support parents and families.\nEnsure federal dollars are spent equitably and reflect the real needs of our cities and towns – so Michiganders can see and feel the investment coming to their communities.\nEnsure fair and transparent policing by increasing funding for initiatives for urban communities.\nReduce health disparities by increasing access to quality healthcare and nutritious food, and going after the long-standing problems like infant mortality and Black maternal health.\nIncrease access to capital and other financial tools to support minority businesses, and increase transparency and accountability for lenders.\nEnsure minority businesses have equal access to federal contracts and enforce oversight policies–so businesses can create sustainable futures.\nReform the filibuster , which is critical to give issues like voting rights an up-or-down vote in the U.S. Senate.\nSecure funds to revitalize Michigan’s housing stock so everyone is on the path to homeownership.\nEnact responsible gun laws and expand opportunities for youth , to keep our communities, schools, and places of worship safe."
+    }
+   ],
+   "notSaved": [
+    "https://elissaslotkin.org/issue/defending-and-expanding-michigans-middle-class",
+    "https://elissaslotkin.org/issue/making-things-in-america",
+    "https://elissaslotkin.org/issue/keeping-our-communities-and-kids-safe",
+    "https://elissaslotkin.org/issue/protecting-our-rights-and-democracy"
+   ],
+   "posts": [
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mybe5vulrd2a",
+     "text": "When you call out their corruption, President Trump and his allies don't like that. They attack you. They intimidate you. \n\nIt's not going to work, because I believe this is simple. If you break the law, you should be held accountable."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myd4cv3blg2r",
+     "text": "How do authoritarian tactics work? The goal is to create so many threats against you, your family, and your staff that you shut up. They wanna manufacture outrage. They all start repeating the same talking points. \n\nThe goal is to crush your spirit. That fear becomes contagious. We can't let it."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mydc6upugp2a",
+     "text": "President Trump has always had a bromance with Vladimir Putin, and it’s clear he wants him to win this winter in Ukraine. So now he's lifting sanctions to help fuel Vladimir Putin and his war machine."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mydtgkiplc2r",
+     "text": "Just a few hours ago, President Trump said in the Oval Office that I should be tried in court because I dared to talk about the corruption coming out of the White House."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mydysvugwk22",
+     "text": "So why are the President and his allies attacking me? They are trying to distract from the real story of his failed agenda to lower your costs. To distract from the high price of gas."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myf4em2y432c",
+     "text": "The Trump Administration is like a child who gets caught with their hand in the cookie jar."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myfa7mufge2o",
+     "text": "If you commit a criminal act or use taxpayer dollars in a way that violates the law, you should be held accountable. President Trump and his allies have used manufactured outrage about what I said because they wanna talk about anything but what's going on right now in places like Michigan."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myg27qaxmc2p",
+     "text": "@cnn.com on Trump's threats: \"This is something that should not be happening in this nation.\""
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myg5jw4lq72w",
+     "text": "Attacking me is how President Trump is trying to distract you from his failed agenda."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myhscm6s6724",
+     "text": "A beautiful fall day is the perfect time to explore one of our community’s incredible resources!"
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myi3kw6wgk2h",
+     "text": "Fear is the point. Intimidation is the point. And if the President can try to do this to me, he can do it to anyone."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myifudkzo42c",
+     "text": "As tensions continue to rise in the Middle East, it’s important that Michiganders currently in the region or planning to travel there exercise caution. I wanted to give an update on safety recommendations the State Department has shared."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myiqj2klv62v",
+     "text": "Follow the law, and we don't have a problem."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myk5jwomfc2e",
+     "text": "I had a great time visiting Eliza Howell Park with Sidewalk Detroit and learning more about the history of this 250-acre park, the community’s efforts to protect it, and the importance of preserving Detroit’s green spaces."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myktvcpxks2x",
+     "text": "Whether it is creating manufacturing jobs, securing federal investments in housing and infrastructure, or protecting homeland security missions at Battle Creek’s Hart-Dole-Inouye Federal Center, every leader I met within the Battle Creek community believed in working together."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mykxyqinz42t",
+     "text": "President Trump and Elon Musk have slowed down the critical Starlink satellite connection so that Ukrainians are more vulnerable to Russian attacks-- even further indication that Trump wants Putin to win this war."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myl3xota4i2t",
+     "text": "When you say something President Trump and his allies don't like, they run a play to intimidate you and to get you to shut up. \n\nIt's not going to work. We can't let it."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mylavpfxzs2n",
+     "text": "It’s really very simple: if you break the law, you should be held accountable."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mylee2m32h2t",
+     "text": "This is not the first time this president has tried to weaponize the justice system against me.\n\nAt his direction, earlier this year, the Department of Justice took me to a D.C. grand jury to have me criminally indicted for sedition. If President Trump had his way, I'd be in prison."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mypbc73w7f27",
+     "text": "Thank you to all the students who gave me the grand tour of Lawrence Tech’s architecture and engineering programs. They’ve got everything here from concrete canoes to a chamber where they test the impact of extreme weather conditions on bridges."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myplfjebnm2q",
+     "text": "This shouldn’t be complicated. If you break the law or abuse taxpayer dollars, you should be held accountable."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myps2umzm72v",
+     "text": "Michigan has lost about 12,000 manufacturing jobs in the year and a half since the president has taken office."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myrvz6stjs27",
+     "text": "I recently had the opportunity to speak with @oaklandu.bsky.social students in an academic class focused on September 11, and share my firsthand experience of being in New York that day."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mys3srevij2q",
+     "text": "Friendly reminder: agriculture is the number 2 industry in Michigan, after manufacturing. And we’re the number 1 most diverse agricultural state in the country (meaning lots of different kinds of farms, not just row crops) with regular access to water!"
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mysrkrwz2g2q",
+     "text": "What is President Trump’s playbook on elections?"
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myum2uv5al2e",
+     "text": "Last month, I sought assurances from our nation's top military and civilian leaders at the Pentagon that troops will not be used to interfere in our midterm elections—and that any order to do so would be illegal."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myuulysm7u26",
+     "text": "While I’ve been traveling across Michigan, folks are asking me questions about our upcoming midterm elections and voting. Let me be clear: Michigan’s elections are safe and secure. They're run by the state and our localities –- not the President."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myv4zcutnu24",
+     "text": "There’s a clear playbook when it comes to myself and Senator Mark Kelly, James Comey, or anyone else the President doesn’t like. He tries to intimidate and weaponize the government against them. \n\nWe have to push back."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mywpe7lqzg2l",
+     "text": "I think in the last two weeks it's become very clear President Trump wants Putin to win this war, and he's taking steps to allow them to sell oil to fuel their war machine, to disrupt Starlink and to show the Ukrainians where his hand actually lies\n\nI think that's a huge strategic mistake."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myx3lp26ey27",
+     "text": "@padilla.senate.gov \"This Department of Justice puts the political whims of the President above the rule of law.\""
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3myzmjm6i7w2z",
+     "text": "Some people leave behind generations of people who are better because they knew them. \n                                                                                                                                                                             Coach Jim Bibbs was one of those people."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz2cxg2xzo2n",
+     "text": "I served three tours in Iraq alongside the military. I was a CIA officer and a Pentagon official. President Trump’s threats of further military action in Iran won’t bring us any closer to ending this war."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz2h4myoye23",
+     "text": "Michigan's autoworkers can compete with anybody on an even playing field. The Chinese government’s state-subsidized car companies are the definition of unfair — they use cheap labor and abuse the international trade system to dump their products around the world."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz3wwqofyy2n",
+     "text": "Secretary Hegseth’s purge continues. He has fired another top general in the middle of a war that’s already not going well. This doesn’t make me believe he is doing all he can to make Americans safe."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz4adjxpqt2l",
+     "text": "@MSNOWreports.bsky.social: “...ordinary Americans are saying, this is not how the justice system is supposed to work.\""
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz4sha5t4g2r",
+     "text": "The @kalfound.bsky.social and the organizations they partner with are doing some incredible work. I recently visited to get a sense of what they’re seeing on the ground here in Kalamazoo, and any areas where the need for resources is outpacing what they’re able to provide."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz4vvslbtq23",
+     "text": "It’s clear that President Trump and Elon Musk are siding with Putin. The Ukrainians depend on Starlink to help fight the war, and we are seeing what happens when a disgruntled billionaire does what he wants with a nation’s security."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mz6euftb2w2q",
+     "text": "The sound of fall. #michiganmoments"
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mzaxxdqe3t2r",
+     "text": "I was asked in Detroit about how we should approach the moment we are in. How do we balance holding the line versus changing the system? The answer: we have to do both."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/slotkin.senate.gov/post/3mzdkhr3fsp23",
+     "text": "Michigan’s elections are free, fair and run professionally. But given all the noise out there, here’s what happens after polls close on Tuesday. There’s a very prescribed process for counting votes and certifying our election, and education is the best defense against misinformation."
+    }
+   ]
+  }
+ ]
+}

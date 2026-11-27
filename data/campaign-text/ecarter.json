@@ -1,0 +1,64 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "ecarter",
+ "name": "Earl L. \"Buddy\" Carter",
+ "built": "2026-11-26",
+ "sites": [
+  "https://buddycarterforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://buddycarterforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108220226/https://buddycarterforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108220226/https://buddycarterforcongress.com/",
+     "original": "https://buddycarterforcongress.com/",
+     "date": "2022-11-08",
+     "title": "Home - Buddy Carter",
+     "text": "## Meet Buddy\nBuddy Carter is a trusted businessman, health care professional and faithful public servant. Read More!\nFor news on legislation, help with federal agencies and more, visit Buddy’s Congressional website at BuddyCarter.house.gov\n## The Issues\nStrong Defense, Great Veteran Care, Small Government, More Jobs, Lower Health Care Costs. Read More!\n## Make a Contribution\nYour financial support enables us to share our message of Real Solutions through Conservative Values. Help us grow our grassroots movement by chipping in a secure contribution of any amount today. You can give online using the secure link above or send a check to the address below.\nBuddy Carter for Congress\nPO Box 10570\nSavannah, GA 31412"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://buddycarterforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105184544/https://buddycarterforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105184544/https://buddycarterforcongress.com/",
+     "original": "https://buddycarterforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Home - Buddy Carter",
+     "text": "## Meet Buddy\nBuddy Carter is a trusted businessman, health care professional and faithful public servant. Read More!\nFor news on legislation, help with federal agencies and more, visit Buddy’s Congressional website at BuddyCarter.house.gov\n## The Issues\nStrong Defense, Great Veteran Care, Small Government, More Jobs, Lower Health Care Costs. Read More!\n## Make a Contribution\nYour financial support enables us to share our message of Real Solutions through Conservative Values. Help us grow our grassroots movement by chipping in a secure contribution of any amount today. You can give online using the secure link above or send a check to the address below."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://buddycarterforcongress.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

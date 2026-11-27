@@ -1,0 +1,485 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "schumer",
+ "name": "Charles E. Schumer",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.chuckschumer.com/"
+ ],
+ "years": [
+  2022,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.chuckschumer.com/",
+   "saved": false,
+   "error": "web.archive.org returned HTTP 403",
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.chuckschumer.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-27",
+    "url": "https://web.archive.org/web/20261027233347/https://www.chuckschumer.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261027233347/https://www.chuckschumer.com/",
+     "original": "https://www.chuckschumer.com/",
+     "date": "2026-10-27",
+     "title": "Chuck Schumer for Senate",
+     "text": "## Meet Chuck\nChuck’s spent his entire career fighting for working New Yorkers. Now as the Democratic Leader in the U.S. Senate, he’s leading the fight to protect our fundamental freedoms, secure our democracy and strengthen our economy for working families.\n## Where Chuck Stands on the Issues\nChuck Schumer is leading the fight to strengthen our economy, tackle climate change, protect the right to choose, lower costs for families and more.\nView All Issues\n## *If you've saved your information with ActBlue Express, your donation will go through immediately.\nThis is an outrage. It shows they know they’re going to lose. We will fight tooth and nail. And we will win. https://t.co/1s0IGh...\nLeave it to Donald Trump to defend a pedophile and sexual abuser until the bitter end. https://t.co/skalCAoXGF\nTrump knows he can’t win a fair fight, so he's resorted to bullying election officials into stripping Americans of their right t...\nScott Colom is the senator Mississippi deserves – and he can win. https://t.co/jXR0Pi0Ewi\nAbdul El-Sayed is on the road to being the next Senator from Michigan no matter how much bigoted bullshit a weak and desperate Don...\nCONTINUE TO WEBSITE →"
+    },
+    {
+     "url": "https://web.archive.org/web/20260712001715/https://www.chuckschumer.com/issues/",
+     "original": "https://www.chuckschumer.com/issues/",
+     "date": "2026-07-12",
+     "title": "Issues - Chuck Schumer for Senate",
+     "text": "We must have the vision to reimagine an educational system that values and supports the remarkable diversity of New York City’s..."
+    },
+    {
+     "url": "https://web.archive.org/web/20260711235500/https://www.chuckschumer.com/issues/economy/",
+     "original": "https://www.chuckschumer.com/issues/economy/",
+     "date": "2026-07-11",
+     "title": "Jobs & The Economy - Chuck Schumer for Senate",
+     "text": "## Jobs & The Economy\nFor too long, big corporations and the wealthy have gotten even richer, while working Americans got left behind. When Republicans were in control of Congress and the White House, they passed billions of dollars in tax cuts for the wealthy and corporations, and did nothing to help working families get ahead.\nBut Chuck Schumer puts working families first. As Senate Majority Leader, he passed the Inflation Reduction Act – without a single Republican vote. From fighting inflation to lowering the cost of health care to making corporations pay their fair share, the Inflation Reduction Act is one of the most important bills ever passed to support working Americans.\nThe Inflation Reduction Act\n- Lowers the cost of health care by allowing Medicare to negotiate drug prices for seniors, capping the cost of insulin co-pays and out-of-pocket drug costs for Medicare recipients and expanding the Affordable Care Act\n- Lowers energy costs by providing tax credits and incentives for clean energy\n- Creates good-paying union jobs and invests in American manufacturing to build a clean energy economy\n- Makes corporations pay their fair share in taxes , while not raising taxes on any family making less than $400,000 per year\nBipartisan CHIPS and Science Bill\nAfter years of advocacy, the Senate passed Chuck’s historic CHIPS and Science bill to help lower costs for families, address inflation, and strengthen national security. The bill provides billions in funding to manufacture more microchips in America, especially in Upstate New York, where — after years of relentless Schumer advocacy — Micron has announced it will invest $100 billion and build the world’s largest memory chip super-fab. Upwards of 50,000 jobs will be created.\nThe vast majority of microchips are currently manufactured in East Asia, but the Bipartisan CHIPS and Science bill will bring manufacturing back to America and invest in critical technology and research so New York and the country can lead the world in innovation.\nBipartisan Infrastructure Bill\nAfter years of Donald Trump claiming “Infrastructure Week” was coming, Chuck Schumer delivered what Trump never did: historic investments in American infrastructure. Roads. Bridges. Broadband. Water-sewer systems and more.\nThe Bipartisan Infrastructure & Jobs Bill will deliver over $1 trillion to rebuild and revitalize America’s physical infrastructure, powered by good-paying union jobs\n- Expands access to clean water and eliminates toxic lead pipes\n- Ensures every American has access to reliable high-speed internet\n- Repairs and rebuilds American roads and bridges\n- Invests in public transit like trains, buses and passenger rail to connect communities and lower greenhouse gas emissions\n- Upgrades ports and airports to minimize disruptions to supply chains and the economy\n- Build a network of electric vehicle chargers across the United States\n- Upgrades the American energy grid to deliver clean, affordable energy and make our energy system more resilient to the effects of climate change\n- Invests in communities harmed by decades of pollution by cleaning up Superfund sites and former industrial and energy sites"
+    },
+    {
+     "url": "https://web.archive.org/web/20260820033359/https://www.chuckschumer.com/issues/climate/",
+     "original": "https://www.chuckschumer.com/issues/climate/",
+     "date": "2026-08-20",
+     "title": "Climate Change - Chuck Schumer for Senate",
+     "text": "## Climate Change\nClimate change is a human-made and existential crisis, plain and simple. And it disproportionately harms poorer and working class communities and communities of color, making it not only an environmental crisis, but also an economic and justice crisis.\nFor years, Republicans in Congress refused to take action to stop climate change. But under Chuck’s leadership, Congress passed the biggest climate action in American History, the Inflation Reduction Act, which will reduce American greenhouse gas emissions by 40% by 2030\nThe Biggest Action Against Climate Change in History\nThe Inflation Reduction Act is Congress’s biggest investment ever in tackling the root causes of the climate crisis – carbon pollution — and it makes a real impact in the lives of working families:\n- Lowers energy costs at home and at the gas pump by providing incentives for making homes more energy efficient and tax credits for buying vehicles that run on clean energy\n- Invests in American clean energy manufacturing , reducing our reliance on foreign energy sources and transitioning the U.S. to a clean energy economy\n- Reduce American greenhouse gas emissions by 40% by 2030\n- Invests in environmental justice initiatives in communities disproportionately hurt by the impacts of climate change, like addressing the public health effects of air pollution\n- Supports rural communities by investing in climate-smart agriculture and clean energy development while centering the role of rural communities in climate solutions"
+    },
+    {
+     "url": "https://web.archive.org/web/20260712000445/https://www.chuckschumer.com/issues/voting-rights/",
+     "original": "https://www.chuckschumer.com/issues/voting-rights/",
+     "date": "2026-07-12",
+     "title": "Voting Rights & Democracy - Chuck Schumer for Senate",
+     "text": "## Voting Rights & Democracy\nOur democracy is under attack. From Donald Trump’s big lie about a rigged election that incited the Capitol insurrection to Jim Crow-style voter suppression laws passed by state legislatures, there is a concerted, organized attempt to sow distrust in our elections and stop people from voting.\nDespite Republicans trying to stand in the way, Chuck Schumer has never backed down in the fight to save our democracy. He continues to lead the fight to pass the John Lewis Voting Rights Act, get dark money out of politics, secure our elections from Republican attacks and ensure every eligible American is able to cast their ballot."
+    },
+    {
+     "url": "https://web.archive.org/web/20260711235317/https://www.chuckschumer.com/issues/health-care/",
+     "original": "https://www.chuckschumer.com/issues/health-care/",
+     "date": "2026-07-11",
+     "title": "Health Care - Chuck Schumer for Senate",
+     "text": "## Health Care\nChuck Schumer believes that every American deserves access to quality, affordable health care. As Senate Majority Leader, he beat the big pharmaceutical companies and ushered in some of the most significant measures to lower the cost of healthcare for millions of Americans.\n- Lowered the cost of prescription drugs by allowing Medicare to finally negotiate drug prices for seniors\n- Capped out-of-pocket prescription drug costs for Medicare recipients at $2,000 per year\n- Capped the price of insulin co-pays at $35 per month for Medicare recipients\n- Expanded the Affordable Care Act through 2025, lowering health insurance premiums and allowing tens of thousands of New Yorkers to gain coverage\n- Passed additional funding for Medicaid through the American Rescue Plan to incentivize states to finally expand Medicaid"
+    },
+    {
+     "url": "https://web.archive.org/web/20260411025022/https://www.chuckschumer.com/issues/criminal-justice/",
+     "original": "https://www.chuckschumer.com/issues/criminal-justice/",
+     "date": "2026-04-11",
+     "title": "Justice and Equality - Chuck Schumer for Senate",
+     "text": "## Justice and Equality\nAmerica’s war on drugs was a failure, and it disproportionately hurt communities of color. It’s time to finally end the federal prohibition of marijuana.\nChuck Schumer introduced the Cannabis Administration and Opportunity Act , a historic bill to:\n- Decriminalize marijuana at the federal level\n- Expunge federal records for cannabis-related charges\n- Creates grants for small businesses in communities disproportionately hurt by the failed war on drugs\n- Funds research for research related to marijuana-impaired driving\n- Restricts cannabis marketing to minors\nStop Asian Hate\nThroughout 2020, Donald Trump spewed vitriol and misinformation about Asian people, like referring to COVID-19 as the “Chinese Virus.” This led to an alarming increase in hate and violence against Asian Americans and Pacific Islanders that must stop. In response, Chuck Schumer helped pass the bipartisan COVID-19 Hate Crimes Act, sponsored by Rep. Grace Meng (D-NY) and Sen. Mazie Hirono (D-HI), to give the Justice Department and local communities the ability to more quickly review COVID-19 hate crimes, create resources in multiple languages, report incidents and educate communities on ways to talk about COVID-19 that are not racially charged."
+    },
+    {
+     "url": "https://web.archive.org/web/20260511015611/https://www.chuckschumer.com/issues/gun-violence/",
+     "original": "https://www.chuckschumer.com/issues/gun-violence/",
+     "date": "2026-05-11",
+     "title": "Gun Violence Prevention - Chuck Schumer for Senate",
+     "text": "## Gun Violence Prevention\nAmerica has a gun violence crisis — and it’s getting worse. Despite overwhelming public support for common-sense gun safety measures, Mitch McConnell and Republicans in the Senate refused to take any action to stop the devastating wave of gun violence while they were in power.\nBut with Chuck Schumer leading the Senate, Congress passed the first major bill addressing gun violence in nearly 30 years, the Bipartisan Safer Communities Act:\n- Enhances background checks for individuals under age 21\n- Supports community-based violence intervention programs with $250 million in funding\n- Provides funding for state crisis intervention orders (red flag provision) to keep guns out of the hands of individuals who are a danger to themselves or others\n- Invests in mental health care for children and families\n- Increases funding for schools to expand mental health and support services and create safer learning environments\nChuck Schumer wrote the original Brady Law requiring background checks on gun sales, as well as the original Assault Weapons Ban, and now as Senate Majority Leader he is committed to legislation that will keep guns out of dangerous hands and keep our communities safe. There is no single solution that will end gun violence overnight, but by establishing smart gun safety measures, like universal background checks, closing the gun show loophole, and red flag laws, we can keep guns out of the hands of people who could hurt themselves or others.\nUniversal Background Checks\nAs a member of the House of Representatives, Chuck Schumer wrote the original bill requiring background checks on gun sales from federally licensed dealers or manufacturers, also known as the Brady Bill. Since it went into effect in 1994, background checks have blocked 3.5 million gun sales because the purchaser was prohibited from owning a gun.\nHowever, dangerous loopholes still allow some guns to be sold without a federal background check, like online or at gun shows. Chuck Schumer supports passing the bipartisan legislation known as H.R. 8, which would require background checks on all gun sales and close the gun show and online loopholes. Universal background checks have widespread public support. 93% of voters support background checks on all gun sales, including 89% of Republicans and gun owners.\nAssault Weapons Ban\nChuck Schumer helped write and pass the 1994 assault weapons ban, which outlawed the manufacture and importation of semi-automatic weapons like the AK-47. The original assault weapons ban expired in 2004, and Congress has not renewed it since then. Semi-automatic assault weapons were designed for war and have no place in our communities, our streets or our schools, so Chuck will continue to push for a new assault weapons ban."
+    },
+    {
+     "url": "https://web.archive.org/web/20260511020721/https://www.chuckschumer.com/issues/education/",
+     "original": "https://www.chuckschumer.com/issues/education/",
+     "date": "2026-05-11",
+     "title": "Education & Student Debt - Chuck Schumer for Senate",
+     "text": "## Education & Student Debt\nFor generations, we’ve told young Americans that a good education is the ticket to the middle class. But for more and more Americans, that dream has been pushed out of reach because of the sky-high cost of a college education and crushing burden of college debt. Chuck Schumer is committed to increasing access to quality education starting with our youngest children, and ending the college affordability crisis so a college degree doesn’t leave students in debt for decades. Schumer delivered a record billions of dollars in education aid during covid to help our entire education system weather, and then recover from, the covid epidemic.\nLeading the Fight to Cancel Student Debt\nChuck Schumer is one of the most outspoken proponents of student debt relief – and worked with Senator Elizabeth Warren to lead the efforts to push Joe Biden to cancel student debt.\nMore than 40 million Americans have student loan debt. It is a terrible burden that holds people back from going to college, buying a home or starting a business for the first time. Student debt also disproportionately impacts people of color. On average, black college graduates owe a staggering $25,000 more in student loan debt than white graduates.\nCanceling student debt is one of the most effective ways to provide immediate financial relief to millions of Americans, close the racial wealth gap, and help build long-term economic opportunity.\nIn addition to leading the fight to cancel student debt, Schumer has long pushed to make college more affordable and help families keep up with the ever-increasing cost of a college education. He helped extend the Perkins loan program, greatly increased funding for Pell Grants, and created tax credits for students.\nEarly Childhood Education and Care\nStudies show that the earlier children have access to a quality education, the more successful they’ll be when they’re older. That’s why Chuck Schumer has championed funding for early childhood education through programs like Head Start, which provides support for early education, social, emotional and nutritional health, social services and services for children with disabilities.\nChuck also expanded the child tax credit as part of the American Rescue Plan, which provides families with up to $3,600 per child. This policy radically reduced the child poverty rate and boosted families’ incomes. These policies have demonstrated positive impacts on children’s future educational attainment."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwbpeyjxyk2f",
+     "text": "If you’re a foreign authoritarian, Trump won’t just invite you to visit America, he’ll roll out the red carpet for you…"
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwbunczvgk2f",
+     "text": "Trump promised his war would last “4-5 weeks.” We’re now on MONTH 7\n\nSenate Democrats are forcing another vote to end Trump’s war in Iran—one of the biggest foreign policy catastrophes in our history"
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwbyagwly22j",
+     "text": "Senate Republicans just voted AGAIN to continue Trump’s war in Iran."
+    },
+    {
+     "date": "2026-09-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwc5mtyqk22p",
+     "text": "Donald Trump and his Senate GOP enablers did this to the American people.\n\nAnd they’ve voted 14 times, including TODAY, to keep it that way."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwee5suhf22n",
+     "text": "The MAGA SCOTUS strikes again, putting its thumb on the scale for Trump’s election-rigging agenda\n\nElon Musk’s DOGE-overhauled SAVE database is ridden with errors. With this decision, thousands of American voters could be wrongly stripped from voter rolls & prevented from voting this election season"
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwlxk7hhhk2b",
+     "text": "Gateway is ALL SYSTEMS GO!\n\nAfter repeatedly beating Donald Trump in his attempts to shut off federal funding for Gateway, we finally began boring the Hudson River Tunnel, the first new tunnel under the Hudson in over 100 years."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwlzdx7nys2e",
+     "text": "He says this with a straight face as gas reaches $4.50/gal, diesel reaches $6.50/gal, mortgage rates soar over 7%, grocery costs are rising, and Americans’ sentiments towards the economy are the lowest they’ve been since the Great Recession."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwmcvzsxtc2m",
+     "text": "Another one of Trump’s corruption schemes to abuse American tax dollars for his own benefit.\n\nThis is a violation of what a democracy is supposed to look like.\n\nThe corruption is endless."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwmejuwsck2m",
+     "text": "Trump just gutted nearly $1B in funding for kids, K-12, small businesses, & health and clean-air research\n\nBillions for his vanity projects? No problem\n\nPrograms that help Americans? Apparently, that’s too far\n\nWe will fight these illegal cuts. We will not let Trump rob the American people blind."
+    },
+    {
+     "date": "2026-09-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwmgjr6ba22p",
+     "text": "Remember when Trump said his war in Iran would last only four to five weeks?\n\nWe’re now in month EIGHT, and the American people and our troops are paying the price.\n\nLast week, the Senate GOP had the chance to vote to end this illegal war, and instead voted to keep it going.\n\nThey are complicit."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwocknb4hs2p",
+     "text": "Republicans do not care about reining in insider trading."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwolof3hbs2a",
+     "text": "NEWS: The Senate GOP just blocked our resolution to stop Trump from further sabotaging the Affordable Care Act.\n\nTrump and Republicans own every closed hospital, every person without insurance and every skyrocketing premium that follows."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwonojz2ls2a",
+     "text": "Donald Trump is illegally stealing $810 million from programs that support education, small business, and clean air.\n\nAll while tripling his own net worth and spending billions more on ballrooms, reflecting pools, and an illegal war nobody asked for."
+    },
+    {
+     "date": "2026-09-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwor6qtjgk23",
+     "text": "Gas is nearly $4.50 a gallon, so what’s Trump’s answer? Let automakers build less efficient cars—meaning your family has to make more trips to the pump and pay even more to get to work. \n\nEverything he does is at your expense."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwqu4dfyxc2k",
+     "text": "There’s been a real effort to ban members of Congress from trading stocks and profiting off insider information—which I’ve supported for years.\n\nThis Republican bill, however, has no reform, no accountability, and no substance, and STILL allows members to own and sell stocks."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwqur4nvts2r",
+     "text": "The allegations of sexual assault and rape at Cornell University are horrifying and deserve a thorough investigation that leaves no stone unturned. It took extraordinary courage for this young woman to come forward to university administrators and police."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwr5yv74ek2s",
+     "text": "Today the Hyde Amendment turns 50 years old.\n\n50 years of denying critical abortion care to people who can’t afford it.\n50 years of forcing people to choose between paying for health care and paying for rent, food, child care, or other necessities."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwt3km3tzc27",
+     "text": "Twenty months ago, Republicans won control of Washington on a promise to bring down costs, make government more efficient, and end senseless wars.\n\nBut over the past two years, Republicans betrayed the American people on every single one of those promises."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwt6ngrh4k2r",
+     "text": "NEWS: I am proud to introduce the Restoring Essential Plan Coverage Act with @ocasio-cortez.house.gov. \n\nThis bill would reverse Donald Trump's funding cuts to the NY Essential Plan and restore health care coverage for hundreds of thousands of New Yorkers:"
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwteimopxs2r",
+     "text": "The SAVE Act will NEVER become law in the United States of America.\n\nRepublicans tried to jam through Trump’s SAVE Act: the most devious anti-voting rights legislation ever dreamed up to purge millions of voters from the rolls."
+    },
+    {
+     "date": "2026-10-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwtjkogyrc2d",
+     "text": "Donald Trump has waged an all-out war on free and fair elections in the United States.\n\nHe’s tried to disenfranchise millions of Americans, kill vote-by-mail, and make it harder for people to make their voices heard in their democracy. We have defeated him at every turn."
+    },
+    {
+     "date": "2026-10-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mwvikzmq4k2d",
+     "text": "Higher interest rates, rising costs, and no jobs.\n\nAmerican families are being squeezed on all sides by Trump’s disastrous economy.\nabcnews.com/Business/job..."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mx57zxdr5k2o",
+     "text": "Donald Trump knows he’s losing. We must be prepared for him to try anything and everything to cling to power.\nwww.cnn.com/2026/10/04/p..."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mx5grknmqs27",
+     "text": "For years, Flock has pointed its lens at New Yorkers. Now it's time to turn the lens around and zoom in on Flock.\n\nFlock must delete personal data of American citizens without criminal connections and answer questions about the mountains of personal data they've already stockpiled."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mx7ssp6igs2b",
+     "text": "Donald Trump’s ridiculous, corrupt propaganda ads are straight out of Putin and Kim Jong Un’s playbook. \n\nAs he guts Medicaid, SNAP, and cancer research funding, he somehow finds millions of taxpayer dollars to air blatantly political ads."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mx7xuevh5s2y",
+     "text": "First, Trump steals money from taxpayers to fund his propaganda.\n\nThen, he illegally coordinates with a Super PAC to keep the propaganda going.\n\nAnd to top it all off, he won’t reimburse taxpayers for the money he stole.\nthehill.com/homenews/adm..."
+    },
+    {
+     "date": "2026-10-06",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxablektx22p",
+     "text": "Deranged. Delusional. And soon to be defeated. \n \nCalling millions of Americans collateral damage in his illegal war that nobody asked for takes a special kind of depravity, the kind only a man as weak and feeble as Donald Trump could sink to."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxapzlnlac2w",
+     "text": "We’ve been preparing for months to stop unconstitutional, corrupt schemes just like this one.\n\nWe’re taking nothing for granted—and we’ll be ready to see and beat these ghouls in court."
+    },
+    {
+     "date": "2026-10-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxc5b3mjps2v",
+     "text": "My statement on the third anniversary of Hamas’s horrific October 7th terrorist attacks on Israel:"
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxfsk7tqlc2v",
+     "text": "The shooting of a New Yorker by ICE agents today is deeply disturbing, especially amid reports that a child was in the car when shots were fired. I’m relieved the man is receiving medical care and the child was unharmed. But enough is enough.\n\nNew Yorkers deserve the full truth about what happened."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxhayvz2uk23",
+     "text": "Donald Trump is escalating his smear campaign against Lisa Cook while turning the presidency into a personal ATM: crypto schemes, taxpayer-funded propaganda ads, cash for his family - the list could go on forever."
+    },
+    {
+     "date": "2026-10-09",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxhufiilqc2b",
+     "text": "Trump is doing a deal with the devil to try to help his flailing political fortunes from the shockingly high diesel prices caused by his own reckless, illegal war in the Middle East."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxolar4cy22t",
+     "text": "Taxpayer dollars are not Trump’s personal propaganda fund. This court order is a win for taxpayers, but stopping the ads is only the beginning. Americans deserve answers about every dollar spent.\n\nThat’s why I’ve demanded a thorough investigation into these ads and that all records are preserved."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxrkphwxjc2z",
+     "text": "One corrupt Trump official down, hundreds more to go:\ncampaignlegal.org/document/tra..."
+    },
+    {
+     "date": "2026-10-13",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxrup3bbtk2i",
+     "text": "The Art of the Deal: Trump sold us out to Putin, and we got absolutely nothing in return."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxtqccshrs2t",
+     "text": "Donald Trump’s “Golden Age” means never ending, higher prices for the American people while he gets a ballroom and billionaires get tax cuts."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxty6n2sqs2e",
+     "text": "Is this what Donald Trump meant when he said we’d get “tired of winning”? \n\nBecause the American people are exhausted."
+    },
+    {
+     "date": "2026-10-14",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxud36653226",
+     "text": "Donald Trump has made clear that he wants to mess with our elections. \n\nWe must take nothing for granted.\n\nThat’s why Senate Democrats announced today that we have recruited and trained more than 100 Senate staff as official congressional election observers.\nwww.yahoo.com/news/politic..."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxwrfugw2s2s",
+     "text": "Remember this, Secretary Rubio?"
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxwu2wziw22x",
+     "text": "THE GOLDEN AGE!"
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxwxuesuoc2t",
+     "text": "I am incredibly alarmed about the alleged attempt by a white supremacist to commit an act of mass violence at a Hindu temple in Aurora, Illinois, and I thank law enforcement for their swift response."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mxwyjtgodc22",
+     "text": "Donald Trump is scared of the American people holding him accountable.\n\nDemocrats will challenge this and continue to protect your right to free and fair elections."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3my3faueg6s2r",
+     "text": "Trump just gave Putin the best birthday gift he’ll get this year. By giving the Russian economy life support Trump’s deal with the devil keeps getting dirtier.\n\nThere’s nothing America First about Trump caving in to Putin and exempting Russia from US sanctions."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myagpny3xk2v",
+     "text": "The FCC MUST reject the request made by a Republican group that would allow political groups to make robocalls to cell phones without people’s permission."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myazk5verk2x",
+     "text": "Gas before Trump’s illegal war with Iran: $2.98.\nGas 233 days into Trump’s illegal war with Iran: $4.30.\n\nAmericans have spent over $100 BILLION more on gas in that time.\n\nNo amount of juvenile idiocy from Donald Trump will distract Americans from that fact."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mydcdoe72c2o",
+     "text": "This disgusting, antisemitic language from Donald Trump must have no place in our country, especially from POTUS.\n\nWhile unsurprising from a President who spews hatred on the daily, it must be universally condemned by those who want to root out antisemitism and bigotry in all its forms."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mydfse6gc224",
+     "text": "It’s been just over 4 months since OG Anunoby's tip-in gave New York one of our greatest moments, and greatest summers, in our long, storied history.\n\nCongrats to the Knicks on receiving their championship rings tonight and raising the first banner in 53 years! Time to repeat!"
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myg7vsj2m22z",
+     "text": "Another day, another false promise about a health care plan. \n\nWhile Americans face skyrocketing health care costs CAUSED BY TRUMP’S CRUEL AGENDA, Trump lies about a health care plan that will never actually happen."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myicauwtq22h",
+     "text": "Nope.\n\nSenate Democrats have been preparing for this for months and will be ready for whatever they try. \n \nAs Trump and his cronies attempt to steal this election, we are fighting them at every turn. Our elections must always belong to the voters – not Donald Trump."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myksbvzax22y",
+     "text": "Trump's attempts to rig the midterms and block tens of thousands of eligible voters just days before the election REEK of desperation.\n\nOur elections are free and fair, and @democrats.senate.gov will ensure they stay that way."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myl2dnkx3k2y",
+     "text": "From a ballroom, to a birthday parade: New reports say Trump has devoted $1.6B in taxpayer money to fund his self-serving vanity projects.\n \nThat’s 620 times what the average American earns in a lifetime.\n\nAmericans are struggling to make ends meet, and Trump is treating them as his personal ATM."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myldge5a3s2e",
+     "text": "This is life under Donald Trump and Republicans:\n\nSkyrocketing health care costs are forcing Americans to skip doctor visits and ration their medications, while millions more are losing coverage."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mysg6qzfx22p",
+     "text": "Americans have paid billions more for gas as Donald Trump has stuffed tens of millions in personal profit into his pockets. It’s obscene.\nwww.cbsnews.com/news/trump-o..."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mysmptwuus23",
+     "text": "The truest thing JD Vance has said in a long, long time."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myss54lokk23",
+     "text": "Found it – where’s my $1 million?\n\nYou can wire it straight to the 10,000 election workers who are volunteering their time to protect against your efforts to steal the midterms."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mywudckwxc2j",
+     "text": "For eight months, American families have been buried by the heavy cost of Trump’s disastrous war in Iran."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mywzro7io22p",
+     "text": "8 months of Trump’s illegal Iran war. \n\n8 months of rising prices. 8 months of endangering our troops. 8 months of lies. \n\nDemocrats have forced 14 votes to end this madness. Republicans have voted to keep it going every single time."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myxicuqq3s2c",
+     "text": "Today, we lost a true icon.\n\nDolores Huerta’s decades of work and leadership in the labor and civil rights movements advanced the cause of justice and economic equality like few other Americans. We must always remember her extraordinary influence and carry it forward in the work still to be done."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3myzlkmfzbc2r",
+     "text": "Since Day 1, Trump has given the biggest polluters a free pass to poison our air and make Americans sick.\n \nHis message is clear: Big Polluters profit.\nAmerican families pay the price.\n \nTrump’s corruption costs."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mz462qseyc2k",
+     "text": "After delivering $18 million from my CHIPS & Science Law, I was proud to celebrate the grand opening of Edwards Vacuum’s new state-of-the-art facility in Genesee County."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mz4lpjmets2o",
+     "text": "Donald Trump wants to steal the midterms. Senate Democrats have been preparing for months to stop him.\n\nElections belong to the American people, not Trump. We will fight him every step of the way, and we will ensure free and fair elections.\n\nRead my article here:"
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mz75csidsk2a",
+     "text": "Halloween under Donald Trump is scarier than ever."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mze643yrek2g",
+     "text": "Donald Trump’s pathetic closing message as his illegal war rages, his corruption mounts, and the inflation he caused persists:"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/schumer.senate.gov/post/3mzgfq2hyok2v",
+     "text": "Americans will resoundingly reject all of this today:"
+    }
+   ]
+  }
+ ]
+}

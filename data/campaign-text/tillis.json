@@ -1,0 +1,90 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "tillis",
+ "name": "Thom Tillis",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.thomtillis.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.thomtillis.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103062155/https://thomtillis.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103062155/https://thomtillis.com/",
+     "original": "https://thomtillis.com/",
+     "date": "2026-11-03",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20261031080809/https://thomtillis.com/after-opposing-police-reform-for-not-being-bipartisan-cunningham-wants-to-end-bipartisanship-in-senate/",
+     "original": "https://thomtillis.com/after-opposing-police-reform-for-not-being-bipartisan-cunningham-wants-to-end-bipartisanship-in-senate/",
+     "date": "2026-10-31",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20251009142154/https://thomtillis.com/cal-cunninghams-radical-immigration-agenda-was-on-full-display-in-interview-with-wfae/",
+     "original": "https://thomtillis.com/cal-cunninghams-radical-immigration-agenda-was-on-full-display-in-interview-with-wfae/",
+     "date": "2025-10-09",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20260713151911/https://thomtillis.com/cunningham-panders-to-radical-left-refusing-to-take-stand-on-usmca/",
+     "original": "https://thomtillis.com/cunningham-panders-to-radical-left-refusing-to-take-stand-on-usmca/",
+     "date": "2026-07-13",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20260114133010/https://thomtillis.com/cunningham-undercuts-his-own-justification-for-supporting-dangerous-sanctuary-policies/",
+     "original": "https://thomtillis.com/cunningham-undercuts-his-own-justification-for-supporting-dangerous-sanctuary-policies/",
+     "date": "2026-01-14",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20251215013552/https://thomtillis.com/cunninghams-tax-hiking-agenda-showcased-in-new-tillis-tv-ad/",
+     "original": "https://thomtillis.com/cunninghams-tax-hiking-agenda-showcased-in-new-tillis-tv-ad/",
+     "date": "2025-12-15",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20250912195705/https://thomtillis.com/fact-check-affirms-contrast-between-tillis-democratic-opponents-on-sanctuary-policies/",
+     "original": "https://thomtillis.com/fact-check-affirms-contrast-between-tillis-democratic-opponents-on-sanctuary-policies/",
+     "date": "2025-09-12",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20251215015728/https://thomtillis.com/icymi-tillis-slams-cunningham-record-of-tax-increases-and-medicaid-mismanagement-in-interview-with-wral/",
+     "original": "https://thomtillis.com/icymi-tillis-slams-cunningham-record-of-tax-increases-and-medicaid-mismanagement-in-interview-with-wral/",
+     "date": "2025-12-15",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    },
+    {
+     "url": "https://web.archive.org/web/20260621111819/https://thomtillis.com/issues/",
+     "original": "https://thomtillis.com/issues/",
+     "date": "2026-06-21",
+     "title": "Thom Tillis",
+     "text": "## Thank you, North Carolina"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

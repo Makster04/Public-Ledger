@@ -1,0 +1,177 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "carbajal",
+ "name": "Salud O. Carbajal",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.saludcarbajal.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.saludcarbajal.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108212427/https://www.saludcarbajal.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108212427/https://www.saludcarbajal.com/",
+     "original": "https://www.saludcarbajal.com/",
+     "date": "2022-11-08",
+     "title": "Home | Salud Carbajal for Congress",
+     "text": "## &times; Close\nFor California's 24th District\nJoin our Campaign\n## Representing Central Coast Values\nThe Central Coast is my home and the place that has given my family and me the opportunity to succeed. I have a proven track record of bringing Republicans and Democrats together to solve problems and get results: preserving open spaces, creating jobs by rebuilding roads and highways, expanding access to high-speed internet and clean energy, fighting wildfires and drought, and improving health care.\nSalud Carbajal For Congress"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220045/https://www.saludcarbajal.com/issues",
+     "original": "https://www.saludcarbajal.com/issues",
+     "date": "2022-11-04",
+     "title": "Issues | Salud Carbajal for Congress",
+     "text": "## Issues\nCaring For Our Veterans\nCreating Good-Paying Jobs\nFighting for the Middle Class\nHelping Our Students Achieve a Higher Education\nMaking Health Care More Affordable\nPreserving Our Natural Environment\nPushing for Sensible Gun Laws\nStrengthening Security in Retirement\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114657/https://www.saludcarbajal.com/issues/fighting-for-the-middle-class",
+     "original": "https://www.saludcarbajal.com/issues/fighting-for-the-middle-class",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Fighting for the Middle Class\nMany middle class families are struggling. They work hard, but still feel like they are falling further behind–in large part because of the rising cost of living that we see on the Central Coast.\nLowering costs for you and your family is my number one priority in Congress, because I know that higher prices keep folks from getting ahead and finding prosperity.\nHousing: We need more affordable housing options in our communities. It’s that simple. I’ve delivered millions of dollars directly to the Central Coast to create more affordable housing units, and I will continue to fight for policies that help renters and homeowners alike keep the Central Coast as their home.\nFood & Gas: Global market disruptions caused by COVID-19, supply chain bottlenecks, and Russia’s unjustified war in Ukraine have meant that the cost of food, gas, and other energy have put extra pressures on Central Coast residents.\nThat’s why I pushed to increase funding for programs that help food insecure families. And its why I’ve backed releases from our strategic petroleum reserves to offset the market disruptions that Californians have felt at the pump. We can’t drill our way out of higher prices, however, and I continue to advocate for investments in clean energy alternatives that will ensure our families are less reliant on volatile fossil fuel prices.\nHealth Care: I’ve been advocating for measures that lower the cost of health care since before I came to Congress. After successfully preventing Republicans from repealing the Affordable Care Act dozens of times, I also delivered lower premiums and out of pocket costs through expansions of ACA tax cuts in our COVID-19 relief bills.\nI’ve also specifically worked to get legislation to lower the extraordinary costs of prescriptions drugs passed in the House multiple times in recent years, and will continue to advocate for those measures in months and years to come.\nIn Congress, I put the fight for these working class families first because I understand these challenges personally. My father worked the fields in Oxnard and our family lived in public housing. I focused on my education and worked my way through UCSB, and served my country in the Marine Corps Reserves.\nI worked hard to get ahead and build a better life for my family, and I am committed to making sure that same opportunity is afforded to all who are willing to put in the hard work.\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114654/https://www.saludcarbajal.com/issues/caring-for-our-veterans",
+     "original": "https://www.saludcarbajal.com/issues/caring-for-our-veterans",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Caring For Our Veterans\nI joined the Marine Corps Reserves to give back to our country. Today, our veterans and their families face more challenges than ever before after returning home from service. As a veteran who serves on the House Armed Services Committee, I work every day in Congress to tackle these challenges and ensure veterans receive the support they deserve. We must step up for veterans the way they stepped up for us.\nThe stories I have heard from veterans about issues with adequate or timely VA service are unacceptable, and they are problems we have to solve. From accessible health care to job opportunities to financial aid for continued education, we must make good on our commitment to those who serve. We also need to take care of our most vulnerable veterans and, through funding and bills like my Home for the Brave Act, I am working to ensure we help veterans experiencing homelessness obtain resources and get back on their feet.\nI am advocating to expand services for crucial programs to reintegrate veterans into the workforce with resources like job training and housing assistance. Deployed veterans have a 41% higher suicide risk compared to the general population, and mental health services must be easily available for our veterans. We have to implement more programs to ensure that veterans living with depression, post-traumatic stress disorder (PTSD) and other trauma can get the care they need.\nThere are nearly 40,000 veterans living in the 24th District with almost 4,000 more serving on active military duty. Whether its reducing VA wait times, increasing accountability and transparency, improving care or helping returning troops transition back into the civilian world, I will honor their service by taking action to improve the lives of veterans on the Central Coast and across our nation.\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114657/https://www.saludcarbajal.com/issues/creating-good-paying-jobs",
+     "original": "https://www.saludcarbajal.com/issues/creating-good-paying-jobs",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Creating Good-Paying Jobs\nNo one who works full time should live in poverty. We have to create more opportunities for people to lift themselves into the middle class and thrive. Throughout my career, I have worked across the aisle to ensure people have the chance to succeed, secure a good-paying job and live their own American Dream story.\nThat’s why I fought to get our Bipartisan Infrastructure Law signed into law in 2021, a landmark investment in the Central Coast that will create thousands good-paying union jobs by:\n- Repairing hundreds of miles of roads and highways and bridges that are in disrepair or beyond their lifespan\n- Expanding high-speed internet to communities that still lack critical broadband connectivity\n- Creating clean energy jobs by adding additional EV charging stations, clean transit options, and capping leaking oil and gas wells up and down our coast.\n- Investing in wildfire prevention, drought mitigation, and climate weatherization, creating new jobs that will help keep our communities safe\nIn the House, I've also backed bills to raise the federal minimum wage to $15 an hour, and to address the gender pay gap and demand pay equity. People should be compensated fairly for their hard work.\nAs Santa Barbara County Supervisor, I helped secure $100 million in local transportation funds to widen our highways, repair our bridges and roads and boost our economy. Upgrading our infrastructure is critical to our long-term economic growth and key to expanding the middle class. It puts people back to work, helps reduce traffic, and allows our businesses to get their products to market faster.\nI believe protecting the environment and creating good-paying jobs can go hand in hand. In Santa Barbara, we established the EMPower energy efficiency program for our residents and approved the Cuyama Solar Project, the first large-scale solar project in our county. These types of programs have the potential to produce highly skilled, good-paying jobs and set us on a path for a sustainable future.\nHere at home and back in Washington, I am committed to amplifying the voices of working families and fighting for change that lifts us all up.\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114658/https://www.saludcarbajal.com/issues/helping-our-students-achieve-a-higher-education",
+     "original": "https://www.saludcarbajal.com/issues/helping-our-students-achieve-a-higher-education",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Helping Our Students Achieve a Higher Education\nI was the first in my family to graduate from college. That achievement did not come without assistance in the form of working multiple jobs, financial aid, student loans and the Veterans Education Assistance Program.\nMiddle-class families are struggling to send their children to college because it is unaffordable. It’s outrageous that so many students and their families have to take on crushing debt just to get the education they need to compete in our economy. What makes it worse is that they are paying higher interest rates than they should.\nMy education changed my path in life, and I am working to make sure all students have that same chance. I introduced my Degrees Not Debt Act to restore the power of Pell Grants, ensure more families receive the full Pell Grant amount and incentivize states to invest in higher education. As student aid falls short and student debt continues to rise, we must stand up for students.\nI’ve also pushed President Biden to continue the delay on student loan payments first begun during the COVID-19 pandemic, as well as for him to use authorities already granted to him to cancel student debt for borrowers who are struggling to succeed under the weight of crushing debt.\nWe must do everything in our power to make college more affordable including lowering interest rates for government backed loans, expanding the Pell Grant program, allowing students to refinance their loans, just like mortgages and car loans, and pushing universities to keep costs down if they want to continue to receive federal research dollars and other aid. I also believe we should push for two years of tuition-free community college to allow students to further their education or get the career technical skills they need to compete in today’s global economy.\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114700/https://www.saludcarbajal.com/issues/making-health-care-more-affordable",
+     "original": "https://www.saludcarbajal.com/issues/making-health-care-more-affordable",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Making Health Care More Affordable\nCongress needs to focus on improving our health care system and ensuring that everyone can afford lifesaving care and medicine—not on rolling back protections for millions of Americans.\nDuring my first term in Congress, I voted against the Republican repeal of the Affordable Care Act (ACA) and fought for legislation to improve and expand our health care system.\nI've fought for bills like the Lower Drug Costs Now Act (H.R. 3), the Build Back Better Act, and the Affordable Insulin Now Act so that out of pocket costs are capped, Medicare can negotiate directly with drug companies, and all patients can access lower prescription costs.\nAnd through measures like the CARES Act and the American Rescue Plan, I successfully got ACA tax cuts expanded for millions of families to get lower premiums, free COVID-19 vaccines, testing and treatment, and additional support for the community health clinics and centers that are the cornerstone of the Central Coast’s public health.\nI've heard countless stories from Central Coast residents who are relying on Congress to protect their care and stand up for their interests, and I promise I will always fight for you.\nOn the House Armed Services Committee, I have introduced legislation to expand TRICARE services for our military members to provide free contraceptive services, allow gestational diabetes screening without copayment and waive statutorily imposed pharmacy costs for preventive services.\nI'm also fighting to strengthen our Medicare and Medicaid programs that ensure millions of older Americans and low-income families are not forced to choose between paying their mortgage or paying for lifesaving care.\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114700/https://www.saludcarbajal.com/issues/preserving-our-natural-environment",
+     "original": "https://www.saludcarbajal.com/issues/preserving-our-natural-environment",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Preserving Our Natural Environment\nOur coastline and natural environment are renowned. It is our responsibility to protect and preserve our unique communities, scenic views and open spaces along the Central Coast. I have worked tirelessly to bring Democrats and Republicans together to ensure our open spaces are conserved for future generations to enjoy.\nI am proud to have served on President Obama’s task force on climate change where we worked to create sustainable climate solutions for states and localities. I led efforts locally to tackle carbon pollution and combat climate change.\nIn the U.S. House, I have continued my fight to protect our planet by introducing and passing a bill to ban future offshore oil drilling off of California's coast; working to preserve our environment, maintain our waters, create a new marine sanctuary to protect our coastline and sea life, and designate parts of the Los Padres National Forest and Carrizo Plain National Monument as protected wilderness.\nI secured funding in the Bipartisan Infrastructure Law to not only create more clean energy transportation options in our communities, but also mitigate the effects of the climate crisis and fight the worsening effects of wildfires and drought on our communities.\nDuring the Trump Administratio, I fought back against attempts to roll back climate protections, and now I'm always working on plans to help our coastal communities remain resilient and well-equipped in the face of climate change.\nI will continue saying no to new offshore drilling and keep us moving toward cleaner energy solutions that help create new jobs, like we did with solar power facilities in the Cuyama Valley and on the Carrizo Plain, by guiding projects like our first-ever offshore wind project off the coast of Morro Bay.\nWe must do more to bring wind and biofuel initiatives to market, and encourage more efforts for residents to retrofit their homes so they are more energy-efficient and cost-effective for consumers.\n## Need more information?"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105114701/https://www.saludcarbajal.com/issues/pushing-for-sensible-gun-laws",
+     "original": "https://www.saludcarbajal.com/issues/pushing-for-sensible-gun-laws",
+     "date": "2022-11-05",
+     "title": "Issue | Issues | Salud Carbajal for Congress",
+     "text": "## Pushing for Sensible Gun Laws\nWhen I was a young boy, my sister used my father’s gun and\ntook her own life. I am no stranger to the tragedy inflicted on family in the\nwake of gun violence. Our community came together after the devastating shootings\naround UCSB. For me, it underscored the need to do everything we can to keep\nguns away from those who pose a threat to themselves or others.\nWe need more commonsense gun safety measures–which is why\nI’m proud to have helped craft the first new federal gun safety law in 30 years:\nthe Bipartisan Safer Communities Act.\nThis law includes my bill that I championed for more than\nhalf a decade, the Extreme Risk Protect Order Act, which helps states set up\n‘red flag’ laws and increases awareness of these laws in places like California\nthat already have them. ‘Red flag’ laws are proven to save lives by temporarily\nremoving guns from people who pose a danger to themselves or others while preserving\nThe law we got approved this year also helps crack down on\nstraw gun purchases, ghost guns, and gun traffickers, improves background\nchecks, and invests in community violence prevention.\nThis was a big step forward, but there is still plenty of\nwork to be done to keep our communities safe from gun violence. That’s why I’ve\nalso backed and helped pass commonsense gun safety measures that institute\nuniversal background checks and close loopholes in our vetting systems.\nAs a veteran, I’ve seen what weapons of war can do. They\nhave no place on our streets. I support reinstituting national restrictions on\nassault weapons and high-capacity magazines.\nI am committed to making sure we keep our communities safe\nand end our nation’s gun violence epidemic.\n## Need more information?"
+    }
+   ],
+   "unread": [
+    "the list of saludcarbajal.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.saludcarbajal.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105053031/https://www.saludcarbajal.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105053031/https://www.saludcarbajal.com/",
+     "original": "https://www.saludcarbajal.com/",
+     "date": "2024-11-05",
+     "title": "Home | Salud Carbajal for Congress",
+     "text": "## &times; Close\nFor California's 24th District\nJoin our Campaign\n## Representing Central Coast Values\nThe Central Coast is my home and the place that has given my family and me the opportunity to succeed. I have a proven track record of bringing Republicans and Democrats together to solve problems and get results: preserving open spaces, creating jobs by rebuilding roads and highways, expanding access to high-speed internet and clean energy, fighting wildfires and drought, and improving health care.\nSalud Carbajal For Congress"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105053326/https://www.saludcarbajal.com/issues/",
+     "original": "https://www.saludcarbajal.com/issues/",
+     "date": "2024-11-05",
+     "title": "Issues | Salud Carbajal for Congress",
+     "text": "## Issues\nCaring For Our Veterans\nCreating Good-Paying Jobs\nFighting for the Middle Class\nHelping Our Students Achieve a Higher Education\nMaking Health Care More Affordable\nPreserving Our Natural Environment\nPushing for Sensible Gun Laws\nStrengthening Security in Retirement\n## Need more information?\nGive us a Call! Our phone number is (805) 845-9745"
+    }
+   ],
+   "notSaved": [
+    "https://www.saludcarbajal.com/issues/issues/fighting-for-the-middle-class",
+    "https://www.saludcarbajal.com/issues/issues/caring-for-our-veterans",
+    "https://www.saludcarbajal.com/issues/issues/creating-good-paying-jobs",
+    "https://www.saludcarbajal.com/issues/issues/helping-our-students-achieve-a-higher-education",
+    "https://www.saludcarbajal.com/issues/issues/making-health-care-more-affordable",
+    "https://www.saludcarbajal.com/issues/issues/preserving-our-natural-environment",
+    "https://www.saludcarbajal.com/issues/issues/pushing-for-sensible-gun-laws",
+    "https://www.saludcarbajal.com/issues/issues/strengthening-security-in-retirement",
+    "https://www.saludcarbajal.com/issues/issues/reproductive-justice"
+   ],
+   "unread": [
+    "the list of saludcarbajal.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.saludcarbajal.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103075854/https://www.saludcarbajal.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103075854/https://www.saludcarbajal.com/",
+     "original": "https://www.saludcarbajal.com/",
+     "date": "2026-11-03",
+     "title": "Home | Salud Carbajal for Congress",
+     "text": "## &times; Close\nFor California's 24th District\nJoin our Campaign\n## Representing Central Coast Values\nThe Central Coast is my home and the place that has given my family and me the opportunity to succeed. I have a proven track record of bringing Republicans and Democrats together to solve problems and get results: preserving open spaces, creating jobs by rebuilding roads and highways, expanding access to high-speed internet and clean energy, fighting wildfires and drought, and improving health care.\nSalud Carbajal For Congress"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103080311/https://www.saludcarbajal.com/issues/",
+     "original": "https://www.saludcarbajal.com/issues/",
+     "date": "2026-11-03",
+     "title": "Issues | Salud Carbajal for Congress",
+     "text": "## Issues\nCaring For Our Veterans\nCreating Good-Paying Jobs\nFighting for the Middle Class\nHelping Our Students Achieve a Higher Education\nMaking Health Care More Affordable\nPreserving Our Natural Environment\nPushing for Sensible Gun Laws\nStrengthening Security in Retirement\n## Need more information?\nGive us a Call! Our phone number is (805) 845-9745"
+    }
+   ],
+   "notSaved": [
+    "https://www.saludcarbajal.com/issues/issues/fighting-for-the-middle-class",
+    "https://www.saludcarbajal.com/issues/issues/caring-for-our-veterans",
+    "https://www.saludcarbajal.com/issues/issues/creating-good-paying-jobs",
+    "https://www.saludcarbajal.com/issues/issues/helping-our-students-achieve-a-higher-education",
+    "https://www.saludcarbajal.com/issues/issues/making-health-care-more-affordable",
+    "https://www.saludcarbajal.com/issues/issues/preserving-our-natural-environment",
+    "https://www.saludcarbajal.com/issues/issues/pushing-for-sensible-gun-laws",
+    "https://www.saludcarbajal.com/issues/issues/strengthening-security-in-retirement",
+    "https://www.saludcarbajal.com/issues/issues/reproductive-justice"
+   ],
+   "unread": [
+    "the list of saludcarbajal.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

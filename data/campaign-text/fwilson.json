@@ -1,0 +1,65 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "fwilson",
+ "name": "Frederica S. Wilson",
+ "built": "2026-11-26",
+ "sites": [
+  "https://www.fredericawilsonforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.fredericawilsonforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-04",
+    "url": "https://web.archive.org/web/20221104214015/http://www.fredericawilsonforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221104214015/http://www.fredericawilsonforcongress.com/",
+     "original": "http://www.fredericawilsonforcongress.com/",
+     "date": "2022-11-04",
+     "title": "Frederica Wilson for Congress",
+     "text": "President Obama's Endorsement\n## Voice for the Voiceless – Lobbyist for Children\nTotally Unbought and Unbossed – Relentless Fighter\n## President Barack Obama Endorses\nCongresswoman Frederica S. Wilson\n“Congresswoman Wilson has distinguished herself as a fierce advocate for hardworking families to ensure that they have equal access to ladders of opportunity.… She is an influential and impassioned voice in the fight for sensible gun control measures. Leaders like Congresswoman Wilson are needed in Congress to continue to put Floridians back to work, to protect critical investments and programs like education, Social Security and Medicare, and to help keep them safe.\"\n– President Barack Obama (August 2016)\nDuring my time in Congress, I have been fighting for good, fair-paying jobs in safe environments for our workers; increased and better opportunities for our children; and safety, security, and prosperity in our communities. I am working hard both in Florida and in Washington, D.C., to advocate for us and to ensure that our voices are heard.\nRepresenting you in Congress, sharing your stories, your challenges, and your triumphs, is a tremendous privilege and an honor. With your support, I will continue to be your voice on Capitol Hill and work my absolute hardest to help strengthen our economy and create jobs, ensure that our communities are safe, and carve out pathways of opportunity for those who depend on us most.\nThank you for standing with me. Having your support is the winning endorsement!\nFrederica S. Wilson\nProudly Representing Florida’s 24th Congressional District"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.fredericawilsonforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105044601/http://www.fredericawilsonforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105044601/http://www.fredericawilsonforcongress.com/",
+     "original": "http://www.fredericawilsonforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Frederica Wilson for Congress",
+     "text": "President Obama's Endorsement\n## Voice for the Voiceless – Lobbyist for Children\nTotally Unbought and Unbossed – Relentless Fighter\n## President Barack Obama Endorses\nCongresswoman Frederica S. Wilson\n“Congresswoman Wilson has distinguished herself as a fierce advocate for hardworking families to ensure that they have equal access to ladders of opportunity.… She is an influential and impassioned voice in the fight for sensible gun control measures. Leaders like Congresswoman Wilson are needed in Congress to continue to put Floridians back to work, to protect critical investments and programs like education, Social Security and Medicare, and to help keep them safe.\"\n– President Barack Obama (August 2016)\nDuring my time in Congress, I have been fighting for good, fair-paying jobs in safe environments for our workers; increased and better opportunities for our children; and safety, security, and prosperity in our communities. I am working hard both in Florida and in Washington, D.C., to advocate for us and to ensure that our voices are heard.\nRepresenting you in Congress, sharing your stories, your challenges, and your triumphs, is a tremendous privilege and an honor. With your support, I will continue to be your voice on Capitol Hill and work my absolute hardest to help strengthen our economy and create jobs, ensure that our communities are safe, and carve out pathways of opportunity for those who depend on us most.\nThank you for standing with me. Having your support is the winning endorsement!\nFrederica S. Wilson\nProudly Representing Florida’s 24th Congressional District"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.fredericawilsonforcongress.com/",
+   "saved": false,
+   "error": "terminated",
+   "pages": [],
+   "posts": []
+  }
+ ]
+}
