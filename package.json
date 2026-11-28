@@ -68,6 +68,7 @@
     "bills:record": "node scripts/build-question-record.mjs && node scripts/build-promises.mjs",
     "statements:find": "node scripts/question-statements.mjs --find",
     "statements:record": "node scripts/question-statements.mjs && node scripts/build-promises.mjs",
+    "statements:accept": "node scripts/accept-statements.mjs",
     "promises:build": "node scripts/build-promises.mjs",
     "record:collect": "node --no-warnings=ExperimentalWarning scripts/collect-record.mjs",
     "coverage": "node scripts/coverage.mjs",

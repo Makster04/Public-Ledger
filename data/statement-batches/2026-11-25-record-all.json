@@ -1,6 +1,6 @@
 {
- "about": "Proposed tags from the Congressional Record for every sitting member, by helper agents to the standard of the first approved batch, each quote checked word for word against the speech: {person: {question: [[side, quote, date, link, where, confidence]]}}. Waiting for approval; once approved they move into data/question-statements.json (without the confidence).",
- "status": "proposed, partial: the helper agents stopped at the usage limit after 63 members; not approved",
+ "about": "Proposed tags from the Congressional Record for every sitting member, by helper agents to the standard of the first approved batch, each quote checked word for word against the speech: {person: {question: [[side, quote, date, link, where, confidence]]}}. Checked automatically and moved into data/question-statements.json (without the confidence) by npm run statements:accept; no one approves them.",
+ "status": "accepted automatically 2026-11-28: 265 tags moved into data/question-statements.json",
  "people": {
   "jacobs": {
    "war-with-iran": [

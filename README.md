@@ -278,7 +278,7 @@ Then `git add data public && git commit -m "Monthly refresh" && git push`.
 
 **When a new Congress starts (Jan. 3 of an odd year):** `npm run house:build` and `npm run senate:build`.
 
-**No need to run by hand:** `news:build` and `links:check` (`npm start` runs them); `record:collect`, `coverage`, `conflicts:*`, `bills:issues`, `statements:find`, `statements:record` and `promises:build` run where the tagging and reviews are done; `test`, `check`, `consistency:*`, `cloudflare:*` and `review:*` are for development and reviews.
+**No need to run by hand:** `news:build` and `links:check` (`npm start` runs them); `record:collect`, `coverage`, `conflicts:*`, `bills:issues`, `statements:find`, `statements:accept` (since November 28, 2026: a batch of helper-agent tags goes in with no one approving it, once each quote is found word for word in the saved speech; what fails stays out), `statements:record` and `promises:build` run where the tagging is done; `test`, `check`, `consistency:*`, `cloudflare:*` and `review:*` are for development and reviews.
 
 ## Update process
 
