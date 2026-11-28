@@ -46,7 +46,9 @@ test('People First on the page: a provisional number with no letter, on the scor
   // A provisional People First isn't news.
   const now={a:{peoplefirst:{pct:100,provisional:true,actions:3}},b:{peoplefirst:{pct:80,actions:12}}};
   assert.deepEqual(gradeNews({},now,'2026-11-20').map(x=>x.id),['b']);
-  assert.ok(!JSON.parse(read('public/news.json')).items.some(x=>x.kind==='grade'&&x.grade==='peoplefirst'));
+  // (A People First that moved and isn't provisional is news like any grade: the file on hand can hold those. Checked
+  // Nov. 28, 2026 against the page's own scoring: none of today's People First news is a provisional score.)
+  assert.ok(JSON.parse(read('public/news.json')).items.filter(x=>x.kind==='grade'&&x.grade==='peoplefirst').every(x=>Number.isFinite(x.to)),'each with the number it moved to');
 });
 
 test('the banner: one label, and a link that opens the latest official records instead of going nowhere',()=>{
