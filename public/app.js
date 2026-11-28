@@ -1995,37 +1995,43 @@ const raceName=l=>{const id=PROFILE_BY_FEC.get(l.cand),p=id&&(byId[id]||BASIC[id
 const spName=(id,name)=>{const n=String(name||'');return SUPER_PACS.find(p=>p.id===id||p.name.toLowerCase()===n.toLowerCase())?.name||(/^UNITED DEMOCRACY PROJECT/i.test(n)?'United Democracy Project':titleCase(n));};
 const helpRivals=list=>{const m=new Map();for(const l of list){const k=`${l.person}|${l.ele}`,o=m.get(k)||{name:raceName(l),ele:l.ele,party:l.party,amount:0};o.amount+=l.amount;m.set(k,o);}return [...m.values()].sort((a,b)=>b.amount-a.amount);};
 function lookoutsBox(s,inp){
-  const spLine=x=>{const t=TRACKER[x.key],o=t.superPacLine?inp.superPac?.[x.key]:null;if(!o||!(o.for>0||o.against>0))return '';
-    const parts=[o.for>0?`<b class="num" title="${esc(fmtFull(o.for))}">${shortMoney(o.for)}</b> for them`:'',o.against>0?`<b class="num" title="${esc(fmtFull(o.against))}">${shortMoney(o.against)}</b> against them`:''].filter(Boolean);
-    const now=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
-    return `<span class="lk-sp">Its super PAC spending${now?'':' this cycle'}: ${parts.join(' · ')}</span>`;};
   const thisCycle=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
   const tierTag=x=>{const r=memberCareer(s,x.key);if(!r)return '';const chs=r.chamber==='S'?'senators':'House members',c=r.row;
     const text=c.club==='none'?'None in their career':`${c.club==='under'?'':`${CLUB_LABEL[c.club]} · `}#${c.rank} of ${r.of} ${chs} · career ${c.total>=1e6?`$${(c.total/1e6).toFixed(2)}M`:c.total>=1e5?`$${Math.round(c.total/1e3)}K`:fmtFull(c.total)}`;
     // Behind a small "More info" (Nov. 14, 2026), so the list stays short: the career standing, what it counts, and a link.
     const what=c.club==='none'?`No checks or passed-on gifts from ${x.name} to their campaigns in any cycle read`:`Their campaigns' career total from ${x.name}${c.first?`, ${c.first-1}–${c.last}`:''}, ranked among ${r.of} ${chs}`;
     return `<details class="lk-more"><summary>More info</summary><div class="lk-more-body"><a class="ti-tag ${c.club}" href="#career-${x.key}" data-ch="${r.chamber}">${esc(text)}</a><span>${esc(what)}, from the FEC's bulk files. <a href="#career-${x.key}">Career Totals →</a></span></div></details>`;};
-  const helpLine=x=>{const t=TRACKER[x.key],h=thisCycle&&helpOf(s,t);if(!h)return null;if(!(h.help>0)&&!(h.againstThem>0))return '';
-    const m=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
-    const riv=helpRivals(h.rows.rivals),parts=[h.forThem>0?`${m(h.forThem)} for them`:'',...riv.slice(0,2).map(r=>`${m(r.amount)} against ${esc(r.name)} (${(ELECTION_LABEL[r.ele]||r.ele).toLowerCase()})`)].filter(Boolean);
-    return `${h.help>0?`<span class="lk-sp lk-help">Spent to help them win: <b class="num" title="${esc(fmtFull(h.help))}">${m(h.help)}</b> — ${parts.join(' + ')}${riv.length>2?` + ${riv.length-2} more`:''}</span>`:''}${h.againstThem>0?`<span class="lk-sp">Spent against them: <b class="num" title="${esc(fmtFull(h.againstThem))}">${m(h.againstThem)}</b></span>`:''}`;};
   // A cause group's line (since Nov. 28, 2026) is the same with a gray ● for took some and ○ for none (never a mark against
-  // them), named for whom it follows, with passed-on gifts (J Street's) shown apart from the PAC checks.
+  // them), with passed-on gifts (J Street's) shown apart from the PAC checks.
+  // Two columns (Nov. 28, 2026): what the campaign took (its PAC checks and passed-on gifts, which set the mark) and what
+  // the tracker's own super PACs spent this cycle, + to help them win and − against them (— when it runs none, or for an
+  // earlier period: the super PAC figures are this cycle's). Spending against an opponent shows its split under the row.
+  const sm=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
+  const spentOf=x=>{const t=TRACKER[x.key];if(!t?.superPacs.length||!thisCycle)return null;const h=helpOf(s,t),o=inp.superPac?.[x.key];
+    return h?{help:h.help||0,against:h.againstThem||0,h}:{help:o?.for||0,against:o?.against||0,h:null};};
+  const spentCell=x=>{const t=TRACKER[x.key],v=spentOf(x);
+    if(!v)return `<span class="lk-spent muted" title="${!t?.superPacs.length?'No super PAC of its own':'This cycle only'}">—</span>`;
+    if(!(v.help>0)&&!(v.against>0))return '<span class="lk-spent"><b class="num">$0</b></span>';
+    return `<span class="lk-spent">${v.help>0?`<b class="num lk-for" title="${esc(fmtFull(v.help))} spent to help them win">+${sm(v.help)}</b>`:''}${v.against>0?`<b class="num lk-against" title="${esc(fmtFull(v.against))} spent against them">−${sm(v.against)}</b>`:''}</span>`;};
+  const rivalsLine=x=>{const v=spentOf(x);if(!v?.h)return '';const riv=helpRivals(v.h.rows.rivals);if(!riv.length)return '';
+    const parts=[v.h.forThem>0?`${sm(v.h.forThem)} for them`:'',...riv.slice(0,2).map(r=>`${sm(r.amount)} against ${esc(r.name)} (${(ELECTION_LABEL[r.ele]||r.ele).toLowerCase()})`)].filter(Boolean);
+    return `<span class="lk-sp">${parts.join(' + ')}${riv.length>2?` + ${riv.length-2} more`:''}</span>`;};
   const row=x=>{const t=TRACKER[x.key],cause=!!t?.cause,mark=x.status==='took'?(cause?'●':'✕'):x.status==='none'?(cause?'○':'✓'):'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
     const split=cause&&x.routed>0?`<span class="lk-sp">${x.pac>0?`<b class="num">${fmtFull(x.pac)}</b> in PAC checks · `:''}<b class="num">${fmtFull(x.routed)}</b> passed on by ${esc(routedBy(t))}</span>`:'';
-    return `<li class="lk-${x.status}${cause?' lk-cause':''}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">${cause?`PAC money or gifts from ${esc(t.lineLabel||t.name)}`:`No PAC money or gifts from ${esc(x.name)}`}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
-      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${split}${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
+    return `<li class="lk-${x.status}${cause?' lk-cause':''}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
+      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${spentCell(x)}${split}${rivalsLine(x)}${tierTag(x)}</li>`;};
+  const cols='<div class="lk-cols" aria-hidden="true"><span></span><span>Gave the campaign</span><span>Super PACs spent</span></div>';
   // The cause groups, under their own heading that opens and closes (closed at first), with how many took some.
   const C=lookouts(inp,CAUSES),cTook=C.filter(x=>x.status==='took').length,cWait=C.filter(x=>x.status==='waiting').length;
   const causes=C.length?`<details class="lk-causes-d" data-keep="causes"><summary><h4>Cause groups</h4><span class="small muted">${cTook} of ${C.length} took some${cWait?` · ${cWait} not read yet`:''}</span></summary>
       <p class="small muted">Union, environmental and peace groups, followed the same way. Shown only: not part of the No lobby money bonus, and ● means they took some, not a mark against them.</p>
-      <ul class="lk-list lk-causes">${C.map(row).join('')}</ul></details>`:'';
-  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Tracking Lobby Money</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>${causes}
-    <details class="lk-key" data-keep="key"><summary><h4>How to read this</h4></summary><p class="small muted">What each lobby gave the campaign, ${esc(inp.label)}, and what three of them spent through their super PACs.</p>
+      ${cols}<ul class="lk-list lk-causes">${C.map(row).join('')}</ul></details>`:'';
+  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Tracking Lobby Money</h3>${cols}<ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>${causes}
+    <details class="lk-key" data-keep="key"><summary><h4>How to read this</h4></summary><p class="small muted">What each lobby gave the campaign, ${esc(inp.label)}, and what the ones with super PACs spent on the race this cycle.</p>
       <ul class="list small">
-        <li><b><span class="lk-mark lk-took">✕</span> took some · <span class="lk-mark lk-none">✓</span> none · <span class="lk-mark lk-waiting">…</span> not read yet</b><br>PAC checks and gifts the group collected and passed on. For the Pro-Israel Lobby, its named donors' own checks too.</li>
+        <li><b>Gave the campaign: <span class="lk-mark lk-took">✕</span> took some · <span class="lk-mark lk-none">✓</span> none · <span class="lk-mark lk-waiting">…</span> not read yet</b><br>PAC checks and gifts the group collected and passed on. For the Pro-Israel Lobby, its named donors' own checks too. Only this column sets the mark.</li>
         <li><b>+ from employees</b><br>Gifts from people who work in that industry, shown apart as the smaller number. They don't change the mark.</li>
-        <li><b>Super PAC spending</b> <span class="muted">(Pro-Israel Lobby, Crypto, Big Tech + AI)</span><br>What their super PACs spent to help them win this cycle (for them, and against their opponents in a race they were in) and against them. It never changes the mark: the campaign doesn't take that money.</li>
+        <li><b>Super PACs spent: <span class="lk-for">+</span> to help them win · <span class="lk-against">−</span> against them · <span class="muted">—</span> none of its own</b> <span class="muted">(${esc(LOBBIES.filter(t=>t.superPacs.length).map(t=>t.name).join(', '))} and the cause groups run super PACs)</span><br>What the group's own super PACs spent this cycle: for them and against their opponents in a race they were in, or against them. It never changes the mark: the campaign doesn't take that money. With another period picked it shows — (these are this cycle's figures).</li>
       </ul><p class="small muted">More in each tracker below.</p></details></div>`;
 }
 // The open/close sections that stay open when their box is drawn again (details[data-keep]).

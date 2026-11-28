@@ -59,7 +59,7 @@ test('Pro-Environment and Pro-Peace: their committees, and J Street\'s passed-on
 test('the page: a "Cause groups" section that opens and closes, gray marks, and a label before their tabs, menu options and cards',()=>{
   assert.ok(app.includes('<details class="lk-causes-d" data-keep="causes"><summary><h4>Cause groups</h4>'),'closed at first, with how many took some');
   assert.ok(app.includes("mark=x.status==='took'?(cause?'●':'✕'):x.status==='none'?(cause?'○':'✓'):'…'"));
-  assert.ok(app.includes("`PAC money or gifts from ${esc(t.lineLabel||t.name)}`"));
+  assert.ok(app.includes('${cols}<ul class="lk-list lk-causes">'),'the same two columns as the lobbies');
   assert.ok(app.includes("(t.cause&&!TRACKERS[i-1]?.cause?'<span class=\"tr-group-label\">Cause groups</span>':'')"),'the profile\'s Trackers tabs');
   assert.ok(app.includes("'<div class=\"hdd-group\" role=\"presentation\">Cause groups</div>'"),'the Career Totals menu');
   assert.ok(app.includes('<h3 class="mt-group">Cause groups</h3>'),'the Super PACs page');
