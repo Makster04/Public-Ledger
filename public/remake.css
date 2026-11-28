@@ -1363,7 +1363,15 @@ input, select { accent-color: var(--accent); }
    and the Trackers page. */
 .lookouts .lk-list { list-style: none; margin: 0; padding: 0; }
 .lookouts .lk-ic { white-space: nowrap; }
-.lk-list li { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.lk-list li { display: grid; grid-template-columns: 18px minmax(0, 1fr) 5.4rem 5.4rem; gap: 8px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--line); }
+/* Two columns (Nov. 28, 2026): what the campaign took, and what the tracker's super PACs spent (+ for, − against). */
+.lk-cols { display: grid; grid-template-columns: 18px minmax(0, 1fr) 5.4rem 5.4rem; gap: 8px; padding: 2px 0 6px; border-bottom: 1px solid var(--line); color: var(--muted); font: 700 .66rem/1.25 var(--font-body); letter-spacing: .05em; text-transform: uppercase; }
+.lk-cols span { text-align: right; }
+.lk-cols span:first-child { grid-column: 1 / 3; }
+.lk-spent { text-align: right; white-space: nowrap; font-size: .88rem; display: flex; flex-direction: column; align-items: flex-end; }
+.lookouts .lk-for { color: #9085e9; }
+.lookouts .lk-against { color: #c98500; }
+.lk-causes-d .lk-cols { margin-top: 6px; }
 .lk-list li:last-child { border-bottom: 0; }
 .lk-mark { font-weight: 800; text-align: center; }
 .lk-took .lk-mark, .lk-mark.lk-took { color: var(--crit); }

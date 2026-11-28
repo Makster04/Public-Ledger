@@ -65,7 +65,8 @@ test('the news file on hand: built from the site\'s own files, items newest firs
   assert.ok(n.built&&Array.isArray(n.items));
   const at=x=>Date.parse(x.seen||`${String(x.date).slice(0,10)}T12:00:00Z`),built=Date.parse(n.built+'T23:59:59Z');
   for(let i=1;i<n.items.length;i++)assert.ok(at(n.items[i-1])>=at(n.items[i]),'newest first');
-  assert.ok(n.items.every(x=>['grade','promise','lobby','superpac'].includes(x.kind)&&built-at(x)<=(NEWS_DAYS+1)*864e5));
+  // (site updates and Conflicts of Interest scores joined the news after this test was written)
+  assert.ok(n.items.every(x=>['grade','promise','lobby','superpac','site','conflict'].includes(x.kind)&&built-at(x)<=(NEWS_DAYS+1)*864e5));
   assert.equal(new Set(n.items.map(x=>x.key)).size,n.items.length,'each once');
 });
 

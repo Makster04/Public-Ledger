@@ -166,7 +166,7 @@ test('where they show: the lookouts beside the score, the tracker tabs, the Trac
   assert.match(app,/from '\.\/trackers\.js'/);
   assert.match(app,/<h3>Tracking Lobby Money<\/h3>/);
   assert.ok(!/Summary of Major Lookouts<\/h3>/.test(app),'the old name is gone from the page');
-  assert.match(app,/No PAC money or gifts from \$\{esc\(x\.name\)\}/);
+  assert.match(app,/data-tracker-open="\$\{x\.key\}">\$\{esc\(x\.name\)\}/,'each row named for its tracker, under the two column heads');
   assert.match(app,/bundledBox\(s,mm\)\+lookoutsBox\(/,'the lookouts go right under "Bundled through groups"');
   assert.match(app,/else if\(m\[1\]==='trackers'\)\{(?:if\(m\[2\]==='about'\)renderTrackerAbout\(\);else )?renderTrackers\(/);
   assert.match(app,/<th class="r">PAC checks<\/th><th class="r">Gifts routed<\/th>/,'every tracker has the Gifts routed column');
@@ -204,6 +204,6 @@ test('the super PAC line (AIPAC, Big Tech + AI and Crypto): their own super PACs
   // It never changes the mark.
   assert.equal(trackerMoney(TRACKER.crypto,{pacLines:[]}).status,'none');
   const app=read('../public/app.js'),css=read('../public/remake.css');
-  assert.match(app,/class="lk-sp">Its super PAC spending/);assert.match(app,/t\.superPacLine\?inp\.superPac/);
+  assert.match(app,/const h=helpOf\(s,t\),o=inp\.superPac\?\.\[x\.key\]/,'the second column: the race file, else the line read for the profile');
   assert.ok(css.includes('.lk-sp'));
 });
