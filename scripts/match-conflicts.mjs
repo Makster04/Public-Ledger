@@ -9,14 +9,22 @@
 //                              data/conflict-lookups.json, and print what each member's items show, for review
 //   npm run conflicts:build    write public/conflicts.json from the reviewed decisions (data/conflict-reviews.json)
 //
-// Nothing counts until it's reviewed: an item is interested only when data/conflict-reviews.json says so.
+//   npm run conflicts:propose  decide each organization from its lookup, into data/conflict-proposals.json (since Nov.
+//                              28, 2026): interested when it lobbied on an issue their committees handle or holds
+//                              contracts from an agency they oversee; never touches a reviewed decision
+//   npm run conflicts:approve -- <ids | --all>   move approved members' proposals into data/conflict-reviews.json
+// The lookup, for hundreds of members: it saves as it goes, so Ctrl+C keeps what's done and the next run goes on from
+// there. -- --only <ids> looks up those members' organizations; -- --show prints each member's items as before.
+//
+// Nothing counts until it's reviewed: an item is interested only when data/conflict-reviews.json says so. A proposal
+// is not a review until it's approved.
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
-export const LOOKUPS='data/conflict-lookups.json',REVIEWS='data/conflict-reviews.json',OUT='public/conflicts.json';
+export const LOOKUPS='data/conflict-lookups.json',REVIEWS='data/conflict-reviews.json',OUT='public/conflicts.json',PROPOSALS='data/conflict-proposals.json';
 
 // The Senate LDA general issue codes each full committee handles (what "lobbies their committees" means). Select and
 // special committees with no bills of their own handle none.
@@ -163,6 +171,66 @@ export function buildRecord(m,decisions,reviewedAt,person,lookups={}){
   return missing.length?{missing:[...new Set(missing)]}:rec;
 }
 
+// ---------- Proposed decisions, from the lookups (Nov. 28, 2026) ----------
+// The Senate LDA general issue codes their committees handle, by name, for the reasons.
+export const ISSUE_NAMES={AGR:'agriculture',ANI:'animals',FOO:'the food industry',CDT:'commodities',NAT:'natural resources',BUD:'budget and appropriations',
+  DEF:'defense',AER:'aerospace',BAN:'banking',FIN:'financial institutions and securities',HOU:'housing',INS:'insurance',URB:'urban development',MON:'money and coinage',
+  CSP:'consumer safety',EDU:'education',LBR:'labor',RET:'retirement',FAM:'family issues',HCR:'health',MED:'medical research',PHA:'pharmacy',FOR:'foreign relations',
+  GOV:'government issues',POS:'the postal service',HOM:'homeland security',ENG:'energy',FUE:'fuel, gas and oil',UTI:'utilities',TEC:'telecommunications',
+  COM:'broadcasting',MIA:'media',CPI:'the computer industry',ENV:'the environment',AUT:'the auto industry',MAN:'manufacturing',TOB:'tobacco',SPO:'sports',
+  IND:'Native American affairs',CPT:'copyrights and patents',LAW:'law enforcement',CIV:'civil rights',IMM:'immigration',FIR:'firearms',TOR:'torts',
+  TRA:'transportation',AVI:'aviation',RRR:'railroads',ROD:'roads',MAR:'maritime issues',TRU:'trucking and shipping',SCI:'science and technology',ADV:'advertising',
+  CAW:'clean air and water',WAS:'waste',SMB:'small business',VET:'veterans',TAX:'taxes',TRD:'trade',TAR:'tariff bills',MMM:'Medicare and Medicaid',WEL:'welfare'};
+const listWords=a=>a.length<=1?a.join(''):a.length===2?a.join(' and '):`${a.slice(0,-1).join(', ')} and ${a.at(-1)}`;
+// A committee's short name: "House Committee on Transportation and Infrastructure" is "Transportation and Infrastructure".
+export const committeeLabel=(id,names={})=>String(names[id]?.name||id).replace(/^(House|Senate|Joint)\s+(Permanent\s+Select\s+|Select\s+|Special\s+)?Committee\s+on\s+(the\s+)?/i,'').replace(/^Committee\s+on\s+(the\s+)?/i,'').trim();
+// One organization's proposed decision, from its lookup and the member's committees: interested when it lobbied on an
+// issue one of their committees handles, or holds federal contracts from an agency one oversees (Appropriations: any).
+// Whether it works in an industry they oversee isn't decided here (the reviewed decisions noted it alongside lobbying).
+// Null when it hasn't been looked up: nothing is proposed without the records.
+export function proposeDecision(lookup,committees,names={}){
+  if(!lookup||(!lookup.lobbying&&lookup.contracts===undefined))return null;
+  const L=lookup.lobbying||{},C=lookup.contracts||null;
+  const handled=new Map();for(const c of committees)for(const code of COMMITTEE_ISSUES[c]||[])if(!handled.has(code))handled.set(code,c);
+  const hit=(L.issues||[]).filter(code=>handled.has(code));
+  const oversee=new Set(committees.flatMap(c=>COMMITTEE_AGENCIES[c]||[])),any=oversee.has('*');
+  const agencies=Object.keys(C?.agencies||{}),overseen=agencies.filter(a=>any||oversee.has(a));
+  const years='2024–2025',filings=L.filings?`${L.filings} filing${L.filings===1?'':'s'}`:'';
+  const parts=[];
+  if(hit.length){const by=new Map();for(const code of hit){const c=handled.get(code);by.set(c,[...(by.get(c)||[]),ISSUE_NAMES[code]||code]);}
+    parts.push(`Lobbied in ${years} (${filings}) on ${[...by].map(([c,w])=>`${listWords(w)}, which ${committeeLabel(c,names)} handles`).join('; and ')}`);}
+  if(overseen.length)parts.push(`federal contracts from ${listWords(overseen)}, which ${any?'Appropriations funds':'their committees oversee'}`);
+  if(parts.length)return {interested:true,why:parts.join('; '),proposed:true};
+  const lob=L.match?`Lobbies only on ${listWords((L.issues||[]).map(x=>ISSUE_NAMES[x]||x))||'no listed issues'}, which their committees don’t handle`:`No lobbying filings in ${years}`;
+  const con=agencies.length?`contracts only from ${listWords(agencies)}, which their committees don’t oversee`:'no federal contracts in fiscal 2024–2025';
+  return {interested:false,why:`${lob}; ${con}`,proposed:true};
+}
+// Every member's proposals: each organization on their report without a reviewed decision. pending: the ones not
+// looked up yet. A member is ready to approve when nothing is pending.
+export function proposeAll(members,lookups,reviews,names={},personOf=()=>null){
+  const people={};
+  for(const m of members){
+    const done=reviews.people?.[m.id]?.orgs||{},orgs={},pending=[];
+    for(const it of m.items){const org=orgOf(it.x);if(!org||done[org]||orgs[org]||notAnInterest(org,personOf(m.id)||m))continue;
+      const d=proposeDecision(lookups[org],m.committees,names);if(d)orgs[org]=d;else if(!pending.includes(org))pending.push(org);}
+    if(Object.keys(orgs).length||pending.length)people[m.id]={name:m.name,committees:m.committees,orgs,pending};
+  }
+  return people;
+}
+// Approving members: their proposals become reviewed decisions (an earlier reviewed decision is kept). Only members with
+// nothing pending; returns who was moved and who wasn't, with why.
+export function approve(reviews,proposals,ids,today){
+  const moved=[],skipped=[];
+  for(const id of ids){const p=proposals.people?.[id];
+    if(!p){skipped.push(`${id}: no proposals`);continue;}
+    if(p.pending?.length){skipped.push(`${id}: ${p.pending.length} organization${p.pending.length===1?'':'s'} not looked up yet`);continue;}
+    const r=reviews.people[id]||={name:p.name,committees:p.committees,orgs:{}};
+    for(const [org,d] of Object.entries(p.orgs))if(!r.orgs[org])r.orgs[org]={interested:d.interested,why:d.why,approved:today};
+    r.reviewedAt=today;delete proposals.people[id];moved.push(id);
+  }
+  return {moved,skipped};
+}
+
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const mode=process.argv[2]||'lookup';
   const disclosures=read('data/disclosure-items.json'),committees=read('public/committees.json'),research=read('public/research.json');
@@ -171,20 +239,50 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   if(mode==='lookup'){
     const cache=fs.existsSync(path.join(root,LOOKUPS))?read(LOOKUPS):{about:'',orgs:{}};
     cache.about='What lda.gov (lobbying filings, 2024–2025) and USAspending.gov (federal contracts, fiscal 2024–2025) show for each organization on sitting members\' disclosures. Written by npm run conflicts:lookup; read when the matches are reviewed (data/conflict-reviews.json).';
-    for(const m of members)for(const it of m.items){
-      const org=orgOf(it.x);if(!org||cache.orgs[org]||notAnInterest(org,nameOf[m.id]||m))continue;
-      process.stdout.write(`  ${org} … `);
+    const onlyArg=process.argv.indexOf('--only'),only=onlyArg>0?new Set(String(process.argv[onlyArg+1]||'').split(',').filter(Boolean)):null;
+    const todo=[...new Set(members.filter(m=>!only||only.has(m.id)).flatMap(m=>m.items.map(it=>orgOf(it.x)).filter(org=>org&&!cache.orgs[org]&&!notAnInterest(org,nameOf[m.id]||m))))];
+    const save=()=>fs.writeFileSync(path.join(root,LOOKUPS),JSON.stringify(cache,null,1)+'\n');
+    // Saved as it goes: Ctrl+C keeps what's looked up, and the next run goes on from there.
+    process.on('SIGINT',()=>{save();console.log(`\nStopped: saved ${Object.keys(cache.orgs).length} organizations looked up. Run it again to go on.`);process.exit(130);});
+    console.log(`${members.length} members with a report and committee seats; ${todo.length} organizations to look up (${Object.keys(cache.orgs).length} already looked up).`);
+    let n=0,failed=0;
+    for(const org of todo){n++;
+      process.stdout.write(`  [${n}/${todo.length}] ${org.slice(0,70)} … `);
       try{cache.orgs[org]={lobbying:await ldaLookup(org,[2024,2025]),contracts:await contractsLookup(org,'2023-10-01','2025-09-30'),checked:new Date().toISOString().slice(0,10)};console.log('ok');}
-      catch(e){console.log(e.message);}
+      catch(e){failed++;console.log(e.message);}
+      if(n%10===0)save();
     }
-    fs.writeFileSync(path.join(root,LOOKUPS),JSON.stringify(cache,null,1)+'\n');
-    for(const m of members){
+    save();
+    console.log(`Looked up ${n-failed} of ${todo.length}${failed?`; ${failed} failed (run again to retry them)`:''}. Then: npm run conflicts:propose`);
+    if(process.argv.includes('--show'))for(const m of members.filter(m=>!only||only.has(m.id))){
       const issues=new Set(m.committees.flatMap(c=>COMMITTEE_ISSUES[c]||[]));
       console.log(`\n== ${m.name} (${m.committees.join(', ')}) handles: ${[...issues].join(' ')||'no issue codes'}`);
       for(const it of m.items){const org=orgOf(it.x),skip=notAnInterest(org,nameOf[m.id]||m),L=cache.orgs[org];
         const hit=L?.lobbying?.issues?.filter(c=>issues.has(c))||[];
         console.log(`  ${it.year} ${it.kind.padEnd(10)} ${org.slice(0,60).padEnd(60)} ${skip?`— ${skip}`:L?`lobbies: ${L.lobbying?.match?`${L.lobbying.issues.join(' ')||'(no issues)'}${hit.length?` ← ${hit.join(' ')}`:''}`:'not found'}; contracts: ${L.contracts?Object.keys(L.contracts.agencies).join('; '):'none'}`:'not looked up'}`);}
     }
+  }
+  if(mode==='propose'){
+    const lookups=(fs.existsSync(path.join(root,LOOKUPS))?read(LOOKUPS):{orgs:{}}).orgs,reviews=fs.existsSync(path.join(root,REVIEWS))?read(REVIEWS):{people:{}};
+    const people=proposeAll(members,lookups,reviews,committees.committees||{},id=>nameOf[id]);
+    const all=Object.values(people),orgs=all.flatMap(p=>Object.values(p.orgs));
+    fs.writeFileSync(path.join(root,PROPOSALS),JSON.stringify({about:'Proposed Conflicts of Interest decisions, from the lookups (npm run conflicts:propose): an organization is interested when it lobbied in 2024–2025 on an issue one of the member\'s committees handles, or holds federal contracts from an agency one oversees (Appropriations: any). Whether it works in an industry they oversee isn\'t decided automatically. Nothing here counts until approved (npm run conflicts:approve), which moves a member\'s proposals into data/conflict-reviews.json. pending: organizations not looked up yet.',
+      built:new Date().toISOString().slice(0,10),people},null,1)+'\n');
+    const ready=all.filter(p=>!p.pending.length).length;
+    console.log(`${all.length} members with organizations to decide: ${ready} ready to approve, ${all.length-ready} with some not looked up yet.`);
+    console.log(`Proposed: ${orgs.filter(d=>d.interested).length} interested, ${orgs.filter(d=>!d.interested).length} not, of ${orgs.length} organizations.`);
+    for(const [id,p] of Object.entries(people))for(const [org,d] of Object.entries(p.orgs))if(d.interested)console.log(`  ${p.name}: ${org} — ${d.why}`);
+    console.log(`Wrote ${PROPOSALS}. Approve with npm run conflicts:approve -- <ids> (or --all), then npm run conflicts:build.`);
+  }
+  if(mode==='approve'){
+    const proposals=read(PROPOSALS),reviews=fs.existsSync(path.join(root,REVIEWS))?read(REVIEWS):{about:'',people:{}};
+    const args=process.argv.slice(3).filter(a=>!a.startsWith('--')).flatMap(a=>a.split(',')).filter(Boolean);
+    const ids=process.argv.includes('--all')?Object.keys(proposals.people||{}):args;
+    if(!ids.length){console.log('Name the members to approve (npm run conflicts:approve -- ossoff,booker) or --all.');process.exit(1);}
+    const today=new Date().toISOString().slice(0,10),{moved,skipped}=approve(reviews,proposals,ids,today);
+    reviews.reviewedAt=today;
+    fs.writeFileSync(path.join(root,REVIEWS),JSON.stringify(reviews,null,1)+'\n');fs.writeFileSync(path.join(root,PROPOSALS),JSON.stringify(proposals,null,1)+'\n');
+    console.log(`Approved ${moved.length} member${moved.length===1?'':'s'}${skipped.length?`; not moved: ${skipped.join('; ')}`:''}. Then: npm run conflicts:build`);
   }
   if(mode==='build'){
     const reviews=read(REVIEWS),out={about:'Each sitting member\'s outside income, board seats, agreements, gifts and paid travel from their latest annual reports, with the reviewed matches of the organizations on them: an organization is interested when it lobbies on an issue one of their committees handles, works in an industry their committees oversee, or holds contracts from an agency their committees oversee. Written by npm run conflicts:build from data/conflict-reviews.json.',built:new Date().toISOString().slice(0,10),people:{}};

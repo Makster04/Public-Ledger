@@ -1,9 +1,13 @@
-// Each full profile's latest annual financial disclosures, as the refresh read them (src/schedules.mjs), into
+// Every sitting member's latest annual financial disclosures (since Nov. 28, 2026; the full profiles only before), as the
+// refresh read them (src/schedules.mjs), into
 // data/disclosure-items.json, for the Conflicts of Interest matching (scripts/match-conflicts.mjs): earned income,
 // positions held outside government, agreements, gifts and travel paid by others, from the newest two reports that were
 // read (gifts and travel count over the latest two report years). Run on the computer that runs npm start, where the
-// refresh keeps the reports (.local/records.sqlite). It reads only; nothing is fetched.
-//   npm run disclosures:export
+// refresh keeps the reports (.local/records.sqlite). It reads only; nothing is fetched. Whose: the full profiles and every
+// senator and House member in data/config.json who is in office (the House members' reports are read by the refresh, the
+// senators' by npm run efd:fetch and efd:import).
+//   npm run disclosures:export                  everyone; lists the full profiles not read yet, counts the rest by reason
+//   npm run disclosures:export -- --list-all    lists everyone not read yet
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
@@ -26,6 +30,13 @@ export function readReports(payloads){
   }
   return out;
 }
+// Whose reports to export: the full profiles (not the president), then everyone in office in data/config.json, once each.
+export function whoToExport(research,config){
+  const out=[],seen=new Set(),add=(p,full)=>{if(!p?.id||seen.has(p.id))return;seen.add(p.id);out.push({id:p.id,name:p.name||p.id,chamber:p.chamber||null,full});};
+  for(const p of [...(research?.members||[]),...(research?.cands||[]),...(research?.featured||[])].filter(p=>!p.office))add(p,true);
+  for(const p of config?.people||[])if(p.inOffice&&!p.office)add(p,false);
+  return out;
+}
 // Why a person has no report read: nothing saved yet; House reports saved by an earlier reader, waiting to be read again;
 // or reports read whose text came out empty (filed on paper, or a file the reader can't open).
 export function whyMissing(payloads,kind){
@@ -40,7 +51,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const dbFile=path.join(root,'.local','records.sqlite');
   if(!fs.existsSync(dbFile)){console.log('No local database yet: run npm start once first.');process.exit(1);}
   const research=JSON.parse(fs.readFileSync(path.join(root,'public','research.json'),'utf8'));
-  const full=[...research.members,...research.cands,...(research.featured||[])].filter(p=>!p.office);
+  const config=JSON.parse(fs.readFileSync(path.join(root,'data','config.json'),'utf8')),everyone=whoToExport(research,config);
   const db=new DatabaseSync(dbFile,{readOnly:true});
   const rows=db.prepare("SELECT j.kind,j.subject,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN ('net-worth-house','net-worth-senate')").all();
   const queued=db.prepare("SELECT COUNT(*) n FROM jobs WHERE kind='net-worth-house' AND next_due<=?").get(Date.now()).n;
@@ -52,21 +63,25 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       :j.status==='running'||j.page>0?`; being read now (report ${j.page+1})`:wait>0?`; due in ${wait} min`:'; due now, in the queue';};
   const by=new Map(),kindOf=new Map();
   for(const r of rows){try{(by.get(r.subject)||by.set(r.subject,[]).get(r.subject)).push(JSON.parse(r.payload));kindOf.set(r.subject,r.kind);}catch{}}
-  const people={},missing=[];
-  for(const p of full){
+  const people={},missing=[],reasons={};
+  for(const p of everyone){
     const reports=readReports(by.get(p.id)||[]);
-    if(reports.length)people[p.id]={name:p.name,chamber:p.chamber,reports};else{const why=whyMissing(by.get(p.id)||[],kindOf.get(p.id));missing.push(`${p.id} (${why}${why==='waiting to be read again'?stateOf(p.id):''})`);}
+    if(reports.length){people[p.id]={name:p.name,chamber:p.chamber,reports};continue;}
+    const why=whyMissing(by.get(p.id)||[],kindOf.get(p.id));reasons[why]=(reasons[why]||0)+1;
+    if(p.full||process.argv.includes('--list-all'))missing.push(`${p.id} (${why}${why==='waiting to be read again'?stateOf(p.id):''})`);
   }
   db.close();
   // How far the refresh has got reading the House reports again (each House member's newest report).
   const house=rows.filter(r=>r.kind==='net-worth-house').map(r=>{try{return JSON.parse(r.payload);}catch{return null;}}).filter(Boolean);
   const current=house.filter(p=>(p.schedules?.v||0)>=SCHEDULES_READER).length;
   console.log(`House reports read by the current reader: ${current} of ${house.length} members (${queued} House checks still due; the House Clerk allows about 10 pages a minute).`);
-  const out={about:'Each full profile\'s latest annual financial disclosures as the refresh read them (src/schedules.mjs): earned income, positions held outside government, agreements, gifts and paid travel, from the newest two reports read. Written by npm run disclosures:export; matched by scripts/match-conflicts.mjs.',
+  const out={about:'Every sitting member\'s (and each full profile\'s) latest annual financial disclosures as the refresh read them (src/schedules.mjs): earned income, positions held outside government, agreements, gifts and paid travel, from the newest two reports read. Written by npm run disclosures:export; matched by scripts/match-conflicts.mjs.',
     built:new Date().toISOString().slice(0,10),people};
   fs.writeFileSync(path.join(root,'data','disclosure-items.json'),JSON.stringify(out,null,1)+'\n');
   const n=Object.values(people).reduce((t,x)=>t+PARTS.reduce((u,k)=>u+(x.reports[0]?.[k]?.length||0),0),0);
-  console.log(`${Object.keys(people).length} of ${full.length} full profiles have a report whose parts were read (${n} items in the latest reports).`);
-  if(missing.length)console.log(`Not read yet:\n  ${missing.join('\n  ')}`);
+  const full=everyone.filter(p=>p.full),fullRead=full.filter(p=>people[p.id]).length;
+  console.log(`${Object.keys(people).length} of ${everyone.length} people have a report whose parts were read (${fullRead} of ${full.length} full profiles; ${n} items in the latest reports).`);
+  if(Object.keys(reasons).length)console.log(`Not read yet, by reason: ${Object.entries(reasons).sort((a,b)=>b[1]-a[1]).map(([w,k])=>`${k} ${w}`).join('; ')}.`);
+  if(missing.length)console.log(`Not read yet${process.argv.includes('--list-all')?'':' (full profiles; --list-all for everyone)'}:\n  ${missing.join('\n  ')}`);
   console.log('Wrote data/disclosure-items.json.');
 }

@@ -29,7 +29,7 @@
 
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 
-- **Outside Income & Conflicts (35%) and Gifts & Travel (20%)** cover only the 13 sitting members whose reports are read and reviewed. The rest need their reports read; Lobbyist Overlap, Contracts for Donors and Foreign Agent aren't matched yet.
+- **Outside Income & Conflicts (35%) and Gifts & Travel (20%)** cover only the 13 sitting members whose reports are read and reviewed. Since Nov. 28, 2026, the export takes every senator and House member in office whose reports the refresh has read, and each organization on them gets a proposed decision from its lookup (lobbying on an issue their committees handle, or contracts from an agency they oversee; whether it works in an industry they oversee is left for review), which counts once approved. Lobbyist Overlap, Contracts for Donors and Foreign Agent aren't matched yet. A grade also needs the legal-record review, which only the full profiles have.
 - **Committee sectors** (which industries each committee oversees, for Trade Conflicts) are a draft that needs review.
 - **Senate annual reports' due and filed dates** for the last 3 years, for Stock Disclosure Dodger's annual part.
 - **Legal cases:**
