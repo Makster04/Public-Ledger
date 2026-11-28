@@ -76,9 +76,34 @@ function buildNews(){
     else console.log(`Latest updates rebuilt. ${String(stdout).trim().split('\n').at(-1)||''}`);
   });
 }
+// Conflicts of Interest, kept up to date with no one reviewing (since Nov. 28, 2026): once a day, every sitting member's
+// annual reports the refresh has read (scripts/export-disclosures.mjs), each organization on them not looked up yet
+// checked on lda.gov and USAspending.gov (scripts/match-conflicts.mjs lookup, which goes on from where it stopped), and
+// public/conflicts.json rebuilt with the automatic decisions (match-conflicts.mjs build), which the grades read as soon
+// as it's written. One after another, in their own processes; .local/conflicts-run.json keeps it to once a day.
+const CONFLICTS_STAMP=path.join(root,'.local','conflicts-run.json');
+let conflictsRunning=false;
+const runScript=(args,timeout)=>new Promise(done=>execFile(process.execPath,['--no-warnings=ExperimentalWarning',...args],{cwd:root,timeout,maxBuffer:64*1024*1024},(error,stdout)=>done({error,out:String(stdout||'').trim()})));
+const lastLine=x=>x.out.split('\n').filter(Boolean).at(-1)||'';
+async function updateConflicts(){
+  const today=new Date().toISOString().slice(0,10);
+  if(conflictsRunning)return;
+  try{if(JSON.parse(await fs.readFile(CONFLICTS_STAMP,'utf8')).date===today)return;}catch{}
+  conflictsRunning=true;
+  try{
+    const exp=await runScript([path.join(root,'scripts','export-disclosures.mjs')],20*60_000);
+    if(exp.error){console.error('Disclosure export failed:',String(exp.error.message).split('\n')[0]);return;}
+    const look=await runScript([path.join(root,'scripts','match-conflicts.mjs'),'lookup'],6*60*60_000);
+    if(look.error)console.error('Conflict lookups stopped for today (they go on tomorrow):',lastLine(look)||String(look.error.message).split('\n')[0]);
+    const build=await runScript([path.join(root,'scripts','match-conflicts.mjs'),'build'],10*60_000);
+    if(build.error)console.error('Conflicts of Interest rebuild failed:',String(build.error.message).split('\n')[0]);
+    else console.log(`Conflicts of Interest rebuilt. ${lastLine(build)}`);
+    await fs.writeFile(CONFLICTS_STAMP,JSON.stringify({date:today}));
+  }finally{conflictsRunning=false;}
+}
 server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`Port ${port} is already in use. If Public Ledger is already running, open http://127.0.0.1:${port}. Otherwise choose another PORT in .dev.vars.`:error.message);db.close();process.exit(1);});
 server.listen(port,'127.0.0.1',()=>{
   console.log(`Public Ledger is ready at http://127.0.0.1:${port}\nOfficial records refresh while this process is running. Stop with Ctrl+C.`);
-  if(process.env.LOCAL_AUTORUN!=='false'){void tick();timer=setInterval(tick,60_000);buildNews();newsTimer=setInterval(()=>{buildNews();checkLinks();},60*60_000);setTimeout(checkLinks,5*60_000);}
+  if(process.env.LOCAL_AUTORUN!=='false'){void tick();timer=setInterval(tick,60_000);buildNews();newsTimer=setInterval(()=>{buildNews();checkLinks();updateConflicts();},60*60_000);setTimeout(checkLinks,5*60_000);setTimeout(updateConflicts,10*60_000);}
 });
 process.on('SIGINT',()=>{clearInterval(timer);clearInterval(newsTimer);server.close(()=>{db.close();process.exit(0);});});

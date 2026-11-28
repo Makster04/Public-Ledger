@@ -28,8 +28,6 @@
     "pacs:lines": "node --env-file-if-exists=.dev.vars scripts/fill-pac-lines.mjs",
     "conflicts:lookup": "node scripts/match-conflicts.mjs lookup",
     "conflicts:build": "node scripts/match-conflicts.mjs build",
-    "conflicts:propose": "node scripts/match-conflicts.mjs propose",
-    "conflicts:approve": "node scripts/match-conflicts.mjs approve",
     "disclosures:export": "node --no-warnings=ExperimentalWarning scripts/export-disclosures.mjs",
     "corporate:pacs": "node --env-file-if-exists=.dev.vars scripts/build-corporate-pacs.mjs",
     "superpacs:races": "node scripts/build-super-pac-races.mjs",
