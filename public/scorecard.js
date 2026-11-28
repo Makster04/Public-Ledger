@@ -114,15 +114,16 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     ${text('PERCENT · FROM REVIEWED RECORDS',R.x+530,280,{size:11,color:SUB,width:40,family:MONO,anchor:'end'})}
     ${gradeRows}`;
   // Row 2, left: the bonuses and the pledges and bills, as a checklist (✓ earned, ✕ not, ? a record not read yet).
-  const MARK={yes:['#18a35f','M-5 0l3.5 3.5L5-4'],no:['#e0535f','M-4-4l8 8M4-4l-8 8'],waiting:['#8b95a5','']};
+  // (partly: a badge with two halves, one earned: No corporate PAC or lobby money, since Nov. 28, 2026, shows ½ and "1 OF 2")
+  const MARK={yes:['#18a35f','M-5 0l3.5 3.5L5-4'],no:['#e0535f','M-4-4l8 8M4-4l-8 8'],waiting:['#8b95a5',''],partly:['#c98500','']};
   const lists=(Array.isArray(model.lists)?model.lists:[]).slice(0,2);
   let ly=612;
   const listSvg=lists.map(x=>{
     const head=text(String(x.title||'').toUpperCase(),L.x+22,ly,{size:18,color:PAPER,weight:700,width:30,max:1,family:SANS});ly+=16;
     const items=(Array.isArray(x.items)?x.items:[]);
     const rows=items.length?items.map(it=>{
-      const [c,d]=MARK[it.status]||MARK.no,label=(it.emoji?it.emoji+' ':'')+String(it.label||'').toUpperCase(),LW=it.emoji?34:30,n=lines(label,LW,2).length,y=ly+18;ly+=n*17+10;
-      return `<circle cx="${L.x+34}" cy="${y-5}" r="11" fill="${c}"/>${d?`<path d="${d}" transform="translate(${L.x+34} ${y-5})" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',L.x+34,y,{size:14,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}
+      const [c,d]=MARK[it.status]||MARK.no,label=(it.emoji?it.emoji+' ':'')+String(it.label||'').toUpperCase()+(it.parts&&it.status==='partly'?` · ${it.parts.filter(p=>p.status==='yes').length} OF ${it.parts.length}`:''),LW=it.emoji?34:30,n=lines(label,LW,2).length,y=ly+18;ly+=n*17+10;
+      return `<circle cx="${L.x+34}" cy="${y-5}" r="11" fill="${c}"/>${d?`<path d="${d}" transform="translate(${L.x+34} ${y-5})" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`:text(it.status==='partly'?'½':'?',L.x+34,y,{size:14,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}
         ${text(label,L.x+56,y,{size:13,color:it.status==='yes'?PAPER:SUB_DARK,weight:it.status==='yes'?700:400,width:LW,max:2,lineHeight:17,family:MONO})}`;
     }).join(''):(ly+=34,text(x.empty||'None on file',L.x+22,ly-8,{size:13,color:SUB_DARK,width:40,family:MONO}));
     ly+=24;return head+rows;
@@ -180,7 +181,7 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     ${F?`${text(`PUBLIC LEDGER · ${!model.reviewedAt?'':/not reviewed/i.test(model.reviewedAt)?'RESEARCH NOT REVIEWED YET':'RESEARCH REVIEWED: '+String(model.reviewedAt).toUpperCase()}`,28,by+32,{size:12,color:INK,weight:700,width:70,family:MONO})}${text('A GRADE IS NOT A CLEARANCE. MISSING DATA IS NOT ZERO.',972,by+32,{size:12,color:SUB,width:70,family:MONO,anchor:'end'})}`
       :`${text('PUBLIC LEDGER',28,by+32,{size:13,color:INK,weight:700,width:30,family:MONO})}${text('FOLLOW THE EVIDENCE',972,by+32,{size:13,color:SUB,width:30,family:MONO,anchor:'end'})}`}`;
   const desc=[`Raised ${amount(model.raised)}, cash on hand ${amount(model.cash)}, spent ${amount(model.spent)}`,...(wealth.length?[wealth.map(x=>`${x.label} ${x.value||'Not read yet'}`).join(', ')]:[]),
-    ...lists.map(x=>`${x.title}: ${(x.items||[]).map(it=>`${it.label} (${it.status==='yes'?'yes':it.status==='waiting'?'not read yet':'no'})`).join(', ')||x.empty||'none on file'}`),
+    ...lists.map(x=>`${x.title}: ${(x.items||[]).map(it=>`${it.label} (${it.status==='yes'?'yes':it.status==='partly'?`${it.parts.filter(p=>p.status==='yes').length} of ${it.parts.length}: ${it.why}`:it.status==='waiting'?'not read yet':'no'})`).join(', ')||x.empty||'none on file'}`),
     ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+pct1(g.value)}`)].join('. ');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
     <title id="title">${xml(name)} — Public Ledger report card</title>

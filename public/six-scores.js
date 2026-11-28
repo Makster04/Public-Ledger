@@ -182,6 +182,25 @@ export function tradesIn(trades,start,end){
 // $245,500 read got the no-corporate-PAC bonus).
 // lobby: the tracked lobbies' money to them this cycle, as Tracking Lobby Money shows it ({status: 'took', 'none' or
 // 'waiting', total, took: [{name, total}]}, lobbySummary), for the No lobby money bonus (Nov. 26, 2026).
+// The bonuses as the pages show them (Nov. 28, 2026): No corporate PAC money and No lobby money as one badge, "No corporate
+// PAC or lobby money", worth what its halves are (+5 each, as before: the points don't change). Its status: yes (both
+// halves), partly (one), waiting (neither yet, with one not read) or no; parts: the two halves, each with its own status.
+const BONUS_GROUP={money:'No corporate PAC or lobby money'};
+export function bonusBadges(items){
+  const out=[];
+  for(const b of items||[]){
+    if(!b.group||!BONUS_GROUP[b.group]){out.push(b);continue;}
+    let g=out.find(x=>x.group===b.group&&x.parts);
+    if(!g){g={group:b.group,label:BONUS_GROUP[b.group],max:0,points:0,parts:[]};out.push(g);}
+    g.parts.push(b);g.max+=b.max||0;g.points+=b.points||0;
+  }
+  for(const g of out.filter(x=>x.parts)){
+    const st=g.parts.map(p=>p.status),n=st.filter(s=>s==='yes').length;
+    g.status=n===st.length?'yes':n?'partly':st.includes('waiting')?'waiting':'no';
+    g.why=g.parts.map(p=>`${p.label}: ${p.status==='yes'?'yes':p.status==='waiting'?'not read yet':'no'}`).join(' · ');
+  }
+  return out;
+}
 export function lobbySummary(list){
   if(!Array.isArray(list)||!list.length)return null;
   const took=list.filter(x=>x.status==='took').map(x=>({name:x.name,total:Number(x.total)||0})).sort((a,b)=>b.total-a.total);
@@ -239,11 +258,11 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   const pl=pledges||[];
   // Every bonus is listed, earned or not, with why: status 'yes', 'no' or 'waiting' (on a record not read yet).
   const bonusItems=[
-    {label:'No corporate PAC money',max:UNBOUGHT.bonus.noCorporatePac,status:!pacKnown?'waiting':corporate===0?'yes':'no',
+    {label:'No corporate PAC money',group:'money',max:UNBOUGHT.bonus.noCorporatePac,status:!pacKnown?'waiting':corporate===0?'yes':'no',
       why:thin?'not enough of their PAC money read yet':!pacKnown?'their PAC money isn\'t sorted by type yet':corporate===0?(pacTotal?'none of their PAC money is from corporate PACs':'no PAC money at all'):`about $${Math.round(corporate).toLocaleString('en-US')} from corporate PACs`},
     // No lobby money (Nov. 26, 2026): none from any tracked lobby this cycle, neither a PAC check nor a gift routed through
     // one; the corporate PAC pledge moved to Pledges and bills.
-    {label:'No lobby money',max:UNBOUGHT.bonus.noLobby,status:!lobby||lobby.status==='waiting'?'waiting':lobby.status==='took'?'no':'yes',
+    {label:'No lobby money',group:'money',max:UNBOUGHT.bonus.noLobby,status:!lobby||lobby.status==='waiting'?'waiting':lobby.status==='took'?'no':'yes',
       why:!lobby||lobby.status==='waiting'?'not every lobby tracker read yet':lobby.status==='took'?`$${Math.round(lobby.total).toLocaleString('en-US')} from ${lobby.took.map(x=>`the ${x.name}`).join(', ')} this cycle`:'none from any tracked lobby this cycle'},
     {label:'Holds no individual stocks',max:UNBOUGHT.bonus.noStocks,status:held.value==null?'waiting':!held.blindTrust&&held.count===0?'yes':'no',
       why:held.value==null?'their annual disclosure isn\'t read yet':held.blindTrust?'holdings are in a blind trust':held.count===0?'none on their latest report':`${held.count} on their latest report`}];

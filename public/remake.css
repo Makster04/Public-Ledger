@@ -1106,6 +1106,10 @@ input, select { accent-color: var(--accent); }
 .st-items li > span:first-child { flex: 0 0 12px; color: var(--muted); }
 .st-items li.yes > span:first-child { color: var(--good); }
 .st-items li.no > span:first-child { color: var(--crit); }
+.st-items li.partly > span:first-child { color: var(--warn); }
+/* The No corporate PAC or lobby money badge's two halves, under it (Nov. 28, 2026). */
+.st-items .st-sub { margin: 3px 0 2px; padding-left: 2px; font-size: .95em; }
+.st-items .st-sub li { padding: 1px 0; }
 .legislation-panels { display: grid; gap: 22px; }
 .legislation-panel { padding: 20px 22px; }
 .legislation-panel-head { margin-bottom: 14px; }
