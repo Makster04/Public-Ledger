@@ -28,7 +28,7 @@ import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
-import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,lobbySummary,aboveBoard,leanLabel,PEOPLE_FIRST,tradeCoverage} from './six-scores.js';
+import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,lobbySummary,bonusBadges,aboveBoard,leanLabel,PEOPLE_FIRST,tradeCoverage} from './six-scores.js';
 import {METHOD_TREE,BUILT_SECTIONS,topicOf,blurbOf} from './method-tree.js';
 import {keyQuestions,QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from './results.js';
@@ -1162,7 +1162,7 @@ function bindProfileActions(s,pane){
     const sp=s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
     const inp=s.office?null:lookoutInputs(s,d,'this',sp||undefined);
     const extras={spent:c?.disbursements,wealth:s.office?null:wealthCard(d?wealthOf(s,d):'offline'),
-      lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:(u.pledgeItems||[]).map(p=>({...p,emoji:ISSUE_ICON[PLEDGE_CATEGORY[p.kind]]||null})),empty:'No pledges or bills on file'}]:null,
+      lists:u?[{title:'Bonuses',items:bonusBadges(u.bonusItems||[])},{title:'Pledges and bills',items:(u.pledgeItems||[]).map(p=>({...p,emoji:ISSUE_ICON[PLEDGE_CATEGORY[p.kind]]||null})),empty:'No pledges or bills on file'}]:null,
       funding:c?fundingParts(c,d?.sizes):null,
       trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,card:TRACKER[x.key].card||null,emoji:TRACKER[x.key].emoji||null,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
     openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=parseFloat(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
@@ -1659,7 +1659,11 @@ function unboughtInputs(s,d=null){
 const inCongressNow=s=>!s.office&&!s.elect&&!!s.bioguide&&(SITTING.S.has(s.bioguide)||SITTING.H.has(s.bioguide));
 function unboughtBreakdown(x){
   const max=Math.max(1,...x.parts.map(p=>Math.abs(p.points||0)));
-  const items=p=>p.items?`<ul class="st-items">${p.items.map(b=>`<li class="${b.status}"><span aria-hidden="true">${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'}</span><span><b>${esc(b.label)}</b>${b.status==='yes'?` ${spct1(b.points)}`:''} <span class="muted">${esc(b.status==='waiting'?'waiting: ':'')}${esc(b.why)}</span></span></li>`).join('')}</ul>`:`<div class="small muted">${esc(p.note||'')}</div>`;
+  const mark=st=>st==='yes'?'✓':st==='partly'?'½':st==='waiting'?'…':'✕';
+  const line=b=>`<li class="${b.status}"><span aria-hidden="true">${mark(b.status)}</span><span><b>${esc(b.label)}</b>${b.status==='yes'?` ${spct1(b.points)}`:''} <span class="muted">${esc(b.status==='waiting'?'waiting: ':'')}${esc(b.why)}</span></span></li>`;
+  // (No corporate PAC money and No lobby money as one badge, since Nov. 28, 2026: its halves under it, +5 each as before)
+  const badge=g=>`<li class="${g.status} st-badge"><span aria-hidden="true">${mark(g.status)}</span><span><b>${esc(g.label)}</b> ${g.status==='yes'?spct1(g.points):g.status==='waiting'?'<span class="muted">waiting</span>':`${g.points?spct1(g.points):'<span class="muted">+0.0%</span>'} <span class="muted">of ${spct1(g.max).replace(/^\+/,'')}</span>`}<ul class="st-items st-sub">${g.parts.map(line).join('')}</ul></span></li>`;
+  const items=p=>p.items?`<ul class="st-items">${bonusBadges(p.items).map(b=>b.parts?badge(b):line(b)).join('')}</ul>`:`<div class="small muted">${esc(p.note||'')}</div>`;
   return stTable(['Part','Adds or takes off',''],x.parts.map(p=>[`${esc(p.label)}${items(p)}`,p.points==null?'<span class="muted">waiting</span>':`<b class="${p.points<0?'st-neg':p.points>0?'st-pos':''}">${spct1(p.points)}</b>${p.floor?' <span class="muted">so far</span>':''}`,stBar(p.points,max)]),'st-unbought');
 }
 // "How it's calculated" for Big Money Independence, laid out as IntegrityIndex.us lays out its method: the formula, what goes in, the
