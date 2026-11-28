@@ -142,7 +142,10 @@ test('the file the page reads: every House and Senate election from 2018 to 2026
   const d=JSON.parse(read('public/midterm-trackers.json'));
   assert.deepEqual(ELECTIONS,[2026,2024,2022,2020,2018],'presidential years included (approved 2026-11-26)');
   assert.deepEqual(Object.keys(d.years).sort(),['2018','2020','2022','2024','2026']);
-  for(const y of ['2018','2020'])assert.ok(Object.values(d.years[y].trackers).every(t=>t.kind==='funded'),`no tracker had its own super PAC in ${y}; the five funded others`);
+  // No lobby had its own super PAC in 2018 or 2020 (the five funded others); the cause groups' own did (Nov. 28, 2026).
+  for(const y of ['2018','2020'])assert.ok(Object.entries(d.years[y].trackers).every(([k,t])=>t.kind===(['union','environment','peace'].includes(k)?'own':'funded')),`${y}: the lobbies funded, the cause groups their own`);
+  for(const k of ['union','environment','peace'])for(const y of ['2018','2020','2022','2024','2026'])assert.equal(d.years[y].trackers[k]?.kind,'own',`${y} ${k}`);
+  const env=d.years['2026'].trackers.environment;assert.ok(env.for+env.against>60e6&&env.pacs[0].name==='LCV Victory Fund','the LCV Victory Fund spent most');
   assert.equal(d.years['2022'].results,'fec');assert.equal(d.years['2020'].results,'fec');
   assert.ok(['fec','legislators'].includes(d.years['2024'].results),'2024: the FEC\'s results, or who took office in January 2025');
   for(const k of ['aipac','crypto'])assert.equal(d.years['2024'].trackers[k]?.kind,'own',`2024 ${k}: United Democracy Project and Fairshake spent`);
@@ -160,7 +163,8 @@ test('where the cards show: the top of the Super PACs page, before the cycle\'s 
   assert.match(app,/<div id="sp-midterms"><\/div><div id="sp-body">/);
   assert.match(app,/renderMidtermTrackers\(\);/);
   assert.ok(app.includes('role="group" aria-label="Election">${[...years].reverse().map('),'oldest on the left, 2026 on the right (the page opens on the newest)');assert.match(app,/The trackers' super PACs in the \$\{mtYear\} elections/);
-  assert.match(app,/const order=orderTrackers\(TRACKERS,Y,P,mtSort\);/,'in the order picked, A to Z by default');assert.match(app,/<select id="mt-sort"/);
+  assert.match(app,/const order=orderTrackers\(list,Y,P,mtSort\);/,'in the order picked, A to Z by default');
+  assert.ok(app.includes('<div class="mt-grid">${midtermCardsHTML(d,mtYear,LOBBIES)}</div>')&&app.includes('<h3 class="mt-group">Cause groups</h3>')&&app.includes('${midtermCardsHTML(d,mtYear,CAUSES)}'),'the lobbies, then the cause groups (Nov. 28, 2026)');assert.match(app,/<select id="mt-sort"/);
   assert.match(app,/from '\.\/midterm-trackers\.js'/);
   assert.match(app,/<details class="mt-more"><summary><span class="kw-open"><\/span><\/summary>\$\{list\}<\/details>/,'Open at the bottom of each card lists its super PACs');
   assert.match(app,/'Super PACs it funds':'Its own super PACs'/);assert.match(app,/<h4>Super PACs it funded<\/h4>/);assert.match(app,/People who work for its companies gave/);

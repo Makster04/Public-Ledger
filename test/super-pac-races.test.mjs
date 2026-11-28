@@ -42,7 +42,7 @@ test('help to win: one person under two IDs, top-two primaries, and nothing with
 
 test('the races file: each tracker\'s super PACs, Stevens and Gallrein (AIPAC), Husted and Brown (crypto), Lasher and Bores (Big Tech + AI)',()=>{
   assert.ok(races.through>='2026-10-01'&&races.cycle===2026);
-  assert.deepEqual([...new Set(Object.values(races.spenders).map(s=>s[1]))].sort(),['aipac','crypto','tech']);
+  assert.deepEqual([...new Set(Object.values(races.spenders).map(s=>s[1]))].sort(),['aipac','crypto','environment','peace','tech','union'],'the lobbies\' super PACs and the cause groups\' (Nov. 28, 2026)');
   for(const [sp,c,so,e,a] of races.rows){assert.ok(races.spenders[sp]&&races.cands[c],`${sp} ${c}`);assert.ok(['S','O'].includes(so)&&ELECTION_LABEL[e]&&a!==0);}
   const h=(k,ids)=>helpToWin(TRACKER[k],races,ids);
   const stevens=h('aipac',['H8MI11254','S6MI00426']);

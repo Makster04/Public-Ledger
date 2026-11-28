@@ -27,6 +27,7 @@
 // A lookout counts what the campaign took: PAC checks, and gifts the group routed to it. Employees' own gifts are shown
 // beside it, and super PAC spending only in the tracker: a super PAC spends on its own, often against the candidate.
 import {SUPER_PACS} from './industries.js';
+import {LABOR_PACS,NOT_UNIONS} from './labor-pacs.js';
 
 const P=s=>new RegExp(s);
 export const TRACKERS=[
@@ -136,19 +137,56 @@ export const TRACKERS=[
       'AMERICAN BANKERS ASSOC','BANK POLICY INSTITUTE','CONSUMER BANKERS ASSOC','SECURITIES INDUSTRY AND FINANCIAL MARKETS|\\bSIFMA\\b','INVESTMENT COMPANY INSTITUTE','AMERICAN INVESTMENT COUNCIL','MANAGED FUNDS ASSOC','FUTURES INDUSTRY'].map(P),
     routed:[],superPacs:[],industries:[],
     companies:['JPMorgan Chase','Goldman Sachs','Morgan Stanley','Bank of America','Citigroup','Wells Fargo','U.S. Bancorp','PNC','Truist','Capital One','BNY','State Street','Northern Trust','Santander US','BlackRock','Vanguard','Fidelity','Invesco','Edward Jones','LPL Financial','Robinhood','Carlyle','Citadel Securities','Nasdaq','Intercontinental Exchange (NYSE)','CME Group','Cboe','Visa','Mastercard','American Express','Discover','Synchrony','Ally'],
-    groups:['American Bankers Association (BankPAC)','Bank Policy Institute','Consumer Bankers Association','SIFMA','Investment Company Institute','American Investment Council (private equity)','Managed Funds Association (hedge funds)','Futures Industry Association']}];
+    groups:['American Bankers Association (BankPAC)','Bank Policy Institute','Consumer Bankers Association','SIFMA','Investment Company Institute','American Investment Council (private equity)','Managed Funds Association (hedge funds)','Futures Industry Association']},
+  // ---- Cause groups (approved 2026-11-28): followed the same way, shown in their own "Cause groups" section with a gray
+  // ● for "took some" (not a mark against anyone), and not part of the No lobby money bonus, the report card or the ticker.
+  // Committees checked by hand from the FEC's committee and independent-expenditure files, 2016–2026.
+  // kinds: a PAC of this kind counts too (the FEC's org type, where a script knows it: 'labor' is a labor organization's);
+  // notIds: committees of that kind that never count (labeled so by the FEC, but not one).
+  {key:'union',cause:true,icon:'👷🎁',emoji:'👷',name:'Pro-Union',card:'Pro-Union',long:'Pro-Union (labor unions)',lineLabel:'labor unions',
+    about:'Labor unions: every PAC the FEC lists with a labor organization as its connected organization (AFSCME, SEIU, the Teamsters, the Machinists, the building trades, the teachers\' and nurses\' unions and hundreds more), and the super PACs and other committees unions run to spend for and against candidates.',
+    pacIds:LABOR_PACS,patterns:[],kinds:['labor'],notIds:NOT_UNIONS,pacsLabel:'the union PACs',
+    routed:[],superPacs:['AFSCME Working Families Fund','National Nurses United for Patient Protection','NEA Advocacy Fund','In Union USA','League of Labor Voters','UNITE HERE PAC'],
+    // Union-run committees that spend for and against candidates (the unions' own PACs that do, by their org type, among LABOR_PACS)
+    superPacIds:['C00011114','C90011172','C00004036','C00490375','C00489815','C00012476','C00745745','C00348540','C90013376','C00626119','C00488486','C90016106','C00624817','C00913178','C00627372',
+      'C00029504','C00162818','C90017955','C00032979','C90017930','C00461418','C00001636','C90022872','C00029447','C00687624','C90017674','C90022617','C90022559','C90018300','C90022989','C00002089',
+      'C00007542','C00000885','C90018003','C00936831','C00684332','C00285593','C00869305','C00032995','C00590471','C00355289','C90019977','C90021312','C00429175','C00003590','C90016809','C90017633',
+      'C90013228','C00003251','C90018516','C00001016'],
+    industries:[],companies:[],
+    groups:['AFSCME','SEIU','National Nurses United','NEA','AFT','Teamsters','Machinists (IAM)','IBEW','Carpenters','Laborers (LIUNA)','Operating Engineers','UA (plumbers and pipefitters)','UNITE HERE','CWA','Air Line Pilots Association','and every other union PAC the FEC lists']},
+  {key:'environment',cause:true,icon:'🌳🎁',emoji:'🌳',name:'Pro-Environment',card:'Pro-Environment',long:'Pro-Environment (environmental and climate groups)',lineLabel:'environmental groups',
+    about:'Environmental and climate groups: the League of Conservation Voters, Sierra Club, NRDC, EDF, Environment America, the National Wildlife Federation, Defenders of Wildlife, Friends of the Earth, Sunrise, Climate Hawks Vote, Climate Power and others, their PACs and the super PACs they run. Clean-energy companies and their trade groups aren\'t included.',
+    pacIds:['C00252940','C00431601','C00806893','C00471540','C00548008','C00135368','C00774497','C00722348','C00476697','C00442020','C00141044','C00735183','C00880237','C00954990','C00674697','C00548461','C00503318','C00523019','C00278424'],
+    patterns:['LEAGUE OF CONSERVATION VOTERS','\\bLCV VICTORY FUND','^SIERRA CLUB (POLITICAL|INDEPENDENT)','\\bNRDC ACTION','\\bEDF ACTION VOTES','ENVIRONMENTAL DEFENSE ACTION FUND','CLIMATE HAWKS VOTE','CLIMATE POWER ACTION'].map(P),
+    pacsLabel:'the environmental groups\' PACs',
+    routed:[],superPacs:['LCV Victory Fund','EDF Action Votes','NRDC Action Votes','Climate Power Action'],
+    superPacIds:['C00486845','C00707844','C00740225','C00817536','C90014895','C00956961','C00531814','C00483693','C90009994','C00674697','C90020116','C00135368','C90022781','C90011875','C00548461','C90023821','C90013103'],
+    industries:[],companies:[],
+    groups:['League of Conservation Voters (LCV Action Fund, LCV Victory Fund)','Sierra Club','NRDC','Environmental Defense Fund (EDF Action Votes)','Environment America','National Wildlife Federation','Defenders of Wildlife','Friends of the Earth','Sunrise','Climate Hawks Vote','Climate Power Action','Climate Cabinet','Chesapeake Climate Action Network','Earthjustice Action','Oceans PAC','Jane Fonda Climate PAC','Bipartisan Climate Fund','Conservative Climate Action PAC']},
+  {key:'peace',cause:true,icon:'🕊️🎁',emoji:'🕊️',name:'Pro-Peace / Two-State + Palestine',card:'Pro-Peace',long:'Pro-Peace / Two-State + Palestine (J Street and Arab and Muslim American groups)',lineLabel:'J Street and Palestinian-rights groups',
+    about:'J Street, which backs a two-state solution, and the Arab American and Muslim American groups that back Palestinian rights (Emgage, the Arab American PAC, the Palestine American League PAC, Muslims United PAC and others): their PACs\' checks, the gifts J Street collects from donors and passes on to campaigns, and the super PACs they run.',
+    pacIds:['C00441949','C00453704','C00949958','C00860254','C00866772','C00396556','C00346239'],
+    patterns:['^JSTREETPAC\\b|^J STREET','^EMGAGE','^ARAB AMERICAN POLITICAL ACTION','^PALESTIN'].map(P),
+    pacsLabel:'these groups\' PACs',routed:['jstreet'],routedLabel:'J Street',
+    groupPacs:{jstreet:{cid:'C00441949',name:'JSTREETPAC'}},
+    superPacs:['J Street Action Fund'],superPacIds:['C00815753','C90014028','C00453704','C90023359','C00346239'],
+    industries:[],companies:[],
+    groups:['JStreetPAC and J Street Action Fund','Emgage','Arab American PAC','Palestine American League PAC','Muslims United PAC','Illinois Muslim PAC','MCARE','Muslim Civic Coalition']}];
+// The lobbies (the eight industry and foreign-policy lobbies) and the cause groups, each shown in its own section.
+export const LOBBIES=TRACKERS.filter(t=>!t.cause),CAUSES=TRACKERS.filter(t=>t.cause);
 export const TRACKER=Object.fromEntries(TRACKERS.map(t=>[t.key,t]));
 // A bulk-file total (public/corporate-pacs.json, public/tracker-history.json, from npm run corporate:pacs) that can't be
 // used for this tracker: the file has no entry for it, or it was built before the insurers and PBMs were split off from
 // Big Pharma (Nov. 18, 2026), when Big Pharma's totals still held theirs. The next run writes both.
 export const bulkUnread=(file,key)=>!file?.trackers||!(key in file.trackers)||(key==='pharma'&&!('insurers' in file.trackers));
-// How many lobbies, in words, for the pages' text.
-export const LOBBY_COUNT=['no','one','two','three','four','five','six','seven','eight','nine','ten'][TRACKERS.length]||String(TRACKERS.length);
+// How many lobbies, in words, for the pages' text (the cause groups aren't lobbies).
+export const LOBBY_COUNT=['no','one','two','three','four','five','six','seven','eight','nine','ten'][LOBBIES.length]||String(LOBBIES.length);
+export const CAUSE_COUNT=['no','one','two','three','four','five','six','seven','eight','nine','ten'][CAUSES.length]||String(CAUSES.length);
 
 const cents=n=>Math.round(n*100)/100;
 const upper=s=>String(s||'').toUpperCase();
-// Is this PAC line (a committee ID and name) one of the tracker's PACs?
-export const isTrackerPac=(t,l)=>(l?.cid&&t.pacIds.includes(l.cid))||t.patterns.some(r=>r.test(upper(l?.name)));
+// Is this PAC line (a committee ID and name, and its kind where known: pac-types.js) one of the tracker's PACs?
+export const isTrackerPac=(t,l)=>!(l?.cid&&(t.notIds||[]).includes(l.cid))&&((l?.cid&&t.pacIds.includes(l.cid))||t.patterns.some(r=>r.test(upper(l?.name)))||!!(l?.kind&&(t.kinds||[]).includes(l.kind)));
 // The PAC lines on file in research.json for a reviewed profile ("pac.rows": [name index, amount, …]), with each
 // committee's ID and full name.
 export function researchPacLines(data,s){
@@ -167,7 +205,8 @@ export function mergePacLines(...lists){
   return [...by.values()];
 }
 // One tracker's money to one campaign. pacLines: the period's PAC lines ([{cid, name, amount}]), or null when they
-// haven't been read; routed: {group: amount} for the period; routedKnown: every gift routed to them was searched for;
+// haven't been read; routed: {group: amount} for the period; routedKnown: every gift routed to them was searched for
+// (true or false, or {tracker key: true or false} when it differs by tracker);
 // direct: {group: amount}, the group's own PAC checks to the campaign this cycle from its own reports (counted once
 // with its PAC line, at the larger amount); employees: {industry: total} for the period, or null when not read;
 // donors: {donor key: amount}, the named donors' own checks to the campaign in the period, or null when not read.
@@ -183,7 +222,8 @@ export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,dire
   const rt=cents(t.routed.reduce((s,g)=>s+(Number(routed?.[g])||0),0));
   const named=(t.donors||[]).map(d=>({key:d.key,name:d.name,amount:cents(Number(donors?.[d.key])||0)})).filter(d=>d.amount>0).sort((a,b)=>b.amount-a.amount);
   const dn=cents(named.reduce((s,d)=>s+d.amount,0)),total=cents(pac+rt+dn);
-  const known=pacLines!=null&&!(unread||[]).includes(t.key)&&(!t.routed.length||routedKnown)&&(!(t.donors||[]).length||donors!=null);
+  const rk=routedKnown&&typeof routedKnown==='object'?!!routedKnown[t.key]:!!routedKnown;
+  const known=pacLines!=null&&!(unread||[]).includes(t.key)&&(!t.routed.length||rk)&&(!(t.donors||[]).length||donors!=null);
   const emp=t.industries.length&&employees?cents(t.industries.reduce((s,k)=>s+(Number(employees[k])||0),0)):null;
   return {key:t.key,name:t.name,pacs,pac,routed:rt,donors:dn,named,total,employees:emp,status:total>0?'took':known?'none':'waiting'};
 }
@@ -211,7 +251,8 @@ export function donorAmounts(h,t,id,cycles){
   for(const [cy,m] of Object.entries(by))if(!want||want.has(Number(cy)))for(const [k,v] of Object.entries(m||{}))out[k]=cents((out[k]||0)+(Number(v)||0));
   return out;
 }
-export const lookouts=inputs=>TRACKERS.map(t=>trackerMoney(t,inputs));
+// The lobbies' lines (the No lobby money bonus, the report card and Tracking Lobby Money's list), or another list's.
+export const lookouts=(inputs,list=LOBBIES)=>list.map(t=>trackerMoney(t,inputs));
 // Is this super PAC (an FEC committee ID and name) one of the tracker's own? By ID, or by name, ignoring case,
 // punctuation and a short tag in brackets at the end ("United Democracy Project ('UDP')").
 const normName=x=>upper(x).replace(/[.,'"’]/g,'').replace(/\s*\([A-Z0-9 &-]{1,12}\)$/,'').replace(/\s+INC$/,'').replace(/\s+/g,' ').trim();

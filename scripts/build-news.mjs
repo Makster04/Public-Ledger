@@ -30,6 +30,10 @@ import {buildEntry,sixFiles,formulaOf} from './scores-monthly.mjs';
 import {committeeKind,committeeCheck,trackersOf,membersByCandidate,lines} from './build-corporate-pacs.mjs';
 import {readIeRecords,latestVersions,isoDate,seatOf,partyOf,trackerOfSpender} from './build-super-pac-races.mjs';
 import {NEWS_FILES,newestNews} from './news-file.mjs';
+import {TRACKER} from '../public/trackers.js';
+// The ticker follows the lobbies; the cause groups (union, environmental and peace groups, since Nov. 28, 2026) are shown
+// on the profiles and the Super PACs page, not in the ticker.
+const lobbyKey=k=>!!k&&!TRACKER[k]?.cause;
 import {conflictsComponent} from '../public/integrity.js';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -101,7 +105,7 @@ export function superPacNews(records,{limit=NEWS_LIMIT.superpac,min=SUPER_PAC_MI
   const by=new Map();
   for(const r of latestVersions(records||[])){
     const tracker=trackerOfSpender(r.spe_id,r.spe_nam),date=isoDate(r.exp_date)||isoDate(r.dissem_dt),seat=seatOf(r.can_office,r.can_office_state,r.can_office_dis);
-    if(!tracker||!date||!r.cand_id||!seat)continue;
+    if(!lobbyKey(tracker)||!date||!r.cand_id||!seat)continue;
     const so=r.sup_opp==='O'?'O':'S',k=`sp:${r.spe_id}:${r.cand_id}:${so}:${date}`;
     const o=by.get(k)||{key:k,kind:'superpac',tracker,spender:r.spe_nam,cmte:r.spe_id,cand:r.cand_id,name:r.cand_name,party:partyOf(r.cand_pty_aff),seat,so,
       ele:String(r.ele_type||'').toUpperCase()[0]||'',amount:0,date};
@@ -163,7 +167,7 @@ async function trackerChecks(dir,cycle){
   for await(const line of lines(cm,'cm.txt')){const k=committeeKind(line);if(!k)continue;names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
   for await(const line of lines(pas2,'itpas2.txt')){
     const x=committeeCheck(line,cmteCand);if(!x||!byCand.has(x.cand))continue;
-    if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
+    if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)).filter(lobbyKey));
     const keys=keysOf.get(x.cmte);if(keys.length)out.push({cmte:x.cmte,pac:names.get(x.cmte)||x.cmte,id:byCand.get(x.cand),amount:x.amount,date:mdy(x.date),keys});
   }
   return out;

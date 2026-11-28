@@ -95,8 +95,9 @@ export function committeeCheck(line,cmteCand=null){
 }
 // The same, for a corporate PAC's check only (kinds: committee id -> kind).
 export function corporateCheck(line,kinds,cmteCand=null){const x=committeeCheck(line,cmteCand);return x&&kinds.get(x.cmte)==='corporate'?x:null;}
-// The trackers a giving committee belongs to (by its ID or its name, as each Tracker matches its PACs).
-export const trackersOf=(cmte,name)=>TRACKERS.filter(t=>isTrackerPac(t,{cid:cmte,name})).map(t=>t.key);
+// The trackers a giving committee belongs to (by its ID or its name, as each Tracker matches its PACs, and by its kind:
+// a labor organization's committee is a union's, for Pro-Union, since Nov. 28, 2026).
+export const trackersOf=(cmte,name,kind=null)=>TRACKERS.filter(t=>isTrackerPac(t,{cid:cmte,name,kind})).map(t=>t.key);
 // The groups whose forwarded gifts are read: research.json "bundled" conduits ({group: [committee IDs]}) and the other
 // committees its search found forwarding gifts (names: {"fec:C…": name}). [{key, cmte}], each committee once.
 export function conduitList(bundled){
@@ -146,13 +147,15 @@ export function kindTotals(checks,byCand){
   for(const o of Object.values(out))for(const k of Object.keys(o)){o[k]=Math.round(o[k]*100)/100;if(!(o[k]>0))delete o[k];}
   return out;
 }
-// Each tracker's totals, only for members who took some: [PAC dollars, its PACs that gave], and for the Pro-Israel Lobby
-// also [routed dollars (its groups' passed-on gifts), the named donors' own checks]. routed, donors: {id: dollars}.
+// Each tracker's totals, only for members who took some: [PAC dollars, its PACs that gave], and for a tracker whose
+// groups pass on gifts (the Pro-Israel Lobby; Pro-Peace / Two-State + Palestine, J Street's, since Nov. 28, 2026) also
+// [routed dollars (its groups' passed-on gifts), the named donors' own checks]. routed: {tracker key: {id: dollars}}
+// (or, as before, {id: dollars} for the Pro-Israel Lobby's); donors: {id: dollars}, the Pro-Israel Lobby's.
 export function trackerTotals(checks,byCand,routed={},donors={}){
-  const out={};
+  const out={},byTracker=Object.values(routed).some(v=>v&&typeof v==='object')?routed:{aipac:routed};
   for(const t of TRACKERS){
-    const pac=corporateTotals(checks.filter(x=>x.keys.includes(t.key)),byCand),list={};
-    for(const [id,v] of Object.entries(pac)){const r=t.key==='aipac'?routed[id]||0:0,dn=t.key==='aipac'?donors[id]||0:0;if(v[0]>0||r>0||dn>0)list[id]=t.key==='aipac'?[v[0],v[1],r,dn]:v;}
+    const pac=corporateTotals(checks.filter(x=>x.keys.includes(t.key)),byCand),list={},wide=t.routed.length>0||(t.donors||[]).length>0,rt=byTracker[t.key]||{};
+    for(const [id,v] of Object.entries(pac)){const r=rt[id]||0,dn=t.key==='aipac'?donors[id]||0:0;if(v[0]>0||r>0||dn>0)list[id]=wide?[v[0],v[1],r,dn]:v;}
     out[t.key]=list;
   }
   return out;
@@ -374,11 +377,11 @@ export async function careerHistory({cycle,dir,refresh=false,byCand,through='',l
   const today=new Date().toISOString().slice(0,10);
   for(const cy of cycles){
     const yy=String(cy).slice(2),age=recent.has(cy)?WEEK:Infinity;
-    const cm=await download(`cm${yy}.zip`,cy,dir,refresh,age),pas2=await download(`pas2${yy}.zip`,cy,dir,refresh,age),names=new Map(),cmteCand=new Map(),keysOf=new Map(),checks=[];
-    for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(!k)continue;names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
+    const cm=await download(`cm${yy}.zip`,cy,dir,refresh,age),pas2=await download(`pas2${yy}.zip`,cy,dir,refresh,age),names=new Map(),kinds=new Map(),cmteCand=new Map(),keysOf=new Map(),checks=[];
+    for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(!k)continue;names.set(k[0],k[2]);kinds.set(k[0],k[1]);if(k[3])cmteCand.set(k[0],k[3]);}
     for await(const line of lines(pas2.file,'itpas2.txt')){
       const x=committeeCheck(line,cmteCand);if(!x||!both.has(x.cand))continue;
-      if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
+      if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte),kinds.get(x.cmte)));
       const keys=keysOf.get(x.cmte);if(!keys.length)continue;checks.push({...x,keys});
       if(cy===cycle){const d=iso(x.date);if(d>last&&d<=today)last=d;}
     }
@@ -446,7 +449,7 @@ async function main(argv){
   const checks=[],tracked=[],byKind=[],keysOf=new Map();let through='';const today=new Date().toISOString().slice(0,10);
   for await(const line of lines(pas2.file,'itpas2.txt')){
     const x=committeeCheck(line,cmteCand);if(!x||!byCand.has(x.cand))continue;
-    if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
+    if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte),kinds.get(x.cmte)));
     const keys=keysOf.get(x.cmte),corp=kinds.get(x.cmte)==='corporate';byKind.push({cand:x.cand,kind:kinds.get(x.cmte)||'other',amount:x.amount});if(!corp&&!keys.length)continue;
     if(corp)checks.push(x);if(keys.length)tracked.push({...x,keys});
     const d=iso(x.date);if(d>through&&d<=today)through=d;
@@ -468,11 +471,15 @@ async function main(argv){
   }else console.log('No FEC_API_KEY in .dev.vars: gifts forwarded by groups (AIPAC and others) aren\'t read, only their PAC checks.');
   // (a group with two committees counts only when both were read; one that wasn't keeps the last file's totals)
   const kept=keptEarmarks(prev,[...failed]),earmarks=earmarkTotals(got.filter(g=>readOk.has(g.key)),kept);
-  // The Pro-Israel Lobby's passed-on gifts: AIPAC's, NORPAC's, JACPAC's and the RJC's together, counted only when every
-  // one of them that's read was read this time or kept from the last file.
-  const groups=TRACKER.aipac.routed.filter(k=>keys.includes(k));
-  for(const [id,g] of Object.entries(earmarks)){const v=groups.reduce((s,k)=>s+(Number(g[k]?.[0])||0),0);if(v>0)routed[id]=Math.round(v*100)/100;}
-  const aipacIn=groups.length>0&&groups.every(k=>readOk.has(k)||k in kept);
+  // Each tracker's passed-on gifts (the Pro-Israel Lobby's: AIPAC's, NORPAC's, JACPAC's and the RJC's together; Pro-Peace's:
+  // J Street's), counted only when every one of its groups that's read was read this time or kept from the last file.
+  const routedBy={},routedIn={};
+  for(const t of TRACKERS.filter(x=>x.routed.length)){
+    const groups=t.routed.filter(k=>keys.includes(k)),by={};
+    for(const [id,g] of Object.entries(earmarks)){const v=groups.reduce((s,k)=>s+(Number(g[k]?.[0])||0),0);if(v>0)by[id]=Math.round(v*100)/100;}
+    routedBy[t.key]=by;routedIn[t.key]=groups.length>0&&groups.every(k=>readOk.has(k)||k in kept);
+  }
+  routed=routedBy.aipac||{};const aipacIn=!!routedIn.aipac;
   if(process.env.FEC_API_KEY)console.log(`Forwarded gifts: ${readOk.size} of ${keys.length} groups read${Object.keys(kept).length?`, ${Object.keys(kept).length} kept from the last file`:''}; ${Object.keys(earmarks).length} members got some.`);
   // Career totals: every cycle since 1980, under every candidate ID each member has had.
   const sitting=[...(read('senate.json').senators||[]),...(read('house.json').members||[])],leg=await legislatorsFile(refresh);
@@ -481,7 +488,7 @@ async function main(argv){
     routedNow:aipacIn?routed:null,prev:prevHistory?.routed?prevHistory:null,prevDonors:prevHistory,apiKey:!!process.env.FEC_API_KEY});
   // This cycle's totals for each tracker, with the Pro-Israel Lobby's named donors' checks this cycle.
   const donorsNow={};for(const [id,cys] of Object.entries(history.donors?.aipac||{})){const v=Object.values(cys[cycle]||{}).reduce((s,x)=>s+(Number(x)||0),0);if(v)donorsNow[id]=Math.round(v*100)/100;}
-  const trackers=trackerTotals(tracked,byCand,routed,donorsNow);
+  const trackers=trackerTotals(tracked,byCand,routedBy,donorsNow);
   fs.writeFileSync(path.join(ROOT,'public','tracker-history.json'),JSON.stringify(history));
   const allDonors=TRACKERS.flatMap(t=>t.donors||[]),missingDonors=allDonors.filter(d=>!history.donorKeys.includes(d.key));
   if(allDonors.length)console.log(`Named donors: ${history.donorKeys.length} of ${allDonors.length} read${missingDonors.length?` (not read: ${missingDonors.map(d=>d.name).join(', ')}${process.env.FEC_API_KEY?'':'; they need the FEC key in .dev.vars'})`:''}.`);
@@ -497,7 +504,7 @@ async function main(argv){
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,
     sources:[{file:path.basename(cm.file),downloaded:cm.downloaded,url:`${BASE}/${cycle}/cm${yy}.zip`},{file:path.basename(pas2.file),downloaded:pas2.downloaded,url:`${BASE}/${cycle}/pas2${yy}.zip`}],
-    people,trackers,routed:{method:'payments',aipac:aipacIn,groups:[...readOk],kept:Object.keys(kept),failed:[...failed].filter(k=>!(k in kept))},kinds:kindTotals(byKind,byCand),earmarks};
+    people,trackers,routed:{method:'payments',...routedIn,aipac:aipacIn,groups:[...readOk],kept:Object.keys(kept),failed:[...failed].filter(k=>!(k in kept))},kinds:kindTotals(byKind,byCand),earmarks};
   fs.writeFileSync(path.join(ROOT,'public','corporate-pacs.json'),JSON.stringify(out));
   console.log(`Wrote public/corporate-pacs.json: ${vals.length} members read, ${vals.filter(v=>v[0]>0).length} took corporate PAC money, ${vals.filter(v=>!v[0]).length} took none (${checks.length} checks, through ${through||'?'}).`);
   for(const t of TRACKERS)console.log(`  ${t.name}: ${Object.keys(trackers[t.key]).length} took some`);

@@ -46,7 +46,9 @@ test('the tab: each cycle scored on its own, under the score card, and picking a
 });
 
 test('"How to read this" opens and closes, and stays open when the box is drawn again',()=>{
-  assert.ok(app.includes('<details class="lk-key"><summary><h4>How to read this</h4></summary>'));
+  assert.ok(app.includes('<details class="lk-key" data-keep="key"><summary><h4>How to read this</h4></summary>'));
   assert.ok(!app.includes('<div class="lk-key">'));
-  assert.equal(count(app,/querySelector\('\.lk-key'\)\?\.setAttribute\('open',''\)/g),2,'when its box or the score card is redrawn');
+  // (and "Cause groups", since Nov. 28, 2026): every details[data-keep] open before is open again
+  assert.equal(count(app,/reopenKept\((nb|el),open\)/g),2,'when its box or the score card is redrawn');
+  assert.ok(app.includes("const reopenKept=(el,keys)=>{for(const k of keys)el.querySelector(`details[data-keep=\"${k}\"]`)?.setAttribute('open','');};"));
 });

@@ -28,7 +28,10 @@ export const LEFT_OUT={
   tech:['Telecom and cable companies'],
   crypto:['Crypto companies not on the crypto and AI list'],
   defense:['Commercial-only aerospace','Space launch companies','The rest of GE and Honeywell (only their aerospace PACs count)','Defense trade groups (they have no PACs)'],
-  wallstreet:['Community banks and the state bankers associations','Credit unions','Insurance companies']};
+  wallstreet:['Community banks and the state bankers associations','Credit unions','Insurance companies'],
+  union:['Committees the FEC lists as a union\'s that aren\'t one (checked by hand): the National Apartment Association\'s PAC, the Aerospace and Defense PAC, Fund for a Conservative Future, Vote to Elect Republicans Now PAC, a corn processors\' cooperative, MACPAC, Tidewater PAC and Blue Cross Blue Shield of South Carolina\'s federal programs committee','Firefighter-named PACs that aren\'t unions (several are known scam PACs); the firefighters\' union, the IAFF, is in','The Working Families Party (a party, not a union)','Union members\' own gifts'],
+  environment:['Clean-energy companies and their trade groups (American Clean Power and others)','State-only groups (the state leagues of conservation voters), except where they spent on a federal race','"Defund Sierra Club PAC" (against the Sierra Club, despite its name)'],
+  peace:['The Pro-Israel Lobby\'s PACs (their own tracker)','Groups without a federal PAC (IfNotNow, the Uncommitted movement, Track AIPAC)','Justice Democrats and other progressive groups whose focus is broader']};
 export const NOTES={
   aipac:'The tracker was called AIPAC until November 14, 2026; its links still use "aipac". The named donors are Miriam and Sheldon Adelson and the 20 people who gave United Democracy Project, AIPAC\'s super PAC, $1 million or more in 2021–2026 (FEC). The site states that giving, never a label for their beliefs.',
   pharma:'Split from Health Insurers + PBMs on November 18, 2026: drugmakers and insurers often lobby against each other on drug prices, though both give mostly to the same members (the health committees). PAC checks only: no super PAC of its own, and its people\'s gifts aren\'t read yet.',
@@ -37,9 +40,21 @@ export const NOTES={
   tech:'The AI companies, their executives and the AI super PACs come from the crypto and AI list. Their people\'s gifts are read by the refresh and shown beside the PAC checks.',
   crypto:'The crypto companies, their executives and the crypto super PACs come from the crypto and AI list. Their people\'s gifts are read by the refresh and shown beside the PAC checks.',
   defense:'PAC checks only: no super PAC of its own, and its people\'s gifts aren\'t read yet. Palantir\'s PAC is Big Tech + AI\'s by ID and counts here by name.',
-  wallstreet:'PAC checks only: no super PAC of its own, and its people\'s gifts aren\'t read yet.'};
+  wallstreet:'PAC checks only: no super PAC of its own, and its people\'s gifts aren\'t read yet.',
+  union:'A cause group (since November 28, 2026): shown in its own section, with a gray ● for "took some", and not part of the No lobby money bonus. Its PACs are every committee the FEC lists with a labor organization as its connected organization (public/labor-pacs.js, from npm run trackers:labor), and the bulk-file scripts also count a union committee that\'s newer than that list, by the same FEC label.',
+  environment:'A cause group (since November 28, 2026): shown in its own section, with a gray ● for "took some", and not part of the No lobby money bonus. Most of its money is outside spending: the LCV Victory Fund, EDF Action Votes and NRDC Action Votes.',
+  peace:'A cause group (since November 28, 2026): shown in its own section, with a gray ● for "took some", and not part of the No lobby money bonus. J Street works mostly by collecting gifts from donors and passing them on to campaigns, which count here as AIPAC\'s do for the Pro-Israel Lobby; its passed-on gifts are read for this cycle.'};
 // The FEC's names for the committees on file, by ID (from the FEC committee records, Nov. 14, 2026).
 export const PAC_NAMES={
+  // the cause groups' (Nov. 28, 2026; the union PACs are listed by their label, not by name)
+  C00252940:"LEAGUE OF CONSERVATION VOTERS ACTION FUND",C00431601:"OCEANS PAC",C00806893:"JANE FONDA CLIMATE PAC",C00471540:"ENVIRONMENTAL DEFENSE ACTION FUND PAC (EDAF PAC)",
+  C00548008:"NRDC ACTION FUND INC PAC",C00135368:"SIERRA CLUB POLITICAL COMMITTEE",C00774497:"BIPARTISAN CLIMATE FUND",C00722348:"NATIONAL WILDLIFE FEDERATION ACTION FUND POLITICAL COMMITTEE",
+  C00476697:"NATIONAL WILDLIFE FEDERATION ACTION FUND POLITICAL ACTION COMMITTEE",C00442020:"ENVIRONMENT AMERICA INC. VOTER ACTION (ABBV. 'ENVIRONMENT AMERICA VOTER ACTION')",
+  C00141044:"FRIENDS OF THE EARTH ACTION POLITICAL ACTION COMMITTEE",C00735183:"CLIMATE CABINET PAC",C00880237:"CONSERVATIVE CLIMATE ACTION PAC",C00954990:"ADVANCING CLIMATE SOLUTIONS ACTION FUND",
+  C00674697:"SUNRISE PAC",C00548461:"CLIMATE HAWKS VOTE POLITICAL ACTION",C00503318:"DEFENDERS OF WILDLIFE ACTION FUND PAC",C00523019:"DEFENDERS OF WILDLIFE ACTION COMMITTEE",
+  C00278424:"NEW YORK LEAGUE OF CONSERVATION VOTERS FEDERAL FUND",C00441949:"JSTREETPAC",C00453704:"EMGAGE FEDERAL POLITICAL ACTION COMMITTEE",C00949958:"PALESTINE AMERICAN LEAGUE - PAC",
+  C00860254:"MUSLIMS UNITED PAC",C00866772:"ILLINOIS MUSLIM POLITICAL ACTION COMMITTEE",C00396556:"MCARE (MUSLIM COMMUNITY ADVOCATES FOR TIGHTS & EMPOWERMENT) - FEDERAL",
+  C00346239:"ARAB AMERICAN POLITICAL ACTION COMMITTEE",
   C00797670:"AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
   C00247403:"NORPAC",
   C00139659:"JOINT ACTION COMMITTEE FOR POLITICAL AFFAIRS",
@@ -238,8 +253,9 @@ export function trackerPanel(t,counts={}){
     ?`<div class="tablewrap"><table class="ta-table"><thead><tr><th>Donor</th><th>A gift is theirs when it matches</th></tr></thead><tbody>${t.donors.map(d=>`<tr><td>${esc(d.name)}</td><td>${esc(matchRule(d))}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Approved by name. No other donor's name is ever saved.</p>`
     :ex.length?`<div class="tablewrap"><table class="ta-table"><thead><tr><th>Executive</th><th>Role</th><th>Company</th></tr></thead><tbody>${ex.map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.role)}</td><td>${esc(e.companyName)}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Approved for naming. Their gifts are shown beside the PAC checks, matched by first and last name and an employer on the company's list.</p>`
     :'<p class="small muted">Nobody is named for this tracker.</p>';
-  const pacs=`<div class="tablewrap"><table class="ta-table"><thead><tr><th>FEC ID</th><th>Committee</th></tr></thead><tbody>${t.pacIds.map(id=>`<tr><td>${fec(id)}</td><td>${esc(titleCase(PAC_NAMES[id]||'Name not on file'))}</td></tr>`).join('')}</tbody></table></div>`;
-  const routedNames=(t.routed||[]).map(g=>g==='aipac'?'AIPAC':titleCase(PAC_NAMES[g.replace(/^fec:/,'')]||g));
+  const pacs=t.kinds?.includes('labor')?`<p class="small"><b class="num">${t.pacIds.length}</b> committees: every one the FEC lists with a labor organization as its connected organization, 2015–2026, less the few that aren't unions (Left out, below). A union committee newer than the list counts too, by the same FEC label.</p>`
+    :`<div class="tablewrap"><table class="ta-table"><thead><tr><th>FEC ID</th><th>Committee</th></tr></thead><tbody>${t.pacIds.map(id=>`<tr><td>${fec(id)}</td><td>${esc(titleCase(PAC_NAMES[id]||'Name not on file'))}</td></tr>`).join('')}</tbody></table></div>`;
+  const mark=t.cause?'●':'✕',routedNames=(t.routed||[]).map(g=>g==='aipac'?'AIPAC':g==='jstreet'?'J Street':titleCase(PAC_NAMES[g.replace(/^fec:/,'')]||g));
   return `<article class="ta-panel" aria-labelledby="ta-h-${esc(t.key)}">
     <header class="ta-ph"><h2 id="ta-h-${esc(t.key)}"><span aria-hidden="true">${esc(t.emoji||'')}</span> ${esc(t.name)}</h2>${t.card&&t.card!==t.name?`<p class="small muted">On the report card: "${esc(t.card)}"</p>`:''}
       <p>${esc(t.about)}</p>
@@ -256,11 +272,11 @@ export function trackerPanel(t,counts={}){
     </div>
     <div class="ta-grid2">
       ${block(t.donors?.length?'Named donors':'Named people',people)}
-      ${block('Gifts passed on',routedNames.length?`${chips(routedNames)}<p class="small muted">What these groups collect from donors and forward to a campaign counts toward the ✕. AIPAC's are read for every cycle since 2022; the others' for this cycle.</p>`:'<p class="small muted">Not read for this tracker yet. Its page says "Not updated yet" rather than showing a zero.</p>')}
+      ${block('Gifts passed on',routedNames.length?`${chips(routedNames)}<p class="small muted">What these groups collect from donors and forward to a campaign counts toward the ${mark}. AIPAC's are read for every cycle since 2022; the others' for this cycle.</p>`:'<p class="small muted">Not read for this tracker yet. Its page says "Not updated yet" rather than showing a zero.</p>')}
     </div>
     <div class="ta-grid2">
       ${lc.length?block('Companies whose employees\' gifts are read',chips(lc.map(c=>`${c.name} · ${INDUSTRY_LABEL[c.industry]||c.industry}`))):''}
-      ${block('Its own super PACs',t.superPacs?.length?`${chips(t.superPacs.map(n=>{const s=net(n);return s&&s.network&&s.network!==n?`${n} · ${s.network} network`:n;}))}<p class="small muted">Shown under "Spent to help them win" and "Tracking Lobby Money". It never changes the ✕: the campaign doesn't take it.</p>`:'<p class="small muted">None.</p>')}
+      ${block('Its own super PACs',t.superPacs?.length?`${chips(t.superPacs.map(n=>{const s=net(n);return s&&s.network&&s.network!==n?`${n} · ${s.network} network`:n;}))}<p class="small muted">Shown under "Spent to help them win" and "Tracking Lobby Money". It never changes the ${mark}: the campaign doesn't take it.</p>`:'<p class="small muted">None.</p>')}
     </div>
     <div class="ta-grid2">
       ${block('Left out',`<ul class="ta-list">${(LEFT_OUT[t.key]||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}
@@ -281,16 +297,18 @@ export function trackerAboutHTML(trackers,counts={},sel=null,meta={}){
       <td>${x.donors?.length?mk(`${x.donors.length} donors`,'yes'):ex?mk(`${ex} executives`,'shown'):mk('')}</td>
       <td>${mk(x.industries?.length?'Read':'','shown')}</td><td>${mk(x.superPacs?.length?String(x.superPacs.length):'','shown')}</td>
       <td class="r num">${c.took==null?'Waits':`${c.took} of ${c.read}`}</td><td class="r num">${countText(c.career)}</td></tr>`;};
-  return `<p class="intro">The ${trackers.length} lobbies whose money to each campaign the site follows: on every profile's Big Money Independence tab, the Trackers page, Career Totals and the seating charts. They're shown only; no grade uses them. These are the exact lists the site counts with (public/trackers.js and public/industries.js), so this page changes when they do.</p>
+  const lob=trackers.filter(x=>!x.cause),cg=trackers.filter(x=>x.cause),cause=cg.length?` and ${cg.length} cause group${cg.length===1?'':'s'} (${list(cg.map(x=>x.name))}, shown in their own section with a gray ● and not part of the No lobby money bonus)`:'';
+  const tab=x=>`<button type="button" class="ta-tab" data-ab="${esc(x.key)}" aria-pressed="${x.key===t.key}"><span aria-hidden="true">${esc(x.emoji||'')}</span> ${esc(x.name)}</button>`;
+  return `<p class="intro">The ${lob.length} lobbies${cause} whose money to each campaign the site follows: on every profile's Big Money Independence tab, the Trackers page, Career Totals and the seating charts. They're shown only; no grade uses them. These are the exact lists the site counts with (public/trackers.js and public/industries.js), so this page changes when they do.</p>
     <section class="ta-sec" aria-labelledby="ta-kinds"><h2 id="ta-kinds">The five kinds of data</h2>
       <p class="small muted">A tracker's ✕ ("took some") comes only from money the campaign itself took. The rest is shown beside it.</p>
       <div class="ta-kinds">${K.map(k=>`<div class="ta-kind">${pill(k.tag)}<b>${esc(k.name)}</b><p>${esc(k.what)}</p><p><strong>${esc(k.who||'None yet')}</strong></p><p class="ta-src">${esc(k.src)}</p></div>`).join('')}</div></section>
     <section class="ta-sec" aria-labelledby="ta-all"><h2 id="ta-all">All ${trackers.length} at a glance</h2>
       <div class="tablewrap"><table class="ta-table ta-matrix"><thead><tr><th>Tracker</th><th class="r">PACs by ID</th><th class="r">Name patterns</th><th class="r">Companies</th><th class="r">Groups</th><th>Gifts passed on</th><th>Named people</th><th>Employees' gifts</th><th>Own super PACs</th><th class="r">Took some this cycle</th><th class="r">Career</th></tr></thead>
-      <tbody>${trackers.map(row).join('')}</tbody></table></div>
+      <tbody>${lob.map(row).join('')}${cg.length?`<tr class="ta-group"><th colspan="11" scope="rowgroup">Cause groups</th></tr>${cg.map(row).join('')}`:''}</tbody></table></div>
       <p class="small muted">Green: counted toward the ✕. Amber: shown beside it. "Companies" adds the companies on the crypto and AI list after a +. "Waits": not in the files on hand yet; it fills in with the next <code>npm run corporate:pacs</code>.</p></section>
     <section class="ta-sec" aria-labelledby="ta-each"><h2 id="ta-each">Each tracker</h2>
-      <div class="ta-tabs" role="group" aria-label="Tracker">${trackers.map(x=>`<button type="button" class="ta-tab" data-ab="${esc(x.key)}" aria-pressed="${x.key===t.key}"><span aria-hidden="true">${esc(x.emoji||'')}</span> ${esc(x.name)}</button>`).join('')}</div>
+      <div class="ta-tabs" role="group" aria-label="Tracker">${lob.map(tab).join('')}${cg.length?`<span class="tr-group-label">Cause groups</span>${cg.map(tab).join('')}`:''}</div>
       <div id="ta-panel">${trackerPanel(t,counts[t.key])}</div></section>
     <footer class="ta-foot small muted">
       <p>"Took some this cycle" counts sitting members of Congress with at least one check${meta.read?`, from the FEC bulk files (${meta.read} members read${meta.through?`, checks through ${esc(meta.through)}`:''})`:''}. "Career" counts members with a check from the tracker's PACs in any cycle since ${esc(meta.careerFrom||'1979–80')}.</p>

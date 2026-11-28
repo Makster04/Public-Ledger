@@ -127,7 +127,14 @@ test('each tracker\'s checks, matched as its Tracker matches PACs, with AIPAC\'s
   const checks=[{cand:'S6ME00159',cmte:'C00797670',amount:10000,keys:['aipac']},{cand:'S8GA00180',cmte:'C09999999',amount:2500,keys:['pharma']},{cand:'S8GA00180',cmte:'C09999999',amount:-2500,keys:['pharma']},{cand:'H2AK01083',cmte:'C09999998',amount:1000,keys:['oil']}];
   const t=trackerTotals(checks,byCand,routed);
   assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18,0]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
-  assert.deepEqual(Object.keys(t),['aipac','pharma','insurers','oil','tech','crypto','defense','wallstreet'],'both health trackers, so a file built after the split answers for each');
+  assert.deepEqual(Object.keys(t),['aipac','pharma','insurers','oil','tech','crypto','defense','wallstreet','union','environment','peace'],'both health trackers, so a file built after the split answers for each, and the cause groups');
+  // Each tracker's passed-on gifts, by tracker (Nov. 28, 2026): J Street's count for Pro-Peace / Two-State + Palestine.
+  const byT=trackerTotals([{cand:'S8GA00180',cmte:'C00441949',amount:19969,keys:['peace']}],byCand,{aipac:{collins:100},peace:{ossoff:309639.01,begich:50}});
+  assert.deepEqual(byT.peace,{ossoff:[19969,1,309639.01,0],begich:[0,0,50,0]});assert.deepEqual(byT.aipac,{collins:[0,0,100,0]});assert.deepEqual(byT.union,{});
+  // A union's PAC by its FEC label (a labor organization's), and never one the FEC labels so that isn't a union.
+  assert.deepEqual(trackersOf('C09999990','LOCAL 1 NEW UNION PAC','labor'),['union']);
+  assert.deepEqual(trackersOf('C00406850','BLUE CROSS BLUE SHIELD OF SOUTH CAROLINA FEDERAL GOVERNMENT PROGRAMS','labor'),['insurers'],'an insurer\'s, not a union\'s');
+  assert.deepEqual(trackersOf('C00441949','JSTREETPAC'),['peace'],'J Street: not the Pro-Israel Lobby');
   assert.deepEqual(trackersOf('C09999995','HUMANA INC. POLITICAL ACTION COMMITTEE'),['insurers']);
   assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250,0]},'routed gifts alone count');
   assert.deepEqual(trackerTotals([],byCand,{},{begich:3300}).aipac,{begich:[0,0,0,3300]},'the named donors\' checks alone count');
