@@ -1,0 +1,146 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "scalise",
+ "name": "Steve Scalise",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.stevescalise.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.stevescalise.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108222326/https://stevescalise.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108222326/https://stevescalise.com/",
+     "original": "https://stevescalise.com/",
+     "date": "2022-11-08",
+     "title": "Scalise for Congress",
+     "text": "## Steve Scalise is a hardworking, Conservative leader fighting for Louisiana families.\nSteve is working hard to promote fiscal discipline, create good-paying jobs, protect our freedoms, and get our economy back on track.\n## WHAT MATTERS TO YOU?\nSteve wants to know what problems you want fixed, what you think is working well, and how you would rate the job your government is doing.\n## My priority is...\nBUILDING THE WALL\nDRAINING THE SWAMP\nMAKING AMERICA SAFE\nWHAT PEOPLE ARE SAYING\n\"Focus on the solving the deficit and debt equation.\" - J\n\"Taking care of veterans should be paramount.\" - Carl\n\"The Louisiana Legend is doing a great job.\" - Olivier\n\"Keep up the good job you are doing. It is very comforting knowing we have you in Washington representing us. \" - Pat\n\"All parts of government need to act together for all of America without partisanship.\" - Anna\n\"Stand firm on constitutional principles.\" - Wayne\n\"The real strength of America is opportunity for all.\" - Paul\n\"We can use more good people like you.\" - Steven\n\"Keep fighting for us because no one else will.\" - Michael\n\"Defend our liberty, right to life, freedom rights, protect the border and stop illegal immigration! \" - Rosemary\n## THE LATEST\nIf you haven’t already, get out and VOTE REPUBLICAN!! 🇺🇸🇺🇸 https://t.co/8PNBQwSOET\nabout 2 hours ago\nVote for cheaper gas!\nVote for cheaper groceries!\nVote for cheaper utility bills!\nVote for a secure border!\nVote fo… https://t.co/8CDC44BXI1\nabout 6 hours ago"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215125/https://stevescalise.com/your-priorities/",
+     "original": "https://stevescalise.com/your-priorities/",
+     "date": "2022-11-04",
+     "title": "Scalise for Congress | Your Priorities",
+     "text": "## MAKE YOUR VOICE HEARD\nRate your goverment\nTell Steve Scalise and other national Conservative leaders exactly what you want from your government.\nThe house's performance\nThe senate's performance\nPresident Biden's performance\nSteve Scalise's performance\nWhat's your top priority?\nIs the country heading in the right direction or down the wrong track?\nAre you better or worse off under President Joe Biden?\nWhat's the biggest problem you think we should be working on?\nWhat advice would you give Steve?\nBy providing your phone number, you are consenting to receive calls and texts, including automated calls and texts, to that number from Steve Scalise for Congress. MSG & Data rates may apply."
+    },
+    {
+     "url": "https://web.archive.org/web/20220911195516/https://act.stevescalise.com/priorities-survey-2022/",
+     "original": "https://act.stevescalise.com/priorities-survey-2022/",
+     "date": "2022-09-11",
+     "title": "Official GOP Top Priority Survey",
+     "text": "Office of the Republican Whip\n2022 August Priorities Survey\nWhat is your number one priority this month?\nPlease provide your feedback for House GOP Leadership.\nTo answer this poll without your phone number, please click here."
+    },
+    {
+     "url": "https://web.archive.org/web/20220524135610/https://act.stevescalise.com/social-media-platform/",
+     "original": "https://act.stevescalise.com/social-media-platform/",
+     "date": "2022-05-24",
+     "title": "Official GOP Poll",
+     "text": "Will you join President Trump's brand new social media site?\nIf you would like to answer this poll without your phone number, please click here."
+    },
+    {
+     "url": "https://web.archive.org/web/20220624124847/https://act.stevescalise.com/social-media-platform-1/",
+     "original": "https://act.stevescalise.com/social-media-platform-1/",
+     "date": "2022-06-24",
+     "title": "Official GOP Poll",
+     "text": "Will you join President Trump's brand new social media site?"
+    },
+    {
+     "url": "https://web.archive.org/web/20210111004538/https://act.stevescalise.com/stand-with-house-republicans/",
+     "original": "https://act.stevescalise.com/stand-with-house-republicans/",
+     "date": "2021-01-11",
+     "title": "Stand With House Republicans",
+     "text": "SIGN THE OFFICIAL PETITION:"
+    },
+    {
+     "url": "https://web.archive.org/web/20210111003629/https://act.stevescalise.com/stand-with-trump-nominee/",
+     "original": "https://act.stevescalise.com/stand-with-trump-nominee/",
+     "date": "2021-01-11",
+     "title": "Stand With Amy Coney Barrett",
+     "text": "I Stand with\nAmy Coney Barrett!\nSIGN YOUR NAME:"
+    },
+    {
+     "url": "https://web.archive.org/web/20210111025236/https://act.stevescalise.com/stand-with-trump-petition/",
+     "original": "https://act.stevescalise.com/stand-with-trump-petition/",
+     "date": "2021-01-11",
+     "title": "Stand With Trump",
+     "text": "I Stand With President Trump !\nSIGN THE OFFICIAL PETITION:"
+    }
+   ],
+   "notSaved": [
+    "https://act.stevescalise.com/priorities-survey-2022/clkn/https/act.stevescalise.com/priorities-survey-2022-1",
+    "https://act.stevescalise.com/social-media-platform/clkn/https/act.stevescalise.com/social-media-platform-1"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.stevescalise.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-10-31",
+    "url": "https://web.archive.org/web/20241031202706/https://stevescalise.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241031202706/https://stevescalise.com/",
+     "original": "https://stevescalise.com/",
+     "date": "2024-10-31",
+     "title": "Scalise for Congress",
+     "text": "## Steve Scalise is a hardworking, Conservative leader fighting for Louisiana families.\nSteve is working hard to promote fiscal discipline, create good-paying jobs, protect our freedoms, and get our economy back on track.\n## WHAT MATTERS TO YOU?\nSteve wants to know what problems you want fixed, what you think is working well, and how you would rate the job your government is doing.\n## My priority is...\nBUILDING THE WALL\nDRAINING THE SWAMP\nMAKING AMERICA SAFE\nWHAT PEOPLE ARE SAYING\n\"Focus on the solving the deficit and debt equation.\" - J\n\"Taking care of veterans should be paramount.\" - Carl\n\"The Louisiana Legend is doing a great job.\" - Olivier\n\"Keep up the good job you are doing. It is very comforting knowing we have you in Washington representing us. \" - Pat\n\"All parts of government need to act together for all of America without partisanship.\" - Anna\n\"Stand firm on constitutional principles.\" - Wayne\n\"The real strength of America is opportunity for all.\" - Paul\n\"We can use more good people like you.\" - Steven\n\"Keep fighting for us because no one else will.\" - Michael\n\"Defend our liberty, right to life, freedom rights, protect the border and stop illegal immigration! \" - Rosemary"
+    },
+    {
+     "url": "https://web.archive.org/web/20241031085516/https://stevescalise.com/your-priorities/",
+     "original": "https://stevescalise.com/your-priorities/",
+     "date": "2024-10-31",
+     "title": "Scalise for Congress | Your Priorities",
+     "text": "## MAKE YOUR VOICE HEARD\nRate your goverment\nTell Steve Scalise and other national Conservative leaders exactly what you want from your government.\nThe house's performance\nThe senate's performance\nPresident Biden's performance\nSteve Scalise's performance\nWhat's your top priority?\nIs the country heading in the right direction or down the wrong track?\nAre you better or worse off under President Joe Biden?\nWhat's the biggest problem you think we should be working on?\nWhat advice would you give Steve?\nBy providing your phone number, you are consenting to receive calls and texts, including automated calls and texts, to that number from Steve Scalise for Congress. MSG & Data rates may apply."
+    },
+    {
+     "url": "https://web.archive.org/web/20230411232225/https://act.stevescalise.com/stand-with-clarence-thomas/",
+     "original": "https://act.stevescalise.com/stand-with-clarence-thomas/",
+     "date": "2023-04-11",
+     "title": "Stand with Clarence Thomas",
+     "text": "IOWA VOTER SURVEY\nIn the past 72 hours alone, top Democrats have called on Clarence Thomas to RESIGN, launched partisan INVESTIGATIONS into him and his wife, and moved to IMPEACH him!\nWe’re fighting back TODAY, and we need YOUR signature to stand with Justice Thomas.\nSIGN ON: STAND WITH CLARENCE THOMAS\n* By providing your phone number, you are consenting to receive calls and texts, including automated calls and texts, to that number from Team Scalise and Scalise for Congress. I understand that clicking the submission for the above form constitutes as my signature. To opt-out from future messages, reply STOP to 75523. For more information, reply HELP to 75523. Also, to opt-out or receive additional information, you can call (504) 831-3105 or email [email protected] . N ot all phone carriers are able to receive messages. Message frequency may vary. Message & data rates may apply. Our Privacy Policy can be found here. Our Terms & Conditions can be found here."
+    },
+    {
+     "url": "https://web.archive.org/web/20240118013909/https://engage.stevescalise.com/stand-with-clarence-thomas-right-now/",
+     "original": "https://engage.stevescalise.com/stand-with-clarence-thomas-right-now/",
+     "date": "2024-01-18",
+     "title": "STAND WITH CLARENCE THOMAS",
+     "text": "## Two Liberal activist groups just unveiled a SIX-FIGURE ad blitz in an attempt to DESTROY Justice Clarence Thomas’s legacy.\nWe URGENTLY need you to STAND WITH HIM.\nPlease fill all the required fields!\nPlease accept terms and conditions to proceed\n* By providing your phone number, you are consenting to receive calls and texts, including automated calls and texts, to that number from Team Scalise and Steve Scalise for Congress. I understand that clicking the submission for the above form constitutes as my signature. To opt-out from future messages, reply STOP to 75523. For more information, reply HELP to 75523. Also, to opt-out or receive additional information, you can call (504) 831-3105 or email info@stevescalise.com . Not all phone carriers are able to receive messages. Message frequency may vary. Message & data rates may apply. Our Privacy Policy can be found here . Our Terms & Conditions can be found here ."
+    },
+    {
+     "url": "https://web.archive.org/web/20241031143323/https://stevescalise.com/your-priorities/embed/",
+     "original": "https://stevescalise.com/your-priorities/embed/",
+     "date": "2024-10-31",
+     "title": "Your Priorities – Scalise for Congress",
+     "text": "## HTML Embed\nCopy and paste this URL into your WordPress site to embed\nCopy and paste this code into your site to embed"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.stevescalise.com/",
+   "saved": false,
+   "error": "web.archive.org returned HTTP 404",
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "underwood",
+ "name": "Lauren Underwood",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.underwoodforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.underwoodforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108024537/https://underwoodforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108024537/https://underwoodforcongress.com/",
+     "original": "https://underwoodforcongress.com/",
+     "date": "2022-11-08",
+     "title": "Homepage - Lauren Underwood",
+     "text": "## Lauren Underwood for congresss\nJoin Team Underwood\nAre you in Lauren's district? Congressional maps changed this year.\n## Go All In for Lauren\nOur community deserves a strong, bold, and energetic leader.\nWe need Lauren’s voice in Congress.\nMake a Grassroots Donation »\nFind Events »\nCheck your Voter Status »\n## Lauren’s working for a better future for our communities.\nLowering Health Care Costs\nFighting Inflation and Strengthening Our Economy\nActing on Climate Change\nEnding Corruption and Cleaning Up Washington\n## Representing Illinois's 14th Congressional District\nAre you in District IL-14? Check out the map below with the newest district boundaries.\n## Lauren is a history-maker and a change-maker.\nAs the youngest Black woman to ever serve in Congress, Lauren made history and has already accomplished so much as a change-maker in Congress.\nIn the News\n## Get the Gear\nRepresent Team Underwood by purchasing our exclusive merch!\nLauren Underwood Unisex Logo Tee\nTeam Underwood Navy Crewneck Sweatshirt\nQueer and Cool Koozie\nCanvas Tote Bag\nHelp Keep Lauren In Office"
+    },
+    {
+     "url": "https://web.archive.org/web/20221004130159/https://underwoodforcongress.com/issues/",
+     "original": "https://underwoodforcongress.com/issues/",
+     "date": "2022-10-04",
+     "title": "Issues - Lauren Underwood",
+     "text": "Lauren Underwood for congresss\nON THE ISSUES\n## Lauren wants you to know where she stands on the issues that matter most.\nI always get the best questions from residents in my district, asking about the issues that matter most. It’s my job as your Congresswoman to make sure you know where I stand.\nLowering Health Care Costs\nActing on Climate Change\nEnding Corruption and Cleaning Up Washington\nPreventing Gun Violence\nDACA & Immigration\nSupporting Our Veterans\nFighting Inflation and Strengthening Our Economy"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807222445/https://underwoodforcongress.com/issue/health-care/",
+     "original": "https://underwoodforcongress.com/issue/health-care/",
+     "date": "2022-08-07",
+     "title": "Lowering Health Care Costs - Lauren Underwood",
+     "text": "Lauren Underwood for congresss\n## On the issue:\nAs a registered nurse, public health expert, and a woman with a pre-existing heart condition, Lauren’s number one priority in Congress is ensuring access to high-quality, affordable health care for our families and eliminating cost barriers to care.\nDuring the COVID-19 pandemic, Lauren has worked tirelessly to protect the health and wellbeing of families across our community.\n- Lauren responded to skyrocketing insulin prices with the bipartisan Lower Insulin Costs Now Act. The legislation was signed into law by the President to make lower-cost, generic insulin available more quickly.\n- Lauren secured free COVID-19 testing for her community, more than $1 billion in emergency response funding for hospitals and health care providers across Illinois, and federal support for new COVID-19 vaccines and treatments. She has called for a nationwide COVID-19 strategy to manage the disease, limit community spread, end disparities and support a robust economic recovery.\n- As part of her work to eliminate cost barriers to health care, Lauren wrote the Health Care Affordability Act with her constituents top of mind. The legislation — approved by the House with bipartisan support — would limit the cost of premiums for people who buy their own insurance to eight and a half percent or less of their income. Some families in the 14th District spend as much as 25 percent of their income on healthcare.\nCheck Your Voter Status »\nFind Events »\nJoin our grassroots team.\nWe’re building a different kind of campaign. One that is built by you. Join us!"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807213236/https://underwoodforcongress.com/issue/strengthening-our-local-economy/",
+     "original": "https://underwoodforcongress.com/issue/strengthening-our-local-economy/",
+     "date": "2022-08-07",
+     "title": "Fighting Inflation and Strengthening Our Economy - Lauren Underwood",
+     "text": "Lauren Underwood for congresss\n## On the issue:\nLauren’s legislative agenda is centered around a commitment to make our economy work for everyone.\nHer agenda includes tax relief for families, paid family and medical leave, and strategic infrastructure investments like rural broadband, improved public transit and clean energy. Lauren continues to advocate for small businesses and workers who have lost income due to COVID-19. She supports trade agreements like the United States–Mexico–Canada Agreement (USMCA) that allow Illinois farmers to sell their world-class crops on the free and fair market. Lauren aims to make the 14th a more convenient place to live and grow a business.\n- One of Lauren’s top priorities is allowing northern Illinois families to once again deduct the value of their state and local taxes (SALT) from their federal tax bill. This valuable deduction was scaled back to the detriment of middle-class families in the 2017 Republican Tax Law. Lauren introduced the first bill in the 116th Congress to ensure middle-class families can once again deduct their SALT and avoid double taxation, and championed an effort that resulted in the House passing legislation to eliminate the SALT cap — twice.\n- Lauren secured immediate financial support for individuals, emergency unemployment benefits, forgivable loans for Illinois’ small businesses, and a deferral of student loan payments for Illinoisians during the COVID-19 pandemic.\n- Lauren helped introduce the Family and Medical Insurance Leave Act, or FAMILY Act—legislation to create a universal, national paid family and medical leave program that would allow both men and women to stay home from work to care for a new child or ill family member.\n- Lauren successfully extended the 2018 biodiesel tax credit to support Illinois’ rural economy and led a bipartisan letter to USDA calling on the agency to provide accurate crop data to Illinois farmers who rely on USDA data to make business decisions.\nCheck Your Voter Status »\nFind Events »\nJoin our grassroots team.\nWe’re building a different kind of campaign. One that is built by you. Join us!"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807231549/https://underwoodforcongress.com/issue/acting-on-climate-change/",
+     "original": "https://underwoodforcongress.com/issue/acting-on-climate-change/",
+     "date": "2022-08-07",
+     "title": "Acting on Climate Change - Lauren Underwood",
+     "text": "Lauren Underwood for congresss\n## On the issue:\nLauren knows that climate change presents an existential threat to our environment, our national security, our health, and our economy.\nNorthern Illinois has seen unprecedented flooding over the past years that has caused millions of dollars in damage to businesses, homes, farms, and infrastructure. We can only expect things to get worse if we don’t take action to mitigate climate change. Lauren supports policies that promote clean energy solutions, support good-paying American jobs, and maintain national security.\n- Lauren introduced the Climate and Health Protection Act to help local communities address and mitigate the harmful public health effects of climate change. The legislation was included in the House Select Committee on the Climate Crisis’ comprehensive congressional climate action framework.\n- Lauren supports the 100% Clean Economy Act, which sets a national goal of achieving a 100% clean energy economy by 2050. The initiative would create high-quality green jobs in northern Illinois and across the country.\n- Lauren passed bipartisan legislation that would prevent federal agencies like USDA from censoring public information about climate change.\nCheck Your Voter Status »\nFind Events »\nJoin our grassroots team.\nWe’re building a different kind of campaign. One that is built by you. Join us!"
+    },
+    {
+     "url": "https://web.archive.org/web/20221004144729/https://underwoodforcongress.com/issue/cleaning-up-washington/",
+     "original": "https://underwoodforcongress.com/issue/cleaning-up-washington/",
+     "date": "2022-10-04",
+     "title": "Ending Corruption and Cleaning Up Washington - Lauren Underwood",
+     "text": "Lauren Underwood for congresss\n## On the issue:\nOne of the first pieces of legislation Lauren supported as a member of Congress was H.R. 1, the For The People Act, to reduce the role of money in politics, strengthen ethics rules to make certain that politicians actually serve the public interest, and improve access to the ballot box.\nCheck Your Voter Status »\nFind Events »\nJoin our grassroots team.\nWe’re building a different kind of campaign. One that is built by you. Join us!"
+    },
+    {
+     "url": "https://web.archive.org/web/20211023204301/https://underwoodforcongress.com/priorities",
+     "original": "https://underwoodforcongress.com/priorities",
+     "date": "2021-10-23",
+     "title": "Priorities — Lauren Underwood for Congress",
+     "text": "Farm Team PAC\n## When she was elected to serve our community in 2018, Lauren Underwood pledged to be the most accessible, transparent, and accountable Congresswoman the 14th District has ever seen.\nDuring her first term in Congress, Lauren has hosted more than 25 public town hall meetings and 135 community events across the seven counties of the 14th District. She has passed six bipartisan pieces of legislation into law , including the Lower Insulin Costs Now Act to make lower-cost, generic insulin available more quickly for the families who rely on it.\nSince her swearing-in, Lauren has voted to support federal programs that brought over $1 billion dollars to the 14th to fund small business loans, cutting edge science at Fermilab, and other grants and federal contracts that support good jobs and services in our community.\nLauren serves on the House Committee on Appropriations and the House Committee on Veteran’s Affairs."
+    },
+    {
+     "url": "https://web.archive.org/web/20211004215316/https://underwoodforcongress.com/priorities-es",
+     "original": "https://underwoodforcongress.com/priorities-es",
+     "date": "2021-10-04",
+     "title": "Prioridades — Lauren Underwood for Congress",
+     "text": "Farm Team PAC\nFEC Deadline Approaching: Please chip in today to defend Lauren from GOP attacks!"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.underwoodforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105203242/https://underwoodforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105203242/https://underwoodforcongress.com/",
+     "original": "https://underwoodforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Home - Underwood for Congress",
+     "text": "## Representing Illinois' 14th Congressional District\nCongresswoman Lauren Underwood represents Illinois’ 14th Congressional District, a suburban, exurban, and rural district in Northern Illinois. She flipped this seat from red to blue in a historic fashion in 2018, defeating a four-term Republican incumbent, and is the youngest black woman to ever be elected to the Congress.\n## Join Team Underwood\nFind Events Near You\nRequest A Yard Sign\nCheck Voter Status or Find Polling Location\nMake a Grassroots Donation\n## Lowering Healthcare Costs\nAs a registered nurse, public health expert, and a woman with a pre-existing heart condition, Lauren’s number one priority in Congress is ensuring access to high-quality, affordable health care for our families and eliminating cost barriers to care.\n## Reproductive Freedom\nLauren supports women’s rights to the full range of reproductive health services, without restrictions. This includes access to safe, legal, and affordable abortions.\n## Preventing Gun Violence\nNo child should fear for their life at school. No worker should fear a mass shooting at their job. Weapons of war don’t belong in our neighborhoods. Gun violence prevention is a public health issue, and Lauren believes that Congress must respond accordingly with data-driven, evidence-based policies.\n## Get in Touch\nIf you’ve saved your payment information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105035738/https://underwoodforcongress.com/issues/",
+     "original": "https://underwoodforcongress.com/issues/",
+     "date": "2024-11-05",
+     "title": "Issues - Underwood for Congress",
+     "text": "The Issues That Matter Most\nLauren wants you to know where she stands on issues that matter the most."
+    }
+   ],
+   "unread": [
+    "the list of underwoodforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.underwoodforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103124212/https://underwoodforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103124212/https://underwoodforcongress.com/",
+     "original": "https://underwoodforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Home - Underwood for Congress",
+     "text": "## Show Your Support\nPlease enable JavaScript in your browser to complete this form.\nBy submitting this form and signing up for texts, you consent to receive marketing, voter contact, donation asks, and informational messages from Lauren Underwood for Congress. Msg & data rates may apply. Msg frequency varies. Unsubscribe at any time by replying STOP. Text START to opt in. Text HELP for help. Privacy Policy & Terms of Service.\nCongresswoman Lauren Underwood represents Illinois’ 14th Congressional District, a suburban, exurban, and rural district in Northern Illinois. She flipped this seat from red to blue in a historic fashion in 2018, defeating a four-term Republican incumbent, and is the youngest black woman to ever be elected to the Congress.\n## Join Team Underwood\nFind Events Near You\nRequest A Yard Sign\nCheck Voter Status or Find Polling Location\nMake a Grassroots Donation\n## Lowering Healthcare Costs\nAs a registered nurse, public health expert, and a woman with a pre-existing heart condition, Lauren’s number one priority in Congress is ensuring access to high-quality, affordable health care for our families and eliminating cost barriers to care.\n## Reproductive Freedom\nLauren supports women’s rights to the full range of reproductive health services, without restrictions. This includes access to safe, legal, and affordable abortions.\n## Preventing Gun Violence\nNo child should fear for their life at school. No worker should fear a mass shooting at their job. Weapons of war don’t belong in our neighborhoods. Gun violence prevention is a public health issue, and Lauren believes that Congress must respond accordingly with data-driven, evidence-based policies.\n## Get in Touch\nIf you’ve saved your payment information with ActBlue Express, your donation will go through immediately."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103095158/http://underwoodforcongress.com/issues/",
+     "original": "http://underwoodforcongress.com/issues/",
+     "date": "2026-11-03",
+     "title": "Issues - Underwood for Congress",
+     "text": "The Issues That Matter Most\nLauren wants you to know where she stands on issues that matter the most."
+    }
+   ],
+   "unread": [
+    "the list of underwoodforcongress.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

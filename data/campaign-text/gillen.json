@@ -1,0 +1,85 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "gillen",
+ "name": "Laura Gillen",
+ "built": "2026-11-28",
+ "sites": [
+  "https://lauragillen.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://lauragillen.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://lauragillen.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105204637/https://lauragillen.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105204637/https://lauragillen.com/",
+     "original": "https://lauragillen.com/",
+     "date": "2024-11-05",
+     "title": "Laura Gillen for Congress",
+     "text": "Click on an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through immediately.\nSTAY UP TO DATE ON LAURA’S CAMPAIGN!\nYour generous contribution helps us build a strong foundation for our campaign.\nClick an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through.\nMake It Monthly\nLaura knows first-hand the challenges facing New York families. She will work in Congress to keep our families safe, grow the economy and ensure Nassau County is a place where you can afford to buy a home, raise a family and stay.\nIn 2017, Laura became the first Democrat to be elected Hempstead Town Supervisor in 112 years. As Supervisor, Laura managed a budget of nearly $500 million and led the operations of all town departments. She took aim at waste and corruption and made the Town government more accessible, transparent and accountable to taxpayers. Her cost saving measures enabled the Town to lower taxes for residents after years of tax hikes.\nLaura’s drive to serve her community started long before she ran for office. Growing up in Baldwin, Laura volunteered at South Nassau Communities Hospital and Camp Anchor, a camp serving special needs children and adults.\nLaura’s interest in public service grew during her time at Georgetown University, where she was selected to be a George Baker Scholar. Her participation in the Baker Scholar program impacted the direction of her life with its lessons of leadership and community service.\nAfter graduating, Laura returned to New York and began volunteering to assist people living with HIV/AIDS through GMHC (formerly Gay Men’s Health Crisis) during the height of the AIDS epidemic. During this time, AIDS was seen as a death sentence. Misinformation and fear caused those suffering to be alienated and ostracized. Laura’s upbringing and experience pushed her to not let fear ever stop her from doing what was right and what needed to be done and to be there to help those afflicted with this terrible disease. This same drive later brought her to Kolkata, where she worked for St. Mother Teresa in her home for the dying.\nUpon her return home, Laura attended law school at Georgetown Law Center and NYU School of Law. After graduating, she began working as a litigator with Cahill Gordon & Reindel, LLP and participated in her firm’s pro bono program where she represented victims of domestic violence. She later joined the Westerman firm in Nassau County.\nLaura decided to run for Hempstead Town Supervisor because she saw a need for a problem-solving approach in local government, where partisan fights and corruption were damaging the community and placing additional burdens on taxpayers.\nAs Supervisor, Laura led efforts to revitalize the town’s infrastructure, sued to recover damages for contaminants in the public water supply and passed critical legislation relating to sexual harassment and veterans’ benefits.\nDuring the height of the Covid-19 pandemic, Laura continued to serve her community by volunteering with All Hands and Hearts, distributing PPE to local police stations, businesses and health centers. She later joined the faculty at Hofstra University as an adjunct professor of law.\nLaura has been endorsed by labor unions, former Representatives Steve Israel and Carolyn McCarthy, EMILY’s List and local leaders from across the district."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105204556/https://lauragillen.com/issues/",
+     "original": "https://lauragillen.com/issues/",
+     "date": "2024-11-05",
+     "title": "Laura Gillen for Congress | Issues",
+     "text": "Cutting Taxes and Lowering Costs for Long Islanders\nIn Congress, I will work to lower costs for hardworking families on Long Island, including by restoring the SALT deduction to lower taxes for homeowners, protecting and expanding Medicare’s power to negotiate drug prices, and holding corporations accountable for price gouging that increases prices on groceries, gas and so much more.\nDefending Reproductive Freedoms\nI will always fight for our reproductive freedoms and abortion rights. In Congress, I will stand up against anti-abortion extremism and push to reinstate the protections of Roe v. Wade , pass the Women’s Health Protection Act, and codify the right to contraception and IVF into law.\nIn Congress, I will work to ensure our public schools have the resources they need to set all students up for success and support them after graduation, by working to lower the cost of higher education, provide more access to training and apprenticeships for careers in trades and manufacturing, and ensure our community colleges have the resources they need.\nFixing Our Broken Immigration System\nI will work with anyone, Democrat or Republican, to find bipartisan solutions to secure our border and fix our broken immigration system. My priorities include increased funding for Border Patrol, investment in better technology to aid our border patrol and expedited asylum and deportation proceedings. I will fight to bring federal aid to New York to compensate for the resources we have spent dealing with the migrant crisis. And work to establish an earned pathway to citizenship for law-abiding immigrants.\nIn Congress, I will stand up to the gun lobby and advocate for common-sense gun safety measures. I will support universal background checks to ensure guns aren’t in the hands of dangerous individuals and an assault weapons ban to help prevent the next Buffalo or Parkland shooting. I will with anyone, Democrat and Republicans, to expand our red flag laws, so police and mental health professionals can take guns away from those who might hurt themselves or others.\nIn Congress, I will defend the Haitian community in the face of racist, conspiratorial attacks from extremists — the Haitian American community deserves to be respected and celebrated, not ostracized and slandered.\nI am a strong supporter of the state of Israel and will always support Israel as both our closest ally in the region and as the eternal home of the Jewish people.\nSince October 7th, I have stood shoulder to shoulder with Israel and the Jewish community in New York. I will support Israel’s defense against the Iranian regime and its terrorist proxies, Hamas and Hezbollah. I will push for a resolution to the conflict, which must include the return of hostages and a firm commitment to pursue a two-state solution. And in the United States, I will pursue strong policies to stop the scourge of antisemitism that has surged in our schools, against our synagogues, and on social media.\nIn Congress, I will support the PRO Act and stand with the hardworking men and women of Labor in their effort to secure fair pay, better benefits, and stronger working conditions.\nOur students, seniors, veterans and so many other Americans are experiencing mental health issues and need access to care. In Congress, I will fight to devote more federal resources to our communities and schools, so that all individuals and children can have access to the mental health resources they need.\nProtecting Our Environment\nI will always work to preserve and protect our shorelines and the natural beauty here on Long Island. In Congress, I will fight to hold chemical manufacturers accountable for contaminating our drinking water with carcinogens and work with our Towns and Villages so they have the resources they need to update their infrastructure to ensure clean drinking water is available for all Nassau County families.\nProtecting Social Security and Medicare\nWhen you spend a lifetime working hard and paying into the system, you deserve a dignified retirement — that means having enough to pay for the basics and receiving access to affordable healthcare. In Congress, I will always protect Social Security and Medicare, and reject any effort to slash these crucial programs that our seniors have earned.\nEveryone deserves to feel safe in their community — in their home, at school, at their place of worship, and at work. That’s why in Congress I will fight for increased funding to support and hire more local law enforcement and invest in public safety initiatives. I will work to pass legislation to make it easier to prosecute drug traffickers who distribute and traffic fentanyl.\nIt is our solemn responsibility to support the men and women who serve in our military when they return home. That means ensuring they get the assistance they need to secure employment, get healthcare, and find housing."
+    },
+    {
+     "url": "https://web.archive.org/web/20241031192157/https://lauragillen.com/issues/embed/",
+     "original": "https://lauragillen.com/issues/embed/",
+     "date": "2024-10-31",
+     "title": "Issues | Laura Gillen for Congress",
+     "text": "## HTML Embed\nCopy and paste this URL into your WordPress site to embed\nCopy and paste this code into your site to embed"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://lauragillen.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103035024/https://lauragillen.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103035024/https://lauragillen.com/",
+     "original": "https://lauragillen.com/",
+     "date": "2026-11-03",
+     "title": "Laura Gillen for Congress",
+     "text": "Click on an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through immediately.\nSTAY UP TO DATE ON LAURA’S CAMPAIGN!\nCongresswoman Laura Gillen is the former Supervisor for the Town of Hempstead, a lawyer and a mother of four. In 2024, Laura flipped one of the most competitive House of Representatives seats in the country by focusing on common-sense solutions to the problems that our families face today. A third generation Long Islander, Laura grew up in Baldwin and is raising her family in Rockville Centre. During her first term in Congress, Laura has worked across the aisle to help hard working families and has brought home millions of dollars of federal investment to Nassau County.\nLaura is running for re-election in New York’s Fourth Congressional District because she’s willing to work with anyone to get things done for Long Island and improve life for all Americans.\nYour generous contribution helps us build a strong foundation for our campaign.\nClick an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through.\nMake It Monthly"
+    },
+    {
+     "url": "https://web.archive.org/web/20260210140216/https://lauragillen.com/issues/",
+     "original": "https://lauragillen.com/issues/",
+     "date": "2026-02-10",
+     "title": "Laura Gillen for Congress | Issues",
+     "text": "Cutting Taxes and Lowering Costs for Long Islanders\nIn Congress, I will work to lower costs for hardworking families on Long Island, including by restoring the SALT deduction to lower taxes for homeowners, protecting and expanding Medicare’s power to negotiate drug prices, and holding corporations accountable for price gouging that increases prices on groceries, gas and so much more.\nDefending Reproductive Freedoms\nI will always fight for our reproductive freedoms and abortion rights. In Congress, I will stand up against anti-abortion extremism and push to reinstate the protections of Roe v. Wade , pass the Women’s Health Protection Act, and codify the right to contraception and IVF into law.\nIn Congress, I will work to ensure our public schools have the resources they need to set all students up for success and support them after graduation, by working to lower the cost of higher education, provide more access to training and apprenticeships for careers in trades and manufacturing, and ensure our community colleges have the resources they need.\nFixing Our Broken Immigration System\nI will work with anyone, Democrat or Republican, to find bipartisan solutions to secure our border and fix our broken immigration system. My priorities include increased funding for Border Patrol, investment in better technology to aid our border patrol and expedited asylum and deportation proceedings. I will fight to bring federal aid to New York to compensate for the resources we have spent dealing with the migrant crisis. And work to establish an earned pathway to citizenship for law-abiding immigrants.\nIn Congress, I will stand up to the gun lobby and advocate for common-sense gun safety measures. I will support universal background checks to ensure guns aren’t in the hands of dangerous individuals and an assault weapons ban to help prevent the next Buffalo or Parkland shooting. I will with anyone, Democrat and Republicans, to expand our red flag laws, so police and mental health professionals can take guns away from those who might hurt themselves or others.\nIn Congress, I will defend the Haitian community in the face of racist, conspiratorial attacks from extremists — the Haitian American community deserves to be respected and celebrated, not ostracized and slandered.\nI am a strong supporter of the state of Israel and will always support Israel as both our closest ally in the region and as the eternal home of the Jewish people.\nSince October 7th, I have stood shoulder to shoulder with Israel and the Jewish community in New York. I will support Israel’s defense against the Iranian regime and its terrorist proxies, Hamas and Hezbollah. I will push for a resolution to the conflict, which must include the return of hostages and a firm commitment to pursue a two-state solution. And in the United States, I will pursue strong policies to stop the scourge of antisemitism that has surged in our schools, against our synagogues, and on social media.\nIn Congress, I will support the PRO Act and stand with the hardworking men and women of Labor in their effort to secure fair pay, better benefits, and stronger working conditions.\nOur students, seniors, veterans and so many other Americans are experiencing mental health issues and need access to care. In Congress, I will fight to devote more federal resources to our communities and schools, so that all individuals and children can have access to the mental health resources they need.\nProtecting Our Environment\nI will always work to preserve and protect our shorelines and the natural beauty here on Long Island. In Congress, I will fight to hold chemical manufacturers accountable for contaminating our drinking water with carcinogens and work with our Towns and Villages so they have the resources they need to update their infrastructure to ensure clean drinking water is available for all Nassau County families.\nProtecting Social Security and Medicare\nWhen you spend a lifetime working hard and paying into the system, you deserve a dignified retirement — that means having enough to pay for the basics and receiving access to affordable healthcare. In Congress, I will always protect Social Security and Medicare, and reject any effort to slash these crucial programs that our seniors have earned.\nEveryone deserves to feel safe in their community — in their home, at school, at their place of worship, and at work. That’s why in Congress I will fight for increased funding to support and hire more local law enforcement and invest in public safety initiatives. I will work to pass legislation to make it easier to prosecute drug traffickers who distribute and traffic fentanyl.\nIt is our solemn responsibility to support the men and women who serve in our military when they return home. That means ensuring they get the assistance they need to secure employment, get healthcare, and find housing."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "fedorchak",
+ "name": "Julie Fedorchak",
+ "built": "2026-11-28",
+ "sites": [
+  "https://www.fedorchaknd.com/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.fedorchaknd.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105213109/https://fedorchaknd.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105213109/https://fedorchaknd.com/",
+     "original": "https://fedorchaknd.com/",
+     "date": "2024-11-05",
+     "title": "Julie Fedorchak for US Congress - A Fresh Energy for North Dakota",
+     "text": "“Our way of life is in jeopardy, and we can’t afford to keep pushing our challenges to another day. We need problem solvers in Washington who can deliver results not rhetoric.”\n– Julie Fedorchak\n## About Julie\nJulie is a conservative, a problem solver, and a leader who will bring a commonsense approach to Washington, D.C. She is running for Congress to get our economy and our country back on track. She is a proven leader in the energy sector and committed to supporting North Dakota farmers, ranchers, and small businesses.\n## We need problem solvers in Washington\nJulie Fedorchak is the champion we need to be North Dakota’s voice in Congress. Julie’s vision for her role in Congress is clear:\n## Fresh Energy for North Dakota\nAs a Public Service Commissioner for the past twelve years, Julie has been on the front lines of North Dakota’s energy boom. She has a track record of fighting for North Dakotans and delivering government that is responsive to the needs of our state. Julie’s results include:\n## CONNECT WITH JULIE & STAY INFORMED\nSend me a message here or sign up to receive regular updates from the campaign. Reach out directly at info@julie4nd.com. If you are interested in joining our staff, please email teamjulie@julie4nd.com.\nAdd to email list"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105212814/https://fedorchaknd.com/issues/",
+     "original": "https://fedorchaknd.com/issues/",
+     "date": "2024-11-05",
+     "title": "Issues - Julie Fedorchak for US Congress",
+     "text": "## Julie’s Record of Results for North Dakota\nJulie knows it’s not good enough just to talk about our conservative values; we must live them. During her time at the Public Service Commission, Julie stood up to the Obama administration to make sure the Dakota Access Pipeline was completed and put into service.\nShe has continued this fight against the Biden Administration and its war on the coal and oil industry. She has worked hard to maintain reliable and affordable energy in North Dakota. Congress, Julie will work with President Trump to secure North Dakota’s energy and agricultural future.\nJulie Fedorchak-the fresh energy we need in Washington D.C."
+    },
+    {
+     "url": "https://web.archive.org/web/20241103024202/https://fedorchaknd.com/issues/embed/",
+     "original": "https://fedorchaknd.com/issues/embed/",
+     "date": "2024-11-03",
+     "title": "Issues - Julie Fedorchak for US Congress",
+     "text": "## HTML Embed\nCopy and paste this URL into your WordPress site to embed\nCopy and paste this code into your site to embed"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.fedorchaknd.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103125134/https://fedorchaknd.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103125134/https://fedorchaknd.com/",
+     "original": "https://fedorchaknd.com/",
+     "date": "2026-11-03",
+     "title": "Julie Fedorchak for US Congress - A Fresh Energy for North Dakota",
+     "text": "“Our way of life is in jeopardy, and we can’t afford to keep pushing our challenges to another day. We need problem solvers in Washington who can deliver results not rhetoric.”\n– Julie Fedorchak\n## About Julie\nJulie is a conservative, a problem solver, and a leader who will bring a commonsense approach to Washington, D.C. She is running for Congress to get our economy and our country back on track. She is a proven leader in the energy sector and committed to supporting North Dakota farmers, ranchers, and small businesses.\n## We need problem solvers in Washington\nJulie Fedorchak is the champion we need to be North Dakota’s voice in Congress. Julie’s vision for her role in Congress is clear:\n## Fresh Energy for North Dakota\nAs a Public Service Commissioner for the past twelve years, Julie has been on the front lines of North Dakota’s energy boom. She has a track record of fighting for North Dakotans and delivering government that is responsive to the needs of our state. Julie’s results include:\n## CONNECT WITH JULIE & STAY INFORMED\nAdd to email list"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103125131/https://fedorchaknd.com/issues/",
+     "original": "https://fedorchaknd.com/issues/",
+     "date": "2026-11-03",
+     "title": "Issues - Julie Fedorchak for US Congress",
+     "text": "## Julie’s Record of Results for North Dakota\nJulie knows it’s not good enough just to talk about our conservative values; we must live them. During her time at the Public Service Commission, Julie stood up to the Obama administration to make sure the Dakota Access Pipeline was completed and put into service.\nShe has continued this fight against the Biden Administration and its war on the coal and oil industry. She has worked hard to maintain reliable and affordable energy in North Dakota. Congress, Julie will work with President Trump to secure North Dakota’s energy and agricultural future.\nJulie Fedorchak-the fresh energy we need in Washington D.C."
+    },
+    {
+     "url": "https://web.archive.org/web/20261012035837/https://www.fedorchaknd.com/.well-known/dnt-policy.txt",
+     "original": "https://www.fedorchaknd.com/.well-known/dnt-policy.txt",
+     "date": "2026-10-12",
+     "title": "One moment, please...",
+     "text": "Please wait while your request is being verified..."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

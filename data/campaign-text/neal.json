@@ -1,0 +1,106 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "neal",
+ "name": "Richard E. Neal",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.nealforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.nealforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108210456/https://www.nealforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108210456/https://www.nealforcongress.com/",
+     "original": "https://www.nealforcongress.com/",
+     "date": "2022-11-08",
+     "title": "Richard Neal for Congress",
+     "text": "## A PROMISE.\nI’m proud to work for the people of Western and Central Mass. As your Congressman, I’ve fought tirelessly for policies that make a difference for hard-working families and future generations: fairer taxes, affordable and accessible healthcare, taking on climate change, preserving Social Security, and more.\nToday, we face profound challenges. Longstanding racial injustice is finally being confronted. A pandemic has turned lives upside down. And through it all, we have a President who has turned his back on our problems, sowed division, and fanned the flames of hate.\nThese challenges may be daunting, but my promise to you remains the same: I will always have your back. I went to Congress to fight for hard-working families across this district and across America, and that’s exactly what I intend to keep doing.\nRep. John Lewis Endorses Richie »\nResponding to COVID-19 »\nToday, we are one step closer to delivering transformative investments in child care, health care, green energy, af… https://t.co/OyycJbX9yQ"
+    },
+    {
+     "url": "https://web.archive.org/web/20220217041810/https://www.nealforcongress.com/issues",
+     "original": "https://www.nealforcongress.com/issues",
+     "date": "2022-02-17",
+     "title": "Issues — Richard Neal for Congress",
+     "text": "It’s Election Day! Polls are open until 8 PM. Learn more"
+    }
+   ],
+   "unread": [
+    "the list of nealforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.nealforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105120731/https://www.nealforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105120731/https://www.nealforcongress.com/",
+     "original": "https://www.nealforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Richard Neal for Congress",
+     "text": "## A PROMISE.\nI’m proud to work for the people of Western and Central Mass. As your Congressman, I’ve fought tirelessly for policies that make a difference for hard-working families and future generations: fairer taxes, affordable and accessible healthcare, taking on climate change, preserving Social Security, and more.\nWorking with President Biden, we’ve made historic progress by delivering generational investments in our infrastructure, passing the largest legislation ever to tackle climate change, addressing racial injustice and creating tens of thousands of good-paying jobs. And we have so much work left to do.\nBut this year, we face challenges not only to all the progress we’ve made, but to American democracy itself.\nThese challenges may be daunting, but my promise to you remains the same: I will always have your back. I went to Congress to fight for hard-working families across this district and across America, and that’s exactly what I intend to keep doing."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105120803/https://www.nealforcongress.com/issues/",
+     "original": "https://www.nealforcongress.com/issues/",
+     "date": "2024-11-05",
+     "title": "Issues — Richard Neal for Congress",
+     "text": "## ON THE ISSUES\nopioids & Mental Health\nIt’s Election Day! Polls are open until 8 PM. Learn more"
+    }
+   ],
+   "unread": [
+    "the list of nealforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.nealforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103135002/https://www.nealforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103135002/https://www.nealforcongress.com/",
+     "original": "https://www.nealforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Richard Neal for Congress",
+     "text": "This newsletter signup form needs a storage option. Edit the block and enter a storage location via the Storage tab.\n## A PROMISE.\nA trip to the grocery store costs more than it used to. So does filling a prescription. I know the middle class needs help. Donald Trump gave billions in tax cuts to the very wealthy. That's why I'm taking on Trump, fighting for middle-class tax cuts, investing in our communities, ending the tariffs that raise your prices, and opposing reckless wars that threaten our security and our economy.\nI'm proud to work for the people of Western and Central Massachusetts. As your Congressman, I've fought tirelessly for hard-working families and future generations by protecting Social Security and Medicare, lowering costs, standing up to Donald Trump's abuse of power, and making sure our region gets its fair share.\nMy promise to you remains the same: I will always have your back. It is an honor to serve as your Congressman, and I would be grateful for the opportunity to earn your vote because I'm not done fighting."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103135121/https://www.nealforcongress.com/issues/",
+     "original": "https://www.nealforcongress.com/issues/",
+     "date": "2026-11-03",
+     "title": "Issues — Richard Neal for Congress",
+     "text": "## ON THE ISSUES\nopioids & Mental Health\nIt’s time to make a plan to vote! Learn more →\nCurrency value should be formatted like 1234 or 123.99.\nCountry code should have an optional plus and up to 4 digits.\nPlease fill out at least one form field.\nNumbers must contain only digits and no other characters.\nValid names contain only letters, numbers, spaces, ', or - characters.\nUnable to submit form. Please try again later."
+    }
+   ],
+   "unread": [
+    "the list of nealforcongress.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

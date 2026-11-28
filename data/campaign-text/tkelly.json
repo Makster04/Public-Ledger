@@ -1,0 +1,79 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "tkelly",
+ "name": "Trent Kelly",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.kellyformississippi.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.kellyformississippi.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-05",
+    "url": "https://web.archive.org/web/20221105125014/https://kellyformississippi.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221105125014/https://kellyformississippi.com/",
+     "original": "https://kellyformississippi.com/",
+     "date": "2022-11-05",
+     "title": "Home - Kelly for Mississippi",
+     "text": "On Tuesday, June 2, 2015, Trent Kelly won a special election runoff to represent the First District of Mississippi in the 114th Congress. Trent lives in Saltillo with his wife, Sheila, and their three children John Forrest, Morgan, and Jackson. They are members of Saltillo First United Methodist Church. Thank you for visiting my campaign web site. If your intention was to visit my official House of Representatives web site, please click here."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.kellyformississippi.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105155002/https://kellyformississippi.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105155002/https://kellyformississippi.com/",
+     "original": "https://kellyformississippi.com/",
+     "date": "2024-11-05",
+     "title": "Home - Kelly for Mississippi",
+     "text": "On Tuesday, June 2, 2015, Trent Kelly won a special election runoff to represent the First District of Mississippi in the 114th Congress. Trent lives in Saltillo with his wife, Sheila, and their three children John Forrest, Morgan, and Jackson. They are members of Saltillo First United Methodist Church. Thank you for visiting my campaign web site. If your intention was to visit my official House of Representatives web site, please click here."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.kellyformississippi.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103104216/https://kellyformississippi.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103104216/https://kellyformississippi.com/",
+     "original": "https://kellyformississippi.com/",
+     "date": "2026-11-03",
+     "title": "Home - Kelly for Mississippi",
+     "text": "On Tuesday, June 2, 2015, Trent Kelly won a special election runoff to represent the First District of Mississippi in the 114th Congress. Trent lives in Saltillo with his wife, Sheila, and their three children John Forrest, Morgan, and Jackson. They are members of Saltillo First United Methodist Church. Thank you for visiting my campaign web site. If your intention was to visit my official House of Representatives web site, please click here."
+    }
+   ],
+   "unread": [
+    "the list of kellyformississippi.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

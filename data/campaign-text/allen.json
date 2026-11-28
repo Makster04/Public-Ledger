@@ -1,0 +1,69 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "allen",
+ "name": "Rick W. Allen",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.rickwallenforcongress.com/",
+  "https://rickallenforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.rickwallenforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108023456/http://www.rickwallenforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108023456/http://www.rickwallenforcongress.com/",
+     "original": "http://www.rickwallenforcongress.com/",
+     "date": "2022-11-08",
+     "title": "Loi Pinel - Rick W. Allen",
+     "text": "## Rick Allen - Loi Pinel\nRick was born in Augusta, Georgia, November 7, 1951. He attended Evans High School, Evans, Georgia, graduated 1969 with honors. Rick received the Georgia Society of Professional Engineers Certificate for outstanding scholarship, leadership, citizenship, and interest in the field of engineering.\nRick graduated 1973 from Auburn University School of Architecture and Fine Arts with a Bachelor of Science Degree in Building Construction. While at Auburn, Rick was a member of:\n- Alpha Tau Omega Social Fraternity\n- Sigma Lambda Chi National Construction Honorary Fraternity\n- Student Member Construction Specifications Institute\nIn 1973, married the former Robin Reeve of Carrollton, Georgia and share four children; Jennifer Allen Green 35 (Tee), Andy Allen 32 (Betsy), Molly Allen Hargather 29 (Jamie), and Robin Anne Allen 27. He also has five grandchildren Hadley Green 10, Wyche Green 7, Hutton and Collier Green (twins) 6, and Hammond Hargather infant.\nSince 1976, Rick has served as President and CEO of R. W. Allen & Associates, Inc., Construction Corporation, Augusta, Georgia.\nBusiness Affiliations :\n- Current Member of Board of Directors, Georgia Bank & Trust, Augusta, Georgia (2007-Present)\n- Past Member of Board of Directors, Bank of America, Augusta, Georgia\n- Member of Associated General Contractors of America, Georgia Branch\n- Served three terms on the Board of Directors (1990-1994 & 1984-1988 & 2000 – 2010)\n- Served as President of the Board of Directors (2006-2007)\n- Served as Vice President of the Board of Directors (2005-2006)\n- Served as Secretary of the Board of Directors (2003-2005)\n- Served on the Membership Committee and Legislative Committee\n- AGC of America Chapter President of the Year 2007\n- Member of Metro Augusta Chamber of Commerce\n- Received the 2008 Small Business Person of the Year Award\n- Served four year term on the Board of Directors (1990-1994)\n- Past Chairman of Economic Development Committee (1991-1993)\n- Member of the First Class of Leadership Augusta (1980)\n- Member of the Housing Comittee Loi Pinel Tax\n- Past Chairman of President’s Club (1984)\n- Past Chairman of Red Carpet Committee (1990)\n- Past Chair of Governmental Affairs Committee\n- Member of Young President’s Organization (1990-2002)\n- Member of World President’s Organization (2002 – Present)\n- 2010 Christian Leadership Conference Chairman\n- Member of Advisory Board Elliott Davis, Accountants and Business Advisors\nReligious Affiliations :\n- Member of Trinity-On-The-Hill United Methodist Church, Augusta, Georgia\n- Chairman of Pastor-Parish Relations Committee (1984–1988 & 2008 – 2011)\n- Past Chairman of Communications Committee (1984)\n- Past Vice Chairman of the Board of Trustees (1996 – 2000)\n- Past member of the Finance Committee and Administrative Board (1976-1982)\n- Past member of the Pastor-Parish Relations Committee (2007-2008)\n- Past Chairman of the Committee of Church Extensions for the North Georgia Conference, Augusta District, United Methodist Church (1980-2000)\n- Member of Christian Businessmen’s Committee of Augusta\n- National Board Member of Lead the Investors\n- Junior Invitational, Inc. – Scoring Committee Chair (2010-present)\n- Board Member, Downtown Development Authority, Augusta, Georgia (2010-present)\n- Member of the Board of Directors Fore! Augusta Foundation and First Tee of Augusta (1999 – Present)\n- Chairman of the Board of DirectorsFore! Augusta Foundation and First Tee of Augusta (2003 – 2004, 2011-present)\n- Board of Directors, Augusta Tomorrow, Inc., Augusta, Georgia (2009 – Present)\n- Vice President of Board of Directors, Augusta-Harrisburg Fuller Center for Housing, Inc., Augusta, Georgia (2009 – Present)\n- Past Chairman of the Board of Directors, St. Joseph Hospital, Augusta, Georgia (1991-2002)\n- Recipient of 1989 Good Samaritan Award, St. Joseph Foundation, Inc.\n- Member of the Exchange Club of Augusta, Georgia\n- Chairman of Youth Committee (1988)\n- Served on the Board of Directors (1988)\n- Elected 2 nd Vice President (1996)\n- Elected 1 st Vice President (1997)\n- Elected President (1998)\n- Past Chairman of the Board, Augusta Easter Seal Society (1984 – 1985)\n- Leadership of Augusta, Class of 1980 (supporter, sponsor and active alumni)\n- Recipient of 2010 Community Service Award\n- Past member of Augusta Symphony League, served on Board of Directors (1984 -1986)\n- Served five years United Way Budget Review committee (1978 – 1983)\n- Served on the Board of Directors of the United Way (1997 – 2000)\n- Serves as Tocqueville Society Chair for United Way of the CSRA (2009 – Present)\n- Past Chairman of the Board of Directors of YMCA of Augusta (1991 and 1992)\n- Past Member of the Board of Directors of Episcopal Day School, Augusta, Georgia (1984 – 1988)\n- Past Chairman of the Building Committee of Episcopal Day School, Augusta, Georgia (1992-1994)\n- Past Chairman of Board of Directors of American Red Cross, Augusta Chapter (1984 – 1985)\n- Past Member of the Board of Directors of the Augusta Opera, 1981\n- St. John Towers Board of Directors (1996 – 2002)\n- Wake Forest University Parents Council (1997 – 2000)\n- University of Georgia Parents Council (2004 – 2006)\n- Past Chairman of the Mayor’s Commission on Significant Architectural Restoration for the City of Augusta (1986 – 1990)\n- Served as Trustee of Foundation, Augusta State University, Augusta, Georgia (1994 – 2002)\n- Soccer, basketball, and baseball coach, YMCA of Augusta (1985-1988). Coached West Augusta Little League (1989 – 1991)\n- Board of Directors Walton Rehabilitation Hospital (2000 – 2006)"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://rickallenforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-03-31",
+    "url": "https://web.archive.org/web/20220331070744/http://rickallenforcongress.com/"
+   },
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.rickwallenforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-06-22",
+    "url": "https://web.archive.org/web/20240622234310/http://www.rickwallenforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20240622234310/http://www.rickwallenforcongress.com/",
+     "original": "http://www.rickwallenforcongress.com/",
+     "date": "2024-06-22",
+     "title": "www.rickwallenforcongress.com – このドメインはお名前.comで取得されています。",
+     "text": "## このドメインは お名前.com から取得されました。\nお名前.com は GMOインターネットグループ(株) が運営する国内シェアNo.1のドメイン登録サービスです。\nレジストラ「GMO Internet Group, Inc. d/b/a Onamae.com」のシェア値を集計。"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

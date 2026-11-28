@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "ascott",
+ "name": "Austin Scott",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.scottforga.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.scottforga.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-10-27",
+    "url": "https://web.archive.org/web/20221027144401/http://scottforga.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221027144401/http://scottforga.com/",
+     "original": "http://scottforga.com/",
+     "date": "2022-10-27",
+     "title": "Austin Scott",
+     "text": "## Austin Scott is a committed conservative representing our Georgia values and free market principles in Congress. Together, we can protect the personal freedoms, individual liberties, and economic opportunities of the next generation.\nAustin resides in Tifton, GA with his wife Vivien, their son Wells and daughter Gabriela.\nHis experience ranges from the cattle farm to the board room–and he has an agenda to strengthen local businesses and benefit Georgia families.\nHe proudly represents Georgia’s 8th Congressional District and serves on the House Armed Services Committee and the Agriculture Committee.\nHe graduated from the University of Georgia and spent 20 years running his own small business. He supports limited government, small business job growth, a strong national defense, and a healthy agricultural economy.\n“Once he makes a commitment, his word is his bond.”\n- National Rifle Association\n- National Right to Life\n- Citizens Against Government Waste"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.scottforga.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105124234/https://www.scottforga.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105124234/https://www.scottforga.com/",
+     "original": "https://www.scottforga.com/",
+     "date": "2024-11-05",
+     "title": "Austin Scott for GA",
+     "text": "## AUSTIN SCOTT IS A COMMITTED CONSERVATIVE REPRESENTING GEORGIA VALUES AND FREE MARKET PRINCIPLES IN CONGRESS. TOGETHER, WE CAN PROTECT THE PERSONAL FREEDOMS, INDIVIDUAL LIBERTIES, AND ECONOMIC OPPORTUNITIES OF THE NEXT GENERATION.\nAustin resides in Tifton, GA, with his wife Vivien and has three children, Wells, Gabriela, and John Philip. His experience ranges from the cattle farm to the board room–and he has an agenda to strengthen local businesses and benefit Georgia families. He proudly represents Georgia’s 8th Congressional District and serves on the House Permanent Select Committee on Intelligence, the House Armed Services Committee, and the House Agriculture Committee. He graduated from the University of Georgia and spent 20 years running his own small business. He supports limited government, small business job growth, a strong national defense, and a healthy agricultural economy.\nThank you for contacting us.\nWe will get back to you as soon as possible.\nOops, there was an error sending your message.\nPlease try again later."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.scottforga.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103063229/https://www.scottforga.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103063229/https://www.scottforga.com/",
+     "original": "https://www.scottforga.com/",
+     "date": "2026-11-03",
+     "title": "Austin Scott for GA",
+     "text": "## AUSTIN SCOTT IS A COMMITTED CONSERVATIVE REPRESENTING GEORGIA VALUES AND FREE MARKET PRINCIPLES IN CONGRESS. TOGETHER, WE CAN PROTECT THE PERSONAL FREEDOMS, INDIVIDUAL LIBERTIES, AND ECONOMIC OPPORTUNITIES OF THE NEXT GENERATION.\nAustin resides in Tifton, GA, with his wife Vivien and has three children, Wells, Gabriela, and John Philip. His experience ranges from the cattle farm to the board room–and he has an agenda to strengthen local businesses and benefit Georgia families. He proudly represents Georgia’s 8th Congressional District and serves on the House Permanent Select Committee on Intelligence, the House Armed Services Committee, and the House Agriculture Committee. He graduated from the University of Georgia and spent 20 years running his own small business. He supports limited government, small business job growth, a strong national defense, and a healthy agricultural economy.\nThank you for contacting us.\nWe will get back to you as soon as possible.\nOops, there was an error sending your message.\nPlease try again later."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

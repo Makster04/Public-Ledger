@@ -1,0 +1,55 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "bthompson",
+ "name": "Bennie G. Thompson",
+ "built": "2026-11-27",
+ "sites": [
+  "https://benniegthompson.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://benniegthompson.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-10-04",
+    "url": "https://web.archive.org/web/20221004004154/http://www.benniegthompson.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221004004154/http://www.benniegthompson.com/",
+     "original": "http://www.benniegthompson.com/",
+     "date": "2022-10-04",
+     "title": "benniegthompson.com - Registered at Namecheap.com",
+     "text": "This domain is registered at Namecheap\nThis domain was recently registered at Namecheap. Please check back later! .\nThis domain is registered at Namecheap\nThis domain was recently registered at Namecheap. Please check back later! .\n2022 Copyright. All Rights Reserved.\nThe Sponsored Listings displayed above are served automatically by a third party. Neither Parkingcrew nor the domain owner maintain any relationship with the advertisers."
+    }
+   ],
+   "unread": [
+    "the list of benniegthompson.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://benniegthompson.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://benniegthompson.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

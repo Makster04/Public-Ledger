@@ -1,0 +1,97 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "finstad",
+ "name": "Brad Finstad",
+ "built": "2026-11-27",
+ "sites": [
+  "https://finstadforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://finstadforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107232700/https://finstadforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107232700/https://finstadforcongress.com/",
+     "original": "https://finstadforcongress.com/",
+     "date": "2022-11-07",
+     "title": "Finstad for Congress",
+     "text": "## ABOUT BRAD FINSTAD\nBrad Finstad is a conservative fighter running for Congress to fire Nancy Pelosi as Speaker of the House and put the brakes on the out-of-control Biden/Pelosi agenda that is fueling inflation and hurting Southern Minnesota families.\nBrad is proud to have served as President Donald J. Trump’s State Director for USDA Rural Development in Minnesota. Brad worked to support infrastructure improvements, business development, homeownership, community services such as schools, public safety and health care, and high-speed internet access in rural areas.\nA fourth-generation resident of the New Ulm area, Brad and his wife Jaclyn met on the school bus in second grade. Today they are the proud parents of seven children. Together with their extended family, they operate a family farm that has been active for generations.\nBrad is a graduate of the University of Minnesota with a degree in Agriculture Education with emphasis in Rural Leadership Development. His prior positions include serving as Executive Director of the Minnesota Turkey Growers Association, Executive Director of the Center for Rural Policy & Development, Area Director with the Minnesota Farm Bureau, and three terms representing Brown, Watonwan, and Redwood counties in the Minnesota House of Representatives.\nBrad is a strong supporter of the Second Amendment, defending the unborn, and keeping government out of the way so entrepreneurs, farmers, and small businesses can thrive.\n## Pro-Trump\nBrad Finstad supports Pres. Trump’s America First agenda and will work to put Americans’ best interest first at home and abroad.\n## Pro-Gun\nBrad Finstad firmly supports Americans Second Amendment rights and will strongly defend them in Congress. He will oppose any liberal efforts to restrict your access to guns.\n## Pro-Life\nWe must protect human life no matter how small. Brad is proud to defend the sanctity of life and he will fight to protect all unborn human beings.\n## Pro-Family\nBrad will work to defend family values and protect parents’ rights. He will fight against any government attempt to takeover parents’ responsibility to raise their children.\n## Pro-Freedom\nGovernment exists to protect our freedoms, not take them away. Brad will work to restore our freedoms and will always fight back against efforts to make Americans less free.\nWays to Help\nPO Box 923\nNew Ulm, MN 56073"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://finstadforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105034724/https://finstadforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105034724/https://finstadforcongress.com/",
+     "original": "https://finstadforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Home - Finstad For Congress",
+     "text": "## MY PLEDGE TO YOU\nI am running for re-election to Congress because Washington, DC sorely needs some Midwestern common sense, and southern Minnesotans deserve a representative who will work hard to advance our priorities.\nThat’s what I will bring to our nation’s capital every single day. I grew up in our rural communities and I still help to operate my family farm. I will always apply that experience in DC for the benefit of the other great families who live here.\nWashington has plenty of folks who are focused on “going viral,” or getting the next 30-second TV soundbite. I’m there to make a positive impact for Minnesotans . . . to help make our neighborhoods safer, our jobs more secure, our schools better, our government programs more effective, and our tax burdens lighter.\nAbove all, I will do everything in my power to leave things better than we found it for the next generation."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105035141/https://finstadforcongress.com/minnesotas-largest-police-association-endorses-brad-finstad-for-congress-in-mn-1-special-election/",
+     "original": "https://finstadforcongress.com/minnesotas-largest-police-association-endorses-brad-finstad-for-congress-in-mn-1-special-election/",
+     "date": "2024-11-05",
+     "title": "MINNESOTA’S LARGEST POLICE ASSOCIATION ENDORSES BRAD FINSTAD FOR CONGRESS IN MN-1 SPECIAL ELECTION - Finstad For Congress",
+     "text": "## MINNESOTA’S LARGEST POLICE ASSOCIATION ENDORSES BRAD FINSTAD FOR CONGRESS IN MN-1 SPECIAL ELECTION\nby FINSB_Admin | May 5, 2022 | News\nMINNESOTA’S LARGEST POLICE ASSOCIATION ENDORSES BRAD FINSTAD FOR CONGRESS IN MN-1 SPECIAL ELECTION - Finstad For Congress"
+    },
+    {
+     "url": "https://web.archive.org/web/20241103074922/https://finstadforcongress.com/minnesotas-largest-police-association-endorses-brad-finstad-for-congress-in-mn-1-special-election/embed/",
+     "original": "https://finstadforcongress.com/minnesotas-largest-police-association-endorses-brad-finstad-for-congress-in-mn-1-special-election/embed/",
+     "date": "2024-11-03",
+     "title": "MINNESOTA’S LARGEST POLICE ASSOCIATION ENDORSES BRAD FINSTAD FOR CONGRESS IN MN-1 SPECIAL ELECTION - Finstad For Congress",
+     "text": "MINNESOTA’S LARGEST POLICE ASSOCIATION ENDORSES BRAD FINSTAD FOR CONGRESS IN MN-1 SPECIAL ELECTION\nMinnesota Police & Peace Officers Association says Brad Finstad is the best choice to protect our communities and support law enforcement.\n## HTML Embed\nCopy and paste this URL into your WordPress site to embed\nCopy and paste this code into your site to embed"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://finstadforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103083123/https://finstadforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103083123/https://finstadforcongress.com/",
+     "original": "https://finstadforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Home - Brad Finstad for Congress",
+     "text": "## Meet Brad\n4th Generation Farmer\nAs a 4th-generation farmer, Brad Finstad knows the true meaning of hard work. He will always stand strong for the family farmers who feed our nation and fuel our economy.\nPROUD FAMILY MAN\nA husband and father of seven, Brad Finstad is fighting to leave our country better than he found it for his children and yours.\nCommitted To Service\nBrad Finstad has dedicated his career to fighting for the people of Minnesota and their families.\n## MY PLEDGE TO YOU\nI am running for re-election to Congress because Washington, D.C., sorely needs some Midwestern common sense, and southern Minnesotans deserve a representative who will work hard to advance our priorities.\nThat’s what I will bring to our nation’s capital every single day. I grew up in our rural communities, and I still help to operate my family farm. I will always apply that experience in D.C. for the benefit of the other great families who live here.\nWashington has plenty of folks focused on “going viral” or getting the next 30-second TV soundbite. I’m there to make a positive impact for Minnesotans by helping make our neighborhoods safer, our jobs more secure, our schools better, our government programs more effective, and our tax burdens lighter.\nAbove all, I will do everything in my power to leave things better than we found them for the next generation.\n## Common Sense Solutions\nBuilding a brighter future for southern Minnesota through proven leadership and common sense.\nSUPPORTING OUR FARMING FAMILIES\nEnsure that federal farm policy avoids creating burdensome obstacles and is written by farmers, for farmers.\nFIGHTING FOR FISCAL SANITY\nKeep more money in your paycheck and give small businesses the certainty they need to operate and grow.\nSECURING THE BORDER & RULE OF LAW\nContinue to keep our border secure, restore the rule of law, resume construction of the southern border wall, and alleviate staffing shortages for Customs and Border Patrol.\nPROTECTING ELECTIONS & CONSTITUTIONAL FREEDOMS\nImplement common-sense safeguards to ensure that only U.S. citizens can vote in our federal elections and to protect individual liberties from left-wing efforts."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103044832/https://finstadforcongress.com/issues/",
+     "original": "https://finstadforcongress.com/issues/",
+     "date": "2026-11-03",
+     "title": "Issues - Brad Finstad for Congress",
+     "text": "## Issues\nWhere Brad Stands\n## SUPPORTING OUR FARMING FAMILIES\n- What We’re Up Against: Washington bureaucrats and unscientific, politically motivated policies—such as California’s Proposition 12—that threaten the livelihoods of family farms and agricultural producers.\n- The Mission: Ensure that federal farm policy avoids creating burdensome obstacles and is written by farmers, for farmers.\n- The Benefit: Lower input costs, stronger supply chains, and a secure, high-quality food supply for the nation.\n- The Proof (Results): Brad recently introduced the USDA Express Loan Act and supports the PRECISE Act to expand farmer access to advanced agricultural technology and capital. He also championed the FARMER Act to expand crop insurance access and reduce costs for local producers.\n## FIGHTING FOR FISCAL SANITY\n- What We’re Up Against: Reckless government spending and burdensome taxes that squeeze small businesses and working families across the district.\n- The Mission: Keep more money in your paycheck and give small businesses the certainty they need to operate and grow.\n- The Benefit: A thriving local economy driven by Main Street businesses, not by government mandates.\n- The Proof (Results): Brad voted for the Working Families Tax Cuts to lock in critical tax provisions, specifically the 199A small business deduction. He was recognized as a “Small Business Deduction Champion” by the NFIB for his legislative efforts to protect these savings.\n## SECURING THE BORDER & RULE OF LAW\n- What We’re Up Against: A continuing threat from illegal immigrants and drug cartels looking to flood into our nation.\n- The Mission: Continue to keep our border secure, restore the rule of law, resume construction of the southern border wall, and alleviate staffing shortages for Customs and Border Patrol.\n- The Benefit: Safe neighborhoods and an end to the humanitarian and national security crisis threatening our country.\n- The Proof (Results): Brad secured the largest border security investment in history through H.R. 1 to complete the border wall, increase immigration enforcement resources, and hire new border patrol agents. He is also a co-sponsor of the Deporting Fraudsters Act and supports legislation requiring ICE to detain illegal immigrants charged with crimes resulting in death or serious injury.\n## PROTECTING ELECTIONS & CONSTITUTIONAL FREEDOMS\n- What We’re Up Against: Attempts to undermine election integrity and bureaucratic overreach that targets the constitutional rights and liberties of American citizens.\n- The Mission: Implement common-sense safeguards to ensure that only U.S. citizens can vote in our federal elections and to protect individual liberties from left-wing efforts.\n- The Benefit: Restored faith in the democratic process, secure elections, and protected constitutional freedoms.\n- The Proof (Results): Brad co-sponsored the SAVE Act, which requires proof of U.S. citizenship and identity to register to vote in federal elections. He also backed the Equal Representation Act to prevent non-citizens from being counted toward congressional apportionment, and he actively supports the Minnesota Voter Integrity Act."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

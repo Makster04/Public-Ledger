@@ -1,0 +1,209 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "garbarino",
+ "name": "Andrew R. Garbarino",
+ "built": "2026-11-28",
+ "sites": [
+  "https://www.garbarinoforny.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.garbarinoforny.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-05",
+    "url": "https://web.archive.org/web/20221105122945/https://garbarinoforny.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221105122945/https://garbarinoforny.com/",
+     "original": "https://garbarinoforny.com/",
+     "date": "2022-11-05",
+     "title": "Home - Andrew Garbarino",
+     "text": "## Delivering Results For Long&nbspIsland\nEARLY VOTING INFORMATION\n## About Andrew\nSince I was sworn into office on January 3rd, I have been hard at work on behalf of the people of New York’s 2nd District. I’m proud to serve on the House Small Business Committee and the House Homeland Security Committee where I am the Ranking Member of the Subcommittee on Cybersecurity, Infrastructure Protection, and Innovation.\n## What We've Accomplished\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Latest Updates\nOctober 19, 2022\nSAYVILLE, NY – Garbarino for Congress today released a NEW TV ad\nOctober 18, 2022\nThe election in the newly redrawn 2nd Congressional District is a rematch\nSeptember 28, 2022\nSAYVILLE, NY – Garbarino for Congress today released a NEW TV ad\nSeptember 15, 2022\nSAYVILLE, NY – Garbarino for Congress today released a NEW TV ad ahead of the 2022\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20221005055133/https://garbarinoforny.com/issues/",
+     "original": "https://garbarinoforny.com/issues/",
+     "date": "2022-10-05",
+     "title": "Issues Archive - Andrew Garbarino",
+     "text": "## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807153341/https://garbarinoforny.com/issues/economy-jobs/",
+     "original": "https://garbarinoforny.com/issues/economy-jobs/",
+     "date": "2022-08-07",
+     "title": "Economy & Jobs - Andrew Garbarino",
+     "text": "## Economy & Jobs\nToday, Americans are facing near 40-year high inflation, supply chain shortages, bare shelves, labor shortages, and record gas prices. In short, under President Biden and Nancy Pelosi’s leadership families are struggling to find essentials and paying more for just about everything.\nThat’s why I have opposed Congressional Democrats’ radical spending agenda, voted against the socialist Build Back Better bill and American Rescue Plan, and instead supported legislation like the Investing in Main Street Act and the Microloan Improvement Act which would help small businesses get back on their feet and reinvigorate our economy. I introduced the Family Fun Act which would bring targeted aid to small businesses like our own Adventureland in Farmingdale which were forgotten in initial COVID relief packages and am a cosponsor of legislation like the ENTRÉE Act which would help make restaurants whole again after forced shutdowns nearly cost them everything.\nI am also working to hold the Administration accountable and increase oversight to prevent fraud and waste in Small Business Administration programs including by cosponsoring the IMPROVE the SBA Act and the Small Business Regulatory Reduction Act .\nAs a third-generation business owner, I know firsthand the challenges our small businesses are facing. Main street USA is the backbone of our economy and provides the livelihood of so many hardworking Long Islanders. I’m proud to serve as a member of the House Small Business Committee and the GOP Jobs and Economy Task Force where I have been fighting to reduce over regulation, lessening small business tax burdens, and deliver real results for small businesses back home. Our economy is in crisis, and we need pro-growth policies and less red tape to reinvigorate our economic growth.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807164547/https://garbarinoforny.com/issues/supporting-our-veterans/",
+     "original": "https://garbarinoforny.com/issues/supporting-our-veterans/",
+     "date": "2022-08-07",
+     "title": "Supporting Our Veterans - Andrew Garbarino",
+     "text": "## Supporting Our Veterans\nNew York is home to over 838,000 veterans who have put their lives on the line fighting for their country. After their brave service and sacrifice, we must ensure our commitments to them are upheld which is why I have made it a top priority to fight for better access to healthcare and benefits for our veterans.\nMaking informed policy decisions on behalf of Long Island veterans is of the utmost importance to me. That is why I launched my Veterans Advisory Council , a standing advisory body comprised of local veterans and veterans’ groups that provides guidance and recommendations on issues of importance to our nation’s heroes. The Veterans Advisory Council helps me better advocate for the Long Island veteran community and address the challenges veterans are facing.One of my first acts in Congress was introducing the Veteran Suicide Prevention Act which would require the VA to conduct a review of suicides among veterans committed in the last five years in order to determine the best way to safeguard the mental health of our nation’s heroes after surviving the horrors of war. I have supported legislation like the Vietnam Veterans Liver Fluke Cancer Study Act and the Presumptive Benefits for War Fighters Exposed to Burn Pits and Other Toxins Act to ensure veterans exposed to harmful toxins during their service receive the healthcare they deserve. I introduced the VSO Support Act to help keep veterans halls, American legions, VFW Posts, and other Veteran Service Organizations open and operational in the wake of COVID shutdowns and pushed back against the Biden Administration’s ill-conceived proposed service cuts to the Northport VA Medical Center which would significantly impact access to care. We are forever indebted to the brave men and women who have served in our armed forces, and to their families. I will always make fighting on their behalf a top priority in Congress.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20221027234749/https://garbarinoforny.com/issues/standing-with-law-enforcement/",
+     "original": "https://garbarinoforny.com/issues/standing-with-law-enforcement/",
+     "date": "2022-10-27",
+     "title": "Standing With Law Enforcement - Andrew Garbarino",
+     "text": "## Standing With Law Enforcement\nWhen I was elected, I promised the people of Long Island that I would work to keep our communities safe, restore law and order, and protect our heroes in law enforcement. Now more than ever, it is important that we support our brave men and women in law enforcement, ensure they have the resources needed to combat rising crime and keep our communities safe, and oppose all efforts to defund the police.\nIt is no coincidence that we are experiencing rising crime, murder rates, and spikes in violence across major cities in the United States. Not only that, but our homeland security is also being jeopardized. Police departments are not being given sufficient resources for counterterrorism operations. New York City has 500 fewer detectives this year because of budget constraints, resulting in higher crime and slower response times. I am vehemently opposed to New York’s bail reform policies which have resulted in 50% of criminals who were arrested for shooting someone being put back on the streets, according to officials. In August, I held a roundtable with members of the Nassau, Suffolk, and NYC law enforcement community to hear directly from officers on the front lines and throughout my time in congress I have stood unwavering in my support of our men and women in blue. We must do more to empower our law enforcement community and combat rising crime.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807152412/https://garbarinoforny.com/issues/border-security/",
+     "original": "https://garbarinoforny.com/issues/border-security/",
+     "date": "2022-08-07",
+     "title": "Border Security - Andrew Garbarino",
+     "text": "## Border Security\nThe Biden Border Crisis is a threat to public safety, public health, and national security and yet President Biden and his Administration continue to sit by while drug smugglers, human traffickers, and violent criminals take advantage of our open borders.\nSince President Biden took office, over 2.4 million migrants have been apprehended illegally crossing the southern border – the highest number in history. MS-13, a transnational criminal organization (TCO) whose violence plagues Long Island, was the number one gang affiliation apprehended last year which is why I have made securing our border a top priority since being elected to Congress. Every state is a border state when it comes to the consequences of this crisis.\nI have visited the border twice, spoken to border patrol, and witnessed the crisis firsthand. In order to secure our border, we need to finish building our border wall, provide more resources to border patrol, and keep Title 42 and Remain in Mexico policies in place in order to stem the tide of illegal crossings. That’s why I have supported legislation like the Finish the Wall Act and the Border Security for America Act of 2021, cosponsored the PAUSE Act which would keep Title 42 in place, and introduced legislation to hold the Administration accountable for its secret middle of the night flights bringing migrants to New York. I am spearheading legislation to fund the Department of Homeland Security’s Transnational Criminal Investigative Units (TCIUs), which are crucial in stopping illegal immigrants affiliated with MS-13 and other violent gangs at the source and taking on these criminals before they reach our border.\nIllegal Immigrants may enter the U.S. through our southern states, but they don’t stay there. They disperse throughout the country and bring crime, drugs, and a strain on the resources of communities far north of the border. I am committed to getting this crisis under control.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20220807151034/https://garbarinoforny.com/issues/energy-environment/",
+     "original": "https://garbarinoforny.com/issues/energy-environment/",
+     "date": "2022-08-07",
+     "title": "Energy & Environment - Andrew Garbarino",
+     "text": "## Energy & Environment\nAmericans are paying record high gas prices thanks to Biden’s Energy Crisis. On day one in office, President Biden canceled the Keystone Pipeline and then greenlit Russia’s Nord Stream 2 pipeline, emboldening Putin and crippling our energy independence. The Administration’s anti-American energy policies are costing Long Islanders at the pump and threatening our national security by forcing the United States to rely on foreign adversaries for the fuel we need. I am committed to fighting the Biden Administration’s failed energy policies in Congress. We must resume domestic energy production and restore American energy independence.\nI’ve cosponsored bills like the Prohibition on Imports of Russian Oil Act, which would prohibit the U.S. from importing oil from Russia in light of Russia’s invasion of Ukraine and the Expediting Natural Gas Exports to Allies Act, which would expedite approval of applications to export natural gas to certain allies of the U.S. I’ve urged the Administration to unleash American energy production to address higher gas prices.\nI am supportive of an all-of-the-above energy strategy – which has directly contributed to America’s energy independence and economic prosperity. An all-of-the-above energy strategy is necessary to provide low-cost, reliable energy to all.\nI am proud to be the co-chair of the Climate Solutions Caucus as well as a member of the Conservative Climate Caucus so that I can better advocate for investments in American resources and private sector innovation that will reduce emissions, not reduce energy choices. As a third-generation Long Islander, I take to heart the critical need to conserve our unique natural environment on Long Island. The Great South Bay is one of Southeast Long Island’s greatest resources, and protecting the bay is in the best interest of both our environment and economy. I want to tackle environmental issues with science-based solutions that reject massive federal government takeovers, avoid excessive regulation, and respect the free market.\n## Quick Links"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.garbarinoforny.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-07-23",
+    "url": "https://web.archive.org/web/20240723092519/https://garbarinoforny.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20240723092519/https://garbarinoforny.com/",
+     "original": "https://garbarinoforny.com/",
+     "date": "2024-07-23",
+     "title": "Home - Andrew Garbarino",
+     "text": "## About Andrew\nSince I was sworn into office on January 3rd, I have been hard at work on behalf of the people of New York’s 2nd District. I’m proud to serve on the House Small Business Committee and the House Homeland Security Committee where I am the Ranking Member of the Subcommittee on Cybersecurity, Infrastructure Protection, and Innovation.\n## What We've Accomplished\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Latest Updates\nNovember 9, 2022\nCongressman Garbarino Will Continue Representing New York’s 2nd Congressional District In The 118th\nOctober 19, 2022\nSAYVILLE, NY – Garbarino for Congress today released a NEW TV ad\nOctober 18, 2022\nThe election in the newly redrawn 2nd Congressional District is a rematch\nSeptember 28, 2022\nSAYVILLE, NY – Garbarino for Congress today released a NEW TV ad\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105130735/https://garbarinoforny.com/issues/",
+     "original": "https://garbarinoforny.com/issues/",
+     "date": "2024-11-05",
+     "title": "Issues Archive - Andrew Garbarino",
+     "text": "## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105131021/https://garbarinoforny.com/issues/economy-jobs/",
+     "original": "https://garbarinoforny.com/issues/economy-jobs/",
+     "date": "2024-11-05",
+     "title": "Economy & Jobs - Andrew Garbarino",
+     "text": "## Economy & Jobs\nToday, Americans are facing near 40-year high inflation, supply chain shortages, bare shelves, labor shortages, and record gas prices. In short, under President Biden leadership families are struggling to find essentials and paying more for just about everything.\nThat’s why I have opposed Congressional Democrats’ radical spending agenda, voted against the socialist Build Back Better bill and American Rescue Plan, and instead supported legislation like the Investing in Main Street Act and the Microloan Improvement Act which would help small businesses get back on their feet and reinvigorate our economy. I introduced the Family Fun Act which would bring targeted aid to small businesses like our own Adventureland in Farmingdale which were forgotten in initial COVID relief packages and am a cosponsor of legislation like the ENTRÉE Act which would help make restaurants whole again after forced shutdowns nearly cost them everything.\nI am also working to hold the Administration accountable and increase oversight to prevent fraud and waste in Small Business Administration programs including by cosponsoring the IMPROVE the SBA Act and the Small Business Regulatory Reduction Act .\nAs a third-generation business owner, I know firsthand the challenges our small businesses are facing. Main street USA is the backbone of our economy and provides the livelihood of so many hardworking Long Islanders. I’m proud to serve as a member of the House Small Business Committee and the GOP Jobs and Economy Task Force where I have been fighting to reduce over regulation, lessening small business tax burdens, and deliver real results for small businesses back home. Our economy is in crisis, and we need pro-growth policies and less red tape to reinvigorate our economic growth.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105131023/https://garbarinoforny.com/issues/supporting-our-veterans/",
+     "original": "https://garbarinoforny.com/issues/supporting-our-veterans/",
+     "date": "2024-11-05",
+     "title": "Supporting Our Veterans - Andrew Garbarino",
+     "text": "## Supporting Our Veterans\nNew York is home to over 838,000 veterans who have put their lives on the line fighting for their country. After their brave service and sacrifice, we must ensure our commitments to them are upheld which is why I have made it a top priority to fight for better access to healthcare and benefits for our veterans.\nMaking informed policy decisions on behalf of Long Island veterans is of the utmost importance to me. That is why I launched my Veterans Advisory Council , a standing advisory body comprised of local veterans and veterans’ groups that provides guidance and recommendations on issues of importance to our nation’s heroes. The Veterans Advisory Council helps me better advocate for the Long Island veteran community and address the challenges veterans are facing. One of my first acts in Congress was introducing the Veteran Suicide Prevention Act which would require the VA to conduct a review of suicides among veterans committed in the last five years in order to determine the best way to safeguard the mental health of our nation’s heroes after surviving the horrors of war.\nI have supported legislation like the Vietnam Veterans Liver Fluke Cancer Study Act and the Presumptive Benefits for War Fighters Exposed to Burn Pits and Other Toxins Act to ensure veterans exposed to harmful toxins during their service receive the healthcare they deserve. I introduced the VSO Support Act to help keep veterans halls, American legions, VFW Posts, and other Veteran Service Organizations open and operational in the wake of COVID shutdowns and pushed back against the Biden Administration’s ill-conceived proposed service cuts to the Northport VA Medical Center which would significantly impact access to care. We are forever indebted to the brave men and women who have served in our armed forces, and to their families. I will always make fighting on their behalf a top priority in Congress.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105131019/https://garbarinoforny.com/issues/standing-with-law-enforcement/",
+     "original": "https://garbarinoforny.com/issues/standing-with-law-enforcement/",
+     "date": "2024-11-05",
+     "title": "Standing With Law Enforcement - Andrew Garbarino",
+     "text": "## Standing With Law Enforcement\nWhen I was elected, I promised the people of Long Island that I would work to keep our communities safe, restore law and order, and protect our heroes in law enforcement. Now more than ever, it is important that we support our brave men and women in law enforcement, ensure they have the resources needed to combat rising crime and keep our communities safe, and oppose all efforts to defund the police.\nIt is no coincidence that we are experiencing rising crime, murder rates, and spikes in violence across major cities in the United States. Not only that, but our homeland security is also being jeopardized. Police departments are not being given sufficient resources for counterterrorism operations. New York City has 500 fewer detectives this year because of budget constraints, resulting in higher crime and slower response times. I am vehemently opposed to New York’s bail reform policies which have resulted in 50% of criminals who were arrested for shooting someone being put back on the streets, according to officials. In August, I held a roundtable with members of the Nassau, Suffolk, and NYC law enforcement community to hear directly from officers on the front lines and throughout my time in congress I have stood unwavering in my support of our men and women in blue. We must do more to empower our law enforcement community and combat rising crime.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105131017/https://garbarinoforny.com/issues/border-security/",
+     "original": "https://garbarinoforny.com/issues/border-security/",
+     "date": "2024-11-05",
+     "title": "Border Security - Andrew Garbarino",
+     "text": "## Border Security\nThe Biden Border Crisis is a threat to public safety, public health, and national security and yet President Biden and his Administration continue to sit by while drug smugglers, human traffickers, and violent criminals take advantage of our open borders.\nSince President Biden took office, over 2.4 million migrants have been apprehended illegally crossing the southern border – the highest number in history. MS-13, a transnational criminal organization (TCO) whose violence plagues Long Island, was the number one gang affiliation apprehended last year which is why I have made securing our border a top priority since being elected to Congress. Every state is a border state when it comes to the consequences of this crisis.\nI have visited the border twice, spoken to border patrol, and witnessed the crisis firsthand. In order to secure our border, we need to finish building our border wall, provide more resources to border patrol, and keep Title 42 and Remain in Mexico policies in place in order to stem the tide of illegal crossings. That’s why I have supported legislation like the Finish the Wall Act and the Border Security for America Act of 2021, cosponsored the PAUSE Act which would keep Title 42 in place, and introduced legislation to hold the Administration accountable for its secret middle of the night flights bringing migrants to New York. I am spearheading legislation to fund the Department of Homeland Security’s Transnational Criminal Investigative Units (TCIUs), which are crucial in stopping illegal immigrants affiliated with MS-13 and other violent gangs at the source and taking on these criminals before they reach our border.\nIllegal Immigrants may enter the U.S. through our southern states, but they don’t stay there. They disperse throughout the country and bring crime, drugs, and a strain on the resources of communities far north of the border. I am committed to getting this crisis under control.\nAndrew Garbarino is the sponsor of H.R. 2494 – POLICE Act- This bill makes assaulting a law enforcement officer, firefighter, or other first responder a deportable offense. This bill passed the House of Representatives.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105131015/https://garbarinoforny.com/issues/energy-environment/",
+     "original": "https://garbarinoforny.com/issues/energy-environment/",
+     "date": "2024-11-05",
+     "title": "Energy & Environment - Andrew Garbarino",
+     "text": "## Energy & Environment\nAmericans are paying record high gas prices thanks to Biden’s Energy Crisis. On day one in office, President Biden canceled the Keystone Pipeline and then greenlit Russia’s Nord Stream 2 pipeline, emboldening Putin and crippling our energy independence. The Administration’s anti-American energy policies are costing Long Islanders at the pump and threatening our national security by forcing the United States to rely on foreign adversaries for the fuel we need. I am committed to fighting the Biden Administration’s failed energy policies in Congress. We must resume domestic energy production and restore American energy independence.\nI’ve cosponsored bills like the Prohibition on Imports of Russian Oil Act, which would prohibit the U.S. from importing oil from Russia in light of Russia’s invasion of Ukraine and the Expediting Natural Gas Exports to Allies Act, which would expedite approval of applications to export natural gas to certain allies of the U.S. I’ve urged the Administration to unleash American energy production to address higher gas prices.\nI am supportive of an all-of-the-above energy strategy – which has directly contributed to America’s energy independence and economic prosperity. An all-of-the-above energy strategy is necessary to provide low-cost, reliable energy to all.\nI am proud to be the co-chair of the Climate Solutions Caucus as well as a member of the Conservative Climate Caucus so that I can better advocate for investments in American resources and private sector innovation that will reduce emissions, not reduce energy choices. As a third-generation Long Islander, I take to heart the critical need to conserve our unique natural environment on Long Island. The Great South Bay is one of Southeast Long Island’s greatest resources, and protecting the bay is in the best interest of both our environment and economy. I want to tackle environmental issues with science-based solutions that reject massive federal government takeovers, avoid excessive regulation, and respect the free market.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20241102045151/https://garbarinoforny.com/issues/border-security/embed/",
+     "original": "https://garbarinoforny.com/issues/border-security/embed/",
+     "date": "2024-11-02",
+     "title": "Border Security - Andrew Garbarino",
+     "text": "The Biden Border Crisis is a threat to public safety, public health, and national security and yet President Biden and his Administration continue to sit by while drug smugglers, human traffickers, and violent criminals take advantage of our open borders. Since President Biden took office, over 2.4 million migrants have been apprehended illegally crossing the … Continue reading Border Security\n## HTML Embed\nCopy and paste this URL into your WordPress site to embed\nCopy and paste this code into your site to embed"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.garbarinoforny.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103041535/https://garbarinoforny.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103041535/https://garbarinoforny.com/",
+     "original": "https://garbarinoforny.com/",
+     "date": "2026-11-03",
+     "title": "Home - Andrew Garbarino",
+     "text": "## Delivering Results For Long Island\nBy checking this box, you are opting in to receive campaign alerts, updates, and news messages via SMS from Garbarino for Congress. Additional text and data rates may apply. Text STOP to opt out. Text HELP for assistance. Message Frequency may vary/month. Donations will be solicited. See our Privacy Policy and Terms of Service here.\n## About Andrew\nSince taking office in January 2021, I have been hard at work delivering results for the people of New York’s 2nd District. I’m proud to serve as Chairman of the House Committee on Homeland Security, where I led the fight to secure permanent funding for the World Trade Center Health Program, and as Vice Chairman of the Subcommittee on Capital Markets on the House Committee on Financial Services, where I have led the fight to grow our economy and deliver real tax relief for Long Island families, including lifting the SALT cap from $10,000 to $40,000.\nResults for Long Island\nCongressman Garbarino doesn't just fight for Long Island — he wins.\nHere are the major legislative victories he has helped deliver:\nSigned into Law\nPermanent 9/11 Healthcare\nAfter years of fighting alongside first responders and survivors,\nAndrew secured permanent funding for the World Trade Center Health\nProgram guaranteeing that those who answered the call on September\n11th will always have the care they earned.\nSigned into Law\nHistoric Tax Relief for Long Island\nAndrew helped deliver the largest tax cut in Long Island history,\nLifting the SALT deduction cap from $10,000 to $40,000,\nputting real money back in the pockets of Long Island homeowners\nNo tax on tips for hardworking service industry employees\nAn expanded Child Tax Credit for families\nA new Senior Tax Deduction for retirees on fixed incomes\nProtected tax relief for small businesses and entrepreneurs\nPassed the House\nThe POLICE Act\nAndrew championed the POLICE Act through the House, standing\nfirmly with law enforcement and ensuring our officers have the\nresources and protections they need to keep our communities safe.\nView More Results\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103035856/https://garbarinoforny.com/issues/",
+     "original": "https://garbarinoforny.com/issues/",
+     "date": "2026-11-03",
+     "title": "Issues Archive - Andrew Garbarino",
+     "text": "## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103040154/https://garbarinoforny.com/issues/economy-jobs/",
+     "original": "https://garbarinoforny.com/issues/economy-jobs/",
+     "date": "2026-11-03",
+     "title": "Strengthening Long Island's Economy - Andrew Garbarino",
+     "text": "## Strengthening Long Island’s Economy\nLong Island families and small businesses deserve an economy that rewards hard work, encourages investment, and creates opportunity.\nAs a third-generation small business owner, I understand the challenges facing employers, entrepreneurs, and working families. That’s why I have fought to lower taxes, reduce unnecessary regulations, and create an environment where businesses can grow and create jobs.\nI helped secure an increase in the State and Local Tax (SALT) deduction from $10,000 to $40,000 and fought to preserve the Pass-Through Entity Tax (PTET) deduction , providing meaningful tax relief for Long Island families and small businesses.\nAs Vice Chairman of the House Financial Services Subcommittee on Capital Markets , I helped advance the INVEST Act to expand access to capital for small businesses and the bipartisan 21st Century ROAD to Housing Act to increase housing supply and improve affordability.\nI will continue fighting to strengthen Long Island’s economy, support small businesses, create good-paying jobs, and expand opportunities for New York families.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103040148/https://garbarinoforny.com/issues/supporting-our-veterans/",
+     "original": "https://garbarinoforny.com/issues/supporting-our-veterans/",
+     "date": "2026-11-03",
+     "title": "Supporting Our Veterans - Andrew Garbarino",
+     "text": "## Supporting Our Veterans\nLong Island is home to more than 800,000 veterans, and I believe we have a solemn obligation to ensure they receive the care, benefits, and support they have earned.\nSupporting our veterans has been one of my top priorities since taking office. I established my Veterans Advisory Council to ensure Long Island veterans have a direct voice in my work, and I have championed legislation to improve health care, expand earned benefits, strengthen mental health services, and support Veteran Service Organizations through my VSO Support Act .\nI was proud to support bipartisan legislation including the PAWS for Veterans Therapy Act and the Dr. Lorna Breen Health Care Provider Protection Act , while also helping secure permanent funding for the World Trade Center Health Program and fighting to protect access to care at the Northport VA Medical Center .\nOur veterans fulfilled their promise to America. I will always fight to fulfill our promise to them.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103040145/https://garbarinoforny.com/issues/standing-with-law-enforcement/",
+     "original": "https://garbarinoforny.com/issues/standing-with-law-enforcement/",
+     "date": "2026-11-03",
+     "title": "Standing With Law Enforcement - Andrew Garbarino",
+     "text": "## Standing With Law Enforcement\nKeeping Long Island families safe has always been one of my top priorities. I believe we must stand with the brave men and women in law enforcement, give them the tools they need to do their jobs, and ensure our communities remain safe.\nI have consistently opposed efforts to defund the police and have fought to strengthen law enforcement at every level. I introduced the POLICE Act , which makes assaulting a law enforcement officer, firefighter, or other first responder a deportable offense. The bill passed the House and sends a clear message that attacks on those who protect our communities will not be tolerated.\nAs Chairman of the House Homeland Security Committee , I helped secure $140 million in federal funding for counterterrorism and emergency preparedness across New York, including $1.8 million for Nassau and Suffolk Counties. I continue working with local law enforcement and first responders to ensure they have the resources needed to combat crime, respond to emerging threats, and keep Long Island families safe.\nI will always Back the Blue, support our first responders, and fight for policies that strengthen public safety and uphold the rule of law.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103040150/https://garbarinoforny.com/issues/border-security/",
+     "original": "https://garbarinoforny.com/issues/border-security/",
+     "date": "2026-11-03",
+     "title": "Border Security - Andrew Garbarino",
+     "text": "## Border Security\nSecuring our nation’s borders is essential to protecting our communities, combating transnational crime, and safeguarding our national security. I believe the federal government has a responsibility to enforce our immigration laws, stop the flow of fentanyl and other deadly drugs, and provide our law enforcement officers and Border Patrol agents with the resources they need to keep America safe.\nAs Chairman of the House Homeland Security Committee , I have made border security and combating transnational criminal organizations top priorities. I have worked to strengthen oversight of the Department of Homeland Security, secure our borders, and ensure our immigration system prioritizes public safety and national security.\nI have visited the southern border, met directly with Border Patrol agents, and seen firsthand the challenges they face every day. Those conversations have reinforced my commitment to securing the border, stopping human trafficking, disrupting drug cartels, and preventing violent gangs from bringing crime into communities like Long Island.\nI introduced the POLICE Act (H.R. 2494) , which makes assaulting a law enforcement officer, firefighter, or other first responder a deportable offense. The legislation passed the House of Representatives and reinforces the principle that anyone who attacks the men and women who protect our communities should face serious consequences.\nI have also advanced legislation to combat transnational criminal organizations, including the Tren de Aragua Border Security Threat Assessment Act , requiring the Department of Homeland Security to develop a comprehensive strategy to address the growing threat posed by violent criminal organizations operating across our borders.\nKeeping Long Island safe means securing America’s borders. I will continue fighting to strengthen border security, support our law enforcement officers, stop the flow of fentanyl, and ensure dangerous criminals are kept out of our communities.\n## Quick Links"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103040150/https://garbarinoforny.com/issues/energy-environment/",
+     "original": "https://garbarinoforny.com/issues/energy-environment/",
+     "date": "2026-11-03",
+     "title": "Energy & Environment - Andrew Garbarino",
+     "text": "## Energy & Environment\nLong Island’s economy and quality of life depend on affordable, reliable energy and a healthy environment. I believe we can strengthen America’s energy security while protecting the natural resources that make Long Island such a special place to call home.\nI support an all-of-the-above energy strategy that expands American energy production, strengthens our electric grid, and reduces our reliance on foreign adversaries. As Co-Chair of the bipartisan Climate Solutions Caucus and a member of the Conservative Climate Caucus , I have worked to advance practical, market-driven solutions that encourage innovation, strengthen our economy, and protect our environment.\nI also fought to preserve key clean energy tax incentives for technologies like nuclear power, hydropower, geothermal energy, and energy storage, helping ensure America remains competitive while maintaining a reliable energy supply.\nProtecting Long Island’s environment remains one of my top priorities. I have secured millions of dollars for sewer infrastructure, coastal resiliency, flood mitigation, and water quality projects that protect the Great South Bay and communities throughout Nassau and Suffolk Counties.\nI believe we can grow our economy, strengthen our energy independence, and preserve Long Island’s natural resources for future generations.\n## Quick Links"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "lalota",
+ "name": "Nick LaLota",
+ "built": "2026-11-28",
+ "sites": [
+  "https://nicklalota.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://nicklalota.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108080426/https://www.nicklalota.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108080426/https://www.nicklalota.com/",
+     "original": "https://www.nicklalota.com/",
+     "date": "2022-11-08",
+     "title": "LaLota for Congress",
+     "text": "## Service Above Self\nfight to put Long Island Families First:"
+    }
+   ],
+   "notSaved": [
+    "https://www.nicklalota.com/issues",
+    "https://www.nicklalota.com/stand-with-israel"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://nicklalota.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105072303/https://www.nicklalota.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105072303/https://www.nicklalota.com/",
+     "original": "https://www.nicklalota.com/",
+     "date": "2024-11-05",
+     "title": "LaLota for Congress",
+     "text": "Vote LaLota for Congress Tuesday, November 5th 6am-9pm - When and Where to Vote >>\n## Service Above Self\nfight to put Long Island Families First:"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105055006/https://www.nicklalota.com/stand-with-israel",
+     "original": "https://www.nicklalota.com/stand-with-israel",
+     "date": "2024-11-05",
+     "title": "Standing With Israel — LaLota for Congress",
+     "text": "## Standing With Israel\nWhen I was stationed on a nuclear-powered aircraft carrier deployed off the coasts of North Korea and China, I was one of seven Tactical Action Officers on board. We led watch teams responsible for the ship’s self-defense, reporting directly to the Captain, and had weapons-release authority to defend the $8 billion ship and its 5,000 American lives.\nTo protect the carrier effectively, we followed a “defense in depth” strategy, positioning layers of resilient American cruisers, destroyers, and frigates around the carrier’s perimeter. This strategy is analogous to the approach America must follow with our ally Israel.\nA Shared Threat\nThose wishing to eliminate Israel pose the same threat to the United States. The 1993 and 2001 attacks on the World Trade Center demonstrated that even an ocean’s distance couldn't shield us from terrorists. Israel has faced attacks for over 70 years, including a 9/11-style attack on October 7th, 2023, which altered its trajectory forever. From suicide bombings to indiscriminate rocket fire on civilians, Israel faces near-daily threats from Hamas, Hezbollah, and Palestinian Islamic Jihad.\nIsrael is the battle-tested cruiser to America's aircraft carrier. For our own country's sake and the moral imperative to protect an ally, we must continue investing in Israel’s defense.\nSupport in Congress\nIn Congress, I have supported the $3.8 billion in annual security assistance to Israel, as outlined in the U.S.-Israel MOU, including continued sharing of intelligence, cooperation in cybersecurity and counterterrorism, and funding for the Iron Dome and Iron Beam systems. I also oppose proposals empowering our adversaries, such as the Iran Nuclear Deal.\nIn April 2024, I supported the Israel Security Supplemental Appropriations Act , which included provisions to:\nSupport Israel's defense against Iran and its proxies;\nReimburse U.S. military operations in response to recent attacks;\nReplenish the Iron Dome, Iron Beam, and David’s Sling defense systems;\nSupport the procurement of advanced weapons systems, defense articles, and services through the Foreign Military Financing Program;\nEnhance the production and development of artillery and critical munitions;\nAllow flexibility for transferring defense articles to Israel from U.S. stockpiles; and\nProhibit funds from going to the pro-Hamas United Nations Relief and Works Agency (UNRWA).\nI have also championed a resolution reaffirming Israel’s right to exist, the U.S.-Israel International Development Cooperation Act , the U.S.-Israel Partnership and Abraham Accords Enhancement Act , Solidify Iran Sanctions Act , and resolutions condemning rape and sexual violence by Hamas and calling on Hamas to release all hostages from October 7th.\nI will always support our greatest ally, Israel, as its people courageously fight for their right to exist."
+    }
+   ],
+   "notSaved": [
+    "https://www.nicklalota.com/issues-menu",
+    "https://www.nicklalota.com/master-issue"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://nicklalota.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103060448/https://www.nicklalota.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103060448/https://www.nicklalota.com/",
+     "original": "https://www.nicklalota.com/",
+     "date": "2026-11-03",
+     "title": "Nick LaLota | LaLota for Congress",
+     "text": "## Service Above Self\nSupport Nick’s fight to put Long Island Families First:\nLaLota for Congress | Nick LaLota: Fighting for Long Island and America"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103061304/https://www.nicklalota.com/issues-menu/",
+     "original": "https://www.nicklalota.com/issues-menu/",
+     "date": "2026-11-03",
+     "title": "Issues — Nick LaLota | LaLota for Congress",
+     "text": "This folder does not contain any pages.\nIssues — Nick LaLota | LaLota for Congress"
+    },
+    {
+     "url": "https://web.archive.org/web/20261102150052/https://www.nicklalota.com/issues-nav",
+     "original": "https://www.nicklalota.com/issues-nav",
+     "date": "2026-11-02",
+     "title": "Issues Menu — Nick LaLota | LaLota for Congress",
+     "text": "Issues Menu — Nick LaLota | LaLota for Congress"
+    },
+    {
+     "url": "https://web.archive.org/web/20251206212429/https://www.nicklalota.com/stand-with-israel",
+     "original": "https://www.nicklalota.com/stand-with-israel",
+     "date": "2025-12-06",
+     "title": "Standing With Israel — LaLota for Congress",
+     "text": "## Standing With Israel\nWhen I was stationed on a nuclear-powered aircraft carrier deployed off the coasts of North Korea and China, I was one of seven Tactical Action Officers on board. We led watch teams responsible for the ship’s self-defense, reporting directly to the Captain, and had weapons-release authority to defend the $8 billion ship and its 5,000 American lives.\nTo protect the carrier effectively, we followed a “defense in depth” strategy, positioning layers of resilient American cruisers, destroyers, and frigates around the carrier’s perimeter. This strategy is analogous to the approach America must follow with our ally Israel.\nA Shared Threat\nThose wishing to eliminate Israel pose the same threat to the United States. The 1993 and 2001 attacks on the World Trade Center demonstrated that even an ocean’s distance couldn't shield us from terrorists. Israel has faced attacks for over 70 years, including a 9/11-style attack on October 7th, 2023, which altered its trajectory forever. From suicide bombings to indiscriminate rocket fire on civilians, Israel faces near-daily threats from Hamas, Hezbollah, and Palestinian Islamic Jihad.\nIsrael is the battle-tested cruiser to America's aircraft carrier. For our own country's sake and the moral imperative to protect an ally, we must continue investing in Israel’s defense.\nSupport in Congress\nIn Congress, I have supported the $3.8 billion in annual security assistance to Israel, as outlined in the U.S.-Israel MOU, including continued sharing of intelligence, cooperation in cybersecurity and counterterrorism, and funding for the Iron Dome and Iron Beam systems. I also oppose proposals empowering our adversaries, such as the Iran Nuclear Deal.\nIn April 2024, I supported the Israel Security Supplemental Appropriations Act , which included provisions to:\nSupport Israel's defense against Iran and its proxies;\nReimburse U.S. military operations in response to recent attacks;\nReplenish the Iron Dome, Iron Beam, and David’s Sling defense systems;\nSupport the procurement of advanced weapons systems, defense articles, and services through the Foreign Military Financing Program;\nEnhance the production and development of artillery and critical munitions;\nAllow flexibility for transferring defense articles to Israel from U.S. stockpiles; and\nProhibit funds from going to the pro-Hamas United Nations Relief and Works Agency (UNRWA).\nI have also championed a resolution reaffirming Israel’s right to exist, the U.S.-Israel International Development Cooperation Act , the U.S.-Israel Partnership and Abraham Accords Enhancement Act , Solidify Iran Sanctions Act , and resolutions condemning rape and sexual violence by Hamas and calling on Hamas to release all hostages from October 7th.\nI will always support our greatest ally, Israel, as its people courageously fight for their right to exist."
+    }
+   ],
+   "notSaved": [
+    "https://www.nicklalota.com/issues-2026"
+   ],
+   "posts": []
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "titus",
+ "name": "Dina Titus",
+ "built": "2026-11-28",
+ "sites": [
+  "https://www.dinatitus.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.dinatitus.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108211052/https://www.dinatitus.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108211052/https://www.dinatitus.com/",
+     "original": "https://www.dinatitus.com/",
+     "date": "2022-11-08",
+     "title": "HOME | Dina Titus",
+     "text": "## Join Team Titus Today\nThanks for submitting!\nDina was first elected to the US House of Representatives in November 2008. Dina Titus for Nevada, District One.\nRemove the POWr logo from the bottom of your Twitter Feed.\nThe amount of time before your Twitter Feed is updated with new posts.\nThe maximum number of tweets you can display in your feed.\nThe number of handles and/or hashtags you can follow in one feed.\nLet visitors retweet or favorite posts from your Twitter Feed.\nAdd custom CSS or JavaScript in advanced settings for further customization."
+    }
+   ],
+   "unread": [
+    "the list of dinatitus.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.dinatitus.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105060958/https://www.dinatitus.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105060958/https://www.dinatitus.com/",
+     "original": "https://www.dinatitus.com/",
+     "date": "2024-11-05",
+     "title": "HOME | Dina Titus",
+     "text": "top of page\n## Join Team Titus Today\nThanks for submitting!\n## Our Supporters\nbottom of page\nDina was first elected to the US House of Representatives in November 2008. Dina Titus for Nevada, District One.\nRemove the POWr logo from the bottom of your Twitter Feed.\nThe amount of time before your Twitter Feed is updated with new posts.\nThe maximum number of tweets you can display in your feed.\nThe number of handles and/or hashtags you can follow in one feed.\nLet visitors retweet or favorite posts from your Twitter Feed.\nAdd custom CSS or JavaScript in advanced settings for further customization."
+    }
+   ],
+   "unread": [
+    "the list of dinatitus.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.dinatitus.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103095615/https://www.dinatitus.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103095615/https://www.dinatitus.com/",
+     "original": "https://www.dinatitus.com/",
+     "date": "2026-11-03",
+     "title": "HOME | Dina Titus",
+     "text": "top of page\n## Join Team Titus Today\nThanks for submitting!\n## Our Supporters\nbottom of page\nDina was first elected to the US House of Representatives in November 2008. Dina Titus for Nevada, District One.\nRemove the POWr logo from the bottom of your Twitter Feed.\nThe amount of time before your Twitter Feed is updated with new posts.\nThe maximum number of tweets you can display in your feed.\nThe number of handles and/or hashtags you can follow in one feed.\nLet visitors retweet or favorite posts from your Twitter Feed.\nAdd custom CSS or JavaScript in advanced settings for further customization."
+    }
+   ],
+   "unread": [
+    "the list of dinatitus.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

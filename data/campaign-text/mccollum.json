@@ -1,0 +1,99 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "mccollum",
+ "name": "Betty McCollum",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.mccollumforcongress.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.mccollumforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108211840/https://www.mccollumforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108211840/https://www.mccollumforcongress.com/",
+     "original": "https://www.mccollumforcongress.com/",
+     "date": "2022-11-08",
+     "title": "Betty McCollum for Congress",
+     "text": "## EARLY VOTING INFORMATION\nEarly voting and voting by mail is one of the easiest ways to make your voice heard. Congresswoman Betty McCollum is committed to safeguarding our democracy by ensuring that every citizen has the information they need to vote. Learn more about early voting and request your mail-in at mnvotebymail.org.\nrequest mail-in ballot\n## U.S. REP. BETTY MCCOLLUM\nServing Minnesota families"
+    },
+    {
+     "url": "https://web.archive.org/web/20221029022459/https://www.mccollumforcongress.com/priorities",
+     "original": "https://www.mccollumforcongress.com/priorities",
+     "date": "2022-10-29",
+     "title": "Priorities — Betty McCollum for Congress",
+     "text": "## PRIORITIES\nMy top priorities include using my position on the House Appropriations Committee to ensure that federal funding and policies benefit the families, businesses, non-profits, higher-education institutions, and units of government here in the East Metro. Protecting Social Security, Medicare, and Medicaid for seniors and people with disabilities is always a priority as long as Republicans continue to threaten earned benefit programs. Finally, access to affordable, quality healthcare for all Minnesotans will require Congress to put a check on Republican’s constant efforts to sabotage ObamaCare and basic healthcare protections.\nEducation (K-12 and Higher Ed)\nThe most important role the federal government can play in K-12 public education is to provide full funding to school districts for special education - the Individuals with Disability Act (IDEA). The failure to fully fund IDEA shifts the funding burden to local school districts, and local taxpayers, which then diverts limited resources away from classroom instruction and a high-quality education. Every high school graduate must be prepared and equipped with the fundamental skills and educational foundation to succeed in pursuing a post-secondary educations - apprentice, vocational, or technical school, community college, or a four year college degree.\nCurrent regulations make it easier for polluters to poison our air, water, and public lands. policies, created and supported by the Trump Administration, is endangering the health of tens of millions of Americans. The Republican’s complete abandonment of U.S. leadership over previous administrations in combating climate change must be reversed by Democrats and every American who believes in science. I am a proud co-sponsor of the Green New Deal and I will work to ban copper-sulfide mining in the Rainy River watershed to ensure the Boundary Waters Canoe Area Wilderness is protected forever.\nDespite dozens of mass shootings, Republicans continue to protect guns rather than the American people. The lack of legislative action to appropriately regulate firearms is an issue that demands immediate attention in the new Congress. I support banning assault weapons, requiring background checks for all gun purchases, banning the sale of high capacity magazines, and a prohibition on the federal transfer of military weapons to police departments. It is time for citizens concerned about gun safety and responsible gun owners to stand together to demand action that will keep our families and communities safe from senseless and lethal gun violence.\nRepublicans are actively and intentionally sabotaging our health care system, and pharmaceutical companies are gouging consumers to extract huge profits, ensuring the right to access quality health care must be established as a fundamental right for all Americans.\nStrengthening the Affordable Care Act, expanding federal Medicare and Medicaid programs, protecting women’s reproductive rights, and working to build a system of universal health coverage are some of the steps Congress must take to ensure that the American people have the assurance and stability they deserve when it comes to receiving health care.\nToday, health care continues to be treated as a commodity driven by profit, but it should not be restricted or rationed according to one’s ability to pay, and it most certainly cannot be a system based on survival of the fittest. The leading cause of bankruptcy in America is medical debt. Skyrocketing prescription drug costs, legal threats to the ACA, and rising premiums are only making this problem worse.\nAs a cosponsor of Medicare for All (H.R. 1976) and a strong supporter of single payer universal healthcare, I have always fought to protect Medicare and Social Security from being privatized. The ongoing CMS “direct contracting” pilot program has the appearance of a privatization scheme and should be terminated. My focus is and will always be to expand healthcare access, protect the patient, and save taxpayers money.\nReceiving life-saving medical treatment should not drive a person into poverty. I am a proud co-sponsor of Medicare For All and I strongly believe healthcare as a fundamental right should be enshrined into the U.S. Constitution.\nCongress must pass comprehensive immigration reform that includes a path to citizenship. I support the DREAM Act for DACA recipients and I want to see all individuals eligible for Temporary Protected Status to have TPS extended. I am outraged at the previous administration’s reduction in refugee resettlement to the U.S. and policies like incarcerating asylum seekers and separating children from parents is something I completely reject. It should be federal policy for the U.S. to resettle no less than 75,000 refugees per year.\nSocial Justice and Equity\nBetty has a long history of fighting for social justice, environmental justice, and against civil rights/human rights abuses. She supports Justice Department funding to investigate and take action against states and local jurisdictions where there is evidence of violations of civil rights and/or voting rights. Regarding police funding, Betty supports a prohibition on the federal transfer of military items to police departments.\nHere are examples of legislation Betty has been sponsoring and leading on in the 116th Congress:\n–H.R. 7120: George Floyd Justice in Policing Act of 2020 (co-sponsor / passed House\n–H.R. 35: Emmett Till Antilynching Act (co-sponsor / passed House)\n–H.R. 1714: Stop Militarizing Law Enforcement Act (co-sponsor)\n–H.R. 4339: End Racial Profiling Act of 2019 (co-sponsor)\n–H.R. 6034: Hmong and Lao Refugee Deportation Prohibition Act of 2020 (Authored by Betty)\nTaxes and the Economy\nThe 2017 Trump-Republican tax cuts did not receive one Democratic vote. Republicans passed this tax cut that will add at least $1.5 trillion to the national debt while giving millionaires and billionaires the overwhelming benefit. These unnecessary tax cuts have stimulated income inequality while adding $164 billion to the 2018 federal budget deficit. Their impact on job growth is limited since we are already in a full employment economy, with the unemployment rate in Minnesota below 3%. Now, with the uncertainty resulting from the trade war with China and the imposition of tariffs, it is clear that agriculture, manufacturing, and other economic sectors in Minnesota are at great risk of severe harm from Trump's economic policies.\nI strongly support federal funding for transit and transportation infrastructure. For twelve years I worked to secure nearly $500 million in federal funds to successfully complete the Green Line. Now, with local, state, and federal support we must advance the Gold Line to Woodbury and the Riverview Corridor from downtown St. Paul to MSP International Airport."
+    }
+   ],
+   "unread": [
+    "the list of mccollumforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.mccollumforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105061332/https://www.mccollumforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105061332/https://www.mccollumforcongress.com/",
+     "original": "https://www.mccollumforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Betty McCollum for Congress",
+     "text": "## CONGRESSWOMAN\nDelivering for Minnesota families and communities … everyday!"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105061401/https://www.mccollumforcongress.com/priorities",
+     "original": "https://www.mccollumforcongress.com/priorities",
+     "date": "2024-11-05",
+     "title": "Priorities — Betty McCollum for Congress",
+     "text": "## PRIORITIES\nMy top priorities include using my position on the House Appropriations Committee to ensure that federal funding and policies benefit the families, businesses, non-profits, higher-education institutions, and units of government here in the East Metro. Protecting Social Security, Medicare, and Medicaid for seniors and people with disabilities is always a priority as long as Republicans continue to threaten earned benefit programs. Finally, access to affordable, quality healthcare for all Minnesotans will require Congress to put a check on Republican’s constant efforts to sabotage ObamaCare and basic healthcare protections.\nEducation (K-12 and Higher Ed)\nThe most important role the federal government can play in K-12 public education is to provide full funding to school districts for special education - the Individuals with Disability Act (IDEA). The failure to fully fund IDEA shifts the funding burden to local school districts, and local taxpayers, which then diverts limited resources away from classroom instruction and a high-quality education. Every high school graduate must be prepared and equipped with the fundamental skills and educational foundation to succeed in pursuing a post-secondary educations - apprentice, vocational, or technical school, community college, or a four year college degree.\nCurrent regulations make it easier for polluters to poison our air, water, and public lands. policies, created and supported by the Trump Administration, is endangering the health of tens of millions of Americans. The Republican’s complete abandonment of U.S. leadership over previous administrations in combating climate change must be reversed by Democrats and every American who believes in science. I am a proud co-sponsor of the Green New Deal and I will work to ban copper-sulfide mining in the Rainy River watershed to ensure the Boundary Waters Canoe Area Wilderness is protected forever.\nDespite dozens of mass shootings, Republicans continue to protect guns rather than the American people. The lack of legislative action to appropriately regulate firearms is an issue that demands immediate attention in the new Congress. I support banning assault weapons, requiring background checks for all gun purchases, banning the sale of high capacity magazines, and a prohibition on the federal transfer of military weapons to police departments. It is time for citizens concerned about gun safety and responsible gun owners to stand together to demand action that will keep our families and communities safe from senseless and lethal gun violence.\nRepublicans are actively and intentionally sabotaging our health care system, and pharmaceutical companies are gouging consumers to extract huge profits, ensuring the right to access quality health care must be established as a fundamental right for all Americans.\nStrengthening the Affordable Care Act, expanding federal Medicare and Medicaid programs, protecting women’s reproductive rights, and working to build a system of universal health coverage are some of the steps Congress must take to ensure that the American people have the assurance and stability they deserve when it comes to receiving health care.\nToday, health care continues to be treated as a commodity driven by profit, but it should not be restricted or rationed according to one’s ability to pay, and it most certainly cannot be a system based on survival of the fittest. The leading cause of bankruptcy in America is medical debt. Skyrocketing prescription drug costs, legal threats to the ACA, and rising premiums are only making this problem worse.\nAs a cosponsor of Medicare for All (H.R. 1976) and a strong supporter of single payer universal healthcare, I have always fought to protect Medicare and Social Security from being privatized. The ongoing CMS “direct contracting” pilot program has the appearance of a privatization scheme and should be terminated. My focus is and will always be to expand healthcare access, protect the patient, and save taxpayers money.\nReceiving life-saving medical treatment should not drive a person into poverty. I am a proud co-sponsor of Medicare For All and I strongly believe healthcare as a fundamental right should be enshrined into the U.S. Constitution.\nCongress must pass comprehensive immigration reform that includes a path to citizenship. I support the DREAM Act for DACA recipients and I want to see all individuals eligible for Temporary Protected Status to have TPS extended. I am outraged at the previous administration’s reduction in refugee resettlement to the U.S. and policies like incarcerating asylum seekers and separating children from parents is something I completely reject. It should be federal policy for the U.S. to resettle no less than 75,000 refugees per year.\nSocial Justice and Equity\nBetty has a long history of fighting for social justice, environmental justice, and against civil rights/human rights abuses. She supports Justice Department funding to investigate and take action against states and local jurisdictions where there is evidence of violations of civil rights and/or voting rights. Regarding police funding, Betty supports a prohibition on the federal transfer of military items to police departments.\nHere are examples of legislation Betty has been sponsoring and leading on in the 116th Congress:\n–H.R. 7120: George Floyd Justice in Policing Act of 2020 (co-sponsor / passed House\n–H.R. 35: Emmett Till Antilynching Act (co-sponsor / passed House)\n–H.R. 1714: Stop Militarizing Law Enforcement Act (co-sponsor)\n–H.R. 4339: End Racial Profiling Act of 2019 (co-sponsor)\n–H.R. 6034: Hmong and Lao Refugee Deportation Prohibition Act of 2020 (Authored by Betty)\nTaxes and the Economy\nThe 2017 Trump-Republican tax cuts did not receive one Democratic vote. Republicans passed this tax cut that will add at least $1.5 trillion to the national debt while giving millionaires and billionaires the overwhelming benefit. These unnecessary tax cuts have stimulated income inequality while adding $164 billion to the 2018 federal budget deficit. Their impact on job growth is limited since we are already in a full employment economy, with the unemployment rate in Minnesota below 3%. Now, with the uncertainty resulting from the trade war with China and the imposition of tariffs, it is clear that agriculture, manufacturing, and other economic sectors in Minnesota are at great risk of severe harm from Trump's economic policies.\nI strongly support federal funding for transit and transportation infrastructure. For twelve years I worked to secure nearly $500 million in federal funds to successfully complete the Green Line. Now, with local, state, and federal support we must advance the Gold Line to Woodbury and the Riverview Corridor from downtown St. Paul to MSP International Airport."
+    }
+   ],
+   "unread": [
+    "the list of mccollumforcongress.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.mccollumforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103143833/https://www.mccollumforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103143833/https://www.mccollumforcongress.com/",
+     "original": "https://www.mccollumforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Betty McCollum for Congress",
+     "text": "## CONGRESSWOMAN\nDelivering for Minnesota families and communities every day!\nNovember 2, 2026\nElections could strip Minnesota of a lot of clout in the U.S. Senate\nNovember 2, 2026\nBy Ana Radelat, MinnPost\n“If reelected, McCollum, now the top Democrat of the Appropriations Committee Subcommittee on Defense, would chair that panel and would sit on at least one other Appropriations Committee panel.”\nNovember 2, 2026\nOctober 29, 2026\nKARE 11 Investigates: Private prison was on sale for $75 million; ICE paid $495 million\nOctober 29, 2026\nBy A.J. Lagoe, Steven Eckert, Kelly Dietz, Gary Knox, David Peterlinz, KARE 11\n“Even before KARE 11 revealed CoreCivic’s offer to sell the prison to the state for a fraction of the price the federal government paid, Minnesota Rep. Betty McCollum, a Democratic member of the House Appropriations Committee, called for an investigation.”\nOctober 29, 2026\nmorning take | Bus Tours Launches GOTV\nOctober 29, 2026\nBy Blois Olson, morning take\n“ FEMA: via Sen. Amy Klobuchar advisory, VERBATIM: “Senator Amy Klobuchar (D-MN) led Senator Tina Smith (D-MN) and Representatives Betty McCollum (D-MN), Pete Stauber (R-MN), Angie Craig (D-MN), Brad Finstad (R-MN), and Kelly Morrison (D-MN) in calling on FEMA to end prolonged delays and disruptions to federal disaster mitigation and response funding for Minnesota. … [They] urged FEMA to quickly approve hazard mitigation grant applications and move forward with obligations and payments for pending grants, including funding related to record flooding in 2024.””\nOctober 29, 2026\nCan you pitch in $15, $25, $50 or whatever you can to help re-elect Betty to Congress?"
+    }
+   ],
+   "unread": [
+    "the list of mccollumforcongress.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

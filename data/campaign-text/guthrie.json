@@ -1,0 +1,83 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "guthrie",
+ "name": "Brett Guthrie",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.brettguthrie.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.brettguthrie.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108012529/https://brettguthrie.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108012529/https://brettguthrie.com/",
+     "original": "https://brettguthrie.com/",
+     "date": "2022-11-08",
+     "title": "Brett Guthrie for Congress",
+     "text": "Congressman Brett Guthrie\n## Brett Guthrie\nThe Biden/Pelosi agenda is sending America down a path that we simply can’t afford or abide, and I won’t stand for it. Kentucky values are being degraded, personal freedoms are under attack, and their reckless tax-and-spend policies are impacting Kentuckians at the gas pump and grocery store. My priorities include standing up for pro-life values, holding Dr. Fauci accountable, protecting the Second Amendment, stopping critical race theory, and combating the Democrats' war on work. Our children and grandchildren’s future are at stake.\nNovember 10, 2021\nBowling Green Republican fighting against the Biden/Pelosi Socialist Agenda Frankfort, KY (November 10, 2021) Congressman Brett Guthrie, who has represented Kentucky’s second congressional district since January 2009, filed for reelection today with a massive war chest and clear message. Known for delivering results and standing up for conservative values, Guthrie is seeking another term to … Read More\nOctober 19, 2020\nHonored to once again receive the endorsement of the Kentucky Fraternal Order of Police… We are so grateful for these men and women, who work tirelessly to protect and serve our communities, and I appreciate their vote of confidence in this election. Read their letter of endorsement below: At the direction of President Bed Perdue, … Read More\nDecember 2, 2019\nBowling Green Republican to run for 7th term (Bowling Green) Congressman Brett Guthrie, who has represented Kentucky’s second congressional district since January 2009, filed for reelection today. Guthrie is a Deputy Whip for the House Republican Conference and fights for conservative policies that put Kentuckians first. In early 2019, Guthrie was named the top Republican … Read More"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107080049/https://brettguthrie.com/issues/",
+     "original": "https://brettguthrie.com/issues/",
+     "date": "2022-11-07",
+     "title": "Issues &raquo; Brett Guthrie",
+     "text": "Congressman Brett Guthrie\n## VOTE BRETT GUTHRIE.\nThis November, Vote Brett Guthrie to take Nancy Pelosi out of the Speaker’s chair and bring Joe Biden’s liberal agenda to a halt.\n- secure the border\n- stop Biden’s inflationary agenda\n- focus on the drug epidemic that is killing Kentuckians\n- protect Medicare and social security for seniors\n- support the police who work to keep our families safe\nTogether, we can stop Joe Biden, restore America, and create policies that give every Kentuckian the opportunity to succeed."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.brettguthrie.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105150238/https://brettguthrie.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105150238/https://brettguthrie.com/",
+     "original": "https://brettguthrie.com/",
+     "date": "2024-11-05",
+     "title": "Brett Guthrie for Congress",
+     "text": "Hit enter to search or ESC to close\n## Vote GUTHRIE\nNavigate to the next section\n## Stop Bidenomics .\nFix the Border.\n## Vote GUTHRIE\nNavigate to the next section\n## Meet Brett\nCongressman Brett Guthrie represents the Second Congressional District of Kentucky. Following his military service in the Army, Guthrie joined a Bowling Green, Ky., based manufacturing business that was started by his father and represented the 32nd District in the Kentucky Senate.\nGuthrie was elected to the U.S. House of Representatives in 2008 and currently serves as the Chair of the Health Subcommittee on the House Energy and Commerce Committee and as a Deputy Whip within the House Republican Conference.\n## Vote Guthrie!\nPO Box 22401\nLouisville, Kentucky 40252"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.brettguthrie.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103072624/https://brettguthrie.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103072624/https://brettguthrie.com/",
+     "original": "https://brettguthrie.com/",
+     "date": "2026-11-03",
+     "title": "Brett Guthrie for Congress",
+     "text": "Hit enter to search or ESC to close\n## Vote GUTHRIE\nNavigate to the next section\n## Conservative Principles .\nCommon Sense Policies.\n## Vote GUTHRIE\nNavigate to the next section\n## Meet Brett\nCongressman Brett Guthrie represents Kentucky’s Second Congressional District. Following his military service in the Army, Guthrie joined a Bowling Green-based manufacturing business started by his father and later represented the 32nd District in the Kentucky Senate.\nGuthrie was elected to the U.S. House of Representatives in 2008 and currently serves as chairman of the powerful Energy and Commerce Committee.\n## Vote GUTHRIE!\nPO Box 22401\nLouisville, Kentucky 40252"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

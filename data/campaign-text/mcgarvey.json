@@ -1,0 +1,187 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "mcgarvey",
+ "name": "Morgan McGarvey",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.morganmcgarvey.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.morganmcgarvey.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-04",
+    "url": "https://web.archive.org/web/20221104214315/https://www.morganmcgarvey.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221104214315/https://www.morganmcgarvey.com/",
+     "original": "https://www.morganmcgarvey.com/",
+     "date": "2022-11-04",
+     "title": "Morgan McGarvey for Congress",
+     "text": "## For Kentucky.\nAdd your info to join our team »\nThank you for joining the team!\nOops! Something went wrong. Please try again.\n## Why I'm Running\nAs the Democratic Minority Leader in the Kentucky State Senate, I’ve spent my career standing up to the Trump-Bevin Republicans in Frankfort. I’ve stood firm on our progressive values to protect health care and teachers’ pensions, promote clean energy and defend choice so that Kentucky doesn’t look like Texas.\nAt the same time, I’ve built coalitions to pass meaningful legislation to help survivors of domestic abuse, preserve marriage equality, promote equity, empower trafficking survivors and reform our criminal justice system.\nI’m running to get things done in Washington with a proven track record of results. Congressman Yarmuth’s retirement leaves a huge hole in our delegation and we need to ensure that Kentucky continues to have an effective Democratic voice in Congress.\nFor the past eight years, I’ve represented Mitch McConnell’s state senate district in the KY legislature. And I’ve done it as an unapologetic, won’t-back-down progressive Democrat. Now I want to go push back against McConnell’s dangerous agenda in Washington because Kentucky deserves much, much better.\nI’m going to fight to tackle the existential threat of climate change (I have three kids and I’d like to leave them a liveable planet), end generational poverty, pass universal pre-K, paid family leave and more affordable childcare, rebuild our infrastructure, codify a woman’s right to choose into federal law, and reform our criminal justice system in part by legalizing marijuana.\nI’d be honored to have you be a part of this campaign. There’s a lot of work to do.\n## Meet Morgan\nMorgan decided to run for office because he knew we needed a new generation of leaders in Frankfort. As the Democratic leader in the KY state senate, Morgan has never shied away from the toughest fights.\nWe need all hands on deck to win in Kentucky. Can we count on your support to help us reach our fundraising goals? Select a donation amount here to get started.\nOn The Issues\nI believe health care is a basic human right. No one should receive a diagnosis and have to worry about going bankrupt.\nOn The Issues\nEvery kid should have the opportunity to go to a good public school that prepares them for a successful life, no matter your zip code.\nOn The Issues\nI am running to address the existential threat of climate change so that future generations have a livable planet."
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220400/https://www.morganmcgarvey.com/on-the-issues",
+     "original": "https://www.morganmcgarvey.com/on-the-issues",
+     "date": "2022-11-04",
+     "title": "Morgan McGarvey on the Issues",
+     "text": "My goal is always to figure out how to help, and then work to get it done. As a legislator in Frankfort, that included mandating that insurance companies cover the vital nutrients that extremely low-birthweight babies need to survive, passing Jeanette’s Law to ensure that survivors of domestic violence don’t have to pay for their abusive spouses’ attorney fees, and changing the law to decrease the cost of tuition at Simmons College – Louisville’s only HBCU – and allow them to create a teacher training program.I’m running to take this same approach to Congress: to show up, listen, find where I can make a difference, and work with our communities to deliver. I want to help build a future in which all Kentuckians can thrive, by having access to quality, affordable health care, high-quality public education, and economic prosperity.\nAn Economy That Works For Kentucky Families\nVoting and Democracy"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220400/https://www.morganmcgarvey.com/issues/health-care",
+     "original": "https://www.morganmcgarvey.com/issues/health-care",
+     "date": "2022-11-04",
+     "title": "Morgan McGarvey on Health Care",
+     "text": "## Health Care\nI believe health care is a basic human right. No one should receive a diagnosis and have to worry about going bankrupt, or be forced to choose between their prescription medications and paying for groceries. That’s why I support Medicare for All to ensure that everyone is covered with quality, affordable, accessible care.\nWhen Congress passed the Affordable Care Act and Kentucky expanded Medicaid, we brought health insurance coverage to over 400,000 Kentuckians, many for the first time. It was a game changer for thousands of families in our commonwealth and was one of the greatest economic development policies ever passed in our state.\nBut there is still more work to be done. We need to shore up our rural health care systems. We must allow Medicare to negotiate drug prices with pharmaceutical companies. We must expand health insurance coverage to include vision, dental, and hearing. In Congress, I will continue this work to ensure that all Kentuckians have health care coverage that allows them to regularly see a doctor, access affordable prescription medication, and survive an emergency or catastrophic health diagnosis without incurring financial hardship.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220400/https://www.morganmcgarvey.com/issues/education",
+     "original": "https://www.morganmcgarvey.com/issues/education",
+     "date": "2022-11-04",
+     "title": "Morgan McGarvey on Education",
+     "text": "## Education\nEvery kid should have the opportunity to go to a good public school that prepares them for a successful life, no matter your zip code. My wife and I are products of public schools, our kids go to public schools, and I have championed the interests of our teachers and public school employees, including stepping in to oppose Gov. Matt Bevin’s illegal gutting of the teacher retirement system and fighting to give our hardworking public education employees a raise. I am proud to have the backing of the Jefferson County Teachers Association, the Kentucky Education Association, and the National Education Association in my campaign for Congress.\nAt the federal level, it is time for the United States to expand public education to include universal pre-Kindergarten and free community college so that every Kentuckian can gain access to the skills they need to get a good, family-supporting job. I further believe we must sufficiently fund our public universities to make them affordable for all Americans.\nEspecially now, our teachers and public education employees deserve our gratitude and a raise, as they have taken care of our loved ones and risked their own health and safety during the COVID-19 pandemic.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220401/https://www.morganmcgarvey.com/issues/climate-change",
+     "original": "https://www.morganmcgarvey.com/issues/climate-change",
+     "date": "2022-11-04",
+     "title": "Morgan McGarvey on Climate Change",
+     "text": "## Climate Change\nI am running to address the existential threat of climate change so that future generations have a livable planet and aren’t constantly dealing with natural disasters like last December’s tornadoes that devastated entire communities in Western Kentucky or regular extreme flooding in Eastern Kentucky.\nWe must act now.\nI support federal spending and tax incentives to dramatically expand renewable energy buildout in the United States, infrastructure spending to speed the deployment of electric vehicles, and tax incentives for consumer purchase of union-made and American-made electric vehicles. I support a federal clean energy standard that incentivizes investor-owned electric utilities to achieve greenhouse gas emissions reductions while creating millions of good-paying jobs to build the clean energy infrastructure necessary to make this transition. And I will fight for federal spending to incentivize rural electric cooperatives to transition to clean, renewable energy by relieving debt associated with coal-fired power plants, and conditioning such relief upon the coop’s investment in a clean energy transition.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105121419/https://www.morganmcgarvey.com/issues/economy",
+     "original": "https://www.morganmcgarvey.com/issues/economy",
+     "date": "2022-11-05",
+     "title": "Morgan McGarvey on An Economy That Works For Kentucky Families",
+     "text": "## An Economy That Works For Kentucky Families\nThe United States needs policies that grow our economy from the bottom up, by expanding the middle class with good-paying jobs that can support a family. In Congress, I will work to build an economy in which workers can thrive and get ahead, including by increasing wages, protecting workers’ rights to collectively bargain, and making it possible to raise a family while participating in the workforce.\nWe have to have economic policies that allow people to work, raise a family, and care for their loved ones. That’s why I support at least four weeks of paid family leave, subsidizing affordable child care and passing universal pre-Kindergarten so that young parents can afford to take care of their children and keep their careers.\nI support increasing the federal minimum wage to $15/hour, and then indexing the minimum wage to inflation so that workers don’t start falling behind the moment they get a raise. And I believe we should require equal pay for equal work. I’ve proposed such an increase as the law in Kentucky and think it should be the law everywhere in our country.\nAnd because I am serious about ending generational poverty, I support making the Child Tax Credit permanent. While it was in effect, the Child Tax Credit lifted nearly 4 million children out of poverty. Cutting child poverty has positive effects in both the immediate and long term. Aside from the immediate effect of giving families the resources they need to survive and thrive, It is associated with better lifelong outcomes for children in education, earnings in adulthood, and health.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105121420/https://www.morganmcgarvey.com/issues/immigration",
+     "original": "https://www.morganmcgarvey.com/issues/immigration",
+     "date": "2022-11-05",
+     "title": "Morgan McGarvey on Immigration",
+     "text": "## Immigration\nImmigration reform must reflect America’s democratic ideals and not create a second class of workers. A broad path to citizenship must be the centerpiece to any serious immigration reform that moves 11 million people out of the shadows. Instead of supporting commonsense, bipartisan reforms, too many in the other party want to make it hard for undocumented women to report crimes under the Violence Against Women Act, want to turn Census workers into immigration agents to reduce resources to communities in need, and want to force local law enforcement to take over immigration enforcement from the federal government instead of making our national immigration authorities better. All of these approaches are wrong and I will oppose them in Congress while fighting for comprehensive reform that provides a pathway to citizenship.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105121420/https://www.morganmcgarvey.com/issues/labor",
+     "original": "https://www.morganmcgarvey.com/issues/labor",
+     "date": "2022-11-05",
+     "title": "Morgan McGarvey on Labor",
+     "text": "## Labor\nI have stood shoulder to shoulder with organized labor in the state Senate, opposing Right to Work, protecting prevailing wage requirements for state contractors, and fighting against efforts to undermine the retirement benefits of our teachers and public employees.\nIn Congress, I will step up to level the playing field between workers and employers, not only to protect unions, but to grow them. If it doesn’t pass this year, I will be a cosponsor and a staunch supporter of the Protecting the Right to Organize (PRO) Act, to protect the right to form a union and collectively bargain, to ensure access to worksites, to protect workers during the critical period by banning captive audience meetings, and by mandating stiff financial penalties for employers who use union-busting tactics to keep their workers away from the negotiating table.\nBut we need more than just the PRO Act. In Congress, I will fight to ensure that the investments we make in infrastructure, expanded public education, renewable energy, and electric vehicles and batteries – like those that will be made in the proposed Ford plant in Hardin County – go to companies with union workforces. When we’ve seen real economic growth in this country; it has come because we have had a government willing to invest in our country’s infrastructure, and we have had union density near 35%. In Congress, I will be a vote and an advocate for ensuring that we get back to both.\nI’m proud to be endorsed by over a dozen labor organizations from Louisville and across Kentucky, including the Kentucky AFL-CIO.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20221105121419/https://www.morganmcgarvey.com/issues/legalize-marijuana",
+     "original": "https://www.morganmcgarvey.com/issues/legalize-marijuana",
+     "date": "2022-11-05",
+     "title": "Morgan McGarvey on Legalize Marijuana",
+     "text": "## Legalize Marijuana\nI support full legalization and decriminalization of marijuana at the federal level. Full legalization will not only create economic growth and tax revenue from a new, booming industry for Kentucky – it will also decrease our prison population, save millions in taxpayer dollars spent on incarceration, and undo decades of racist, unnecessary criminal convictions. Even though white and Black populations use marijuana at the same rates, Black people are exponentially more likely to be incarcerated for the same crime. Any bill that legalizes marijuana must also ensure that the legalization process commutes sentences and expunged convictions of low level offenders, and that profits from marijuana go to the communities most harmed by unfair drug laws and policing practices.\n## View all of morgan's"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.morganmcgarvey.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105054918/https://www.morganmcgarvey.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105054918/https://www.morganmcgarvey.com/",
+     "original": "https://www.morganmcgarvey.com/",
+     "date": "2024-11-05",
+     "title": "Morgan McGarvey for Congress",
+     "text": "## Why I'm Running\nAs the only Democrat in Kentucky’s Congressional Delegation, I’m fighting for progressive values and standing up to Republicans in Washington. I’ve stood firm on our progressive values to protect health care and teachers’ pensions, promote clean energy and defend choice so that Kentucky doesn’t look like Texas.\nAt the same time, in the Kentucky State Senate, I’ve built coalitions to pass meaningful legislation to help survivors of domestic abuse, preserve marriage equality, promote equity, empower trafficking survivors and reform our criminal justice system.\nI’m running again to get things done in Washington. We need to ensure that Kentucky continues to have an effective Democratic voice in Congress.\nFor the past eight years, I’ve represented Mitch McConnell’s state senate district in the KY legislature and now represent him in Congress. And I’ve done it as an unapologetic, won’t-back-down progressive Democrat. I will keep pushing back against McConnell’s dangerous agenda in Washington because Kentucky deserves much, much better.\nI’m going to fight to tackle the existential threat of climate change (I have three kids and I’d like to leave them a liveable planet), end generational poverty, pass universal pre-K, paid family leave and more affordable childcare, rebuild our infrastructure, codify a woman’s right to choose into federal law, and reform our criminal justice system in part by legalizing marijuana.\nI’d be honored to have you be a part of this campaign. There’s a lot of work to do.\n## Meet Morgan\nMorgan decided to run for office to fight for his progressive values and to get things done for his community. As the only Democrat in Congress representing Kentucky, Morgan has never shied away from the toughest fights.\nWe need all hands on deck to win in Kentucky. Can we count on your support to help us reach our fundraising goals? Select a donation amount here to get started.\nOn The Issues\nI believe health care is a basic human right. No one should receive a diagnosis and have to worry about going bankrupt.\nOn The Issues\nEvery kid should have the opportunity to go to a good public school that prepares them for a successful life, no matter your zip code.\nOn The Issues\nI am running to address the existential threat of climate change so that future generations have a livable planet."
+    },
+    {
+     "url": "https://web.archive.org/web/20241105054920/https://www.morganmcgarvey.com/on-the-issues",
+     "original": "https://www.morganmcgarvey.com/on-the-issues",
+     "date": "2024-11-05",
+     "title": "Morgan McGarvey on the Issues",
+     "text": "My goal is always to figure out how to help, and then work to get it done. As a legislator in Frankfort, that included mandating that insurance companies cover the vital nutrients that extremely low-birthweight babies need to survive, passing Jeanette’s Law to ensure that survivors of domestic violence don’t have to pay for their abusive spouses’ attorney fees, and changing the law to decrease the cost of tuition at Simmons College – Louisville’s only HBCU – and allow them to create a teacher training program.I’m running to take this same approach to Congress: to show up, listen, find where I can make a difference, and work with our communities to deliver. I want to help build a future in which all Kentuckians can thrive, by having access to quality, affordable health care, high-quality public education, and economic prosperity.\nAn Economy That Works For Kentucky Families\nVoting and Democracy"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105054927/https://www.morganmcgarvey.com/issues/health-care",
+     "original": "https://www.morganmcgarvey.com/issues/health-care",
+     "date": "2024-11-05",
+     "title": "Morgan McGarvey on Health Care",
+     "text": "## Health Care\nI believe health care is a basic human right. No one should receive a diagnosis and have to worry about going bankrupt, or be forced to choose between their prescription medications and paying for groceries. That’s why I support Medicare for All to ensure that everyone is covered with quality, affordable, accessible care.\nWhen Congress passed the Affordable Care Act and Kentucky expanded Medicaid, we brought health insurance coverage to over 400,000 Kentuckians, many for the first time. It was a game changer for thousands of families in our commonwealth and was one of the greatest economic development policies ever passed in our state.\nBut there is still more work to be done. We need to shore up our rural health care systems. We must allow Medicare to negotiate drug prices with pharmaceutical companies. We must expand health insurance coverage to include vision, dental, and hearing. In Congress, I will continue this work to ensure that all Kentuckians have health care coverage that allows them to regularly see a doctor, access affordable prescription medication, and survive an emergency or catastrophic health diagnosis without incurring financial hardship.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105054920/https://www.morganmcgarvey.com/issues/education",
+     "original": "https://www.morganmcgarvey.com/issues/education",
+     "date": "2024-11-05",
+     "title": "Morgan McGarvey on Education",
+     "text": "## Education\nEvery kid should have the opportunity to go to a good public school that prepares them for a successful life, no matter your zip code. My wife and I are products of public schools, our kids go to public schools, and I have championed the interests of our teachers and public school employees, including stepping in to oppose Gov. Matt Bevin’s illegal gutting of the teacher retirement system and fighting to give our hardworking public education employees a raise. I am proud to have the backing of the Jefferson County Teachers Association, the Kentucky Education Association, and the National Education Association in my campaign for Congress.\nAt the federal level, it is time for the United States to expand public education to include universal pre-Kindergarten and free community college so that every Kentuckian can gain access to the skills they need to get a good, family-supporting job. I further believe we must sufficiently fund our public universities to make them affordable for all Americans.\nEspecially now, our teachers and public education employees deserve our gratitude and a raise, as they have taken care of our loved ones and risked their own health and safety during the COVID-19 pandemic.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105054922/https://www.morganmcgarvey.com/issues/climate-change",
+     "original": "https://www.morganmcgarvey.com/issues/climate-change",
+     "date": "2024-11-05",
+     "title": "Morgan McGarvey on Climate Change",
+     "text": "## Climate Change\nI am running to address the existential threat of climate change so that future generations have a livable planet and aren’t constantly dealing with natural disasters like last December’s tornadoes that devastated entire communities in Western Kentucky or regular extreme flooding in Eastern Kentucky.\nWe must act now.\nI support federal spending and tax incentives to dramatically expand renewable energy buildout in the United States, infrastructure spending to speed the deployment of electric vehicles, and tax incentives for consumer purchase of union-made and American-made electric vehicles. I support a federal clean energy standard that incentivizes investor-owned electric utilities to achieve greenhouse gas emissions reductions while creating millions of good-paying jobs to build the clean energy infrastructure necessary to make this transition. And I will fight for federal spending to incentivize rural electric cooperatives to transition to clean, renewable energy by relieving debt associated with coal-fired power plants, and conditioning such relief upon the coop’s investment in a clean energy transition.\n## View all of morgan's"
+    }
+   ],
+   "unread": [
+    "the list of morganmcgarvey.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.morganmcgarvey.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103103842/https://www.morganmcgarvey.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103103842/https://www.morganmcgarvey.com/",
+     "original": "https://www.morganmcgarvey.com/",
+     "date": "2026-11-03",
+     "title": "Morgan McGarvey for Congress",
+     "text": "## I’m Asking For Your Vote\nIn a red state like Kentucky, having a strong progressive voice in Congress matters. While Donald Trump and Congressional Republicans turn a blind eye to our broken economy and ignore climbing costs for Kentucky families, a rigged system continues to reward their wealthy and powerful friends. They’ve jacked up healthcare prices, defunded our kids’ schools, cut off food assistance for our neighbors in need, terrorized our communities, and trampled on the Constitution. This out-of-control administration wants us to feel powerless – but we’re not. That’s why I’m asking for your vote because Louisville is still in this fight – the fight to take back the House and remind the Trump Administration who they work for.\nWe’ve got a long way to go, but I’m proud of what we’ve gotten done. When the cards were stacked against us, we didn’t take no for an answer. Even in a Republican-controlled Congress, I’ve built coalitions to pass meaningful legislation that helps Kentuckians every day and brought over $12 million in federal funding home to Louisville, including $500,000 for Louisville's only HBCU, Simmons College. We have also secured over $245 million in federal grants for our community. I was proud to pass a bill out of the House to protect veterans’ benefits in my first term in Congress and have continued to fight for legislation unique to our community like a dedicated federal funding source for the Ohio River’s continued economic and environmental health and a bill to finally ban no-knock search warrants nationwide to get justice in the name of Louisville’s Breonna Taylor.\nAnd as your Congressman, my office has focused on providing excellent constituent services, returning over $5 million to Louisville families in the form of social security payments, veterans’ benefits, and missing tax refunds.\nA lot has changed in this country, but the reason I’m running for reelection hasn’t: to fight for the people of Louisville, make Washington work for you again, and stand up for our community’s values that make me proud to call Louisville home.\nI’d be honored to have you be a part of this campaign. There’s a lot of work to do.\n## Meet Morgan\nMorgan decided to run for office to fight for his progressive values and to get things done for his community. As the only Democrat in Congress representing Kentucky, Morgan has never shied away from the toughest fights.\nWe need all hands on deck to win in Kentucky. Can we count on your support to help us reach our fundraising goals? Select a donation amount here to get started.\nOn The Issues\nI believe health care is a basic human right. No one should receive a diagnosis and have to worry about going bankrupt.\nOn The Issues\nEvery kid should have the opportunity to go to a good public school that prepares them for a successful life, no matter your zip code.\nOn The Issues\nI am running to address the existential threat of climate change so that future generations have a livable planet."
+    },
+    {
+     "url": "https://web.archive.org/web/20261103103850/https://www.morganmcgarvey.com/issues/health-care",
+     "original": "https://www.morganmcgarvey.com/issues/health-care",
+     "date": "2026-11-03",
+     "title": "Morgan McGarvey on Health Care",
+     "text": "## Health Care\nI believe health care is a basic human right. No one should receive a diagnosis and have to worry about going bankrupt, or be forced to choose between their prescription medications and paying for groceries. That’s why I support Medicare for All to ensure that everyone is covered with quality, affordable, accessible care.\nWhen Congress passed the Affordable Care Act and Kentucky expanded Medicaid, we brought health insurance coverage to over 400,000 Kentuckians, many for the first time. It was a game changer for thousands of families in our commonwealth and was one of the greatest economic development policies ever passed in our state.\nBut there is still more work to be done. We need to shore up our rural health care systems. We must allow Medicare to negotiate drug prices with pharmaceutical companies. We must expand health insurance coverage to include vision, dental, and hearing. In Congress, I will continue this work to ensure that all Kentuckians have health care coverage that allows them to regularly see a doctor, access affordable prescription medication, and survive an emergency or catastrophic health diagnosis without incurring financial hardship.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103103850/https://www.morganmcgarvey.com/issues/education",
+     "original": "https://www.morganmcgarvey.com/issues/education",
+     "date": "2026-11-03",
+     "title": "Morgan McGarvey on Education",
+     "text": "## Education\nEvery kid should have the opportunity to go to a good public school that prepares them for a successful life, no matter your zip code. My wife and I are products of public schools, our kids go to public schools, and I have championed the interests of our teachers and public school employees, including stepping in to oppose Gov. Matt Bevin’s illegal gutting of the teacher retirement system and fighting to give our hardworking public education employees a raise. I am proud to have the backing of the Jefferson County Teachers Association, the Kentucky Education Association, and the National Education Association in my campaign for Congress.\nAt the federal level, it is time for the United States to expand public education to include universal pre-Kindergarten and free community college so that every Kentuckian can gain access to the skills they need to get a good, family-supporting job. I further believe we must sufficiently fund our public universities to make them affordable for all Americans.\nEspecially now, our teachers and public education employees deserve our gratitude and a raise, as they have taken care of our loved ones and risked their own health and safety during the COVID-19 pandemic.\n## View all of morgan's"
+    },
+    {
+     "url": "https://web.archive.org/web/20261103103851/https://www.morganmcgarvey.com/issues/climate-change",
+     "original": "https://www.morganmcgarvey.com/issues/climate-change",
+     "date": "2026-11-03",
+     "title": "Morgan McGarvey on Climate Change",
+     "text": "## Climate Change\nI am running to address the existential threat of climate change so that future generations have a livable planet and aren’t constantly dealing with natural disasters like last December’s tornadoes that devastated entire communities in Western Kentucky or regular extreme flooding in Eastern Kentucky.\nWe must act now.\nI support federal spending and tax incentives to dramatically expand renewable energy buildout in the United States, infrastructure spending to speed the deployment of electric vehicles, and tax incentives for consumer purchase of union-made and American-made electric vehicles. I support a federal clean energy standard that incentivizes investor-owned electric utilities to achieve greenhouse gas emissions reductions while creating millions of good-paying jobs to build the clean energy infrastructure necessary to make this transition. And I will fight for federal spending to incentivize rural electric cooperatives to transition to clean, renewable energy by relieving debt associated with coal-fired power plants, and conditioning such relief upon the coop’s investment in a clean energy transition.\n## View all of morgan's"
+    }
+   ],
+   "unread": [
+    "the list of morganmcgarvey.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

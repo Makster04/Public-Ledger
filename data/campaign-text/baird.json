@@ -1,0 +1,64 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "baird",
+ "name": "James R. Baird",
+ "built": "2026-11-27",
+ "sites": [
+  "https://www.electjimbaird.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.electjimbaird.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107232648/http://www.electjimbaird.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107232648/http://www.electjimbaird.com/",
+     "original": "http://www.electjimbaird.com/",
+     "date": "2022-11-07",
+     "title": "Jim Baird for Congress – Vote Baird!",
+     "text": "Elect Jim Baird for Congress\n“We need new leaders in Washington who will stand up for West Central Indiana and get things done for the American people.”\nTO SHOW YOUR SUPPORT\nShould be Empty:"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.electjimbaird.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105153501/https://www.electjimbaird.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105153501/https://www.electjimbaird.com/",
+     "original": "https://www.electjimbaird.com/",
+     "date": "2024-11-05",
+     "title": "Home - Jim Baird for Congress",
+     "text": "Elect Jim Baird for Congress\n\"I’m the only candidate with a proven track record of being pro-life, pro-Israel, and supporter of the Second Amendment. If you only remember one thing about me, I want you to remember that I care about this country. As a Vietnam combat Veteran, I lost my arm fighting communism. And as long as they are openly talking about socialism on the house floor, I am here to fight again.\"\nTO SHOW YOUR SUPPORT"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.electjimbaird.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

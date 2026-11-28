@@ -1,0 +1,190 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "nadler",
+ "name": "Jerrold Nadler",
+ "built": "2026-11-28",
+ "sites": [
+  "https://www.jerrynadler.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.jerrynadler.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107232734/https://jerrynadler.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107232734/https://jerrynadler.com/",
+     "original": "https://jerrynadler.com/",
+     "date": "2022-11-07",
+     "title": "Jerry Nadler for Congress",
+     "text": "## Jerry Nadler Leading the Fight\nWhether it’s standing up to Republican attempts at voter suppression, providing justice to survivors of sexual assault and harassment, or leading the impeachment of President Trump as Chair of the House Judiciary Committee, Jerry Nadler is on the frontlines of the most important fights.\n## Meet Jerry\nA veteran Democratic Congressman often described as the “Liberal Lion” of New York’s Congressional Delegation, Jerry has been a relentless defender of our country’s democracy and a fierce fighter for civil rights, racial justice, and a safer, more equal America.\nkeep Jerry’s voice in Congress.\n## How to vote\nFind your poll site\n## What Jerry Believes\nJerry has led the fight on too many issues to count. Click here to find out where he stands on the issues most important to you.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220658/https://jerrynadler.com/jerrys-priorities/",
+     "original": "https://jerrynadler.com/jerrys-priorities/",
+     "date": "2022-11-04",
+     "title": "Where Jerry Stands | Jerry Nadler for Congress",
+     "text": "## Where Jerry Stands\nJerry has led the fight on too many issues to count.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220658/https://jerrynadler.com/issues/defending-our-democracy/",
+     "original": "https://jerrynadler.com/issues/defending-our-democracy/",
+     "date": "2022-11-04",
+     "title": "Defending our Democracy | Jerry Nadler for Congress",
+     "text": "## Defending our Democracy\nWhen our republic was most at risk, Jerry stepped in.\nAs Chairman of the House Judiciary Committee, Jerry has served as a bulwark against wannabe tyrants like Donald Trump and Republicans who seek to suppress the right to vote. Jerry stood up to Trump’s self-dealing and self-serving bullying and impeached him twice –once for his abuses of power and obstruction of Congress, and then again after the lawless former President incited the January 6th insurrection.\nJerry’s oversight of government officials and agencies has hardly been limited to Trump–he has led efforts to hold agencies like ICE, CBP, DOJ, and others accountable for abuses ranging from the family separation policy to DHS’ violent policing tactics against peaceful protestors. The reputation that Jerry has developed–as a tough, unflinching protector of American democracy –is based on his unwavering commitment to protecting our fragile democratic experiment from those who seek to corrupt and undermine it.\nWith Republicans working overtime to disenfranchise voters–disproportionately impacting communities of color– Jerry has fought to resist cynical, anti-democratic efforts and protect access to the ballot . He led the passage of the John Lewis Voting Rights Act through the House, held hearings to ensure our elections are safe from external and foreign interference, and ensured that COVID relief packages included funds to facilitate safe elections in the midst of a pandemic.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220658/https://jerrynadler.com/issues/reforming-americas-gun-laws/",
+     "original": "https://jerrynadler.com/issues/reforming-americas-gun-laws/",
+     "date": "2022-11-04",
+     "title": "Reforming America’s Gun Laws | Jerry Nadler for Congress",
+     "text": "## Reforming America’s Gun Laws\nEvery victim of gun violence is another reminder of the nightmare we have made for ourselves. Americans shouldn’t have to live in fear.\nNo country in the world faces the unending nightmare of gun violence that America does. While Republicans act in bad faith and try to deflect needed action with phony arguments that mental health is the cause of this neverending pattern of violence, Jerry knows that Americans aren’t exponentially more susceptible to mental illness than others around the rest of the world. The root of the problem, of course, is the widespread availability of firearms and the outsized, constrictive influence that the NRA and the gun lobby hold. With children being slain in schools and the proliferation of guns allowing for racist hate to travel seamlessly from the darkest corners of the Internet to our country’s streets–like the recent, tragic massacre in Buffalo–calls to delay action are not just desperately misguided, they stink of complicity.\nAs Chairman of the Judiciary Committee, Jerry has turned anguish into action. In his first term as Chair, Jerry passed through the House H.R. 8, a historic bill that would close loopholes and expand the background check process. This year, Jerry introduced the Protecting Our Kids Act, one of the most all-encompassing, sweeping gun reform packages ever passed by the House. As one of the House’s most prominent leaders in the fight to reform our nation’s gun laws , Jerry was trusted to lead the Congressional debate on the Safer Communities Act, which would restrict violent abusers from accessing guns, deliver grants to states so that they could establish crucial red flag laws, and stem the flow of trafficked guns to New York. When President Biden signed that bill into law, it marked the most significant action in decades to address gun violence.\nEnding the endless wave of gun violence is one of Jerry’s very top priorities. He knows the more guns you get out of dangerous hands, the safer our schools, streets, and subways become. The proud recipient of an F rating from the NRA, Jerry won’t stop fighting until Americans can feel safe from the threat of gun violence.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220658/https://jerrynadler.com/issues/lbgtqia-rights/",
+     "original": "https://jerrynadler.com/issues/lbgtqia-rights/",
+     "date": "2022-11-04",
+     "title": "LBGTQIA+ Rights | Jerry Nadler for Congress",
+     "text": "## LBGTQIA+ Rights\nLGBTQIA+ rights are human rights.\nFighting to expand civil rights protections has always been a fundamental element of Jerry’s identity, as New York’s vibrant LGBTQIA+ community can attest. The Advocate –a leading LGBTQIA+ publication–wrote that Jerry “is one of the nation’s fiercest protectors of LGBT rights and a powerful ally for trans equality” and for good reason: Jerry has been an original co-sponsor of countless major pieces of LGBT civil rights legislation for decades. Not only did he himself write the Respect for Marriage Act (RMA), the Uniting American Families Act (UAFA), the Father Mychal Judge Act, and the Equal Access to Social Security Act , Jerry led the charge to pass the anti-discriminatory Equality Act through the House as Judiciary Chair, a historic feat he accomplished in 2019.\nJerry also led the Congressional amicus briefs in both Windsor and Obergefell , the two seismic Supreme Court cases that ultimately precipitated marriage equality. For New Yorkers, that should come as little surprise: Jerry was the very first New York Congressmember to publicly support marriage equality. And visitors to Manhattan’s Stonewall National Monument now have a place to celebrate the bravery of those who threw those bricks against anti-LBGTQIA+ discrimination thanks to Jerry’s powerful advocacy. The LGBTQIA+ community could not ask for a stronger ally than Jerry Nadler.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104220658/https://jerrynadler.com/issues/protecting-reproductive-rights/",
+     "original": "https://jerrynadler.com/issues/protecting-reproductive-rights/",
+     "date": "2022-11-04",
+     "title": "Protecting Reproductive Rights | Jerry Nadler for Congress",
+     "text": "## Protecting Reproductive Rights\nRoe v. Wade was the law of the land. We have to fight for our fundamental, Constitutional rights.\nIt is abhorrent and devastating that a girl born today will have fewer rights over her own body than a woman born forty years ago. The recent overturn of Roe is a galling affront to the rights of women and a shockingly stark reflection of a radical, extremist Supreme Court that refuses to represent anything other than far-right, monied interests. On this issue, Jerry could not be more clear: just as he has his entire career, he will fight with every ounce of his being to defend abortion rights.\nWomen across the country are rightfully terrified about the grim realities that will define a post-Roe America. We know full well that a world where abortion is illegal is not a world where abortions do not exist–simply one where they are done clandestinely, often dangerously, and result in needless deaths. Of course, the women most at risk are the women already teetering at the margins–low-income women who cannot afford to travel, women of color who face insidious discrimination, and rural women who cannot access quality care.\nIn Congress, Jerry has emerged as one of the leading voices in the efforts to protect abortion rights. He is such a highly valued and respected leader on this issue that when he ran for Judiciary Committee ranking member, NARAL endorsed him in its first-ever endorsement in a race of that kind–against a pro-choice Congresswoman, no less. And as Judiciary Committee Chair, Jerry was entrusted by House leadership in May of this year–immediately after the leak of the draft Supreme Court Dobbs v. Jackson Women’s Health Organization opinion–to hold the House’s only hearing on the implications of the case. As Jerry said during that hearing, “the right of women to make reproductive decisions…is a pillar of women’s equality.” He will do everything in his power to restore that right.\n## Pledge"
+    }
+   ],
+   "unread": [
+    "the list of jerrynadler.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.jerrynadler.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105172409/https://jerrynadler.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105172409/https://jerrynadler.com/",
+     "original": "https://jerrynadler.com/",
+     "date": "2024-11-05",
+     "title": "Jerry Nadler for Congress",
+     "text": "## Jerry Nadler Leading the Fight\nWhether it’s standing up to Republican attempts at voter suppression, providing justice to survivors of sexual assault and harassment, or leading the impeachment of President Trump as Chair of the House Judiciary Committee, Jerry Nadler is on the frontlines of the most important fights.\n## Meet Jerry\nA veteran Democratic Congressman often described as the “Liberal Lion” of New York’s Congressional Delegation, Jerry has been a relentless defender of our country’s democracy and a fierce fighter for civil rights, racial justice, and a safer, more equal America.\nkeep Jerry’s voice in Congress.\n## How to vote\nFind your poll site\n## What Jerry Believes\nJerry has led the fight on too many issues to count. Click here to find out where he stands on the issues most important to you.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105172840/https://jerrynadler.com/jerrys-priorities/",
+     "original": "https://jerrynadler.com/jerrys-priorities/",
+     "date": "2024-11-05",
+     "title": "Where Jerry Stands | Jerry Nadler for Congress",
+     "text": "## Where Jerry Stands\nJerry has led the fight on too many issues to count.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105172425/https://jerrynadler.com/issues/defending-our-democracy/",
+     "original": "https://jerrynadler.com/issues/defending-our-democracy/",
+     "date": "2024-11-05",
+     "title": "Defending our Democracy | Jerry Nadler for Congress",
+     "text": "## Defending our Democracy\nWhen our republic was most at risk, Jerry stepped in.\nAs Chairman of the House Judiciary Committee, Jerry has served as a bulwark against wannabe tyrants like Donald Trump and Republicans who seek to suppress the right to vote. Jerry stood up to Trump’s self-dealing and self-serving bullying and impeached him twice –once for his abuses of power and obstruction of Congress, and then again after the lawless former President incited the January 6th insurrection.\nJerry’s oversight of government officials and agencies has hardly been limited to Trump–he has led efforts to hold agencies like ICE, CBP, DOJ, and others accountable for abuses ranging from the family separation policy to DHS’ violent policing tactics against peaceful protestors. The reputation that Jerry has developed–as a tough, unflinching protector of American democracy –is based on his unwavering commitment to protecting our fragile democratic experiment from those who seek to corrupt and undermine it.\nWith Republicans working overtime to disenfranchise voters–disproportionately impacting communities of color– Jerry has fought to resist cynical, anti-democratic efforts and protect access to the ballot . He led the passage of the John Lewis Voting Rights Act through the House, held hearings to ensure our elections are safe from external and foreign interference, and ensured that COVID relief packages included funds to facilitate safe elections in the midst of a pandemic.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105172415/https://jerrynadler.com/issues/reforming-americas-gun-laws/",
+     "original": "https://jerrynadler.com/issues/reforming-americas-gun-laws/",
+     "date": "2024-11-05",
+     "title": "Reforming America’s Gun Laws | Jerry Nadler for Congress",
+     "text": "## Reforming America’s Gun Laws\nEvery victim of gun violence is another reminder of the nightmare we have made for ourselves. Americans shouldn’t have to live in fear.\nNo country in the world faces the unending nightmare of gun violence that America does. While Republicans act in bad faith and try to deflect needed action with phony arguments that mental health is the cause of this neverending pattern of violence, Jerry knows that Americans aren’t exponentially more susceptible to mental illness than others around the rest of the world. The root of the problem, of course, is the widespread availability of firearms and the outsized, constrictive influence that the NRA and the gun lobby hold. With children being slain in schools and the proliferation of guns allowing for racist hate to travel seamlessly from the darkest corners of the Internet to our country’s streets–like the recent, tragic massacre in Buffalo–calls to delay action are not just desperately misguided, they stink of complicity.\nAs Chairman of the Judiciary Committee, Jerry has turned anguish into action. In his first term as Chair, Jerry passed through the House H.R. 8, a historic bill that would close loopholes and expand the background check process. This year, Jerry introduced the Protecting Our Kids Act, one of the most all-encompassing, sweeping gun reform packages ever passed by the House. As one of the House’s most prominent leaders in the fight to reform our nation’s gun laws , Jerry was trusted to lead the Congressional debate on the Safer Communities Act, which would restrict violent abusers from accessing guns, deliver grants to states so that they could establish crucial red flag laws, and stem the flow of trafficked guns to New York. When President Biden signed that bill into law, it marked the most significant action in decades to address gun violence.\nEnding the endless wave of gun violence is one of Jerry’s very top priorities. He knows the more guns you get out of dangerous hands, the safer our schools, streets, and subways become. The proud recipient of an F rating from the NRA, Jerry won’t stop fighting until Americans can feel safe from the threat of gun violence.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105172422/https://jerrynadler.com/issues/lbgtqia-rights/",
+     "original": "https://jerrynadler.com/issues/lbgtqia-rights/",
+     "date": "2024-11-05",
+     "title": "LBGTQIA+ Rights | Jerry Nadler for Congress",
+     "text": "## LBGTQIA+ Rights\nLGBTQIA+ rights are human rights.\nFighting to expand civil rights protections has always been a fundamental element of Jerry’s identity, as New York’s vibrant LGBTQIA+ community can attest. The Advocate –a leading LGBTQIA+ publication–wrote that Jerry “is one of the nation’s fiercest protectors of LGBT rights and a powerful ally for trans equality” and for good reason: Jerry has been an original co-sponsor of countless major pieces of LGBT civil rights legislation for decades. Not only did he himself write the Respect for Marriage Act (RMA), the Uniting American Families Act (UAFA), the Father Mychal Judge Act, and the Equal Access to Social Security Act , Jerry led the charge to pass the anti-discriminatory Equality Act through the House as Judiciary Chair, a historic feat he accomplished in 2019.\nJerry also led the Congressional amicus briefs in both Windsor and Obergefell , the two seismic Supreme Court cases that ultimately precipitated marriage equality. For New Yorkers, that should come as little surprise: Jerry was the very first New York Congressmember to publicly support marriage equality. And visitors to Manhattan’s Stonewall National Monument now have a place to celebrate the bravery of those who threw those bricks against anti-LBGTQIA+ discrimination thanks to Jerry’s powerful advocacy. The LGBTQIA+ community could not ask for a stronger ally than Jerry Nadler.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20241105172413/https://jerrynadler.com/issues/protecting-reproductive-rights/",
+     "original": "https://jerrynadler.com/issues/protecting-reproductive-rights/",
+     "date": "2024-11-05",
+     "title": "Protecting Reproductive Rights | Jerry Nadler for Congress",
+     "text": "## Protecting Reproductive Rights\nRoe v. Wade was the law of the land. We have to fight for our fundamental, Constitutional rights.\nIt is abhorrent and devastating that a girl born today will have fewer rights over her own body than a woman born forty years ago. The recent overturn of Roe is a galling affront to the rights of women and a shockingly stark reflection of a radical, extremist Supreme Court that refuses to represent anything other than far-right, monied interests. On this issue, Jerry could not be more clear: just as he has his entire career, he will fight with every ounce of his being to defend abortion rights.\nWomen across the country are rightfully terrified about the grim realities that will define a post-Roe America. We know full well that a world where abortion is illegal is not a world where abortions do not exist–simply one where they are done clandestinely, often dangerously, and result in needless deaths. Of course, the women most at risk are the women already teetering at the margins–low-income women who cannot afford to travel, women of color who face insidious discrimination, and rural women who cannot access quality care.\nIn Congress, Jerry has emerged as one of the leading voices in the efforts to protect abortion rights. He is such a highly valued and respected leader on this issue that when he ran for Judiciary Committee ranking member, NARAL endorsed him in its first-ever endorsement in a race of that kind–against a pro-choice Congresswoman, no less. And as Judiciary Committee Chair, Jerry was entrusted by House leadership in May of this year–immediately after the leak of the draft Supreme Court Dobbs v. Jackson Women’s Health Organization opinion–to hold the House’s only hearing on the implications of the case. As Jerry said during that hearing, “the right of women to make reproductive decisions…is a pillar of women’s equality.” He will do everything in his power to restore that right.\n## Pledge"
+    }
+   ],
+   "unread": [
+    "the list of jerrynadler.com's saved pages"
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.jerrynadler.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-27",
+    "url": "https://web.archive.org/web/20261027233426/https://jerrynadler.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261027233426/https://jerrynadler.com/",
+     "original": "https://jerrynadler.com/",
+     "date": "2026-10-27",
+     "title": "Jerry Nadler for Congress",
+     "text": "## Jerry Nadler Leading the Fight\nWhether it’s standing up to Republican attempts at voter suppression, providing justice to survivors of sexual assault and harassment, or leading the impeachment of President Trump as Chair of the House Judiciary Committee, Jerry Nadler is on the frontlines of the most important fights.\n## Meet Jerry\nA veteran Democratic Congressman often described as the “Liberal Lion” of New York’s Congressional Delegation, Jerry has been a relentless defender of our country’s democracy and a fierce fighter for civil rights, racial justice, and a safer, more equal America.\nkeep Jerry’s voice in Congress.\n## How to vote\nFind your poll site\n## What Jerry Believes\nJerry has led the fight on too many issues to count. Click here to find out where he stands on the issues most important to you.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20260613083851/https://jerrynadler.com/jerrys-priorities/",
+     "original": "https://jerrynadler.com/jerrys-priorities/",
+     "date": "2026-06-13",
+     "title": "Where Jerry Stands | Jerry Nadler for Congress",
+     "text": "## Where Jerry Stands\nJerry has led the fight on too many issues to count.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20260719061436/https://jerrynadler.com/issues/defending-our-democracy/",
+     "original": "https://jerrynadler.com/issues/defending-our-democracy/",
+     "date": "2026-07-19",
+     "title": "Defending our Democracy | Jerry Nadler for Congress",
+     "text": "## Defending our Democracy\nWhen our republic was most at risk, Jerry stepped in.\nAs Chairman of the House Judiciary Committee, Jerry has served as a bulwark against wannabe tyrants like Donald Trump and Republicans who seek to suppress the right to vote. Jerry stood up to Trump’s self-dealing and self-serving bullying and impeached him twice –once for his abuses of power and obstruction of Congress, and then again after the lawless former President incited the January 6th insurrection.\nJerry’s oversight of government officials and agencies has hardly been limited to Trump–he has led efforts to hold agencies like ICE, CBP, DOJ, and others accountable for abuses ranging from the family separation policy to DHS’ violent policing tactics against peaceful protestors. The reputation that Jerry has developed–as a tough, unflinching protector of American democracy –is based on his unwavering commitment to protecting our fragile democratic experiment from those who seek to corrupt and undermine it.\nWith Republicans working overtime to disenfranchise voters–disproportionately impacting communities of color– Jerry has fought to resist cynical, anti-democratic efforts and protect access to the ballot . He led the passage of the John Lewis Voting Rights Act through the House, held hearings to ensure our elections are safe from external and foreign interference, and ensured that COVID relief packages included funds to facilitate safe elections in the midst of a pandemic.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20260719064302/https://jerrynadler.com/issues/reforming-americas-gun-laws/",
+     "original": "https://jerrynadler.com/issues/reforming-americas-gun-laws/",
+     "date": "2026-07-19",
+     "title": "Reforming America’s Gun Laws | Jerry Nadler for Congress",
+     "text": "## Reforming America’s Gun Laws\nEvery victim of gun violence is another reminder of the nightmare we have made for ourselves. Americans shouldn’t have to live in fear.\nNo country in the world faces the unending nightmare of gun violence that America does. While Republicans act in bad faith and try to deflect needed action with phony arguments that mental health is the cause of this neverending pattern of violence, Jerry knows that Americans aren’t exponentially more susceptible to mental illness than others around the rest of the world. The root of the problem, of course, is the widespread availability of firearms and the outsized, constrictive influence that the NRA and the gun lobby hold. With children being slain in schools and the proliferation of guns allowing for racist hate to travel seamlessly from the darkest corners of the Internet to our country’s streets–like the recent, tragic massacre in Buffalo–calls to delay action are not just desperately misguided, they stink of complicity.\nAs Chairman of the Judiciary Committee, Jerry has turned anguish into action. In his first term as Chair, Jerry passed through the House H.R. 8, a historic bill that would close loopholes and expand the background check process. This year, Jerry introduced the Protecting Our Kids Act, one of the most all-encompassing, sweeping gun reform packages ever passed by the House. As one of the House’s most prominent leaders in the fight to reform our nation’s gun laws , Jerry was trusted to lead the Congressional debate on the Safer Communities Act, which would restrict violent abusers from accessing guns, deliver grants to states so that they could establish crucial red flag laws, and stem the flow of trafficked guns to New York. When President Biden signed that bill into law, it marked the most significant action in decades to address gun violence.\nEnding the endless wave of gun violence is one of Jerry’s very top priorities. He knows the more guns you get out of dangerous hands, the safer our schools, streets, and subways become. The proud recipient of an F rating from the NRA, Jerry won’t stop fighting until Americans can feel safe from the threat of gun violence.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20260719062930/https://jerrynadler.com/issues/lbgtqia-rights/",
+     "original": "https://jerrynadler.com/issues/lbgtqia-rights/",
+     "date": "2026-07-19",
+     "title": "LBGTQIA+ Rights | Jerry Nadler for Congress",
+     "text": "## LBGTQIA+ Rights\nLGBTQIA+ rights are human rights.\nFighting to expand civil rights protections has always been a fundamental element of Jerry’s identity, as New York’s vibrant LGBTQIA+ community can attest. The Advocate –a leading LGBTQIA+ publication–wrote that Jerry “is one of the nation’s fiercest protectors of LGBT rights and a powerful ally for trans equality” and for good reason: Jerry has been an original co-sponsor of countless major pieces of LGBT civil rights legislation for decades. Not only did he himself write the Respect for Marriage Act (RMA), the Uniting American Families Act (UAFA), the Father Mychal Judge Act, and the Equal Access to Social Security Act , Jerry led the charge to pass the anti-discriminatory Equality Act through the House as Judiciary Chair, a historic feat he accomplished in 2019.\nJerry also led the Congressional amicus briefs in both Windsor and Obergefell , the two seismic Supreme Court cases that ultimately precipitated marriage equality. For New Yorkers, that should come as little surprise: Jerry was the very first New York Congressmember to publicly support marriage equality. And visitors to Manhattan’s Stonewall National Monument now have a place to celebrate the bravery of those who threw those bricks against anti-LBGTQIA+ discrimination thanks to Jerry’s powerful advocacy. The LGBTQIA+ community could not ask for a stronger ally than Jerry Nadler.\n## Pledge"
+    },
+    {
+     "url": "https://web.archive.org/web/20260719062640/https://jerrynadler.com/issues/protecting-reproductive-rights/",
+     "original": "https://jerrynadler.com/issues/protecting-reproductive-rights/",
+     "date": "2026-07-19",
+     "title": "Protecting Reproductive Rights | Jerry Nadler for Congress",
+     "text": "## Protecting Reproductive Rights\nRoe v. Wade was the law of the land. We have to fight for our fundamental, Constitutional rights.\nIt is abhorrent and devastating that a girl born today will have fewer rights over her own body than a woman born forty years ago. The recent overturn of Roe is a galling affront to the rights of women and a shockingly stark reflection of a radical, extremist Supreme Court that refuses to represent anything other than far-right, monied interests. On this issue, Jerry could not be more clear: just as he has his entire career, he will fight with every ounce of his being to defend abortion rights.\nWomen across the country are rightfully terrified about the grim realities that will define a post-Roe America. We know full well that a world where abortion is illegal is not a world where abortions do not exist–simply one where they are done clandestinely, often dangerously, and result in needless deaths. Of course, the women most at risk are the women already teetering at the margins–low-income women who cannot afford to travel, women of color who face insidious discrimination, and rural women who cannot access quality care.\nIn Congress, Jerry has emerged as one of the leading voices in the efforts to protect abortion rights. He is such a highly valued and respected leader on this issue that when he ran for Judiciary Committee ranking member, NARAL endorsed him in its first-ever endorsement in a race of that kind–against a pro-choice Congresswoman, no less. And as Judiciary Committee Chair, Jerry was entrusted by House leadership in May of this year–immediately after the leak of the draft Supreme Court Dobbs v. Jackson Women’s Health Organization opinion–to hold the House’s only hearing on the implications of the case. As Jerry said during that hearing, “the right of women to make reproductive decisions…is a pillar of women’s equality.” He will do everything in his power to restore that right.\n## Pledge"
+    }
+   ],
+   "unread": [
+    "the list of jerrynadler.com's saved pages"
+   ],
+   "posts": []
+  }
+ ]
+}

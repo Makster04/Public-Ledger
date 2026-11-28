@@ -1,0 +1,76 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "mann",
+ "name": "Tracey Mann",
+ "built": "2026-11-27",
+ "sites": [
+  "https://traceymann.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://traceymann.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-08",
+    "url": "https://web.archive.org/web/20221108211347/https://www.traceymann.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108211347/https://www.traceymann.com/",
+     "original": "https://www.traceymann.com/",
+     "date": "2022-11-08",
+     "title": "Tracey Mann for Congress",
+     "text": "You Can Trust\nThank you for contacting us.\nWe will get back to you as soon as possible.\nOops, there was an error sending your message.\nPlease try again later.\nGet to Know Tracey\nTracey Mann served as the 50th Lt. Governor of the great state of Kansas.\nA fifth generation Kansan, he was born and raised on his family farm just south of Quinter. He was the fifth generation to live in the house on the family farm which his great great grandfather ordered from Montgomery Ward catalogue in the early 1900’s. Tracey learned the value of hard work by working in the fields and feed yard with his grandfather, father, and brother.\nFind Out More\n## Lifelong Kansan\nTracey is ready to work tirelessly to make Kansas a place that his children want to stay and continue their lives when they grow up.\nWhere I Stand\nI believe that life begins at conception and will fight to protect the innocent life of the unborn.\nThe right to bear arms is fundamental to our Bill of Rights and is part of the bedrock of what makes America exceptional in the world.\nFight for Agriculture\nAgriculture runs in my blood and I will seek to be a voice for our farmers and ranchers in Washington.\nSupport President Trump\nI support the President in his efforts to Make America Great Again.\nWe must do everything possible to help our rural communities to not just survive but thrive.\nStrong Border Security\nWe must secure our southern border by constructing a wall. This is a national security issue, a human trafficking issue, a drug trafficking issue and just makes common sense.\nP.O. Box 1084\nSalina, KS 67402"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://traceymann.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105051546/https://www.traceymann.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105051546/https://www.traceymann.com/",
+     "original": "https://www.traceymann.com/",
+     "date": "2024-11-05",
+     "title": "Tracey Mann for Congress",
+     "text": "You Can Trust\nThank you for contacting us.\nWe will get back to you as soon as possible.\nOops, there was an error sending your message.\nPlease try again later.\nGet to Know Tracey\nTracey Mann served as the 50th Lt. Governor of the great state of Kansas.\nA fifth generation Kansan, he was born and raised on his family farm just south of Quinter. He was the fifth generation to live in the house on the family farm which his great great grandfather ordered from Montgomery Ward catalogue in the early 1900’s. Tracey learned the value of hard work by working in the fields and feed yard with his grandfather, father, and brother.\nFind Out More\n## Lifelong Kansan\nTracey is ready to work tirelessly to make Kansas a place that his children want to stay and continue their lives when they grow up.\nWhere I Stand\nI believe that life begins at conception and will fight to protect the innocent life of the unborn.\nThe right to bear arms is fundamental to our Bill of Rights and is part of the bedrock of what makes America exceptional in the world.\nFight for Agriculture\nAgriculture runs in my blood and I will seek to be a voice for our farmers and ranchers in Washington.\nSupport President Trump\nI support the President in his efforts to Make America Great Again.\nWe must do everything possible to help our rural communities to not just survive but thrive.\nStrong Border Security\nWe must secure our southern border by constructing a wall. This is a national security issue, a human trafficking issue, a drug trafficking issue and just makes common sense.\nP.O. Box 1084\nSalina, KS 67402"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://traceymann.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103052414/https://www.traceymann.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103052414/https://www.traceymann.com/",
+     "original": "https://www.traceymann.com/",
+     "date": "2026-11-03",
+     "title": "Tracey Mann for Congress",
+     "text": "You Can Trust\nThank you for contacting us.\nWe will get back to you as soon as possible.\nOops, there was an error sending your message.\nPlease try again later.\nGet to Know Tracey\nTracey Mann served as the 50th Lt. Governor of the great state of Kansas.\nA fifth generation Kansan, he was born and raised on his family farm just south of Quinter. He was the fifth generation to live in the house on the family farm which his great great grandfather ordered from Montgomery Ward catalogue in the early 1900’s. Tracey learned the value of hard work by working in the fields and feed yard with his grandfather, father, and brother.\nFind Out More\n## Lifelong Kansan\nTracey is ready to work tirelessly to make Kansas a place that his children want to stay and continue their lives when they grow up.\nWhere I Stand\nI believe that life begins at conception and will fight to protect the innocent life of the unborn.\nThe right to bear arms is fundamental to our Bill of Rights and is part of the bedrock of what makes America exceptional in the world.\nFight for Agriculture\nAgriculture runs in my blood and I will seek to be a voice for our farmers and ranchers in Washington.\nSupport President Trump\nI support the President in his efforts to Make America Great Again.\nWe must do everything possible to help our rural communities to not just survive but thrive.\nStrong Border Security\nWe must secure our southern border by constructing a wall. This is a national security issue, a human trafficking issue, a drug trafficking issue and just makes common sense.\nP.O. Box 1084\nSalina, KS 67402"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

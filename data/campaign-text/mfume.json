@@ -1,0 +1,109 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "mfume",
+ "name": "Kweisi Mfume",
+ "built": "2026-11-27",
+ "sites": [
+  "https://mfumeforcongress.com/",
+  "https://mfumeforsenate.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://mfumeforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107235114/https://mfumeforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107235114/https://mfumeforcongress.com/",
+     "original": "https://mfumeforcongress.com/",
+     "date": "2022-11-07",
+     "title": "Mfume for Congress |",
+     "text": "## DEMOCRAT\nU.S. Congress, Maryland\n7th Congressional District\n## ELECTION\nNOVEMBER 8, 2022\n## EARLY\nOCT 27 – NOV 3, 2022\n## On Maryland’s 7th Congressional District Election:\nWhere is Maryland’s 7th Congressional District?\nMaryland’s 7th Congressional District covers most of the City of Baltimore and broad portions of western and eastern Baltimore County.\nWhen does Early Voting open and close?\nEarly voting begins on Thursday, October 27th and ends on Thursday, November 3rd, 2022\nWhere's the Early Voting location nearest me?\nFind the early voting location nearest you at: https://elections.maryland.gov/elections/2022/2022_Early%20Voting_Centers.pdf\nWhat is the deadline to submit Mail-in Ballots?\nIf you are a Maryland voter, click here to learn more about requesting a mail-in ballot and voting by mail.\nThe deadline to receive your request for a ballot using the online system or by mail is November 1, 2022 for the Gubernatorial General Election. For a list of designated ballot drop boxes: https://elections.maryland.gov/voting/documents/2022_GG_DropBoxLocations_English.pdf\nWhat is the date for the General Election for Maryland?\nGeneral Election Day is Tuesday, November 8, 2022. Find your assigned voting location at: https://voterservices.elections.maryland.gov/PollingPlaceSearch\nUse this link to\naccess and verify your voter registration information\nUse this link to update your voter registration information\nUse this link to register to vote\n## BECOME A VOLUNTEER\nThere’s too much at stake in this upcoming special election for you not to be directly involved. We would love to have your expertise and presence on this campaign. Just click on the link below and let us know what days, times and operations are good for you.\n## Mail:\nMfume for Congress\nPO Box 31649\nBaltimore MD 21207"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://mfumeforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-09-29",
+    "url": "https://web.archive.org/web/20220929012340/http://mfumeforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20220929012340/http://mfumeforsenate.com/",
+     "original": "http://mfumeforsenate.com/",
+     "date": "2022-09-29",
+     "title": "mfumeforsenate - rolet online",
+     "text": "24 November 2020\nBermain Roulette online pada situs Roulette memang menyenangkan apalagi bisa bebas dibuka kapan saja. Namun …\n24 November 2020\nPemahaman kriteria situs roulette tepercaya sangat dibutuhkan oleh pemain. Pemahaman kriteria situs yang benar membuat …"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://mfumeforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105074819/https://mfumeforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105074819/https://mfumeforcongress.com/",
+     "original": "https://mfumeforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Mfume for Congress |",
+     "text": "## DEMOCRAT\nU.S. Congress, Maryland\n7th Congressional District\n## GENERAL ELECTION\nNOV 5, 2024\n## EARLY VOTING\nFOR GENERAL ELECTION\nOCT 24 – 31, 2024\n## On Maryland’s 7th Congressional District Election:\nWhere is Maryland’s 7th Congressional District?\nMaryland’s 7th Congressional District covers most of the City of Baltimore and broad portions of western and eastern Baltimore County.\nWhen does Early Voting open and close?\nEarly Voting for the Primary Election – Thursday, May 2, 2024 through Thursday, May 9, 2024 from 7 am until 8 pm.\nWhere's the Early Voting location nearest me?\nFor both the 2024 Presidential Primary and General Elections, you can vote in an early voting center in the county where you live.\nWhat is the deadline to submit Mail-in Ballots?\nIf you are a Maryland voter, click here to learn more about requesting a mail-in ballot and voting by mail.\nWhat is the date for the General Election for Maryland?\nGeneral Election Day is Tuesday, November 5, 2024, 7 am until 8 pm. Find your assigned voting location at: https://voterservices.elections.maryland.gov/PollingPlaceSearch\nUse this link to\naccess and verify your voter registration information\nUse this link to update your voter registration information\nUse this link to register to vote\n## BECOME A VOLUNTEER\nThere’s too much at stake in this upcoming special election for you not to be directly involved. We would love to have your expertise and presence on this campaign. Just click on the link below and let us know what days, times and operations are good for you.\n## Mail:\nKweisi Mfume for Congress\nPO Box 31649\nBaltimore MD 21207"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://mfumeforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103073652/https://mfumeforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103073652/https://mfumeforcongress.com/",
+     "original": "https://mfumeforcongress.com/",
+     "date": "2026-11-03",
+     "title": "Mfume for Congress |",
+     "text": "## DEMOCRAT\nU.S. Congress, Maryland\n7th Congressional District\n## PRIMARY ELECTION\nJUN 23, 2026\n## EARLY VOTING FOR\nJUN 11 – 18, 2026\n## On Maryland’s 7th Congressional District Election:\nWhere is Maryland’s 7th Congressional District?\nMaryland’s 7th Congressional District covers most of the City of Baltimore and broad portions of western and eastern Baltimore County.\nWhen does Early Voting open and close?\nEarly Voting for the Primary Election – Thursday, June 11, 2026 through Thursday, June 18, 2026 from 7 am until 8 pm.\nEarly voting for the General Election – Thursday, October 22, 2026 through Thursday, October 29, 2026.\nWhere's the Early Voting location nearest me?\nFor both the Presidential Primary and General Elections, you can vote in an early voting center in the county where you live.\nWhat is the deadline to submit Mail-in Ballots?\nIf you are a Maryland voter, click here to learn more about requesting a mail-in ballot and voting by mail.\nWhat is the date for the General Election for Maryland?\nGeneral Election Day is Tuesday, November 3, 2026, 7 am until 8 pm. Find your assigned voting location at: https://voterservices.elections.maryland.gov/PollingPlaceSearch\nEarly voting for the General Election begins on Tuesday, October 22, 2026 and ends on Thursday, October 29, 2026.\nUse this link to\naccess and verify your voter registration information\nUse this link to update your voter registration information\nUse this link to register to vote\n## BECOME A VOLUNTEER\nThere’s too much at stake in this upcoming special election for you not to be directly involved. We would love to have your expertise and presence on this campaign. Just click on the link below and let us know what days, times and operations are good for you."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://mfumeforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-05-09",
+    "url": "https://web.archive.org/web/20260509134213/http://mfumeforsenate.com/"
+   },
+   "pages": [],
+   "posts": []
+  }
+ ]
+}
