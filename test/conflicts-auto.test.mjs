@@ -73,7 +73,7 @@ test('npm start runs the export, the lookups and the build once a day; the looku
   assert.ok(local.includes("const exp=await runScript([path.join(root,'scripts','export-disclosures.mjs')],20*60_000);"));
   assert.ok(local.includes("const look=await runScript([path.join(root,'scripts','match-conflicts.mjs'),'lookup'],6*60*60_000);"));
   assert.ok(local.includes("const build=await runScript([path.join(root,'scripts','match-conflicts.mjs'),'build'],10*60_000);"));
-  assert.ok(local.includes("updateConflicts();},60*60_000);")&&local.includes('setTimeout(updateConflicts,10*60_000);'));
+  assert.ok(/updateConflicts\(\);[^}]*\},60\*60_000\);/.test(local)&&local.includes('setTimeout(updateConflicts,10*60_000);'));
   assert.ok(src.includes('if(n%10===0)save();')&&src.includes("process.on('SIGTERM',stop(143));"));
   assert.ok(!pkg.scripts['conflicts:approve']&&!src.includes("mode==='approve'"),'no approval step');
 });

@@ -101,9 +101,31 @@ async function updateConflicts(){
     await fs.writeFile(CONFLICTS_STAMP,JSON.stringify({date:today}));
   }finally{conflictsRunning=false;}
 }
+// Keeps Their Word, kept up to date with no one reviewing (since Nov. 28, 2026): once a week, the promise finder reads
+// the statements collected since (scripts/find-promises.mjs), each sure item takes the finder's own verdict
+// (scripts/review-promises.mjs --auto: the bill named, a clear final vote, nothing in doubt), and the promises are
+// rebuilt (scripts/build-promises.mjs). Items that aren't sure yet stay in the queue, not counted, until the record
+// settles them. .local/promises-run.json keeps it to once a week.
+const PROMISES_STAMP=path.join(root,'.local','promises-run.json');
+let promisesRunning=false;
+async function updatePromises(){
+  if(promisesRunning)return;
+  try{if((Date.now()-Date.parse(JSON.parse(await fs.readFile(PROMISES_STAMP,'utf8')).at))/864e5<7)return;}catch{}
+  promisesRunning=true;
+  try{
+    const find=await runScript([path.join(root,'scripts','find-promises.mjs')],2*60*60_000);
+    if(find.error){console.error('Promise finder failed:',lastLine(find)||String(find.error.message).split('\n')[0]);return;}
+    const review=await runScript([path.join(root,'scripts','review-promises.mjs'),'--auto'],10*60_000);
+    if(review.error){console.error('Automatic promise verdicts failed:',String(review.error.message).split('\n')[0]);return;}
+    const build=await runScript([path.join(root,'scripts','build-promises.mjs')],15*60_000);
+    if(build.error)console.error('Promises rebuild failed:',String(build.error.message).split('\n')[0]);
+    else console.log(`Promises updated. ${lastLine(review)}`);
+    await fs.writeFile(PROMISES_STAMP,JSON.stringify({at:new Date().toISOString()}));
+  }finally{promisesRunning=false;}
+}
 server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`Port ${port} is already in use. If Public Ledger is already running, open http://127.0.0.1:${port}. Otherwise choose another PORT in .dev.vars.`:error.message);db.close();process.exit(1);});
 server.listen(port,'127.0.0.1',()=>{
   console.log(`Public Ledger is ready at http://127.0.0.1:${port}\nOfficial records refresh while this process is running. Stop with Ctrl+C.`);
-  if(process.env.LOCAL_AUTORUN!=='false'){void tick();timer=setInterval(tick,60_000);buildNews();newsTimer=setInterval(()=>{buildNews();checkLinks();updateConflicts();},60*60_000);setTimeout(checkLinks,5*60_000);setTimeout(updateConflicts,10*60_000);}
+  if(process.env.LOCAL_AUTORUN!=='false'){void tick();timer=setInterval(tick,60_000);buildNews();newsTimer=setInterval(()=>{buildNews();checkLinks();updateConflicts();updatePromises();},60*60_000);setTimeout(checkLinks,5*60_000);setTimeout(updateConflicts,10*60_000);setTimeout(updatePromises,20*60_000);}
 });
 process.on('SIGINT',()=>{clearInterval(timer);clearInterval(newsTimer);server.close(()=>{db.close();process.exit(0);});});
