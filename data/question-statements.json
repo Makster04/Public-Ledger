@@ -1,5 +1,5 @@
 {
- "about": "What each reviewed profile said, tagged by hand to the alignment questions (public/questions.json): {person id: {question id: [[side index, \"the quote\", \"YYYY-MM-DD\", \"link\", \"where it was said\"]]}}. A tag is made only when the words clearly take one side; a statement that only explains a vote isn't a separate position; at most one statement per question per campaign. Checked and copied to public/question-statements.json by npm run statements:record (scripts/question-statements.mjs).",
+ "about": "What each person said, tagged to the alignment questions (by hand, or by helper agents with each quote checked automatically word for word against the saved speech, npm run statements:accept, since Nov. 28, 2026; no one approves them) (public/questions.json): {person id: {question id: [[side index, \"the quote\", \"YYYY-MM-DD\", \"link\", \"where it was said\"]]}}. A tag is made only when the words clearly take one side; a statement that only explains a vote isn't a separate position; at most one statement per question per campaign. Checked and copied to public/question-statements.json by npm run statements:record (scripts/question-statements.mjs).",
  "ager": {
   "border-security": [
    [
@@ -571,6 +571,60 @@
     "https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/",
     "Campaign website, 2020: Immigration — Cory 2020"
    ]
+  ],
+  "ai-regulation": [
+   [
+    0,
+    "we should establish whistleblower protections for lab employees, strengthen requirements for securing frontier model weights, establish a National Transportation Safety Board-like entity for investigating AI incidents",
+    "2026-09-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-17/html/CREC-2026-09-17-pt1-PgS4765-6.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "whistleblowers": [
+   [
+    0,
+    "we should establish whistleblower protections for lab employees",
+    "2026-09-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-17/html/CREC-2026-09-17-pt1-PgS4765-6.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "group-donations": [
+   [
+    1,
+    "I am proud to cosponsor bills that would end this nightmare like Democracy for All, the amendment to overturn this misguided decision.",
+    "2026-01-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-14/html/CREC-2026-01-14-pt1-PgS186-2.htm",
+    "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "God bless them; they don't need our help; they don't need more tax cuts",
+    "2025-03-31",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt2-PgS1961.htm",
+    "Floor speech, Congressional Record: Senate"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "$880 billion for Medicaid--cutting all of that out to give to the wealthiest ... this is literally taking from working Americans",
+    "2025-03-31",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt2-PgS1961.htm",
+    "Floor speech, Congressional Record: Senate"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "everything in the immigration world we need to improve on, including the need to secure our southern border",
+    "2025-03-31",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt2-PgS1961.htm",
+    "Floor speech, Congressional Record: Senate"
+   ]
   ]
  },
  "brooks": {
@@ -815,6 +869,51 @@
     "2017-01-04",
     "https://www.govinfo.gov/app/details/CREC-2017-01-04/CREC-2017-01-04-pt1-PgH74",
     "Floor speech, Congressional Record: Midnight Rules Relief Act of 2017"
+   ]
+  ],
+  "nuclear-energy": [
+   [
+    0,
+    "Nuclear energy provides reliable, clean power across America.",
+    "2026-11-09",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6099.htm",
+    "Floor speech, Congressional Record: DEPARTMENT OF ENERGY NUCLEAR TRANSPARENCY ACT"
+   ]
+  ],
+  "data-privacy": [
+   [
+    0,
+    "as we update the Children's Online Privacy Protection Act, a law that is outdated, that now will cover teens and provide much greater safety and privacy for young people",
+    "2026-06-29",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-29/html/CREC-2026-06-29-pt1-PgH4280-2.htm",
+    "Floor speech, Congressional Record: KIDS INTERNET AND DIGITAL SAFETY ACT"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "Then, these illegal, arbitrary tariffs have added to this affordability squeeze.",
+    "2026-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2301-2.htm",
+    "Floor speech, Congressional Record: HOMEOWNER ENERGY FREEDOM ACT"
+   ]
+  ],
+  "chips-industry": [
+   [
+    0,
+    "Democrats leaned into it and passed important policies in the bipartisan infrastructure law and the Inflation Reduction Act to spur domestic manufacturing",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2150.htm",
+    "Floor speech, Congressional Record: SECURING AMERICA'S CRITICAL MINERALS SUPPLY ACT"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "all he has proposed is a major tax giveaway to billionaires like Elon Musk",
+    "2025-03-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-05/html/CREC-2025-03-05-pt1-PgH991.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVATION PROGRAM FOR APPLIANCE STANDARDS: CERTIFIC"
    ]
   ]
  },
@@ -4238,6 +4337,2414 @@
     "2025-02-12",
     "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS871-10.htm",
     "Floor speech, Congressional Record: Border Security (Executive Session)"
+   ]
+  ]
+ },
+ "jacobs": {
+  "war-with-iran": [
+   [
+    1,
+    "who have been shipped off to fight Secretary Hegseth's reckless war in Iran",
+    "2026-11-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6122-3.htm",
+    "Floor speech, Congressional Record: IMPEACH SECRETARY HEGSETH"
+   ]
+  ],
+  "abortion": [
+   [
+    1,
+    "Members of this body know next to nothing about pregnancy or abortion care, which is why we should not be the ones getting involved in these decisions in the first place",
+    "2025-01-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+    "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT"
+   ]
+  ],
+  "border-security": [
+   [
+    1,
+    "Congress needs to do its job and cut off funding for family detention and claw back the $75 billion blank check that was given to ICE and Border Patrol",
+    "2026-03-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2755-3.htm",
+    "Floor speech, Congressional Record: END CRUEL IMMIGRATION ENFORCEMENT AGAINST KIDS"
+   ]
+  ],
+  "war-powers": [
+   [
+    0,
+    "I hope every single one of my colleagues votes ``yes'' on this War Powers Resolution for our servicemembers.",
+    "2026-03-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-04/html/CREC-2026-03-04-pt1-PgH2395.htm",
+    "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM UNAUTHORIZED HOSTILITIES IN THE ISLAMIC REPU"
+   ]
+  ],
+  "minors-transition-care": [
+   [
+    0,
+    "I think everyone should have access to the gender-affirming care that they need",
+    "2025-09-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+    "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026"
+   ]
+  ]
+ },
+ "fields": {
+  "war-with-iran": [
+   [
+    1,
+    "Utilize every tool at your disposal to ... end the war in Iran",
+    "2026-11-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-11-10/html/CREC-2026-11-10-pt1-PgH6137.htm",
+    "Floor speech, Congressional Record: EXPRESSING GRATITUDE AND APPRECIATION"
+   ]
+  ],
+  "end-dei-hiring": [
+   [
+    1,
+    "I urge the gentleman from Illinois to keep on fighting for diversity, equity, and inclusion because it is not a bad thing.",
+    "2026-09-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5466.htm",
+    "Floor speech, Congressional Record: GIVING VOICE TO DIVERSITY, EQUITY, AND INCLUSION PRINCIPLES"
+   ]
+  ]
+ },
+ "fry": {
+  "nuclear-energy": [
+   [
+    0,
+    "strengthen our domestic supply of nuclear energy, and ensure that the United States leads the next generation of that nuclear energy",
+    "2026-11-09",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-11-09/html/CREC-2026-11-09-pt1-PgH6100.htm",
+    "Floor speech, Congressional Record: AMERICAN ENRICHMENT DEPLOYMENT ACT"
+   ]
+  ],
+  "police-funding-shift": [
+   [
+    1,
+    "we must take a stand against any defund the police rhetoric",
+    "2025-05-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-15/html/CREC-2025-05-15-pt1-PgH2071-2.htm",
+    "Floor speech, Congressional Record: IMPROVING LAW ENFORCEMENT OFFICER SAFETY AND WELLNESS THROUGH DATA ACT"
+   ]
+  ]
+ },
+ "jeffries": {
+  "war-with-iran": [
+   [
+    1,
+    "the President's reckless and costly war of choice in Iran",
+    "2026-09-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5933.htm",
+    "Floor speech, Congressional Record: TUSKEGEE AIRMEN MEMORIAL POST OFFICE"
+   ]
+  ],
+  "war-powers": [
+   [
+    0,
+    "expressing support for this War Powers Resolution so we can put an end to this costly and reckless war of choice",
+    "2026-04-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-16/html/CREC-2026-04-16-pt1-PgH2929-2.htm",
+    "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "doing something to stop the reckless Trump tariffs",
+    "2026-02-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2107-7.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2189, LAW-ENFORCEMENT INNOVATE TO DE-ESCALATE ACT; PROVIDING FOR CONSIDERATION OF H.R. 261, UNDERSEA CABLE PROTECTION ACT OF 202"
+   ]
+  ],
+  "assault-weapons": [
+   [
+    0,
+    "We need to ban assault weapons in the United States of America",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH149-2.htm",
+    "Floor speech, Congressional Record: MARKING 15 YEARS SINCE TUCSON SHOOTING"
+   ]
+  ],
+  "dreamers-citizenship": [
+   [
+    0,
+    "we must also stand up for Dreamers and farmworkers and law-abiding immigrant families in this country",
+    "2025-07-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ],
+  "medicaid-work": [
+   [
+    1,
+    "These so-called work requirements are just a smokescreen",
+    "2025-07-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "we support tax cuts for everyday Americans, tax cuts for small businesses, tax cuts for family farmers, and tax cuts for those who need relief, not tax cuts for the wealthy, the well-off, and the well-connected",
+    "2025-04-09",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-09/html/CREC-2025-04-09-pt1-PgH1533-2.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025"
+   ]
+  ],
+  "ukraine-aid": [
+   [
+    0,
+    "We will continue to, at all times, stand behind the Ukrainian people, support their courage, and their bravery in their fight",
+    "2026-09-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5933.htm",
+    "Floor speech, Congressional Record: TUSKEGEE AIRMEN MEMORIAL POST OFFICE"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "Yes, we will always support securing the border, today, tomorrow, and forever.",
+    "2026-03-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2731.htm",
+    "Floor speech, Congressional Record: PAY OUR HOMELAND DEFENDERS ACT"
+   ]
+  ],
+  "body-cameras": [
+   [
+    0,
+    "The masks need to come off and body cameras need to come on.",
+    "2026-03-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-26/html/CREC-2026-03-26-pt1-PgH2731.htm",
+    "Floor speech, Congressional Record: PAY OUR HOMELAND DEFENDERS ACT"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "Republicans need to bring the Affordable Care Act tax credit extension bill to the floor today.",
+    "2025-12-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+    "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT"
+   ]
+  ],
+  "union-rights": [
+   [
+    0,
+    "I rise today in strong support of the Protect America's Workforce Act, legislation that will restore the collective bargaining rights of more than a million hardworking Federal employees",
+    "2025-12-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-11/html/CREC-2025-12-11-pt1-PgH5795.htm",
+    "Floor speech, Congressional Record: PROTECT AMERICA'S WORKFORCE ACT"
+   ]
+  ],
+  "planned-parenthood": [
+   [
+    0,
+    "It is an assault on Planned Parenthood and the healthcare of women all across the United States of America.",
+    "2025-07-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3059.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ]
+ },
+ "fedorchak": {
+  "abortion": [
+   [
+    0,
+    "I rise today as a mom of three and as a voice for every unborn child whose life has value, dignity, and purpose.",
+    "2026-09-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-16/html/CREC-2026-09-16-pt1-PgH5969.htm",
+    "Floor speech, Congressional Record: HYDE AMENDMENT'S 50TH ANNIVERSARY"
+   ]
+  ],
+  "climate-regulations": [
+   [
+    1,
+    "We must repeal the EPA's greenhouse gas rule.",
+    "2025-02-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH700.htm",
+    "Floor speech, Congressional Record: GRID RELIABILITY"
+   ]
+  ],
+  "nuclear-energy": [
+   [
+    0,
+    "These advanced nuclear systems are safe, reliable, clean, and capable of powering entire communities.",
+    "2025-02-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH700.htm",
+    "Floor speech, Congressional Record: GRID RELIABILITY"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    1,
+    "The law that was supposed to make things better, the Affordable Care Act, has definitely not lived up to its name.",
+    "2025-12-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6105.htm",
+    "Floor speech, Congressional Record: CHANGING HEALTH INSURANCE MARKET"
+   ]
+  ]
+ },
+ "bonamici": {
+  "school-vouchers": [
+   [
+    1,
+    "investing in public schools, not diverting Federal dollars into voucher programs that funnel money to private schools",
+    "2026-09-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-14/html/CREC-2026-09-14-pt1-PgH5535-4.htm",
+    "Floor speech, Congressional Record: FUTURE OF AMERICAN EDUCATION"
+   ]
+  ],
+  "abolish-education-dept": [
+   [
+    1,
+    "We must protect the Department of Education.",
+    "2025-12-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-15/html/CREC-2025-12-15-pt1-PgH5893.htm",
+    "Floor speech, Congressional Record: DISMANTLING THE DEPARTMENT OF EDUCATION"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "Congress should be focused on fixing the expiring ACA subsidies",
+    "2025-12-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+    "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT"
+   ]
+  ],
+  "minors-transition-care": [
+   [
+    0,
+    "This bill attacks the rights of States by banning Medicaid from covering any medical care for transgender youth, and it would put discrimination into law",
+    "2025-12-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+    "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "I rise today to oppose the big, bad billionaire bill, especially the cuts to Medicaid.",
+    "2025-05-20",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2182-3.htm",
+    "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES"
+   ]
+  ],
+  "foreign-aid": [
+   [
+    0,
+    "The thoughtless plan to shut down or pause the work of the U.S. Agency for International Development, USAID, is wrong for many reasons.",
+    "2025-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-11/html/CREC-2025-02-11-pt1-PgH619.htm",
+    "Floor speech, Congressional Record: HARMS OF FREEZING FOOD AID"
+   ]
+  ],
+  "abortion": [
+   [
+    1,
+    "I will soon introduce the Stop Anti-Abortion Disinformation Act to prohibit unfair and deceptive advertising of services by crisis pregnancy centers",
+    "2025-01-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+    "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT"
+   ]
+  ]
+ },
+ "arrington": {
+  "voter-id": [
+   [
+    0,
+    "to support what 83 percent of the American people support, which is photo identification to vote in elections in this country",
+    "2026-07-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5127-2.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2027"
+   ]
+  ],
+  "tariffs": [
+   [
+    0,
+    "The President has effectively and appropriately promoted and defended America's economic and security interests by the use of tariffs.",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+    "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025"
+   ]
+  ],
+  "nuclear-energy": [
+   [
+    0,
+    "my amendment makes good on President Trump's executive order to supercharge U.S. energy dominance by harnessing advanced nuclear technologies",
+    "2025-09-03",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-03/html/CREC-2025-09-03-pt1-PgH3796.htm",
+    "Floor speech, Congressional Record: ENERGY AND WATER DEVELOPMENT AND RELATED AGENCIES APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "welfare-restrictions": [
+   [
+    0,
+    "Because of reasonable, commonsense work requirements and because of prohibitions on illegal immigrants getting taxpayer-funded social services, we will actually have people moving up and out of the welfare trap.",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ],
+  "deport-serious-crime": [
+   [
+    0,
+    "To require this administration to get a judicial warrant to expel criminal aliens from our country, there is not a Democrat or Republican former Commander in Chief who would ever find that acceptable.",
+    "2026-04-29",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3147-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026"
+   ]
+  ],
+  "local-police-ice": [
+   [
+    0,
+    "It was lawless sanctuary cities, rogue leaders who incited violence against our law enforcement officers",
+    "2026-04-29",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3147-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026"
+   ]
+  ],
+  "cut-spending-debt": [
+   [
+    0,
+    "rein in the spending that is driving this unsustainable debt trajectory that will bankrupt our country and our children's future",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2560-8.htm",
+    "Floor speech, Congressional Record: PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES REQUIRING A BALANCED BUDGET FOR THE FEDERAL GOVERNMENT"
+   ]
+  ],
+  "undocumented-healthcare": [
+   [
+    1,
+    "because of prohibitions on illegal immigrants getting taxpayer-funded social services, we will actually have people moving up and out of the welfare trap",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ],
+  "medicaid-work": [
+   [
+    0,
+    "waived work requirements for means-tested welfare programs, from SNAP to Medicaid and beyond, trapping people in poverty and dependence on the Federal Government",
+    "2025-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025"
+   ]
+  ],
+  "ev-mandate": [
+   [
+    1,
+    "mandated expensive and unreliable electric vehicles",
+    "2025-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025"
+   ]
+  ]
+ },
+ "jayapal": {
+  "war-powers": [
+   [
+    0,
+    "I rise to urge the United States House of Representatives to pass my War Powers Resolution",
+    "2026-07-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5160-6.htm",
+    "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "to end President Trump's illegal and unconstitutional war in Iran",
+    "2026-07-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-22/html/CREC-2026-07-22-pt1-PgH5160-6.htm",
+    "Floor speech, Congressional Record: DIRECTING THE PRESIDENT PURSUANT TO SECTION 5(C) OF THE WAR POWERS RESOLUTION TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "we have to tax the billionaires so that they just pay a little bit more of their fair share",
+    "2025-03-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+    "Floor speech, Congressional Record: ECONOMIC POPULISM"
+   ]
+  ],
+  "block-mega-mergers": [
+   [
+    0,
+    "Albertsons and Kroger, two of the big grocery chains, actually tried to merge, and I was so proud to lead the amicus brief with other Members of Congress to actually oppose that merger.",
+    "2025-03-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+    "Floor speech, Congressional Record: ECONOMIC POPULISM"
+   ]
+  ],
+  "congress-stock-trading": [
+   [
+    1,
+    "They are trying to advance a fake stock trading ban.",
+    "2026-07-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH4698-3.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8884, REMOVING BARRIERS TO WO"
+   ]
+  ],
+  "private-prisons": [
+   [
+    1,
+    "Private, for-profit prison operators are laughing all the way to the bank as they rake in billions in profits by incarcerating over 60,000 immigrants",
+    "2026-06-09",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-09/html/CREC-2026-06-09-pt1-PgH4017.htm",
+    "Floor speech, Congressional Record: SECURE AMERICA ACT"
+   ]
+  ],
+  "gun-purchase-limits": [
+   [
+    0,
+    "Let's finally address gun violence and get guns out of the hands of people who should not have them.",
+    "2025-12-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5921.htm",
+    "Floor speech, Congressional Record: KAYLA HAMILTON ACT"
+   ]
+  ],
+  "epstein-files": [
+   [
+    0,
+    "despite all the giant coverup attempts by this administration and this Speaker of the House, we will vote to release all the Epstein files",
+    "2025-11-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-11-18/html/CREC-2025-11-18-pt1-PgH4725-2.htm",
+    "Floor speech, Congressional Record: EPSTEIN FILES TRANSPARENCY ACT"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "they refused to negotiate with Democrats to extend the Affordable Care Act tax credits so that 22 million wouldn't have to choose between healthcare and rent",
+    "2025-11-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-11-12/html/CREC-2025-11-12-pt1-PgH4595-3.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 5371, CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026"
+   ]
+  ],
+  "foreign-aid": [
+   [
+    0,
+    "It slashes U.S. USAID funding even more, and the cuts have already killed 300,000 people across the world.",
+    "2025-06-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+    "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025"
+   ]
+  ],
+  "minimum-wage": [
+   [
+    0,
+    "We have to have living wages for every worker",
+    "2025-03-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+    "Floor speech, Congressional Record: ECONOMIC POPULISM"
+   ]
+  ]
+ },
+ "ryan": {
+  "war-with-iran": [
+   [
+    1,
+    "I have been fighting to include my No Funds for Iran War Act in this NDAA, to make sure we don't spend a single penny more on this reckless forever war in the Middle East",
+    "2026-07-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-21/html/CREC-2026-07-21-pt1-PgH5001.htm",
+    "Floor speech, Congressional Record: NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "I gave former President Biden hell for failing to secure our border.",
+    "2025-03-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-25/html/CREC-2025-03-25-pt1-PgH1260-3.htm",
+    "Floor speech, Congressional Record: ECONOMIC POPULISM"
+   ]
+  ]
+ },
+ "fine": {
+  "cut-spending-debt": [
+   [
+    0,
+    "At a time and a place in which we have a $40 trillion debt, I have an obligation to be looking to save money wherever we can.",
+    "2026-07-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+    "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027"
+   ]
+  ],
+  "paris-agreement": [
+   [
+    0,
+    "the Paris climate agreement, which President Trump withdrew the United States from because it did not reflect American interests and priorities",
+    "2026-07-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+    "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027"
+   ]
+  ],
+  "tariffs": [
+   [
+    0,
+    "These tariffs, rather than hurting America, have brought $15 billion",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+    "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025"
+   ]
+  ],
+  "voter-id": [
+   [
+    0,
+    "it is racist to imply that minority communities somehow don't have the ability to go and get a photo ID",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+    "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025"
+   ]
+  ],
+  "end-filibuster": [
+   [
+    0,
+    "work with me to encourage the Senate to get rid of the filibuster",
+    "2026-02-03",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1951-6.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENTS TO H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.J. RES. 142, DISAPPROVING THE"
+   ]
+  ],
+  "support-israel": [
+   [
+    0,
+    "When we support research and development for the Iron Dome, we are creating the capability for the United States to defend itself as well.",
+    "2025-07-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+    "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "undocumented-healthcare": [
+   [
+    1,
+    "when we say there should be no cuts to Medicaid, we are saying there should be no cuts to illegal immigrants who are getting Medicaid",
+    "2025-07-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ]
+ },
+ "buchanan": {
+  "permanent-dst": [
+   [
+    0,
+    "I rise today in strong support of my bill, the Sunshine Protection Act, which would make daylight saving time permanent and finally end the biannual clock switch",
+    "2026-07-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+    "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025"
+   ]
+  ]
+ },
+ "cammack": {
+  "permanent-dst": [
+   [
+    0,
+    "today, I rise in strong support for H.R. 139, the Sunshine Protection Act",
+    "2026-07-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4445.htm",
+    "Floor speech, Congressional Record: SUNSHINE PROTECTION ACT OF 2025"
+   ]
+  ]
+ },
+ "ascott": {
+  "affordable-care-act": [
+   [
+    1,
+    "you did a lot of damage, and you did that in your so-called Affordable Care Act",
+    "2026-06-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4335-4.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8595, NATIONAL SECURITY, DEPA"
+   ]
+  ],
+  "noncitizen-voting": [
+   [
+    1,
+    "the SAVE America Act will be attached to the legislation when it goes across because, yes, we do think you all are letting noncitizens vote in elections",
+    "2026-06-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4335-4.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8595, NATIONAL SECURITY, DEPA"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    1,
+    "President Trump and congressional Republicans delivered for the American people by making these tax cuts permanent",
+    "2026-06-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-30/html/CREC-2026-06-30-pt1-PgH4335-4.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 8800, NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2027; PROVIDING FOR CONSIDERATION OF H.R. 8595, NATIONAL SECURITY, DEPA"
+   ]
+  ],
+  "support-israel": [
+   [
+    0,
+    "This legislation will deter China, defend Israel",
+    "2025-12-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5124-6.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 3898, PROMOTING EFFICIENT REVIEW FOR MODERN INFRASTRUCTURE TODAY ACT; PROVIDING FOR CONSIDERATION OF H.R. 3383, INCREASING INVES"
+   ]
+  ],
+  "deport-serious-crime": [
+   [
+    0,
+    "The Laken Riley Act will ensure that criminals who illegally cross our borders and endanger our communities are detained and deported",
+    "2025-01-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH268.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 471, FIX OUR FORESTS ACT, AND PROVIDING FOR CONSIDERATION OF S. 5, LAKEN RILEY ACT"
+   ]
+  ]
+ },
+ "mjohnson": {
+  "abortion": [
+   [
+    0,
+    "celebrating the fourth anniversary of the lifesaving Dobbs decision",
+    "2026-06-24",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4229-6.htm",
+    "Floor speech, Congressional Record: FOURTH ANNIVERSARY OF DOBBS DECISION"
+   ]
+  ]
+ },
+ "warren": {
+  "investor-home-buying": [
+   [
+    0,
+    "This landmark bill will boost housing supply, bring down costs, and, for the first time ever, stop private equity from buying up single-family homes.",
+    "2026-06-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-16/html/CREC-2026-06-16-pt1-PgS2813-2.htm",
+    "Floor speech, Congressional Record: 21ST CENTURY ROAD TO HOUSING ACT"
+   ]
+  ],
+  "war-powers": [
+   [
+    0,
+    "Every single Senator must support Senator Kaine's War Powers Resolution to block this reckless war.",
+    "2026-03-03",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgS741-7.htm",
+    "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT--Motion to Proceed"
+   ]
+  ],
+  "crypto-regulation": [
+   [
+    0,
+    "the bill must safeguard national security, providing the same guardrails as other payment systems",
+    "2025-05-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-05/html/CREC-2025-05-05-pt1-PgS2751.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"NA"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "Taking that away from our kids so that a handful of billionaires can scoop up some tax giveaways and be even richer is just plain ugly, and I will fight it with everything I have got.",
+    "2025-04-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "union-rights": [
+   [
+    0,
+    "We believe that every worker deserves the freedom to join a union and to negotiate for a fair contract.",
+    "2025-04-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "affordable-housing": [
+   [
+    0,
+    "we should use the power of the Federal Government to encourage communities to build more housing",
+    "2026-06-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-22/html/CREC-2026-06-22-pt1-PgS2982.htm",
+    "Floor speech, Congressional Record: 21ST CENTURY ROAD TO HOUSING ACT"
+   ]
+  ],
+  "universal-preschool": [
+   [
+    0,
+    "We should be thinking of universal childcare as basic public infrastructure.",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgS1162.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "Senator Kaine's War Powers Resolution to block this reckless war",
+    "2026-03-03",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-03/html/CREC-2026-03-03-pt1-PgS741-7.htm",
+    "Floor speech, Congressional Record: HOUSING FOR THE 21ST CENTURY ACT--Motion to Proceed"
+   ]
+  ],
+  "data-privacy": [
+   [
+    0,
+    "The CFPB rule helps to protect those millions of Americans who use payment apps, making sure that both their personal data and their money are safe.",
+    "2025-03-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgS1477-2.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PRO"
+   ]
+  ]
+ },
+ "ruiz": {
+  "arctic-drilling": [
+   [
+    1,
+    "The Arctic National Wildlife Refuge is not for sale.",
+    "2026-06-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-11/html/CREC-2026-06-11-pt1-PgH4088-4.htm",
+    "Floor speech, Congressional Record: ARCTIC NATIONAL WILDLIFE REFUGE IS NOT FOR SALE"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "Time and again, the Republican leadership looks to shortchange the very people who gave everything for this country, while giving billions of tax breaks to billionaires",
+    "2026-11-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-11-11/html/CREC-2026-11-11-pt1-PgH6162.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT"
+   ]
+  ],
+  "ev-support": [
+   [
+    0,
+    "What they are celebrating is the termination of the clean vehicle tax credit, the $7,500 credit that made electric vehicles accessible to working families.",
+    "2026-04-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3052-4.htm",
+    "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS STEWARDS OF THE ENVIRONMENT, MAJOR SUPPLIERS OF UNITED STATES ENERGY RESOURCES, CRITICAL PROVID"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "Now, to add insult to injury, they refuse to extend the Affordable Care Act.",
+    "2025-12-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+    "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT"
+   ]
+  ],
+  "pre-existing-conditions": [
+   [
+    1,
+    "It allows them to discriminate against people with preexisting conditions",
+    "2025-12-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5956-3.htm",
+    "Floor speech, Congressional Record: LOWER HEALTH CARE PREMIUMS FOR ALL AMERICANS ACT"
+   ]
+  ]
+ },
+ "craig": {
+  "tariffs": [
+   [
+    1,
+    "We should have addressed the tariffs that are bankrupting America's family farmers.",
+    "2026-04-29",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3137.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 7567, FARM, FOOD, AND NATIONAL SECURITY ACT OF 2026; PROVIDING FOR CONSIDERATION OF H.R. 2616, PARENTAL RIGHTS OVER THE EDUCATIO"
+   ]
+  ],
+  "crypto-regulation": [
+   [
+    0,
+    "The CLARITY Act would put consumer protections in place for the first time for this industry.",
+    "2025-07-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+    "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "We have to protect Medicaid at all costs.",
+    "2025-06-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-04/html/CREC-2025-06-04-pt1-PgH2441-2.htm",
+    "Floor speech, Congressional Record: SUPPORT FOR PATIENTS AND COMMUNITIES REAUTHORIZATION ACT OF 2025"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "this resolution that prioritizes tax cuts for billionaires over the well-being of hardworking American families",
+    "2025-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025"
+   ]
+  ]
+ },
+ "asmith": {
+  "tax-the-rich": [
+   [
+    1,
+    "We also strengthened America's agriculture industry by permanently doubling death tax relief",
+    "2026-04-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2913.htm",
+    "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR TAX POLICIES THAT SUPPORT WORKING FAMILIES"
+   ]
+  ],
+  "usmca": [
+   [
+    0,
+    "as we strengthen and extend USMCA during this 2026 Joint Review",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+    "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "I rise in strong support of this package, which fulfills commitments to secure our border",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ],
+  "school-vouchers": [
+   [
+    0,
+    "my bill, the Educational Choice For Children Act, which creates a tax credit for scholarships to meet the needs of K-12 students and puts more parents back in control of their child's education",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt2-PgH2235-2.htm",
+    "Floor speech, Congressional Record: ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ]
+ },
+ "duckworth": {
+  "war-powers": [
+   [
+    0,
+    "I am calling up my War Powers Resolution, demanding that the Trump administration finally end this illegal war, and calling for some actual public oversight and accountability on behalf of the American people",
+    "2026-04-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgS1749-2.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "These incoming tariffs are going to be a disaster for our farmers.",
+    "2025-03-31",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt2-PgS2034-2.htm",
+    "Floor speech, Congressional Record: Trump Administration (Executive Calendar)"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "demanding that the Trump administration finally end this illegal war",
+    "2026-04-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgS1749-2.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "presidential-immunity": [
+   [
+    1,
+    "No matter if you are a Mar-a-Lago worker who is pulling down double shifts or if you are the President of the United States, no one is above the law.",
+    "2026-04-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgS1749-2.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "Republicans care more about tax breaks for the billionaires they pal around with on the golf course than prescriptions for the middle-class folks",
+    "2025-02-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-12/html/CREC-2025-02-12-pt1-PgS881.htm",
+    "Floor speech, Congressional Record: Border Security (Executive Calendar)"
+   ]
+  ]
+ },
+ "courtney": {
+  "war-powers": [
+   [
+    0,
+    "Congress will have an opportunity to assert its constitutional role when we vote for the second time on a War Powers Act resolution to force President Trump to seek legal authority for his unilateral military campaign in Iran",
+    "2026-04-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-14/html/CREC-2026-04-14-pt1-PgH2837-5.htm",
+    "Floor speech, Congressional Record: ASSERTING CONGRESS' CONSTITUTIONAL ROLE"
+   ]
+  ],
+  "ukraine-aid": [
+   [
+    0,
+    "which would have our Nation turn its back on the brave people of Ukraine in their greatest hour of need by cutting off all military assistance",
+    "2025-09-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+    "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "for the sake of the American economy, where issues like tariffs, which require a lot of analysis, are very complex, and require Congress to be part of that decisionmaking--in fact, we are the decisionmakers, according to the Constitution--those tariffs should be struck down",
+    "2025-11-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-11-17/html/CREC-2025-11-17-pt1-PgH4672.htm",
+    "Floor speech, Congressional Record: CONGRESS MUST TAKE ACTION ON TARIFFS"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "the massive giveaway to billionaires and the top 1 percent of this country",
+    "2025-09-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-02/html/CREC-2025-09-02-pt1-PgH3720.htm",
+    "Floor speech, Congressional Record: CONGRESS' LONG TO-DO LIST"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "We need to reject these Medicaid cuts and reject this plan.",
+    "2025-05-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgH1951-4.htm",
+    "Floor speech, Congressional Record: BUDGET RECONCILIATION BILL"
+   ]
+  ]
+ },
+ "sanders": {
+  "data-center-ban": [
+   [
+    0,
+    "I will be introducing legislation tomorrow to ban the development of new AI data centers",
+    "2026-03-24",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgS1584-6.htm",
+    "Floor speech, Congressional Record: ARTIFICIAL INTELLIGENCE"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "we are going to demand that they start paying their fair share",
+    "2026-03-19",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgS1314.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed"
+   ]
+  ],
+  "affordable-housing": [
+   [
+    0,
+    "Instead of giving tax breaks to billionaires, we should be building low-income and affordable housing.",
+    "2026-03-19",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgS1314.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed"
+   ]
+  ],
+  "single-payer": [
+   [
+    0,
+    "that is why we should pass a Medicare for All single-payer system",
+    "2026-01-28",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-28/html/CREC-2026-01-28-pt1-PgS307-2.htm",
+    "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026--Motion to Proceed--Continued"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "going to war against Iran and supporting Israel's unprovoked attacks against that country is not something that we should be doing",
+    "2025-06-27",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgS3583-2.htm",
+    "Floor speech, Congressional Record: MOTION TO DISCHARGE--S.J. RES. 59"
+   ]
+  ],
+  "drug-prices": [
+   [
+    0,
+    "I introduced legislation to make sure that Americans pay no more than people in other countries for the exact same prescription drug",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgS3025-3.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL UNDER CHAPTER 8 OF TITLE 5, UNITED STATES CODE, OF THE RULE SUBMITTED BY THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION "
+   ]
+  ],
+  "abortion": [
+   [
+    1,
+    "For the vast majority of Americans, including myself, who believe that women should have the right to control their own bodies",
+    "2025-05-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgS2884.htm",
+    "Floor speech, Congressional Record: Budget Reconciliation (Executive Calendar)"
+   ]
+  ],
+  "minimum-wage": [
+   [
+    0,
+    "we are going to be offering an amendment to raise the minimum wage to a living wage of $17 an hour",
+    "2025-04-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-04/html/CREC-2025-04-04-pt1-PgS2275-7.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "military-spending": [
+   [
+    1,
+    "Instead of spending almost $1 trillion a year on a wasteful and bloated Pentagon budget, we have to build millions of units of low- income and affordable housing.",
+    "2025-02-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgS575.htm",
+    "Floor speech, Congressional Record: Trump Executive Orders (Executive Calendar)"
+   ]
+  ],
+  "ai-regulation": [
+   [
+    0,
+    "Powerful AI systems should be developed only once we are confident that their effects will be positive and their risks will be manageable.",
+    "2026-03-24",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-24/html/CREC-2026-03-24-pt1-PgS1584-6.htm",
+    "Floor speech, Congressional Record: ARTIFICIAL INTELLIGENCE"
+   ]
+  ],
+  "support-israel": [
+   [
+    1,
+    "whether we will continue to contribute billions of dollars to an extremist government in Israel which has caused an unprecedented humanitarian disaster in Gaza",
+    "2025-07-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-30/html/CREC-2025-07-30-pt1-PgS4890.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE PROPOSED EXPORT OF CERTAIN DEFENSE ARTICLES TO ISRAEL--Motion to Discharge"
+   ]
+  ],
+  "planned-parenthood": [
+   [
+    0,
+    "this bill essentially defunds Planned Parenthood, which provides vital healthcare to millions of women",
+    "2025-05-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-13/html/CREC-2025-05-13-pt1-PgS2884.htm",
+    "Floor speech, Congressional Record: Budget Reconciliation (Executive Calendar)"
+   ]
+  ]
+ },
+ "capito": {
+  "voter-id": [
+   [
+    0,
+    "The SAVE America Act closes this illegal voting loophole by requiring photo ID to vote",
+    "2026-03-19",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgS1314.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed"
+   ]
+  ],
+  "ev-mandate": [
+   [
+    1,
+    "why they should join me in disapproving of this job-killing electric vehicle mandate",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgS3086-3.htm",
+    "Floor speech, Congressional Record: H.J. RES. 88"
+   ]
+  ],
+  "end-filibuster": [
+   [
+    1,
+    "I support the legislative filibuster.",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgS3086-3.htm",
+    "Floor speech, Congressional Record: H.J. RES. 88"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "the Senate is proud to take another step forward toward securing our southern border",
+    "2025-01-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgS161.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "cut-spending-debt": [
+   [
+    0,
+    "We will end the reckless spending spree, we will put an end to bureaucratic waste",
+    "2025-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-08/html/CREC-2025-01-08-pt1-PgS46-3.htm",
+    "Floor speech, Congressional Record: LAKEN RILEY ACT--Motion To Proceed"
+   ]
+  ],
+  "minors-transition-care": [
+   [
+    1,
+    "it does not allow transgender mutilation surgery for children",
+    "2026-03-19",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-19/html/CREC-2026-03-19-pt1-PgS1314.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Resumed"
+   ]
+  ],
+  "climate-regulations": [
+   [
+    1,
+    "Clean Power Plan 2.0, ELG rules for powerplants, coal ash regulations, unachievable particulate matter rules, ozone rules, and the MATS rule--all to make it impossible to keep a coal plant open",
+    "2026-01-29",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-29/html/CREC-2026-01-29-pt1-PgS357-8.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "fracking": [
+   [
+    0,
+    "Fracking and shale gas have revolutionized American energy, leading to lower prices, job growth, and increased energy security.",
+    "2025-11-19",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-11-19/html/CREC-2025-11-19-pt1-PgS8211-9.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ]
+ },
+ "cotton": {
+  "war-with-iran": [
+   [
+    0,
+    "We will not stop until Iran's hopes for that nuclear weapon are obliterated alongside its nuclear facilities.",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgS1162.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued"
+   ]
+  ],
+  "noncitizen-voting": [
+   [
+    1,
+    "Voting in our elections is a privilege and a right of American citizens, not of millions of illegal aliens who have flooded into our country under Joe Biden.",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgS1162.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued"
+   ]
+  ],
+  "permanent-dst": [
+   [
+    1,
+    "I oppose the Sunshine Protection Act and will always oppose any effort to adopt daylight saving time year-round.",
+    "2025-10-28",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-10-28/html/CREC-2025-10-28-pt1-PgS7766-3.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "support-israel": [
+   [
+    0,
+    "We said ``Target Israel, and we will target you.'' Despite this clear warning, he proceeded anyway, a gross insult to our friends in Israel",
+    "2025-01-28",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-28/html/CREC-2025-01-28-pt1-PgS408-5.htm",
+    "Floor speech, Congressional Record: Illegitimate Court Counteraction Act (Executive Calendar)"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "Today, we are putting an end to the minority leader's unprecedented obstruction, securing our border, and enforcing our immigration laws.",
+    "2026-06-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-04/html/CREC-2026-06-04-pt1-PgS2545-8.htm",
+    "Floor speech, Congressional Record: RECOGNITION OF THE MAJORITY LEADER"
+   ]
+  ],
+  "war-powers": [
+   [
+    1,
+    "I strongly urge my colleagues to reject the War Powers Resolution and instead support Trump's resolute actions against the Ayatollah's regime",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgS1162.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued"
+   ]
+  ],
+  "undocumented-healthcare": [
+   [
+    1,
+    "what President Trump has rightly called ``unserious and ridiculous demands.'' These demands include restoring taxpayer-funded healthcare for illegal aliens",
+    "2025-09-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-30/html/CREC-2025-09-30-pt1-PgS6847-7.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ]
+ },
+ "jordan": {
+  "abolish-ice": [
+   [
+    1,
+    "These are the most ridiculous positions: open border, abolish ICE, sanctuary jurisdiction, and don't deport fraudsters who are here.",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgH2568.htm",
+    "Floor speech, Congressional Record: DEPORTING FRAUDSTERS ACT OF 2026"
+   ]
+  ],
+  "cut-spending-debt": [
+   [
+    0,
+    "I want to reduce spending because I know we are running deficits in the trillions, and we have piled up $36 trillion in debt.",
+    "2025-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH791-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2025"
+   ]
+  ],
+  "misinformation-rules": [
+   [
+    1,
+    "They actually tried to set up the Disinformation Governance Board as if a bunch of Federal bureaucrats can tell us what we can say, what we can't say, what is information, and what is disinformation.",
+    "2025-02-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH682-7.htm",
+    "Floor speech, Congressional Record: AGENT RAUL GONZALEZ OFFICER SAFETY ACT"
+   ]
+  ]
+ },
+ "warnock": {
+  "noncitizen-voting": [
+   [
+    1,
+    "Noncitizens should never vote in our elections.",
+    "2026-03-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-18/html/CREC-2026-03-18-pt1-PgS1162.htm",
+    "Floor speech, Congressional Record: SAFEGUARD AMERICAN VOTER ELIGIBILITY ACT--Continued"
+   ]
+  ],
+  "drug-prices": [
+   [
+    0,
+    "I am not going to stand by and allow folks to undo what we did to cap the costs of insulin.",
+    "2025-02-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgS635-2.htm",
+    "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "But we should not have to choose between putting a check on Putin's aggression and putting a check on this President's tariff regime.",
+    "2026-08-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-08-07/html/CREC-2026-08-07-pt1-PgS4533.htm",
+    "Floor speech, Congressional Record: Tariffs (Executive Session)"
+   ]
+  ],
+  "gun-purchase-limits": [
+   [
+    0,
+    "Americans on both sides of the aisle believe we ought to have background checks, but after one school shooting after another, after another, we can't get any movement on that in this Chamber",
+    "2025-02-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgS635-2.htm",
+    "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)"
+   ]
+  ]
+ },
+ "costa": {
+  "tariffs": [
+   [
+    1,
+    "Farmers are navigating misguided tariffs policy",
+    "2026-03-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-05/html/CREC-2026-03-05-pt1-PgH2427-2.htm",
+    "Floor speech, Congressional Record: FOOD IS NATIONAL SECURITY"
+   ]
+  ],
+  "mental-health-funding": [
+   [
+    0,
+    "the passage of the COMPACT Act to strengthen mental health services and suicide prevention which is so critical",
+    "2026-11-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-11-12/html/CREC-2026-11-12-pt1-PgH6194-4.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 2102, MAJOR RICHARD STAR ACT"
+   ]
+  ],
+  "foreign-aid": [
+   [
+    0,
+    "cuts that have taken place in USAID that were devastating",
+    "2026-07-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-14/html/CREC-2026-07-14-pt1-PgH4418.htm",
+    "Floor speech, Congressional Record: HUNGER IS NOT A POSITIVE TREND"
+   ]
+  ],
+  "ukraine-aid": [
+   [
+    0,
+    "a peace deal must be backed up by strong military deterrence and strong commitments from Europe and the United States to back Ukraine with NATO-like defense guarantees",
+    "2025-12-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6099-7.htm",
+    "Floor speech, Congressional Record: LIBERTY VERSUS TYRANNY"
+   ]
+  ]
+ },
+ "ecarter": {
+  "noncitizen-voting": [
+   [
+    1,
+    "makes one principle perfectly clear: U.S. elections are for U.S. citizens only",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+    "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025"
+   ]
+  ],
+  "minors-transition-care": [
+   [
+    1,
+    "Dangerous and irreversible sex-change interventions for children should have no place in our medical system.",
+    "2025-12-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5937-4.htm",
+    "Floor speech, Congressional Record: PROTECTING CHILDREN FROM UNSCIENTIFIC MEDICAL PROCEDURES"
+   ]
+  ],
+  "deport-serious-crime": [
+   [
+    0,
+    "illegal aliens should not be able to stay in America with a minor penalty for driving under the influence in the first place",
+    "2025-06-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-26/html/CREC-2025-06-26-pt1-PgH2984-6.htm",
+    "Floor speech, Congressional Record: JEREMY AND ANGEL SEAY AND SERGEANT BRANDON MENDOZA PROTECT OUR COMMUNITIES FROM DUIS ACT OF 2025"
+   ]
+  ],
+  "fracking": [
+   [
+    0,
+    "This bill simply acknowledges that States, not the Federal Government, know what energy sources are best for them and allows fracking to be a tool in a State's tool chest.",
+    "2025-02-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-07/html/CREC-2025-02-07-pt1-PgH561-4.htm",
+    "Floor speech, Congressional Record: PROTECTING AMERICAN ENERGY PRODUCTION ACT"
+   ]
+  ],
+  "school-bathrooms": [
+   [
+    1,
+    "the vast majority of Americans agree that men do not belong in women's sports or in women's locker rooms",
+    "2025-01-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-14/html/CREC-2025-01-14-pt1-PgH126.htm",
+    "Floor speech, Congressional Record: PROTECTION OF WOMEN AND GIRLS IN SPORTS ACT OF 2025"
+   ]
+  ]
+ },
+ "burchett": {
+  "noncitizen-voting": [
+   [
+    1,
+    "United States citizens should be the people choosing our elected leaders, not illegal immigrants.",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+    "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025"
+   ]
+  ],
+  "congress-stock-trading": [
+   [
+    1,
+    "That is why I introduced the End Congressional Stock Trading Act to level the playing field and restore public trust in Congress.",
+    "2025-05-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2038.htm",
+    "Floor speech, Congressional Record: STOCK TRADING BAN FOR MEMBERS OF CONGRESS"
+   ]
+  ]
+ },
+ "salinas": {
+  "tariffs": [
+   [
+    1,
+    "I rise today to oppose President Trump's disastrous tariffs",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+    "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025"
+   ]
+  ],
+  "birthright-citizenship": [
+   [
+    0,
+    "I rise in strong opposition to President Trump's unlawful attempt to end birthright citizenship.",
+    "2025-01-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH349-3.htm",
+    "Floor speech, Congressional Record: MAKING OUR COMMUNITIES SAFER AND MORE AFFORDABLE"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "one of his failures, the war in Iran, is hurting Americans",
+    "2026-09-03",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-03/html/CREC-2026-09-03-pt1-PgH5491.htm",
+    "Floor speech, Congressional Record: AFFORDABILITY"
+   ]
+  ],
+  "ai-regulation": [
+   [
+    0,
+    "we need to double down on efforts to ensure the technology is used safely and responsibly",
+    "2026-07-20",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-20/html/CREC-2026-07-20-pt1-PgH4666.htm",
+    "Floor speech, Congressional Record: NUCLEIC ACID STANDARDS FOR BIOSECURITY ACT"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "Republicans chose tax breaks for billionaires over food for families",
+    "2026-07-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-16/html/CREC-2026-07-16-pt1-PgH4616.htm",
+    "Floor speech, Congressional Record: RESTORE DEVASTATING CUTS TO SNAP"
+   ]
+  ],
+  "mental-health-funding": [
+   [
+    0,
+    "I am committed to expanding access to specialty mental health care by training qualified professionals",
+    "2025-06-27",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3024.htm",
+    "Floor speech, Congressional Record: SUPPORTING THE LGBTQ+ COMMUNITY"
+   ]
+  ]
+ },
+ "castro": {
+  "tariffs": [
+   [
+    1,
+    "the President imposed tariffs on Canada, which is nothing more than a tax on American families",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+    "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "Then, he dragged the Nation into war with Iran.",
+    "2026-04-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-16/html/CREC-2026-04-16-pt1-PgH2929-2.htm",
+    "Floor speech, Congressional Record: DIRECTING THE PRESIDENT, PURSUANT TO SECTION 5(c) OF THE WAR POWERS RESOLUTION, TO REMOVE UNITED STATES ARMED FORCES FROM HOSTILITIES WITH IRAN"
+   ]
+  ]
+ },
+ "jwilson": {
+  "voter-id": [
+   [
+    0,
+    "The bill would protect valuable rights through common sense, such as mandating a valid photo ID for all Federal elections",
+    "2026-02-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2107-4.htm",
+    "Floor speech, Congressional Record: SECURING AMERICAN ELECTIONS"
+   ]
+  ],
+  "abolish-education-dept": [
+   [
+    0,
+    "I support President Donald Trump's plan to eliminate the Department of Education",
+    "2025-03-27",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-27/html/CREC-2025-03-27-pt1-PgH1320-2.htm",
+    "Floor speech, Congressional Record: PROTECTING EDUCATION FOR AMERICAN FAMILIES"
+   ]
+  ],
+  "noncitizen-voting": [
+   [
+    1,
+    "The bill would protect valuable rights through common sense, such as ... forcing States to identify and remove noncitizens from existing voter rolls",
+    "2026-02-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-10/html/CREC-2026-02-10-pt1-PgH2107-4.htm",
+    "Floor speech, Congressional Record: SECURING AMERICAN ELECTIONS"
+   ]
+  ],
+  "jerusalem-capital": [
+   [
+    0,
+    "I led the delegation to move the Embassy from Tel Aviv to Jerusalem.",
+    "2025-07-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-02/html/CREC-2025-07-02-pt1-PgH3039-8.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENT TO H.R. 1, ONE BIG BEAUTIFUL BILL ACT"
+   ]
+  ],
+  "paris-agreement": [
+   [
+    0,
+    "the nutty United Nations Paris Agreement",
+    "2025-04-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgE370-3.htm",
+    "Floor speech, Congressional Record: INDIA-U.S. DEAL SIGNALS ENERGY SOVEREIGNTY"
+   ]
+  ]
+ },
+ "franklin": {
+  "ai-defense": [
+   [
+    0,
+    "Maintaining our edge requires sustained investment in advanced capabilities, including artificial intelligence.",
+    "2026-01-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+    "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "gun-purchase-limits": [
+   [
+    1,
+    "protects the Second Amendment rights of veterans by preventing the VA from sending veterans' information to the FBI without due process and a judicial determination",
+    "2026-05-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+    "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027"
+   ]
+  ],
+  "climate-regulations": [
+   [
+    1,
+    "It reins in the Biden administration's climate agenda that dismantled our energy independence and hurt American consumers.",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH151.htm",
+    "Floor speech, Congressional Record: COMMERCE, JUSTICE, SCIENCE; ENERGY AND WATER DEVELOPMENT; AND INTERIOR AND ENVIRONMENT APPROPRIATIONS ACT, 2026"
+   ]
+  ]
+ },
+ "chu": {
+  "abortion": [
+   [
+    1,
+    "too many others have suffered or died waiting for care that should never have been denied",
+    "2026-01-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-21/html/CREC-2026-01-21-pt1-PgH1131-5.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 6945, SUPPORTING PREGNANT AND PARENTING WOMEN AND FAMILIES ACT; PROVIDING FOR CONSIDERATION OF H.R."
+   ]
+  ],
+  "minors-transition-care": [
+   [
+    0,
+    "H.R. 498 would strip Medicaid coverage for gender-affirming care for trans youth, care that is medically necessary, evidence-based, and supported by every major medical association in this country",
+    "2025-12-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-18/html/CREC-2025-12-18-pt1-PgH6049.htm",
+    "Floor speech, Congressional Record: PET AND LIVESTOCK PROTECTION ACT"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "They chose to let the ACA tax credits expire, even though there was bipartisan support to extend them.",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+    "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "I rise in strong opposition to the GOP tax scam, which would gut the programs that families rely on, like Medicaid and SNAP",
+    "2025-05-20",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2181.htm",
+    "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "which would gut the programs that families rely on, like Medicaid and SNAP, just to give trillions in tax breaks to the wealthy",
+    "2025-05-20",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-20/html/CREC-2025-05-20-pt1-PgH2181.htm",
+    "Floor speech, Congressional Record: GOP TAX SCAM HURTS WOMEN AND FAMILIES"
+   ]
+  ],
+  "paid-leave": [
+   [
+    0,
+    "I invite them to support Democrats' efforts to provide paid family leave to every new parent",
+    "2025-01-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+    "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT"
+   ]
+  ],
+  "chips-industry": [
+   [
+    0,
+    "the historic investments that we have made under the Biden-Harris administration, like the bipartisan CHIPS and Science Act",
+    "2025-01-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH160-6.htm",
+    "Floor speech, Congressional Record: UNITED STATES-TAIWAN EXPEDITED DOUBLE-TAX RELIEF ACT"
+   ]
+  ]
+ },
+ "frankel": {
+  "affordable-care-act": [
+   [
+    0,
+    "I urge my colleagues to support the 3-year extension of the ACA tax credits and stop millions of hardworking families from losing their coverage.",
+    "2026-01-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH127-2.htm",
+    "Floor speech, Congressional Record: SAVING HOMEOWNERS FROM OVERREGULATION WITH EXCEPTIONAL RINSING ACT"
+   ]
+  ],
+  "abortion": [
+   [
+    1,
+    "Republicans are doubling down on their dangerous agenda of banning abortion nationwide",
+    "2025-01-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH335.htm",
+    "Floor speech, Congressional Record: BORN-ALIVE ABORTION SURVIVORS PROTECTION ACT"
+   ]
+  ],
+  "support-israel": [
+   [
+    0,
+    "We must remain resolute, bringing every hostage home, delivering humanitarian relief where needed, ensuring Israel's security",
+    "2025-01-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgH174-4.htm",
+    "Floor speech, Congressional Record: LAYING A FOUNDATION FOR PEACE IN THE MIDDLE EAST"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "show the world that American leadership is more than bombs, bullying, and illegal tariffs",
+    "2026-07-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4480.htm",
+    "Floor speech, Congressional Record: NATIONAL SECURITY, DEPARTMENT OF STATE, AND RELATED PROGRAMS APPROPRIATIONS ACT, 2027"
+   ]
+  ],
+  "body-cameras": [
+   [
+    0,
+    "requiring judicial warrants, mandating body cameras, ending total immunity",
+    "2026-02-03",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-03/html/CREC-2026-02-03-pt1-PgH1951-6.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF SENATE AMENDMENTS TO H.R. 7148, CONSOLIDATED APPROPRIATIONS ACT, 2026; PROVIDING FOR CONSIDERATION OF H.J. RES. 142, DISAPPROVING THE"
+   ]
+  ],
+  "mental-health-funding": [
+   [
+    0,
+    "It invests in mental health and substance abuse, boosting the 988 Suicide and Crisis Lifeline, and expanding opioid response programs, because every life saved is worth the effort and investment.",
+    "2026-01-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-22/html/CREC-2026-01-22-pt1-PgH1185-2.htm",
+    "Floor speech, Congressional Record: CONSOLIDATED APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "the massive hole they are blowing in the deficit with tax giveaways for billionaires",
+    "2025-06-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+    "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025"
+   ]
+  ]
+ },
+ "mharris": {
+  "affordable-care-act": [
+   [
+    1,
+    "ObamaCare is a broken system that has allowed insurance companies to rip off the American taxpayers and simply drive up costs.",
+    "2025-12-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-10/html/CREC-2025-12-10-pt1-PgH5121-2.htm",
+    "Floor speech, Congressional Record: GIVING FULL RECOGNITION TO THE LUMBEE TRIBE"
+   ]
+  ],
+  "abortion": [
+   [
+    0,
+    "the Supreme Court made the courageous and correct decision to strike down Roe v. Wade",
+    "2025-06-24",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-24/html/CREC-2025-06-24-pt1-PgH2914-2.htm",
+    "Floor speech, Congressional Record: ANNIVERSARY OF THE DOBBS RULING"
+   ]
+  ],
+  "foreign-aid": [
+   [
+    1,
+    "I rise today to urge my colleagues to defund NPR, PBS, and USAID.",
+    "2025-06-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+    "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "we must stop them from coming into our country in the first place",
+    "2025-01-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+    "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT"
+   ]
+  ],
+  "deport-serious-crime": [
+   [
+    0,
+    "we have been called to clean up Biden's border crisis, and that means not only deporting illegal alien sex offenders and abusers",
+    "2025-01-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-16/html/CREC-2025-01-16-pt1-PgH191-3.htm",
+    "Floor speech, Congressional Record: PREVENTING VIOLENCE AGAINST WOMEN BY ILLEGAL ALIENS ACT"
+   ]
+  ],
+  "court-reform": [
+   [
+    1,
+    "I rise today in support of H.J. Res. 1, which proposes an amendment to the Constitution that would require the Supreme Court of the United States to be composed of nine Justices.",
+    "2026-09-02",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-02/html/CREC-2026-09-02-pt1-PgH5443-2.htm",
+    "Floor speech, Congressional Record: PROPOSING AN AMENDMENT TO THE CONSTITUTION OF THE UNITED STATES TO REQUIRE THAT THE SUPREME COURT OF THE UNITED STATES BE COMPOSED OF NINE JUSTICES"
+   ]
+  ],
+  "voter-id": [
+   [
+    0,
+    "When the SAVE America Act becomes the law of the land, three simple things will be true: Number one, everyone who shows up to vote in a Federal election will have to show their photo ID.",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2138.htm",
+    "Floor speech, Congressional Record: VETERANS ACCESSIBILITY ADVISORY COMMITTEE ACT OF 2025"
+   ]
+  ],
+  "sanctuary-funding": [
+   [
+    1,
+    "We cannot, we must not continue rewarding sanctuary politicians who put American lives in the crosshairs.",
+    "2026-01-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-13/html/CREC-2026-01-13-pt1-PgH711.htm",
+    "Floor speech, Congressional Record: MANDATE OF THE AMERICAN PEOPLE"
+   ]
+  ],
+  "cut-spending-debt": [
+   [
+    0,
+    "For decades, Republicans have campaigned on being fiscal conservatives, but all we have to show for it is a national debt skyrocketing toward $37 trillion.",
+    "2025-06-12",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-12/html/CREC-2025-06-12-pt1-PgH2796-3.htm",
+    "Floor speech, Congressional Record: RESCISSIONS ACT OF 2025"
+   ]
+  ]
+ },
+ "gallego": {
+  "epstein-files": [
+   [
+    0,
+    "That is why I am going to, again, call for the full release of the Epstein files.",
+    "2025-11-18",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-11-18/html/CREC-2025-11-18-pt1-PgS8189-8.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "to finally make corporations and the ultrawealthy pay their fair share",
+    "2025-06-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ],
+  "war-with-iran": [
+   [
+    1,
+    "he led us into a war with Iran with no justification or definition of what victory looks like",
+    "2026-04-28",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-28/html/CREC-2026-04-28-pt1-PgS2066-2.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION--Continued"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "I rise today to offer a motion to strike provisions that cut Medicaid funding for substance abuse disorder treatments.",
+    "2025-06-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-30/html/CREC-2025-06-30-pt1-PgS4037-6.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ]
+ },
+ "cantwell": {
+  "affordable-care-act": [
+   [
+    0,
+    "I have championed many things in the Affordable Care Act that drive down costs",
+    "2025-11-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-11-07/html/CREC-2025-11-07-pt1-PgS7977.htm",
+    "Floor speech, Congressional Record: CONTINUING APPROPRIATIONS AND EXTENSIONS ACT, 2026--Motion to Proceed"
+   ]
+  ],
+  "mail-ballots": [
+   [
+    0,
+    "continue the path forward for a vote-by-mail system",
+    "2026-03-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-17/html/CREC-2026-03-17-pt1-PgS1154.htm",
+    "Floor speech, Congressional Record: SAVE AMERICA ACT"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "Now is not the time to force our States to jump off of a cliff just because we won't live up to our Medicaid obligation.",
+    "2025-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-21/html/CREC-2025-05-21-pt1-PgS3017-6.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ]
+ },
+ "mills": {
+  "end-dei-hiring": [
+   [
+    0,
+    "we need to get back to meritocracy, not division through diversity, equity, and inclusion",
+    "2025-09-10",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-10/html/CREC-2025-09-10-pt1-PgH4176-6.htm",
+    "Floor speech, Congressional Record: STREAMLINING PROCUREMENT FOR EFFECTIVE EXECUTION AND DELIVERY AND NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2026"
+   ]
+  ],
+  "congress-stock-trading": [
+   [
+    1,
+    "banning stock trading for Members of Congress and their spouses should not be something that is in question",
+    "2025-05-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2038.htm",
+    "Floor speech, Congressional Record: STOCK TRADING BAN FOR MEMBERS OF CONGRESS"
+   ]
+  ]
+ },
+ "edwards": {
+  "medicaid-work": [
+   [
+    0,
+    "We restore its integrity because work requirements are not a punishment.",
+    "2025-06-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2936-2.htm",
+    "Floor speech, Congressional Record: MEDICAID SHOULD SERVE THE TRULY NEEDY"
+   ]
+  ],
+  "cut-spending-debt": [
+   [
+    0,
+    "We didn't create a $39 trillion debt overnight, and we are not going to solve it overnight, but every responsible spending decision moves us in the right direction.",
+    "2026-07-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4534.htm",
+    "Floor speech, Congressional Record: PRIORITIZING REINING IN OUR NATIONAL DEBT"
+   ]
+  ],
+  "border-security": [
+   [
+    0,
+    "supporting our national defense, strengthening border security",
+    "2026-07-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-07-15/html/CREC-2026-07-15-pt1-PgH4534.htm",
+    "Floor speech, Congressional Record: PRIORITIZING REINING IN OUR NATIONAL DEBT"
+   ]
+  ]
+ },
+ "wassermanschultz": {
+  "va-privatization": [
+   [
+    1,
+    "We should invest more in VA provider recruitment and retention incentives, increase benefits counselors and adjudicators, not ignore veterans' wishes and speed recklessly into privatization.",
+    "2025-06-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+    "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "stay-in-nato": [
+   [
+    0,
+    "we should be sending a clear sign that we stand with our NATO allies, allies who have stood by us for decades",
+    "2025-06-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+    "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "end-dei-hiring": [
+   [
+    1,
+    "we have always needed to lean in on ensuring there is diversity, equity, and inclusion",
+    "2026-05-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-05-14/html/CREC-2026-05-14-pt1-PgH3486.htm",
+    "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2027"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "Republicans chose billionaire tax breaks over extending the Affordable Care Act tax credits for our hardworking families",
+    "2026-01-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-07/html/CREC-2026-01-07-pt1-PgH122-2.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 1834, BREAKING THE GRIDLOCK ACT"
+   ]
+  ],
+  "abortion": [
+   [
+    1,
+    "Disturbingly, Republicans think you should only have access to abortion if you are dying.",
+    "2025-06-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-25/html/CREC-2025-06-25-pt1-PgH2937.htm",
+    "Floor speech, Congressional Record: MILITARY CONSTRUCTION, VETERANS AFFAIRS, AND RELATED AGENCIES APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "This deceitful budget would gut Medicaid, schools, and affordable housing, all so Republican billionaire donors can get more tax breaks.",
+    "2025-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-25/html/CREC-2025-02-25-pt1-PgH781-3.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.J. RES. 20, PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE DEPARTMENT OF ENERGY RELATING TO \"ENERGY CONSERVAT"
+   ]
+  ]
+ },
+ "bynum": {
+  "abortion": [
+   [
+    1,
+    "We must protect and expand reproductive freedom for women everywhere.",
+    "2025-06-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-23/html/CREC-2025-06-23-pt1-PgH2880-2.htm",
+    "Floor speech, Congressional Record: TIME TO END THE DAMAGE OF THE DOBBS DECISION"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "I call on Congress to pass my Protecting Families From Inflation Act and to vote to put an end to this ill-advised trade war.",
+    "2025-04-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-07/html/CREC-2025-04-07-pt1-PgH1443-4.htm",
+    "Floor speech, Congressional Record: PROTECTING THE MIDDLE CLASS"
+   ]
+  ],
+  "homeless-funding": [
+   [
+    0,
+    "The 21st Century ROAD to Housing Act includes three of my bills which will help build more houses, lower the cost of housing, and make sure homeless shelters have the support they need to offer emergency assistance.",
+    "2026-05-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-05-21/html/CREC-2026-05-21-pt1-PgH3714-2.htm",
+    "Floor speech, Congressional Record: ONE STEP CLOSER TO AFFORDABLE HOUSING"
+   ]
+  ],
+  "abolish-education-dept": [
+   [
+    1,
+    "President Trump is dismantling the Department of Education and threatening programs that protect civil rights and expand access to opportunity for our kids",
+    "2025-12-01",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4955-2.htm",
+    "Floor speech, Congressional Record: ENSURING ACCESS TO EDUCATION FOR OUR CHILDREN WITH DISABILITIES"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "giving tax breaks to the rich at the expense of our schools and our children, to that we say: No thanks.",
+    "2025-02-13",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-13/html/CREC-2025-02-13-pt1-PgH693-3.htm",
+    "Floor speech, Congressional Record: PROTECTING EDUCATION IN AMERICA"
+   ]
+  ]
+ },
+ "bmoore": {
+  "tax-the-rich": [
+   [
+    1,
+    "We need to ensure the provisions in the 2017 Tax Cuts and Jobs Act aren't just extended but, where possible, made permanent.",
+    "2025-05-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1901.htm",
+    "Floor speech, Congressional Record: BIG, BEAUTIFUL BILL"
+   ]
+  ],
+  "remain-in-mexico": [
+   [
+    0,
+    "The most humane way to do it is to re-implement things like the remain in Mexico policy.",
+    "2025-04-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1764-3.htm",
+    "Floor speech, Congressional Record: THE FIRST 100 DAYS"
+   ]
+  ],
+  "abortion": [
+   [
+    0,
+    "today marks the fourth anniversary of the Dobbs decision, reaffirming that the U.S. Constitution does not grant the right to an abortion and rightfully returning the regulatory authority to State legislators",
+    "2026-06-24",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-06-24/html/CREC-2026-06-24-pt1-PgH4229-6.htm",
+    "Floor speech, Congressional Record: FOURTH ANNIVERSARY OF DOBBS DECISION"
+   ]
+  ],
+  "cut-spending-debt": [
+   [
+    0,
+    "we need to take our finances seriously and put us on a path toward 3 percent debt to GDP",
+    "2026-04-29",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-29/html/CREC-2026-04-29-pt1-PgH3147-3.htm",
+    "Floor speech, Congressional Record: CONCURRENT RESOLUTION ON THE BUDGET FOR FISCAL YEAR 2026"
+   ]
+  ]
+ },
+ "feenstra": {
+  "tax-the-rich": [
+   [
+    1,
+    "push for full reauthorization of the Tax Cuts and Jobs Act so that our families, farmers, and small businesses can keep more of their hard-earned money",
+    "2025-03-31",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-31/html/CREC-2025-03-31-pt1-PgH1348.htm",
+    "Floor speech, Congressional Record: INTERNAL REVENUE SERVICE MATH AND TAXPAYER HELP ACT"
+   ]
+  ]
+ },
+ "carbajal": {
+  "work-amnesty": [
+   [
+    0,
+    "move forward the bipartisan Farm Workforce Modernization Act to provide farmworkers with legal status so they can continue to work on our farms in this country",
+    "2025-02-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH873.htm",
+    "Floor speech, Congressional Record: REPUBLICAN BUDGET BETRAYAL"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "We will fight ill-conceived tariffs",
+    "2025-02-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH497.htm",
+    "Floor speech, Congressional Record: CHAOS, CONFUSION, AND MANUFACTURED CRISES"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "We will fight ill-conceived tariffs and plots to raise taxes to pay for tax cuts for the richest people in our country.",
+    "2025-02-05",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-05/html/CREC-2025-02-05-pt1-PgH497.htm",
+    "Floor speech, Congressional Record: CHAOS, CONFUSION, AND MANUFACTURED CRISES"
+   ]
+  ],
+  "climate-regulations": [
+   [
+    0,
+    "we need to act to address the underlying intensity of these extreme weather events fueled by the climate crisis",
+    "2025-01-23",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-23/html/CREC-2025-01-23-pt1-PgH312-6.htm",
+    "Floor speech, Congressional Record: FIX OUR FORESTS ACT"
+   ]
+  ]
+ },
+ "min": {
+  "abortion": [
+   [
+    1,
+    "Every person deserves the autonomy to make their own healthcare decisions, and we must continue to do everything we can to restore reproductive freedom",
+    "2025-01-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-22/html/CREC-2025-01-22-pt1-PgH267-2.htm",
+    "Floor speech, Congressional Record: REPRODUCTIVE FREEDOM"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "another bill that would give yet another free pass to corporations and billionaires at the expense of working families",
+    "2026-04-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-15/html/CREC-2026-04-15-pt1-PgH2902.htm",
+    "Floor speech, Congressional Record: FOREIGN EMISSIONS AND NONATTAINMENT CLARIFICATION FOR ECONOMIC STABILITY ACT"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "I think there is broad consensus on both sides of the aisle that extending the ACA tax credits is good policy.",
+    "2025-12-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5912-4.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4776, STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT; PROVIDING FOR CONSIDERATION OF H.R. 1366, MINING REGULAT"
+   ]
+  ],
+  "tariffs": [
+   [
+    1,
+    "The tariffs and the OBBB in combination have caused costs to skyrocket",
+    "2025-12-16",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-16/html/CREC-2025-12-16-pt1-PgH5912-4.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONSIDERATION OF H.R. 4776, STANDARDIZING PERMITTING AND EXPEDITING ECONOMIC DEVELOPMENT ACT; PROVIDING FOR CONSIDERATION OF H.R. 1366, MINING REGULAT"
+   ]
+  ]
+ },
+ "armstrong": {
+  "ukraine-aid": [
+   [
+    0,
+    "I support the bipartisan Fast Tracking European Investment in Ukraine's Defense Act",
+    "2026-09-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5207-2.htm",
+    "Floor speech, Congressional Record: TAXPAYER ASSISTANCE AND SERVICE ACT"
+   ]
+  ]
+ },
+ "mkelly": {
+  "whistleblowers": [
+   [
+    0,
+    "this bill reinforces the program's foundation with targeted, practical updates by ... establishing a presumption of anonymity for whistleblowers to help protect individuals from retaliation",
+    "2026-04-27",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-27/html/CREC-2026-04-27-pt1-PgH3104.htm",
+    "Floor speech, Congressional Record: IRS WHISTLEBLOWER PROGRAM IMPROVEMENT ACT"
+   ]
+  ]
+ },
+ "fuller": {
+  "tariffs": [
+   [
+    0,
+    "President Trump using those tariffs that were just mentioned, making sure that he is bringing manufacturing back to communities",
+    "2026-04-22",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-04-22/html/CREC-2026-04-22-pt1-PgH3052-4.htm",
+    "Floor speech, Congressional Record: EXPRESSING SUPPORT FOR RURAL COMMUNITIES ACROSS THE UNITED STATES AS STEWARDS OF THE ENVIRONMENT, MAJOR SUPPLIERS OF UNITED STATES ENERGY RESOURCES, CRITICAL PROVID"
+   ]
+  ]
+ },
+ "budd": {
+  "voter-id": [
+   [
+    0,
+    "my colleagues across the aisle are refusing to keep our elections fair, transparent, and secure by requiring proof of citizenship to register and have voter ID at the polls",
+    "2026-03-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-21/html/CREC-2026-03-21-pt1-PgS1467-3.htm",
+    "Floor speech, Congressional Record: SAVE America Act (Executive Session)"
+   ]
+  ],
+  "noncitizen-voting": [
+   [
+    1,
+    "The SAVE America Act ensures that only U.S. citizens participate in Federal elections by requiring States to maintain accurate voter rolls and stopping noncitizens from voting",
+    "2026-03-21",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-03-21/html/CREC-2026-03-21-pt1-PgS1467-3.htm",
+    "Floor speech, Congressional Record: SAVE America Act (Executive Session)"
+   ]
+  ],
+  "local-police-ice": [
+   [
+    0,
+    "We need to stop these individuals when they commit minor crimes before they are able to commit major crimes like the horrific murder of Laken Riley",
+    "2025-01-15",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-01-15/html/CREC-2025-01-15-pt1-PgS161.htm",
+    "Floor speech, Congressional Record: LEGISLATIVE SESSION"
+   ]
+  ]
+ },
+ "cgoldman": {
+  "climate-regulations": [
+   [
+    1,
+    "they imposed costly climate change codes, restricting which appliances families can use to cook their food and heat their homes",
+    "2026-02-25",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-25/html/CREC-2026-02-25-pt1-PgH2301-2.htm",
+    "Floor speech, Congressional Record: HOMEOWNER ENERGY FREEDOM ACT"
+   ]
+  ]
+ },
+ "sanchez": {
+  "tariffs": [
+   [
+    1,
+    "I rise today in support of this resolution rejecting President Trump's illegal tariffs on Canada--our friend, our neighbor, and our ally.",
+    "2026-02-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-11/html/CREC-2026-02-11-pt1-PgH2154.htm",
+    "Floor speech, Congressional Record: RELATING TO A NATIONAL EMERGENCY BY THE PRESIDENT ON FEBRUARY 1, 2025"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "Vote to extend the ACA tax credits and lower costs for America's families.",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+    "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "Republicans already kicked 15 million people off their healthcare to pay for tax cuts for billionaires.",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+    "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT"
+   ]
+  ]
+ },
+ "frost": {
+  "tax-the-rich": [
+   [
+    0,
+    "The law ripped healthcare coverage away from millions of Americans to give tax breaks and tax giveaways to billionaires and megacorporations.",
+    "2026-02-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-02-04/html/CREC-2026-02-04-pt1-PgH2002-2.htm",
+    "Floor speech, Congressional Record: DISAPPROVING THE ACTION OF THE DISTRICT OF COLUMBIA COUNCIL IN APPROVING THE D.C. INCOME AND FRANCHISE TAX CONFORMITY AND REVISION TEMPORARY AMENDMENT ACT OF 2025"
+   ]
+  ],
+  "affordable-care-act": [
+   [
+    0,
+    "we still managed to get this bill to the floor to extend the Affordable Care Act tax subsidies",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH145-2.htm",
+    "Floor speech, Congressional Record: AMERICANS IN STATE OF DESPERATION"
+   ]
+  ],
+  "school-bathrooms": [
+   [
+    0,
+    "Republican politicians can't think of any better use for the power of the Federal Government than to bully transgender kids in bathrooms and schools",
+    "2025-12-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgH5992.htm",
+    "Floor speech, Congressional Record: PROTECT CHILDREN'S INNOCENCE ACT"
+   ]
+  ]
+ },
+ "jsmith": {
+  "ev-support": [
+   [
+    1,
+    "give Green New Deal tax breaks to the wealthy for electric vehicles and solar panels",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+    "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT"
+   ]
+  ],
+  "undocumented-healthcare": [
+   [
+    1,
+    "Republicans blocked illegal immigrants' access to taxpayer-funded healthcare benefits",
+    "2026-01-08",
+    "https://www.govinfo.gov/content/pkg/CREC-2026-01-08/html/CREC-2026-01-08-pt1-PgH213.htm",
+    "Floor speech, Congressional Record: BREAKING THE GRIDLOCK ACT"
+   ]
+  ],
+  "crypto-regulation": [
+   [
+    1,
+    "repealing the last-minute, unfair, and unworkable Biden IRS rule that places a bureaucratic burden on the Americans who own cryptocurrency and the platforms that allow them to own it",
+    "2025-03-11",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-11/html/CREC-2025-03-11-pt1-PgH1099.htm",
+    "Floor speech, Congressional Record: PROVIDING FOR CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE INTERNAL REVENUE SERVICE RELATING TO \"GROSS PROCEEDS REPORTING BY BROKERS THAT REGULARLY PROVID"
+   ]
+  ]
+ },
+ "cisneros": {
+  "tariffs": [
+   [
+    1,
+    "as a result of the crushing use of tariffs imposed unilaterally by the President, small businesses are clamoring for options",
+    "2025-12-01",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-12-01/html/CREC-2025-12-01-pt1-PgH4912-6.htm",
+    "Floor speech, Congressional Record: MADE IN AMERICA MANUFACTURING FINANCE ACT"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "Trump is making sure his billionaire buddies get higher tax breaks",
+    "2025-05-14",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-14/html/CREC-2025-05-14-pt1-PgH2009.htm",
+    "Floor speech, Congressional Record: ENDING PAY-FOR-PLAY POLITICAL GIFTS"
+   ]
+  ],
+  "ukraine-aid": [
+   [
+    0,
+    "their fealty to Vladimir Putin doesn't mean the United States can resign its role in standing",
+    "2025-03-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-03-04/html/CREC-2025-03-04-pt1-PgH952.htm",
+    "Floor speech, Congressional Record: DISASTROUS IMPLICATIONS OF A YEARLONG CR"
+   ]
+  ],
+  "end-dei-hiring": [
+   [
+    1,
+    "I was dismayed by the President's continued assault on diversity, equity, and inclusion",
+    "2025-02-04",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-04/html/CREC-2025-02-04-pt1-PgH439.htm",
+    "Floor speech, Congressional Record: SUPPORTING DEI"
+   ]
+  ]
+ },
+ "budzinski": {
+  "tax-the-rich": [
+   [
+    0,
+    "this administration has prioritized tax cuts for billionaires over support for everyday Americans",
+    "2025-09-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-09-17/html/CREC-2025-09-17-pt1-PgH4398-5.htm",
+    "Floor speech, Congressional Record: DEVASTATING HARM CAUSED BY TRUMP ADMINISTRATION"
+   ]
+  ]
+ },
+ "calvert": {
+  "ukraine-aid": [
+   [
+    0,
+    "we should not remove the ability to provide what he thinks will help the Ukrainian people to prevent further losses and use as leverage to negotiate a peace agreement",
+    "2025-07-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+    "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026"
+   ]
+  ],
+  "support-israel": [
+   [
+    0,
+    "the gentlewoman's amendment would strike $500 million in funding for the vital Israeli missile defense capability",
+    "2025-07-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3434.htm",
+    "Floor speech, Congressional Record: DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 2026"
+   ]
+  ]
+ },
+ "figures": {
+  "crypto-regulation": [
+   [
+    0,
+    "I know that the regulations in the CLARITY Act are better than none at all in this industry.",
+    "2025-07-17",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-07-17/html/CREC-2025-07-17-pt1-PgH3373-4.htm",
+    "Floor speech, Congressional Record: DIGITAL ASSET MARKET CLARITY ACT OF 2025"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "We must start this process by expanding Medicaid in States like mine, the State of Alabama.",
+    "2025-04-28",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-28/html/CREC-2025-04-28-pt1-PgH1673.htm",
+    "Floor speech, Congressional Record: HEALTH DISPARITIES IN MINORITY COMMUNITIES"
+   ]
+  ]
+ },
+ "elfreth": {
+  "gun-purchase-limits": [
+   [
+    0,
+    "to continue the fight for full freedom of the press, and for commonsense gun safety legislation that protects all of our communities",
+    "2025-06-27",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-06-27/html/CREC-2025-06-27-pt1-PgH3024-5.htm",
+    "Floor speech, Congressional Record: CAPITAL GAZETTE SHOOTING"
+   ]
+  ]
+ },
+ "auchincloss": {
+  "medicaid-funding": [
+   [
+    0,
+    "I rise today to advocate against the funding cuts to the Medicaid program",
+    "2025-05-07",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-05-07/html/CREC-2025-05-07-pt1-PgH1887.htm",
+    "Floor speech, Congressional Record: ADVOCATING AGAINST MEDICAID CUTS"
+   ]
+  ]
+ },
+ "james": {
+  "ev-mandate": [
+   [
+    1,
+    "my resolution of disapproval to overturn the Biden administration's California Advanced Clean Trucks rule",
+    "2025-04-30",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-04-30/html/CREC-2025-04-30-pt1-PgH1741-6.htm",
+    "Floor speech, Congressional Record: PROVIDING CONGRESSIONAL DISAPPROVAL OF THE RULE SUBMITTED BY THE ENVIRONMENTAL PROTECTION AGENCY RELATING TO \"CALIFORNIA STATE MOTOR VEHICLE AND ENGINE POLLUTION CO"
+   ]
+  ]
+ },
+ "friedman": {
+  "tariffs": [
+   [
+    1,
+    "If we are interested in keeping the cost to individuals down, then don't go to tariffs.",
+    "2025-02-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+    "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS"
+   ]
+  ],
+  "medicaid-funding": [
+   [
+    0,
+    "It is a direct attack on Medicaid, meaning that fewer families will have access to affordable healthcare",
+    "2025-02-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+    "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS"
+   ]
+  ],
+  "tax-the-rich": [
+   [
+    0,
+    "It is just to pad the pockets of the wealthiest Americans, the same people who don't need another handout.",
+    "2025-02-26",
+    "https://www.govinfo.gov/content/pkg/CREC-2025-02-26/html/CREC-2025-02-26-pt1-PgH865-3.htm",
+    "Floor speech, Congressional Record: DEMOCRATIC PROPOSALS"
    ]
   ]
  }

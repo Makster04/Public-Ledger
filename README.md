@@ -257,10 +257,10 @@ Who assigns People/Profit and liberal/conservative marks, and how disagreements 
 | `npm run trackers:labor` | The union committees for Pro-Union (`public/labor-pacs.js`), from the FEC's committee files; once a year or so |
 | `npm run superpacs:midterms -- 2026` | The tracker cards on the Super PACs page for this election (`corporate:pacs` already runs it for the current cycle, reading the FEC's donor files as they download, several GB and 15 to 30 minutes; `-- --own` skips them; run it on its own after that, and once the FEC publishes the official 2026 results, about a year after the election) |
 | `npm run outside:update` | Outside spending on the profiles |
-| `npm run disclosures:export` | The annual reports the refresh has read, for net worth and Conflicts of Interest: since November 28, 2026, every senator and House member in office, not only the full profiles (`-- --list-all` names everyone not read yet). Then the conflict matching, which can run anywhere with the file pushed: `npm run conflicts:lookup` (lda.gov and USAspending.gov, for every organization not looked up yet; it saves as it goes, so Ctrl+C and run it again to go on), `npm run conflicts:propose` (a proposed decision for each organization, into `data/conflict-proposals.json`: interested when it lobbied on an issue their committees handle or holds contracts from an agency they oversee; on the 37 decisions reviewed by hand it agreed with every one), approval (`npm run conflicts:approve -- <ids>` or `--all`; nothing counts before it), then `npm run conflicts:build` |
+| `npm run disclosures:export` | The annual reports the refresh has read, for net worth and Conflicts of Interest: since November 28, 2026, every senator and House member in office, not only the full profiles (`-- --list-all` names everyone not read yet). Then `npm run conflicts:lookup` (lda.gov and USAspending.gov, for every organization not looked up yet; it saves as it goes, so Ctrl+C and run it again to go on) and `npm run conflicts:build`, which decides each organization automatically (interested when it lobbied on an issue their committees handle or holds contracts from an agency they oversee; on the 37 decisions reviewed by hand before, it agrees with every one; a decision in `data/conflict-reviews.json` wins). **`npm start` runs all three once a day by itself**, so the grades follow the reports with no one reviewing |
 | `npm run statements:export` | Press releases and posts of the full profiles, for tagging |
 | `npm run state:export -- --legiscan` | The state legislature bills of members-elect and profiles who served in one, for tagging (LegiScan's datasets fill in the bills its list gives only by number) |
-| `npm run promises:find` | New promises in those |
+| `npm run promises:find` | New promises in those. Since November 28, 2026, **`npm start` runs it once a week by itself**, then `npm run promises:review -- --auto` (each sure item, with the bill named, a clear final vote and nothing in doubt, takes the finder's verdict with no one reviewing; the rest wait in the queue, not counted) and `npm run promises:build` |
 | `npm run scores:monthly` | Last: recalculates the grades and logs what moved |
 | `npm run integrity:monthly` | The separate Integrity preview log |
 
@@ -278,7 +278,7 @@ Then `git add data public && git commit -m "Monthly refresh" && git push`.
 
 **When a new Congress starts (Jan. 3 of an odd year):** `npm run house:build` and `npm run senate:build`.
 
-**No need to run by hand:** `news:build` and `links:check` (`npm start` runs them); `record:collect`, `coverage`, `conflicts:*`, `bills:issues`, `statements:find`, `statements:record` and `promises:build` run where the tagging and reviews are done; `test`, `check`, `consistency:*`, `cloudflare:*` and `review:*` are for development and reviews.
+**No need to run by hand:** `news:build` and `links:check` (`npm start` runs them); `record:collect`, `coverage`, `conflicts:*`, `bills:issues`, `statements:find`, `statements:accept` (since November 28, 2026: a batch of helper-agent tags goes in with no one approving it, once each quote is found word for word in the saved speech; what fails stays out), `statements:record` and `promises:build` run where the tagging is done; `test`, `check`, `consistency:*`, `cloudflare:*` and `review:*` are for development and reviews.
 
 ## Update process
 

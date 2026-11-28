@@ -9,6 +9,10 @@
 //   npm run promises:review -- --skip-debate  leave out what was said in debate (shown on the profile, not scored)
 //   npm run promises:review -- --only high  only the surest items (the bill named, a final vote): --only medium adds
 //                                           subject links with a final vote and matching procedural votes
+//   npm run promises:review -- --auto       no one reviewing (since Nov. 28, 2026; npm start runs it once a week after
+//                                           promises:find): each sure item (high: the bill named, a clear final vote,
+//                                           nothing in doubt, not said in debate) takes the finder's draft verdict; the
+//                                           rest stay in the queue, not counted, until the record makes them sure
 // The keys: Enter takes the draft verdict; k kept, p partly kept (½), b broken (what they did went against what they
 // said), c changed position (partially kept, ½: they changed position and nothing since goes against what they say now), w waiting (no vote on it
 // yet: listed, not counted), u unclear (listed, not counted), n not a promise or the wrong bill (left out), s skip for
@@ -58,6 +62,11 @@ export function addWaiting(research,decisions){
   for(const d of Object.values(decisions))if(d.waiting&&d.statement&&ids.has(d.person)&&addCheck(research,d.person,d.statement)){delete d.waiting;delete d.statement;delete d.person;n++;}
   return n;
 }
+// The verdict taken with no one reviewing: the draft, for a sure item only (null leaves it in the queue, not counted).
+export function autoVerdict(item){
+  const v=item?.draft?.assessment;
+  return item?.confidence==='high'&&!item.debate&&['consistent','partial','contradiction','changed'].includes(v)?v:null;
+}
 export function card(item,i,n){
   const lines=[`\n[${i+1} of ${n}]${item.confidence?` (${item.confidence}${item.debate?', said in debate: shown, not scored':''})`:''} ${item.name} · ${item.kind==='promise'?'promise':'stance'}, ${item.side==='oppose'?'against':item.side==='support'?'for':'side unclear'}`,
     `  Said ${fmt(item.said.date)} (${item.said.src.t}):`,`    "${item.said.text}"`];
@@ -90,6 +99,17 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const todo=all?open:open.filter(x=>ids.has(x.person)),without=open.length-todo.length;
   console.log(`${todo.length} of ${queue.items.length} items in the queue (built ${queue.built}) still to review.${without?` ${without} more are for people without a profile on the site, left out (add -- --all to review them too; their verdicts are kept for when they have one).`:''}`);
   if(process.argv.includes('--list')){todo.forEach((x,i)=>console.log(card(x,i,todo.length)));process.exit(0);}
+  if(process.argv.includes('--auto')){
+    const today=new Date().toISOString().slice(0,10);let added=0,kept=0;
+    for(const item of todo){const v=autoVerdict(item);if(!v)continue;
+      const st=reviewedStatement(item,v,item.draft.why,today);st.found.auto=true;
+      if(addCheck(research,item.person,st)){decisions[item.id]={decision:v,at:today,auto:true};added++;}
+      else{decisions[item.id]={decision:v,at:today,auto:true,waiting:'no profile',person:item.person,statement:st};kept++;}
+    }
+    if(added||kept)save();
+    console.log(`Decided automatically: ${added} added to the site${kept?`, ${kept} kept for people without a profile yet`:''}; ${todo.length-added-kept} not sure enough yet, left in the queue (not counted).`);
+    process.exit(0);
+  }
   if(!todo.length)process.exit(0);
   // Answers typed or piped in, one line each; the end of the input stops the review.
   const rl=readline.createInterface({input:process.stdin,terminal:process.stdin.isTTY}),lines=[],waiting=[];
