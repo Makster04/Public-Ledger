@@ -12,14 +12,15 @@ const read=f=>fs.readFileSync(new URL(f,import.meta.url),'utf8');
 const line=(name,amount,cid=null)=>({cid,name,amount});
 const caught=(key,name)=>isTrackerPac(TRACKER[key],{name});
 
-test('eight trackers in the approved order, each with its PACs on file and none shared',()=>{
-  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','insurers','oil','tech','crypto','defense','wallstreet']);
-  assert.deepEqual(TRACKERS.map(t=>t.name),['Pro-Israel Lobby','Big Pharma','Health Insurers + PBMs','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street']);
+test('eight lobbies and three cause groups in the approved order, each lobby with its PACs on file and none shared',()=>{
+  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','insurers','oil','tech','crypto','defense','wallstreet','union','environment','peace']);
+  assert.deepEqual(TRACKERS.map(t=>t.name),['Pro-Israel Lobby','Big Pharma','Health Insurers + PBMs','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street','Pro-Union','Pro-Environment','Pro-Peace / Two-State + Palestine']);
+  assert.deepEqual(TRACKERS.filter(t=>t.cause).map(t=>t.key),['union','environment','peace'],'the cause groups (approved 2026-11-28)');
   const ids=TRACKERS.flatMap(t=>t.pacIds);
   assert.equal(new Set(ids).size,ids.length,'no committee counts for two trackers by ID');
   // (and no drugmaker's or insurer's PAC is caught by the other health tracker's patterns)
   for(const id of [...TRACKER.pharma.pacIds,...TRACKER.insurers.pacIds])assert.equal(['pharma','insurers'].filter(k=>TRACKER[k].patterns.some(r=>r.test(research.pacCommittees[id][0]))).length,1,id);
-  for(const t of TRACKERS)for(const id of t.pacIds){
+  for(const t of TRACKERS.filter(x=>!x.cause))for(const id of t.pacIds){
     const c=research.pacCommittees[id];assert.ok(c,`${t.key}: ${id} is on file`);
     assert.ok(t.patterns.some(r=>r.test(c[0])),`${t.key}: ${c[0]} matches its own patterns too`);
   }

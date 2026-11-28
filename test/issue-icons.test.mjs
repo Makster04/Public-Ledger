@@ -24,7 +24,7 @@ test('every reviewed check\'s topic gets a category, the way the questions file 
 });
 
 test('each tracker has its emojis, shown after its name',()=>{
-  assert.deepEqual(Object.fromEntries(TRACKERS.map(t=>[t.key,t.icon])),{aipac:'🇮🇱🎁',pharma:'💊🎁',insurers:'☂️🎁',oil:'🛢️🎁',tech:'🤖🎁',crypto:'🤑🎁',defense:'🪖🎁',wallstreet:'💰🎁'});
+  assert.deepEqual(Object.fromEntries(TRACKERS.map(t=>[t.key,t.icon])),{aipac:'🇮🇱🎁',pharma:'💊🎁',insurers:'☂️🎁',oil:'🛢️🎁',tech:'🤖🎁',crypto:'🤑🎁',defense:'🪖🎁',wallstreet:'💰🎁',union:'👷🎁',environment:'🌳🎁',peace:'🕊️🎁'});
   for(const t of TRACKERS)assert.equal(t.emoji+'🎁',t.icon,`${t.key}: the report card's emoji is its icon without the 🎁`);
   assert.deepEqual(Object.fromEntries(Object.entries(PLEDGE_CATEGORY).map(([k,c])=>[k,ISSUE_ICON[c]])),{lobbying:'🏛️','stock-trading':'🏛️','citizens-united':'🗳️'});
 });

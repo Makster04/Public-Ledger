@@ -2,7 +2,8 @@
 // 2026-11-26; the file and script keep their first name, midterm), for the tracker cards on the Super PACs page: what
 // they spent for and against House and Senate candidates, primaries and generals together, how much of it went to
 // candidates who won in November, and how many of the candidates they backed won. Two kinds of card:
-//   own     Crypto, Big Tech + AI and the Pro-Israel Lobby run super PACs of their own: their spending as filed.
+//   own     Crypto, Big Tech + AI and the Pro-Israel Lobby run super PACs of their own, as do the three cause groups
+//           (Pro-Union, Pro-Environment, Pro-Peace / Two-State + Palestine, since Nov. 28, 2026): their spending as filed.
 //   funded  The other five run none (approved 2026-11-26): what their companies, those companies' PACs and their trade
 //           groups gave to super PACs that spent in the election (the FEC's itemized receipts: itoth for PACs' checks,
 //           itcont for companies' and groups' gifts, read as they download and never saved), and the tracker's share of
@@ -26,8 +27,8 @@
 //    against, forWon, forLost, againstWon, againstLost, supported: {n, won, open}, pacs: [{id, name, for, against,
 //    supported}], and for a funded one: gave, employees, funded (super PACs given FUNDED_CUTOFF or more), each pac's
 //    gave and share (% of its money)}}}}}
-// No tracker ran its own super PAC before 2021 (United Democracy Project), so 2018 and 2020 have only the five funded
-// cards. Run by npm run corporate:pacs for the current cycle, or on its own:
+// No lobby ran its own super PAC before 2021 (United Democracy Project), so for 2018 and 2020 the lobbies have only the
+// five funded cards; the cause groups' own super PACs spent in every election. Run by npm run corporate:pacs for the current cycle, or on its own:
 //   npm run superpacs:midterms                every election in ELECTIONS (files kept in .local/fec-bulk/)
 //   npm run superpacs:midterms -- 2026        one election, the others kept from the last file
 //   npm run superpacs:midterms -- --refresh   downloads the files again now

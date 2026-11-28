@@ -1915,12 +1915,24 @@ input, select { accent-color: var(--accent); }
   .mt-more .mt-funded li { grid-template-columns: 18px minmax(0, 1fr) auto auto; }
 }
 /* "How to read this" in Tracking Lobby Money opens and closes (Nov. 27, 2026). */
-.lk-key > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.lk-key > summary::-webkit-details-marker { display: none; }
-.lk-key > summary::after { content: "⌄"; color: var(--muted); font-size: 1.2rem; line-height: 1; }
-.lk-key[open] > summary::after { content: "⌃"; }
+.lk-key > summary, .lk-causes-d > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.lk-key > summary::-webkit-details-marker, .lk-causes-d > summary::-webkit-details-marker { display: none; }
+.lk-key > summary::after, .lk-causes-d > summary::after { content: "⌄"; color: var(--muted); font-size: 1.2rem; line-height: 1; }
+.lk-key[open] > summary::after, .lk-causes-d[open] > summary::after { content: "⌃"; }
 .lk-key > summary h4 { margin: 0; }
 .lk-key[open] > summary { margin-bottom: 4px; }
+/* The cause groups (Nov. 28, 2026): their own section in Tracking Lobby Money, opening and closing, with gray marks;
+   and a "Cause groups" label before their tabs, menu options and cards. */
+.lk-causes-d { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
+.lk-causes-d > summary h4 { margin: 0; font-family: var(--font-display); font-size: 1.02rem; font-weight: 800; color: var(--ink); }
+.lk-causes-d > summary .small { margin-left: auto; }
+.lk-causes-d > p.small { margin: 6px 0 4px; }
+li.lk-cause .lk-mark, .lk-mark.lk-cause-mark { color: var(--ink-2); }
+.tr-group-label { display: inline-flex; align-items: center; align-self: center; margin: 0 4px 0 10px; padding-left: 12px; border-left: 1px solid var(--line-2); color: var(--muted); font: 700 .7rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.hdd-group { padding: 10px 12px 4px; margin-top: 4px; border-top: 1px solid var(--line); color: var(--muted); font: 700 .7rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; }
+.mt-group { margin: 22px 0 2px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; }
+.mt-group + p.small { margin: 0 0 10px; }
+.ta-matrix tr.ta-group th { text-align: left; padding-top: 14px; color: var(--muted); font: 700 .72rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; }
 /* Big Money Independence over time, under the score card (Nov. 27, 2026). */
 .st-maincol { display: grid; gap: 16px; align-content: start; min-width: 0; }
 .st-maincol > .mm-panel { border-radius: 14px; }

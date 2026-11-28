@@ -8,7 +8,8 @@ import {trackerAboutHTML,trackerPanel,kinds,human,PAC_NAMES,LEFT_OUT,NOTES,execu
 test('every tracker has its left-out list and a name for each PAC on file',()=>{
   for(const t of TRACKERS){
     assert.ok(LEFT_OUT[t.key]?.length,`${t.key} left out`);assert.ok(NOTES[t.key],`${t.key} note`);
-    for(const id of t.pacIds)assert.ok(PAC_NAMES[id],`${t.key}: ${id} has a name`);
+    // (Pro-Union's are every committee the FEC labels a labor organization's, listed by that label, not by name)
+    if(!t.kinds)for(const id of t.pacIds)assert.ok(PAC_NAMES[id],`${t.key}: ${id} has a name`);
   }
 });
 test('name patterns read in plain words',()=>{
@@ -21,7 +22,7 @@ test('name patterns read in plain words',()=>{
 test('the kinds of data name the trackers that read each, from their settings',()=>{
   const k=Object.fromEntries(kinds(TRACKERS).map(x=>[x.name,x.who]));
   assert.equal(k['PAC checks'],`All ${TRACKERS.length} trackers`);
-  assert.equal(k['Gifts passed on'],'Pro-Israel Lobby');
+  assert.equal(k['Gifts passed on'],'Pro-Israel Lobby and Pro-Peace / Two-State + Palestine');
   assert.equal(k["Employees' and executives' gifts"],'Big Tech + AI and Crypto');
   assert.match(k['Super PAC spending'],/Pro-Israel Lobby/);
 });
